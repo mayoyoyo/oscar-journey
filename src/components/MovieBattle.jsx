@@ -270,6 +270,16 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         Skip (different pair)
       </button>
 
+      <details className="battle-explainer">
+        <summary>How does this work?</summary>
+        <p>
+          Pick the film you think is better. Each movie has an <strong>ELO rating</strong> (like chess rankings) that starts at 1500. When you vote, the winner gains points and the loser drops — but beating a highly-rated film earns more points than beating a low-rated one.
+        </p>
+        <p>
+          <strong>Global Rankings</strong> combine everyone's votes. <strong>Personal Rankings</strong> are yours alone — your own taste, your own ladder. You can only vote on films you've watched.
+        </p>
+      </details>
+
       {/* Rankings — both shown side by side */}
       <div className="battle-rankings-grid">
         {/* Global Leaderboard */}

@@ -1413,6 +1413,25 @@ main {
   font-size: 0.88rem;
 }
 .battle-skip:hover { border-color: var(--gold-dim); color: var(--cream); }
+
+.battle-explainer {
+  margin-bottom: 28px;
+  font-size: 0.84rem;
+  color: var(--cream-dim);
+  line-height: 1.6;
+}
+.battle-explainer summary {
+  cursor: pointer;
+  color: var(--cream-dim);
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+.battle-explainer summary:hover { color: var(--cream); }
+.battle-explainer p {
+  margin-bottom: 8px;
+}
+.battle-explainer strong { color: var(--cream); }
+
 .battle-empty {
   text-align: center;
   padding: 60px 20px;

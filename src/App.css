@@ -432,6 +432,47 @@ main {
   font-weight: 500;
 }
 
+.film-detail-metrics {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.metric-label {
+  font-size: 0.68rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.04em;
+}
+
+.film-detail-all-ratings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+.all-rating-chip {
+  font-size: 0.72rem;
+  color: var(--cream-dim);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
 /* Profile selector in battle */
 .battle-profile-select {
   padding: 6px 12px;

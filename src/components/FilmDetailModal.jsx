@@ -3,6 +3,8 @@ import { fetchOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
+import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
+import { db } from '../utils/firebase';
 
 function ordinal(n) {
   const s = ['th','st','nd','rd'];
@@ -13,6 +15,8 @@ function ordinal(n) {
 export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [globalElo, setGlobalElo] = useState(null);
+  const [aggregateRating, setAggregateRating] = useState(null);
 
   useEffect(() => {
     if (!movie) return;
@@ -22,12 +26,40 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
       setOmdbData(data);
       setLoading(false);
     });
-  }, [movie?.title, movie?.year]);
+
+    // Fetch global ELO for this movie
+    const key = movie.id;
+    getDoc(doc(db, 'elo', key)).then(snap => {
+      if (snap.exists()) setGlobalElo(snap.data());
+      else setGlobalElo(null);
+    }).catch(() => {});
+
+    // Fetch all profiles to compute aggregate star rating
+    getDocs(collection(db, 'profiles')).then(snap => {
+      const allRatings = [];
+      for (const d of snap.docs) {
+        const profileRatings = d.data().ratings || {};
+        const r = profileRatings[key];
+        if (r) {
+          for (const [name, val] of Object.entries(r)) {
+            if (val != null) allRatings.push({ profile: d.data().displayName || d.id, name, value: val });
+          }
+        }
+      }
+      if (allRatings.length > 0) {
+        const avg = allRatings.reduce((s, r) => s + r.value, 0) / allRatings.length;
+        setAggregateRating({ avg: avg.toFixed(1), count: allRatings.length, ratings: allRatings });
+      } else {
+        setAggregateRating(null);
+      }
+    }).catch(() => {});
+  }, [movie?.title, movie?.year, movie?.id]);
 
   if (!movie) return null;
 
   const key = ratingKey(movie);
   const movieRatings = ratings[key] || {};
+  const pElo = personalElo?.[movie.id];
 
   return (
     <div className="modal-overlay open" onClick={(e) => {
@@ -69,17 +101,50 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             <div className="film-year">{movie.year}</div>
             <MovieBadges movie={movie} />
 
-            {omdbData?.rating && (
-              <div className="film-detail-rating">★ {omdbData.rating} / 10 <span className="rating-source">IMDb</span></div>
-            )}
-            {personalElo?.[movie.id] && (
-              <div className="film-detail-elo">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO ({personalElo[movie.id].matchCount} matches)</span></div>
-            )}
+            {/* Ratings summary row */}
+            <div className="film-detail-metrics">
+              {omdbData?.rating && (
+                <div className="metric-item">
+                  <span className="metric-value">★ {omdbData.rating}</span>
+                  <span className="metric-label">IMDb</span>
+                </div>
+              )}
+              {aggregateRating && (
+                <div className="metric-item">
+                  <span className="metric-value">★ {aggregateRating.avg}</span>
+                  <span className="metric-label">Site Avg ({aggregateRating.count} {aggregateRating.count === 1 ? 'rating' : 'ratings'})</span>
+                </div>
+              )}
+              {pElo && (
+                <div className="metric-item">
+                  <span className="metric-value">⚔️ {pElo.elo}</span>
+                  <span className="metric-label">Your ELO ({pElo.matchCount})</span>
+                </div>
+              )}
+              {globalElo && (
+                <div className="metric-item">
+                  <span className="metric-value">⚔️ {globalElo.elo}</span>
+                  <span className="metric-label">Global ELO ({globalElo.matchCount})</span>
+                </div>
+              )}
+            </div>
+
             {omdbData?.plot && (
               <div className="film-detail-plot">{omdbData.plot}</div>
             )}
             {omdbData?.director && (
               <div className="film-detail-director">Dir. {omdbData.director}</div>
+            )}
+
+            {/* Individual ratings from all profiles */}
+            {aggregateRating && aggregateRating.ratings.length > 0 && (
+              <div className="film-detail-all-ratings">
+                {aggregateRating.ratings.map((r, i) => (
+                  <span key={i} className="all-rating-chip">
+                    {r.profile} ({r.name}): {r.value}★
+                  </span>
+                ))}
+              </div>
             )}
 
             {/* Rating pickers — only shown when film is marked as watched */}

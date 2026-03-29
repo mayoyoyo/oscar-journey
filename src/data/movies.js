@@ -334,6 +334,18 @@ export const MOVIES = [
   { title: "The Substance",                                 year: 2024, won: false, genre: 'T', ceremony: 97, category: 'BP' },
   { title: "Wicked",                                        year: 2024, won: false, genre: 'M', ceremony: 97, category: 'BP' },
 
+  // 2025 films — 98th Academy Awards (10 nominees)
+  { title: "One Battle After Another",                       year: 2025, won: true,  genre: 'D', ceremony: 98, category: 'BP' },
+  { title: "Bugonia",                                        year: 2025, won: false, genre: 'S', ceremony: 98, category: 'BP' },
+  { title: "F1",                                             year: 2025, won: false, genre: 'N', ceremony: 98, category: 'BP' },
+  { title: "Frankenstein",                                   year: 2025, won: false, genre: 'D', ceremony: 98, category: 'BP' },
+  { title: "Hamnet",                                         year: 2025, won: false, genre: 'H', ceremony: 98, category: 'BP' },
+  { title: "Marty Supreme",                                  year: 2025, won: false, genre: 'B', ceremony: 98, category: 'BP' },
+  { title: "The Secret Agent",                               year: 2025, won: false, genre: 'T', ceremony: 98, category: 'BP' },
+  { title: "Sentimental Value",                              year: 2025, won: false, genre: 'D', ceremony: 98, category: 'BP' },
+  { title: "Sinners",                                        year: 2025, won: false, genre: 'T', ceremony: 98, category: 'BP' },
+  { title: "Train Dreams",                                   year: 2025, won: false, genre: 'H', ceremony: 98, category: 'BP' },
+
   // =====================================================
   // BEST INTERNATIONAL FEATURE FILM WINNERS
   // =====================================================
@@ -362,6 +374,7 @@ export const MOVIES = [
   { title: "The Salesman",              year: 2016, won: true, genre: 'D', ceremony: 89, category: 'INT' },
   { title: "A Fantastic Woman",         year: 2017, won: true, genre: 'D', ceremony: 90, category: 'INT' },
   { title: "Another Round",             year: 2020, won: true, genre: 'D', ceremony: 93, category: 'INT' },
+  // Note: Sentimental Value (2025 INT winner) is already in BP nominees above
 
   // =====================================================
   // BEST ANIMATED FEATURE WINNERS
@@ -388,4 +401,5 @@ export const MOVIES = [
   { title: "Guillermo del Toro's Pinocchio",                 year: 2022, won: true, genre: 'A', ceremony: 95, category: 'ANIM' },
   { title: "The Boy and the Heron",                          year: 2023, won: true, genre: 'A', ceremony: 96, category: 'ANIM' },
   { title: "Flow",                                           year: 2024, won: true, genre: 'A', ceremony: 97, category: 'ANIM' },
+  { title: "KPop Demon Hunters",                              year: 2025, won: true, genre: 'A', ceremony: 98, category: 'ANIM' },
 ];

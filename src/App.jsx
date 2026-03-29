@@ -224,7 +224,9 @@ export default function App() {
   const [detailMovie, setDetailMovie] = useState(null);
   const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
   const [infoOpen, setInfoOpen] = useState(false);
-  const [bannerDismissed, setBannerDismissed] = useState(false);
+  const [bannerDismissed, setBannerDismissed] = useState(() => {
+    return localStorage.getItem('oscars_banner_dismissed') === 'true';
+  });
 
   // Sync journey
   const [allProfilesForSync, setAllProfilesForSync] = useState([]);
@@ -802,10 +804,13 @@ export default function App() {
   const handleSkip = useCallback(() => {
     if (!currentMovie || playlist.length === 0) return;
 
-    // Increment skip count
+    // Track skip
     const newSkipCount = (profile?.skipCount || 0) + 1;
-    setProfile(prev => prev ? { ...prev, skipCount: newSkipCount } : prev);
+    const skippedFilms = [...(profile?.skippedFilms || [])];
+    if (!skippedFilms.includes(currentMovie.id)) skippedFilms.push(currentMovie.id);
+    setProfile(prev => prev ? { ...prev, skipCount: newSkipCount, skippedFilms } : prev);
     firebaseSave('skipCount', newSkipCount);
+    firebaseSave('skippedFilms', skippedFilms);
 
     // Remove current film from its position and insert it later
     const newPlaylist = [...playlist];
@@ -911,7 +916,7 @@ export default function App() {
             <>
               {eligiblePosition < 1 && !bannerDismissed && (
                 <div className="journey-welcome-banner">
-                  <button className="journey-welcome-close" onClick={() => setBannerDismissed(true)}>✕</button>
+                  <button className="journey-welcome-close" onClick={() => { setBannerDismissed(true); localStorage.setItem('oscars_banner_dismissed', 'true'); }}>✕</button>
                   <div className="journey-welcome-title">🏆 Your Oscar Journey</div>
                   <div className="journey-welcome-text">
                     We picked {MOVIES.length} Oscar-nominated films and shuffled them so you never watch two similar films back-to-back. Watch each one, rate it, and move on. No overthinking — just press play.

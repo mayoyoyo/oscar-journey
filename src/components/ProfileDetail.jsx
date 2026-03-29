@@ -31,6 +31,7 @@ function FilmTilePoster({ movie }) {
 export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showUnwatched, setShowUnwatched] = useState(false);
+  const [showSkipped, setShowSkipped] = useState(false);
   const [sortMode, setSortMode] = useState('az'); // 'az' | 'rating'
 
   // Resolve watched movies from the profile's watched array (movie IDs)
@@ -63,6 +64,13 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       // NEW FORMAT: movie IDs
       return watched.map(id => MOVIES_BY_ID[id]).filter(Boolean);
     }
+  }, [profileData]);
+
+  // Skipped films
+  const skippedMovies = useMemo(() => {
+    const skippedIds = profileData.skippedFilms || [];
+    return skippedIds.map(id => MOVIES_BY_ID[id]).filter(Boolean)
+      .sort((a, b) => a.title.localeCompare(b.title));
   }, [profileData]);
 
   // Unwatched movies: all MOVIES not in watchedMovies
@@ -330,6 +338,31 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             );
           })}
         </div>
+      )}
+
+      {/* Skipped Films */}
+      {skippedMovies.length > 0 && (
+        <>
+          <button
+            className="profile-unwatched-toggle"
+            onClick={() => setShowSkipped(prev => !prev)}
+            style={{ marginTop: '24px' }}
+          >
+            {showSkipped ? 'Hide' : 'Show'} Skipped Films 😤 ({skippedMovies.length})
+          </button>
+          {showSkipped && (
+            <div>
+              {skippedMovies.map(movie => (
+                <div className="profile-unwatched-row" key={movie.id}
+                  onClick={() => onOpenDetail && onOpenDetail(movie)}
+                  style={{ cursor: 'pointer' }}>
+                  <span>{movie.title}</span>
+                  <span style={{ marginLeft: 'auto' }}>{movie.year}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       {/* Not Yet Watched (collapsed by default) */}

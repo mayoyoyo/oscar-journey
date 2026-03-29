@@ -17,6 +17,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const [loading, setLoading] = useState(true);
   const [globalElo, setGlobalElo] = useState(null);
   const [aggregateRating, setAggregateRating] = useState(null);
+  const [watchedBy, setWatchedBy] = useState([]);
 
   useEffect(() => {
     if (!movie) return;
@@ -34,18 +35,34 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
       else setGlobalElo(null);
     }).catch(() => {});
 
-    // Fetch all profiles to compute aggregate star rating
+    // Fetch all profiles to compute aggregate star rating + who watched
     getDocs(collection(db, 'profiles')).then(snap => {
       const allRatings = [];
+      const watchers = [];
       for (const d of snap.docs) {
-        const profileRatings = d.data().ratings || {};
+        const data = d.data();
+        const profileWatched = data.watched || [];
+        const hasWatched = profileWatched.includes(key);
+        const profileRatings = data.ratings || {};
         const r = profileRatings[key];
+        const hasRated = r && Object.values(r).some(v => v != null);
+
+        if (hasWatched) {
+          watchers.push({
+            id: d.id,
+            displayName: data.displayName || d.id,
+            avatar: data.avatar || '',
+            hasRated,
+          });
+        }
+
         if (r) {
           for (const [name, val] of Object.entries(r)) {
-            if (val != null) allRatings.push({ profile: d.data().displayName || d.id, name, value: val });
+            if (val != null) allRatings.push({ profile: data.displayName || d.id, name, value: val });
           }
         }
       }
+      setWatchedBy(watchers);
       if (allRatings.length > 0) {
         const avg = allRatings.reduce((s, r) => s + r.value, 0) / allRatings.length;
         setAggregateRating({ avg: avg.toFixed(1), count: allRatings.length, ratings: allRatings });
@@ -139,14 +156,19 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               <div className="film-detail-runtime">🕐 {omdbData.runtime}</div>
             )}
 
-            {/* Individual ratings from all profiles */}
-            {aggregateRating && aggregateRating.ratings.length > 0 && (
+            {/* Who watched + their ratings */}
+            {watchedBy.length > 0 && (
               <div className="film-detail-all-ratings">
-                {aggregateRating.ratings.map((r, i) => (
-                  <span key={i} className="all-rating-chip">
-                    {r.profile} ({r.name}): {r.value}★
-                  </span>
-                ))}
+                {watchedBy.map((w, i) => {
+                  const profileRatings = aggregateRating?.ratings.filter(r => r.profile === w.displayName) || [];
+                  return (
+                    <span key={i} className={`all-rating-chip ${w.hasRated ? '' : 'no-rating'}`}>
+                      {w.avatar} {w.displayName}{profileRatings.length > 0
+                        ? ': ' + profileRatings.map(r => `${r.value}★`).join(', ')
+                        : ' (watched, not rated)'}
+                    </span>
+                  );
+                })}
               </div>
             )}
 

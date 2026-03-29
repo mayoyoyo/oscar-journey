@@ -474,11 +474,17 @@ main {
 
 .all-rating-chip {
   font-size: 0.72rem;
-  color: var(--cream-dim);
+  color: var(--cream);
   background: var(--bg3);
   border: 1px solid var(--border);
   padding: 3px 8px;
   border-radius: 12px;
+}
+
+.all-rating-chip.no-rating {
+  color: var(--cream-dim);
+  font-style: italic;
+  opacity: 0.75;
 }
 
 /* Profile selector in battle */

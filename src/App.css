@@ -1059,7 +1059,7 @@ main {
 .film-detail-close:hover { color: var(--cream); background: var(--bg3); }
 
 .modal-nav-btn {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   background: var(--bg2);
@@ -1067,28 +1067,28 @@ main {
   color: var(--cream-dim);
   font-size: 1.8rem;
   line-height: 1;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
+  z-index: 210;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.15s;
-  box-shadow: 0 2px 8px var(--shadow);
+  box-shadow: 0 2px 12px var(--shadow);
 }
 .modal-nav-btn:hover {
   color: var(--gold);
   border-color: var(--gold-dim);
+  background: var(--bg);
 }
-.modal-nav-prev { left: -18px; }
-.modal-nav-next { right: -18px; }
+.modal-nav-prev { left: 16px; }
+.modal-nav-next { right: 16px; }
 
 @media (max-width: 700px) {
   .modal-nav-prev { left: 8px; }
   .modal-nav-next { right: 8px; }
-  .modal-nav-btn { background: var(--bg2); opacity: 0.9; }
 }
 
 .film-detail-rating {

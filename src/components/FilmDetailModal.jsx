@@ -105,14 +105,10 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     <div className="modal-overlay open" onClick={(e) => {
       if (e.target === e.currentTarget) onClose();
     }}>
+      {movieList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
+      {movieList && hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
       <div className="modal" style={{ maxWidth: '640px', padding: 0, overflow: 'hidden', position: 'relative' }}>
         <button className="film-detail-close" onClick={onClose}>✕</button>
-        {movieList && (
-          <>
-            {hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
-            {hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
-          </>
-        )}
         <div className="film-detail-inner">
           <div className="film-detail-poster">
             {loading ? (

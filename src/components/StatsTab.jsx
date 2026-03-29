@@ -105,7 +105,7 @@ export default function StatsTab({ watchedTitleSet, ratings, raters }) {
   return (
     <div className="film-list-section">
       <h2 style={{ fontFamily: 'Georgia, serif', color: 'var(--gold)', marginBottom: '20px' }}>
-        Statistics
+        My Statistics
       </h2>
 
       {/* Summary cards */}

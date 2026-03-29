@@ -537,11 +537,21 @@ export default function App() {
     }
   }, [firebaseSave]);
 
-  // --- Unsync journey ---
+  // --- Unsync journey — reshuffle with a new seed ---
   const handleUnsync = useCallback(() => {
+    const newSeed = Math.floor(Math.random() * 0xFFFFFFFF);
+    const newPlaylist = generatePlaylist(newSeed);
+    const orderIds = newPlaylist.map(m => m.id);
+
+    setPlaylist(newPlaylist);
+    setCurrentIdx(0);
     setProfile(prev => prev ? { ...prev, syncedWith: null } : prev);
+
     firebaseSave('syncedWith', null);
-  }, [firebaseSave]);
+    firebaseSave('seed', newSeed);
+    firebaseSave('playlistOrder', orderIds);
+    firebaseSave('currentIdx', 0);
+  }, [firebaseSave, generatePlaylist]);
 
   const handleClearCache = useCallback(() => {
     const count = clearCache();

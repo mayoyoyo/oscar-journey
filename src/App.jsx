@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { MOVIES, MOVIES_BY_ID } from './data/movies';
 import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffle';
 import {
@@ -21,6 +21,7 @@ import MovieBattle from './components/MovieBattle';
 import Leaderboard from './components/Leaderboard';
 import JourneyControls from './components/JourneyControls';
 import ActivityFeed from './components/ActivityFeed';
+import { SkeletonCard } from './components/Skeleton';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
@@ -128,12 +129,31 @@ export default function App() {
     return pl;
   }, []);
 
-  // --- Helper: save to Firestore without blocking UI ---
+  // --- Save indicator state ---
+  const [saving, setSaving] = useState(false);
+  const saveTimeout = useRef(null);
+
+  // --- Helper: save to Firestore with retry logic ---
   const firebaseSave = useCallback((field, value) => {
     if (!profile) return;
-    saveProfileField(profile.id, field, value).catch((err) => {
-      console.error('Firestore save failed:', field, err);
-    });
+    setSaving(true);
+    if (saveTimeout.current) clearTimeout(saveTimeout.current);
+
+    const doSave = (attempt = 1) => {
+      saveProfileField(profile.id, field, value)
+        .then(() => {
+          saveTimeout.current = setTimeout(() => setSaving(false), 800);
+        })
+        .catch((err) => {
+          console.error(`Save failed (attempt ${attempt}):`, field, err);
+          if (attempt < 3) {
+            setTimeout(() => doSave(attempt + 1), 1000 * attempt);
+          } else {
+            setSaving(false);
+          }
+        });
+    };
+    doSave();
   }, [profile]);
 
   // --- On mount: check for saved profile ID and auto-login ---
@@ -440,7 +460,9 @@ export default function App() {
           }, 1000);
         }
       }
-      firebaseSave('watched', [...next]);
+      const nextArr = [...next];
+      firebaseSave('watched', nextArr);
+      setProfile(prev => prev ? { ...prev, watched: nextArr } : prev);
       return next;
     });
   }, [currentMovie, firebaseSave, profile]);
@@ -451,7 +473,9 @@ export default function App() {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
-      firebaseSave('watched', [...next]);
+      const nextArr = [...next];
+      firebaseSave('watched', nextArr);
+      setProfile(prev => prev ? { ...prev, watched: nextArr } : prev);
       return next;
     });
   }, [firebaseSave]);
@@ -466,6 +490,7 @@ export default function App() {
       if (value === null) delete next[key][person];
       if (Object.keys(next[key]).length === 0) delete next[key];
       firebaseSave('ratings', next);
+      setProfile(prev => prev ? { ...prev, ratings: next } : prev);
       return next;
     });
   }, [firebaseSave]);
@@ -632,9 +657,9 @@ export default function App() {
   // --- Loading state ---
   if (loading) {
     return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-        <div className="spinner" />
-      </div>
+      <main style={{ width: '100%', maxWidth: '760px', padding: '24px', margin: '0 auto' }}>
+        <SkeletonCard />
+      </main>
     );
   }
 
@@ -656,6 +681,7 @@ export default function App() {
         isDark={isDark}
         onOpenSettings={() => setSettingsOpen(true)}
         onLogout={handleLogout}
+        saving={saving}
       />
 
       {showProgress && (
@@ -802,6 +828,7 @@ export default function App() {
           onAllowSkipChange={handleAllowSkipChange}
           onClose={() => setSettingsOpen(false)}
           onClearCache={handleClearCache}
+          profile={profile}
         />
       )}
     </>

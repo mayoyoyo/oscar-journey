@@ -38,9 +38,36 @@ const TONE_LABELS = {
 
 export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache, profile }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
+
+  const handleExportData = () => {
+    if (!profile) return;
+    const exportData = {
+      exportedAt: new Date().toISOString(),
+      profile: {
+        id: profile.id,
+        displayName: profile.displayName,
+        avatar: profile.avatar,
+        watched: profile.watched || [],
+        ratings: profile.ratings || {},
+        personalElo: profile.personalElo || {},
+        raters: profile.raters || [],
+        seed: profile.seed,
+        currentIdx: profile.currentIdx,
+        filters: profile.filters,
+        syncedWith: profile.syncedWith,
+      },
+    };
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `oscar-journey-${profile.id}-backup.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   const addRater = () => {
     const name = newName.trim();
@@ -170,6 +197,29 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
             Shows a skip button on the journey card. We don't recommend it though. 😤
           </p>
         </div>
+
+        {/* Download My Data */}
+        {profile && (
+          <div className="modal-section">
+            <button
+              onClick={handleExportData}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: 'var(--gold)',
+                fontSize: '0.78rem',
+                cursor: 'pointer',
+                textDecoration: 'underline',
+                padding: 0,
+              }}
+            >
+              Download My Data
+            </button>
+            <p style={{ fontSize: '0.72rem', color: 'var(--cream-dim)', marginTop: '2px' }}>
+              Export your watched films, ratings, and all profile data as a backup.
+            </p>
+          </div>
+        )}
 
         {/* Clear Poster Cache */}
         <div className="modal-section">

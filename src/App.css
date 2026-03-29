@@ -156,24 +156,16 @@ body {
 }
 .nav-icon-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
 
-/* Mobile: stack nav */
+/* Mobile: compact top nav (tabs move to bottom bar) */
 @media (max-width: 700px) {
   .main-nav {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 8px 16px;
+    flex-wrap: nowrap;
+    height: 48px;
+    padding: 0 12px;
     gap: 4px;
   }
   .nav-left { order: 1; }
   .nav-right { order: 2; margin-left: auto; }
-  .nav-tabs {
-    order: 3;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 2px;
-  }
-  .nav-tab { padding: 8px 12px; font-size: 0.8rem; }
   .nav-brand { font-size: 0.9rem; }
 }
 
@@ -2280,4 +2272,139 @@ main {
   color: var(--cream-dim);
   flex-shrink: 0;
   white-space: nowrap;
+}
+
+/* =====================================================
+   SAVE INDICATOR
+   ===================================================== */
+.save-indicator {
+  font-size: 0.7rem;
+  color: var(--gold);
+  animation: pulse 1s ease-in-out infinite;
+  margin-left: 4px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* =====================================================
+   MOBILE BOTTOM TAB BAR
+   ===================================================== */
+.mobile-tab-bar {
+  display: none; /* Hidden on desktop */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  z-index: 100;
+  padding: 6px 0;
+  padding-bottom: env(safe-area-inset-bottom, 6px); /* iPhone safe area */
+}
+
+.mobile-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  color: var(--cream-dim);
+  transition: color 0.15s;
+}
+
+.mobile-tab.active {
+  color: var(--gold);
+}
+
+.mobile-tab-icon {
+  font-size: 1.2rem;
+}
+
+.mobile-tab-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 700px) {
+  .mobile-tab-bar {
+    display: flex;
+  }
+
+  /* Hide tabs from top nav on mobile */
+  .nav-tabs {
+    display: none !important;
+  }
+
+  /* Add bottom padding to body so content isn't hidden behind tab bar */
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+/* =====================================================
+   SKELETON LOADING
+   ===================================================== */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, var(--bg3) 25%, var(--bg2) 50%, var(--bg3) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-card {
+  display: flex;
+  gap: 0;
+  min-height: 360px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.skeleton-poster {
+  width: 40%;
+  min-width: 180px;
+  min-height: 360px;
+}
+
+.skeleton-info {
+  flex: 1;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-line {
+  height: 16px;
+  border-radius: 4px;
+}
+
+.skeleton-row {
+  height: 48px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 540px) {
+  .skeleton-card {
+    flex-direction: column;
+  }
+  .skeleton-poster {
+    width: 100%;
+    min-width: unset;
+    min-height: 260px;
+  }
 }

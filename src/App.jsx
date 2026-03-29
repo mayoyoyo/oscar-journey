@@ -903,6 +903,14 @@ export default function App() {
           )}
           {screen === 'card' && currentMovie && eligibleStats.total > 0 && (
             <>
+              {eligiblePosition < 5 && (
+                <div className="journey-welcome-banner">
+                  <div className="journey-welcome-title">🏆 Your Oscar Journey</div>
+                  <div className="journey-welcome-text">
+                    We picked {MOVIES.length} Oscar-nominated films and shuffled them so you never watch two similar films back-to-back. Watch each one, rate it, and move on. No overthinking — just press play.
+                  </div>
+                </div>
+              )}
               <FilmCard
                 movie={currentMovie}
                 isWatched={isCurrentWatched}

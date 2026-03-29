@@ -7,7 +7,7 @@ import {
 
 // --- Profile CRUD ---
 
-export async function createProfile(username, passcode, displayName) {
+export async function createProfile(username, passcode, displayName, avatar) {
   const id = username.toLowerCase().trim();
   const ref = doc(db, 'profiles', id);
   const snap = await getDoc(ref);
@@ -15,6 +15,7 @@ export async function createProfile(username, passcode, displayName) {
   await setDoc(ref, {
     displayName: displayName.trim(),
     passcode,
+    avatar: avatar || '🍿',
     watched: [],
     ratings: {},
     playlistOrder: null,
@@ -23,7 +24,7 @@ export async function createProfile(username, passcode, displayName) {
     raters: [displayName.trim()],
     createdAt: serverTimestamp(),
   });
-  return { id, displayName: displayName.trim() };
+  return { id, displayName: displayName.trim(), avatar: avatar || '🍿' };
 }
 
 export async function loginProfile(username, passcode) {

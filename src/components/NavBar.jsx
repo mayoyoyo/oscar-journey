@@ -27,7 +27,12 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
         ))}
       </div>
       <div className="nav-right">
-        {profile && <span className="nav-user">{profile.displayName}</span>}
+        {profile && (
+          <span className="nav-user">
+            {profile.avatar && <span className="nav-user-avatar">{profile.avatar}</span>}
+            {profile.displayName}
+          </span>
+        )}
         <button className="nav-icon-btn" onClick={onToggleTheme} title="Toggle theme">
           {isDark ? '☀️' : '🌙'}
         </button>

@@ -1,11 +1,37 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
+import { fetchOmdbData } from '../utils/omdb';
+
+// Small component to lazily load a poster for a movie tile
+function FilmTilePoster({ movie }) {
+  const [poster, setPoster] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    let cancelled = false;
+    fetchOmdbData(movie).then(data => {
+      if (!cancelled) {
+        if (data?.poster) setPoster(data.poster);
+        setLoading(false);
+      }
+    });
+    return () => { cancelled = true; };
+  }, [movie.title, movie.year]);
+
+  if (loading) {
+    return <div className="film-tile-poster-placeholder"><div className="spinner" style={{ width: 24, height: 24 }} /></div>;
+  }
+  if (poster) {
+    return <img className="film-tile-poster" src={poster} alt={movie.title} onError={(e) => { e.target.style.display = 'none'; }} />;
+  }
+  return <div className="film-tile-poster-placeholder">🎬</div>;
+}
 
 // Renders the full detail view for a single profile
 export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showUnwatched, setShowUnwatched] = useState(false);
+  const [sortMode, setSortMode] = useState('az'); // 'az' | 'rating'
 
   // Resolve watched movies from the profile's playlistOrder + watched indices
   const watchedMovies = useMemo(() => {
@@ -28,10 +54,27 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       .sort((a, b) => a.title.localeCompare(b.title));
   }, [watchedMovies]);
 
-  // Sort watched movies alphabetically
+  // Sort watched movies based on current sort mode
   const sortedWatched = useMemo(() => {
-    return [...watchedMovies].sort((a, b) => a.title.localeCompare(b.title));
-  }, [watchedMovies]);
+    const movies = [...watchedMovies];
+    if (sortMode === 'rating') {
+      // Sort by highest average rating from this profile's raters (descending)
+      const ratings = profileData.ratings || {};
+      const profileRatersList = profileData.raters || [];
+      return movies.sort((a, b) => {
+        const aKey = ratingKey(a);
+        const bKey = ratingKey(b);
+        const aRatings = ratings[aKey] || {};
+        const bRatings = ratings[bKey] || {};
+        const avgOf = (r) => {
+          const vals = profileRatersList.map(name => r[name]).filter(v => v != null);
+          return vals.length > 0 ? vals.reduce((s, v) => s + v, 0) / vals.length : 0;
+        };
+        return avgOf(bRatings) - avgOf(aRatings);
+      });
+    }
+    return movies.sort((a, b) => a.title.localeCompare(b.title));
+  }, [watchedMovies, sortMode, profileData]);
 
   // Filter watched movies by search query
   const filteredWatched = useMemo(() => {
@@ -131,7 +174,10 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
 
       {/* Header */}
       <div className="profile-detail-header">
-        <div className="profile-detail-name">{profileData.displayName || profileData.id}</div>
+        <div className="profile-detail-name">
+          {profileData.avatar && <span className="profile-detail-avatar">{profileData.avatar}</span>}
+          {profileData.displayName || profileData.id}
+        </div>
         {memberSince && (
           <div className="profile-detail-joined">Member since {memberSince}</div>
         )}
@@ -171,53 +217,62 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
         onChange={e => setSearchQuery(e.target.value)}
       />
 
+      {/* Sort bar */}
+      <div className="profile-sort-bar">
+        <button
+          className={`sort-btn ${sortMode === 'az' ? 'active' : ''}`}
+          onClick={() => setSortMode('az')}
+        >
+          A-Z
+        </button>
+        <button
+          className={`sort-btn ${sortMode === 'rating' ? 'active' : ''}`}
+          onClick={() => setSortMode('rating')}
+        >
+          Highest Rated
+        </button>
+      </div>
+
       {filteredWatched.length === 0 ? (
         <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem', padding: '12px 0' }}>
           {searchQuery ? 'No films match your search.' : 'No films watched yet.'}
         </p>
       ) : (
-        filteredWatched.map(movie => {
-          const movieRatings = getProfileRatings(movie);
-          const viewerRating = !isOwnProfile ? getViewerRating(movie) : null;
+        <div className="film-tiles">
+          {filteredWatched.map(movie => {
+            const movieRatings = getProfileRatings(movie);
+            const viewerRating = !isOwnProfile ? getViewerRating(movie) : null;
 
-          return (
-            <div className="profile-film-row" key={movie.title + '|' + movie.year}>
-              <span className="profile-film-title">{movie.title}</span>
-              <span className="profile-film-year">{movie.year}</span>
-
-              {/* Category badge */}
-              {movie.category === 'BP' && <span className="badge-bp-sm">BP</span>}
-              {movie.category === 'INT' && <span className="badge-int-sm">INT</span>}
-              {movie.category === 'ANIM' && <span className="badge-anim-sm">ANIM</span>}
-
-              {/* Genre badge */}
-              <span className="badge-genre-sm">{GENRE_LABELS[movie.genre] || movie.genre}</span>
-
-              {/* Winner badge */}
-              {movie.won && <span className="badge-winner-sm">Winner</span>}
-
-              {/* Ratings from this profile's raters */}
-              <div className="profile-film-ratings">
-                {profileRaters.map(rater => {
-                  const val = movieRatings[rater];
-                  if (val == null) return null;
-                  return (
-                    <span className="profile-film-rating" key={rater}>
-                      {rater}: <span className="rating-value">{val.toFixed(1)}</span>
-                    </span>
-                  );
-                })}
-
-                {/* Viewer's own rating for comparison */}
-                {viewerRating && (
-                  <span className="profile-film-rating viewer-rating">
-                    You: <span className="rating-value">{viewerRating.value.toFixed(1)}</span>
-                  </span>
-                )}
+            return (
+              <div className="film-tile" key={movie.title + '|' + movie.year}>
+                <div className="film-tile-poster-wrap">
+                  <FilmTilePoster movie={movie} />
+                  {movie.won && <span className="film-tile-winner">Winner</span>}
+                </div>
+                <div className="film-tile-info">
+                  <div className="film-tile-title">{movie.title}</div>
+                  <div className="film-tile-year">{movie.year}</div>
+                  <div className="film-tile-ratings">
+                    {profileRaters.map(rater => {
+                      const val = movieRatings[rater];
+                      if (val == null) return null;
+                      return (
+                        <span className="film-tile-rating" key={rater}>
+                          {rater}: <span className="rating-value">{val.toFixed(1)}</span>
+                        </span>
+                      );
+                    })}
+                    {viewerRating && (
+                      <span className="film-tile-rating viewer-rating">
+                        You: <span className="rating-value">{viewerRating.value.toFixed(1)}</span>
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })
+            );
+          })}
+        </div>
       )}
 
       {/* Not Yet Watched (collapsed by default) */}

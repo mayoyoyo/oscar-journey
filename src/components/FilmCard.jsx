@@ -77,17 +77,21 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           <div className="film-director">Dir. {omdbData.director}</div>
         )}
 
-        {/* Rating pickers */}
-        <div className="rating-pickers">
-          {raters.map(name => (
-            <StarPicker
-              key={name}
-              label={name}
-              value={movieRatings[name] ?? null}
-              onChange={(val) => onRatingChange(key, name, val)}
-            />
-          ))}
-        </div>
+        {/* Rating pickers — only shown when film is marked as watched */}
+        {isWatched ? (
+          <div className="rating-pickers">
+            {raters.map(name => (
+              <StarPicker
+                key={name}
+                label={name}
+                value={movieRatings[name] ?? null}
+                onChange={(val) => onRatingChange(key, name, val)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="rating-locked">Mark as watched to rate this film</div>
+        )}
 
         <button
           className={`watched-btn ${isWatched ? 'is-watched' : ''}`}

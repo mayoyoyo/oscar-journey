@@ -92,6 +92,7 @@ export default function Leaderboard({ currentProfile, currentRatings }) {
       return {
         id: p.id,
         displayName: p.displayName || p.id,
+        avatar: p.avatar || null,
         watchedCount,
         avgRating,
         ratingCount,
@@ -146,7 +147,10 @@ export default function Leaderboard({ currentProfile, currentRatings }) {
                   }
                 }}
               >
-                <div className="profile-card-name">{p.displayName}</div>
+                <div className="profile-card-name">
+                  {p.avatar && <span className="profile-card-avatar">{p.avatar}</span>}
+                  {p.displayName}
+                </div>
                 <div className="profile-card-stat">
                   <span className="stat-label">Films Watched</span>
                   <span className="stat-value">{p.watchedCount}</span>

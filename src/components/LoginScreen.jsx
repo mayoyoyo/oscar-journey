@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import { createProfile, loginProfile } from '../utils/firebaseStorage';
 
+const AVATAR_EMOJIS = [
+  '🍿', '🎬', '🎭', '🎪', '🦊', '🐻', '🦁', '🐸', '🐧', '🦄',
+  '👻', '🤖', '👽', '🎃', '🧙', '🦸', '🧛', '🥷', '🤠', '🥸',
+  '😎', '🤓', '🧐', '🤩', '😈', '🌮', '🍕', '🌈', '⭐', '🔥',
+  '💎', '🎸', '🎯', '🏆', '🎰', '🚀', '🛸', '🌍', '🎪', '🃏',
+];
+
 export default function LoginScreen({ onLogin }) {
   const [mode, setMode] = useState('login'); // 'login' | 'create'
   const [username, setUsername] = useState('');
   const [passcode, setPasscode] = useState('');
   const [confirmPasscode, setConfirmPasscode] = useState('');
   const [displayName, setDisplayName] = useState('');
+  const [avatar, setAvatar] = useState(AVATAR_EMOJIS[0]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -51,9 +59,9 @@ export default function LoginScreen({ onLogin }) {
     }
     setLoading(true);
     try {
-      const profile = await createProfile(username, passcode, displayName);
+      const profile = await createProfile(username, passcode, displayName, avatar);
       // Reload full profile data after creation
-      onLogin({ ...profile, watched: [], ratings: {}, playlistOrder: null, seed: null, currentIdx: 0, raters: [displayName.trim()] });
+      onLogin({ ...profile, avatar, watched: [], ratings: {}, playlistOrder: null, seed: null, currentIdx: 0, raters: [displayName.trim()] });
     } catch (e) {
       setError(e.message);
     } finally {
@@ -80,17 +88,34 @@ export default function LoginScreen({ onLogin }) {
       {error && <div className="login-error">{error}</div>}
 
       {mode === 'create' && (
-        <div className="login-field">
-          <label>Display Name</label>
-          <input
-            type="text"
-            value={displayName}
-            onChange={(e) => handleDisplayNameChange(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="e.g. Chris"
-            autoFocus
-          />
-        </div>
+        <>
+          <div className="login-field">
+            <label>Pick Your Avatar</label>
+            <div className="avatar-grid">
+              {AVATAR_EMOJIS.map((emoji, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`avatar-option ${avatar === emoji ? 'selected' : ''}`}
+                  onClick={() => setAvatar(emoji)}
+                >
+                  {emoji}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="login-field">
+            <label>Display Name</label>
+            <input
+              type="text"
+              value={displayName}
+              onChange={(e) => handleDisplayNameChange(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="e.g. Chris"
+              autoFocus
+            />
+          </div>
+        </>
       )}
 
       <div className="login-field">

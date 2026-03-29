@@ -165,6 +165,7 @@ export default function App() {
         id: d.id,
         displayName: d.data().displayName || d.id,
         avatar: d.data().avatar || '',
+        watched: d.data().watched || [],
       })));
     }).catch(() => {});
   }, []);
@@ -677,6 +678,8 @@ export default function App() {
                 personalElo={profile?.personalElo}
                 allowSkip={profile?.allowSkip !== false}
                 onSkip={handleSkip}
+                allProfiles={allProfilesForSync}
+                currentProfileId={profile?.id}
               />
               <NavButtons
                 currentIdx={eligiblePosition}

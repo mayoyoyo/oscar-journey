@@ -23,7 +23,7 @@ const SKIP_MESSAGES = [
   "You sure? This one's a banger according to literally the Academy.",
 ];
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip }) {
+export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -92,6 +92,26 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         {omdbData?.director && (
           <div className="film-director">Dir. {omdbData.director}</div>
         )}
+
+        {/* Watched by others */}
+        {allProfiles && (() => {
+          const others = allProfiles.filter(p =>
+            p.id !== currentProfileId &&
+            Array.isArray(p.watched) &&
+            p.watched.includes(movie.id)
+          );
+          if (others.length === 0) return null;
+          return (
+            <div className="watched-by">
+              <span className="watched-by-label">Watched by</span>
+              {others.map(p => (
+                <span key={p.id} className="watched-by-chip">
+                  {p.avatar || '👤'} {p.displayName}
+                </span>
+              ))}
+            </div>
+          );
+        })()}
 
         {/* Rating pickers — only shown when film is marked as watched */}
         {isWatched ? (

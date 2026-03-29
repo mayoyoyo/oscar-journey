@@ -589,6 +589,30 @@ main {
   color: var(--red-bright);
 }
 
+.watched-by {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 6px 0;
+}
+
+.watched-by-label {
+  font-size: 0.72rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.06em;
+  margin-right: 2px;
+}
+
+.watched-by-chip {
+  font-size: 0.75rem;
+  color: var(--cream);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
 /* Settings toggle switch */
 .settings-toggle-row {
   display: flex;

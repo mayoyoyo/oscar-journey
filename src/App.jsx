@@ -572,6 +572,17 @@ export default function App() {
     firebaseSave('avatar', emoji);
   }, [firebaseSave]);
 
+  // --- Allow skip toggle ---
+  const handleAllowSkipChange = useCallback((val) => {
+    setProfile(prev => prev ? { ...prev, allowSkip: val } : prev);
+    firebaseSave('allowSkip', val);
+  }, [firebaseSave]);
+
+  // --- Skip film ---
+  const handleSkip = useCallback(() => {
+    goNext();
+  }, [goNext]);
+
   // --- Tab change ---
   const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
@@ -657,6 +668,8 @@ export default function App() {
                 onRatingChange={handleRatingChange}
                 raters={raters}
                 personalElo={profile?.personalElo}
+                allowSkip={profile?.allowSkip || false}
+                onSkip={handleSkip}
               />
               <NavButtons
                 currentIdx={eligiblePosition}
@@ -740,6 +753,8 @@ export default function App() {
           onRatersChange={handleRatersChange}
           avatar={profile?.avatar || '🍿'}
           onAvatarChange={handleAvatarChange}
+          allowSkip={profile?.allowSkip || false}
+          onAllowSkipChange={handleAllowSkipChange}
           onClose={() => setSettingsOpen(false)}
           onClearCache={handleClearCache}
         />

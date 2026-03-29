@@ -38,7 +38,7 @@ const TONE_LABELS = {
 
 export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, onClose, onClearCache }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
 
@@ -153,6 +153,22 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
               </button>
             </div>
           </div>
+        </div>
+
+        <div className="modal-section">
+          <label>Journey</label>
+          <div
+            className={`settings-toggle-row ${allowSkip ? 'active' : ''}`}
+            onClick={() => onAllowSkipChange(!allowSkip)}
+          >
+            <span className="settings-toggle-switch">
+              <span className="settings-toggle-knob" />
+            </span>
+            <span className="settings-toggle-label">Allow skipping films</span>
+          </div>
+          <p style={{ fontSize: '0.72rem', color: 'var(--cream-dim)', marginTop: '4px' }}>
+            Shows a skip button on the journey card. We don't recommend it though. 😤
+          </p>
         </div>
 
         {/* Clear Poster Cache */}

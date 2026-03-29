@@ -565,6 +565,76 @@ main {
   filter: brightness(1.1);
 }
 
+.film-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.skip-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.78rem;
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.6;
+}
+.skip-btn:hover {
+  opacity: 1;
+  border-color: var(--red);
+  color: var(--red-bright);
+}
+
+/* Settings toggle switch */
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.settings-toggle-switch {
+  width: 40px;
+  height: 22px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+
+.settings-toggle-knob {
+  width: 16px;
+  height: 16px;
+  background: var(--cream-dim);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.25s;
+}
+
+.settings-toggle-row.active .settings-toggle-switch {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.settings-toggle-row.active .settings-toggle-knob {
+  left: 20px;
+  background: #fff;
+}
+
+.settings-toggle-label {
+  font-size: 0.88rem;
+  color: var(--cream);
+}
+
 .watched-icon {
   display: inline-flex;
   align-items: center;

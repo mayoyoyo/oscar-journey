@@ -10,7 +10,20 @@ function ordinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo }) {
+const SKIP_MESSAGES = [
+  "Really? This is an Oscar nominee. Have some respect. 😤",
+  "You'd skip this but watch 3 hours of TikTok? Bold choice.",
+  "The Academy didn't nominate this for you to hit 'skip'...",
+  "Somewhere, a film critic just felt a disturbance in the force.",
+  "Fine. But don't come crying when everyone's talking about this movie.",
+  "Skipping Oscar nominees? What's next, skipping vegetables? 🥦",
+  "This movie didn't get nominated just to be disrespected like this.",
+  "Your future self who watched it: 'That was actually great.' You right now: skip. 🤡",
+  "Even the popcorn is disappointed. 🍿",
+  "You sure? This one's a banger according to literally the Academy.",
+];
+
+export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -97,13 +110,28 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           <div className="rating-locked">Mark as watched to rate this film</div>
         )}
 
-        <button
-          className={`watched-btn ${isWatched ? 'is-watched' : ''}`}
-          onClick={onToggleWatched}
-        >
-          <span className="watched-icon">{isWatched ? '✓' : ''}</span>
-          <span>{isWatched ? 'Watched' : 'Mark as Watched'}</span>
-        </button>
+        <div className="film-card-actions">
+          <button
+            className={`watched-btn ${isWatched ? 'is-watched' : ''}`}
+            onClick={onToggleWatched}
+          >
+            <span className="watched-icon">{isWatched ? '✓' : ''}</span>
+            <span>{isWatched ? 'Watched' : 'Mark as Watched'}</span>
+          </button>
+          {allowSkip && !isWatched && (
+            <button
+              className="skip-btn"
+              onClick={() => {
+                const msg = SKIP_MESSAGES[Math.floor(Math.random() * SKIP_MESSAGES.length)];
+                if (window.confirm(msg + '\n\nSkip this film?')) {
+                  onSkip();
+                }
+              }}
+            >
+              Skip
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

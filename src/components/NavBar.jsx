@@ -14,7 +14,6 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
         <div className="nav-left">
           <span className="nav-logo">🏆</span>
           <span className="nav-brand">Oscar Journey</span>
-          {saving && <span className="save-indicator">Saving...</span>}
         </div>
         <div className="nav-tabs">
           {tabs.map(tab => (

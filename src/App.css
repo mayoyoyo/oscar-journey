@@ -100,7 +100,9 @@ body {
   align-items: center;
   gap: 8px;
 }
-.nav-logo { font-size: 1.2rem; }
+.nav-logo-svg {
+  flex-shrink: 0;
+}
 .nav-brand {
   font-family: Georgia, serif;
   font-size: 1.05rem;
@@ -1849,6 +1851,58 @@ main {
 .nav-user-avatar {
   margin-right: 4px;
   font-size: 1rem;
+}
+
+.nav-avatar-clickable {
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.nav-avatar-clickable:hover {
+  transform: scale(1.2);
+}
+
+.nav-emoji-picker {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  z-index: 300;
+  box-shadow: 0 8px 32px var(--shadow);
+  width: 280px;
+}
+
+.nav-emoji-option {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.1s;
+  text-align: center;
+}
+.nav-emoji-option:hover {
+  background: var(--bg3);
+  transform: scale(1.15);
+}
+.nav-emoji-option.selected {
+  border-color: var(--gold);
+  background: var(--bg3);
+}
+
+@media (max-width: 540px) {
+  .nav-emoji-picker {
+    width: 240px;
+    grid-template-columns: repeat(6, 1fr);
+    right: -40px;
+  }
 }
 
 /* Avatar display on Leaderboard profile cards */

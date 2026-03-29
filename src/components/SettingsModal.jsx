@@ -49,7 +49,7 @@ const TONE_LABELS = {
 
 export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS, SMART_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache, profile }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
 
@@ -252,6 +252,28 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
             Re-download movie posters and info from OMDb.
           </p>
         </div>
+
+        {profile && onLogout && (
+          <div className="modal-section" style={{ marginTop: '8px', paddingTop: '16px', borderTop: '1px solid var(--border)' }}>
+            <button
+              onClick={() => {
+                if (window.confirm('Log out? Your data is saved.')) onLogout();
+              }}
+              style={{
+                background: 'none',
+                border: '1px solid var(--border)',
+                color: 'var(--cream-dim)',
+                fontSize: '0.85rem',
+                padding: '8px 20px',
+                borderRadius: '50px',
+                cursor: 'pointer',
+                width: '100%',
+              }}
+            >
+              Log Out
+            </button>
+          </div>
+        )}
 
         <div className="modal-btns">
           <button className="btn-modal-cancel" onClick={onClose}>Close</button>

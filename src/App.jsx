@@ -867,7 +867,7 @@ export default function App() {
         isDark={isDark}
         onOpenSettings={() => setSettingsOpen(true)}
         onOpenInfo={() => setInfoOpen(true)}
-        onLogout={handleLogout}
+        onAvatarChange={handleAvatarChange}
         saving={saving}
       />
 
@@ -1035,6 +1035,7 @@ export default function App() {
           onClose={() => setSettingsOpen(false)}
           onClearCache={handleClearCache}
           profile={profile}
+          onLogout={handleLogout}
         />
       )}
 

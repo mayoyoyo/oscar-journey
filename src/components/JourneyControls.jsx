@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, TONE_LABELS } from './SettingsModal';
+import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, TONE_LABELS, SMART_LABELS } from './SettingsModal';
 
 export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney, syncedWith, onUnsync }) {
   const [syncTarget, setSyncTarget] = useState('');
-  const [openSections, setOpenSections] = useState({ eras: false, categories: false, tones: false });
+  const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, tones: false });
 
   const currentFilters = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters?.eras || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) },
     tones: { ...DEFAULT_FILTERS.tones, ...(filters?.tones || {}) },
+    smart: { ...DEFAULT_FILTERS.smart, ...(filters?.smart || {}) },
   };
 
   const toggleFilter = (section, key) => {
@@ -32,6 +33,10 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   const sectionCount = (section) => {
     const vals = Object.values(currentFilters[section]);
     const active = vals.filter(Boolean).length;
+    if (section === 'smart') {
+      // For smart filters, show count of enabled ones (they're off by default)
+      return active > 0 ? `${active} on` : null;
+    }
     return active < vals.length ? `${active}/${vals.length}` : null;
   };
 
@@ -90,6 +95,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
               <span className="journey-filter-count">{eligibleCount}/{totalCount}</span>
             )}
           </span>
+          {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
           {renderSection('eras', 'Eras', 'eras', ERA_LABELS)}
           {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS)}
           {renderSection('tones', 'Genres', 'tones', TONE_LABELS)}

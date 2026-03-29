@@ -42,12 +42,14 @@ const GENRE_TO_TONE = {
 };
 
 // Check if a movie passes the current filters
-function moviePassesFilter(movie, filters) {
+// smartContext: { watchedSet, allProfiles, currentProfileId }
+function moviePassesFilter(movie, filters, smartContext) {
   if (!filters) return true;
   const f = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters.eras || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters.categories || {}) },
     tones: { ...DEFAULT_FILTERS.tones, ...(filters.tones || {}) },
+    smart: { ...DEFAULT_FILTERS.smart, ...(filters.smart || {}) },
   };
 
   // Era check
@@ -64,6 +66,31 @@ function moviePassesFilter(movie, filters) {
   // Tone/genre check
   const toneKey = GENRE_TO_TONE[movie.genre];
   if (toneKey && !f.tones[toneKey]) return false;
+
+  // Smart filters
+  if (smartContext) {
+    const mid = movie.id;
+
+    // Skip watched films
+    if (f.smart.skipWatched && smartContext.watchedSet && smartContext.watchedSet.has(mid)) {
+      return false;
+    }
+
+    // Winners only
+    if (f.smart.winnersOnly && !movie.won) {
+      return false;
+    }
+
+    // Unwatched by everyone
+    if (f.smart.unwatchedByAll && smartContext.allProfiles) {
+      const watchedBySomeone = smartContext.allProfiles.some(p =>
+        p.id !== smartContext.currentProfileId &&
+        Array.isArray(p.watched) &&
+        p.watched.includes(mid)
+      );
+      if (watchedBySomeone) return false;
+    }
+  }
 
   return true;
 }
@@ -378,12 +405,19 @@ export default function App() {
   // --- Filter helpers ---
   const activeFilters = profile?.filters || null;
 
+  // Smart filter context
+  const smartContext = useMemo(() => ({
+    watchedSet,
+    allProfiles: allProfilesForSync,
+    currentProfileId: profile?.id,
+  }), [watchedSet, allProfilesForSync, profile?.id]);
+
   // Check if a playlist index passes the current filters
   const idxPassesFilter = useCallback((idx) => {
     const movie = playlist[idx];
     if (!movie) return false;
-    return moviePassesFilter(movie, activeFilters);
-  }, [playlist, activeFilters]);
+    return moviePassesFilter(movie, activeFilters, smartContext);
+  }, [playlist, activeFilters, smartContext]);
 
   // Compute filtered eligible film counts for progress
   const eligibleStats = useMemo(() => {

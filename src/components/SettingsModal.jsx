@@ -8,6 +8,17 @@ const DEFAULT_FILTERS = {
     drama: true, thriller: true, comedy: true, scifi: true,
     war: true, biopic: true, musical: true, action: true, animation: true,
   },
+  smart: {
+    skipWatched: false,
+    winnersOnly: false,
+    unwatchedByAll: false,
+  },
+};
+
+const SMART_LABELS = {
+  skipWatched: 'Skip films I\'ve watched',
+  winnersOnly: 'Winners only',
+  unwatchedByAll: 'Unwatched by everyone',
 };
 
 const ERA_LABELS = {
@@ -36,7 +47,7 @@ const TONE_LABELS = {
   animation: 'Animation',
 };
 
-export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS };
+export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS, SMART_LABELS };
 
 export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache, profile }) {
   const [editRaters, setEditRaters] = useState(raters);

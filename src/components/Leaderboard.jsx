@@ -174,7 +174,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   <span className="stat-label">Total Ratings</span>
                   <span className="stat-value">{p.ratingCount}</span>
                 </div>
-                <div className="profile-card-stat" style={{ borderBottom: 'none' }}>
+                <div className="profile-card-stat">
                   <span className="stat-label">Fav Genre</span>
                   <span className="stat-value">{p.favGenre || '--'}</span>
                 </div>

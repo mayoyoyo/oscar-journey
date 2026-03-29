@@ -1504,9 +1504,8 @@ main {
 .profile-card-stat .stat-value { font-weight: 600; }
 
 .profile-card-current {
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 4px;
   font-size: 0.78rem;
   color: var(--cream-dim);
   white-space: nowrap;

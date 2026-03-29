@@ -229,7 +229,10 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
           <div className="profile-detail-joined">Member since {memberSince}</div>
         )}
         {currentJourneyMovie && (
-          <div className="profile-detail-current">
+          <div className="profile-detail-current"
+            onClick={() => onOpenDetail && onOpenDetail(currentJourneyMovie)}
+            style={{ cursor: 'pointer' }}
+          >
             🎬 Currently on: <strong>{currentJourneyMovie.title}</strong> ({currentJourneyMovie.year})
           </div>
         )}

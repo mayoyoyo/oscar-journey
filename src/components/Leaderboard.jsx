@@ -179,7 +179,10 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   <span className="stat-value">{p.favGenre || '--'}</span>
                 </div>
                 {p.currentMovie && (
-                  <div className="profile-card-current">
+                  <div className="profile-card-current"
+                    onClick={(e) => { e.stopPropagation(); onOpenDetail(p.currentMovie); }}
+                    style={{ cursor: 'pointer' }}
+                  >
                     🎬 {p.currentMovie.title} ({p.currentMovie.year})
                   </div>
                 )}

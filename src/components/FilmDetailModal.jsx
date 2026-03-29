@@ -135,6 +135,9 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             {omdbData?.director && (
               <div className="film-detail-director">Dir. {omdbData.director}</div>
             )}
+            {omdbData?.runtime && (
+              <div className="film-detail-runtime">🕐 {omdbData.runtime}</div>
+            )}
 
             {/* Individual ratings from all profiles */}
             {aggregateRating && aggregateRating.ratings.length > 0 && (

@@ -92,6 +92,9 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         {omdbData?.director && (
           <div className="film-director">Dir. {omdbData.director}</div>
         )}
+        {omdbData?.runtime && (
+          <div className="film-runtime">🕐 {omdbData.runtime}</div>
+        )}
 
         {/* Watched by others */}
         {allProfiles && (() => {

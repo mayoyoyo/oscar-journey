@@ -23,9 +23,10 @@ export async function fetchOmdbData(movie) {
   const plotKey     = omdbCacheKey('plot',     movie);
   const ratingKey   = omdbCacheKey('rating',   movie);
   const directorKey = omdbCacheKey('director', movie);
+  const runtimeKey  = omdbCacheKey('runtime',  movie);
 
   // Return cached data if we have real results (not rate-limit failures)
-  const allKeys = [posterKey, plotKey, ratingKey, directorKey];
+  const allKeys = [posterKey, plotKey, ratingKey, directorKey, runtimeKey];
   const allCached = allKeys.every(k => localStorage.getItem(k) !== null);
   if (allCached) {
     // Check none are "RATE_LIMITED" — those should retry
@@ -36,6 +37,7 @@ export async function fetchOmdbData(movie) {
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
+        runtime:  localStorage.getItem(runtimeKey)  === NOT_FOUND ? null : localStorage.getItem(runtimeKey),
       };
     }
   }
@@ -72,6 +74,7 @@ export async function fetchOmdbData(movie) {
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
+        runtime:  localStorage.getItem(runtimeKey)  === NOT_FOUND ? null : localStorage.getItem(runtimeKey),
       };
     }
 
@@ -80,41 +83,44 @@ export async function fetchOmdbData(movie) {
       data = await tryWithKey(titleEnc, null);
 
       if (data.rateLimited) {
-        return { poster: null, plot: null, rating: null, director: null };
+        return { poster: null, plot: null, rating: null, director: null, runtime: null };
       }
 
       if (data && data.Response !== 'False') {
-        return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey);
+        return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
       }
 
-      storeNotFound(posterKey, plotKey, ratingKey, directorKey);
-      return { poster: null, plot: null, rating: null, director: null };
+      storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey);
+      return { poster: null, plot: null, rating: null, director: null, runtime: null };
     }
 
-    return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey);
+    return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
   } catch (e) {
     // Network error — don't cache, will retry next time
-    return { poster: null, plot: null, rating: null, director: null };
+    return { poster: null, plot: null, rating: null, director: null, runtime: null };
   }
 }
 
-function storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey) {
+function storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey) {
   const poster   = data.Poster && data.Poster !== 'N/A' ? data.Poster : null;
   const plot     = data.Plot   && data.Plot   !== 'N/A' ? data.Plot   : null;
   const rating   = data.imdbRating && data.imdbRating !== 'N/A' ? data.imdbRating : null;
   const director = data.Director && data.Director !== 'N/A' ? data.Director : null;
+  const runtime  = data.Runtime && data.Runtime !== 'N/A' ? data.Runtime : null;
 
   localStorage.setItem(posterKey,   poster   || NOT_FOUND);
   localStorage.setItem(plotKey,     plot     || NOT_FOUND);
   localStorage.setItem(ratingKey,   rating   || NOT_FOUND);
   localStorage.setItem(directorKey, director || NOT_FOUND);
+  localStorage.setItem(runtimeKey,  runtime  || NOT_FOUND);
 
-  return { poster, plot, rating, director };
+  return { poster, plot, rating, director, runtime };
 }
 
-function storeNotFound(posterKey, plotKey, ratingKey, directorKey) {
+function storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey) {
   localStorage.setItem(posterKey,   NOT_FOUND);
   localStorage.setItem(plotKey,     NOT_FOUND);
   localStorage.setItem(ratingKey,   NOT_FOUND);
   localStorage.setItem(directorKey, NOT_FOUND);
+  localStorage.setItem(runtimeKey,  NOT_FOUND);
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { MOVIES_BY_ID } from '../data/movies';
 
 function timeAgo(timestamp) {
   if (!timestamp) return '';
@@ -12,7 +13,7 @@ function timeAgo(timestamp) {
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
-export default function ActivityFeed({ activities, currentProfileId }) {
+export default function ActivityFeed({ activities, currentProfileId, onOpenDetail }) {
   if (!activities || activities.length === 0) return null;
 
   return (
@@ -24,7 +25,14 @@ export default function ActivityFeed({ activities, currentProfileId }) {
           <span className="activity-text">
             <strong>{a.profileId === currentProfileId ? 'You' : a.displayName}</strong>
             {' watched '}
-            <strong>{a.movieTitle}</strong>
+            <span className="activity-movie-link" onClick={() => {
+              if (onOpenDetail) {
+                const movie = MOVIES_BY_ID[a.movieId];
+                if (movie) onOpenDetail(movie);
+              }
+            }}>
+              {a.movieTitle}
+            </span>
             <span className="activity-year"> ({a.movieYear})</span>
           </span>
           <span className="activity-time">{timeAgo(a.timestamp)}</span>

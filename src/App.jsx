@@ -645,8 +645,29 @@ export default function App() {
 
   // --- Skip film ---
   const handleSkip = useCallback(() => {
-    goNext();
-  }, [goNext]);
+    if (!currentMovie || playlist.length === 0) return;
+
+    // Remove current film from its position and insert it later
+    const newPlaylist = [...playlist];
+    const skippedMovie = newPlaylist.splice(currentIdx, 1)[0];
+
+    // Insert at a random position 10-30 films ahead (or near end if not enough films left)
+    const minOffset = Math.min(10, newPlaylist.length - currentIdx);
+    const maxOffset = Math.min(30, newPlaylist.length - currentIdx);
+    const insertOffset = minOffset + Math.floor(Math.random() * (maxOffset - minOffset + 1));
+    const insertIdx = currentIdx + insertOffset;
+
+    newPlaylist.splice(insertIdx, 0, skippedMovie);
+
+    setPlaylist(newPlaylist);
+    // Save new order
+    firebaseSave('playlistOrder', newPlaylist.map(m => m.id));
+
+    // Don't change currentIdx — the next film naturally slides into the current position
+    // But trigger a re-render of the card
+    setFading(true);
+    setTimeout(() => setFading(false), 280);
+  }, [currentMovie, currentIdx, playlist, firebaseSave]);
 
   // --- Tab change ---
   const handleTabChange = useCallback((tab) => {
@@ -748,7 +769,7 @@ export default function App() {
                 onNext={goNext}
                 canAdvance={canAdvance}
               />
-              <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} />
+              <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} onOpenDetail={setDetailMovie} />
               <JourneyControls
                 filters={profile?.filters}
                 onFiltersChange={(newFilters) => {

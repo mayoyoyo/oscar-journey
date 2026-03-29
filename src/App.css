@@ -519,6 +519,11 @@ main {
   color: var(--cream-dim);
 }
 
+.film-runtime {
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+}
+
 .watched-btn {
   margin-top: auto;
   display: inline-flex;
@@ -1061,6 +1066,11 @@ main {
 }
 
 .film-detail-director {
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+}
+
+.film-detail-runtime {
   font-size: 0.82rem;
   color: var(--cream-dim);
 }
@@ -2283,6 +2293,15 @@ main {
   color: var(--cream-dim);
   flex-shrink: 0;
   white-space: nowrap;
+}
+
+.activity-movie-link {
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+.activity-movie-link:hover {
+  color: var(--gold);
 }
 
 /* =====================================================

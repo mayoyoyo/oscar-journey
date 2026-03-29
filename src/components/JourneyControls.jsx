@@ -78,7 +78,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       {/* Sync banner */}
       {syncedProfile && (
         <div className="sync-banner">
-          <span>🔗 Following <strong>{syncedProfile.avatar} {syncedProfile.displayName}</strong>'s journey</span>
+          <span>🔗 Following <strong>{syncedProfile.avatar} {syncedProfile.displayName}</strong>'s order{eligibleCount < totalCount ? ' (filtered)' : ''}</span>
           <button className="sync-unsync-btn" onClick={() => {
             if (window.confirm('Stop following this journey? Your current position and progress will be kept, but you\'ll no longer sync with them.')) {
               onUnsync();

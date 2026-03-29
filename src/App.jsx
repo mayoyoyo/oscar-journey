@@ -130,6 +130,7 @@ export default function App() {
   // --- Core state ---
   const [playlist, setPlaylist] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
+  const preFilterIdx = useRef(null); // Saved position before filter auto-skip
   const [watchedSet, setWatchedSet] = useState(new Set());
   const [ratings, setRatings] = useState({});
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
@@ -619,23 +620,33 @@ export default function App() {
   }, []);
 
   // --- Auto-skip to next eligible film when current is filtered out ---
+  // Saves position before skipping so we can snap back when filters are removed
   useEffect(() => {
     if (screen !== 'card' || !playlist.length || eligibleStats.total === 0) return;
     if (!idxPassesFilter(currentIdx)) {
+      // Save the original position if we haven't already
+      if (preFilterIdx.current === null) {
+        preFilterIdx.current = currentIdx;
+      }
       // Find next eligible film forward, or backward if none ahead
       let next = currentIdx + 1;
       while (next < playlist.length && !idxPassesFilter(next)) next++;
       if (next >= playlist.length) {
-        // Try backward
         next = currentIdx - 1;
         while (next >= 0 && !idxPassesFilter(next)) next--;
       }
       if (next >= 0 && next < playlist.length) {
         setCurrentIdx(next);
-        firebaseSave('currentIdx', next);
+        // Don't save to Firestore — this is a temporary filter skip
+      }
+    } else if (preFilterIdx.current !== null) {
+      // Filters changed and the saved position is now valid — snap back
+      if (idxPassesFilter(preFilterIdx.current)) {
+        setCurrentIdx(preFilterIdx.current);
+        preFilterIdx.current = null;
       }
     }
-  }, [currentIdx, screen, playlist, idxPassesFilter, eligibleStats.total, firebaseSave]);
+  }, [currentIdx, screen, playlist, idxPassesFilter, eligibleStats.total]);
 
   // --- Keyboard shortcuts ---
   useEffect(() => {

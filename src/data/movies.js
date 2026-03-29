@@ -230,7 +230,7 @@ export const MOVIES = [
   // 1998 films - 71st Academy Awards
   { id: 'shakespeare-in-love-1998', title: "Shakespeare in Love",                           year: 1998, won: true,  genre: 'R', ceremony: 71, category: 'BP' },
   { id: 'elizabeth-1998', title: "Elizabeth",                                     year: 1998, won: false, genre: 'H', ceremony: 71, category: 'BP' },
-  { id: 'life-is-beautiful-1998', title: "Life Is Beautiful",                             year: 1998, won: false, genre: 'W', ceremony: 71, category: 'BP' },
+  { id: 'life-is-beautiful-1998', title: "Life Is Beautiful",                             year: 1998, won: false, genre: 'W', ceremony: 71, category: 'BP', alsoWon: ['INT'] },
   { id: 'saving-private-ryan-1998', title: "Saving Private Ryan",                           year: 1998, won: false, genre: 'W', ceremony: 71, category: 'BP' },
   { id: 'the-thin-red-line-1998', title: "The Thin Red Line",                             year: 1998, won: false, genre: 'W', ceremony: 71, category: 'BP' },
 
@@ -244,7 +244,7 @@ export const MOVIES = [
   // 2000 films - 73rd Academy Awards
   { id: 'gladiator-2000', title: "Gladiator",                                     year: 2000, won: true,  genre: 'H', ceremony: 73, category: 'BP' },
   { id: 'chocolat-2000', title: "Chocolat",                                      year: 2000, won: false, genre: 'C', ceremony: 73, category: 'BP' },
-  { id: 'crouching-tiger-hidden-dragon-2000', title: "Crouching Tiger, Hidden Dragon",                year: 2000, won: false, genre: 'N', ceremony: 73, category: 'BP' },
+  { id: 'crouching-tiger-hidden-dragon-2000', title: "Crouching Tiger, Hidden Dragon",                year: 2000, won: false, genre: 'N', ceremony: 73, category: 'BP', alsoWon: ['INT'] },
   { id: 'erin-brockovich-2000', title: "Erin Brockovich",                               year: 2000, won: false, genre: 'D', ceremony: 73, category: 'BP' },
   { id: 'traffic-2000', title: "Traffic",                                       year: 2000, won: false, genre: 'X', ceremony: 73, category: 'BP' },
 
@@ -341,7 +341,7 @@ export const MOVIES = [
 
   // 2012 films - 85th Academy Awards (9 nominees)
   { id: 'argo-2012', title: "Argo",                                          year: 2012, won: true,  genre: 'T', ceremony: 85, category: 'BP' },
-  { id: 'amour-2012', title: "Amour",                                         year: 2012, won: false, genre: 'I', ceremony: 85, category: 'BP' },
+  { id: 'amour-2012', title: "Amour",                                         year: 2012, won: false, genre: 'I', ceremony: 85, category: 'BP', alsoWon: ['INT'] },
   { id: 'beasts-of-the-southern-wild-2012', title: "Beasts of the Southern Wild",                   year: 2012, won: false, genre: 'I', ceremony: 85, category: 'BP' },
   { id: 'django-unchained-2012', title: "Django Unchained",                              year: 2012, won: false, genre: 'H', ceremony: 85, category: 'BP' },
   { id: 'les-mis-rables-2012', title: "Les Mis\u00e9rables",                                year: 2012, won: false, genre: 'M', ceremony: 85, category: 'BP' },
@@ -414,7 +414,7 @@ export const MOVIES = [
   { id: 'vice-2018', title: "Vice",                                          year: 2018, won: false, genre: 'B', ceremony: 91, category: 'BP' },
 
   // 2019 films - 92nd Academy Awards (9 nominees)
-  { id: 'parasite-2019', title: "Parasite",                                      year: 2019, won: true,  genre: 'T', ceremony: 92, category: 'BP' },
+  { id: 'parasite-2019', title: "Parasite",                                      year: 2019, won: true,  genre: 'T', ceremony: 92, category: 'BP', alsoWon: ['INT'] },
   { id: 'ford-v-ferrari-2019', title: "Ford v Ferrari",                                year: 2019, won: false, genre: 'D', ceremony: 92, category: 'BP' },
   { id: 'the-irishman-2019', title: "The Irishman",                                  year: 2019, won: false, genre: 'X', ceremony: 92, category: 'BP' },
   { id: 'jojo-rabbit-2019', title: "Jojo Rabbit",                                   year: 2019, won: false, genre: 'C', ceremony: 92, category: 'BP' },
@@ -438,7 +438,7 @@ export const MOVIES = [
   { id: 'coda-2021', title: "CODA",                                          year: 2021, won: true,  genre: 'D', ceremony: 94, category: 'BP' },
   { id: 'belfast-2021', title: "Belfast",                                       year: 2021, won: false, genre: 'H', ceremony: 94, category: 'BP' },
   { id: 'dont-look-up-2021', title: "Don't Look Up",                                 year: 2021, won: false, genre: 'C', ceremony: 94, category: 'BP' },
-  { id: 'drive-my-car-2021', title: "Drive My Car",                                  year: 2021, won: false, genre: 'I', ceremony: 94, category: 'BP' },
+  { id: 'drive-my-car-2021', title: "Drive My Car",                                  year: 2021, won: false, genre: 'I', ceremony: 94, category: 'BP', alsoWon: ['INT'] },
   { id: 'dune-2021', title: "Dune",                                          year: 2021, won: false, genre: 'S', ceremony: 94, category: 'BP' },
   { id: 'king-richard-2021', title: "King Richard",                                  year: 2021, won: false, genre: 'B', ceremony: 94, category: 'BP' },
   { id: 'licorice-pizza-2021', title: "Licorice Pizza",                                year: 2021, won: false, genre: 'C', ceremony: 94, category: 'BP' },
@@ -448,7 +448,7 @@ export const MOVIES = [
 
   // 2022 films - 95th Academy Awards (10 nominees)
   { id: 'everything-everywhere-all-at-once-2022', title: "Everything Everywhere All at Once",             year: 2022, won: true,  genre: 'S', ceremony: 95, category: 'BP' },
-  { id: 'all-quiet-on-the-western-front-2022', title: "All Quiet on the Western Front",                year: 2022, won: false, genre: 'W', ceremony: 95, category: 'BP' },
+  { id: 'all-quiet-on-the-western-front-2022', title: "All Quiet on the Western Front",                year: 2022, won: false, genre: 'W', ceremony: 95, category: 'BP', alsoWon: ['INT'] },
   { id: 'the-banshees-of-inisherin-2022', title: "The Banshees of Inisherin",                     year: 2022, won: false, genre: 'I', ceremony: 95, category: 'BP' },
   { id: 'elvis-2022', title: "Elvis",                                         year: 2022, won: false, genre: 'B', ceremony: 95, category: 'BP' },
   { id: 'the-fabelmans-2022', title: "The Fabelmans",                                 year: 2022, won: false, genre: 'B', ceremony: 95, category: 'BP' },
@@ -467,7 +467,7 @@ export const MOVIES = [
   { id: 'maestro-2023', title: "Maestro",                                       year: 2023, won: false, genre: 'B', ceremony: 96, category: 'BP' },
   { id: 'past-lives-2023', title: "Past Lives",                                    year: 2023, won: false, genre: 'R', ceremony: 96, category: 'BP' },
   { id: 'poor-things-2023', title: "Poor Things",                                   year: 2023, won: false, genre: 'S', ceremony: 96, category: 'BP' },
-  { id: 'the-zone-of-interest-2023', title: "The Zone of Interest",                          year: 2023, won: false, genre: 'W', ceremony: 96, category: 'BP' },
+  { id: 'the-zone-of-interest-2023', title: "The Zone of Interest",                          year: 2023, won: false, genre: 'W', ceremony: 96, category: 'BP', alsoWon: ['INT'] },
   { id: 'killers-of-the-flower-moon-2023', title: "Killers of the Flower Moon",                    year: 2023, won: false, genre: 'H', ceremony: 96, category: 'BP' },
 
   // 2024 films - 97th Academy Awards (10 nominees)
@@ -477,7 +477,7 @@ export const MOVIES = [
   { id: 'conclave-2024', title: "Conclave",                                      year: 2024, won: false, genre: 'T', ceremony: 97, category: 'BP' },
   { id: 'dune-part-two-2024', title: "Dune: Part Two",                                year: 2024, won: false, genre: 'S', ceremony: 97, category: 'BP' },
   { id: 'emilia-p-rez-2024', title: "Emilia P\u00e9rez",                                  year: 2024, won: false, genre: 'M', ceremony: 97, category: 'BP' },
-  { id: 'im-still-here-2024', title: "I'm Still Here",                                year: 2024, won: false, genre: 'H', ceremony: 97, category: 'BP' },
+  { id: 'im-still-here-2024', title: "I'm Still Here",                                year: 2024, won: false, genre: 'H', ceremony: 97, category: 'BP', alsoWon: ['INT'] },
   { id: 'nickel-boys-2024', title: "Nickel Boys",                                   year: 2024, won: false, genre: 'H', ceremony: 97, category: 'BP' },
   { id: 'the-substance-2024', title: "The Substance",                                 year: 2024, won: false, genre: 'T', ceremony: 97, category: 'BP' },
   { id: 'wicked-2024', title: "Wicked",                                        year: 2024, won: false, genre: 'M', ceremony: 97, category: 'BP' },
@@ -490,7 +490,7 @@ export const MOVIES = [
   { id: 'hamnet-2025', title: "Hamnet",                                         year: 2025, won: false, genre: 'H', ceremony: 98, category: 'BP' },
   { id: 'marty-supreme-2025', title: "Marty Supreme",                                  year: 2025, won: false, genre: 'B', ceremony: 98, category: 'BP' },
   { id: 'the-secret-agent-2025', title: "The Secret Agent",                               year: 2025, won: false, genre: 'T', ceremony: 98, category: 'BP' },
-  { id: 'sentimental-value-2025', title: "Sentimental Value",                              year: 2025, won: false, genre: 'D', ceremony: 98, category: 'BP' },
+  { id: 'sentimental-value-2025', title: "Sentimental Value",                              year: 2025, won: false, genre: 'D', ceremony: 98, category: 'BP', alsoWon: ['INT'] },
   { id: 'sinners-2025', title: "Sinners",                                        year: 2025, won: false, genre: 'T', ceremony: 98, category: 'BP' },
   { id: 'train-dreams-2025', title: "Train Dreams",                                   year: 2025, won: false, genre: 'H', ceremony: 98, category: 'BP' },
 

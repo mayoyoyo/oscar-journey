@@ -41,6 +41,8 @@ export function BadgeBpSm() {
 
 // Renders the full set of badges for a movie
 export function MovieBadges({ movie, small = false }) {
+  const alsoWon = movie.alsoWon || [];
+
   if (small) {
     return (
       <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -48,6 +50,8 @@ export function MovieBadges({ movie, small = false }) {
         {movie.category === 'INT' && <BadgeIntSm />}
         {movie.category === 'ANIM' && <BadgeAnimSm />}
         {movie.category === 'BP' && <BadgeBpSm />}
+        {alsoWon.includes('INT') && <BadgeIntSm />}
+        {alsoWon.includes('ANIM') && <BadgeAnimSm />}
         <BadgeGenreSm genre={movie.genre} />
       </span>
     );
@@ -59,6 +63,8 @@ export function MovieBadges({ movie, small = false }) {
       <BadgeGenre genre={movie.genre} />
       {movie.category === 'INT' && <BadgeInt />}
       {movie.category === 'ANIM' && <BadgeAnim />}
+      {alsoWon.includes('INT') && <BadgeInt />}
+      {alsoWon.includes('ANIM') && <BadgeAnim />}
     </div>
   );
 }

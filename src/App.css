@@ -1354,10 +1354,11 @@ main {
 }
 .battle-card-poster {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  aspect-ratio: 2/3;
+  object-fit: contain;
   display: block;
   background: var(--bg3);
+  border-bottom: 1px solid var(--border);
 }
 .battle-card-info {
   padding: 16px;
@@ -1746,7 +1747,7 @@ main {
 
   .battle-arena { flex-direction: column; }
   .battle-vs { padding: 12px 0; font-size: 1.4rem; }
-  .battle-card-poster { height: 160px; }
+  .battle-card-poster { aspect-ratio: 2/3; }
 
   .profile-detail-name { font-size: 1.5rem; }
   .profile-detail-summary { gap: 10px; }

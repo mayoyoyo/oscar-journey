@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import { createProfile, loginProfile } from '../utils/firebaseStorage';
 
-const AVATAR_EMOJIS = [
-  '🍿', '🎬', '🎭', '🎪', '🦊', '🐻', '🦁', '🐸', '🐧', '🦄',
-  '👻', '🤖', '👽', '🎃', '🧙', '🦸', '🧛', '🥷', '🤠', '🥸',
-  '😎', '🤓', '🧐', '🤩', '😈', '🌮', '🍕', '🌈', '⭐', '🔥',
-  '💎', '🎸', '🎯', '🏆', '🎰', '🚀', '🛸', '🌍', '🎪', '🃏',
-];
+import { AVATAR_EMOJIS } from '../data/avatars';
 
 export default function LoginScreen({ onLogin }) {
   const [mode, setMode] = useState('login'); // 'login' | 'create'

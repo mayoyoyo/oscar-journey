@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { AVATAR_EMOJIS } from '../data/avatars';
 
-export default function SettingsModal({ raters, onRatersChange, onClose, onReset, onClearCache }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, onClose, onReset, onClearCache }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
 
@@ -26,6 +27,22 @@ export default function SettingsModal({ raters, onRatersChange, onClose, onReset
     }}>
       <div className="modal">
         <h2>Settings</h2>
+
+        <div className="modal-section">
+          <label>Avatar</label>
+          <div className="avatar-grid" style={{ marginTop: '8px', marginBottom: '8px' }}>
+            {AVATAR_EMOJIS.map((emoji, i) => (
+              <button
+                key={i}
+                className={`avatar-option ${avatar === emoji ? 'selected' : ''}`}
+                onClick={() => onAvatarChange(emoji)}
+                type="button"
+              >
+                {emoji}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <div className="modal-section">
           <label>Raters</label>

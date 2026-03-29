@@ -341,6 +341,12 @@ export default function App() {
     firebaseSave('raters', newRaters);
   }, [firebaseSave]);
 
+  // --- Avatar change ---
+  const handleAvatarChange = useCallback((emoji) => {
+    setProfile(prev => prev ? { ...prev, avatar: emoji } : prev);
+    firebaseSave('avatar', emoji);
+  }, [firebaseSave]);
+
   // --- Tab change ---
   const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
@@ -465,6 +471,8 @@ export default function App() {
         <SettingsModal
           raters={raters}
           onRatersChange={handleRatersChange}
+          avatar={profile?.avatar || '🍿'}
+          onAvatarChange={handleAvatarChange}
           onClose={() => setSettingsOpen(false)}
           onReset={handleReset}
           onClearCache={handleClearCache}

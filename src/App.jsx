@@ -95,6 +95,84 @@ function moviePassesFilter(movie, filters, smartContext) {
   return true;
 }
 
+const JOURNEY_TAGLINES = [
+  "The point is watching films you wouldn't normally pick. Skip button? We don't know her.",
+  "You didn't come this far to watch another Marvel movie. Commit.",
+  "Your comfort zone called. It wants you back. Don't answer.",
+  "Every Oscar winner was someone's 'I'd never watch that.' Look how that turned out.",
+  "The algorithm picked this for you. The algorithm is smarter than you. Trust it.",
+  "Somewhere, a film student is crying that you haven't seen this yet.",
+  "This is cheaper than therapy and almost as life-changing.",
+  "You're not 'not a movie person.' You just haven't found the right one yet.",
+  "If you can binge 8 episodes of reality TV, you can watch one Oscar nominee.",
+  "Fun fact: every film on this list was better than whatever you watched last Tuesday.",
+  "The skip button is for the weak. You are not weak. Probably.",
+  "Imagine telling someone you watched every Oscar nominee. That's the energy we're going for.",
+  "This film won't watch itself. Although that would be a great Black Mirror episode.",
+  "You're building taste. Taste takes time. This is the time.",
+  "Your future self will thank you. Your current self might complain. Ignore them.",
+  "One film at a time. That's literally all we're asking.",
+  "The Oscars have been picking films since 1929. They've had some practice.",
+  "If this film is bad, at least you'll have a strong opinion at dinner parties.",
+  "Cinema is the only place where crying in public is considered sophisticated.",
+  "Popcorn is optional. Watching the film is not.",
+  "This isn't homework. Okay, it's a little like homework. But fun homework.",
+  "Every masterpiece was once a film someone almost skipped.",
+  "You're not watching a movie. You're having a cultural experience.",
+  "The remote control has a play button. It does not have a 'scroll endlessly' button.",
+  "Commitment issues? In this economy? Just watch the film.",
+  "This site has 399 films. You have one job.",
+  "Think of this as a gym membership for your brain. Except you'll actually use it.",
+  "Your watchlist on Netflix has 200 films. You've watched 3. We're fixing that.",
+  "Award-winning cinema > doomscrolling. This is not up for debate.",
+  "You pressed 'Begin Your Journey.' The journey includes this film. Keep going.",
+  "Some people climb mountains. You watch Oscar films. Both are valid.",
+  "The Academy spent millions deciding these are the best films. Who are you to argue?",
+  "No one ever said 'I regret watching that Oscar-winning film.' Literally no one.",
+  "If you skip this, the popcorn emoji in your avatar will judge you. 🍿",
+  "You've spent more time picking a film than it takes to watch one. Just press play.",
+  "Plot twist: the film you least want to watch becomes your favorite. Every time.",
+  "Your attention span called. It said it's ready for a comeback.",
+  "This is the opposite of doom scrolling. This is bloom scrolling.",
+  "Each film you watch makes you 0.3% more interesting at parties. Science.",
+  "You're not watching movies. You're collecting opinions. Very important opinions.",
+  "The skip button exists, but so does regret. Choose wisely.",
+  "Remember when you said you wanted to watch more 'good' movies? This is that.",
+  "A journey of 399 films begins with a single play button.",
+  "This film has been waiting since its Oscar nomination for you specifically.",
+  "You can't spell 'Oscar' without... actually you can't rearrange those letters into anything. Just watch it.",
+  "Your film taste is about to get an upgrade. You're welcome in advance.",
+  "Quitting is for people who don't have a cool movie tracking site.",
+  "Every film you finish is a flex. Every skip is a fumble.",
+  "Behind every great film opinion is someone who actually watched the film.",
+  "The couch is ready. The film is ready. Are you ready?",
+  "This is what your screen was made for. Not group chats. Cinema.",
+  "Film critics watch 300+ films a year. You can handle one today.",
+  "Skipping films is like skipping leg day. Everyone notices.",
+  "The next 2 hours could change your perspective. Or at least your dinner conversation.",
+  "Oscar nominees are like vegetables. You won't always love them, but they're good for you.",
+  "This film has more awards than your entire DVD collection. Respect.",
+  "Entertainment without effort is TikTok. Entertainment with effort is cinema. Choose up.",
+  "Fun fact: watching this film counts as personality development.",
+  "The people who voted for this film have seen more movies than you. Humble yourself.",
+  "Not every film will be your favorite. But every film teaches you something about what is.",
+  "You're on a journey. Journeys have boring parts. Push through.",
+  "Someone made this film over years of their life. You can give it 2 hours of yours.",
+  "Your watch history is your autobiography. Make it a good one.",
+  "The best films are the ones you almost didn't watch.",
+  "Skip now, FOMO later. It's a tale as old as cinema.",
+  "If you finish all 399 films, absolutely nothing happens. But you'll feel incredible.",
+  "Rome wasn't built in a day. Your film taste won't be either.",
+  "The only bad movie night is the one where you didn't press play.",
+  "Grab a snack. Dim the lights. Pretend you're at a film festival. You basically are.",
+  "You've already read this far. Might as well watch the movie too.",
+  "This isn't just a film. It's a conversation starter you haven't unlocked yet.",
+  "Every great director started by watching films they didn't choose. So did you. Just now.",
+  "The algorithm mixed genres so you don't get bored. You're welcome.",
+  "Your brain after this film: expanded. Your couch: still comfy. Win-win.",
+  "Watching Oscar films is a personality trait. A good one.",
+];
+
 const LS_PROFILE_KEY = 'oscars_profile_id';
 const LS_THEME_KEY = 'oscars_theme';
 const LS_TAB_KEY = 'oscars_active_tab';
@@ -843,7 +921,7 @@ export default function App() {
                 canAdvance={canAdvance}
               />
               <div className="journey-tagline">
-                The point is watching films you wouldn't normally pick. <span>Skip button? We don't know her.</span>
+                {JOURNEY_TAGLINES[Math.floor(currentIdx * 7.3 + playlist.length) % JOURNEY_TAGLINES.length]}
               </div>
               <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} onOpenDetail={setDetailMovie} />
               <JourneyControls

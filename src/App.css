@@ -1562,7 +1562,7 @@ main {
 .profile-card-stat .stat-label { color: var(--cream-dim); }
 .profile-card-stat .stat-value { font-weight: 600; }
 
-.profile-card-skip .stat-value {
+.profile-card-skip .stat-value.has-skips {
   color: var(--red-bright);
 }
 

@@ -17,6 +17,7 @@ export const GENRE_LABELS = {
 
 // Series that must maintain release order after shuffle
 export const SERIES = [
+  ["The Godfather", "The Godfather Part II", "The Godfather Part III"],
   ["The Lord of the Rings: The Fellowship of the Ring", "The Lord of the Rings: The Two Towers", "The Lord of the Rings: The Return of the King"],
   ["Avatar", "Avatar: The Way of Water"],
   ["Dune", "Dune: Part Two"],
@@ -29,6 +30,153 @@ export const MOVIES = [
   // =====================================================
   // BEST PICTURE NOMINEES
   // =====================================================
+
+  // 1970 films - 43rd Academy Awards
+  { title: "Patton",                                          year: 1970, won: true,  genre: 'W', ceremony: 43, category: 'BP' },
+  { title: "Airport",                                         year: 1970, won: false, genre: 'T', ceremony: 43, category: 'BP' },
+  { title: "Five Easy Pieces",                                year: 1970, won: false, genre: 'D', ceremony: 43, category: 'BP' },
+  { title: "Love Story",                                      year: 1970, won: false, genre: 'R', ceremony: 43, category: 'BP' },
+  { title: "M*A*S*H",                                         year: 1970, won: false, genre: 'W', ceremony: 43, category: 'BP' },
+
+  // 1971 films - 44th Academy Awards
+  { title: "The French Connection",                           year: 1971, won: true,  genre: 'X', ceremony: 44, category: 'BP' },
+  { title: "A Clockwork Orange",                              year: 1971, won: false, genre: 'S', ceremony: 44, category: 'BP' },
+  { title: "Fiddler on the Roof",                             year: 1971, won: false, genre: 'M', ceremony: 44, category: 'BP' },
+  { title: "The Last Picture Show",                           year: 1971, won: false, genre: 'D', ceremony: 44, category: 'BP' },
+  { title: "Nicholas and Alexandra",                          year: 1971, won: false, genre: 'H', ceremony: 44, category: 'BP' },
+
+  // 1972 films - 45th Academy Awards
+  { title: "The Godfather",                                   year: 1972, won: true,  genre: 'X', ceremony: 45, category: 'BP' },
+  { title: "Cabaret",                                         year: 1972, won: false, genre: 'M', ceremony: 45, category: 'BP' },
+  { title: "Deliverance",                                     year: 1972, won: false, genre: 'T', ceremony: 45, category: 'BP' },
+  { title: "The Emigrants",                                   year: 1972, won: false, genre: 'H', ceremony: 45, category: 'BP' },
+  { title: "Sounder",                                         year: 1972, won: false, genre: 'D', ceremony: 45, category: 'BP' },
+
+  // 1973 films - 46th Academy Awards
+  { title: "The Sting",                                       year: 1973, won: true,  genre: 'X', ceremony: 46, category: 'BP' },
+  { title: "American Graffiti",                               year: 1973, won: false, genre: 'C', ceremony: 46, category: 'BP' },
+  { title: "Cries and Whispers",                              year: 1973, won: false, genre: 'I', ceremony: 46, category: 'BP' },
+  { title: "The Exorcist",                                    year: 1973, won: false, genre: 'T', ceremony: 46, category: 'BP' },
+  { title: "A Touch of Class",                                year: 1973, won: false, genre: 'C', ceremony: 46, category: 'BP' },
+
+  // 1974 films - 47th Academy Awards
+  { title: "The Godfather Part II",                           year: 1974, won: true,  genre: 'X', ceremony: 47, category: 'BP' },
+  { title: "Chinatown",                                       year: 1974, won: false, genre: 'X', ceremony: 47, category: 'BP' },
+  { title: "The Conversation",                                year: 1974, won: false, genre: 'T', ceremony: 47, category: 'BP' },
+  { title: "Lenny",                                           year: 1974, won: false, genre: 'B', ceremony: 47, category: 'BP' },
+  { title: "The Towering Inferno",                            year: 1974, won: false, genre: 'N', ceremony: 47, category: 'BP' },
+
+  // 1975 films - 48th Academy Awards
+  { title: "One Flew Over the Cuckoo's Nest",                year: 1975, won: true,  genre: 'D', ceremony: 48, category: 'BP' },
+  { title: "Barry Lyndon",                                    year: 1975, won: false, genre: 'H', ceremony: 48, category: 'BP' },
+  { title: "Dog Day Afternoon",                               year: 1975, won: false, genre: 'X', ceremony: 48, category: 'BP' },
+  { title: "Jaws",                                            year: 1975, won: false, genre: 'T', ceremony: 48, category: 'BP' },
+  { title: "Nashville",                                       year: 1975, won: false, genre: 'C', ceremony: 48, category: 'BP' },
+
+  // 1976 films - 49th Academy Awards
+  { title: "Rocky",                                           year: 1976, won: true,  genre: 'D', ceremony: 49, category: 'BP' },
+  { title: "All the President's Men",                         year: 1976, won: false, genre: 'T', ceremony: 49, category: 'BP' },
+  { title: "Bound for Glory",                                 year: 1976, won: false, genre: 'B', ceremony: 49, category: 'BP' },
+  { title: "Network",                                         year: 1976, won: false, genre: 'D', ceremony: 49, category: 'BP' },
+  { title: "Taxi Driver",                                     year: 1976, won: false, genre: 'X', ceremony: 49, category: 'BP' },
+
+  // 1977 films - 50th Academy Awards
+  { title: "Annie Hall",                                      year: 1977, won: true,  genre: 'C', ceremony: 50, category: 'BP' },
+  { title: "The Goodbye Girl",                                year: 1977, won: false, genre: 'C', ceremony: 50, category: 'BP' },
+  { title: "Julia",                                           year: 1977, won: false, genre: 'D', ceremony: 50, category: 'BP' },
+  { title: "Star Wars",                                       year: 1977, won: false, genre: 'S', ceremony: 50, category: 'BP' },
+  { title: "The Turning Point",                               year: 1977, won: false, genre: 'D', ceremony: 50, category: 'BP' },
+
+  // 1978 films - 51st Academy Awards
+  { title: "The Deer Hunter",                                 year: 1978, won: true,  genre: 'W', ceremony: 51, category: 'BP' },
+  { title: "Coming Home",                                     year: 1978, won: false, genre: 'W', ceremony: 51, category: 'BP' },
+  { title: "Heaven Can Wait",                                 year: 1978, won: false, genre: 'C', ceremony: 51, category: 'BP' },
+  { title: "Midnight Express",                                year: 1978, won: false, genre: 'T', ceremony: 51, category: 'BP' },
+  { title: "An Unmarried Woman",                              year: 1978, won: false, genre: 'D', ceremony: 51, category: 'BP' },
+
+  // 1979 films - 52nd Academy Awards
+  { title: "Kramer vs. Kramer",                               year: 1979, won: true,  genre: 'D', ceremony: 52, category: 'BP' },
+  { title: "All That Jazz",                                   year: 1979, won: false, genre: 'M', ceremony: 52, category: 'BP' },
+  { title: "Apocalypse Now",                                  year: 1979, won: false, genre: 'W', ceremony: 52, category: 'BP' },
+  { title: "Breaking Away",                                   year: 1979, won: false, genre: 'C', ceremony: 52, category: 'BP' },
+  { title: "Norma Rae",                                       year: 1979, won: false, genre: 'D', ceremony: 52, category: 'BP' },
+
+  // 1980 films - 53rd Academy Awards
+  { title: "Ordinary People",                                 year: 1980, won: true,  genre: 'D', ceremony: 53, category: 'BP' },
+  { title: "Coal Miner's Daughter",                           year: 1980, won: false, genre: 'B', ceremony: 53, category: 'BP' },
+  { title: "The Elephant Man",                                year: 1980, won: false, genre: 'D', ceremony: 53, category: 'BP' },
+  { title: "Raging Bull",                                     year: 1980, won: false, genre: 'B', ceremony: 53, category: 'BP' },
+  { title: "Tess",                                            year: 1980, won: false, genre: 'H', ceremony: 53, category: 'BP' },
+
+  // 1981 films - 54th Academy Awards
+  { title: "Chariots of Fire",                                year: 1981, won: true,  genre: 'H', ceremony: 54, category: 'BP' },
+  { title: "Atlantic City",                                   year: 1981, won: false, genre: 'X', ceremony: 54, category: 'BP' },
+  { title: "On Golden Pond",                                  year: 1981, won: false, genre: 'D', ceremony: 54, category: 'BP' },
+  { title: "Raiders of the Lost Ark",                         year: 1981, won: false, genre: 'N', ceremony: 54, category: 'BP' },
+  { title: "Reds",                                            year: 1981, won: false, genre: 'H', ceremony: 54, category: 'BP' },
+
+  // 1982 films - 55th Academy Awards
+  { title: "Gandhi",                                          year: 1982, won: true,  genre: 'B', ceremony: 55, category: 'BP' },
+  { title: "E.T. the Extra-Terrestrial",                      year: 1982, won: false, genre: 'S', ceremony: 55, category: 'BP' },
+  { title: "Missing",                                         year: 1982, won: false, genre: 'T', ceremony: 55, category: 'BP' },
+  { title: "Tootsie",                                         year: 1982, won: false, genre: 'C', ceremony: 55, category: 'BP' },
+  { title: "The Verdict",                                     year: 1982, won: false, genre: 'D', ceremony: 55, category: 'BP' },
+
+  // 1983 films - 56th Academy Awards
+  { title: "Terms of Endearment",                             year: 1983, won: true,  genre: 'D', ceremony: 56, category: 'BP' },
+  { title: "The Big Chill",                                   year: 1983, won: false, genre: 'C', ceremony: 56, category: 'BP' },
+  { title: "The Dresser",                                     year: 1983, won: false, genre: 'D', ceremony: 56, category: 'BP' },
+  { title: "The Right Stuff",                                 year: 1983, won: false, genre: 'H', ceremony: 56, category: 'BP' },
+  { title: "Tender Mercies",                                  year: 1983, won: false, genre: 'D', ceremony: 56, category: 'BP' },
+
+  // 1984 films - 57th Academy Awards
+  { title: "Amadeus",                                         year: 1984, won: true,  genre: 'B', ceremony: 57, category: 'BP' },
+  { title: "The Killing Fields",                              year: 1984, won: false, genre: 'W', ceremony: 57, category: 'BP' },
+  { title: "A Passage to India",                              year: 1984, won: false, genre: 'H', ceremony: 57, category: 'BP' },
+  { title: "Places in the Heart",                             year: 1984, won: false, genre: 'D', ceremony: 57, category: 'BP' },
+  { title: "A Soldier's Story",                               year: 1984, won: false, genre: 'D', ceremony: 57, category: 'BP' },
+
+  // 1985 films - 58th Academy Awards
+  { title: "Out of Africa",                                   year: 1985, won: true,  genre: 'R', ceremony: 58, category: 'BP' },
+  { title: "The Color Purple",                                year: 1985, won: false, genre: 'D', ceremony: 58, category: 'BP' },
+  { title: "Kiss of the Spider Woman",                        year: 1985, won: false, genre: 'D', ceremony: 58, category: 'BP' },
+  { title: "Prizzi's Honor",                                  year: 1985, won: false, genre: 'X', ceremony: 58, category: 'BP' },
+  { title: "Witness",                                         year: 1985, won: false, genre: 'T', ceremony: 58, category: 'BP' },
+
+  // 1986 films - 59th Academy Awards
+  { title: "Platoon",                                         year: 1986, won: true,  genre: 'W', ceremony: 59, category: 'BP' },
+  { title: "Children of a Lesser God",                        year: 1986, won: false, genre: 'R', ceremony: 59, category: 'BP' },
+  { title: "Hannah and Her Sisters",                          year: 1986, won: false, genre: 'C', ceremony: 59, category: 'BP' },
+  { title: "The Mission",                                     year: 1986, won: false, genre: 'H', ceremony: 59, category: 'BP' },
+  { title: "A Room with a View",                              year: 1986, won: false, genre: 'R', ceremony: 59, category: 'BP' },
+
+  // 1987 films - 60th Academy Awards
+  { title: "The Last Emperor",                                year: 1987, won: true,  genre: 'H', ceremony: 60, category: 'BP' },
+  { title: "Broadcast News",                                  year: 1987, won: false, genre: 'C', ceremony: 60, category: 'BP' },
+  { title: "Fatal Attraction",                                year: 1987, won: false, genre: 'T', ceremony: 60, category: 'BP' },
+  { title: "Hope and Glory",                                  year: 1987, won: false, genre: 'W', ceremony: 60, category: 'BP' },
+  { title: "Moonstruck",                                      year: 1987, won: false, genre: 'R', ceremony: 60, category: 'BP' },
+
+  // 1988 films - 61st Academy Awards
+  { title: "Rain Man",                                        year: 1988, won: true,  genre: 'D', ceremony: 61, category: 'BP' },
+  { title: "The Accidental Tourist",                          year: 1988, won: false, genre: 'D', ceremony: 61, category: 'BP' },
+  { title: "Dangerous Liaisons",                              year: 1988, won: false, genre: 'H', ceremony: 61, category: 'BP' },
+  { title: "Mississippi Burning",                             year: 1988, won: false, genre: 'T', ceremony: 61, category: 'BP' },
+  { title: "Working Girl",                                    year: 1988, won: false, genre: 'C', ceremony: 61, category: 'BP' },
+
+  // 1989 films - 62nd Academy Awards
+  { title: "Driving Miss Daisy",                              year: 1989, won: true,  genre: 'D', ceremony: 62, category: 'BP' },
+  { title: "Born on the Fourth of July",                      year: 1989, won: false, genre: 'W', ceremony: 62, category: 'BP' },
+  { title: "Dead Poets Society",                              year: 1989, won: false, genre: 'D', ceremony: 62, category: 'BP' },
+  { title: "Field of Dreams",                                 year: 1989, won: false, genre: 'S', ceremony: 62, category: 'BP' },
+  { title: "My Left Foot",                                    year: 1989, won: false, genre: 'B', ceremony: 62, category: 'BP' },
+
+  // 1990 films - 63rd Academy Awards
+  { title: "Dances with Wolves",                              year: 1990, won: true,  genre: 'H', ceremony: 63, category: 'BP' },
+  { title: "Awakenings",                                      year: 1990, won: false, genre: 'B', ceremony: 63, category: 'BP' },
+  { title: "Ghost",                                           year: 1990, won: false, genre: 'R', ceremony: 63, category: 'BP' },
+  { title: "The Godfather Part III",                          year: 1990, won: false, genre: 'X', ceremony: 63, category: 'BP' },
+  { title: "Goodfellas",                                      year: 1990, won: false, genre: 'X', ceremony: 63, category: 'BP' },
 
   // 1991 films - 64th Academy Awards
   { title: "The Silence of the Lambs",                     year: 1991, won: true,  genre: 'T', ceremony: 64, category: 'BP' },

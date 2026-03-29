@@ -1698,3 +1698,39 @@ main {
   }
   .film-tile-poster, .film-tile-poster-placeholder { height: 160px; }
 }
+
+/* =====================================================
+   FILTER TOGGLES (Settings Modal)
+   ===================================================== */
+.filter-section { margin-bottom: 16px; }
+.filter-section-label {
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.filter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.filter-toggle {
+  padding: 5px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--cream-dim);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-toggle.active {
+  background: var(--gold);
+  color: var(--btn-text);
+  border-color: var(--gold);
+}
+.filter-toggle:hover:not(.active) {
+  border-color: var(--gold-dim);
+  color: var(--cream);
+}

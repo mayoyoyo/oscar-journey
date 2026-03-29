@@ -59,7 +59,9 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
     const movies = [...watchedMovies];
     if (sortMode === 'rating') {
       // Sort by highest average rating from this profile's raters (descending)
-      const ratings = profileData.ratings || {};
+      // Use live ratings for own profile
+      const isOwn = currentProfile && currentProfile.id === profileData.id;
+      const ratings = (isOwn && currentRatings) ? currentRatings : (profileData.ratings || {});
       const profileRatersList = profileData.raters || [];
       return movies.sort((a, b) => {
         const aKey = ratingKey(a);
@@ -74,7 +76,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       });
     }
     return movies.sort((a, b) => a.title.localeCompare(b.title));
-  }, [watchedMovies, sortMode, profileData]);
+  }, [watchedMovies, sortMode, profileData, currentProfile, currentRatings]);
 
   // Filter watched movies by search query
   const filteredWatched = useMemo(() => {
@@ -89,7 +91,9 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
 
   // Compute summary stats
   const stats = useMemo(() => {
-    const ratings = profileData.ratings || {};
+    // Use live ratings for own profile
+    const isOwn = currentProfile && currentProfile.id === profileData.id;
+    const ratings = (isOwn && currentRatings) ? currentRatings : (profileData.ratings || {});
     let totalRating = 0;
     let ratingCount = 0;
     const genreRatings = {};
@@ -130,7 +134,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       ratingCount,
       favGenre,
     };
-  }, [profileData, watchedMovies]);
+  }, [profileData, watchedMovies, currentProfile, currentRatings]);
 
   // Member since
   const memberSince = useMemo(() => {
@@ -141,9 +145,16 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
     return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   }, [profileData]);
 
+  // Check if this is the viewer's own profile
+  const isOwnProfile = currentProfile && currentProfile.id === profileData.id;
+
   // Get the ratings object for a specific movie from this profile
+  // When viewing own profile, use live React state (currentRatings) for instant updates
   const getProfileRatings = (movie) => {
     const key = ratingKey(movie);
+    if (isOwnProfile && currentRatings) {
+      return currentRatings[key] || {};
+    }
     return profileData.ratings?.[key] || {};
   };
 
@@ -159,9 +170,6 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
     // Also check all entries - the viewer might have a single rating
     return null;
   };
-
-  // Check if this is the viewer's own profile
-  const isOwnProfile = currentProfile && currentProfile.id === profileData.id;
 
   // Profile raters list
   const profileRaters = profileData.raters || [];
@@ -260,13 +268,13 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
                       if (val == null) return null;
                       return (
                         <span className="film-tile-rating" key={rater}>
-                          {rater}: <span className="rating-value">{val.toFixed(1)}</span>
+                          {rater}: <span className="rating-value">{val.toFixed(1)}{'\u2605'}</span>
                         </span>
                       );
                     })}
                     {viewerRating && (
                       <span className="film-tile-rating viewer-rating">
-                        You: <span className="rating-value">{viewerRating.value.toFixed(1)}</span>
+                        You: <span className="rating-value">{viewerRating.value.toFixed(1)}{'\u2605'}</span>
                       </span>
                     )}
                   </div>

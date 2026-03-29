@@ -14,13 +14,54 @@ import CompletionScreen from './components/CompletionScreen';
 import FilmList from './components/FilmList';
 import FilmDetailModal from './components/FilmDetailModal';
 import StatsTab from './components/StatsTab';
-import SettingsModal from './components/SettingsModal';
+import SettingsModal, { DEFAULT_FILTERS } from './components/SettingsModal';
 import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
 import Leaderboard from './components/Leaderboard';
 
+// Map genre codes to tone filter keys
+const GENRE_TO_TONE = {
+  D: 'drama', H: 'drama', I: 'drama',
+  T: 'thriller', X: 'thriller',
+  C: 'comedy', R: 'comedy',
+  S: 'scifi',
+  W: 'war',
+  B: 'biopic',
+  M: 'musical',
+  N: 'action',
+  A: 'animation',
+};
+
+// Check if a movie passes the current filters
+function moviePassesFilter(movie, filters) {
+  if (!filters) return true;
+  const f = {
+    eras: { ...DEFAULT_FILTERS.eras, ...(filters.eras || {}) },
+    categories: { ...DEFAULT_FILTERS.categories, ...(filters.categories || {}) },
+    tones: { ...DEFAULT_FILTERS.tones, ...(filters.tones || {}) },
+  };
+
+  // Era check
+  const year = movie.year;
+  if (year < 1991 && !f.eras['70s80s']) return false;
+  if (year >= 1991 && year < 2000 && !f.eras['90s']) return false;
+  if (year >= 2000 && year < 2010 && !f.eras['00s']) return false;
+  if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
+  if (year >= 2020 && !f.eras['20s']) return false;
+
+  // Category check
+  if (!f.categories[movie.category]) return false;
+
+  // Tone/genre check
+  const toneKey = GENRE_TO_TONE[movie.genre];
+  if (toneKey && !f.tones[toneKey]) return false;
+
+  return true;
+}
+
 const LS_PROFILE_KEY = 'oscars_profile_id';
 const LS_THEME_KEY = 'oscars_theme';
+const LS_TAB_KEY = 'oscars_active_tab';
 
 export default function App() {
   // --- Auth state ---
@@ -56,7 +97,9 @@ export default function App() {
   const [watchedSet, setWatchedSet] = useState(new Set());
   const [ratings, setRatings] = useState({});
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
-  const [activeTab, setActiveTab] = useState('journey');
+  const [activeTab, setActiveTab] = useState(() => {
+    return localStorage.getItem(LS_TAB_KEY) || 'journey';
+  });
   const [screen, setScreen] = useState('start'); // 'start' | 'card' | 'complete'
   const [fading, setFading] = useState(false);
 
@@ -176,6 +219,7 @@ export default function App() {
   // --- Logout handler ---
   const handleLogout = useCallback(() => {
     localStorage.removeItem(LS_PROFILE_KEY);
+    localStorage.removeItem(LS_TAB_KEY);
     setProfile(null);
     setPlaylist([]);
     setCurrentIdx(0);
@@ -208,31 +252,71 @@ export default function App() {
     return set;
   }, [watchedSet, playlist]);
 
+  // --- Filter helpers ---
+  const activeFilters = profile?.filters || null;
+
+  // Check if a playlist index passes the current filters
+  const idxPassesFilter = useCallback((idx) => {
+    const movie = playlist[idx];
+    if (!movie) return false;
+    return moviePassesFilter(movie, activeFilters);
+  }, [playlist, activeFilters]);
+
+  // Compute filtered eligible film counts for progress
+  const eligibleStats = useMemo(() => {
+    let total = 0;
+    let watched = 0;
+    for (let i = 0; i < playlist.length; i++) {
+      if (idxPassesFilter(i)) {
+        total++;
+        if (watchedSet.has(i)) watched++;
+      }
+    }
+    return { total, watched };
+  }, [playlist, watchedSet, idxPassesFilter]);
+
+  // Find the eligible position of currentIdx among eligible films (for progress bar)
+  const eligiblePosition = useMemo(() => {
+    let pos = 0;
+    for (let i = 0; i < currentIdx; i++) {
+      if (idxPassesFilter(i)) pos++;
+    }
+    return pos;
+  }, [currentIdx, idxPassesFilter]);
+
   // --- Navigation ---
   const goNext = useCallback(() => {
-    if (currentIdx >= playlist.length - 1) {
+    // Find next eligible film after currentIdx
+    let next = currentIdx + 1;
+    while (next < playlist.length && !idxPassesFilter(next)) {
+      next++;
+    }
+    if (next >= playlist.length) {
       setScreen('complete');
       return;
     }
     setFading(true);
     setTimeout(() => {
-      const next = currentIdx + 1;
       setCurrentIdx(next);
       firebaseSave('currentIdx', next);
       setFading(false);
     }, 280);
-  }, [currentIdx, playlist.length, firebaseSave]);
+  }, [currentIdx, playlist.length, firebaseSave, idxPassesFilter]);
 
   const goPrev = useCallback(() => {
-    if (currentIdx <= 0) return;
+    // Find previous eligible film before currentIdx
+    let prev = currentIdx - 1;
+    while (prev >= 0 && !idxPassesFilter(prev)) {
+      prev--;
+    }
+    if (prev < 0) return;
     setFading(true);
     setTimeout(() => {
-      const prev = currentIdx - 1;
       setCurrentIdx(prev);
       firebaseSave('currentIdx', prev);
       setFading(false);
     }, 280);
-  }, [currentIdx, firebaseSave]);
+  }, [currentIdx, firebaseSave, idxPassesFilter]);
 
   // --- Watched toggle ---
   const toggleWatched = useCallback(() => {
@@ -293,25 +377,51 @@ export default function App() {
   }, [firebaseSave]);
 
   // --- Settings actions ---
-  const handleReset = useCallback(() => {
-    if (!window.confirm('Reset all progress and start from the beginning? This cannot be undone.')) return;
-    // Reset Firestore profile fields
+  const handleReshuffle = useCallback(() => {
+    if (!window.confirm('Reshuffle your journey? This generates a new random order for unwatched films. Your watched films and ratings are preserved.')) return;
+    // Generate new seed and playlist
+    const newSeed = Math.floor(Math.random() * 0xFFFFFFFF);
+    const newPlaylist = generatePlaylist(newSeed);
+    const orderIndices = newPlaylist.map(m => MOVIES.indexOf(m));
+
+    setPlaylist(newPlaylist);
+    setCurrentIdx(0);
+
+    // Save new seed, order, and reset currentIdx in Firestore
     if (profile) {
+      saveProfileField(profile.id, 'seed', newSeed).catch(() => {});
+      saveProfileField(profile.id, 'playlistOrder', orderIndices).catch(() => {});
       saveProfileField(profile.id, 'currentIdx', 0).catch(() => {});
-      saveProfileField(profile.id, 'watched', []).catch(() => {});
-      saveProfileField(profile.id, 'ratings', {}).catch(() => {});
-      saveProfileField(profile.id, 'playlistOrder', null).catch(() => {});
-      saveProfileField(profile.id, 'seed', null).catch(() => {});
     }
-    // Reload the page to reinitialize
-    window.location.reload();
-  }, [profile]);
+
+    setScreen('card');
+    setSettingsOpen(false);
+  }, [profile, generatePlaylist]);
 
   const handleClearCache = useCallback(() => {
     const count = clearCache();
-    window.alert(`Cleared ${count} cached film info entries.`);
+    window.alert(`Cleared ${count} cached poster/info entries.`);
     setSettingsOpen(false);
   }, []);
+
+  // --- Auto-skip to next eligible film when current is filtered out ---
+  useEffect(() => {
+    if (screen !== 'card' || !playlist.length || eligibleStats.total === 0) return;
+    if (!idxPassesFilter(currentIdx)) {
+      // Find next eligible film forward, or backward if none ahead
+      let next = currentIdx + 1;
+      while (next < playlist.length && !idxPassesFilter(next)) next++;
+      if (next >= playlist.length) {
+        // Try backward
+        next = currentIdx - 1;
+        while (next >= 0 && !idxPassesFilter(next)) next--;
+      }
+      if (next >= 0 && next < playlist.length) {
+        setCurrentIdx(next);
+        firebaseSave('currentIdx', next);
+      }
+    }
+  }, [currentIdx, screen, playlist, idxPassesFilter, eligibleStats.total, firebaseSave]);
 
   // --- Keyboard shortcuts ---
   useEffect(() => {
@@ -350,6 +460,7 @@ export default function App() {
   // --- Tab change ---
   const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
+    localStorage.setItem(LS_TAB_KEY, tab);
   }, []);
 
   // --- Loading state ---
@@ -383,9 +494,9 @@ export default function App() {
 
       {showProgress && (
         <ProgressBar
-          currentIdx={currentIdx}
-          total={playlist.length}
-          watchedCount={watchedSet.size}
+          currentIdx={eligiblePosition}
+          total={eligibleStats.total}
+          watchedCount={eligibleStats.watched}
         />
       )}
 
@@ -395,7 +506,17 @@ export default function App() {
           {screen === 'start' && (
             <StartScreen onStart={handleStart} />
           )}
-          {screen === 'card' && currentMovie && (
+          {screen === 'card' && eligibleStats.total === 0 && (
+            <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+              <p style={{ color: 'var(--cream-dim)', fontSize: '1.1rem', marginBottom: '12px' }}>
+                All films are filtered out.
+              </p>
+              <p style={{ color: 'var(--cream-dim)', fontSize: '0.9rem' }}>
+                Open Settings to adjust your journey filters.
+              </p>
+            </div>
+          )}
+          {screen === 'card' && currentMovie && eligibleStats.total > 0 && (
             <>
               <FilmCard
                 movie={currentMovie}
@@ -407,8 +528,8 @@ export default function App() {
                 raters={raters}
               />
               <NavButtons
-                currentIdx={currentIdx}
-                total={playlist.length}
+                currentIdx={eligiblePosition}
+                total={eligibleStats.total}
                 onPrev={goPrev}
                 onNext={goNext}
                 canAdvance={canAdvance}
@@ -416,7 +537,7 @@ export default function App() {
             </>
           )}
           {screen === 'complete' && (
-            <CompletionScreen total={playlist.length} onRestart={handleRestart} />
+            <CompletionScreen total={eligibleStats.total} onRestart={handleRestart} />
           )}
         </main>
       )}
@@ -475,8 +596,14 @@ export default function App() {
           avatar={profile?.avatar || '🍿'}
           onAvatarChange={handleAvatarChange}
           onClose={() => setSettingsOpen(false)}
-          onReset={handleReset}
+          onReshuffle={handleReshuffle}
           onClearCache={handleClearCache}
+          profile={profile}
+          filters={profile?.filters || null}
+          onFiltersChange={(newFilters) => {
+            setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
+            firebaseSave('filters', newFilters);
+          }}
         />
       )}
     </>

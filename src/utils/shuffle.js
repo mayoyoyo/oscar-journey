@@ -47,14 +47,16 @@ export function diversityShuffle(movies, rng) {
   const anim = shuffle(movies.filter(m => m.category === 'ANIM'));
 
   // Step 2: Split BP into decade buckets, genre-interleave each
-  const decBuckets = { '90s': [], '00s': [], '10s': [], '20s': [] };
+  const decBuckets = { '70s80s': [], '90s': [], '00s': [], '10s': [], '20s': [] };
   for (const m of bp) {
-    if      (m.year < 2000) decBuckets['90s'].push(m);
+    if      (m.year < 1991) decBuckets['70s80s'].push(m);
+    else if (m.year < 2000) decBuckets['90s'].push(m);
     else if (m.year < 2010) decBuckets['00s'].push(m);
     else if (m.year < 2020) decBuckets['10s'].push(m);
     else                    decBuckets['20s'].push(m);
   }
   const decQueues = {
+    '70s80s': genreInterleave(decBuckets['70s80s']),
     '90s': genreInterleave(decBuckets['90s']),
     '00s': genreInterleave(decBuckets['00s']),
     '10s': genreInterleave(decBuckets['10s']),
@@ -62,7 +64,7 @@ export function diversityShuffle(movies, rng) {
   };
 
   // Step 3: Round-robin through decades to build the BP sequence
-  const decOrder = shuffle(['90s', '00s', '10s', '20s']);
+  const decOrder = shuffle(['70s80s', '90s', '00s', '10s', '20s']);
   const bpSeq = [];
   while (decOrder.some(d => decQueues[d].length > 0)) {
     for (const d of decOrder) {

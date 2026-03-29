@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
-import { MOVIES, GENRE_LABELS } from '../data/movies';
+import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import ProfileDetail from './ProfileDetail';
 import StatsTab from './StatsTab';
@@ -87,6 +87,17 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         memberSince = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
       }
 
+      // Currently watching
+      let currentMovie = null;
+      const order = p.playlistOrder;
+      const idx = p.currentIdx;
+      if (idx != null && Array.isArray(order) && order.length > 0) {
+        const entry = order[idx];
+        if (typeof entry === 'string' && !entry.includes('|') && isNaN(Number(entry))) {
+          currentMovie = MOVIES_BY_ID[entry] || null;
+        }
+      }
+
       return {
         id: p.id,
         displayName: p.displayName || p.id,
@@ -96,6 +107,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         ratingCount,
         favGenre,
         memberSince,
+        currentMovie,
       };
     }).sort((a, b) => b.watchedCount - a.watchedCount);
   }, [profiles]);
@@ -170,6 +182,12 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   <div className="profile-card-stat">
                     <span className="stat-label">Member Since</span>
                     <span className="stat-value">{p.memberSince}</span>
+                  </div>
+                )}
+                {p.currentMovie && (
+                  <div className="profile-card-stat" style={{ borderBottom: 'none', paddingTop: '8px' }}>
+                    <span className="stat-label">🎬 Currently On</span>
+                    <span className="stat-value" style={{ fontSize: '0.8rem' }}>{p.currentMovie.title}</span>
                   </div>
                 )}
               </div>

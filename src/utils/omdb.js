@@ -1,4 +1,4 @@
-const OMDB_KEYS = ['ab8cbc12', '84fee249'];
+const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb'];
 let currentKeyIndex = 0;
 const CACHE_PREFIX = 'oscars_';
 const NOT_FOUND = 'NOT_FOUND';

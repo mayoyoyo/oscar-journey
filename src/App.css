@@ -15,6 +15,50 @@
   --red-bright:#c0392b;
   --border:    #c8b896;
   --shadow:    rgba(0,0,0,0.12);
+  --badge-winner-text: #0a0a0f;
+  --btn-text:  #0a0a0f;
+  --watched-hover-bg: #e8f5e8;
+  --watched-hover-border: #5a9a5a;
+  --watched-hover-color: #2a6a2a;
+  --watched-active-bg: #e8f5e8;
+  --watched-active-border: #5a9a5a;
+  --watched-active-color: #2a6a2a;
+  --danger-hover-bg: #f8e8e8;
+  --badge-int-bg: #e0f0f8;
+  --badge-int-border: #7ab8d4;
+  --badge-int-color: #1a5a7a;
+  --badge-anim-bg: #f0e8f8;
+  --badge-anim-border: #b07ac8;
+  --badge-anim-color: #5a1a7a;
+}
+
+[data-theme="dark"] {
+  --bg:        #0a0a0f;
+  --bg2:       #12121a;
+  --bg3:       #1c1c28;
+  --gold:      #c9a84c;
+  --gold-dim:  #a08030;
+  --cream:     #e8dcc8;
+  --cream-dim: #a09080;
+  --red:       #cc4444;
+  --red-bright:#e05555;
+  --border:    #2a2a3a;
+  --shadow:    rgba(0,0,0,0.7);
+  --badge-winner-text: #fffaee;
+  --btn-text:  #fffaee;
+  --watched-hover-bg: #1a3a1a;
+  --watched-hover-border: #3a7a3a;
+  --watched-hover-color: #90e890;
+  --watched-active-bg: #1a3a1a;
+  --watched-active-border: #3a7a3a;
+  --watched-active-color: #90e890;
+  --danger-hover-bg: #2a1010;
+  --badge-int-bg: #0f1e2a;
+  --badge-int-border: #2a5a7a;
+  --badge-int-color: #7ab8d4;
+  --badge-anim-bg: #1a0f2a;
+  --badge-anim-border: #5a2a7a;
+  --badge-anim-color: #b07ac8;
 }
 
 body {
@@ -36,76 +80,102 @@ body {
 }
 
 /* =====================================================
-   HEADER
+   COMBINED NAV BAR (replaces old header + tab bar)
    ===================================================== */
-header {
+.main-nav {
   width: 100%;
   background: var(--bg2);
   border-bottom: 1px solid var(--border);
-  padding: 14px 24px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 52px;
 }
-
-.header-title {
+.nav-left {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.3rem;
+  gap: 8px;
+}
+.nav-logo { font-size: 1.2rem; }
+.nav-brand {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
   color: var(--gold);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
+  font-weight: 600;
 }
-
-.header-title .trophy { font-size: 1.4rem; }
-
-.settings-btn {
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--cream-dim);
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 4px 10px;
-  transition: border-color 0.2s, color 0.2s;
-}
-.settings-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
-
-/* =====================================================
-   TAB BAR
-   ===================================================== */
-.tab-bar {
-  width: 100%;
-  background: var(--bg2);
-  border-bottom: 2px solid var(--border);
+.nav-tabs {
   display: flex;
-  padding: 0 24px;
+  gap: 0;
+  height: 100%;
 }
-
-.tab-btn {
+.nav-tab {
   background: none;
   border: none;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
   color: var(--cream-dim);
-  font-size: 0.95rem;
-  padding: 14px 22px;
+  font-size: 0.85rem;
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s;
-  font-family: system-ui, sans-serif;
+  white-space: nowrap;
 }
-
-.tab-btn.active {
+.nav-tab.active {
   color: var(--gold);
   border-bottom-color: var(--gold);
   font-weight: 600;
 }
+.nav-tab:hover:not(.active) { color: var(--cream); }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-user {
+  font-size: 0.8rem;
+  color: var(--cream-dim);
+  padding-right: 4px;
+}
+.nav-icon-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: border-color 0.2s, color 0.2s;
+  line-height: 1;
+}
+.nav-icon-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
 
-.tab-btn:hover:not(.active) { color: var(--cream); }
+/* Mobile: stack nav */
+@media (max-width: 700px) {
+  .main-nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 16px;
+    gap: 4px;
+  }
+  .nav-left { order: 1; }
+  .nav-right { order: 2; margin-left: auto; }
+  .nav-tabs {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+  .nav-tab { padding: 8px 12px; font-size: 0.8rem; }
+  .nav-brand { font-size: 0.9rem; }
+}
 
 /* =====================================================
    PROGRESS BAR
@@ -308,7 +378,7 @@ main {
 
 .badge-winner {
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
-  color: #fffaee;
+  color: var(--badge-winner-text);
   font-size: 0.75rem;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -329,9 +399,9 @@ main {
 
 /* Category pills for INT and ANIM films */
 .badge-int {
-  background: #e0f0f8;
-  border: 1px solid #7ab8d4;
-  color: #1a5a7a;
+  background: var(--badge-int-bg);
+  border: 1px solid var(--badge-int-border);
+  color: var(--badge-int-color);
   font-size: 0.75rem;
   padding: 4px 12px;
   border-radius: 20px;
@@ -339,9 +409,9 @@ main {
 }
 
 .badge-anim {
-  background: #f0e8f8;
-  border: 1px solid #b07ac8;
-  color: #5a1a7a;
+  background: var(--badge-anim-bg);
+  border: 1px solid var(--badge-anim-border);
+  color: var(--badge-anim-color);
   font-size: 0.75rem;
   padding: 4px 12px;
   border-radius: 20px;
@@ -389,15 +459,15 @@ main {
 }
 
 .watched-btn:hover {
-  background: #e8f5e8;
-  border-color: #5a9a5a;
-  color: #2a6a2a;
+  background: var(--watched-hover-bg);
+  border-color: var(--watched-hover-border);
+  color: var(--watched-hover-color);
 }
 
 .watched-btn.is-watched {
-  background: #e8f5e8;
-  border-color: #5a9a5a;
-  color: #2a6a2a;
+  background: var(--watched-active-bg);
+  border-color: var(--watched-active-border);
+  color: var(--watched-active-color);
 }
 
 .check-anim {
@@ -434,7 +504,7 @@ main {
   flex: 1;
   max-width: 400px;
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
-  color: #fffaee;
+  color: var(--btn-text);
   font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 0.06em;
@@ -453,7 +523,7 @@ main {
 .btn-primary {
   display: inline-block;
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
-  color: #fffaee;
+  color: var(--btn-text);
   font-size: 1.15rem;
   font-weight: bold;
   letter-spacing: 0.06em;
@@ -513,7 +583,7 @@ main {
   padding: 32px;
   max-width: 480px;
   width: 100%;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 60px var(--shadow);
 }
 
 .modal h2 {
@@ -559,7 +629,7 @@ main {
 
 .btn-modal-save {
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
-  color: #fffaee;
+  color: var(--btn-text);
   font-size: 0.9rem;
   font-weight: bold;
   padding: 9px 18px;
@@ -581,7 +651,7 @@ main {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
-.btn-danger:hover { background: #f8e8e8; color: var(--red); }
+.btn-danger:hover { background: var(--danger-hover-bg); color: var(--red); }
 
 /* =====================================================
    ALPHABETICAL FILM LIST TAB
@@ -663,7 +733,7 @@ main {
 
 .badge-winner-sm {
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
-  color: #fffaee;
+  color: var(--badge-winner-text);
   font-size: 0.62rem;
   font-weight: bold;
   letter-spacing: 0.08em;
@@ -684,9 +754,9 @@ main {
 }
 
 .badge-int-sm {
-  background: #e0f0f8;
-  border: 1px solid #7ab8d4;
-  color: #1a5a7a;
+  background: var(--badge-int-bg);
+  border: 1px solid var(--badge-int-border);
+  color: var(--badge-int-color);
   font-size: 0.7rem;
   padding: 2px 8px;
   border-radius: 20px;
@@ -694,9 +764,9 @@ main {
 }
 
 .badge-anim-sm {
-  background: #f0e8f8;
-  border: 1px solid #b07ac8;
-  color: #5a1a7a;
+  background: var(--badge-anim-bg);
+  border: 1px solid var(--badge-anim-border);
+  color: var(--badge-anim-color);
   font-size: 0.7rem;
   padding: 2px 8px;
   border-radius: 20px;
@@ -1021,7 +1091,7 @@ main {
   width: 100%;
   padding: 12px;
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
-  color: #fffaee;
+  color: var(--btn-text);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -1177,6 +1247,49 @@ main {
   color: var(--gold);
   min-width: 30px;
 }
+
+/* =====================================================
+   LEADERBOARD TAB
+   ===================================================== */
+.leaderboard-section {
+  width: 100%;
+  max-width: 900px;
+  padding: 28px 24px 60px;
+}
+.leaderboard-section h2 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.profile-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.profile-card-name {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.profile-card-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 0.85rem;
+  color: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
+.profile-card-stat:last-child { border-bottom: none; }
+.profile-card-stat .stat-label { color: var(--cream-dim); }
+.profile-card-stat .stat-value { font-weight: 600; }
 
 /* =====================================================
    RESPONSIVE

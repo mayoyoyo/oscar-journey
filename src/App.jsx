@@ -5,8 +5,7 @@ import {
   ratingKey, clearCache,
 } from './utils/storage';
 import { loadProfile, saveProfileField } from './utils/firebaseStorage';
-import Header from './components/Header';
-import TabBar from './components/TabBar';
+import NavBar from './components/NavBar';
 import ProgressBar from './components/ProgressBar';
 import StartScreen from './components/StartScreen';
 import FilmCard from './components/FilmCard';
@@ -18,13 +17,38 @@ import StatsTab from './components/StatsTab';
 import SettingsModal from './components/SettingsModal';
 import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
+import Leaderboard from './components/Leaderboard';
 
 const LS_PROFILE_KEY = 'oscars_profile_id';
+const LS_THEME_KEY = 'oscars_theme';
 
 export default function App() {
   // --- Auth state ---
   const [profile, setProfile] = useState(null); // null = not logged in
   const [loading, setLoading] = useState(true); // initial profile load
+
+  // --- Theme state ---
+  const [isDark, setIsDark] = useState(() => {
+    const saved = localStorage.getItem(LS_THEME_KEY);
+    return saved === 'dark';
+  });
+
+  // Apply theme to <html> element whenever isDark changes
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem(LS_THEME_KEY, isDark ? 'dark' : 'light');
+  }, [isDark]);
+
+  const toggleTheme = useCallback(() => {
+    setIsDark(prev => {
+      const next = !prev;
+      // Also save to Firestore if logged in
+      if (profile) {
+        saveProfileField(profile.id, 'theme', next ? 'dark' : 'light').catch(() => {});
+      }
+      return next;
+    });
+  }, [profile]);
 
   // --- Core state ---
   const [playlist, setPlaylist] = useState([]);
@@ -129,6 +153,13 @@ export default function App() {
     setRatings(rats);
     setRaters(ratersList);
 
+    // Load theme preference from profile if available
+    if (data.theme) {
+      const profileDark = data.theme === 'dark';
+      setIsDark(profileDark);
+      localStorage.setItem(LS_THEME_KEY, data.theme);
+    }
+
     // Determine screen state
     if (idx > 0 || watched.size > 0) {
       setScreen('card');
@@ -160,6 +191,12 @@ export default function App() {
   // --- Derived state ---
   const currentMovie = playlist[currentIdx] || null;
   const isCurrentWatched = watchedSet.has(currentIdx);
+
+  // Can advance if current film is watched AND at least one rater has rated it
+  const currentRatingKeyVal = currentMovie ? ratingKey(currentMovie) : null;
+  const currentRatings = currentRatingKeyVal ? ratings[currentRatingKeyVal] : null;
+  const hasAnyRating = currentRatings && Object.values(currentRatings).some(v => v != null);
+  const canAdvance = isCurrentWatched && hasAnyRating;
 
   // Build watched title set for list/stats views
   const watchedTitleSet = useMemo(() => {
@@ -289,14 +326,14 @@ export default function App() {
       if (activeTab !== 'journey') return;
       if (screen !== 'card') return;
 
-      if (e.key === 'ArrowRight' || e.key === 'Enter') goNext();
+      if ((e.key === 'ArrowRight' || e.key === 'Enter') && canAdvance) goNext();
       if (e.key === 'ArrowLeft') goPrev();
       if (e.key === 'w' || e.key === 'W') toggleWatched();
     };
 
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
-  }, [profile, activeTab, screen, settingsOpen, detailMovie, goNext, goPrev, toggleWatched]);
+  }, [profile, activeTab, screen, settingsOpen, detailMovie, goNext, goPrev, toggleWatched, canAdvance]);
 
   // --- Raters change ---
   const handleRatersChange = useCallback((newRaters) => {
@@ -328,12 +365,15 @@ export default function App() {
 
   return (
     <>
-      <Header
-        onOpenSettings={() => setSettingsOpen(true)}
+      <NavBar
+        activeTab={activeTab}
+        onTabChange={handleTabChange}
         profile={profile}
+        onToggleTheme={toggleTheme}
+        isDark={isDark}
+        onOpenSettings={() => setSettingsOpen(true)}
         onLogout={handleLogout}
       />
-      <TabBar activeTab={activeTab} onTabChange={handleTabChange} />
 
       {showProgress && (
         <ProgressBar
@@ -365,6 +405,7 @@ export default function App() {
                 total={playlist.length}
                 onPrev={goPrev}
                 onNext={goNext}
+                canAdvance={canAdvance}
               />
             </>
           )}
@@ -396,6 +437,11 @@ export default function App() {
           playlist={playlist}
           watchedSet={watchedSet}
         />
+      )}
+
+      {/* Leaderboard tab */}
+      {activeTab === 'leaderboard' && (
+        <Leaderboard />
       )}
 
       {/* Film detail modal */}

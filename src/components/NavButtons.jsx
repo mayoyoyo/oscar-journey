@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function NavButtons({ currentIdx, total, onPrev, onNext }) {
+export default function NavButtons({ currentIdx, total, onPrev, onNext, canAdvance }) {
   const isFirst = currentIdx === 0;
   const isLast = currentIdx === total - 1;
 
@@ -9,8 +9,8 @@ export default function NavButtons({ currentIdx, total, onPrev, onNext }) {
       <button className="btn-prev" onClick={onPrev} disabled={isFirst}>
         ← Previous
       </button>
-      <button className="btn-next" onClick={onNext}>
-        {isLast ? 'Finish Journey ★' : '→ Reveal Next Film'}
+      <button className="btn-next" onClick={onNext} disabled={!canAdvance}>
+        {!canAdvance ? 'Watch & Rate to Continue' : isLast ? 'Finish Journey ★' : '→ Reveal Next Film'}
       </button>
     </div>
   );

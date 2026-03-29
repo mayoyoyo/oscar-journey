@@ -20,6 +20,11 @@ import MovieBattle from './components/MovieBattle';
 import Leaderboard from './components/Leaderboard';
 import JourneyControls from './components/JourneyControls';
 
+// Helper: generate a stable identity key for a movie (immune to playlist reordering)
+function movieKey(movie) {
+  return movie.title + '|' + movie.year;
+}
+
 // Map genre codes to tone filter keys
 const GENRE_TO_TONE = {
   D: 'drama', H: 'drama', I: 'drama',
@@ -179,8 +184,29 @@ export default function App() {
       saveProfileField(data.id, 'playlistOrder', orderIndices).catch(() => {});
     }
 
-    // Set watched from profile's array of playlist indices
-    const watched = new Set(data.watched || []);
+    // Migrate watched from old index format to title|year format
+    let watched;
+    if (Array.isArray(data.watched) && data.watched.length > 0) {
+      if (typeof data.watched[0] === 'number') {
+        // OLD FORMAT: indices into playlist — migrate to title|year keys
+        watched = new Set();
+        const order = data.playlistOrder || [];
+        for (const idx of data.watched) {
+          const moviesIdx = order[idx];
+          if (moviesIdx != null && MOVIES[moviesIdx]) {
+            const m = MOVIES[moviesIdx];
+            watched.add(movieKey(m));
+          }
+        }
+        // Save migrated format to Firestore
+        saveProfileField(data.id, 'watched', [...watched]).catch(() => {});
+      } else {
+        // NEW FORMAT: already title|year strings
+        watched = new Set(data.watched);
+      }
+    } else {
+      watched = new Set();
+    }
 
     // Set ratings
     const rats = data.ratings || {};
@@ -235,7 +261,7 @@ export default function App() {
 
   // --- Derived state ---
   const currentMovie = playlist[currentIdx] || null;
-  const isCurrentWatched = watchedSet.has(currentIdx);
+  const isCurrentWatched = currentMovie ? watchedSet.has(movieKey(currentMovie)) : false;
 
   // Can advance if current film is watched AND at least one rater has rated it
   const currentRatingKeyVal = currentMovie ? ratingKey(currentMovie) : null;
@@ -243,15 +269,8 @@ export default function App() {
   const hasAnyRating = currentRatings && Object.values(currentRatings).some(v => v != null);
   const canAdvance = isCurrentWatched && hasAnyRating;
 
-  // Build watched title set for list/stats views
-  const watchedTitleSet = useMemo(() => {
-    const set = new Set();
-    for (const idx of watchedSet) {
-      const m = playlist[idx];
-      if (m) set.add(m.title + '|' + m.year);
-    }
-    return set;
-  }, [watchedSet, playlist]);
+  // watchedSet is now title|year based, so it serves directly as the title set
+  const watchedTitleSet = watchedSet;
 
   // --- Filter helpers ---
   const activeFilters = profile?.filters || null;
@@ -270,7 +289,7 @@ export default function App() {
     for (let i = 0; i < playlist.length; i++) {
       if (idxPassesFilter(i)) {
         total++;
-        if (watchedSet.has(i)) watched++;
+        if (watchedSet.has(movieKey(playlist[i]))) watched++;
       }
     }
     return { total, watched };
@@ -321,26 +340,27 @@ export default function App() {
 
   // --- Watched toggle ---
   const toggleWatched = useCallback(() => {
+    if (!currentMovie) return;
+    const key = movieKey(currentMovie);
     setWatchedSet(prev => {
       const next = new Set(prev);
-      if (next.has(currentIdx)) next.delete(currentIdx);
-      else next.add(currentIdx);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
       firebaseSave('watched', [...next]);
       return next;
     });
-  }, [currentIdx, firebaseSave]);
+  }, [currentMovie, firebaseSave]);
 
   const toggleWatchedForMovie = useCallback((movie) => {
-    const playlistIdx = playlist.findIndex(p => p.title === movie.title && p.year === movie.year);
-    if (playlistIdx < 0) return;
+    const key = movieKey(movie);
     setWatchedSet(prev => {
       const next = new Set(prev);
-      if (next.has(playlistIdx)) next.delete(playlistIdx);
-      else next.add(playlistIdx);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
       firebaseSave('watched', [...next]);
       return next;
     });
-  }, [playlist, firebaseSave]);
+  }, [firebaseSave]);
 
   // --- Rating change ---
   const handleRatingChange = useCallback((key, person, value) => {
@@ -359,9 +379,8 @@ export default function App() {
   // --- Detail modal watched state ---
   const isDetailWatched = useMemo(() => {
     if (!detailMovie) return false;
-    const idx = playlist.findIndex(p => p.title === detailMovie.title && p.year === detailMovie.year);
-    return idx >= 0 && watchedSet.has(idx);
-  }, [detailMovie, playlist, watchedSet]);
+    return watchedSet.has(movieKey(detailMovie));
+  }, [detailMovie, watchedSet]);
 
   // --- Start journey ---
   const handleStart = useCallback(() => {
@@ -379,7 +398,6 @@ export default function App() {
 
   // --- Settings actions ---
   const handleReshuffle = useCallback(() => {
-    if (!window.confirm('Reshuffle your journey? This generates a new random order for unwatched films. Your watched films and ratings are preserved.')) return;
     // Generate new seed and playlist
     const newSeed = Math.floor(Math.random() * 0xFFFFFFFF);
     const newPlaylist = generatePlaylist(newSeed);
@@ -542,6 +560,8 @@ export default function App() {
                   firebaseSave('filters', newFilters);
                 }}
                 onReshuffle={handleReshuffle}
+                eligibleCount={eligibleStats.total}
+                totalCount={playlist.length}
               />
             </>
           )}

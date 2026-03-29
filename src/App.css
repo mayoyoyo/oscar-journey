@@ -1771,48 +1771,84 @@ main {
    JOURNEY CONTROLS (Filters + Reshuffle)
    ===================================================== */
 .journey-controls {
-  margin-top: 16px;
+  margin-top: 20px;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--bg2);
-  overflow: hidden;
+  padding: 20px;
 }
 
-.journey-controls-bar {
+.journey-controls-header {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.filter-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-check-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-size: 0.88rem;
+  color: var(--cream);
+}
+.filter-check-item:hover {
+  background: var(--bg3);
 }
 
-.journey-controls-toggle {
-  background: none;
-  border: none;
-  color: var(--cream-dim);
-  font-size: 0.85rem;
-  cursor: pointer;
-  padding: 0;
-  transition: color 0.2s;
+.filter-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  font-size: 0.7rem;
+  color: transparent;
 }
-.journey-controls-toggle:hover { color: var(--cream); }
-.journey-controls-toggle.has-filters { color: var(--gold); }
+
+.filter-check-item.active .filter-checkbox {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--btn-text);
+}
+
+.filter-check-label {
+  flex: 1;
+}
+
+.filter-check-item:not(.active) .filter-check-label {
+  color: var(--cream-dim);
+  text-decoration: line-through;
+  text-decoration-color: var(--border);
+}
 
 .journey-reshuffle-btn {
+  margin-top: 16px;
+  width: 100%;
   background: none;
   border: 1px solid var(--border);
   color: var(--cream-dim);
-  font-size: 0.8rem;
-  padding: 5px 14px;
-  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 10px 16px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.15s;
 }
 .journey-reshuffle-btn:hover {
   border-color: var(--gold-dim);
   color: var(--cream);
-}
-
-.journey-filters-panel {
-  padding: 0 16px 16px;
-  border-top: 1px solid var(--border);
 }

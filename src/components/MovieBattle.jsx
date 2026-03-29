@@ -17,11 +17,14 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
   const [personalElo, setPersonalElo] = useState(profile?.personalElo || {});
   const [rankView, setRankView] = useState('global'); // 'global' | 'personal'
 
-  // Get list of watched movies from profile's watched set mapped through playlist
+  // Get list of watched movies from profile's watched set (title|year strings)
   const watchedMovies = useMemo(() => {
     const movies = [];
-    for (const idx of watchedSet) {
-      if (playlist[idx]) movies.push({ ...playlist[idx], playlistIdx: idx });
+    for (let i = 0; i < playlist.length; i++) {
+      const m = playlist[i];
+      if (watchedSet.has(m.title + '|' + m.year)) {
+        movies.push({ ...m, playlistIdx: i });
+      }
     }
     return movies;
   }, [watchedSet, playlist]);

@@ -5,6 +5,8 @@ import {
   ratingKey, clearCache,
 } from './utils/storage';
 import { loadProfile, saveProfileField } from './utils/firebaseStorage';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from './utils/firebase';
 import NavBar from './components/NavBar';
 import ProgressBar from './components/ProgressBar';
 import StartScreen from './components/StartScreen';
@@ -113,6 +115,9 @@ export default function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [detailMovie, setDetailMovie] = useState(null);
 
+  // Sync journey
+  const [allProfilesForSync, setAllProfilesForSync] = useState([]);
+
   // --- Helper: generate playlist from seed ---
   const generatePlaylist = useCallback((seed) => {
     const rng = mulberry32(seed);
@@ -152,6 +157,17 @@ export default function App() {
         setLoading(false);
       });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // --- Fetch all profiles for sync dropdown ---
+  useEffect(() => {
+    getDocs(collection(db, 'profiles')).then(snap => {
+      setAllProfilesForSync(snap.docs.map(d => ({
+        id: d.id,
+        displayName: d.data().displayName || d.id,
+        avatar: d.data().avatar || '',
+      })));
+    }).catch(() => {});
+  }, []);
 
   // --- Initialize all state from a loaded profile ---
   const initializeFromProfile = useCallback((data) => {
@@ -470,6 +486,33 @@ export default function App() {
     setSettingsOpen(false);
   }, [profile, generatePlaylist]);
 
+  // --- Sync journey from another profile ---
+  const handleSyncJourney = useCallback(async (targetProfileId) => {
+    try {
+      const targetData = await loadProfile(targetProfileId);
+      if (!targetData || !targetData.playlistOrder) {
+        alert('Could not load that profile\'s journey.');
+        return;
+      }
+      // Copy their playlist order and seed
+      const newOrder = targetData.playlistOrder;
+      const newSeed = targetData.seed;
+
+      // Rebuild playlist from their order
+      const newPlaylist = newOrder.map(id => MOVIES_BY_ID[id]).filter(Boolean);
+
+      setPlaylist(newPlaylist);
+      setCurrentIdx(0);
+
+      firebaseSave('playlistOrder', newOrder);
+      firebaseSave('seed', newSeed);
+      firebaseSave('currentIdx', 0);
+    } catch (e) {
+      console.error('Sync failed:', e);
+      alert('Sync failed. Try again.');
+    }
+  }, [firebaseSave]);
+
   const handleClearCache = useCallback(() => {
     const count = clearCache();
     window.alert(`Cleared ${count} cached poster/info entries.`);
@@ -597,6 +640,9 @@ export default function App() {
                 onReshuffle={handleReshuffle}
                 eligibleCount={eligibleStats.total}
                 totalCount={playlist.length}
+                profiles={allProfilesForSync}
+                currentProfileId={profile?.id}
+                onSyncJourney={handleSyncJourney}
               />
             </>
           )}
@@ -628,6 +674,9 @@ export default function App() {
                 onReshuffle={handleReshuffle}
                 eligibleCount={eligibleStats.total}
                 totalCount={playlist.length}
+                profiles={allProfilesForSync}
+                currentProfileId={profile?.id}
+                onSyncJourney={handleSyncJourney}
               />
             </>
           )}

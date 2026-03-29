@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, TONE_LABELS } from './SettingsModal';
 
-export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount }) {
+export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney }) {
+  const [syncTarget, setSyncTarget] = useState('');
   const currentFilters = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters?.eras || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) },
@@ -66,6 +67,37 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       <button className="journey-reshuffle-btn" onClick={handleReshuffle}>
         Reshuffle Journey Order
       </button>
+
+      {profiles && profiles.length > 0 && onSyncJourney && (
+        <div className="journey-sync-section">
+          <div className="filter-section-label" style={{ marginTop: '16px' }}>Sync Journey</div>
+          <p style={{ fontSize: '0.8rem', color: 'var(--cream-dim)', marginBottom: '8px' }}>
+            Follow another person's journey order
+          </p>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <select className="battle-profile-select" style={{ flex: 1 }} value={syncTarget} onChange={e => setSyncTarget(e.target.value)}>
+              <option value="">Select a profile...</option>
+              {profiles.filter(p => p.id !== currentProfileId).map(p => (
+                <option key={p.id} value={p.id}>{p.avatar} {p.displayName}</option>
+              ))}
+            </select>
+            <button
+              className="journey-reshuffle-btn"
+              style={{ width: 'auto', marginTop: 0 }}
+              disabled={!syncTarget}
+              onClick={() => {
+                const target = profiles.find(p => p.id === syncTarget);
+                if (target && window.confirm(`Copy ${target.displayName}'s journey order? Your watched films and ratings will be kept.`)) {
+                  onSyncJourney(syncTarget);
+                  setSyncTarget('');
+                }
+              }}
+            >
+              Sync
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

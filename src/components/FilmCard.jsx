@@ -101,8 +101,8 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           className={`watched-btn ${isWatched ? 'is-watched' : ''}`}
           onClick={onToggleWatched}
         >
-          <span className="check-anim">{isWatched ? '✓' : '○'}</span>
-          <span>{isWatched ? 'Watched!' : 'Mark as Watched'}</span>
+          <span className="watched-icon">{isWatched ? '✓' : ''}</span>
+          <span>{isWatched ? 'Watched' : 'Mark as Watched'}</span>
         </button>
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function NavButtons({ currentIdx, total, onPrev, onNext, canAdvan
         ← Previous
       </button>
       <button className="btn-next" onClick={onNext} disabled={!canAdvance}>
-        {!canAdvance ? 'Watch & Rate to Continue' : isLast ? 'Finish Journey ★' : '→ Reveal Next Film'}
+        {!canAdvance ? '\uD83D\uDD12 Watch & Rate to Continue' : isLast ? '\u2605 Complete Journey' : 'Next Film \u2192'}
       </button>
     </div>
   );

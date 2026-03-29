@@ -272,12 +272,12 @@ main {
 .film-card {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   gap: 0;
-  min-height: 320px;
-  box-shadow: 0 8px 40px var(--shadow);
+  min-height: 360px;
+  box-shadow: 0 12px 48px var(--shadow);
   transition: opacity 0.3s ease;
 }
 
@@ -285,11 +285,23 @@ main {
 
 /* Poster column */
 .poster-col {
-  width: 38%;
-  min-width: 160px;
+  width: 40%;
+  min-width: 180px;
   flex-shrink: 0;
   position: relative;
   background: var(--bg3);
+}
+
+/* Gradient fade on poster right edge */
+.poster-col::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--bg2));
+  pointer-events: none;
 }
 
 .poster-img {
@@ -347,26 +359,29 @@ main {
   padding: 28px 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .ceremony-line {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--cream-dim);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .film-title {
-  font-family: Georgia, serif;
-  font-size: 1.75rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
   color: var(--cream);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 .film-year {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--cream-dim);
+  font-weight: 500;
 }
 
 .badges {
@@ -379,11 +394,11 @@ main {
 .badge-winner {
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
   color: var(--badge-winner-text);
-  font-size: 0.75rem;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  padding: 4px 12px;
-  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 5px 14px;
+  border-radius: 50px;
   text-transform: uppercase;
 }
 
@@ -391,10 +406,11 @@ main {
   background: var(--bg3);
   border: 1px solid var(--border);
   color: var(--cream-dim);
-  font-size: 0.75rem;
-  padding: 4px 12px;
-  border-radius: 20px;
-  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
 }
 
 /* Category pills for INT and ANIM films */
@@ -515,33 +531,46 @@ main {
   margin-top: auto;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
-  color: var(--cream);
-  font-size: 0.95rem;
-  padding: 10px 20px;
-  border-radius: 8px;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition: all 0.25s ease;
   width: fit-content;
+  letter-spacing: 0.03em;
 }
 
-.watched-btn:hover {
-  background: var(--watched-hover-bg);
-  border-color: var(--watched-hover-border);
-  color: var(--watched-hover-color);
+/* Unwatched state */
+.watched-btn:not(.is-watched) {
+  background: transparent;
+  border: 2px solid var(--border);
+  color: var(--cream-dim);
+}
+.watched-btn:not(.is-watched):hover {
+  border-color: var(--gold-dim);
+  color: var(--cream);
+  background: var(--bg3);
 }
 
+/* Watched state */
 .watched-btn.is-watched {
-  background: var(--watched-active-bg);
-  border-color: var(--watched-active-border);
-  color: var(--watched-active-color);
+  background: linear-gradient(135deg, #2d8a4e, #34a853);
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(45, 138, 78, 0.3);
+}
+.watched-btn.is-watched:hover {
+  filter: brightness(1.1);
 }
 
-.check-anim {
-  display: inline-block;
-  font-size: 1.1rem;
+.watched-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  min-width: 16px;
 }
 
 /* =====================================================
@@ -559,34 +588,50 @@ main {
   background: none;
   border: none;
   color: var(--cream-dim);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   cursor: pointer;
-  padding: 8px 4px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  padding: 10px 4px;
   transition: color 0.2s;
+  font-weight: 500;
 }
-.btn-prev:hover { color: var(--cream); }
-.btn-prev:disabled { opacity: 0.3; cursor: default; text-decoration: none; }
+.btn-prev:hover:not(:disabled) { color: var(--gold); }
+.btn-prev:disabled { opacity: 0.25; cursor: default; }
 
 .btn-next {
   flex: 1;
-  max-width: 400px;
+  max-width: 420px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-next:not(:disabled) {
   background: linear-gradient(135deg, #7a5c1e, var(--gold));
   color: var(--btn-text);
-  font-size: 1.1rem;
-  font-weight: bold;
-  letter-spacing: 0.06em;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: filter 0.2s, transform 0.1s;
-  box-shadow: 0 4px 20px rgba(139,105,20,0.25);
+  box-shadow: 0 4px 20px rgba(139,105,20,0.3);
 }
-.btn-next:hover { filter: brightness(1.12); transform: translateY(-1px); }
-.btn-next:active { transform: translateY(0); }
-.btn-next:disabled { opacity: 0.5; cursor: default; transform: none; filter: none; }
+.btn-next:not(:disabled):hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(139,105,20,0.4);
+}
+.btn-next:not(:disabled):active { transform: translateY(0); }
+
+.btn-next:disabled {
+  background: var(--bg3);
+  color: var(--cream-dim);
+  border: 1px solid var(--border);
+  cursor: default;
+  box-shadow: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
 
 /* Large primary button (start/complete) */
 .btn-primary {
@@ -1544,6 +1589,14 @@ main {
 @media (max-width: 540px) {
   .film-card { flex-direction: column; }
   .poster-col { width: 100%; min-width: unset; height: 260px; }
+  .poster-col::after {
+    width: 100%;
+    height: 40px;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparent, var(--bg2));
+  }
   .poster-placeholder { min-height: 260px; }
   .poster-loading { min-height: 260px; }
   .info-col { padding: 20px; }

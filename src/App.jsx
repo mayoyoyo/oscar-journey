@@ -842,6 +842,9 @@ export default function App() {
                 onNext={goNext}
                 canAdvance={canAdvance}
               />
+              <div className="journey-tagline">
+                The point is watching films you wouldn't normally pick. <span>Skip button? We don't know her.</span>
+              </div>
               <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} onOpenDetail={setDetailMovie} />
               <JourneyControls
                 filters={profile?.filters}

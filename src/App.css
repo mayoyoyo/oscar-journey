@@ -2259,6 +2259,17 @@ main {
   }
 }
 
+.journey-tagline {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  margin-top: 16px;
+  font-style: italic;
+}
+.journey-tagline span {
+  opacity: 0.7;
+}
+
 /* =====================================================
    ACTIVITY FEED
    ===================================================== */

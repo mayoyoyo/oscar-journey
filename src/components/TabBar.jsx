@@ -1,26 +1,24 @@
 import React from 'react';
 
+const tabs = [
+  { id: 'journey', label: '🎬 My Journey' },
+  { id: 'list', label: '📋 All Films A-Z' },
+  { id: 'stats', label: '📊 Stats' },
+  { id: 'battle', label: '⚔️ Battle' },
+];
+
 export default function TabBar({ activeTab, onTabChange }) {
   return (
     <div className="tab-bar">
-      <button
-        className={`tab-btn ${activeTab === 'journey' ? 'active' : ''}`}
-        onClick={() => onTabChange('journey')}
-      >
-        🎬 My Journey
-      </button>
-      <button
-        className={`tab-btn ${activeTab === 'list' ? 'active' : ''}`}
-        onClick={() => onTabChange('list')}
-      >
-        📋 All Films A-Z
-      </button>
-      <button
-        className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
-        onClick={() => onTabChange('stats')}
-      >
-        📊 Stats
-      </button>
+      {tabs.map(tab => (
+        <button
+          key={tab.id}
+          className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
+          onClick={() => onTabChange(tab.id)}
+        >
+          {tab.label}
+        </button>
+      ))}
     </div>
   );
 }

@@ -965,6 +965,222 @@ main {
 /* =====================================================
    RESPONSIVE
    ===================================================== */
+/* =====================================================
+   LOGIN SCREEN
+   ===================================================== */
+.login-screen {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 40px 32px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 40px var(--shadow);
+}
+.login-screen h2 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.login-screen .login-subtitle {
+  color: var(--cream-dim);
+  font-size: 0.88rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.login-field {
+  margin-bottom: 16px;
+}
+.login-field label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.login-field input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--cream);
+  font-size: 0.95rem;
+  outline: none;
+}
+.login-field input:focus { border-color: var(--gold-dim); }
+.login-error {
+  color: var(--red-bright);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #7a5c1e, var(--gold));
+  color: #fffaee;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.login-btn:hover { filter: brightness(1.1); }
+.login-btn:disabled { opacity: 0.5; cursor: default; filter: none; }
+.login-toggle {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+}
+.login-toggle a {
+  color: var(--gold);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* =====================================================
+   MOVIE BATTLE TAB
+   ===================================================== */
+.battle-section {
+  width: 100%;
+  max-width: 860px;
+  padding: 28px 24px 60px;
+}
+.battle-arena {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 32px;
+  min-height: 320px;
+}
+.battle-card {
+  flex: 1;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+.battle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow);
+}
+.battle-card-poster {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg3);
+}
+.battle-card-info {
+  padding: 16px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.battle-card-title {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+.battle-card-year {
+  font-size: 0.85rem;
+  color: var(--cream-dim);
+}
+.battle-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  font-weight: bold;
+  min-width: 60px;
+}
+.battle-elo-change {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 8px;
+  animation: fadeInUp 0.3s ease;
+}
+.battle-elo-change.positive { color: #2a8a2a; }
+.battle-elo-change.negative { color: var(--red-bright); }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.battle-skip {
+  display: block;
+  margin: 0 auto 32px;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  padding: 8px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+.battle-skip:hover { border-color: var(--gold-dim); color: var(--cream); }
+.battle-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--cream-dim);
+}
+.battle-empty h3 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.leaderboard-title {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+}
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.leaderboard-table th {
+  text-align: left;
+  color: var(--cream-dim);
+  font-weight: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.leaderboard-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--cream);
+}
+.leaderboard-table tr:hover { background: var(--bg2); }
+.leaderboard-rank {
+  font-weight: bold;
+  color: var(--gold);
+  min-width: 30px;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
 @media (max-width: 540px) {
   .film-card { flex-direction: column; }
   .poster-col { width: 100%; min-width: unset; height: 260px; }
@@ -987,4 +1203,8 @@ main {
     flex-direction: column;
     gap: 12px;
   }
+
+  .battle-arena { flex-direction: column; }
+  .battle-vs { padding: 12px 0; font-size: 1.4rem; }
+  .battle-card-poster { height: 160px; }
 }

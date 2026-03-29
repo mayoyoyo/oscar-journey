@@ -2,10 +2,9 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { MOVIES } from './data/movies';
 import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffle';
 import {
-  loadSeed, loadOrder, saveOrder, loadIndex, saveIndex,
-  loadWatched, saveWatched, loadRatings, saveRatings, ratingKey,
-  loadRaters, saveRaters, resetProgress, clearCache,
+  ratingKey, clearCache,
 } from './utils/storage';
+import { loadProfile, saveProfileField } from './utils/firebaseStorage';
 import Header from './components/Header';
 import TabBar from './components/TabBar';
 import ProgressBar from './components/ProgressBar';
@@ -17,8 +16,16 @@ import FilmList from './components/FilmList';
 import FilmDetailModal from './components/FilmDetailModal';
 import StatsTab from './components/StatsTab';
 import SettingsModal from './components/SettingsModal';
+import LoginScreen from './components/LoginScreen';
+import MovieBattle from './components/MovieBattle';
+
+const LS_PROFILE_KEY = 'oscars_profile_id';
 
 export default function App() {
+  // --- Auth state ---
+  const [profile, setProfile] = useState(null); // null = not logged in
+  const [loading, setLoading] = useState(true); // initial profile load
+
   // --- Core state ---
   const [playlist, setPlaylist] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -33,36 +40,121 @@ export default function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [detailMovie, setDetailMovie] = useState(null);
 
-  // --- Initialize ---
-  useEffect(() => {
-    const seed = loadSeed();
-    const savedOrder = loadOrder();
-    let pl;
+  // --- Helper: generate playlist from seed ---
+  const generatePlaylist = useCallback((seed) => {
+    const rng = mulberry32(seed);
+    const pl = enforceSeriesOrder(diversityShuffle([...MOVIES], rng));
+    return pl;
+  }, []);
 
-    if (savedOrder && savedOrder.every(i => i >= 0 && i < MOVIES.length)) {
-      pl = savedOrder.map(i => MOVIES[i]);
+  // --- Helper: save to Firestore without blocking UI ---
+  const firebaseSave = useCallback((field, value) => {
+    if (!profile) return;
+    saveProfileField(profile.id, field, value).catch(() => {
+      // Silently ignore write errors to avoid blocking the UI
+    });
+  }, [profile]);
+
+  // --- On mount: check for saved profile ID and auto-login ---
+  useEffect(() => {
+    const savedId = localStorage.getItem(LS_PROFILE_KEY);
+    if (!savedId) {
+      setLoading(false);
+      return;
+    }
+    // Try to load profile from Firestore
+    loadProfile(savedId)
+      .then((data) => {
+        if (data) {
+          initializeFromProfile(data);
+        } else {
+          // Profile not found in Firestore, clear saved ID
+          localStorage.removeItem(LS_PROFILE_KEY);
+        }
+      })
+      .catch(() => {
+        localStorage.removeItem(LS_PROFILE_KEY);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // --- Initialize all state from a loaded profile ---
+  const initializeFromProfile = useCallback((data) => {
+    setProfile(data);
+    localStorage.setItem(LS_PROFILE_KEY, data.id);
+
+    // Determine seed and playlist order
+    let seed = data.seed;
+    let pl;
+    let needsSeedSave = false;
+    let needsOrderSave = false;
+
+    if (data.playlistOrder && data.playlistOrder.every(i => i >= 0 && i < MOVIES.length)) {
+      // Use saved playlist order
+      pl = data.playlistOrder.map(i => MOVIES[i]);
     } else {
-      const rng = mulberry32(seed);
-      pl = enforceSeriesOrder(diversityShuffle([...MOVIES], rng));
+      // Generate new seed if needed
+      if (!seed) {
+        seed = Math.floor(Math.random() * 0xFFFFFFFF);
+        needsSeedSave = true;
+      }
+      pl = generatePlaylist(seed);
       const orderIndices = pl.map(m => MOVIES.indexOf(m));
-      saveOrder(orderIndices);
+      needsOrderSave = true;
+
+      // Save seed and order to Firestore (fire-and-forget)
+      if (needsSeedSave) {
+        saveProfileField(data.id, 'seed', seed).catch(() => {});
+      }
+      saveProfileField(data.id, 'playlistOrder', orderIndices).catch(() => {});
     }
 
-    const idx = loadIndex();
-    const watched = loadWatched();
-    const rats = loadRatings();
-    const savedRaters = loadRaters();
+    // Set watched from profile's array of playlist indices
+    const watched = new Set(data.watched || []);
+
+    // Set ratings
+    const rats = data.ratings || {};
+
+    // Set raters
+    const ratersList = data.raters || ['Chris', 'Yvonne'];
+
+    // Set current index
+    const idx = data.currentIdx || 0;
 
     setPlaylist(pl);
-    setRaters(savedRaters);
     setCurrentIdx(Math.min(idx, pl.length - 1));
     setWatchedSet(watched);
     setRatings(rats);
+    setRaters(ratersList);
 
-    // If has progress, show card screen
+    // Determine screen state
     if (idx > 0 || watched.size > 0) {
       setScreen('card');
+    } else {
+      setScreen('start');
     }
+  }, [generatePlaylist]);
+
+  // --- Login handler ---
+  const handleLogin = useCallback((profileData) => {
+    initializeFromProfile(profileData);
+  }, [initializeFromProfile]);
+
+  // --- Logout handler ---
+  const handleLogout = useCallback(() => {
+    localStorage.removeItem(LS_PROFILE_KEY);
+    setProfile(null);
+    setPlaylist([]);
+    setCurrentIdx(0);
+    setWatchedSet(new Set());
+    setRatings({});
+    setRaters(['Chris', 'Yvonne']);
+    setActiveTab('journey');
+    setScreen('start');
+    setSettingsOpen(false);
+    setDetailMovie(null);
   }, []);
 
   // --- Derived state ---
@@ -89,10 +181,10 @@ export default function App() {
     setTimeout(() => {
       const next = currentIdx + 1;
       setCurrentIdx(next);
-      saveIndex(next);
+      firebaseSave('currentIdx', next);
       setFading(false);
     }, 280);
-  }, [currentIdx, playlist.length]);
+  }, [currentIdx, playlist.length, firebaseSave]);
 
   const goPrev = useCallback(() => {
     if (currentIdx <= 0) return;
@@ -100,10 +192,10 @@ export default function App() {
     setTimeout(() => {
       const prev = currentIdx - 1;
       setCurrentIdx(prev);
-      saveIndex(prev);
+      firebaseSave('currentIdx', prev);
       setFading(false);
     }, 280);
-  }, [currentIdx]);
+  }, [currentIdx, firebaseSave]);
 
   // --- Watched toggle ---
   const toggleWatched = useCallback(() => {
@@ -111,10 +203,10 @@ export default function App() {
       const next = new Set(prev);
       if (next.has(currentIdx)) next.delete(currentIdx);
       else next.add(currentIdx);
-      saveWatched(next);
+      firebaseSave('watched', [...next]);
       return next;
     });
-  }, [currentIdx]);
+  }, [currentIdx, firebaseSave]);
 
   const toggleWatchedForMovie = useCallback((movie) => {
     const playlistIdx = playlist.findIndex(p => p.title === movie.title && p.year === movie.year);
@@ -123,10 +215,10 @@ export default function App() {
       const next = new Set(prev);
       if (next.has(playlistIdx)) next.delete(playlistIdx);
       else next.add(playlistIdx);
-      saveWatched(next);
+      firebaseSave('watched', [...next]);
       return next;
     });
-  }, [playlist]);
+  }, [playlist, firebaseSave]);
 
   // --- Rating change ---
   const handleRatingChange = useCallback((key, person, value) => {
@@ -137,10 +229,10 @@ export default function App() {
       // Clean up null values
       if (value === null) delete next[key][person];
       if (Object.keys(next[key]).length === 0) delete next[key];
-      saveRatings(next);
+      firebaseSave('ratings', next);
       return next;
     });
-  }, []);
+  }, [firebaseSave]);
 
   // --- Detail modal watched state ---
   const isDetailWatched = useMemo(() => {
@@ -158,17 +250,25 @@ export default function App() {
   const handleRestart = useCallback(() => {
     if (!window.confirm('Start from the beginning? Your watched list will be preserved.')) return;
     setCurrentIdx(0);
-    saveIndex(0);
+    firebaseSave('currentIdx', 0);
     setScreen('card');
     setActiveTab('journey');
-  }, []);
+  }, [firebaseSave]);
 
   // --- Settings actions ---
   const handleReset = useCallback(() => {
     if (!window.confirm('Reset all progress and start from the beginning? This cannot be undone.')) return;
-    resetProgress();
+    // Reset Firestore profile fields
+    if (profile) {
+      saveProfileField(profile.id, 'currentIdx', 0).catch(() => {});
+      saveProfileField(profile.id, 'watched', []).catch(() => {});
+      saveProfileField(profile.id, 'ratings', {}).catch(() => {});
+      saveProfileField(profile.id, 'playlistOrder', null).catch(() => {});
+      saveProfileField(profile.id, 'seed', null).catch(() => {});
+    }
+    // Reload the page to reinitialize
     window.location.reload();
-  }, []);
+  }, [profile]);
 
   const handleClearCache = useCallback(() => {
     const count = clearCache();
@@ -178,6 +278,7 @@ export default function App() {
 
   // --- Keyboard shortcuts ---
   useEffect(() => {
+    if (!profile) return; // No keyboard shortcuts when not logged in
     const handler = (e) => {
       if (e.key === 'Escape') {
         if (detailMovie) { setDetailMovie(null); return; }
@@ -195,25 +296,43 @@ export default function App() {
 
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
-  }, [activeTab, screen, settingsOpen, detailMovie, goNext, goPrev, toggleWatched]);
+  }, [profile, activeTab, screen, settingsOpen, detailMovie, goNext, goPrev, toggleWatched]);
 
   // --- Raters change ---
   const handleRatersChange = useCallback((newRaters) => {
     setRaters(newRaters);
-    saveRaters(newRaters);
-  }, []);
+    firebaseSave('raters', newRaters);
+  }, [firebaseSave]);
 
   // --- Tab change ---
   const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
   }, []);
 
+  // --- Loading state ---
+  if (loading) {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
+        <div className="spinner" />
+      </div>
+    );
+  }
+
+  // --- Not logged in: show login screen ---
+  if (!profile) {
+    return <LoginScreen onLogin={handleLogin} />;
+  }
+
   // --- Render ---
   const showProgress = activeTab === 'journey' && screen === 'card' && playlist.length > 0;
 
   return (
     <>
-      <Header onOpenSettings={() => setSettingsOpen(true)} />
+      <Header
+        onOpenSettings={() => setSettingsOpen(true)}
+        profile={profile}
+        onLogout={handleLogout}
+      />
       <TabBar activeTab={activeTab} onTabChange={handleTabChange} />
 
       {showProgress && (
@@ -268,6 +387,15 @@ export default function App() {
       {/* Stats tab */}
       {activeTab === 'stats' && (
         <StatsTab watchedTitleSet={watchedTitleSet} ratings={ratings} raters={raters} />
+      )}
+
+      {/* Battle tab */}
+      {activeTab === 'battle' && (
+        <MovieBattle
+          profile={profile}
+          playlist={playlist}
+          watchedSet={watchedSet}
+        />
       )}
 
       {/* Film detail modal */}

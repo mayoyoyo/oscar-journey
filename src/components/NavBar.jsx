@@ -5,7 +5,7 @@ const tabs = [
   { id: 'list', label: '📋 Films' },
   { id: 'stats', label: '📊 Stats' },
   { id: 'battle', label: '⚔️ Battle' },
-  { id: 'leaderboard', label: '🏅 Board' },
+  { id: 'leaderboard', label: '👥 Profiles' },
 ];
 
 export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme, isDark, onOpenSettings, onLogout }) {

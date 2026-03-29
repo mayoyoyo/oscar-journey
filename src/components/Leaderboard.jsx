@@ -128,7 +128,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
   return (
     <div className="leaderboard-section">
       {/* All Profiles */}
-      <h2>All Profiles</h2>
+      <h2>Profiles</h2>
       {profileStats.length === 0 ? (
         <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic' }}>No profiles found.</p>
       ) : (
@@ -182,45 +182,53 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         </div>
       )}
 
-      {/* Movie ELO Rankings */}
-      <h2>Movie ELO Rankings</h2>
-      {eloLeaderboard.length === 0 ? (
-        <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
-          No rankings yet. Cast some votes in the Battle tab!
-        </p>
-      ) : (
-        <table className="leaderboard-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Title</th>
-              <th>Year</th>
-              <th>ELO</th>
-              <th>Matches</th>
-              <th>Category</th>
-              <th>Genre</th>
-            </tr>
-          </thead>
-          <tbody>
-            {eloLeaderboard.slice(0, 50).map((entry, i) => (
-              <tr key={entry.id}>
-                <td className="leaderboard-rank">{i + 1}</td>
-                <td>{entry.title}</td>
-                <td>{entry.year}</td>
-                <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
-                <td>{entry.matchCount}</td>
-                <td>
-                  {entry.category === 'INT' && <span className="badge-int-sm">International</span>}
-                  {entry.category === 'ANIM' && <span className="badge-anim-sm">Animated</span>}
-                  {entry.category === 'BP' && <span className="badge-bp-sm">Best Picture</span>}
-                </td>
-                <td>
-                  <span className="badge-genre-sm">{GENRE_LABELS[entry.genre] || entry.genre || '--'}</span>
-                </td>
+      {/* Global Movie Rankings (collapsible) */}
+      {eloLeaderboard.length > 0 && (
+        <details style={{ marginTop: '32px' }}>
+          <summary style={{
+            fontFamily: 'Georgia, serif',
+            fontSize: '1.1rem',
+            color: 'var(--gold)',
+            cursor: 'pointer',
+            padding: '8px 0',
+            borderBottom: '1px solid var(--border)',
+            marginBottom: '12px',
+          }}>
+            ⚔️ Global Movie Rankings ({eloLeaderboard.length} films)
+          </summary>
+          <table className="leaderboard-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>ELO</th>
+                <th>Matches</th>
+                <th>Category</th>
+                <th>Genre</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {eloLeaderboard.map((entry, i) => (
+                <tr key={entry.id}>
+                  <td className="leaderboard-rank">{i + 1}</td>
+                  <td>{entry.title}</td>
+                  <td>{entry.year}</td>
+                  <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
+                  <td>{entry.matchCount}</td>
+                  <td>
+                    {entry.category === 'INT' && <span className="badge-int-sm">International</span>}
+                    {entry.category === 'ANIM' && <span className="badge-anim-sm">Animated</span>}
+                    {entry.category === 'BP' && <span className="badge-bp-sm">Best Picture</span>}
+                  </td>
+                  <td>
+                    <span className="badge-genre-sm">{GENRE_LABELS[entry.genre] || entry.genre || '--'}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </details>
       )}
     </div>
   );

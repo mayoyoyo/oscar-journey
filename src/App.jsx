@@ -903,7 +903,7 @@ export default function App() {
           )}
           {screen === 'card' && currentMovie && eligibleStats.total > 0 && (
             <>
-              {eligiblePosition < 5 && (
+              {eligiblePosition < 1 && (
                 <div className="journey-welcome-banner">
                   <div className="journey-welcome-title">🏆 Your Oscar Journey</div>
                   <div className="journey-welcome-text">

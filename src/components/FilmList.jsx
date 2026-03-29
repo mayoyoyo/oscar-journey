@@ -17,7 +17,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, rater
       .slice()
       .sort((a, b) => sortKeyFn(a.title).localeCompare(sortKeyFn(b.title)));
 
-    const watchedCount = filtered.filter(m => watchedTitleSet.has(m.title + '|' + m.year)).length;
+    const watchedCount = filtered.filter(m => watchedTitleSet.has(m.id)).length;
 
     const groups = {};
     for (const m of filtered) {
@@ -50,7 +50,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, rater
             <div className="letter-group" key={letter}>
               <div className="letter-header">{letter}</div>
               {groups[letter].map(m => {
-                const isWatched = watchedTitleSet.has(m.title + '|' + m.year);
+                const isWatched = watchedTitleSet.has(m.id);
                 const key = ratingKey(m);
                 const r = ratings[key] || {};
                 const ratingText = [];
@@ -60,7 +60,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, rater
                 return (
                   <div
                     className={`film-row ${isWatched ? 'is-watched' : ''}`}
-                    key={m.title + m.year}
+                    key={m.id}
                     onClick={() => onOpenDetail(m)}
                   >
                     <span className="film-row-check">{isWatched ? '✓' : ''}</span>

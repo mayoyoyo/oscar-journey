@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { MOVIES, GENRE_LABELS } from '../data/movies';
+import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import { fetchOmdbData } from '../utils/omdb';
 
@@ -33,24 +33,42 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
   const [showUnwatched, setShowUnwatched] = useState(false);
   const [sortMode, setSortMode] = useState('az'); // 'az' | 'rating'
 
-  // Resolve watched movies from the profile's playlistOrder + watched indices
+  // Resolve watched movies from the profile's watched array (movie IDs)
   const watchedMovies = useMemo(() => {
     if (!profileData || !Array.isArray(profileData.watched)) return [];
-    const order = profileData.playlistOrder;
-    if (!Array.isArray(order)) return [];
-    return profileData.watched
-      .filter(idx => idx >= 0 && idx < order.length)
-      .map(idx => {
-        const moviesIdx = order[idx];
-        return MOVIES[moviesIdx];
-      })
-      .filter(Boolean);
+    const watched = profileData.watched;
+    if (watched.length === 0) return [];
+    const first = watched[0];
+
+    if (typeof first === 'number') {
+      // OLD FORMAT: numeric indices into playlistOrder
+      const order = profileData.playlistOrder;
+      if (!Array.isArray(order)) return [];
+      return watched
+        .filter(idx => idx >= 0 && idx < order.length)
+        .map(idx => {
+          const moviesIdx = order[idx];
+          return MOVIES[moviesIdx];
+        })
+        .filter(Boolean);
+    } else if (typeof first === 'string' && first.includes('|')) {
+      // INTERMEDIATE FORMAT: "Title|year" strings
+      return watched.map(key => {
+        const sepIdx = key.lastIndexOf('|');
+        const title = key.substring(0, sepIdx);
+        const yearStr = key.substring(sepIdx + 1);
+        return MOVIES.find(m => m.title === title && String(m.year) === yearStr);
+      }).filter(Boolean);
+    } else {
+      // NEW FORMAT: movie IDs
+      return watched.map(id => MOVIES_BY_ID[id]).filter(Boolean);
+    }
   }, [profileData]);
 
   // Unwatched movies: all MOVIES not in watchedMovies
   const unwatchedMovies = useMemo(() => {
-    const watchedKeys = new Set(watchedMovies.map(m => m.title + '|' + m.year));
-    return MOVIES.filter(m => !watchedKeys.has(m.title + '|' + m.year))
+    const watchedIds = new Set(watchedMovies.map(m => m.id));
+    return MOVIES.filter(m => !watchedIds.has(m.id))
       .sort((a, b) => a.title.localeCompare(b.title));
   }, [watchedMovies]);
 
@@ -66,8 +84,10 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       return movies.sort((a, b) => {
         const aKey = ratingKey(a);
         const bKey = ratingKey(b);
-        const aRatings = ratings[aKey] || {};
-        const bRatings = ratings[bKey] || {};
+        const aLegacy = `${a.title}|${a.year}`;
+        const bLegacy = `${b.title}|${b.year}`;
+        const aRatings = ratings[aKey] || ratings[aLegacy] || {};
+        const bRatings = ratings[bKey] || ratings[bLegacy] || {};
         const avgOf = (r) => {
           const vals = profileRatersList.map(name => r[name]).filter(v => v != null);
           return vals.length > 0 ? vals.reduce((s, v) => s + v, 0) / vals.length : 0;
@@ -100,7 +120,9 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
 
     for (const m of MOVIES) {
       const key = ratingKey(m);
-      const r = ratings[key];
+      // Also check legacy "Title|year" key for un-migrated profiles
+      const legacyKey = `${m.title}|${m.year}`;
+      const r = ratings[key] || ratings[legacyKey];
       if (!r) continue;
       for (const val of Object.values(r)) {
         if (val != null) {
@@ -152,17 +174,19 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
   // When viewing own profile, use live React state (currentRatings) for instant updates
   const getProfileRatings = (movie) => {
     const key = ratingKey(movie);
+    const legacyKey = `${movie.title}|${movie.year}`;
     if (isOwnProfile && currentRatings) {
-      return currentRatings[key] || {};
+      return currentRatings[key] || currentRatings[legacyKey] || {};
     }
-    return profileData.ratings?.[key] || {};
+    return profileData.ratings?.[key] || profileData.ratings?.[legacyKey] || {};
   };
 
   // Get the current viewer's ratings for a specific movie
   const getViewerRating = (movie) => {
     if (!currentProfile || !currentRatings) return null;
     const key = ratingKey(movie);
-    const movieRatings = currentRatings[key];
+    const legacyKey = `${movie.title}|${movie.year}`;
+    const movieRatings = currentRatings[key] || currentRatings[legacyKey];
     if (!movieRatings) return null;
     // Find the viewer's own rating (first rater entry that matches the viewer's display name)
     const viewerName = currentProfile.displayName || currentProfile.id;
@@ -252,7 +276,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             const viewerRating = !isOwnProfile ? getViewerRating(movie) : null;
 
             return (
-              <div className="film-tile" key={movie.title + '|' + movie.year}
+              <div className="film-tile" key={movie.id}
                 style={{ cursor: onOpenDetail ? 'pointer' : 'default' }}
                 onClick={() => onOpenDetail && onOpenDetail(movie)}>
                 <div className="film-tile-poster-wrap">
@@ -296,7 +320,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       {showUnwatched && (
         <div>
           {unwatchedMovies.map(movie => (
-            <div className="profile-unwatched-row" key={movie.title + '|' + movie.year}>
+            <div className="profile-unwatched-row" key={movie.id}>
               <span>{movie.title}</span>
               <span style={{ marginLeft: 'auto' }}>{movie.year}</span>
             </div>

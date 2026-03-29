@@ -5,7 +5,7 @@ import { ratingKey } from '../utils/storage';
 export default function StatsTab({ watchedTitleSet, ratings, raters }) {
   const stats = useMemo(() => {
     const totalFilms = MOVIES.length;
-    const watchedCount = MOVIES.filter(m => watchedTitleSet.has(m.title + '|' + m.year)).length;
+    const watchedCount = MOVIES.filter(m => watchedTitleSet.has(m.id)).length;
 
     // Per-rater stats
     const perRater = {};
@@ -80,7 +80,7 @@ export default function StatsTab({ watchedTitleSet, ratings, raters }) {
     ];
     const decadeProgress = decades.map(d => {
       const total = MOVIES.filter(m => m.year >= d.min && m.year <= d.max).length;
-      const watched = MOVIES.filter(m => m.year >= d.min && m.year <= d.max && watchedTitleSet.has(m.title + '|' + m.year)).length;
+      const watched = MOVIES.filter(m => m.year >= d.min && m.year <= d.max && watchedTitleSet.has(m.id)).length;
       return { ...d, total, watched };
     });
 
@@ -92,7 +92,7 @@ export default function StatsTab({ watchedTitleSet, ratings, raters }) {
     ];
     const categoryProgress = categories.map(c => {
       const total = MOVIES.filter(m => m.category === c.cat).length;
-      const watched = MOVIES.filter(m => m.category === c.cat && watchedTitleSet.has(m.title + '|' + m.year)).length;
+      const watched = MOVIES.filter(m => m.category === c.cat && watchedTitleSet.has(m.id)).length;
       return { ...c, total, watched };
     });
 

@@ -51,7 +51,9 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
 
       for (const m of MOVIES) {
         const key = ratingKey(m);
-        const r = ratings[key];
+        // Also check legacy "Title|year" key for un-migrated profiles
+        const legacyKey = `${m.title}|${m.year}`;
+        const r = ratings[key] || ratings[legacyKey];
         if (!r) continue;
         // Sum all raters' ratings for this profile
         for (const val of Object.values(r)) {

@@ -84,7 +84,7 @@ export function saveRatings(ratings) {
 }
 
 export function ratingKey(movie) {
-  return `${movie.title}|${movie.year}`;
+  return movie.id;
 }
 
 // --- Reset & clear ---

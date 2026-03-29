@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { MOVIES } from '../data/movies';
+import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { recordVote, getEloLeaderboard, updatePersonalElo } from '../utils/firebaseStorage';
 import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
@@ -17,12 +17,12 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
   const [personalElo, setPersonalElo] = useState(profile?.personalElo || {});
   const [rankView, setRankView] = useState('global'); // 'global' | 'personal'
 
-  // Get list of watched movies from profile's watched set (title|year strings)
+  // Get list of watched movies from profile's watched set (movie IDs)
   const watchedMovies = useMemo(() => {
     const movies = [];
     for (let i = 0; i < playlist.length; i++) {
       const m = playlist[i];
-      if (watchedSet.has(m.title + '|' + m.year)) {
+      if (watchedSet.has(m.id)) {
         movies.push({ ...m, playlistIdx: i });
       }
     }
@@ -84,10 +84,18 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
   const personalLeaderboard = useMemo(() => {
     return Object.entries(personalElo)
       .map(([key, data]) => {
-        // Key format is "Title|year"
-        const sepIdx = key.lastIndexOf('|');
-        const title = sepIdx > 0 ? key.substring(0, sepIdx) : key;
-        const year = sepIdx > 0 ? key.substring(sepIdx + 1) : '';
+        // Key is a movie ID (or legacy "Title|year" format)
+        const movie = MOVIES_BY_ID[key];
+        let title, year;
+        if (movie) {
+          title = movie.title;
+          year = movie.year;
+        } else {
+          // Legacy "Title|year" format fallback
+          const sepIdx = key.lastIndexOf('|');
+          title = sepIdx > 0 ? key.substring(0, sepIdx) : key;
+          year = sepIdx > 0 ? key.substring(sepIdx + 1) : '';
+        }
         return {
           id: key,
           title,

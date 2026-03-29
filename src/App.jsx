@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { MOVIES } from './data/movies';
+import { MOVIES, MOVIES_BY_ID } from './data/movies';
 import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffle';
 import {
   ratingKey, clearCache,
@@ -22,7 +22,7 @@ import JourneyControls from './components/JourneyControls';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
-  return movie.title + '|' + movie.year;
+  return movie.id;
 }
 
 // Map genre codes to tone filter keys
@@ -123,8 +123,8 @@ export default function App() {
   // --- Helper: save to Firestore without blocking UI ---
   const firebaseSave = useCallback((field, value) => {
     if (!profile) return;
-    saveProfileField(profile.id, field, value).catch(() => {
-      // Silently ignore write errors to avoid blocking the UI
+    saveProfileField(profile.id, field, value).catch((err) => {
+      console.error('Firestore save failed:', field, err);
     });
   }, [profile]);
 
@@ -161,55 +161,108 @@ export default function App() {
     // Determine seed and playlist order
     let seed = data.seed;
     let pl;
-    let needsSeedSave = false;
-    let needsOrderSave = false;
+    let needsNewPlaylist = false;
 
-    if (data.playlistOrder && data.playlistOrder.every(i => i >= 0 && i < MOVIES.length)) {
-      // Use saved playlist order
-      pl = data.playlistOrder.map(i => MOVIES[i]);
+    if (data.playlistOrder && data.playlistOrder.length > 0) {
+      if (typeof data.playlistOrder[0] === 'number') {
+        // OLD FORMAT: numeric indices — regenerate playlist instead of trying to migrate
+        needsNewPlaylist = true;
+      } else {
+        // NEW FORMAT: movie IDs
+        pl = data.playlistOrder
+          .map(id => MOVIES_BY_ID[id])
+          .filter(Boolean);
+        // Add any new movies not in the saved order (newly added films)
+        const savedIds = new Set(data.playlistOrder);
+        const newMovies = MOVIES.filter(m => !savedIds.has(m.id));
+        if (newMovies.length > 0) {
+          // Shuffle new movies and append them
+          const rng = mulberry32(seed || 12345);
+          for (let i = newMovies.length - 1; i > 0; i--) {
+            const j = Math.floor(rng() * (i + 1));
+            [newMovies[i], newMovies[j]] = [newMovies[j], newMovies[i]];
+          }
+          pl = [...pl, ...newMovies];
+          // Save updated order
+          saveProfileField(data.id, 'playlistOrder', pl.map(m => m.id)).catch(() => {});
+        }
+      }
     } else {
+      needsNewPlaylist = true;
+    }
+
+    if (needsNewPlaylist) {
       // Generate new seed if needed
       if (!seed) {
         seed = Math.floor(Math.random() * 0xFFFFFFFF);
-        needsSeedSave = true;
-      }
-      pl = generatePlaylist(seed);
-      const orderIndices = pl.map(m => MOVIES.indexOf(m));
-      needsOrderSave = true;
-
-      // Save seed and order to Firestore (fire-and-forget)
-      if (needsSeedSave) {
         saveProfileField(data.id, 'seed', seed).catch(() => {});
       }
-      saveProfileField(data.id, 'playlistOrder', orderIndices).catch(() => {});
+      pl = generatePlaylist(seed);
+      const orderIds = pl.map(m => m.id);
+      saveProfileField(data.id, 'playlistOrder', orderIds).catch(() => {});
     }
 
-    // Migrate watched from old index format to title|year format
-    let watched;
+    // Migrate watched to movie ID format
+    let watchedKeys;
     if (Array.isArray(data.watched) && data.watched.length > 0) {
-      if (typeof data.watched[0] === 'number') {
-        // OLD FORMAT: indices into playlist — migrate to title|year keys
-        watched = new Set();
-        const order = data.playlistOrder || [];
-        for (const idx of data.watched) {
-          const moviesIdx = order[idx];
-          if (moviesIdx != null && MOVIES[moviesIdx]) {
-            const m = MOVIES[moviesIdx];
-            watched.add(movieKey(m));
+      const first = data.watched[0];
+      if (typeof first === 'number') {
+        // OLD FORMAT: numeric indices — try to migrate via old playlistOrder
+        watchedKeys = new Set();
+        if (data.playlistOrder && typeof data.playlistOrder[0] === 'number') {
+          for (const idx of data.watched) {
+            const moviesIdx = data.playlistOrder[idx];
+            if (moviesIdx != null && moviesIdx < MOVIES.length) {
+              const m = MOVIES[moviesIdx];
+              if (m) watchedKeys.add(m.id);
+            }
           }
         }
-        // Save migrated format to Firestore
-        saveProfileField(data.id, 'watched', [...watched]).catch(() => {});
+        saveProfileField(data.id, 'watched', [...watchedKeys]).catch(() => {});
+      } else if (typeof first === 'string' && first.includes('|')) {
+        // INTERMEDIATE FORMAT: "Title|year" strings — migrate to IDs
+        watchedKeys = new Set();
+        for (const key of data.watched) {
+          const sepIdx = key.lastIndexOf('|');
+          const title = key.substring(0, sepIdx);
+          const yearStr = key.substring(sepIdx + 1);
+          const movie = MOVIES.find(m => m.title === title && String(m.year) === yearStr);
+          if (movie) watchedKeys.add(movie.id);
+        }
+        saveProfileField(data.id, 'watched', [...watchedKeys]).catch(() => {});
       } else {
-        // NEW FORMAT: already title|year strings
-        watched = new Set(data.watched);
+        // NEW FORMAT: movie IDs (strings without |)
+        watchedKeys = new Set(data.watched);
       }
     } else {
-      watched = new Set();
+      watchedKeys = new Set();
     }
 
-    // Set ratings
-    const rats = data.ratings || {};
+    // Migrate ratings to use movie IDs as keys
+    const rawRatings = data.ratings || {};
+    const migratedRatings = {};
+    let needsRatingMigration = false;
+
+    for (const [key, value] of Object.entries(rawRatings)) {
+      if (key.includes('|')) {
+        // OLD FORMAT: "Title|year" — migrate to movie ID
+        const sepIdx = key.lastIndexOf('|');
+        const title = key.substring(0, sepIdx);
+        const yearStr = key.substring(sepIdx + 1);
+        const movie = MOVIES.find(m => m.title === title && String(m.year) === yearStr);
+        if (movie) {
+          migratedRatings[movie.id] = value;
+          needsRatingMigration = true;
+        }
+      } else {
+        // Already a movie ID
+        migratedRatings[key] = value;
+      }
+    }
+
+    if (needsRatingMigration) {
+      saveProfileField(data.id, 'ratings', migratedRatings).catch(() => {});
+    }
 
     // Set raters
     const ratersList = data.raters || ['Chris', 'Yvonne'];
@@ -219,8 +272,8 @@ export default function App() {
 
     setPlaylist(pl);
     setCurrentIdx(Math.min(idx, pl.length - 1));
-    setWatchedSet(watched);
-    setRatings(rats);
+    setWatchedSet(watchedKeys);
+    setRatings(migratedRatings);
     setRaters(ratersList);
 
     // Load theme preference from profile if available
@@ -231,7 +284,7 @@ export default function App() {
     }
 
     // Determine screen state
-    if (idx > 0 || watched.size > 0) {
+    if (idx > 0 || watchedKeys.size > 0) {
       setScreen('card');
     } else {
       setScreen('start');
@@ -269,7 +322,7 @@ export default function App() {
   const hasAnyRating = currentRatings && Object.values(currentRatings).some(v => v != null);
   const canAdvance = isCurrentWatched && hasAnyRating;
 
-  // watchedSet is now title|year based, so it serves directly as the title set
+  // watchedSet contains movie IDs; pass directly to components
   const watchedTitleSet = watchedSet;
 
   // --- Filter helpers ---
@@ -401,7 +454,7 @@ export default function App() {
     // Generate new seed and playlist
     const newSeed = Math.floor(Math.random() * 0xFFFFFFFF);
     const newPlaylist = generatePlaylist(newSeed);
-    const orderIndices = newPlaylist.map(m => MOVIES.indexOf(m));
+    const orderIds = newPlaylist.map(m => m.id);
 
     setPlaylist(newPlaylist);
     setCurrentIdx(0);
@@ -409,7 +462,7 @@ export default function App() {
     // Save new seed, order, and reset currentIdx in Firestore
     if (profile) {
       saveProfileField(profile.id, 'seed', newSeed).catch(() => {});
-      saveProfileField(profile.id, 'playlistOrder', orderIndices).catch(() => {});
+      saveProfileField(profile.id, 'playlistOrder', orderIds).catch(() => {});
       saveProfileField(profile.id, 'currentIdx', 0).catch(() => {});
     }
 

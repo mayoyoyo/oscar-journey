@@ -97,8 +97,8 @@ export function enforceSeriesOrder(playlist) {
   for (const series of SERIES) {
     const positions = [];
     const films = [];
-    series.forEach(title => {
-      const idx = playlist.findIndex(m => m.title === title);
+    series.forEach(id => {
+      const idx = playlist.findIndex(m => m.id === id);
       if (idx >= 0) { positions.push(idx); films.push(playlist[idx]); }
     });
     if (positions.length < 2) continue;

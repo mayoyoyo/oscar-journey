@@ -1407,10 +1407,9 @@ main {
 .battle-card-poster {
   width: 100%;
   aspect-ratio: 2/3;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   background: var(--bg3);
-  border-bottom: 1px solid var(--border);
 }
 .battle-card-info {
   padding: 16px;

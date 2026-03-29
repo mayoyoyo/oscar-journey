@@ -270,7 +270,12 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         Skip (different pair)
       </button>
 
-      <details className="battle-explainer" open>
+      <details className="battle-explainer"
+        open={!localStorage.getItem('oscars_battle_explainer_closed')}
+        onToggle={(e) => {
+          if (!e.target.open) localStorage.setItem('oscars_battle_explainer_closed', 'true');
+          else localStorage.removeItem('oscars_battle_explainer_closed');
+        }}>
         <summary>How does this work?</summary>
         <p>
           Pick the film you think is better. Each movie has an <strong>ELO rating</strong> (like chess rankings) that starts at 1500. When you vote, the winner gains points and the loser drops — but beating a highly-rated film earns more points than beating a low-rated one.

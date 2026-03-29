@@ -108,6 +108,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         favGenre,
         memberSince,
         currentMovie,
+        skipCount: p.skipCount || 0,
       };
     }).sort((a, b) => b.watchedCount - a.watchedCount);
   }, [profiles]);
@@ -178,6 +179,12 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   <span className="stat-label">Fav Genre</span>
                   <span className="stat-value">{p.favGenre || '--'}</span>
                 </div>
+                {p.skipCount > 0 && (
+                  <div className="profile-card-stat profile-card-skip">
+                    <span className="stat-label">Films Skipped 😤</span>
+                    <span className="stat-value">{p.skipCount}</span>
+                  </div>
+                )}
                 {p.currentMovie && (
                   <div className="profile-card-current"
                     onClick={(e) => { e.stopPropagation(); onOpenDetail(p.currentMovie); }}

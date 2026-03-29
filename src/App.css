@@ -1562,6 +1562,10 @@ main {
 .profile-card-stat .stat-label { color: var(--cream-dim); }
 .profile-card-stat .stat-value { font-weight: 600; }
 
+.profile-card-skip .stat-value {
+  color: var(--red-bright);
+}
+
 .profile-card-current {
   margin-top: 4px;
   padding-top: 4px;
@@ -2306,7 +2310,24 @@ main {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 12px;
+  position: relative;
 }
+
+.journey-welcome-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--cream-dim);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.journey-welcome-close:hover { color: var(--cream); }
 
 .journey-welcome-title {
   font-family: Georgia, serif;

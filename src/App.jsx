@@ -224,6 +224,7 @@ export default function App() {
   const [detailMovie, setDetailMovie] = useState(null);
   const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
   const [infoOpen, setInfoOpen] = useState(false);
+  const [bannerDismissed, setBannerDismissed] = useState(false);
 
   // Sync journey
   const [allProfilesForSync, setAllProfilesForSync] = useState([]);
@@ -801,6 +802,11 @@ export default function App() {
   const handleSkip = useCallback(() => {
     if (!currentMovie || playlist.length === 0) return;
 
+    // Increment skip count
+    const newSkipCount = (profile?.skipCount || 0) + 1;
+    setProfile(prev => prev ? { ...prev, skipCount: newSkipCount } : prev);
+    firebaseSave('skipCount', newSkipCount);
+
     // Remove current film from its position and insert it later
     const newPlaylist = [...playlist];
     const skippedMovie = newPlaylist.splice(currentIdx, 1)[0];
@@ -903,8 +909,9 @@ export default function App() {
           )}
           {screen === 'card' && currentMovie && eligibleStats.total > 0 && (
             <>
-              {eligiblePosition < 1 && (
+              {eligiblePosition < 1 && !bannerDismissed && (
                 <div className="journey-welcome-banner">
+                  <button className="journey-welcome-close" onClick={() => setBannerDismissed(true)}>✕</button>
                   <div className="journey-welcome-title">🏆 Your Oscar Journey</div>
                   <div className="journey-welcome-text">
                     We picked {MOVIES.length} Oscar-nominated films and shuffled them so you never watch two similar films back-to-back. Watch each one, rate it, and move on. No overthinking — just press play.

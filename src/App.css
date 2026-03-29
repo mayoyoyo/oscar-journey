@@ -100,14 +100,32 @@ body {
   align-items: center;
   gap: 8px;
 }
+.nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .nav-logo-svg {
   flex-shrink: 0;
 }
 .nav-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0;
+}
+.nav-brand-oscar {
   font-family: Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 0.72rem;
   color: var(--gold);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+}
+.nav-brand-journey {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: var(--cream);
+  letter-spacing: 0.08em;
   font-weight: 600;
 }
 .nav-tabs {
@@ -168,7 +186,9 @@ body {
   }
   .nav-left { order: 1; }
   .nav-right { order: 2; margin-left: auto; }
-  .nav-brand { font-size: 0.9rem; }
+  .nav-brand-oscar { font-size: 0.6rem; }
+  .nav-brand-journey { font-size: 0.78rem; }
+  .nav-logo-svg { width: 18px; height: 18px; }
 }
 
 /* =====================================================
@@ -1869,24 +1889,28 @@ main {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 10px;
+  padding: 12px;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(7, 30px);
+  justify-content: center;
+  gap: 2px;
   z-index: 300;
   box-shadow: 0 8px 32px var(--shadow);
-  width: 280px;
+  width: 260px;
 }
 
 .nav-emoji-option {
   background: none;
   border: 2px solid transparent;
   border-radius: 6px;
-  font-size: 1.2rem;
-  padding: 4px;
+  font-size: 1.1rem;
+  width: 30px;
+  height: 30px;
+  padding: 0;
   cursor: pointer;
   transition: all 0.1s;
   text-align: center;
+  line-height: 26px;
 }
 .nav-emoji-option:hover {
   background: var(--bg3);
@@ -1899,9 +1923,9 @@ main {
 
 @media (max-width: 540px) {
   .nav-emoji-picker {
-    width: 240px;
-    grid-template-columns: repeat(6, 1fr);
-    right: -40px;
+    width: 230px;
+    grid-template-columns: repeat(6, 30px);
+    right: -20px;
   }
 }
 

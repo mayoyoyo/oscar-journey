@@ -23,23 +23,28 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
     <>
       <nav className="main-nav">
         <div className="nav-left">
-          <svg className="nav-logo-svg" viewBox="0 0 64 64" width="20" height="20">
-            <defs>
-              <linearGradient id="navGold" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#f0d060"/>
-                <stop offset="50%" stopColor="#c9a84c"/>
-                <stop offset="100%" stopColor="#8b6914"/>
-              </linearGradient>
-            </defs>
-            <rect x="18" y="56" width="28" height="4" rx="2" fill="url(#navGold)"/>
-            <rect x="24" y="50" width="16" height="6" rx="1" fill="url(#navGold)"/>
-            <rect x="29" y="38" width="6" height="12" rx="1" fill="url(#navGold)"/>
-            <ellipse cx="32" cy="24" rx="12" ry="16" fill="url(#navGold)"/>
-            <circle cx="32" cy="10" r="6" fill="url(#navGold)"/>
-            <rect x="16" y="18" width="10" height="3" rx="1.5" fill="url(#navGold)" transform="rotate(-20 21 19.5)"/>
-            <rect x="38" y="18" width="10" height="3" rx="1.5" fill="url(#navGold)" transform="rotate(20 43 19.5)"/>
-          </svg>
-          <span className="nav-brand">Oscar Journey</span>
+          <div className="nav-brand-group">
+            <svg className="nav-logo-svg" viewBox="0 0 64 64" width="22" height="22">
+              <defs>
+                <linearGradient id="navGold" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#f0d060"/>
+                  <stop offset="50%" stopColor="#c9a84c"/>
+                  <stop offset="100%" stopColor="#8b6914"/>
+                </linearGradient>
+              </defs>
+              <rect x="18" y="56" width="28" height="4" rx="2" fill="url(#navGold)"/>
+              <rect x="24" y="50" width="16" height="6" rx="1" fill="url(#navGold)"/>
+              <rect x="29" y="38" width="6" height="12" rx="1" fill="url(#navGold)"/>
+              <ellipse cx="32" cy="24" rx="12" ry="16" fill="url(#navGold)"/>
+              <circle cx="32" cy="10" r="6" fill="url(#navGold)"/>
+              <rect x="16" y="18" width="10" height="3" rx="1.5" fill="url(#navGold)" transform="rotate(-20 21 19.5)"/>
+              <rect x="38" y="18" width="10" height="3" rx="1.5" fill="url(#navGold)" transform="rotate(20 43 19.5)"/>
+            </svg>
+            <span className="nav-brand">
+              <span className="nav-brand-oscar">OSCAR</span>
+              <span className="nav-brand-journey">JOURNEY</span>
+            </span>
+          </div>
         </div>
         <div className="nav-tabs">
           {tabs.map(tab => (

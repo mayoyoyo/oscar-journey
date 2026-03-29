@@ -22,6 +22,7 @@ import Leaderboard from './components/Leaderboard';
 import JourneyControls from './components/JourneyControls';
 import ActivityFeed from './components/ActivityFeed';
 import { SkeletonCard } from './components/Skeleton';
+import InfoModal from './components/InfoModal';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
@@ -221,6 +222,7 @@ export default function App() {
   // Modals
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [detailMovie, setDetailMovie] = useState(null);
+  const [infoOpen, setInfoOpen] = useState(false);
 
   // Sync journey
   const [allProfilesForSync, setAllProfilesForSync] = useState([]);
@@ -852,6 +854,7 @@ export default function App() {
         onToggleTheme={toggleTheme}
         isDark={isDark}
         onOpenSettings={() => setSettingsOpen(true)}
+        onOpenInfo={() => setInfoOpen(true)}
         onLogout={handleLogout}
         saving={saving}
       />
@@ -921,7 +924,7 @@ export default function App() {
                 canAdvance={canAdvance}
               />
               <div className="journey-tagline">
-                {JOURNEY_TAGLINES[Math.floor(currentIdx * 7.3 + playlist.length) % JOURNEY_TAGLINES.length]}
+                {JOURNEY_TAGLINES[Math.floor(Math.random() * JOURNEY_TAGLINES.length)]}
               </div>
               <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} onOpenDetail={setDetailMovie} />
               <JourneyControls
@@ -1006,6 +1009,11 @@ export default function App() {
           onClearCache={handleClearCache}
           profile={profile}
         />
+      )}
+
+      {/* Info modal */}
+      {infoOpen && (
+        <InfoModal onClose={() => setInfoOpen(false)} />
       )}
     </>
   );

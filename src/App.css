@@ -2271,6 +2271,41 @@ main {
 }
 
 /* =====================================================
+   INFO MODAL
+   ===================================================== */
+.info-section {
+  margin-bottom: 18px;
+}
+.info-section h3 {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.info-section p {
+  font-size: 0.88rem;
+  color: var(--cream);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.info-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.info-list li {
+  font-size: 0.85rem;
+  color: var(--cream);
+  line-height: 1.5;
+  padding-left: 4px;
+}
+.info-list li strong {
+  color: var(--gold);
+}
+
+/* =====================================================
    ACTIVITY FEED
    ===================================================== */
 .activity-feed {

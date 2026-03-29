@@ -7,7 +7,7 @@ const tabs = [
   { id: 'leaderboard', label: '👥 Profiles', icon: '👥', shortLabel: 'Profiles' },
 ];
 
-export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme, isDark, onOpenSettings, onLogout, saving }) {
+export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme, isDark, onOpenSettings, onOpenInfo, onLogout, saving }) {
   return (
     <>
       <nav className="main-nav">
@@ -37,7 +37,8 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
           <button className="nav-icon-btn" onClick={onToggleTheme} title="Toggle theme">
             {isDark ? '☀️' : '🌙'}
           </button>
-          <button className="nav-icon-btn" onClick={onOpenSettings} title="Settings">⚙️</button>
+          <button className="nav-icon-btn" onClick={onOpenInfo} title="What is this?">?</button>
+        <button className="nav-icon-btn" onClick={onOpenSettings} title="Settings">⚙️</button>
           {profile && <button className="nav-icon-btn" onClick={onLogout} title="Log out">↩</button>}
         </div>
       </nav>

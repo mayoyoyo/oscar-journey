@@ -9,7 +9,7 @@ const DEFAULT_FILTERS = {
     war: true, biopic: true, musical: true, action: true, animation: true,
   },
   smart: {
-    skipWatched: false,
+    skipWatched: true,
     winnersOnly: false,
     unwatchedByAll: false,
   },

@@ -875,7 +875,8 @@ export default function App() {
         <ProgressBar
           currentIdx={eligiblePosition}
           total={eligibleStats.total}
-          watchedCount={eligibleStats.watched}
+          watchedCount={watchedSet.size}
+          totalMovies={playlist.length}
         />
       )}
 

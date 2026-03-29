@@ -1801,9 +1801,12 @@ main {
     gap: 12px;
   }
 
-  .battle-arena { flex-direction: column; }
-  .battle-vs { padding: 12px 0; font-size: 1.4rem; }
-  .battle-card-poster { aspect-ratio: 2/3; }
+  .battle-arena { flex-direction: row; gap: 0; }
+  .battle-vs { padding: 0 6px; font-size: 1.1rem; min-width: 32px; }
+  .battle-card-poster { aspect-ratio: 3/4; height: auto; }
+  .battle-card-info { padding: 10px; }
+  .battle-card-title { font-size: 0.85rem; }
+  .battle-card-year { font-size: 0.75rem; }
 
   .profile-detail-name { font-size: 1.5rem; }
   .profile-detail-summary { gap: 10px; }

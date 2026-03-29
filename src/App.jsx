@@ -15,7 +15,6 @@ import NavButtons from './components/NavButtons';
 import CompletionScreen from './components/CompletionScreen';
 import FilmList from './components/FilmList';
 import FilmDetailModal from './components/FilmDetailModal';
-import StatsTab from './components/StatsTab';
 import SettingsModal, { DEFAULT_FILTERS } from './components/SettingsModal';
 import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
@@ -747,11 +746,6 @@ export default function App() {
         />
       )}
 
-      {/* Stats tab */}
-      {activeTab === 'stats' && (
-        <StatsTab watchedTitleSet={watchedTitleSet} ratings={ratings} raters={raters} />
-      )}
-
       {/* Battle tab */}
       {activeTab === 'battle' && (
         <MovieBattle
@@ -761,12 +755,15 @@ export default function App() {
         />
       )}
 
-      {/* Leaderboard tab */}
+      {/* Profiles tab (includes stats) */}
       {activeTab === 'leaderboard' && (
         <Leaderboard
           currentProfile={profile}
           currentRatings={ratings}
           onOpenDetail={setDetailMovie}
+          watchedTitleSet={watchedTitleSet}
+          ratings={ratings}
+          raters={raters}
         />
       )}
 

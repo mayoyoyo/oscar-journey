@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
-import { getEloLeaderboard } from '../utils/firebaseStorage';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import ProfileDetail from './ProfileDetail';
+import StatsTab from './StatsTab';
 
 // Fetch all profiles from Firestore
 async function getAllProfiles() {
@@ -12,9 +12,8 @@ async function getAllProfiles() {
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail }) {
+export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters }) {
   const [profiles, setProfiles] = useState([]);
-  const [eloLeaderboard, setEloLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProfile, setSelectedProfile] = useState(null);
 
@@ -22,13 +21,10 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
     let cancelled = false;
     async function load() {
       try {
-        const [profs, elo] = await Promise.all([getAllProfiles(), getEloLeaderboard()]);
-        if (!cancelled) {
-          setProfiles(profs);
-          setEloLeaderboard(elo);
-        }
+        const profs = await getAllProfiles();
+        if (!cancelled) setProfiles(profs);
       } catch (e) {
-        console.error('Failed to load leaderboard data:', e);
+        console.error('Failed to load profiles:', e);
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -182,53 +178,11 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         </div>
       )}
 
-      {/* Global Movie Rankings (collapsible) */}
-      {eloLeaderboard.length > 0 && (
-        <details style={{ marginTop: '32px' }}>
-          <summary style={{
-            fontFamily: 'Georgia, serif',
-            fontSize: '1.1rem',
-            color: 'var(--gold)',
-            cursor: 'pointer',
-            padding: '8px 0',
-            borderBottom: '1px solid var(--border)',
-            marginBottom: '12px',
-          }}>
-            ⚔️ Global Movie Rankings ({eloLeaderboard.length} films)
-          </summary>
-          <table className="leaderboard-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Year</th>
-                <th>ELO</th>
-                <th>Matches</th>
-                <th>Category</th>
-                <th>Genre</th>
-              </tr>
-            </thead>
-            <tbody>
-              {eloLeaderboard.map((entry, i) => (
-                <tr key={entry.id}>
-                  <td className="leaderboard-rank">{i + 1}</td>
-                  <td>{entry.title}</td>
-                  <td>{entry.year}</td>
-                  <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
-                  <td>{entry.matchCount}</td>
-                  <td>
-                    {entry.category === 'INT' && <span className="badge-int-sm">International</span>}
-                    {entry.category === 'ANIM' && <span className="badge-anim-sm">Animated</span>}
-                    {entry.category === 'BP' && <span className="badge-bp-sm">Best Picture</span>}
-                  </td>
-                  <td>
-                    <span className="badge-genre-sm">{GENRE_LABELS[entry.genre] || entry.genre || '--'}</span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </details>
+      {/* Your Stats */}
+      {watchedTitleSet && ratings && raters && (
+        <div style={{ marginTop: '32px' }}>
+          <StatsTab watchedTitleSet={watchedTitleSet} ratings={ratings} raters={raters} />
+        </div>
       )}
     </div>
   );

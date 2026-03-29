@@ -3,7 +3,6 @@ import React from 'react';
 const tabs = [
   { id: 'journey', label: '🎬 Journey' },
   { id: 'list', label: '📋 Films' },
-  { id: 'stats', label: '📊 Stats' },
   { id: 'battle', label: '⚔️ Battle' },
   { id: 'leaderboard', label: '👥 Profiles' },
 ];

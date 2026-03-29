@@ -10,7 +10,7 @@ function ordinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters }) {
+export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -71,6 +71,9 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
 
             {omdbData?.rating && (
               <div className="film-detail-rating">★ {omdbData.rating} / 10 <span className="rating-source">IMDb</span></div>
+            )}
+            {personalElo?.[movie.id] && (
+              <div className="film-detail-elo">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO ({personalElo[movie.id].matchCount} matches)</span></div>
             )}
             {omdbData?.plot && (
               <div className="film-detail-plot">{omdbData.plot}</div>

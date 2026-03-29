@@ -610,6 +610,7 @@ export default function App() {
                 ratings={ratings}
                 onRatingChange={handleRatingChange}
                 raters={raters}
+                personalElo={profile?.personalElo}
               />
               <NavButtons
                 currentIdx={eligiblePosition}
@@ -677,6 +678,7 @@ export default function App() {
           onToggleWatched={() => toggleWatchedForMovie(detailMovie)}
           onClose={() => setDetailMovie(null)}
           ratings={ratings}
+          personalElo={profile?.personalElo}
           onRatingChange={handleRatingChange}
           raters={raters}
         />

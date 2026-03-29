@@ -10,7 +10,7 @@ function ordinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters }) {
+export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -69,6 +69,9 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
 
         {omdbData?.rating && (
           <div className="film-imdb-rating">★ {omdbData.rating} <span className="rating-source">IMDb</span></div>
+        )}
+        {personalElo?.[movie.id] && (
+          <div className="film-elo-rating">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO</span></div>
         )}
         {omdbData?.plot && (
           <div className="film-plot">{omdbData.plot}</div>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { recordVote, getEloLeaderboard, updatePersonalElo } from '../utils/firebaseStorage';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../utils/firebase';
 import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
 
@@ -15,6 +17,9 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
   const [leaderboard, setLeaderboard] = useState([]);
   const [lastPairKey, setLastPairKey] = useState('');
   const [personalElo, setPersonalElo] = useState(profile?.personalElo || {});
+  const [allProfiles, setAllProfiles] = useState([]);
+  const [selectedProfileId, setSelectedProfileId] = useState(profile?.id || '');
+  const [viewingElo, setViewingElo] = useState(profile?.personalElo || {});
 
   // Get list of watched movies from profile's watched set (movie IDs)
   const watchedMovies = useMemo(() => {
@@ -79,9 +84,36 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
     refreshLeaderboard();
   }, [refreshLeaderboard]);
 
-  // Build personal leaderboard from personalElo state
+  // Load all profiles for the personal rankings dropdown
+  useEffect(() => {
+    async function loadProfiles() {
+      try {
+        const snap = await getDocs(collection(db, 'profiles'));
+        const profs = snap.docs.map(d => ({
+          id: d.id,
+          displayName: d.data().displayName || d.id,
+          avatar: d.data().avatar || '',
+          personalElo: d.data().personalElo || {},
+        }));
+        setAllProfiles(profs);
+      } catch (e) { /* silently fail */ }
+    }
+    loadProfiles();
+  }, []);
+
+  // When selected profile changes, update the viewing ELO
+  useEffect(() => {
+    if (selectedProfileId === profile?.id) {
+      setViewingElo(personalElo);
+    } else {
+      const p = allProfiles.find(p => p.id === selectedProfileId);
+      setViewingElo(p?.personalElo || {});
+    }
+  }, [selectedProfileId, personalElo, allProfiles, profile]);
+
+  // Build personal leaderboard from the selected profile's ELO
   const personalLeaderboard = useMemo(() => {
-    return Object.entries(personalElo)
+    return Object.entries(viewingElo)
       .map(([key, data]) => {
         // Key is a movie ID (or legacy "Title|year" format)
         const movie = MOVIES_BY_ID[key];
@@ -104,7 +136,7 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
         };
       })
       .sort((a, b) => b.elo - a.elo);
-  }, [personalElo]);
+  }, [viewingElo]);
 
   // Handle vote
   const handleVote = useCallback(async (winner) => {
@@ -275,7 +307,24 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
 
         {/* Personal Leaderboard */}
         <div className="battle-rankings-col">
-          <div className="leaderboard-title">👤 My Rankings</div>
+          <div className="battle-rankings-header">
+            <span className="leaderboard-title" style={{ marginBottom: 0 }}>👤</span>
+            <select
+              className="battle-profile-select"
+              value={selectedProfileId}
+              onChange={(e) => setSelectedProfileId(e.target.value)}
+            >
+              {profile && <option value={profile.id}>My Rankings</option>}
+              {allProfiles
+                .filter(p => p.id !== profile?.id)
+                .map(p => (
+                  <option key={p.id} value={p.id}>
+                    {p.avatar} {p.displayName}
+                  </option>
+                ))
+              }
+            </select>
+          </div>
           {personalLeaderboard.length === 0 ? (
             <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
               No personal rankings yet. Cast some votes!

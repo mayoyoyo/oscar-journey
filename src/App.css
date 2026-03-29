@@ -1409,7 +1409,21 @@ main {
 .profile-detail-joined {
   font-size: 0.82rem;
   color: var(--cream-dim);
+  margin-bottom: 6px;
+}
+
+.profile-detail-current {
+  font-size: 0.85rem;
+  color: var(--cream-dim);
   margin-bottom: 16px;
+  padding: 8px 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: inline-block;
+}
+.profile-detail-current strong {
+  color: var(--cream);
 }
 
 .profile-detail-summary {

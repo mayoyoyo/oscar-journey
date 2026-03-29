@@ -158,6 +158,21 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
     };
   }, [profileData, watchedMovies, currentProfile, currentRatings]);
 
+  // Current journey movie
+  const currentJourneyMovie = useMemo(() => {
+    const idx = profileData.currentIdx;
+    const order = profileData.playlistOrder;
+    if (idx == null || !Array.isArray(order) || order.length === 0) return null;
+    const entry = order[idx];
+    if (entry == null) return null;
+    // New format: string movie ID
+    if (typeof entry === 'string' && !entry.includes('|') && isNaN(Number(entry))) {
+      return MOVIES_BY_ID[entry] || null;
+    }
+    // Old numeric format — can't resolve reliably
+    return null;
+  }, [profileData]);
+
   // Member since
   const memberSince = useMemo(() => {
     if (!profileData.createdAt) return null;
@@ -212,6 +227,11 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
         </div>
         {memberSince && (
           <div className="profile-detail-joined">Member since {memberSince}</div>
+        )}
+        {currentJourneyMovie && (
+          <div className="profile-detail-current">
+            🎬 Currently on: <strong>{currentJourneyMovie.title}</strong> ({currentJourneyMovie.year})
+          </div>
         )}
 
         <div className="profile-detail-summary">

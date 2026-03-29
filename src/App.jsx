@@ -579,14 +579,26 @@ export default function App() {
             <StartScreen onStart={handleStart} />
           )}
           {screen === 'card' && eligibleStats.total === 0 && (
-            <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-              <p style={{ color: 'var(--cream-dim)', fontSize: '1.1rem', marginBottom: '12px' }}>
-                All films are filtered out.
-              </p>
-              <p style={{ color: 'var(--cream-dim)', fontSize: '0.9rem' }}>
-                Open Settings to adjust your journey filters.
-              </p>
-            </div>
+            <>
+              <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+                <p style={{ color: 'var(--cream-dim)', fontSize: '1.1rem', marginBottom: '12px' }}>
+                  All films are filtered out.
+                </p>
+                <p style={{ color: 'var(--cream-dim)', fontSize: '0.9rem', marginBottom: '20px' }}>
+                  Turn some filters back on below.
+                </p>
+              </div>
+              <JourneyControls
+                filters={profile?.filters}
+                onFiltersChange={(newFilters) => {
+                  setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
+                  firebaseSave('filters', newFilters);
+                }}
+                onReshuffle={handleReshuffle}
+                eligibleCount={eligibleStats.total}
+                totalCount={playlist.length}
+              />
+            </>
           )}
           {screen === 'card' && currentMovie && eligibleStats.total > 0 && (
             <>

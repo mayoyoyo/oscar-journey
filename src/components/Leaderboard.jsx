@@ -4,6 +4,7 @@ import { db } from '../utils/firebase';
 import { getEloLeaderboard } from '../utils/firebaseStorage';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
+import ProfileDetail from './ProfileDetail';
 
 // Fetch all profiles from Firestore
 async function getAllProfiles() {
@@ -11,10 +12,11 @@ async function getAllProfiles() {
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-export default function Leaderboard() {
+export default function Leaderboard({ currentProfile, currentRatings }) {
   const [profiles, setProfiles] = useState([]);
   const [eloLeaderboard, setEloLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedProfile, setSelectedProfile] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -107,6 +109,18 @@ export default function Leaderboard() {
     );
   }
 
+  // If a profile is selected, show the detail view
+  if (selectedProfile) {
+    return (
+      <ProfileDetail
+        profileData={selectedProfile}
+        onBack={() => setSelectedProfile(null)}
+        currentProfile={currentProfile}
+        currentRatings={currentRatings}
+      />
+    );
+  }
+
   return (
     <div className="leaderboard-section">
       {/* All Profiles */}
@@ -115,33 +129,49 @@ export default function Leaderboard() {
         <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic' }}>No profiles found.</p>
       ) : (
         <div className="profile-grid">
-          {profileStats.map(p => (
-            <div className="profile-card" key={p.id}>
-              <div className="profile-card-name">{p.displayName}</div>
-              <div className="profile-card-stat">
-                <span className="stat-label">Films Watched</span>
-                <span className="stat-value">{p.watchedCount}</span>
-              </div>
-              <div className="profile-card-stat">
-                <span className="stat-label">Avg Rating</span>
-                <span className="stat-value">{p.avgRating ? `${p.avgRating} / 10` : '--'}</span>
-              </div>
-              <div className="profile-card-stat">
-                <span className="stat-label">Total Ratings</span>
-                <span className="stat-value">{p.ratingCount}</span>
-              </div>
-              <div className="profile-card-stat">
-                <span className="stat-label">Fav Genre</span>
-                <span className="stat-value">{p.favGenre || '--'}</span>
-              </div>
-              {p.memberSince && (
+          {profileStats.map(p => {
+            // Find the full profile data for this card
+            const fullProfile = profiles.find(prof => prof.id === p.id);
+            return (
+              <div
+                className="profile-card profile-card-clickable"
+                key={p.id}
+                onClick={() => fullProfile && setSelectedProfile(fullProfile)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    fullProfile && setSelectedProfile(fullProfile);
+                  }
+                }}
+              >
+                <div className="profile-card-name">{p.displayName}</div>
                 <div className="profile-card-stat">
-                  <span className="stat-label">Member Since</span>
-                  <span className="stat-value">{p.memberSince}</span>
+                  <span className="stat-label">Films Watched</span>
+                  <span className="stat-value">{p.watchedCount}</span>
                 </div>
-              )}
-            </div>
-          ))}
+                <div className="profile-card-stat">
+                  <span className="stat-label">Avg Rating</span>
+                  <span className="stat-value">{p.avgRating ? `${p.avgRating} / 10` : '--'}</span>
+                </div>
+                <div className="profile-card-stat">
+                  <span className="stat-label">Total Ratings</span>
+                  <span className="stat-value">{p.ratingCount}</span>
+                </div>
+                <div className="profile-card-stat">
+                  <span className="stat-label">Fav Genre</span>
+                  <span className="stat-value">{p.favGenre || '--'}</span>
+                </div>
+                {p.memberSince && (
+                  <div className="profile-card-stat">
+                    <span className="stat-label">Member Since</span>
+                    <span className="stat-value">{p.memberSince}</span>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
 

@@ -441,7 +441,10 @@ export default function App() {
 
       {/* Leaderboard tab */}
       {activeTab === 'leaderboard' && (
-        <Leaderboard />
+        <Leaderboard
+          currentProfile={profile}
+          currentRatings={ratings}
+        />
       )}
 
       {/* Film detail modal */}

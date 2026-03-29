@@ -12,7 +12,7 @@ async function getAllProfiles() {
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-export default function Leaderboard({ currentProfile, currentRatings }) {
+export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail }) {
   const [profiles, setProfiles] = useState([]);
   const [eloLeaderboard, setEloLeaderboard] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -118,6 +118,7 @@ export default function Leaderboard({ currentProfile, currentRatings }) {
         onBack={() => setSelectedProfile(null)}
         currentProfile={currentProfile}
         currentRatings={currentRatings}
+        onOpenDetail={onOpenDetail}
       />
     );
   }

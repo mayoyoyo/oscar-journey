@@ -450,6 +450,7 @@ export default function App() {
         <Leaderboard
           currentProfile={profile}
           currentRatings={ratings}
+          onOpenDetail={setDetailMovie}
         />
       )}
 

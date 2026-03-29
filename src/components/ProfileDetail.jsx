@@ -28,7 +28,7 @@ function FilmTilePoster({ movie }) {
 }
 
 // Renders the full detail view for a single profile
-export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings }) {
+export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showUnwatched, setShowUnwatched] = useState(false);
   const [sortMode, setSortMode] = useState('az'); // 'az' | 'rating'
@@ -244,7 +244,9 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             const viewerRating = !isOwnProfile ? getViewerRating(movie) : null;
 
             return (
-              <div className="film-tile" key={movie.title + '|' + movie.year}>
+              <div className="film-tile" key={movie.title + '|' + movie.year}
+                style={{ cursor: onOpenDetail ? 'pointer' : 'default' }}
+                onClick={() => onOpenDetail && onOpenDetail(movie)}>
                 <div className="film-tile-poster-wrap">
                   <FilmTilePoster movie={movie} />
                   {movie.won && <span className="film-tile-winner">Winner</span>}

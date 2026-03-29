@@ -1,4 +1,5 @@
-const OMDB_KEY = 'ab8cbc12';
+const OMDB_KEYS = ['ab8cbc12', '84fee249'];
+let currentKeyIndex = 0;
 const CACHE_PREFIX = 'oscars_';
 const NOT_FOUND = 'NOT_FOUND';
 
@@ -41,12 +42,31 @@ export async function fetchOmdbData(movie) {
 
   try {
     const titleEnc = encodeURIComponent(cleanTitle(movie.title));
-    let url = `https://www.omdbapi.com/?t=${titleEnc}&y=${movie.year}&type=movie&apikey=${OMDB_KEY}`;
-    const resp = await fetch(url);
-    const data = await resp.json();
 
-    // Rate limited — don't cache anything, just return what we have
-    if (data.Error && data.Error.includes('limit')) {
+    // Try with current key, rotate on rate limit
+    const tryWithKey = async (titleEnc, year) => {
+      for (let attempt = 0; attempt < OMDB_KEYS.length; attempt++) {
+        const key = OMDB_KEYS[currentKeyIndex];
+        let url = `https://www.omdbapi.com/?t=${titleEnc}&type=movie&apikey=${key}`;
+        if (year) url += `&y=${year}`;
+        const resp = await fetch(url);
+        const data = await resp.json();
+
+        if (data.Error && data.Error.includes('limit')) {
+          // This key is exhausted — rotate to next
+          currentKeyIndex = (currentKeyIndex + 1) % OMDB_KEYS.length;
+          if (attempt < OMDB_KEYS.length - 1) continue; // try next key
+          return { rateLimited: true }; // all keys exhausted
+        }
+        return data;
+      }
+      return { rateLimited: true };
+    };
+
+    let data = await tryWithKey(titleEnc, movie.year);
+
+    // All keys rate limited — return existing cache without saving failures
+    if (data.rateLimited) {
       return {
         poster:   localStorage.getItem(posterKey)   === NOT_FOUND ? null : localStorage.getItem(posterKey),
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
@@ -57,19 +77,16 @@ export async function fetchOmdbData(movie) {
 
     // Not found with year — retry without year
     if (!data || data.Response === 'False') {
-      const url2 = `https://www.omdbapi.com/?t=${titleEnc}&type=movie&apikey=${OMDB_KEY}`;
-      const resp2 = await fetch(url2);
-      const data2 = await resp2.json();
+      data = await tryWithKey(titleEnc, null);
 
-      if (data2.Error && data2.Error.includes('limit')) {
+      if (data.rateLimited) {
         return { poster: null, plot: null, rating: null, director: null };
       }
 
-      if (data2 && data2.Response !== 'False') {
-        return storeAndReturn(data2, posterKey, plotKey, ratingKey, directorKey);
+      if (data && data.Response !== 'False') {
+        return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey);
       }
 
-      // Genuinely not found
       storeNotFound(posterKey, plotKey, ratingKey, directorKey);
       return { poster: null, plot: null, rating: null, director: null };
     }

@@ -68,7 +68,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         <MovieBadges movie={movie} />
 
         {omdbData?.rating && (
-          <div className="film-imdb-rating">★ {omdbData.rating}</div>
+          <div className="film-imdb-rating">★ {omdbData.rating} <span className="rating-source">IMDb</span></div>
         )}
         {omdbData?.plot && (
           <div className="film-plot">{omdbData.plot}</div>
@@ -80,6 +80,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         {/* Rating pickers — only shown when film is marked as watched */}
         {isWatched ? (
           <div className="rating-pickers">
+            <div className="rating-pickers-label">Your Ratings</div>
             {raters.map(name => (
               <StarPicker
                 key={name}

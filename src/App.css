@@ -1553,6 +1553,23 @@ main {
   padding: 8px 0;
 }
 
+.rating-pickers-label {
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.rating-source {
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  margin-left: 4px;
+}
+
 /* =====================================================
    PROFILE WATCHED FILMS — TILE/CARD GRID
    ===================================================== */

@@ -70,7 +70,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             <MovieBadges movie={movie} />
 
             {omdbData?.rating && (
-              <div className="film-detail-rating">★ {omdbData.rating} / 10</div>
+              <div className="film-detail-rating">★ {omdbData.rating} / 10 <span className="rating-source">IMDb</span></div>
             )}
             {omdbData?.plot && (
               <div className="film-detail-plot">{omdbData.plot}</div>
@@ -82,6 +82,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             {/* Rating pickers — only shown when film is marked as watched */}
             {isWatched ? (
               <div className="rating-pickers">
+                <div className="rating-pickers-label">Your Ratings</div>
                 {raters.map(name => (
                   <StarPicker
                     key={name}

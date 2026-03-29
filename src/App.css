@@ -115,17 +115,17 @@ body {
   gap: 0;
 }
 .nav-brand-oscar {
-  font-family: Georgia, serif;
-  font-size: 0.72rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.65rem;
   color: var(--gold);
-  letter-spacing: 0.22em;
+  letter-spacing: 0.28em;
   font-weight: 700;
 }
 .nav-brand-journey {
-  font-family: Georgia, serif;
-  font-size: 0.95rem;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.88rem;
   color: var(--cream);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   font-weight: 600;
 }
 .nav-tabs {

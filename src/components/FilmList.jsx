@@ -53,10 +53,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, rater
                 const isWatched = watchedTitleSet.has(m.id);
                 const key = ratingKey(m);
                 const r = ratings[key] || {};
-                const ratingText = [];
-                raters.forEach(name => {
-                  if (r[name] != null) ratingText.push(`${name.charAt(0)}:${r[name]}`);
-                });
                 return (
                   <div
                     className={`film-row ${isWatched ? 'is-watched' : ''}`}
@@ -65,9 +61,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, rater
                   >
                     <span className="film-row-check">{isWatched ? '✓' : ''}</span>
                     <span className="film-row-title">{m.title}</span>
-                    {ratingText.length > 0 && (
-                      <span className="film-row-ratings">{ratingText.join(' ')}</span>
-                    )}
                     <span className="film-row-year">{m.year}</span>
                     <MovieBadges movie={m} small />
                   </div>

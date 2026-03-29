@@ -579,39 +579,67 @@ export default function App() {
         alert('Could not load that profile\'s journey.');
         return;
       }
+      // Save current state so we can restore on unsync
+      const preSyncData = {
+        seed: profile?.seed,
+        playlistOrder: playlist.map(m => m.id),
+        currentIdx,
+      };
+
       const newOrder = targetData.playlistOrder;
       const newSeed = targetData.seed;
       const newPlaylist = newOrder.map(id => MOVIES_BY_ID[id]).filter(Boolean);
 
       setPlaylist(newPlaylist);
       setCurrentIdx(0);
-      setProfile(prev => prev ? { ...prev, syncedWith: targetProfileId } : prev);
+      setProfile(prev => prev ? { ...prev, syncedWith: targetProfileId, preSyncData } : prev);
 
       firebaseSave('playlistOrder', newOrder);
       firebaseSave('seed', newSeed);
       firebaseSave('currentIdx', 0);
       firebaseSave('syncedWith', targetProfileId);
+      firebaseSave('preSyncData', preSyncData);
     } catch (e) {
       console.error('Sync failed:', e);
       alert('Sync failed. Try again.');
     }
-  }, [firebaseSave]);
+  }, [firebaseSave, profile, playlist, currentIdx]);
 
-  // --- Unsync journey — reshuffle with a new seed ---
+  // --- Unsync journey — restore original seed and order ---
   const handleUnsync = useCallback(() => {
-    const newSeed = Math.floor(Math.random() * 0xFFFFFFFF);
-    const newPlaylist = generatePlaylist(newSeed);
-    const orderIds = newPlaylist.map(m => m.id);
+    const saved = profile?.preSyncData;
 
-    setPlaylist(newPlaylist);
-    setCurrentIdx(0);
-    setProfile(prev => prev ? { ...prev, syncedWith: null } : prev);
+    if (saved && saved.playlistOrder && saved.seed != null) {
+      // Restore original journey
+      const restoredPlaylist = saved.playlistOrder.map(id => MOVIES_BY_ID[id]).filter(Boolean);
+      const restoredIdx = saved.currentIdx || 0;
 
-    firebaseSave('syncedWith', null);
-    firebaseSave('seed', newSeed);
-    firebaseSave('playlistOrder', orderIds);
-    firebaseSave('currentIdx', 0);
-  }, [firebaseSave, generatePlaylist]);
+      setPlaylist(restoredPlaylist);
+      setCurrentIdx(restoredIdx);
+      setProfile(prev => prev ? { ...prev, syncedWith: null, preSyncData: null } : prev);
+
+      firebaseSave('syncedWith', null);
+      firebaseSave('preSyncData', null);
+      firebaseSave('seed', saved.seed);
+      firebaseSave('playlistOrder', saved.playlistOrder);
+      firebaseSave('currentIdx', restoredIdx);
+    } else {
+      // No saved data — generate fresh
+      const newSeed = Math.floor(Math.random() * 0xFFFFFFFF);
+      const newPlaylist = generatePlaylist(newSeed);
+      const orderIds = newPlaylist.map(m => m.id);
+
+      setPlaylist(newPlaylist);
+      setCurrentIdx(0);
+      setProfile(prev => prev ? { ...prev, syncedWith: null, preSyncData: null } : prev);
+
+      firebaseSave('syncedWith', null);
+      firebaseSave('preSyncData', null);
+      firebaseSave('seed', newSeed);
+      firebaseSave('playlistOrder', orderIds);
+      firebaseSave('currentIdx', 0);
+    }
+  }, [firebaseSave, profile, generatePlaylist]);
 
   const handleClearCache = useCallback(() => {
     const count = clearCache();

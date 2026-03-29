@@ -178,16 +178,9 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   <span className="stat-label">Fav Genre</span>
                   <span className="stat-value">{p.favGenre || '--'}</span>
                 </div>
-                {p.memberSince && (
-                  <div className="profile-card-stat">
-                    <span className="stat-label">Member Since</span>
-                    <span className="stat-value">{p.memberSince}</span>
-                  </div>
-                )}
                 {p.currentMovie && (
-                  <div className="profile-card-stat" style={{ borderBottom: 'none', paddingTop: '8px' }}>
-                    <span className="stat-label">🎬 Currently On</span>
-                    <span className="stat-value" style={{ fontSize: '0.8rem' }}>{p.currentMovie.title}</span>
+                  <div className="profile-card-current">
+                    🎬 {p.currentMovie.title} ({p.currentMovie.year})
                   </div>
                 )}
               </div>
@@ -198,8 +191,8 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
 
       {/* Your Stats */}
       {watchedTitleSet && ratings && raters && (
-        <div style={{ marginTop: '32px' }}>
-          <StatsTab watchedTitleSet={watchedTitleSet} ratings={ratings} raters={raters} />
+        <div style={{ marginTop: '40px', borderTop: '1px solid var(--border)', paddingTop: '32px' }}>
+          <StatsTab watchedTitleSet={watchedTitleSet} ratings={ratings} raters={raters} embedded />
         </div>
       )}
     </div>

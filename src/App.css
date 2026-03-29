@@ -1492,6 +1492,17 @@ main {
 .profile-card-stat .stat-label { color: var(--cream-dim); }
 .profile-card-stat .stat-value { font-weight: 600; }
 
+.profile-card-current {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .profile-card-clickable {
   cursor: pointer;
   transition: border-color 0.2s, box-shadow 0.2s;

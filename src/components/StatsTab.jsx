@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 
-export default function StatsTab({ watchedTitleSet, ratings, raters }) {
+export default function StatsTab({ watchedTitleSet, ratings, raters, embedded }) {
   const stats = useMemo(() => {
     const totalFilms = MOVIES.length;
     const watchedCount = MOVIES.filter(m => watchedTitleSet.has(m.id)).length;
@@ -103,7 +103,7 @@ export default function StatsTab({ watchedTitleSet, ratings, raters }) {
   }, [watchedTitleSet, ratings, raters]);
 
   return (
-    <div className="film-list-section">
+    <div className={embedded ? '' : 'film-list-section'}>
       <h2 style={{ fontFamily: 'Georgia, serif', color: 'var(--gold)', marginBottom: '20px' }}>
         My Statistics
       </h2>

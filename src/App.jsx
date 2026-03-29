@@ -18,6 +18,7 @@ import SettingsModal, { DEFAULT_FILTERS } from './components/SettingsModal';
 import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
 import Leaderboard from './components/Leaderboard';
+import JourneyControls from './components/JourneyControls';
 
 // Map genre codes to tone filter keys
 const GENRE_TO_TONE = {
@@ -534,6 +535,14 @@ export default function App() {
                 onNext={goNext}
                 canAdvance={canAdvance}
               />
+              <JourneyControls
+                filters={profile?.filters}
+                onFiltersChange={(newFilters) => {
+                  setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
+                  firebaseSave('filters', newFilters);
+                }}
+                onReshuffle={handleReshuffle}
+              />
             </>
           )}
           {screen === 'complete' && (
@@ -596,14 +605,7 @@ export default function App() {
           avatar={profile?.avatar || '🍿'}
           onAvatarChange={handleAvatarChange}
           onClose={() => setSettingsOpen(false)}
-          onReshuffle={handleReshuffle}
           onClearCache={handleClearCache}
-          profile={profile}
-          filters={profile?.filters || null}
-          onFiltersChange={(newFilters) => {
-            setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
-            firebaseSave('filters', newFilters);
-          }}
         />
       )}
     </>

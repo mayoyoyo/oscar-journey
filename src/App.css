@@ -1734,3 +1734,85 @@ main {
   border-color: var(--gold-dim);
   color: var(--cream);
 }
+
+/* =====================================================
+   BATTLE RANKINGS TOGGLE
+   ===================================================== */
+.battle-rank-toggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.battle-rank-btn {
+  flex: 1;
+  background: var(--bg);
+  border: none;
+  color: var(--cream-dim);
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.battle-rank-btn.active {
+  background: var(--gold);
+  color: var(--btn-text);
+  font-weight: 600;
+}
+.battle-rank-btn:hover:not(.active) {
+  background: var(--bg2);
+  color: var(--cream);
+}
+
+/* =====================================================
+   JOURNEY CONTROLS (Filters + Reshuffle)
+   ===================================================== */
+.journey-controls {
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg2);
+  overflow: hidden;
+}
+
+.journey-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+}
+
+.journey-controls-toggle {
+  background: none;
+  border: none;
+  color: var(--cream-dim);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.journey-controls-toggle:hover { color: var(--cream); }
+.journey-controls-toggle.has-filters { color: var(--gold); }
+
+.journey-reshuffle-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.journey-reshuffle-btn:hover {
+  border-color: var(--gold-dim);
+  color: var(--cream);
+}
+
+.journey-filters-panel {
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--border);
+}

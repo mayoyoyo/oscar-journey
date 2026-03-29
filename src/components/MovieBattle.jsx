@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { MOVIES } from '../data/movies';
-import { recordVote, getEloLeaderboard } from '../utils/firebaseStorage';
+import { recordVote, getEloLeaderboard, updatePersonalElo } from '../utils/firebaseStorage';
 import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
 
@@ -14,6 +14,8 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
   const [voting, setVoting] = useState(false);
   const [leaderboard, setLeaderboard] = useState([]);
   const [lastPairKey, setLastPairKey] = useState('');
+  const [personalElo, setPersonalElo] = useState(profile?.personalElo || {});
+  const [rankView, setRankView] = useState('global'); // 'global' | 'personal'
 
   // Get list of watched movies from profile's watched set mapped through playlist
   const watchedMovies = useMemo(() => {
@@ -75,6 +77,26 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
     refreshLeaderboard();
   }, [refreshLeaderboard]);
 
+  // Build personal leaderboard from personalElo state
+  const personalLeaderboard = useMemo(() => {
+    return Object.entries(personalElo)
+      .map(([key, data]) => {
+        // Key format is "Title|year"
+        const sepIdx = key.lastIndexOf('|');
+        const title = sepIdx > 0 ? key.substring(0, sepIdx) : key;
+        const year = sepIdx > 0 ? key.substring(sepIdx + 1) : '';
+        return {
+          id: key,
+          title,
+          year,
+          elo: data.elo,
+          matchCount: data.matchCount,
+        };
+      })
+      .sort((a, b) => b.elo - a.elo)
+      .slice(0, 50);
+  }, [personalElo]);
+
   // Handle vote
   const handleVote = useCallback(async (winner) => {
     if (!movieA || !movieB || voting) return;
@@ -93,15 +115,15 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
         movieB
       );
       // Show ELO change animation
-      const changeA = result.newEloA - 1500; // approximate, just show the delta
-      const changeB = result.newEloB - 1500;
-      // Calculate actual delta from what we know
-      // We need to figure out the delta - simplest approach: show new ELOs
       setEloChange({
         a: winner === 'a' ? '+' : '-',
         b: winner === 'b' ? '+' : '-',
         winner,
       });
+
+      // Update personal ELO
+      const updatedPersonal = await updatePersonalElo(profile.id, keyA, keyB, winnerKey);
+      if (updatedPersonal) setPersonalElo(updatedPersonal);
 
       // Refresh leaderboard
       await refreshLeaderboard();
@@ -207,35 +229,90 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
         Skip (different pair)
       </button>
 
-      {/* Leaderboard */}
-      <div className="leaderboard-title">Current Rankings</div>
-      {leaderboard.length === 0 ? (
-        <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
-          No rankings yet. Cast some votes to see the leaderboard!
-        </p>
-      ) : (
-        <table className="leaderboard-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Title</th>
-              <th>Year</th>
-              <th>ELO</th>
-              <th>Matches</th>
-            </tr>
-          </thead>
-          <tbody>
-            {leaderboard.slice(0, 20).map((entry, i) => (
-              <tr key={entry.id}>
-                <td className="leaderboard-rank">{i + 1}</td>
-                <td>{entry.title}</td>
-                <td>{entry.year}</td>
-                <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
-                <td>{entry.matchCount}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Rankings toggle */}
+      <div className="battle-rank-toggle">
+        <button
+          className={`battle-rank-btn ${rankView === 'global' ? 'active' : ''}`}
+          onClick={() => setRankView('global')}
+        >
+          🌍 Global Rankings
+        </button>
+        <button
+          className={`battle-rank-btn ${rankView === 'personal' ? 'active' : ''}`}
+          onClick={() => setRankView('personal')}
+        >
+          👤 My Rankings
+        </button>
+      </div>
+
+      {/* Global Leaderboard */}
+      {rankView === 'global' && (
+        <>
+          <div className="leaderboard-title">Current Rankings</div>
+          {leaderboard.length === 0 ? (
+            <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
+              No rankings yet. Cast some votes to see the leaderboard!
+            </p>
+          ) : (
+            <table className="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Year</th>
+                  <th>ELO</th>
+                  <th>Matches</th>
+                </tr>
+              </thead>
+              <tbody>
+                {leaderboard.slice(0, 20).map((entry, i) => (
+                  <tr key={entry.id}>
+                    <td className="leaderboard-rank">{i + 1}</td>
+                    <td>{entry.title}</td>
+                    <td>{entry.year}</td>
+                    <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
+                    <td>{entry.matchCount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </>
+      )}
+
+      {/* Personal Leaderboard */}
+      {rankView === 'personal' && (
+        <>
+          <div className="leaderboard-title">Your Rankings</div>
+          {personalLeaderboard.length === 0 ? (
+            <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
+              No personal rankings yet. Cast some votes to build your rankings!
+            </p>
+          ) : (
+            <table className="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Year</th>
+                  <th>Your ELO</th>
+                  <th>Your Matches</th>
+                </tr>
+              </thead>
+              <tbody>
+                {personalLeaderboard.map((entry, i) => (
+                  <tr key={entry.id}>
+                    <td className="leaderboard-rank">{i + 1}</td>
+                    <td>{entry.title}</td>
+                    <td>{entry.year}</td>
+                    <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
+                    <td>{entry.matchCount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </>
       )}
     </div>
   );

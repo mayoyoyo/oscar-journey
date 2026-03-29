@@ -108,3 +108,31 @@ export async function getAllElo() {
   const snap = await getDocs(collection(db, 'elo'));
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
+
+// --- Personal ELO ---
+
+export async function updatePersonalElo(profileId, movieAKey, movieBKey, winnerKey) {
+  const ref = doc(db, 'profiles', profileId);
+  const snap = await getDoc(ref);
+  if (!snap.exists()) return;
+  const data = snap.data();
+  const personalElo = data.personalElo || {};
+
+  const eloA = personalElo[movieAKey]?.elo || 1500;
+  const eloB = personalElo[movieBKey]?.elo || 1500;
+  const countA = personalElo[movieAKey]?.matchCount || 0;
+  const countB = personalElo[movieBKey]?.matchCount || 0;
+
+  const K = 32;
+  const expectedA = 1 / (1 + Math.pow(10, (eloB - eloA) / 400));
+  const scoreA = winnerKey === movieAKey ? 1 : 0;
+  const scoreB = 1 - scoreA;
+  const newEloA = Math.round(eloA + K * (scoreA - expectedA));
+  const newEloB = Math.round(eloB + K * (scoreB - (1 - expectedA)));
+
+  personalElo[movieAKey] = { elo: newEloA, matchCount: countA + 1 };
+  personalElo[movieBKey] = { elo: newEloB, matchCount: countB + 1 };
+
+  await updateDoc(ref, { personalElo });
+  return personalElo;
+}

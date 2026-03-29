@@ -38,27 +38,9 @@ const TONE_LABELS = {
 
 export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, onClose, onReshuffle, onClearCache, profile, filters, onFiltersChange }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, onClose, onClearCache }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
-
-  // Merge saved filters with defaults so new keys are always present
-  const currentFilters = {
-    eras: { ...DEFAULT_FILTERS.eras, ...(filters?.eras || {}) },
-    categories: { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) },
-    tones: { ...DEFAULT_FILTERS.tones, ...(filters?.tones || {}) },
-  };
-
-  const toggleFilter = (section, key) => {
-    const updated = {
-      ...currentFilters,
-      [section]: {
-        ...currentFilters[section],
-        [key]: !currentFilters[section][key],
-      },
-    };
-    onFiltersChange(updated);
-  };
 
   const addRater = () => {
     const name = newName.trim();
@@ -173,68 +155,8 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           </div>
         </div>
 
-        {/* Journey Filters */}
+        {/* Clear Poster Cache */}
         <div className="modal-section">
-          <label>Journey Filters</label>
-          <p style={{ fontSize: '0.82rem', color: 'var(--cream-dim)', marginTop: '2px', marginBottom: '12px' }}>
-            Control which films appear in your journey. Disabled categories are skipped.
-          </p>
-
-          <div className="filter-section">
-            <div className="filter-section-label">Eras</div>
-            <div className="filter-grid">
-              {Object.entries(ERA_LABELS).map(([key, label]) => (
-                <button
-                  key={key}
-                  className={`filter-toggle ${currentFilters.eras[key] ? 'active' : ''}`}
-                  onClick={() => toggleFilter('eras', key)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="filter-section">
-            <div className="filter-section-label">Categories</div>
-            <div className="filter-grid">
-              {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-                <button
-                  key={key}
-                  className={`filter-toggle ${currentFilters.categories[key] ? 'active' : ''}`}
-                  onClick={() => toggleFilter('categories', key)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="filter-section">
-            <div className="filter-section-label">Genres</div>
-            <div className="filter-grid">
-              {Object.entries(TONE_LABELS).map(([key, label]) => (
-                <button
-                  key={key}
-                  className={`filter-toggle ${currentFilters.tones[key] ? 'active' : ''}`}
-                  onClick={() => toggleFilter('tones', key)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Reshuffle + Cache */}
-        <div className="modal-section">
-          <label style={{ marginBottom: '10px', display: 'block' }}>Journey</label>
-          <button className="btn-danger" onClick={onReshuffle} style={{ marginBottom: '6px' }}>
-            Reshuffle Journey
-          </button>
-          <p style={{ fontSize: '0.78rem', color: 'var(--cream-dim)', marginTop: '2px', marginBottom: '16px' }}>
-            Get a new random order for unwatched films. Your watched films and ratings are preserved.
-          </p>
           <button
             onClick={onClearCache}
             style={{

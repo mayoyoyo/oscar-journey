@@ -15,7 +15,6 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
   const [leaderboard, setLeaderboard] = useState([]);
   const [lastPairKey, setLastPairKey] = useState('');
   const [personalElo, setPersonalElo] = useState(profile?.personalElo || {});
-  const [rankView, setRankView] = useState('global'); // 'global' | 'personal'
 
   // Get list of watched movies from profile's watched set (movie IDs)
   const watchedMovies = useMemo(() => {
@@ -104,8 +103,7 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
           matchCount: data.matchCount,
         };
       })
-      .sort((a, b) => b.elo - a.elo)
-      .slice(0, 50);
+      .sort((a, b) => b.elo - a.elo);
   }, [personalElo]);
 
   // Handle vote
@@ -240,29 +238,14 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
         Skip (different pair)
       </button>
 
-      {/* Rankings toggle */}
-      <div className="battle-rank-toggle">
-        <button
-          className={`battle-rank-btn ${rankView === 'global' ? 'active' : ''}`}
-          onClick={() => setRankView('global')}
-        >
-          🌍 Global Rankings
-        </button>
-        <button
-          className={`battle-rank-btn ${rankView === 'personal' ? 'active' : ''}`}
-          onClick={() => setRankView('personal')}
-        >
-          👤 My Rankings
-        </button>
-      </div>
-
-      {/* Global Leaderboard */}
-      {rankView === 'global' && (
-        <>
-          <div className="leaderboard-title">Current Rankings</div>
+      {/* Rankings — both shown side by side */}
+      <div className="battle-rankings-grid">
+        {/* Global Leaderboard */}
+        <div className="battle-rankings-col">
+          <div className="leaderboard-title">🌍 Global Rankings</div>
           {leaderboard.length === 0 ? (
             <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
-              No rankings yet. Cast some votes to see the leaderboard!
+              No rankings yet. Cast some votes!
             </p>
           ) : (
             <table className="leaderboard-table">
@@ -276,7 +259,7 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
                 </tr>
               </thead>
               <tbody>
-                {leaderboard.slice(0, 20).map((entry, i) => (
+                {leaderboard.map((entry, i) => (
                   <tr key={entry.id}>
                     <td className="leaderboard-rank">{i + 1}</td>
                     <td>{entry.title}</td>
@@ -288,16 +271,14 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
               </tbody>
             </table>
           )}
-        </>
-      )}
+        </div>
 
-      {/* Personal Leaderboard */}
-      {rankView === 'personal' && (
-        <>
-          <div className="leaderboard-title">Your Rankings</div>
+        {/* Personal Leaderboard */}
+        <div className="battle-rankings-col">
+          <div className="leaderboard-title">👤 My Rankings</div>
           {personalLeaderboard.length === 0 ? (
             <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
-              No personal rankings yet. Cast some votes to build your rankings!
+              No personal rankings yet. Cast some votes!
             </p>
           ) : (
             <table className="leaderboard-table">
@@ -306,8 +287,8 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
                   <th>#</th>
                   <th>Title</th>
                   <th>Year</th>
-                  <th>Your ELO</th>
-                  <th>Your Matches</th>
+                  <th>ELO</th>
+                  <th>Matches</th>
                 </tr>
               </thead>
               <tbody>
@@ -323,8 +304,8 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
               </tbody>
             </table>
           )}
-        </>
-      )}
+        </div>
+      </div>
     </div>
   );
 }

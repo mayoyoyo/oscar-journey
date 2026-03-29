@@ -1,7 +1,7 @@
 import { db } from './firebase';
 import {
   doc, getDoc, setDoc, updateDoc,
-  collection, getDocs, query, orderBy, limit,
+  collection, getDocs, query, orderBy,
   serverTimestamp, addDoc
 } from 'firebase/firestore';
 
@@ -100,7 +100,7 @@ export async function recordVote(voter, movieAKey, movieBKey, winnerKey, movieAD
 }
 
 export async function getEloLeaderboard() {
-  const snap = await getDocs(query(collection(db, 'elo'), orderBy('elo', 'desc'), limit(50)));
+  const snap = await getDocs(query(collection(db, 'elo'), orderBy('elo', 'desc')));
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 

@@ -868,7 +868,7 @@ main {
   width: 100%;
   max-width: 860px;
   padding: 28px 24px 60px;
-  align-self: flex-start;
+  margin: 0 auto;
 }
 
 .list-search {
@@ -1463,6 +1463,7 @@ main {
   width: 100%;
   max-width: 900px;
   padding: 28px 24px 60px;
+  margin: 0 auto;
 }
 .leaderboard-section h2 {
   font-family: Georgia, serif;
@@ -2224,4 +2225,59 @@ main {
     flex-wrap: wrap;
     gap: 8px;
   }
+}
+
+/* =====================================================
+   ACTIVITY FEED
+   ===================================================== */
+.activity-feed {
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg2);
+  padding: 14px 16px;
+}
+
+.activity-feed-title {
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--cream);
+}
+.activity-item:last-child { border-bottom: none; }
+
+.activity-avatar {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.activity-text {
+  flex: 1;
+  line-height: 1.4;
+}
+.activity-text strong {
+  font-weight: 600;
+}
+
+.activity-year {
+  color: var(--cream-dim);
+}
+
+.activity-time {
+  font-size: 0.72rem;
+  color: var(--cream-dim);
+  flex-shrink: 0;
+  white-space: nowrap;
 }

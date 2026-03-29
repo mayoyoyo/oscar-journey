@@ -4,7 +4,7 @@ import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffl
 import {
   ratingKey, clearCache,
 } from './utils/storage';
-import { loadProfile, saveProfileField } from './utils/firebaseStorage';
+import { loadProfile, saveProfileField, recordActivity, getRecentActivity } from './utils/firebaseStorage';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './utils/firebase';
 import NavBar from './components/NavBar';
@@ -21,6 +21,7 @@ import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
 import Leaderboard from './components/Leaderboard';
 import JourneyControls from './components/JourneyControls';
+import ActivityFeed from './components/ActivityFeed';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
@@ -118,6 +119,9 @@ export default function App() {
   // Sync journey
   const [allProfilesForSync, setAllProfilesForSync] = useState([]);
 
+  // Activity feed
+  const [activityFeed, setActivityFeed] = useState([]);
+
   // --- Helper: generate playlist from seed ---
   const generatePlaylist = useCallback((seed) => {
     const rng = mulberry32(seed);
@@ -168,6 +172,16 @@ export default function App() {
         watched: d.data().watched || [],
       })));
     }).catch(() => {});
+  }, []);
+
+  // --- Load activity feed on mount and refresh periodically ---
+  useEffect(() => {
+    const loadActivity = () => {
+      getRecentActivity(15).then(setActivityFeed).catch(() => {});
+    };
+    loadActivity();
+    const interval = setInterval(loadActivity, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   // --- Initialize all state from a loaded profile ---
@@ -414,12 +428,23 @@ export default function App() {
     const key = movieKey(currentMovie);
     setWatchedSet(prev => {
       const next = new Set(prev);
-      if (next.has(key)) next.delete(key);
-      else next.add(key);
+      if (next.has(key)) {
+        next.delete(key);
+      } else {
+        next.add(key);
+        // Record activity — this is a journey watch
+        if (profile) {
+          recordActivity(profile, currentMovie).catch(() => {});
+          // Refresh activity feed after a short delay
+          setTimeout(() => {
+            getRecentActivity(15).then(setActivityFeed).catch(() => {});
+          }, 1000);
+        }
+      }
       firebaseSave('watched', [...next]);
       return next;
     });
-  }, [currentMovie, firebaseSave]);
+  }, [currentMovie, firebaseSave, profile]);
 
   const toggleWatchedForMovie = useCallback((movie) => {
     const key = movieKey(movie);
@@ -688,6 +713,7 @@ export default function App() {
                 onNext={goNext}
                 canAdvance={canAdvance}
               />
+              <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} />
               <JourneyControls
                 filters={profile?.filters}
                 onFiltersChange={(newFilters) => {

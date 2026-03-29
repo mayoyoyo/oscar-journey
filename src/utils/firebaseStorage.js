@@ -1,7 +1,7 @@
 import { db } from './firebase';
 import {
   doc, getDoc, setDoc, updateDoc,
-  collection, getDocs, query, orderBy,
+  collection, getDocs, query, orderBy, limit,
   serverTimestamp, addDoc
 } from 'firebase/firestore';
 
@@ -135,4 +135,25 @@ export async function updatePersonalElo(profileId, movieAKey, movieBKey, winnerK
 
   await updateDoc(ref, { personalElo });
   return personalElo;
+}
+
+// --- Activity Feed ---
+
+export async function recordActivity(profile, movie) {
+  await addDoc(collection(db, 'activity'), {
+    profileId: profile.id,
+    displayName: profile.displayName || profile.id,
+    avatar: profile.avatar || '',
+    movieId: movie.id,
+    movieTitle: movie.title,
+    movieYear: movie.year,
+    timestamp: serverTimestamp(),
+  });
+}
+
+export async function getRecentActivity(limitCount = 20) {
+  const snap = await getDocs(
+    query(collection(db, 'activity'), orderBy('timestamp', 'desc'), limit(limitCount))
+  );
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }

@@ -809,6 +809,7 @@ export default function App() {
           profile={profile}
           playlist={playlist}
           watchedSet={watchedSet}
+          onOpenDetail={setDetailMovie}
         />
       )}
 

@@ -1498,7 +1498,8 @@ main {
   color: var(--cream);
   border-bottom: 1px solid var(--border);
 }
-.profile-card-stat:last-child { border-bottom: none; }
+.profile-card-stat:last-child,
+.profile-card-stat:last-of-type { border-bottom: none; }
 .profile-card-stat .stat-label { color: var(--cream-dim); }
 .profile-card-stat .stat-value { font-weight: 600; }
 

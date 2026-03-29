@@ -6,7 +6,7 @@ import { db } from '../utils/firebase';
 import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
 
-export default function MovieBattle({ profile, playlist, watchedSet }) {
+export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetail }) {
   const [movieA, setMovieA] = useState(null);
   const [movieB, setMovieB] = useState(null);
   const [posterA, setPosterA] = useState(null);
@@ -291,15 +291,19 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
                 </tr>
               </thead>
               <tbody>
-                {leaderboard.map((entry, i) => (
-                  <tr key={entry.id}>
-                    <td className="leaderboard-rank">{i + 1}</td>
-                    <td>{entry.title}</td>
-                    <td>{entry.year}</td>
-                    <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
-                    <td>{entry.matchCount}</td>
-                  </tr>
-                ))}
+                {leaderboard.map((entry, i) => {
+                  const movie = MOVIES_BY_ID[entry.id];
+                  return (
+                    <tr key={entry.id} onClick={() => movie && onOpenDetail && onOpenDetail(movie)}
+                      style={{ cursor: movie ? 'pointer' : 'default' }}>
+                      <td className="leaderboard-rank">{i + 1}</td>
+                      <td>{entry.title}</td>
+                      <td>{entry.year}</td>
+                      <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
+                      <td>{entry.matchCount}</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           )}
@@ -341,15 +345,19 @@ export default function MovieBattle({ profile, playlist, watchedSet }) {
                 </tr>
               </thead>
               <tbody>
-                {personalLeaderboard.map((entry, i) => (
-                  <tr key={entry.id}>
-                    <td className="leaderboard-rank">{i + 1}</td>
-                    <td>{entry.title}</td>
-                    <td>{entry.year}</td>
-                    <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
-                    <td>{entry.matchCount}</td>
-                  </tr>
-                ))}
+                {personalLeaderboard.map((entry, i) => {
+                  const movie = MOVIES_BY_ID[entry.id];
+                  return (
+                    <tr key={entry.id} onClick={() => movie && onOpenDetail && onOpenDetail(movie)}
+                      style={{ cursor: movie ? 'pointer' : 'default' }}>
+                      <td className="leaderboard-rank">{i + 1}</td>
+                      <td>{entry.title}</td>
+                      <td>{entry.year}</td>
+                      <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
+                      <td>{entry.matchCount}</td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           )}

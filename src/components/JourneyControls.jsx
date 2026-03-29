@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, TONE_LABELS } from './SettingsModal';
 
-export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney }) {
+export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney, syncedWith, onUnsync }) {
   const [syncTarget, setSyncTarget] = useState('');
   const [openSections, setOpenSections] = useState({ eras: false, categories: false, tones: false });
 
@@ -24,12 +24,11 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   };
 
   const handleReshuffle = () => {
-    if (window.confirm('Reshuffle your journey order? Your watched films and ratings will be kept, but you\'ll get a completely new random order.')) {
+    if (window.confirm('Reshuffle your journey order? Your watched films and ratings will be kept, but you\'ll get a completely new random order.' + (syncedWith ? ' This will also unsync you from the profile you\'re following.' : ''))) {
       onReshuffle();
     }
   };
 
-  // Count active filters per section
   const sectionCount = (section) => {
     const vals = Object.values(currentFilters[section]);
     const active = vals.filter(Boolean).length;
@@ -66,8 +65,23 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     );
   };
 
+  // Find synced profile name
+  const syncedProfile = syncedWith ? profiles?.find(p => p.id === syncedWith) : null;
+
   return (
     <div className="journey-controls">
+      {/* Sync banner */}
+      {syncedProfile && (
+        <div className="sync-banner">
+          <span>🔗 Following <strong>{syncedProfile.avatar} {syncedProfile.displayName}</strong>'s journey</span>
+          <button className="sync-unsync-btn" onClick={() => {
+            if (window.confirm('Stop following this journey? Your current position and progress will be kept, but you\'ll no longer sync with them.')) {
+              onUnsync();
+            }
+          }}>Unsync</button>
+        </div>
+      )}
+
       <div className="journey-controls-row">
         <div className="journey-controls-left">
           <span className="journey-controls-header">
@@ -86,7 +100,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
             🔀 Reshuffle
           </button>
 
-          {profiles && profiles.length > 0 && onSyncJourney && (
+          {profiles && profiles.length > 0 && onSyncJourney && !syncedWith && (
             <div className="journey-sync">
               <div style={{ display: 'flex', gap: '6px' }}>
                 <select className="journey-sync-select" value={syncTarget} onChange={e => setSyncTarget(e.target.value)}>
@@ -100,7 +114,13 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                   disabled={!syncTarget}
                   onClick={() => {
                     const target = profiles.find(p => p.id === syncTarget);
-                    if (target && window.confirm(`Copy ${target.displayName}'s journey order? Your watched films and ratings will be kept.`)) {
+                    if (target && window.confirm(
+                      `Sync with ${target.displayName}'s journey?\n\n` +
+                      `• You'll follow their exact movie order\n` +
+                      `• Your watched films and ratings are kept\n` +
+                      `• Your journey will stay linked — refreshing won't break it\n` +
+                      `• You can unsync anytime to go back to your own path`
+                    )) {
                       onSyncJourney(syncTarget);
                       setSyncTarget('');
                     }

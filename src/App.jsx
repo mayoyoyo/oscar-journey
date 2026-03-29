@@ -467,19 +467,19 @@ export default function App() {
 
   // --- Settings actions ---
   const handleReshuffle = useCallback(() => {
-    // Generate new seed and playlist
     const newSeed = Math.floor(Math.random() * 0xFFFFFFFF);
     const newPlaylist = generatePlaylist(newSeed);
     const orderIds = newPlaylist.map(m => m.id);
 
     setPlaylist(newPlaylist);
     setCurrentIdx(0);
+    setProfile(prev => prev ? { ...prev, syncedWith: null } : prev);
 
-    // Save new seed, order, and reset currentIdx in Firestore
     if (profile) {
       saveProfileField(profile.id, 'seed', newSeed).catch(() => {});
       saveProfileField(profile.id, 'playlistOrder', orderIds).catch(() => {});
       saveProfileField(profile.id, 'currentIdx', 0).catch(() => {});
+      saveProfileField(profile.id, 'syncedWith', null).catch(() => {});
     }
 
     setScreen('card');
@@ -494,23 +494,28 @@ export default function App() {
         alert('Could not load that profile\'s journey.');
         return;
       }
-      // Copy their playlist order and seed
       const newOrder = targetData.playlistOrder;
       const newSeed = targetData.seed;
-
-      // Rebuild playlist from their order
       const newPlaylist = newOrder.map(id => MOVIES_BY_ID[id]).filter(Boolean);
 
       setPlaylist(newPlaylist);
       setCurrentIdx(0);
+      setProfile(prev => prev ? { ...prev, syncedWith: targetProfileId } : prev);
 
       firebaseSave('playlistOrder', newOrder);
       firebaseSave('seed', newSeed);
       firebaseSave('currentIdx', 0);
+      firebaseSave('syncedWith', targetProfileId);
     } catch (e) {
       console.error('Sync failed:', e);
       alert('Sync failed. Try again.');
     }
+  }, [firebaseSave]);
+
+  // --- Unsync journey ---
+  const handleUnsync = useCallback(() => {
+    setProfile(prev => prev ? { ...prev, syncedWith: null } : prev);
+    firebaseSave('syncedWith', null);
   }, [firebaseSave]);
 
   const handleClearCache = useCallback(() => {
@@ -654,6 +659,8 @@ export default function App() {
                 profiles={allProfilesForSync}
                 currentProfileId={profile?.id}
                 onSyncJourney={handleSyncJourney}
+                syncedWith={profile?.syncedWith}
+                onUnsync={handleUnsync}
               />
             </>
           )}
@@ -668,7 +675,7 @@ export default function App() {
                 onRatingChange={handleRatingChange}
                 raters={raters}
                 personalElo={profile?.personalElo}
-                allowSkip={profile?.allowSkip || false}
+                allowSkip={profile?.allowSkip !== false}
                 onSkip={handleSkip}
               />
               <NavButtons
@@ -690,6 +697,8 @@ export default function App() {
                 profiles={allProfilesForSync}
                 currentProfileId={profile?.id}
                 onSyncJourney={handleSyncJourney}
+                syncedWith={profile?.syncedWith}
+                onUnsync={handleUnsync}
               />
             </>
           )}
@@ -753,7 +762,7 @@ export default function App() {
           onRatersChange={handleRatersChange}
           avatar={profile?.avatar || '🍿'}
           onAvatarChange={handleAvatarChange}
-          allowSkip={profile?.allowSkip || false}
+          allowSkip={profile?.allowSkip !== false}
           onAllowSkipChange={handleAllowSkipChange}
           onClose={() => setSettingsOpen(false)}
           onClearCache={handleClearCache}

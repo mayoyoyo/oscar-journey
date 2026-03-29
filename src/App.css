@@ -2156,6 +2156,40 @@ main {
   cursor: default;
 }
 
+.sync-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  background: var(--bg3);
+  border: 1px solid var(--gold-dim);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: var(--cream);
+}
+
+.sync-banner strong {
+  color: var(--gold);
+}
+
+.sync-unsync-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.sync-unsync-btn:hover {
+  border-color: var(--red);
+  color: var(--red-bright);
+}
+
 @media (max-width: 540px) {
   .journey-controls-row {
     flex-direction: column;

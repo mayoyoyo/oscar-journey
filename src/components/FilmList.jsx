@@ -61,7 +61,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, rater
                   <div
                     className={`film-row ${isWatched ? 'is-watched' : ''}`}
                     key={m.id}
-                    onClick={() => onOpenDetail(m)}
+                    onClick={() => onOpenDetail(m, filtered)}
                   >
                     <span className="film-row-check">{isWatched ? '✓' : ''}</span>
                     <span className="film-row-title">{m.title}</span>

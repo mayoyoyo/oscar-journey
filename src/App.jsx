@@ -222,6 +222,7 @@ export default function App() {
   // Modals
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [detailMovie, setDetailMovie] = useState(null);
+  const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
   const [infoOpen, setInfoOpen] = useState(false);
 
   // Sync journey
@@ -954,7 +955,10 @@ export default function App() {
       {activeTab === 'list' && (
         <FilmList
           watchedTitleSet={watchedTitleSet}
-          onOpenDetail={setDetailMovie}
+          onOpenDetail={(movie, movieList) => {
+            setDetailMovie(movie);
+            if (movieList) setDetailMovieList(movieList);
+          }}
           ratings={ratings}
           raters={raters}
         />
@@ -988,11 +992,13 @@ export default function App() {
           movie={detailMovie}
           isWatched={isDetailWatched}
           onToggleWatched={() => toggleWatchedForMovie(detailMovie)}
-          onClose={() => setDetailMovie(null)}
+          onClose={() => { setDetailMovie(null); setDetailMovieList(null); }}
           ratings={ratings}
           personalElo={profile?.personalElo}
           onRatingChange={handleRatingChange}
           raters={raters}
+          movieList={detailMovieList}
+          onNavigate={(movie) => setDetailMovie(movie)}
         />
       )}
 

@@ -1058,6 +1058,39 @@ main {
 }
 .film-detail-close:hover { color: var(--cream); background: var(--bg3); }
 
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 1.8rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.modal-nav-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+}
+.modal-nav-prev { left: -18px; }
+.modal-nav-next { right: -18px; }
+
+@media (max-width: 700px) {
+  .modal-nav-prev { left: 8px; }
+  .modal-nav-next { right: 8px; }
+  .modal-nav-btn { background: var(--bg2); opacity: 0.9; }
+}
+
 .film-detail-rating {
   font-size: 1rem;
   color: var(--gold);

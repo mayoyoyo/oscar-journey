@@ -12,7 +12,7 @@ function ordinal(n) {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
-export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo }) {
+export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [globalElo, setGlobalElo] = useState(null);
@@ -72,6 +72,29 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     }).catch(() => {});
   }, [movie?.title, movie?.year, movie?.id]);
 
+  // Navigation within movie list
+  const currentListIdx = movieList ? movieList.findIndex(m => m.id === movie.id) : -1;
+  const hasPrev = movieList && currentListIdx > 0;
+  const hasNext = movieList && currentListIdx >= 0 && currentListIdx < movieList.length - 1;
+
+  const goPrev = () => {
+    if (hasPrev && onNavigate) onNavigate(movieList[currentListIdx - 1]);
+  };
+  const goNext = () => {
+    if (hasNext && onNavigate) onNavigate(movieList[currentListIdx + 1]);
+  };
+
+  // Keyboard navigation
+  React.useEffect(() => {
+    if (!movieList) return;
+    const handler = (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  });
+
   if (!movie) return null;
 
   const key = ratingKey(movie);
@@ -84,6 +107,12 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     }}>
       <div className="modal" style={{ maxWidth: '640px', padding: 0, overflow: 'hidden', position: 'relative' }}>
         <button className="film-detail-close" onClick={onClose}>✕</button>
+        {movieList && (
+          <>
+            {hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
+            {hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
+          </>
+        )}
         <div className="film-detail-inner">
           <div className="film-detail-poster">
             {loading ? (

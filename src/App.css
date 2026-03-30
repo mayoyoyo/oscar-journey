@@ -1074,6 +1074,13 @@ main {
   margin: 0 auto;
 }
 
+.film-list-hint {
+  color: var(--cream-dim);
+  font-size: 0.85rem;
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
 .list-search {
   width: 100%;
   background: var(--bg2);

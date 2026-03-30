@@ -31,6 +31,9 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
 
   return (
     <div className="film-list-section">
+      <p className="film-list-hint">
+        Browse all {MOVIES.length} Oscar-nominated films. Tap the checkbox to mark a film as watched, or tap the title to see details.
+      </p>
       <input
         className="list-search"
         type="search"

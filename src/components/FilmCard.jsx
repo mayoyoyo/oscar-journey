@@ -3,6 +3,7 @@ import { fetchOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
+import { justWatchUrl } from '../utils/justwatch';
 import CeremonyTooltip from './CeremonyTooltip';
 
 const SKIP_MESSAGES = [
@@ -118,7 +119,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             Trailer
           </a>
           <a className="film-justwatch-btn"
-            href={`https://www.justwatch.com/us/search?q=${encodeURIComponent(movie.title)}`}
+            href={justWatchUrl(movie.title)}
             target="_blank" rel="noopener noreferrer"
           >
             📺 Where to Watch

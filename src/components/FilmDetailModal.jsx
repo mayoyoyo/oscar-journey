@@ -3,6 +3,7 @@ import { fetchOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
+import { justWatchUrl } from '../utils/justwatch';
 import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import CeremonyTooltip from './CeremonyTooltip';
@@ -174,7 +175,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 <span className="metric-label">Trailer</span>
               </a>
               <a className="metric-item metric-justwatch"
-                href={`https://www.justwatch.com/us/search?q=${encodeURIComponent(movie.title)}`}
+                href={justWatchUrl(movie.title)}
                 target="_blank" rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
               >

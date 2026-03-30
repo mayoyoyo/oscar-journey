@@ -51,7 +51,6 @@ const SKIP_MESSAGES = [
 export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showTrailer, setShowTrailer] = useState(false);
 
   useEffect(() => {
     if (!movie) return;
@@ -108,9 +107,12 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           {omdbData?.rating && (
             <div className="film-imdb-rating">★ {omdbData.rating} <span className="rating-source">IMDb</span></div>
           )}
-          <button className="film-trailer-btn" onClick={() => setShowTrailer(true)}>
+          <a className="film-trailer-btn"
+            href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
+            target="_blank" rel="noopener noreferrer"
+          >
             <span className="film-trailer-icon">▶</span> Trailer
-          </button>
+          </a>
         </div>
         {personalElo?.[movie.id] && (
           <div className="film-elo-rating">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO</span></div>
@@ -185,20 +187,6 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           )}
         </div>
       </div>
-      {showTrailer && (
-        <div className="trailer-modal-overlay" onClick={() => setShowTrailer(false)}>
-          <div className="trailer-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="trailer-modal-close" onClick={() => setShowTrailer(false)}>✕</button>
-            <iframe
-              className="trailer-iframe"
-              src={`https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
-              title={`${movie.title} trailer`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

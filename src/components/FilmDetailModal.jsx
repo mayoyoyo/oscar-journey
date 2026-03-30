@@ -13,7 +13,6 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const [globalElo, setGlobalElo] = useState(null);
   const [aggregateRating, setAggregateRating] = useState(null);
   const [watchedBy, setWatchedBy] = useState([]);
-  const [showTrailer, setShowTrailer] = useState(false);
 
   useEffect(() => {
     if (!movie) return;
@@ -163,13 +162,14 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                   <span className="metric-label">Global ELO ({globalElo.matchCount})</span>
                 </div>
               )}
-              <button className="metric-item metric-trailer"
-                onClick={() => setShowTrailer(true)}
-                style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+              <a className="metric-item metric-trailer"
+                href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
+                target="_blank" rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
               >
                 <span className="metric-value">▶</span>
                 <span className="metric-label">Trailer</span>
-              </button>
+              </a>
             </div>
 
             {omdbData?.plot && (
@@ -226,20 +226,6 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
           </div>
         </div>
       </div>
-      {showTrailer && (
-        <div className="trailer-modal-overlay" onClick={() => setShowTrailer(false)}>
-          <div className="trailer-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="trailer-modal-close" onClick={() => setShowTrailer(false)}>✕</button>
-            <iframe
-              className="trailer-iframe"
-              src={`https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
-              title={`${movie.title} trailer`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

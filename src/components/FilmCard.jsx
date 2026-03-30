@@ -117,6 +117,12 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             </svg>
             Trailer
           </a>
+          <a className="film-justwatch-btn"
+            href={`https://www.justwatch.com/us/search?q=${encodeURIComponent(movie.title)}`}
+            target="_blank" rel="noopener noreferrer"
+          >
+            📺 Where to Watch
+          </a>
         </div>
         {personalElo?.[movie.id] && (
           <div className="film-elo-rating">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO</span></div>

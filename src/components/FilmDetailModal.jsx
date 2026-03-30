@@ -173,6 +173,14 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 </svg></span>
                 <span className="metric-label">Trailer</span>
               </a>
+              <a className="metric-item metric-justwatch"
+                href={`https://www.justwatch.com/us/search?q=${encodeURIComponent(movie.title)}`}
+                target="_blank" rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <span className="metric-value">📺</span>
+                <span className="metric-label">Watch</span>
+              </a>
             </div>
 
             {omdbData?.plot && (

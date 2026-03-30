@@ -534,6 +534,34 @@ main {
   color: #c00;
 }
 
+.film-justwatch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.film-justwatch-btn:hover {
+  border-color: #1db954;
+  color: #1db954;
+}
+
+.metric-justwatch {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.metric-justwatch:hover .metric-label {
+  color: #1db954;
+}
+
 /* Trailer embed modal */
 .trailer-modal-overlay {
   position: fixed;

@@ -1,8 +1,24 @@
 import React from 'react';
 import { GENRE_LABELS } from '../data/movies';
 
+function speechUrl(title, year) {
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ' + year + ' oscar acceptance speech best picture')}`;
+}
+
 // Full-size badges for film cards and detail modal
-export function BadgeWinner() {
+export function BadgeWinner({ movie }) {
+  if (movie) {
+    return (
+      <a className="badge-winner badge-winner-link"
+        href={speechUrl(movie.title, movie.year)}
+        target="_blank" rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        title="Watch acceptance speech"
+      >
+        🏆 Winner · Speech ↗
+      </a>
+    );
+  }
   return <span className="badge-winner">★ Winner</span>;
 }
 
@@ -59,7 +75,7 @@ export function MovieBadges({ movie, small = false }) {
 
   return (
     <div className="badges">
-      {movie.won && <BadgeWinner />}
+      {movie.won && <BadgeWinner movie={movie} />}
       <BadgeGenre genre={movie.genre} />
       {movie.category === 'INT' && <BadgeInt />}
       {movie.category === 'ANIM' && <BadgeAnim />}

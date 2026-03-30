@@ -80,6 +80,7 @@ body {
   height: 100%;
   height: 100dvh;
   overflow: hidden;
+  width: 100%;
 }
 
 .app-scroll-area {
@@ -90,13 +91,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
-}
-
-#root {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* =====================================================

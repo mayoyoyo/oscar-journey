@@ -2270,6 +2270,9 @@ main {
   color: var(--cream-dim);
   font-style: italic;
   padding: 8px 0;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .rating-pickers-label {
@@ -2278,6 +2281,12 @@ main {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 4px;
+}
+.rating-optional {
+  text-transform: none;
+  letter-spacing: normal;
+  font-style: italic;
+  opacity: 0.7;
   width: 100%;
 }
 

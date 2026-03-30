@@ -161,7 +161,9 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         {/* Rating pickers — only shown when film is marked as watched */}
         {isWatched ? (
           <div className="rating-pickers">
-            <div className="rating-pickers-label">Your Ratings</div>
+            <div className="rating-pickers-label">
+              Rate this film <span className="rating-optional">(optional)</span>
+            </div>
             {raters.map(name => (
               <StarPicker
                 key={name}

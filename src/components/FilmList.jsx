@@ -9,11 +9,14 @@ function sortKeyFn(title) {
 
 export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters }) {
   const [query, setQuery] = useState('');
+  const [hideWatched, setHideWatched] = useState(false);
+  const [checklistMode, setChecklistMode] = useState(false);
 
   const { filtered, groups, watchedCount } = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = MOVIES
       .filter(m => !q || m.title.toLowerCase().includes(q))
+      .filter(m => !hideWatched || !watchedTitleSet.has(m.id))
       .slice()
       .sort((a, b) => sortKeyFn(a.title).localeCompare(sortKeyFn(b.title)));
 
@@ -27,13 +30,32 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     }
 
     return { filtered, groups, watchedCount };
-  }, [query, watchedTitleSet]);
+  }, [query, watchedTitleSet, hideWatched]);
 
   return (
     <div className="film-list-section">
       <p className="film-list-hint">
-        Browse all {MOVIES.length} Oscar-nominated films. Tap the checkbox to mark a film as watched, or tap the title to see details.
+        Browse all {MOVIES.length} Oscar-nominated films. Tap a title to see details.
       </p>
+      <div className="film-list-toggles">
+        <button
+          className={`film-list-toggle ${hideWatched ? 'active' : ''}`}
+          onClick={() => setHideWatched(h => !h)}
+        >
+          {hideWatched ? 'Show watched' : 'Hide watched'}
+        </button>
+        <button
+          className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
+          onClick={() => setChecklistMode(c => !c)}
+        >
+          {checklistMode ? 'Exit checklist' : 'Checklist mode'}
+        </button>
+      </div>
+      {checklistMode && (
+        <p className="film-list-hint" style={{ marginTop: 0 }}>
+          Quickly mark off films you've already seen.
+        </p>
+      )}
       <input
         className="list-search"
         type="search"
@@ -60,13 +82,16 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                   <div
                     className={`film-row ${isWatched ? 'is-watched' : ''}`}
                     key={m.id}
-                    onClick={() => onOpenDetail(m, filtered)}
+                    onClick={() => checklistMode ? onToggleWatched(m) : onOpenDetail(m, filtered)}
                   >
-                    <button
-                      className={`film-row-check ${isWatched ? 'checked' : ''}`}
-                      onClick={(e) => { e.stopPropagation(); onToggleWatched(m); }}
-                      aria-label={isWatched ? `Mark ${m.title} unwatched` : `Mark ${m.title} watched`}
-                    >{isWatched ? '✓' : ''}</button>
+                    {checklistMode && (
+                      <span
+                        className={`film-row-check ${isWatched ? 'checked' : ''}`}
+                      >{isWatched ? '✓' : ''}</span>
+                    )}
+                    {!checklistMode && isWatched && (
+                      <span className="film-row-check checked">✓</span>
+                    )}
                     <span className="film-row-title">{m.title}</span>
                     <span className="film-row-year">{m.year}</span>
                     <MovieBadges movie={m} small />

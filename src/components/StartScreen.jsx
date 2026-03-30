@@ -11,7 +11,7 @@ export default function StartScreen({ onStart }) {
     <div className="screen active">
       <div className="start-screen">
         <span className="big-trophy">🏆</span>
-        <h1>Oscar Best Picture Journey</h1>
+        <h1>The Oscars Journey</h1>
         <p>
           Stop scrolling Netflix for 45 minutes and watching nothing. We picked {MOVIES.length} Oscar-nominated films and put them in a random order so you don't have to think — just press play.
         </p>

@@ -453,6 +453,13 @@ main {
 }
 
 /* OMDb data fields */
+.film-pills-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .film-imdb-rating {
   display: inline-flex;
   align-items: center;
@@ -464,7 +471,42 @@ main {
   font-size: 0.85rem;
   color: var(--gold);
   font-weight: 600;
-  width: fit-content;
+}
+
+.film-trailer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.film-trailer-btn:hover {
+  border-color: #c00;
+  color: #c00;
+}
+
+.film-trailer-icon {
+  font-size: 0.7rem;
+  color: #c00;
+}
+
+.metric-trailer {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.metric-trailer:hover .metric-value {
+  color: #c00;
+}
+.metric-trailer .metric-value {
+  color: #c00;
 }
 
 .film-elo-rating,

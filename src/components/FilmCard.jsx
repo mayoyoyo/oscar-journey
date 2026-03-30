@@ -103,9 +103,18 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         <div className="film-year">{movie.year}</div>
         <MovieBadges movie={movie} />
 
-        {omdbData?.rating && (
-          <div className="film-imdb-rating">★ {omdbData.rating} <span className="rating-source">IMDb</span></div>
-        )}
+        <div className="film-pills-row">
+          {omdbData?.rating && (
+            <div className="film-imdb-rating">★ {omdbData.rating} <span className="rating-source">IMDb</span></div>
+          )}
+          <a className="film-trailer-btn"
+            href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
+            target="_blank" rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className="film-trailer-icon">▶</span> Trailer
+          </a>
+        </div>
         {personalElo?.[movie.id] && (
           <div className="film-elo-rating">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO</span></div>
         )}

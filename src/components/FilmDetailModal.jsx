@@ -162,6 +162,14 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                   <span className="metric-label">Global ELO ({globalElo.matchCount})</span>
                 </div>
               )}
+              <a className="metric-item metric-trailer"
+                href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
+                target="_blank" rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <span className="metric-value">▶</span>
+                <span className="metric-label">Trailer</span>
+              </a>
             </div>
 
             {omdbData?.plot && (

@@ -111,7 +111,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
             target="_blank" rel="noopener noreferrer"
           >
-            <svg className="film-trailer-icon" viewBox="0 0 28 20" width="18" height="13">
+            <svg className="film-trailer-icon" viewBox="0 0 28 20" width="14" height="10">
               <rect rx="4" ry="4" width="28" height="20" fill="#FF0000"/>
               <polygon points="11,4 11,16 21,10" fill="#FFF"/>
             </svg>

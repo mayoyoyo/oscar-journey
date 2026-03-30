@@ -4,6 +4,7 @@ import {
   collection, getDocs, query, orderBy, limit,
   serverTimestamp, addDoc
 } from 'firebase/firestore';
+import { hashPasscode } from './hash';
 
 // --- Profile CRUD ---
 
@@ -12,9 +13,10 @@ export async function createProfile(username, passcode, displayName, avatar) {
   const ref = doc(db, 'profiles', id);
   const snap = await getDoc(ref);
   if (snap.exists()) throw new Error('Username already taken');
+  const hashedPasscode = await hashPasscode(passcode);
   await setDoc(ref, {
     displayName: displayName.trim(),
-    passcode,
+    passcode: hashedPasscode,
     avatar: avatar || '🍿',
     watched: [],
     ratings: {},
@@ -33,7 +35,8 @@ export async function loginProfile(username, passcode) {
   const snap = await getDoc(ref);
   if (!snap.exists()) throw new Error('Profile not found');
   const data = snap.data();
-  if (data.passcode !== passcode) throw new Error('Wrong passcode');
+  const hashedPasscode = await hashPasscode(passcode);
+  if (data.passcode !== hashedPasscode) throw new Error('Wrong passcode');
   return { id: snap.id, ...data };
 }
 

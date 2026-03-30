@@ -313,7 +313,7 @@ export const MOVIES = [
   { id: 'inglourious-basterds-2009', title: "Inglourious Basterds",                          year: 2009, won: false, genre: 'W', ceremony: 82, category: 'BP' },
   { id: 'precious-2009', title: "Precious",                                      year: 2009, won: false, genre: 'D', ceremony: 82, category: 'BP' },
   { id: 'a-serious-man-2009', title: "A Serious Man",                                 year: 2009, won: false, genre: 'I', ceremony: 82, category: 'BP' },
-  { id: 'up-2009', title: "Up",                                            year: 2009, won: false, genre: 'A', ceremony: 82, category: 'BP' },
+  { id: 'up-2009', title: "Up",                                            year: 2009, won: false, genre: 'A', ceremony: 82, category: 'BP', alsoWon: ['ANIM'] },
   { id: 'up-in-the-air-2009', title: "Up in the Air",                                 year: 2009, won: false, genre: 'C', ceremony: 82, category: 'BP' },
 
   // 2010 films - 83rd Academy Awards (10 nominees)
@@ -324,7 +324,7 @@ export const MOVIES = [
   { id: 'inception-2010', title: "Inception",                                     year: 2010, won: false, genre: 'S', ceremony: 83, category: 'BP' },
   { id: 'the-kids-are-all-right-2010', title: "The Kids Are All Right",                        year: 2010, won: false, genre: 'C', ceremony: 83, category: 'BP' },
   { id: 'the-social-network-2010', title: "The Social Network",                            year: 2010, won: false, genre: 'D', ceremony: 83, category: 'BP' },
-  { id: 'toy-story-3-2010', title: "Toy Story 3",                                   year: 2010, won: false, genre: 'A', ceremony: 83, category: 'BP' },
+  { id: 'toy-story-3-2010', title: "Toy Story 3",                                   year: 2010, won: false, genre: 'A', ceremony: 83, category: 'BP', alsoWon: ['ANIM'] },
   { id: 'true-grit-2010', title: "True Grit",                                     year: 2010, won: false, genre: 'H', ceremony: 83, category: 'BP' },
   { id: 'winters-bone-2010', title: "Winter's Bone",                                 year: 2010, won: false, genre: 'T', ceremony: 83, category: 'BP' },
 

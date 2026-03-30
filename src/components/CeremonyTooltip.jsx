@@ -18,18 +18,30 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
 
   const sameYear = MOVIES.filter(m => m.ceremony === ceremony);
 
-  // Group by category
+  // Group by category, including alsoWon cross-listings
   const grouped = {};
   for (const m of sameYear) {
+    // Primary category
     if (!grouped[m.category]) grouped[m.category] = [];
-    grouped[m.category].push(m);
+    grouped[m.category].push({ ...m, wonInCategory: m.won });
+
+    // Also show in alsoWon categories (as winner)
+    if (m.alsoWon) {
+      for (const cat of m.alsoWon) {
+        if (!grouped[cat]) grouped[cat] = [];
+        // Only add if not already there by primary category
+        if (m.category !== cat) {
+          grouped[cat].push({ ...m, wonInCategory: true });
+        }
+      }
+    }
   }
 
   // Sort each group: winners first, then alphabetical
   for (const cat of Object.keys(grouped)) {
     grouped[cat].sort((a, b) => {
-      if (a.won && !b.won) return -1;
-      if (!a.won && b.won) return 1;
+      if (a.wonInCategory && !b.wonInCategory) return -1;
+      if (!a.wonInCategory && b.wonInCategory) return 1;
       return a.title.localeCompare(b.title);
     });
   }
@@ -70,7 +82,7 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
                       }}
                     >
                       <span className="ceremony-modal-film-title">
-                        {m.won && <span className="ceremony-modal-trophy">🏆</span>}
+                        {m.wonInCategory && <span className="ceremony-modal-trophy">🏆</span>}
                         {m.title}
                       </span>
                       <span className="ceremony-modal-film-year">{m.year}</span>

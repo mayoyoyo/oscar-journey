@@ -88,8 +88,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                         className={`film-row-check ${isWatched ? 'checked' : ''}`}
                       >{isWatched ? '✓' : ''}</span>
                     )}
-                    {!checklistMode && isWatched && (
-                      <span className="film-row-check checked">✓</span>
+                    {!checklistMode && (
+                      <span className={`film-row-dot ${isWatched ? 'watched' : ''}`} />
                     )}
                     <span className="film-row-title">{m.title}</span>
                     <span className="film-row-year">{m.year}</span>

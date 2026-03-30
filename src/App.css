@@ -1179,6 +1179,17 @@ main {
   font-weight: bold;
 }
 
+.film-row-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: transparent;
+}
+.film-row-dot.watched {
+  background: #5a9a5a;
+}
+
 .film-row-title {
   flex: 1;
   font-size: 0.92rem;
@@ -2096,14 +2107,17 @@ main {
 
   /* Films A-Z list — compact for mobile */
   .film-row {
-    flex-wrap: wrap;
-    gap: 4px 8px;
+    gap: 6px;
     padding: 8px 4px;
   }
   .film-row-check {
     min-width: 20px;
     height: 20px;
     font-size: 0.8rem;
+  }
+  .film-row-dot {
+    width: 6px;
+    height: 6px;
   }
   .film-row-title {
     font-size: 0.84rem;

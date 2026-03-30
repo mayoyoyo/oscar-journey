@@ -24,21 +24,29 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
       <nav className="main-nav">
         <div className="nav-left">
           <div className="nav-brand-group">
-            <svg className="nav-logo-svg" viewBox="0 0 64 64" width="22" height="22">
+            <svg className="nav-logo-svg" viewBox="0 0 100 200" width="14" height="28">
               <defs>
-                <linearGradient id="navGold" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#f0d060"/>
-                  <stop offset="50%" stopColor="#c9a84c"/>
+                <linearGradient id="navGold" x1="0" y1="0" x2="0.3" y2="1">
+                  <stop offset="0%" stopColor="#f5e6a3"/>
+                  <stop offset="30%" stopColor="#d4af37"/>
+                  <stop offset="60%" stopColor="#c9a84c"/>
                   <stop offset="100%" stopColor="#8b6914"/>
                 </linearGradient>
               </defs>
-              <rect x="18" y="56" width="28" height="4" rx="2" fill="url(#navGold)"/>
-              <rect x="24" y="50" width="16" height="6" rx="1" fill="url(#navGold)"/>
-              <rect x="29" y="38" width="6" height="12" rx="1" fill="url(#navGold)"/>
-              <ellipse cx="32" cy="24" rx="12" ry="16" fill="url(#navGold)"/>
-              <circle cx="32" cy="10" r="6" fill="url(#navGold)"/>
-              <rect x="16" y="18" width="10" height="3" rx="1.5" fill="url(#navGold)" transform="rotate(-20 21 19.5)"/>
-              <rect x="38" y="18" width="10" height="3" rx="1.5" fill="url(#navGold)" transform="rotate(20 43 19.5)"/>
+              <ellipse cx="50" cy="192" rx="30" ry="6" fill="url(#navGold)"/>
+              <rect x="28" y="180" width="44" height="12" rx="3" fill="url(#navGold)"/>
+              <ellipse cx="50" cy="180" rx="22" ry="5" fill="url(#navGold)"/>
+              <ellipse cx="50" cy="175" rx="16" ry="3" fill="url(#navGold)"/>
+              <rect x="36" y="168" width="28" height="7" rx="2" fill="url(#navGold)"/>
+              <rect x="42" y="145" width="16" height="23" rx="2" fill="url(#navGold)"/>
+              <ellipse cx="50" cy="110" rx="18" ry="38" fill="url(#navGold)"/>
+              <circle cx="50" cy="62" r="12" fill="url(#navGold)"/>
+              <rect x="45" y="72" width="10" height="8" fill="url(#navGold)"/>
+              <path d="M32,95 Q28,85 34,78 L38,82 Q34,88 36,95 Z" fill="url(#navGold)"/>
+              <path d="M68,95 Q72,85 66,78 L62,82 Q66,88 64,95 Z" fill="url(#navGold)"/>
+              <rect x="48" y="42" width="4" height="50" rx="1" fill="url(#navGold)"/>
+              <rect x="40" y="82" width="20" height="4" rx="2" fill="url(#navGold)"/>
+              <circle cx="50" cy="40" r="4" fill="url(#navGold)"/>
             </svg>
             <span className="nav-brand">
               <span className="nav-brand-oscar">OSCAR</span>

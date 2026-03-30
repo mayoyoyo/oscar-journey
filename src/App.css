@@ -493,8 +493,7 @@ main {
 }
 
 .film-trailer-icon {
-  font-size: 0.7rem;
-  color: #c00;
+  vertical-align: middle;
 }
 
 .metric-trailer {

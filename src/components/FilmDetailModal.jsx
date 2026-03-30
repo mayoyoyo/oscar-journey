@@ -167,7 +167,10 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 target="_blank" rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
               >
-                <span className="metric-value">▶</span>
+                <span className="metric-value"><svg viewBox="0 0 28 20" width="14" height="10" style={{flexShrink:0}}>
+                  <rect rx="4" ry="4" width="28" height="20" fill="#FF0000"/>
+                  <polygon points="11,4 11,16 21,10" fill="#FFF"/>
+                </svg></span>
                 <span className="metric-label">Trailer</span>
               </a>
             </div>

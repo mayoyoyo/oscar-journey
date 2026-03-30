@@ -49,7 +49,7 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
               <circle cx="50" cy="40" r="4" fill="url(#navGold)"/>
             </svg>
             <span className="nav-brand">
-              <span className="nav-brand-oscar">OSCAR</span>
+              <span className="nav-brand-oscar">THE OSCARS</span>
               <span className="nav-brand-journey">JOURNEY</span>
             </span>
           </div>

@@ -2800,9 +2800,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 0;
+  padding: 6px 8px;
+  margin: 0 -8px;
   font-size: 0.82rem;
   color: var(--cream);
+  border-radius: 6px;
+  transition: background 0.12s;
+}
+.ceremony-tooltip-film:hover {
+  background: var(--bg3);
+  color: var(--gold);
 }
 
 .ceremony-tooltip-name {

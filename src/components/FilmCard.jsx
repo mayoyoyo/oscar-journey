@@ -48,7 +48,7 @@ const SKIP_MESSAGES = [
   "This is cinema, not a Netflix queue. Show some commitment.",
 ];
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId }) {
+export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -98,7 +98,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
 
       {/* Info column */}
       <div className="info-col">
-        <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} />
+        <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onOpenDetail} />
         <div className="film-title">{movie.title}</div>
         <div className="film-year">{movie.year}</div>
         <MovieBadges movie={movie} />

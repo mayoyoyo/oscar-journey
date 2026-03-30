@@ -937,6 +937,7 @@ export default function App() {
                 onSkip={handleSkip}
                 allProfiles={allProfilesForSync}
                 currentProfileId={profile?.id}
+                onOpenDetail={setDetailMovie}
               />
               <NavButtons
                 currentIdx={eligiblePosition}

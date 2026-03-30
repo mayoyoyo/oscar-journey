@@ -131,7 +131,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             )}
           </div>
           <div className="film-detail-body">
-            <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} />
+            <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
             <div className="film-title" style={{ fontSize: '1.4rem' }}>{movie.title}</div>
             <div className="film-year">{movie.year}</div>
             <MovieBadges movie={movie} />

@@ -165,7 +165,9 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
       }
     }
 
-    return [...realStats, ...virtualStats].sort((a, b) => b.watchedCount - a.watchedCount);
+    return [...realStats, ...virtualStats]
+      .filter(p => p.watchedCount > 0)
+      .sort((a, b) => b.watchedCount - a.watchedCount);
   }, [profiles]);
 
   if (loading) {

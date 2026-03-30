@@ -1115,13 +1115,33 @@ main {
 }
 .film-row:hover { background: var(--bg2); }
 .film-row.is-watched .film-row-title { color: var(--cream-dim); }
-.film-row.is-watched .film-row-check { color: #5a9a5a; font-weight: bold; }
-
 .film-row-check {
   font-size: 0.9rem;
-  color: #5a9a5a;
-  min-width: 18px;
+  color: var(--cream-dim);
+  min-width: 22px;
+  height: 22px;
   text-align: center;
+  background: none;
+  border: 2px solid var(--cream-dim);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+.film-row-check:hover {
+  border-color: #5a9a5a;
+  background: rgba(90, 154, 90, 0.1);
+}
+.film-row-check.checked {
+  color: #fff;
+  background: #5a9a5a;
+  border-color: #5a9a5a;
+  font-weight: bold;
 }
 
 .film-row-title {
@@ -2046,7 +2066,8 @@ main {
     padding: 8px 4px;
   }
   .film-row-check {
-    min-width: 14px;
+    min-width: 20px;
+    height: 20px;
     font-size: 0.8rem;
   }
   .film-row-title {

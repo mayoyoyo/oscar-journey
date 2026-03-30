@@ -7,7 +7,7 @@ function sortKeyFn(title) {
   return title.replace(/^(The|A|An)\s+/i, '').toLowerCase();
 }
 
-export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, raters }) {
+export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters }) {
   const [query, setQuery] = useState('');
 
   const { filtered, groups, watchedCount } = useMemo(() => {
@@ -59,7 +59,11 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, ratings, rater
                     key={m.id}
                     onClick={() => onOpenDetail(m, filtered)}
                   >
-                    <span className="film-row-check">{isWatched ? '✓' : ''}</span>
+                    <button
+                      className={`film-row-check ${isWatched ? 'checked' : ''}`}
+                      onClick={(e) => { e.stopPropagation(); onToggleWatched(m); }}
+                      aria-label={isWatched ? `Mark ${m.title} unwatched` : `Mark ${m.title} watched`}
+                    >{isWatched ? '✓' : ''}</button>
                     <span className="film-row-title">{m.title}</span>
                     <span className="film-row-year">{m.year}</span>
                     <MovieBadges movie={m} small />

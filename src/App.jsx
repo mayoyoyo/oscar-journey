@@ -983,6 +983,7 @@ export default function App() {
             setDetailMovie(movie);
             if (movieList) setDetailMovieList(movieList);
           }}
+          onToggleWatched={toggleWatchedForMovie}
           ratings={ratings}
           raters={raters}
         />

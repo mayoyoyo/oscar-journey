@@ -561,6 +561,17 @@ export default function App() {
   }, [currentIdx, firebaseSave, idxPassesFilter]);
 
   // --- Watched toggle ---
+  const clearRatingsForMovie = useCallback((movie) => {
+    const rKey = ratingKey(movie);
+    setRatings(prev => {
+      const next = { ...prev };
+      delete next[rKey];
+      firebaseSave('ratings', next);
+      setProfile(prev => prev ? { ...prev, ratings: next } : prev);
+      return next;
+    });
+  }, [firebaseSave]);
+
   const toggleWatched = useCallback(() => {
     if (!currentMovie) return;
     const key = movieKey(currentMovie);
@@ -568,6 +579,7 @@ export default function App() {
       const next = new Set(prev);
       if (next.has(key)) {
         next.delete(key);
+        clearRatingsForMovie(currentMovie);
       } else {
         next.add(key);
         // Record activity — this is a journey watch
@@ -584,20 +596,24 @@ export default function App() {
       setProfile(prev => prev ? { ...prev, watched: nextArr } : prev);
       return next;
     });
-  }, [currentMovie, firebaseSave, profile]);
+  }, [currentMovie, firebaseSave, profile, clearRatingsForMovie]);
 
   const toggleWatchedForMovie = useCallback((movie) => {
     const key = movieKey(movie);
     setWatchedSet(prev => {
       const next = new Set(prev);
-      if (next.has(key)) next.delete(key);
-      else next.add(key);
+      if (next.has(key)) {
+        next.delete(key);
+        clearRatingsForMovie(movie);
+      } else {
+        next.add(key);
+      }
       const nextArr = [...next];
       firebaseSave('watched', nextArr);
       setProfile(prev => prev ? { ...prev, watched: nextArr } : prev);
       return next;
     });
-  }, [firebaseSave]);
+  }, [firebaseSave, clearRatingsForMovie]);
 
   // --- Rating change ---
   const handleRatingChange = useCallback((key, person, value) => {

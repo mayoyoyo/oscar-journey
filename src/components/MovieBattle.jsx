@@ -181,40 +181,8 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
     }
   }, [movieA, movieB, voting, profile, pickPair, refreshLeaderboard]);
 
-  if (!hasEnough) {
-    const count = watchedMovies.length;
-    const remaining = MIN_FILMS - count;
-    return (
-      <div className="battle-section">
-        <div className="battle-empty">
-          <h3>Almost There</h3>
-          <p>Watch <strong>{remaining} more film{remaining !== 1 ? 's' : ''}</strong> to unlock Battle mode.</p>
-          <div style={{ margin: '20px auto', maxWidth: '240px' }}>
-            <div style={{
-              display: 'flex', justifyContent: 'space-between',
-              fontSize: '0.78rem', color: 'var(--cream-dim)', marginBottom: '6px'
-            }}>
-              <span>{count} watched</span>
-              <span>{MIN_FILMS} needed</span>
-            </div>
-            <div style={{
-              height: '6px', background: 'var(--bg3)',
-              borderRadius: '3px', overflow: 'hidden'
-            }}>
-              <div style={{
-                height: '100%', width: `${(count / MIN_FILMS) * 100}%`,
-                background: 'linear-gradient(90deg, var(--gold-dim), var(--gold))',
-                borderRadius: '3px', transition: 'width 0.3s'
-              }} />
-            </div>
-          </div>
-          <p style={{ fontSize: '0.82rem', color: 'var(--cream-dim)', fontStyle: 'italic' }}>
-            You need to see enough films before you can judge them. Fair's fair.
-          </p>
-        </div>
-      </div>
-    );
-  }
+  const lockedCount = !hasEnough ? watchedMovies.length : 0;
+  const lockedRemaining = MIN_FILMS - lockedCount;
 
   return (
     <div className="battle-section">
@@ -224,6 +192,35 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
       <p style={{ color: 'var(--cream-dim)', fontSize: '0.88rem', textAlign: 'center', marginBottom: '24px' }}>
         Which film is better? Click to vote.
       </p>
+
+      {!hasEnough && (
+        <div className="battle-empty" style={{ marginBottom: '32px' }}>
+          <h3>Almost There</h3>
+          <p>Watch <strong>{lockedRemaining} more film{lockedRemaining !== 1 ? 's' : ''}</strong> to unlock voting.</p>
+          <div style={{ margin: '20px auto', maxWidth: '240px' }}>
+            <div style={{
+              display: 'flex', justifyContent: 'space-between',
+              fontSize: '0.78rem', color: 'var(--cream-dim)', marginBottom: '6px'
+            }}>
+              <span>{lockedCount} watched</span>
+              <span>{MIN_FILMS} needed</span>
+            </div>
+            <div style={{
+              height: '6px', background: 'var(--bg3)',
+              borderRadius: '3px', overflow: 'hidden'
+            }}>
+              <div style={{
+                height: '100%', width: `${(lockedCount / MIN_FILMS) * 100}%`,
+                background: 'linear-gradient(90deg, var(--gold-dim), var(--gold))',
+                borderRadius: '3px', transition: 'width 0.3s'
+              }} />
+            </div>
+          </div>
+          <p style={{ fontSize: '0.82rem', color: 'var(--cream-dim)', fontStyle: 'italic' }}>
+            You need to see enough films before you can judge them. Fair's fair.
+          </p>
+        </div>
+      )}
 
       {movieA && movieB && (
         <div className="battle-arena">

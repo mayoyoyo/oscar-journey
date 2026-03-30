@@ -5,7 +5,7 @@ export default function Header({ onOpenSettings, profile, onLogout }) {
     <header>
       <div className="header-title">
         <span className="trophy">🏆</span>
-        Oscar Best Picture Journey
+        The Oscars Journey
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         {profile && (

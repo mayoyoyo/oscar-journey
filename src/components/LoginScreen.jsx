@@ -76,7 +76,7 @@ export default function LoginScreen({ onLogin }) {
       <h2>{mode === 'login' ? 'Welcome Back' : 'Create Profile'}</h2>
       <p className="login-subtitle">
         {mode === 'login'
-          ? 'Log in to continue your Oscar journey'
+          ? 'Log in to continue your Oscars journey'
           : 'Set up your profile to start tracking films'}
       </p>
 

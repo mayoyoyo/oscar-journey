@@ -920,7 +920,7 @@ export default function App() {
               {eligiblePosition < 1 && !bannerDismissed && (
                 <div className="journey-welcome-banner">
                   <button className="journey-welcome-close" onClick={() => { setBannerDismissed(true); localStorage.setItem('oscars_banner_dismissed', 'true'); }}>✕</button>
-                  <div className="journey-welcome-title">🏆 Your Oscar Journey</div>
+                  <div className="journey-welcome-title">🏆 The Oscars Journey</div>
                   <div className="journey-welcome-text">
                     We picked {MOVIES.length} Oscar-nominated films and shuffled them so you never watch two similar films back-to-back. Watch each one, rate it, and move on. No overthinking — just press play.
                   </div>

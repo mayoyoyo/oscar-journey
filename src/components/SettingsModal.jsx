@@ -75,7 +75,7 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `oscar-journey-${profile.id}-backup.json`;
+    a.download = `the-oscars-journey-${profile.id}-backup.json`;
     a.click();
     URL.revokeObjectURL(url);
   };

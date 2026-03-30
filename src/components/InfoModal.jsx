@@ -11,7 +11,7 @@ export default function InfoModal({ onClose }) {
       if (e.target === e.currentTarget) onClose();
     }}>
       <div className="modal" style={{ maxWidth: '560px', maxHeight: '85vh', overflowY: 'auto' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '16px' }}>🏆 What is Oscar Journey?</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '16px' }}>🏆 What is The Oscars Journey?</h2>
 
         <div className="info-section">
           <h3>The Problem</h3>

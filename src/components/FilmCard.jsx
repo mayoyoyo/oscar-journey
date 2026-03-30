@@ -138,7 +138,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           <div className="film-runtime">🕐 {omdbData.runtime}</div>
         )}
 
-        {/* Watched by others */}
+        {/* Watched by others + their ratings after user rates */}
         {allProfiles && (() => {
           const others = allProfiles.filter(p =>
             p.id !== currentProfileId &&
@@ -146,14 +146,23 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             p.watched.includes(movie.id)
           );
           if (others.length === 0) return null;
+          const userHasRated = Object.values(movieRatings).some(v => v != null);
           return (
             <div className="watched-by">
-              <span className="watched-by-label">Watched by</span>
-              {others.map(p => (
-                <span key={p.id} className="watched-by-chip">
-                  {p.avatar || '👤'} {p.displayName}
-                </span>
-              ))}
+              <span className="watched-by-label">{userHasRated ? 'Others\' ratings' : 'Watched by'}</span>
+              {others.map(p => {
+                const pRatings = p.ratings?.[key] || {};
+                const pRaters = p.raters || [p.displayName];
+                const primaryRating = pRatings[pRaters[0]];
+                return (
+                  <span key={p.id} className="watched-by-chip">
+                    {p.avatar || '👤'} {p.displayName}
+                    {userHasRated && primaryRating != null && (
+                      <span className="watched-by-rating"> {primaryRating}/10</span>
+                    )}
+                  </span>
+                );
+              })}
             </div>
           );
         })()}

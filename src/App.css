@@ -792,6 +792,10 @@ main {
   padding: 3px 10px;
   border-radius: 50px;
 }
+.watched-by-rating {
+  color: var(--gold);
+  font-weight: 600;
+}
 
 /* Settings toggle switch */
 .settings-toggle-row {

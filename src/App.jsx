@@ -301,6 +301,8 @@ export default function App() {
         displayName: d.data().displayName || d.id,
         avatar: d.data().avatar || '',
         watched: d.data().watched || [],
+        ratings: d.data().ratings || {},
+        raters: d.data().raters || [],
       })));
     }).catch(() => {});
   }, []);

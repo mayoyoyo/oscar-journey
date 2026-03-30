@@ -34,6 +34,9 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
   const [showSkipped, setShowSkipped] = useState(false);
   const [sortMode, setSortMode] = useState('az'); // 'az' | 'rating'
 
+  // If focusRater is set, we only show that single rater's data
+  const focusRater = profileData.focusRater || null;
+
   // Resolve watched movies from the profile's watched array (movie IDs)
   const watchedMovies = useMemo(() => {
     if (!profileData || !Array.isArray(profileData.watched)) return [];
@@ -88,7 +91,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       // Use live ratings for own profile
       const isOwn = currentProfile && currentProfile.id === profileData.id;
       const ratings = (isOwn && currentRatings) ? currentRatings : (profileData.ratings || {});
-      const profileRatersList = profileData.raters || [];
+      const profileRatersList = focusRater ? [focusRater] : (profileData.raters || []);
       return movies.sort((a, b) => {
         const aKey = ratingKey(a);
         const bKey = ratingKey(b);
@@ -117,7 +120,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
     );
   }, [sortedWatched, searchQuery]);
 
-  // Compute summary stats
+  // Compute summary stats (respects focusRater when set)
   const stats = useMemo(() => {
     // Use live ratings for own profile
     const isOwn = currentProfile && currentProfile.id === profileData.id;
@@ -128,17 +131,28 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
 
     for (const m of MOVIES) {
       const key = ratingKey(m);
-      // Also check legacy "Title|year" key for un-migrated profiles
       const legacyKey = `${m.title}|${m.year}`;
       const r = ratings[key] || ratings[legacyKey];
       if (!r) continue;
-      for (const val of Object.values(r)) {
+      if (focusRater) {
+        // Only count the focused rater's ratings
+        const val = r[focusRater];
         if (val != null) {
           totalRating += val;
           ratingCount++;
           if (!genreRatings[m.genre]) genreRatings[m.genre] = { total: 0, count: 0 };
           genreRatings[m.genre].total += val;
           genreRatings[m.genre].count++;
+        }
+      } else {
+        for (const val of Object.values(r)) {
+          if (val != null) {
+            totalRating += val;
+            ratingCount++;
+            if (!genreRatings[m.genre]) genreRatings[m.genre] = { total: 0, count: 0 };
+            genreRatings[m.genre].total += val;
+            genreRatings[m.genre].count++;
+          }
         }
       }
     }
@@ -164,7 +178,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       ratingCount,
       favGenre,
     };
-  }, [profileData, watchedMovies, currentProfile, currentRatings]);
+  }, [profileData, watchedMovies, currentProfile, currentRatings, focusRater]);
 
   // Current journey movie
   const currentJourneyMovie = useMemo(() => {
@@ -195,13 +209,21 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
 
   // Get the ratings object for a specific movie from this profile
   // When viewing own profile, use live React state (currentRatings) for instant updates
+  // When focusRater is set, only return that rater's rating
   const getProfileRatings = (movie) => {
     const key = ratingKey(movie);
     const legacyKey = `${movie.title}|${movie.year}`;
+    let r;
     if (isOwnProfile && currentRatings) {
-      return currentRatings[key] || currentRatings[legacyKey] || {};
+      r = currentRatings[key] || currentRatings[legacyKey] || {};
+    } else {
+      r = profileData.ratings?.[key] || profileData.ratings?.[legacyKey] || {};
     }
-    return profileData.ratings?.[key] || profileData.ratings?.[legacyKey] || {};
+    if (focusRater) {
+      // Only return this specific rater's rating
+      return r[focusRater] != null ? { [focusRater]: r[focusRater] } : {};
+    }
+    return r;
   };
 
   // Get the current viewer's ratings for a specific movie
@@ -218,8 +240,8 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
     return null;
   };
 
-  // Profile raters list
-  const profileRaters = profileData.raters || [];
+  // Profile raters list — when focusRater is set, only show that rater
+  const profileRaters = focusRater ? [focusRater] : (profileData.raters || []);
 
   return (
     <div className="profile-detail">
@@ -230,9 +252,15 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       {/* Header */}
       <div className="profile-detail-header">
         <div className="profile-detail-name">
-          {profileData.avatar && <span className="profile-detail-avatar">{profileData.avatar}</span>}
-          {profileData.displayName || profileData.id}
+          {!focusRater && profileData.avatar && <span className="profile-detail-avatar">{profileData.avatar}</span>}
+          {focusRater && <span className="profile-detail-avatar">👥</span>}
+          {focusRater || profileData.displayName || profileData.id}
         </div>
+        {focusRater && (
+          <div className="profile-detail-joined" style={{ fontStyle: 'italic' }}>
+            Co-watching with {profileData.displayName || profileData.id}
+          </div>
+        )}
         {memberSince && (
           <div className="profile-detail-joined">Member since {memberSince}</div>
         )}

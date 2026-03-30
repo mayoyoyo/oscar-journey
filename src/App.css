@@ -1650,6 +1650,13 @@ main {
   color: var(--red-bright);
 }
 
+.profile-card-co-rater {
+  font-size: 0.72rem;
+  color: var(--cream-dim);
+  font-style: italic;
+  margin-top: 4px;
+}
+
 .profile-card-current {
   margin-top: 4px;
   padding-top: 4px;

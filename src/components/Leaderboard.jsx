@@ -33,30 +33,31 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
     return () => { cancelled = true; };
   }, []);
 
-  // Compute profile stats
+  // Compute profile stats (real profiles + virtual co-rater profiles)
   const profileStats = useMemo(() => {
-    return profiles.map(p => {
-      const watchedCount = Array.isArray(p.watched) ? p.watched.length : 0;
-      const ratings = p.ratings || {};
+    const realStats = [];
+    const virtualStats = [];
 
-      // Count all ratings and compute average
+    for (const p of profiles) {
+      const watchedCount = Array.isArray(p.watched) ? p.watched.length : 0;
+      const profileRatings = p.ratings || {};
+      const profileRaters = p.raters || [];
+
+      // Count all ratings and compute average (for the real profile card)
       let totalRating = 0;
       let ratingCount = 0;
-      // Genre tracking: { genreCode: { total, count } }
       const genreRatings = {};
 
       for (const m of MOVIES) {
         const key = ratingKey(m);
-        // Also check legacy "Title|year" key for un-migrated profiles
         const legacyKey = `${m.title}|${m.year}`;
-        const r = ratings[key] || ratings[legacyKey];
+        const r = profileRatings[key] || profileRatings[legacyKey];
         if (!r) continue;
         // Sum all raters' ratings for this profile
         for (const val of Object.values(r)) {
           if (val != null) {
             totalRating += val;
             ratingCount++;
-            // Track by genre
             if (!genreRatings[m.genre]) genreRatings[m.genre] = { total: 0, count: 0 };
             genreRatings[m.genre].total += val;
             genreRatings[m.genre].count++;
@@ -82,7 +83,6 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
       // Member since
       let memberSince = null;
       if (p.createdAt) {
-        // Firestore Timestamp has toDate(), or it might be serialized
         const d = p.createdAt.toDate ? p.createdAt.toDate() : new Date(p.createdAt);
         memberSince = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
       }
@@ -98,7 +98,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         }
       }
 
-      return {
+      realStats.push({
         id: p.id,
         displayName: p.displayName || p.id,
         avatar: p.avatar || null,
@@ -109,8 +109,63 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         memberSince,
         currentMovie,
         skipCount: p.skipCount || 0,
-      };
-    }).sort((a, b) => b.watchedCount - a.watchedCount);
+      });
+
+      // Generate virtual profile cards for secondary raters (raters[1], raters[2], etc.)
+      const primaryRater = profileRaters[0] || (p.displayName || p.id);
+      const secondaryRaters = profileRaters.slice(1);
+
+      for (const raterName of secondaryRaters) {
+        let vTotal = 0;
+        let vCount = 0;
+        const vGenreRatings = {};
+
+        for (const m of MOVIES) {
+          const key = ratingKey(m);
+          const legacyKey = `${m.title}|${m.year}`;
+          const r = profileRatings[key] || profileRatings[legacyKey];
+          if (!r) continue;
+          const val = r[raterName];
+          if (val != null) {
+            vTotal += val;
+            vCount++;
+            if (!vGenreRatings[m.genre]) vGenreRatings[m.genre] = { total: 0, count: 0 };
+            vGenreRatings[m.genre].total += val;
+            vGenreRatings[m.genre].count++;
+          }
+        }
+
+        let vFavGenre = null;
+        let vFavGenreAvg = 0;
+        for (const [code, data] of Object.entries(vGenreRatings)) {
+          if (data.count >= 3) {
+            const avg = data.total / data.count;
+            if (avg > vFavGenreAvg) {
+              vFavGenreAvg = avg;
+              vFavGenre = GENRE_LABELS[code] || code;
+            }
+          }
+        }
+
+        virtualStats.push({
+          id: `${p.id}__${raterName}`,
+          displayName: raterName,
+          avatar: null,
+          isVirtualRater: true,
+          parentProfileId: p.id,
+          parentDisplayName: p.displayName || p.id,
+          watchedCount,
+          avgRating: vCount > 0 ? (vTotal / vCount).toFixed(1) : null,
+          ratingCount: vCount,
+          favGenre: vFavGenre,
+          memberSince,
+          currentMovie,
+          skipCount: 0,
+        });
+      }
+    }
+
+    return [...realStats, ...virtualStats].sort((a, b) => b.watchedCount - a.watchedCount);
   }, [profiles]);
 
   if (loading) {
@@ -143,26 +198,42 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
       ) : (
         <div className="profile-grid">
           {profileStats.map(p => {
-            // Find the full profile data for this card
-            const fullProfile = profiles.find(prof => prof.id === p.id);
+            // For virtual raters, find parent profile and pass focusRater
+            // For real profiles, use the full profile data directly
+            const handleClick = () => {
+              if (p.isVirtualRater) {
+                const parent = profiles.find(prof => prof.id === p.parentProfileId);
+                if (parent) setSelectedProfile({ ...parent, focusRater: p.displayName });
+              } else {
+                const fullProfile = profiles.find(prof => prof.id === p.id);
+                if (fullProfile) setSelectedProfile(fullProfile);
+              }
+            };
+
             return (
               <div
                 className="profile-card profile-card-clickable"
                 key={p.id}
-                onClick={() => fullProfile && setSelectedProfile(fullProfile)}
+                onClick={handleClick}
                 role="button"
                 tabIndex={0}
                 onKeyDown={e => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    fullProfile && setSelectedProfile(fullProfile);
+                    handleClick();
                   }
                 }}
               >
                 <div className="profile-card-name">
                   {p.avatar && <span className="profile-card-avatar">{p.avatar}</span>}
+                  {!p.avatar && p.isVirtualRater && <span className="profile-card-avatar">👥</span>}
                   {p.displayName}
                 </div>
+                {p.isVirtualRater && (
+                  <div className="profile-card-co-rater">
+                    Co-watching with {p.parentDisplayName}
+                  </div>
+                )}
                 <div className="profile-card-stat">
                   <span className="stat-label">Films Watched</span>
                   <span className="stat-value">{p.watchedCount}</span>
@@ -179,10 +250,12 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   <span className="stat-label">Fav Genre</span>
                   <span className="stat-value">{p.favGenre || '--'}</span>
                 </div>
-                <div className="profile-card-stat profile-card-skip">
-                  <span className="stat-label">Films Skipped {p.skipCount > 0 ? '😤' : ''}</span>
-                  <span className={`stat-value ${p.skipCount > 0 ? 'has-skips' : ''}`}>{p.skipCount}</span>
-                </div>
+                {!p.isVirtualRater && (
+                  <div className="profile-card-stat profile-card-skip">
+                    <span className="stat-label">Films Skipped {p.skipCount > 0 ? '😤' : ''}</span>
+                    <span className={`stat-value ${p.skipCount > 0 ? 'has-skips' : ''}`}>{p.skipCount}</span>
+                  </div>
+                )}
                 {p.currentMovie && (
                   <div className="profile-card-current"
                     onClick={(e) => { e.stopPropagation(); onOpenDetail(p.currentMovie); }}

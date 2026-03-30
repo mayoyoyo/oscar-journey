@@ -1984,6 +1984,37 @@ main {
   .profile-detail-summary { gap: 10px; }
   .profile-summary-item { min-width: 100px; padding: 10px 14px; }
   .profile-film-row { gap: 6px; }
+
+  /* Films A-Z list — compact for mobile */
+  .film-row {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    padding: 8px 4px;
+  }
+  .film-row-check {
+    min-width: 14px;
+    font-size: 0.8rem;
+  }
+  .film-row-title {
+    font-size: 0.84rem;
+    flex: 1 1 60%;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .film-row-year {
+    font-size: 0.75rem;
+    min-width: unset;
+  }
+  /* Hide badges on mobile — they're visible in the modal */
+  .film-row .badge-winner-sm,
+  .film-row .badge-genre-sm,
+  .film-row .badge-bp-sm,
+  .film-row .badge-int-sm,
+  .film-row .badge-anim-sm {
+    display: none;
+  }
 }
 
 /* =====================================================

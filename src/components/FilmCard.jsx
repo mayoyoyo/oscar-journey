@@ -3,12 +3,7 @@ import { fetchOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
-
-function ordinal(n) {
-  const s = ['th','st','nd','rd'];
-  const v = n % 100;
-  return n + (s[(v - 20) % 10] || s[v] || s[0]);
-}
+import CeremonyTooltip from './CeremonyTooltip';
 
 const SKIP_MESSAGES = [
   "Really? This is an Oscar nominee. Have some respect. 😤",
@@ -103,9 +98,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
 
       {/* Info column */}
       <div className="info-col">
-        <div className="ceremony-line">
-          {ordinal(movie.ceremony)} Academy Awards · {movie.year}
-        </div>
+        <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} />
         <div className="film-title">{movie.title}</div>
         <div className="film-year">{movie.year}</div>
         <MovieBadges movie={movie} />

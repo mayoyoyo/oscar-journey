@@ -5,12 +5,7 @@ import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
-
-function ordinal(n) {
-  const s = ['th','st','nd','rd'];
-  const v = n % 100;
-  return n + (s[(v - 20) % 10] || s[v] || s[0]);
-}
+import CeremonyTooltip from './CeremonyTooltip';
 
 export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate }) {
   const [omdbData, setOmdbData] = useState(null);
@@ -136,9 +131,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             )}
           </div>
           <div className="film-detail-body">
-            <div className="ceremony-line">
-              {ordinal(movie.ceremony)} Academy Awards · {movie.year}
-            </div>
+            <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} />
             <div className="film-title" style={{ fontSize: '1.4rem' }}>{movie.title}</div>
             <div className="film-year">{movie.year}</div>
             <MovieBadges movie={movie} />
@@ -217,10 +210,10 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             <button
               className={`watched-btn ${isWatched ? 'is-watched' : ''}`}
               onClick={onToggleWatched}
-              style={{ marginTop: 'auto' }}
+              style={{ marginTop: 'auto', justifyContent: 'center' }}
             >
-              <span>{isWatched ? '✓' : '○'}</span>
-              <span>{isWatched ? 'Watched!' : 'Mark as Watched'}</span>
+              {isWatched && <span className="watched-icon">✓</span>}
+              <span>{isWatched ? 'Watched' : 'Mark as Watched'}</span>
             </button>
           </div>
         </div>

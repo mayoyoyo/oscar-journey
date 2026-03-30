@@ -2265,12 +2265,11 @@ main {
 /* =====================================================
    RATING LOCKED MESSAGE (gated behind watched)
    ===================================================== */
-.rating-pickers-locked {
-  opacity: 0.35;
-  pointer-events: none;
-}
-.star-picker-disabled {
-  pointer-events: none;
+.rating-locked {
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+  font-style: italic;
+  padding: 8px 0;
 }
 
 .rating-pickers-label {

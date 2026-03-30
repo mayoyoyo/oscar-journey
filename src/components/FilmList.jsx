@@ -9,14 +9,14 @@ function sortKeyFn(title) {
 
 export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters }) {
   const [query, setQuery] = useState('');
-  const [hideWatched, setHideWatched] = useState(false);
+  const [watchedOnly, setWatchedOnly] = useState(false);
   const [checklistMode, setChecklistMode] = useState(false);
 
   const { filtered, groups, watchedCount } = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = MOVIES
       .filter(m => !q || m.title.toLowerCase().includes(q))
-      .filter(m => !hideWatched || !watchedTitleSet.has(m.id))
+      .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
       .slice()
       .sort((a, b) => sortKeyFn(a.title).localeCompare(sortKeyFn(b.title)));
 
@@ -30,19 +30,23 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     }
 
     return { filtered, groups, watchedCount };
-  }, [query, watchedTitleSet, hideWatched]);
+  }, [query, watchedTitleSet, watchedOnly]);
 
   return (
     <div className="film-list-section">
       <p className="film-list-hint">
-        Browse all {MOVIES.length} Oscar-nominated films. Tap a title to see details.
+        {checklistMode
+          ? 'Tap any film to mark it as watched. Great for first-timers catching up on what they\'ve already seen.'
+          : watchedOnly
+            ? 'Showing only your watched films. Tap any to rate or review.'
+            : `All ${MOVIES.length} Oscar-nominated films. Tap a title for details, or use the filters below.`}
       </p>
       <div className="film-list-toggles">
         <button
-          className={`film-list-toggle ${hideWatched ? 'active' : ''}`}
-          onClick={() => setHideWatched(h => !h)}
+          className={`film-list-toggle ${watchedOnly ? 'active' : ''}`}
+          onClick={() => setWatchedOnly(w => !w)}
         >
-          {hideWatched ? 'Show watched' : 'Hide watched'}
+          {watchedOnly ? 'Show all' : 'Watched only'}
         </button>
         <button
           className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
@@ -51,11 +55,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
           {checklistMode ? 'Exit checklist' : 'Checklist mode'}
         </button>
       </div>
-      {checklistMode && (
-        <p className="film-list-hint" style={{ marginTop: 0 }}>
-          Quickly mark off films you've already seen.
-        </p>
-      )}
       <input
         className="list-search"
         type="search"

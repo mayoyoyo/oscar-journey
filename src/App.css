@@ -1793,7 +1793,8 @@ main {
    ===================================================== */
 @media (max-width: 540px) {
   .film-card { flex-direction: column; }
-  .poster-col { width: 100%; min-width: unset; height: 260px; }
+  .poster-col { width: 100%; min-width: unset; height: auto; }
+  .poster-img { width: 100%; height: auto; aspect-ratio: 2/3; object-fit: cover; }
   .poster-col::after {
     width: 100%;
     height: 40px;
@@ -1802,8 +1803,8 @@ main {
     right: 0;
     background: linear-gradient(to bottom, transparent, var(--bg2));
   }
-  .poster-placeholder { min-height: 260px; }
-  .poster-loading { min-height: 260px; }
+  .poster-placeholder { min-height: 200px; }
+  .poster-loading { min-height: 200px; }
   .info-col { padding: 20px; }
   .film-title { font-size: 1.4rem; }
   .header-title { font-size: 1rem; }

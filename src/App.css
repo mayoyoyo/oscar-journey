@@ -2782,6 +2782,10 @@ main {
    ===================================================== */
 .mobile-tab-bar {
   display: none; /* Hidden on desktop */
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 8px 0 6px;
+  flex-shrink: 0;
 }
 
 .mobile-tab {
@@ -2815,7 +2819,7 @@ main {
 @media (max-width: 700px) {
   .mobile-tab-bar {
     display: flex;
-    flex-shrink: 0;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
   }
 
   /* Hide tabs from top nav on mobile */

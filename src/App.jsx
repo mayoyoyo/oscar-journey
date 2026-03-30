@@ -860,6 +860,7 @@ export default function App() {
   return (
     <>
       <NavBar
+
         activeTab={activeTab}
         onTabChange={handleTabChange}
         profile={profile}
@@ -871,6 +872,7 @@ export default function App() {
         saving={saving}
       />
 
+      <div className="app-scroll-area">
       {showProgress && (
         <ProgressBar
           currentIdx={eligiblePosition}
@@ -1007,6 +1009,7 @@ export default function App() {
           raters={raters}
         />
       )}
+      </div>{/* end app-scroll-area */}
 
       {/* Film detail modal */}
       {detailMovie && (

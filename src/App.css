@@ -61,21 +61,35 @@
   --badge-anim-color: #b07ac8;
 }
 
-html {
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 body {
   background: var(--bg);
   color: var(--cream);
   font-family: system-ui, -apple-system, sans-serif;
-  min-height: 100%;
-  min-height: 100dvh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.app-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 60px;
-  overflow-x: hidden;
+  padding-bottom: 20px;
 }
 
 #root {
@@ -2768,17 +2782,6 @@ main {
    ===================================================== */
 .mobile-tab-bar {
   display: none; /* Hidden on desktop */
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--bg2);
-  border-top: 1px solid var(--border);
-  z-index: 9999;
-  padding: 6px 0;
-  padding-bottom: env(safe-area-inset-bottom, 6px);
-  transform: translateZ(0); /* Force GPU layer — fixes mobile scroll jank */
-  -webkit-transform: translateZ(0);
 }
 
 .mobile-tab {
@@ -2812,16 +2815,12 @@ main {
 @media (max-width: 700px) {
   .mobile-tab-bar {
     display: flex;
+    flex-shrink: 0;
   }
 
   /* Hide tabs from top nav on mobile */
   .nav-tabs {
     display: none !important;
-  }
-
-  /* Add bottom padding to body so content isn't hidden behind tab bar */
-  body {
-    padding-bottom: 80px;
   }
 }
 

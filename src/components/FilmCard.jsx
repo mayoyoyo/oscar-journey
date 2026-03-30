@@ -158,21 +158,22 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           );
         })()}
 
-        {/* Rating pickers — always visible, disabled until watched */}
-        <div className={`rating-pickers ${!isWatched ? 'rating-pickers-locked' : ''}`}>
-          <div className="rating-pickers-label">
-            {isWatched ? 'Rate this film to continue' : 'Mark as watched to rate'}
+        {/* Rating pickers — only shown when film is marked as watched */}
+        {isWatched ? (
+          <div className="rating-pickers">
+            <div className="rating-pickers-label">Rate this film to continue</div>
+            {raters.map(name => (
+              <StarPicker
+                key={name}
+                label={name}
+                value={movieRatings[name] ?? null}
+                onChange={(val) => onRatingChange(key, name, val)}
+              />
+            ))}
           </div>
-          {raters.map(name => (
-            <StarPicker
-              key={name}
-              label={name}
-              value={movieRatings[name] ?? null}
-              onChange={(val) => isWatched && onRatingChange(key, name, val)}
-              disabled={!isWatched}
-            />
-          ))}
-        </div>
+        ) : (
+          <div className="rating-locked">Mark as watched to rate this film</div>
+        )}
 
         <div className="film-card-actions">
           <button

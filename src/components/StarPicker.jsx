@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Beautiful half-star rating widget (0.5 increments, 10 stars)
-export default function StarPicker({ label, value, onChange }) {
+export default function StarPicker({ label, value, onChange, disabled }) {
   const [hoverVal, setHoverVal] = useState(null);
   const displayVal = hoverVal !== null ? hoverVal : value;
 
@@ -60,7 +60,7 @@ export default function StarPicker({ label, value, onChange }) {
     value !== null && value !== undefined ? `${value} / 10` : 'Tap to rate';
 
   return (
-    <div className="star-picker">
+    <div className={`star-picker ${disabled ? 'star-picker-disabled' : ''}`}>
       <div className="star-picker-label">{label}</div>
       <div className="star-picker-row">
         <div className="star-picker-stars">{stars}</div>

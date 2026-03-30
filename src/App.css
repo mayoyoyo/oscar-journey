@@ -2265,14 +2265,12 @@ main {
 /* =====================================================
    RATING LOCKED MESSAGE (gated behind watched)
    ===================================================== */
-.rating-locked {
-  font-size: 0.82rem;
-  color: var(--cream-dim);
-  font-style: italic;
-  padding: 8px 0;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
+.rating-pickers-locked {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.star-picker-disabled {
+  pointer-events: none;
 }
 
 .rating-pickers-label {
@@ -2287,6 +2285,7 @@ main {
   letter-spacing: normal;
   font-style: italic;
   opacity: 0.7;
+  font-size: 0.65rem;
   width: 100%;
 }
 

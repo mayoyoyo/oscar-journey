@@ -478,11 +478,8 @@ export default function App() {
   const currentMovie = playlist[currentIdx] || null;
   const isCurrentWatched = currentMovie ? watchedSet.has(movieKey(currentMovie)) : false;
 
-  // Can advance if current film is watched AND at least one rater has rated it
-  const currentRatingKeyVal = currentMovie ? ratingKey(currentMovie) : null;
-  const currentRatings = currentRatingKeyVal ? ratings[currentRatingKeyVal] : null;
-  const hasAnyRating = currentRatings && Object.values(currentRatings).some(v => v != null);
-  const canAdvance = isCurrentWatched && hasAnyRating;
+  // Can advance once the current film is marked as watched
+  const canAdvance = isCurrentWatched;
 
   // watchedSet contains movie IDs; pass directly to components
   const watchedTitleSet = watchedSet;

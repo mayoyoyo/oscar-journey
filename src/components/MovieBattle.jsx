@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { recordVote, getEloLeaderboard, updatePersonalElo } from '../utils/firebaseStorage';
 import { collection, getDocs } from 'firebase/firestore';
@@ -6,22 +6,171 @@ import { db } from '../utils/firebase';
 import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
 
+// --- Smart Matchmaking ---
+
+function getPairingWeights(numWatched) {
+  if (numWatched <= 20) return { swiss: 0.80, uncertainty: 0.15, spicy: 0.05 };
+  if (numWatched <= 50) return { swiss: 0.70, uncertainty: 0.20, spicy: 0.10 };
+  if (numWatched <= 150) return { swiss: 0.60, uncertainty: 0.25, spicy: 0.15 };
+  return { swiss: 0.50, uncertainty: 0.30, spicy: 0.20 };
+}
+
+function diversityScore(a, b) {
+  let score = 0;
+  if (a.genre !== b.genre) score += 1;
+  if (Math.abs(a.year - b.year) > 15) score += 1;
+  if (a.won !== b.won) score += 0.5;
+  return score;
+}
+
+function makePairKey(a, b) {
+  const ka = ratingKey(a), kb = ratingKey(b);
+  return ka < kb ? `${ka}|${kb}` : `${kb}|${ka}`;
+}
+
+function swissPair(pool, elo, pairHistory) {
+  // Sort by ELO
+  const sorted = [...pool].sort((a, b) => {
+    return (elo[ratingKey(b)]?.elo || 1500) - (elo[ratingKey(a)]?.elo || 1500);
+  });
+
+  // Pick a random movie, find closest-rated opponent with diversity preference
+  const idx = Math.floor(Math.random() * sorted.length);
+  const movieA = sorted[idx];
+  const eloA = elo[ratingKey(movieA)]?.elo || 1500;
+
+  let bestB = null;
+  let bestScore = Infinity;
+
+  for (let i = 0; i < sorted.length; i++) {
+    if (i === idx) continue;
+    const candidate = sorted[i];
+    const eloB = elo[ratingKey(candidate)]?.elo || 1500;
+    const eloDiff = Math.abs(eloA - eloB);
+    const pairCount = pairHistory[makePairKey(movieA, candidate)] || 0;
+    // Lower score = better match: close ELO, fewer repeats, more diversity
+    const score = eloDiff + pairCount * 200 - diversityScore(movieA, candidate) * 30;
+    if (score < bestScore) {
+      bestScore = score;
+      bestB = candidate;
+    }
+  }
+
+  return [movieA, bestB || sorted[(idx + 1) % sorted.length]];
+}
+
+function uncertaintyPair(pool, elo, pairHistory) {
+  // Find least-compared movies
+  const byMatchCount = [...pool].sort((a, b) => {
+    return (elo[ratingKey(a)]?.matchCount || 0) - (elo[ratingKey(b)]?.matchCount || 0);
+  });
+
+  // Pick from top 3 least compared
+  const leastCompared = byMatchCount[Math.floor(Math.random() * Math.min(3, byMatchCount.length))];
+
+  // Pair against a movie near the median ELO
+  const sorted = [...pool].sort((a, b) => {
+    return (elo[ratingKey(a)]?.elo || 1500) - (elo[ratingKey(b)]?.elo || 1500);
+  });
+  const medianIdx = Math.floor(sorted.length / 2);
+  const windowSize = Math.max(3, Math.floor(sorted.length * 0.1));
+
+  let calibrator = null;
+  for (let attempt = 0; attempt < 10; attempt++) {
+    const offset = Math.floor(Math.random() * windowSize) - Math.floor(windowSize / 2);
+    const idx = Math.max(0, Math.min(sorted.length - 1, medianIdx + offset));
+    if (ratingKey(sorted[idx]) !== ratingKey(leastCompared)) {
+      calibrator = sorted[idx];
+      break;
+    }
+  }
+  if (!calibrator) {
+    calibrator = sorted[medianIdx === 0 ? 1 : medianIdx - 1];
+  }
+
+  return [leastCompared, calibrator];
+}
+
+function spicyPair(pool, elo) {
+  // Pick one from top tier, one from bottom tier
+  const sorted = [...pool].sort((a, b) => {
+    return (elo[ratingKey(b)]?.elo || 1500) - (elo[ratingKey(a)]?.elo || 1500);
+  });
+
+  const q1 = Math.max(1, Math.floor(sorted.length * 0.25));
+  const q3 = Math.floor(sorted.length * 0.75);
+  const bottomLen = sorted.length - q3;
+
+  const top = sorted[Math.floor(Math.random() * q1)];
+  const bottom = sorted[q3 + Math.floor(Math.random() * bottomLen)];
+
+  if (ratingKey(top) === ratingKey(bottom)) {
+    return [sorted[0], sorted[sorted.length - 1]];
+  }
+  return [top, bottom];
+}
+
+function selectPair(watchedMovies, personalElo, recentMovies, pairHistory) {
+  const weights = getPairingWeights(watchedMovies.length);
+
+  // Filter out recently shown movies (cooldown of last 4 movies = last 2 rounds)
+  const recentSet = new Set(recentMovies.slice(-4));
+  const eligible = watchedMovies.filter(m => !recentSet.has(ratingKey(m)));
+  const pool = eligible.length >= 2 ? eligible : watchedMovies;
+
+  const roll = Math.random();
+  let pair;
+
+  if (roll < weights.swiss) {
+    pair = swissPair(pool, personalElo, pairHistory);
+  } else if (roll < weights.swiss + weights.uncertainty) {
+    pair = uncertaintyPair(pool, personalElo, pairHistory);
+  } else {
+    pair = spicyPair(pool, personalElo);
+  }
+
+  return pair;
+}
+
+function getMatchupLabel(movieA, movieB) {
+  if (movieA.genre !== movieB.genre && Math.abs(movieA.year - movieB.year) > 20) return 'Cross-Era Clash';
+  if (movieA.genre !== movieB.genre) return 'Genre Clash';
+  if (Math.abs(movieA.year - movieB.year) > 20) return 'Decade Duel';
+  if (movieA.won && movieB.won) return 'Winner vs Winner';
+  if (movieA.won !== movieB.won) return 'Winner vs Nominee';
+  return null;
+}
+
+function getConfidenceLabel(matchCount) {
+  if (matchCount <= 2) return { label: 'New', color: 'var(--cream-dim)' };
+  if (matchCount <= 8) return { label: 'Settling', color: 'var(--gold)' };
+  if (matchCount <= 20) return { label: 'Confident', color: '#5a9a5a' };
+  return { label: 'Locked In', color: '#4a9ade' };
+}
+
+// --- Component ---
+
 export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetail }) {
   const [movieA, setMovieA] = useState(null);
   const [movieB, setMovieB] = useState(null);
   const [posterA, setPosterA] = useState(null);
   const [posterB, setPosterB] = useState(null);
   const [loadingPosters, setLoadingPosters] = useState(false);
-  const [eloChange, setEloChange] = useState(null); // { a: number, b: number, winner: 'a'|'b' }
+  const [eloChange, setEloChange] = useState(null);
   const [voting, setVoting] = useState(false);
   const [leaderboard, setLeaderboard] = useState([]);
-  const [lastPairKey, setLastPairKey] = useState('');
   const [personalElo, setPersonalElo] = useState(profile?.personalElo || {});
   const [allProfiles, setAllProfiles] = useState([]);
   const [selectedProfileId, setSelectedProfileId] = useState(profile?.id || '');
   const [viewingElo, setViewingElo] = useState(profile?.personalElo || {});
+  const [matchupLabel, setMatchupLabel] = useState(null);
 
-  // Get list of watched movies from profile's watched set (movie IDs)
+  // Session tracking
+  const recentMovies = useRef([]);
+  const pairHistory = useRef({});
+  const sessionVotes = useRef(0);
+
+  // Get list of watched movies
   const watchedMovies = useMemo(() => {
     const movies = [];
     for (let i = 0; i < playlist.length; i++) {
@@ -36,24 +185,20 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
   const MIN_FILMS = 10;
   const hasEnough = watchedMovies.length >= MIN_FILMS;
 
-  // Pick two random movies from watched list
+  // Smart pair selection
   const pickPair = useCallback(() => {
     if (!hasEnough) return;
-    let a, b, attempts = 0;
-    do {
-      a = watchedMovies[Math.floor(Math.random() * watchedMovies.length)];
-      b = watchedMovies[Math.floor(Math.random() * watchedMovies.length)];
-      attempts++;
-    } while (
-      (a.title === b.title && a.year === b.year ||
-       ratingKey(a) + '|' + ratingKey(b) === lastPairKey ||
-       ratingKey(b) + '|' + ratingKey(a) === lastPairKey) &&
-      attempts < 50
-    );
+    const [a, b] = selectPair(watchedMovies, personalElo, recentMovies.current, pairHistory.current);
     setMovieA(a);
     setMovieB(b);
     setEloChange(null);
-    setLastPairKey(ratingKey(a) + '|' + ratingKey(b));
+    setMatchupLabel(getMatchupLabel(a, b));
+
+    // Track recent movies and pair history
+    recentMovies.current.push(ratingKey(a), ratingKey(b));
+    if (recentMovies.current.length > 10) recentMovies.current = recentMovies.current.slice(-10);
+    const pk = makePairKey(a, b);
+    pairHistory.current[pk] = (pairHistory.current[pk] || 0) + 1;
 
     // Fetch posters
     setLoadingPosters(true);
@@ -64,7 +209,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
       setPosterB(dataB?.poster || null);
       setLoadingPosters(false);
     });
-  }, [watchedMovies, hasEnough, lastPairKey]);
+  }, [watchedMovies, hasEnough, personalElo]);
 
   // Pick initial pair
   useEffect(() => {
@@ -76,14 +221,10 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
     try {
       const lb = await getEloLeaderboard();
       setLeaderboard(lb);
-    } catch (e) {
-      // Silently fail on leaderboard load
-    }
+    } catch (e) { /* silently fail */ }
   }, []);
 
-  useEffect(() => {
-    refreshLeaderboard();
-  }, [refreshLeaderboard]);
+  useEffect(() => { refreshLeaderboard(); }, [refreshLeaderboard]);
 
   // Load all profiles for the personal rankings dropdown
   useEffect(() => {
@@ -116,24 +257,24 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
   const personalLeaderboard = useMemo(() => {
     return Object.entries(viewingElo)
       .map(([key, data]) => {
-        // Key is a movie ID (or legacy "Title|year" format)
         const movie = MOVIES_BY_ID[key];
         let title, year;
         if (movie) {
           title = movie.title;
           year = movie.year;
         } else {
-          // Legacy "Title|year" format fallback
           const sepIdx = key.lastIndexOf('|');
           title = sepIdx > 0 ? key.substring(0, sepIdx) : key;
           year = sepIdx > 0 ? key.substring(sepIdx + 1) : '';
         }
+        const confidence = getConfidenceLabel(data.matchCount || 0);
         return {
           id: key,
           title,
           year,
           elo: data.elo,
           matchCount: data.matchCount,
+          confidence,
         };
       })
       .sort((a, b) => b.elo - a.elo);
@@ -149,17 +290,13 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
 
     try {
       const result = await recordVote(
-        profile.id,
-        keyA,
-        keyB,
-        winnerKey,
-        movieA,
-        movieB
+        profile.id, keyA, keyB, winnerKey, movieA, movieB
       );
-      // Show ELO change animation
+
+      // Show actual ELO point changes
       setEloChange({
-        a: winner === 'a' ? '+' : '-',
-        b: winner === 'b' ? '+' : '-',
+        a: result.deltaA,
+        b: result.deltaB,
         winner,
       });
 
@@ -167,10 +304,9 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
       const updatedPersonal = await updatePersonalElo(profile.id, keyA, keyB, winnerKey);
       if (updatedPersonal) setPersonalElo(updatedPersonal);
 
-      // Refresh leaderboard
       await refreshLeaderboard();
+      sessionVotes.current++;
 
-      // After delay, load next pair
       setTimeout(() => {
         pickPair();
         setVoting(false);
@@ -223,66 +359,71 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
       )}
 
       {movieA && movieB && (
-        <div className="battle-arena">
-          {/* Movie A */}
-          <div
-            className="battle-card"
-            onClick={() => !voting && handleVote('a')}
-            style={{ opacity: voting ? 0.7 : 1 }}
-          >
-            {loadingPosters ? (
-              <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div className="spinner" />
-              </div>
-            ) : posterA ? (
-              <img className="battle-card-poster" src={posterA} alt={movieA.title} />
-            ) : (
-              <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem' }}>
-                🎬
-              </div>
-            )}
-            <div className="battle-card-info">
-              <div className="battle-card-title">{movieA.title}</div>
-              <div className="battle-card-year">{movieA.year}</div>
-              {eloChange && (
-                <div className={`battle-elo-change ${eloChange.winner === 'a' ? 'positive' : 'negative'}`}>
-                  {eloChange.winner === 'a' ? 'Winner!' : ''}
+        <>
+          {matchupLabel && (
+            <div className="battle-matchup-label">{matchupLabel}</div>
+          )}
+          <div className="battle-arena">
+            {/* Movie A */}
+            <div
+              className="battle-card"
+              onClick={() => !voting && handleVote('a')}
+              style={{ opacity: voting ? 0.7 : 1 }}
+            >
+              {loadingPosters ? (
+                <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div className="spinner" />
+                </div>
+              ) : posterA ? (
+                <img className="battle-card-poster" src={posterA} alt={movieA.title} />
+              ) : (
+                <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem' }}>
+                  🎬
                 </div>
               )}
+              <div className="battle-card-info">
+                <div className="battle-card-title">{movieA.title}</div>
+                <div className="battle-card-year">{movieA.year}</div>
+                {eloChange && (
+                  <div className={`battle-elo-change ${eloChange.winner === 'a' ? 'positive' : 'negative'}`}>
+                    {eloChange.a > 0 ? '+' : ''}{eloChange.a}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
 
-          {/* VS divider */}
-          <div className="battle-vs">VS</div>
+            {/* VS divider */}
+            <div className="battle-vs">VS</div>
 
-          {/* Movie B */}
-          <div
-            className="battle-card"
-            onClick={() => !voting && handleVote('b')}
-            style={{ opacity: voting ? 0.7 : 1 }}
-          >
-            {loadingPosters ? (
-              <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div className="spinner" />
-              </div>
-            ) : posterB ? (
-              <img className="battle-card-poster" src={posterB} alt={movieB.title} />
-            ) : (
-              <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem' }}>
-                🎬
-              </div>
-            )}
-            <div className="battle-card-info">
-              <div className="battle-card-title">{movieB.title}</div>
-              <div className="battle-card-year">{movieB.year}</div>
-              {eloChange && (
-                <div className={`battle-elo-change ${eloChange.winner === 'b' ? 'positive' : 'negative'}`}>
-                  {eloChange.winner === 'b' ? 'Winner!' : ''}
+            {/* Movie B */}
+            <div
+              className="battle-card"
+              onClick={() => !voting && handleVote('b')}
+              style={{ opacity: voting ? 0.7 : 1 }}
+            >
+              {loadingPosters ? (
+                <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div className="spinner" />
+                </div>
+              ) : posterB ? (
+                <img className="battle-card-poster" src={posterB} alt={movieB.title} />
+              ) : (
+                <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3rem' }}>
+                  🎬
                 </div>
               )}
+              <div className="battle-card-info">
+                <div className="battle-card-title">{movieB.title}</div>
+                <div className="battle-card-year">{movieB.year}</div>
+                {eloChange && (
+                  <div className={`battle-elo-change ${eloChange.winner === 'b' ? 'positive' : 'negative'}`}>
+                    {eloChange.b > 0 ? '+' : ''}{eloChange.b}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
 
       <button className="battle-skip" onClick={() => !voting && pickPair()} disabled={voting}>
@@ -298,6 +439,9 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         <summary>How does this work?</summary>
         <p>
           Pick the film you think is better. Each movie has an <strong>ELO rating</strong> (like chess rankings) that starts at 1500. When you vote, the winner gains points and the loser drops — but beating a highly-rated film earns more points than beating a low-rated one.
+        </p>
+        <p>
+          Matchups are chosen smartly — similar-rated films face off for tough choices, under-ranked films get more exposure, and the occasional wildcard keeps things interesting.
         </p>
         <p>
           <strong>Global Rankings</strong> combine everyone's votes. <strong>Personal Rankings</strong> are yours alone — your own taste, your own ladder. You can only vote on films you've watched.
@@ -375,7 +519,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
                   <th>Title</th>
                   <th>Year</th>
                   <th>ELO</th>
-                  <th>Matches</th>
+                  <th style={{ minWidth: '60px' }}>Status</th>
                 </tr>
               </thead>
               <tbody>
@@ -388,7 +532,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
                       <td>{entry.title}</td>
                       <td>{entry.year}</td>
                       <td style={{ fontWeight: 'bold', color: 'var(--gold)' }}>{entry.elo}</td>
-                      <td>{entry.matchCount}</td>
+                      <td style={{ color: entry.confidence.color, fontSize: '0.75rem' }}>{entry.confidence.label}</td>
                     </tr>
                   );
                 })}

@@ -54,7 +54,12 @@ export async function loadProfile(username) {
 
 // --- ELO ---
 
-const K = 32; // ELO K-factor
+function getKFactor(matchCount) {
+  if (matchCount <= 5) return 48;
+  if (matchCount <= 15) return 32;
+  if (matchCount <= 30) return 24;
+  return 16;
+}
 
 export async function getOrCreateElo(movieKey, movieData) {
   const ref = doc(db, 'elo', movieKey);
@@ -78,13 +83,15 @@ export async function recordVote(voter, movieAKey, movieBKey, winnerKey, movieAD
   const eloA = await getOrCreateElo(movieAKey, movieAData);
   const eloB = await getOrCreateElo(movieBKey, movieBData);
 
-  // Calculate new ELOs
+  // Calculate new ELOs with dynamic K per movie
+  const kA = getKFactor(eloA.matchCount || 0);
+  const kB = getKFactor(eloB.matchCount || 0);
   const expectedA = 1 / (1 + Math.pow(10, (eloB.elo - eloA.elo) / 400));
   const expectedB = 1 - expectedA;
   const scoreA = winnerKey === movieAKey ? 1 : 0;
   const scoreB = 1 - scoreA;
-  const newEloA = Math.round(eloA.elo + K * (scoreA - expectedA));
-  const newEloB = Math.round(eloB.elo + K * (scoreB - expectedB));
+  const newEloA = Math.round(eloA.elo + kA * (scoreA - expectedA));
+  const newEloB = Math.round(eloB.elo + kB * (scoreB - expectedB));
 
   // Update ELO docs
   await updateDoc(doc(db, 'elo', movieAKey), { elo: newEloA, matchCount: (eloA.matchCount || 0) + 1 });
@@ -99,7 +106,7 @@ export async function recordVote(voter, movieAKey, movieBKey, winnerKey, movieAD
     timestamp: serverTimestamp(),
   });
 
-  return { newEloA, newEloB };
+  return { newEloA, newEloB, deltaA: newEloA - eloA.elo, deltaB: newEloB - eloB.elo };
 }
 
 export async function getEloLeaderboard() {
@@ -126,12 +133,13 @@ export async function updatePersonalElo(profileId, movieAKey, movieBKey, winnerK
   const countA = personalElo[movieAKey]?.matchCount || 0;
   const countB = personalElo[movieBKey]?.matchCount || 0;
 
-  const K = 32;
+  const kA = getKFactor(countA);
+  const kB = getKFactor(countB);
   const expectedA = 1 / (1 + Math.pow(10, (eloB - eloA) / 400));
   const scoreA = winnerKey === movieAKey ? 1 : 0;
   const scoreB = 1 - scoreA;
-  const newEloA = Math.round(eloA + K * (scoreA - expectedA));
-  const newEloB = Math.round(eloB + K * (scoreB - (1 - expectedA)));
+  const newEloA = Math.round(eloA + kA * (scoreA - expectedA));
+  const newEloB = Math.round(eloB + kB * (scoreB - (1 - expectedA)));
 
   personalElo[movieAKey] = { elo: newEloA, matchCount: countA + 1 };
   personalElo[movieBKey] = { elo: newEloB, matchCount: countB + 1 };

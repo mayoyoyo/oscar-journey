@@ -2768,9 +2768,11 @@ main {
   right: 0;
   background: var(--bg2);
   border-top: 1px solid var(--border);
-  z-index: 100;
+  z-index: 500;
   padding: 6px 0;
   padding-bottom: env(safe-area-inset-bottom, 6px); /* iPhone safe area */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .mobile-tab {

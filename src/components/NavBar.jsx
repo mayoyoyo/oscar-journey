@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AVATAR_EMOJIS } from '../data/avatars';
 
-const tabs = [
+export const tabs = [
   { id: 'journey', label: '🎬 Journey', icon: '🎬', shortLabel: 'Journey' },
   { id: 'list', label: '📋 Films', icon: '📋', shortLabel: 'Films' },
   { id: 'battle', label: '⚔️ Battle', icon: '⚔️', shortLabel: 'Battle' },
@@ -100,19 +100,6 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
         </div>
       </nav>
 
-      {/* Bottom tab bar for mobile */}
-      <div className="mobile-tab-bar">
-        {tabs.map(tab => (
-          <button
-            key={tab.id}
-            className={`mobile-tab ${activeTab === tab.id ? 'active' : ''}`}
-            onClick={() => onTabChange(tab.id)}
-          >
-            <span className="mobile-tab-icon">{tab.icon}</span>
-            <span className="mobile-tab-label">{tab.shortLabel}</span>
-          </button>
-        ))}
-      </div>
     </>
   );
 }

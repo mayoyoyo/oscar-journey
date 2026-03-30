@@ -7,7 +7,7 @@ import {
 import { loadProfile, saveProfileField, recordActivity, getRecentActivity } from './utils/firebaseStorage';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './utils/firebase';
-import NavBar from './components/NavBar';
+import NavBar, { tabs } from './components/NavBar';
 import ProgressBar from './components/ProgressBar';
 import StartScreen from './components/StartScreen';
 import FilmCard from './components/FilmCard';
@@ -1010,6 +1010,20 @@ export default function App() {
         />
       )}
       </div>{/* end app-scroll-area */}
+
+      {/* Mobile bottom tab bar — sits at bottom of flex layout */}
+      <div className="mobile-tab-bar">
+        {tabs.map(tab => (
+          <button
+            key={tab.id}
+            className={`mobile-tab ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={() => handleTabChange(tab.id)}
+          >
+            <span className="mobile-tab-icon">{tab.icon}</span>
+            <span className="mobile-tab-label">{tab.shortLabel}</span>
+          </button>
+        ))}
+      </div>
 
       {/* Film detail modal */}
       {detailMovie && (

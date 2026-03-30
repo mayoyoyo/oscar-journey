@@ -1136,6 +1136,7 @@ main {
   border-bottom: 2px solid var(--border);
   padding-bottom: 6px;
   margin-bottom: 4px;
+  padding-left: 18px;
 }
 
 .film-row {

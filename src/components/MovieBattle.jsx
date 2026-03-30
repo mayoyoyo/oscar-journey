@@ -164,6 +164,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
   const [selectedProfileId, setSelectedProfileId] = useState(profile?.id || '');
   const [viewingElo, setViewingElo] = useState(profile?.personalElo || {});
   const [matchupLabel, setMatchupLabel] = useState(null);
+  const [rankingsTab, setRankingsTab] = useState('personal');
 
   // Session tracking
   const recentMovies = useRef([]);
@@ -448,11 +449,22 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         </p>
       </details>
 
-      {/* Rankings — both shown side by side */}
+      {/* Rankings tabs for mobile, side-by-side on desktop */}
+      <div className="battle-rankings-tabs">
+        <button
+          className={`battle-rankings-tab ${rankingsTab === 'personal' ? 'active' : ''}`}
+          onClick={() => setRankingsTab('personal')}
+        >My Rankings</button>
+        <button
+          className={`battle-rankings-tab ${rankingsTab === 'global' ? 'active' : ''}`}
+          onClick={() => setRankingsTab('global')}
+        >Global Rankings</button>
+      </div>
+
       <div className="battle-rankings-grid">
         {/* Global Leaderboard */}
-        <div className="battle-rankings-col">
-          <div className="leaderboard-title">🌍 Global Rankings</div>
+        <div className={`battle-rankings-col battle-rankings-global ${rankingsTab !== 'global' ? 'battle-rankings-hidden' : ''}`}>
+          <div className="leaderboard-title battle-rankings-desktop-title">🌍 Global Rankings</div>
           {leaderboard.length === 0 ? (
             <p style={{ color: 'var(--cream-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
               No rankings yet. Cast some votes!
@@ -488,9 +500,27 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         </div>
 
         {/* Personal Leaderboard */}
-        <div className="battle-rankings-col">
-          <div className="battle-rankings-header">
+        <div className={`battle-rankings-col battle-rankings-personal ${rankingsTab !== 'personal' ? 'battle-rankings-hidden' : ''}`}>
+          <div className="battle-rankings-header battle-rankings-desktop-title">
             <span className="leaderboard-title" style={{ marginBottom: 0 }}>👤</span>
+            <select
+              className="battle-profile-select"
+              value={selectedProfileId}
+              onChange={(e) => setSelectedProfileId(e.target.value)}
+            >
+              {profile && <option value={profile.id}>My Rankings</option>}
+              {allProfiles
+                .filter(p => p.id !== profile?.id)
+                .map(p => (
+                  <option key={p.id} value={p.id}>
+                    {p.avatar} {p.displayName}
+                  </option>
+                ))
+              }
+            </select>
+          </div>
+          {/* Mobile profile select — visible only on mobile */}
+          <div className="battle-rankings-mobile-select">
             <select
               className="battle-profile-select"
               value={selectedProfileId}

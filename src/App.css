@@ -2456,8 +2456,12 @@ main {
 }
 
 /* =====================================================
-   BATTLE RANKINGS — SIDE BY SIDE
+   BATTLE RANKINGS — SIDE BY SIDE / TABBED ON MOBILE
    ===================================================== */
+.battle-rankings-tabs {
+  display: none;
+}
+
 .battle-rankings-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2470,10 +2474,52 @@ main {
   overflow-x: auto;
 }
 
+.battle-rankings-mobile-select {
+  display: none;
+}
+
 @media (max-width: 700px) {
+  .battle-rankings-tabs {
+    display: flex;
+    gap: 0;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .battle-rankings-tab {
+    flex: 1;
+    padding: 10px 0;
+    background: var(--bg2);
+    border: none;
+    color: var(--cream-dim);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .battle-rankings-tab.active {
+    background: var(--gold);
+    color: #1a1a1a;
+    font-weight: 600;
+  }
   .battle-rankings-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 0;
+  }
+  .battle-rankings-hidden {
+    display: none;
+  }
+  .battle-rankings-desktop-title {
+    display: none;
+  }
+  .battle-rankings-mobile-select {
+    display: block;
+    margin-bottom: 12px;
+  }
+  .battle-rankings-mobile-select .battle-profile-select {
+    width: 100%;
   }
 }
 

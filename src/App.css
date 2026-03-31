@@ -617,27 +617,36 @@ main {
 
 .film-detail-metrics {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
   padding: 8px 0;
+  align-items: flex-start;
 }
 
 .metric-item {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 3px;
+  min-width: 44px;
 }
 
 .metric-value {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--gold);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
 }
 
 .metric-label {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   color: var(--cream-dim);
   letter-spacing: 0.04em;
+  text-align: center;
 }
 
 .film-detail-all-ratings {

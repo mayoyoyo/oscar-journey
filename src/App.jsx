@@ -221,8 +221,10 @@ export default function App() {
     const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
     const hash = window.location.hash.replace('#', '');
     const tabMap = { journey: 'journey', films: 'list', list: 'list', battle: 'battle', profiles: 'leaderboard', leaderboard: 'leaderboard' };
+    const firstSegment = path.split('/')[0];
+    if (tabMap[firstSegment]) return tabMap[firstSegment];
     if (tabMap[path]) return tabMap[path];
-    if (tabMap[hash]) return tabMap[hash]; // fallback for old hash links
+    if (tabMap[hash]) return tabMap[hash];
     return localStorage.getItem(LS_TAB_KEY) || 'journey';
   });
   const [screen, setScreen] = useState('start'); // 'start' | 'card' | 'complete'
@@ -234,7 +236,12 @@ export default function App() {
   const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
   const [infoOpen, setInfoOpen] = useState(false);
   const [profileModalId, setProfileModalId] = useState(null);
-  const [autoSelectProfileId, setAutoSelectProfileId] = useState(null);
+  const [autoSelectProfileId, setAutoSelectProfileId] = useState(() => {
+    const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    const parts = path.split('/');
+    if (parts[0] === 'profiles' && parts[1]) return parts[1];
+    return null;
+  });
   const [dailyOpen, setDailyOpen] = useState(false);
   const [bannerDismissed, setBannerDismissed] = useState(() => {
     return localStorage.getItem('oscars_banner_dismissed') === 'true';

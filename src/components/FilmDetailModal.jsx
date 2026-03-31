@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { fetchOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
@@ -19,6 +19,9 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     if (!movie) return;
     setLoading(true);
     setOmdbData(null);
+    setGlobalElo(null);
+    setAggregateRating(null);
+    setWatchedBy([]);
     fetchOmdbData(movie).then(data => {
       setOmdbData(data);
       setLoading(false);
@@ -69,23 +72,24 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   }, [movie?.title, movie?.year, movie?.id]);
 
   // Navigation within movie list
-  const currentListIdx = movieList ? movieList.findIndex(m => m.id === movie.id) : -1;
+  const currentListIdx = movie && movieList ? movieList.findIndex(m => m.id === movie.id) : -1;
   const hasPrev = movieList && currentListIdx > 0;
   const hasNext = movieList && currentListIdx >= 0 && currentListIdx < movieList.length - 1;
 
-  const goPrev = () => {
-    if (hasPrev && movieList && currentListIdx > 0 && onNavigate) {
-      onNavigate(movieList[currentListIdx - 1]);
-    }
-  };
-  const goNext = () => {
-    if (hasNext && movieList && currentListIdx < movieList.length - 1 && onNavigate) {
-      onNavigate(movieList[currentListIdx + 1]);
-    }
-  };
+  const goPrev = useCallback(() => {
+    if (!movieList || !onNavigate) return;
+    const idx = movieList.findIndex(m => m.id === movie?.id);
+    if (idx > 0) onNavigate(movieList[idx - 1]);
+  }, [movie?.id, movieList, onNavigate]);
+
+  const goNext = useCallback(() => {
+    if (!movieList || !onNavigate) return;
+    const idx = movieList.findIndex(m => m.id === movie?.id);
+    if (idx >= 0 && idx < movieList.length - 1) onNavigate(movieList[idx + 1]);
+  }, [movie?.id, movieList, onNavigate]);
 
   // Keyboard navigation
-  React.useEffect(() => {
+  useEffect(() => {
     if (!movieList) return;
     const handler = (e) => {
       if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }

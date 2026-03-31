@@ -226,6 +226,7 @@ export default function App() {
   const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
   const [infoOpen, setInfoOpen] = useState(false);
   const [profileModalId, setProfileModalId] = useState(null);
+  const [autoSelectProfileId, setAutoSelectProfileId] = useState(null);
   const [bannerDismissed, setBannerDismissed] = useState(() => {
     return localStorage.getItem('oscars_banner_dismissed') === 'true';
   });
@@ -1037,6 +1038,8 @@ export default function App() {
             firebaseSave(field, value);
             setProfile(prev => prev ? { ...prev, [field]: value } : prev);
           }}
+          autoSelectProfileId={autoSelectProfileId}
+          onClearAutoSelect={() => setAutoSelectProfileId(null)}
         />
       )}
       </div>{/* end app-scroll-area */}
@@ -1105,6 +1108,7 @@ export default function App() {
           onAvatarChange={handleAvatarChange}
           onViewFullProfile={(id) => {
             setProfileModalId(null);
+            setAutoSelectProfileId(id);
             handleTabChange('leaderboard');
           }}
           onSaveProfile={(field, value) => {

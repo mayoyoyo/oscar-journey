@@ -34,7 +34,7 @@ async function getAllProfiles() {
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters, onSaveProfile }) {
+export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters, onSaveProfile, autoSelectProfileId, onClearAutoSelect }) {
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProfile, setSelectedProfile] = useState(null);
@@ -54,6 +54,15 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
     load();
     return () => { cancelled = true; };
   }, []);
+
+  // Auto-select a profile when navigated from profile modal
+  useEffect(() => {
+    if (autoSelectProfileId && profiles.length > 0 && !loading) {
+      const target = profiles.find(p => p.id === autoSelectProfileId);
+      if (target) setSelectedProfile(target);
+      if (onClearAutoSelect) onClearAutoSelect();
+    }
+  }, [autoSelectProfileId, profiles, loading]);
 
   // Compute profile stats (real profiles + virtual co-rater profiles)
   const profileStats = useMemo(() => {

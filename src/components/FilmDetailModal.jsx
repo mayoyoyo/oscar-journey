@@ -14,6 +14,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const [globalElo, setGlobalElo] = useState(null);
   const [aggregateRating, setAggregateRating] = useState(null);
   const [watchedBy, setWatchedBy] = useState([]);
+  const [posterError, setPosterError] = useState(false);
 
   useEffect(() => {
     if (!movie) return;
@@ -22,6 +23,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     setGlobalElo(null);
     setAggregateRating(null);
     setWatchedBy([]);
+    setPosterError(false);
     fetchOmdbData(movie).then(data => {
       setOmdbData(data);
       setLoading(false);
@@ -117,20 +119,12 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
           <div className="film-detail-poster">
             {loading ? (
               <div className="poster-loading"><div className="spinner" /></div>
-            ) : omdbData?.poster ? (
+            ) : omdbData?.poster && !posterError ? (
               <img
                 src={omdbData.poster}
                 alt={`${movie.title} poster`}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.parentNode.innerHTML = `
-                    <div class="poster-placeholder" style="min-height:280px;height:100%;">
-                      <div class="ph-icon">🎬</div>
-                      <div class="ph-title">${movie.title}</div>
-                    </div>
-                  `;
-                }}
+                onError={() => setPosterError(true)}
               />
             ) : (
               <div className="poster-placeholder" style={{ minHeight: '280px', height: '100%' }}>

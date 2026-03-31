@@ -1867,6 +1867,8 @@ main {
   .login-screen h2 { font-size: 1.2rem; }
   .login-avatar-grid { grid-template-columns: repeat(7, 1fr); max-height: 120px; }
   .login-brand-icon { font-size: 1.6rem; }
+  /* Prevent iOS zoom on input focus */
+  input, select, textarea { font-size: 16px !important; }
 }
 
 /* =====================================================

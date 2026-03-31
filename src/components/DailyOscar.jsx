@@ -308,7 +308,11 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
               onChange={(e) => handleInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === 'Enter') handleGuess(); }}
               placeholder={`Guess ${guesses.length + 1} of ${MAX_GUESSES}...`}
-              autoFocus
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
+              name="oscars_daily_guess"
             />
             {suggestions.length > 0 && (
               <div className="daily-suggestions">

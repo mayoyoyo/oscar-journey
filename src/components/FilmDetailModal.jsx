@@ -114,7 +114,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     }}>
       {movieList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
       {movieList && hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
-      <div className="modal" style={{ maxWidth: '640px', padding: 0, overflow: 'hidden', position: 'relative' }}>
+      <div className="modal film-detail-modal">
         <button className="film-detail-close" onClick={onClose}>✕</button>
         <div className="film-detail-inner">
           <div className="film-detail-poster">
@@ -124,7 +124,6 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               <img
                 src={omdbData.poster}
                 alt={`${movie.title} poster`}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 onError={() => setPosterError(true)}
               />
             ) : (
@@ -136,7 +135,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
           </div>
           <div className="film-detail-body">
             <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
-            <div className="film-title" style={{ fontSize: '1.4rem' }}>{movie.title}</div>
+            <div className="film-title">{movie.title}</div>
             <div className="film-year">{movie.year}</div>
             <MovieBadges movie={movie} />
 

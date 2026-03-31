@@ -4878,7 +4878,7 @@ main {
 .daily-input::placeholder { color: #666; }
 .daily-suggestions {
   position: absolute;
-  top: calc(100% + 4px);
+  bottom: calc(100% + 4px);
   left: 0; right: 0;
   background: #1c1a16;
   border: 1px solid rgba(212,175,55,0.2);

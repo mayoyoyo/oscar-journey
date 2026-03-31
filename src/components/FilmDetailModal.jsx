@@ -74,10 +74,14 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const hasNext = movieList && currentListIdx >= 0 && currentListIdx < movieList.length - 1;
 
   const goPrev = () => {
-    if (hasPrev && onNavigate) onNavigate(movieList[currentListIdx - 1]);
+    if (hasPrev && movieList && currentListIdx > 0 && onNavigate) {
+      onNavigate(movieList[currentListIdx - 1]);
+    }
   };
   const goNext = () => {
-    if (hasNext && onNavigate) onNavigate(movieList[currentListIdx + 1]);
+    if (hasNext && movieList && currentListIdx < movieList.length - 1 && onNavigate) {
+      onNavigate(movieList[currentListIdx + 1]);
+    }
   };
 
   // Keyboard navigation
@@ -89,7 +93,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     };
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
-  });
+  }, [movieList, goPrev, goNext]);
 
   if (!movie) return null;
 

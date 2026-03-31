@@ -298,14 +298,6 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
               )}
             </form>
             <div className="daily-remaining">{MAX_GUESSES - guesses.length} guess{MAX_GUESSES - guesses.length !== 1 ? 'es' : ''} left</div>
-            <div className="daily-guesses">
-              {guesses.map((g, i) => (
-                <div key={i} className={`daily-guess-row ${g.toLowerCase() === movie.title.toLowerCase() ? 'daily-guess-correct' : 'daily-guess-wrong'}`}>
-                  <span>{g}</span>
-                  <span>{g.toLowerCase() === movie.title.toLowerCase() ? '✓' : '✗'}</span>
-                </div>
-              ))}
-            </div>
           </div>
         )}
 
@@ -354,6 +346,18 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
             </div>
           )}
         </div>
+
+        {/* Guesses */}
+        {guesses.length > 0 && !solved && !failed && (
+          <div className="daily-guesses">
+            {guesses.map((g, i) => (
+              <div key={i} className={`daily-guess-row daily-guess-wrong`}>
+                <span>{g}</span>
+                <span>✗</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Results */}
         {solved && (

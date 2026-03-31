@@ -351,8 +351,11 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
                         className={`pd-wallet-card ${isShowcased ? 'pd-wallet-active' : ''}`}
                         style={{ '--rarity-border': rarity.border, '--rarity-glow': rarity.glow }}
                         onClick={() => {
-                          if (!isOwnProfile || !onSaveProfile) return;
-                          onSaveProfile('showcase', isShowcased ? [] : [card]);
+                          if (isOwnProfile && onSaveProfile) {
+                            onSaveProfile('showcase', isShowcased ? [] : [card]);
+                          } else {
+                            onOpenDetail && onOpenDetail(movie);
+                          }
                         }}
                       >
                         <FilmTilePoster movie={movie} />

@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { createProfile, loginProfile } from '../utils/firebaseStorage';
-
 import { AVATAR_EMOJIS } from '../data/avatars';
 
 export default function LoginScreen({ onLogin }) {
-  const [mode, setMode] = useState('login'); // 'login' | 'create'
+  const [mode, setMode] = useState('login');
   const [username, setUsername] = useState('');
   const [passcode, setPasscode] = useState('');
   const [confirmPasscode, setConfirmPasscode] = useState('');
   const [displayName, setDisplayName] = useState('');
   const [avatar, setAvatar] = useState(AVATAR_EMOJIS[0]);
+  const [showAvatarPicker, setShowAvatarPicker] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // Auto-generate username from display name
   const handleDisplayNameChange = (val) => {
     setDisplayName(val);
     if (mode === 'create') {
@@ -55,7 +54,6 @@ export default function LoginScreen({ onLogin }) {
     setLoading(true);
     try {
       const profile = await createProfile(username, passcode, displayName, avatar);
-      // Reload full profile data after creation
       onLogin({ ...profile, avatar, watched: [], ratings: {}, playlistOrder: null, seed: null, currentIdx: 0, raters: [displayName.trim()] });
     } catch (e) {
       setError(e.message);
@@ -73,6 +71,11 @@ export default function LoginScreen({ onLogin }) {
 
   return (
     <div className="login-screen">
+      <div className="login-brand">
+        <span className="login-brand-icon">🏆</span>
+        <span className="login-brand-text">The Oscars Journey</span>
+      </div>
+
       <h2>{mode === 'login' ? 'Welcome Back' : 'Create Profile'}</h2>
       <p className="login-subtitle">
         {mode === 'login'
@@ -84,30 +87,39 @@ export default function LoginScreen({ onLogin }) {
 
       {mode === 'create' && (
         <>
+          {/* Avatar picker — tap to expand */}
           <div className="login-field">
-            <label>Pick Your Avatar</label>
-            <div className="avatar-grid">
-              {AVATAR_EMOJIS.map((emoji, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  className={`avatar-option ${avatar === emoji ? 'selected' : ''}`}
-                  onClick={() => setAvatar(emoji)}
-                >
-                  {emoji}
-                </button>
-              ))}
+            <label>Your Avatar</label>
+            <div className="login-avatar-selected" onClick={() => setShowAvatarPicker(p => !p)}>
+              <span className="login-avatar-emoji">{avatar}</span>
+              <span className="login-avatar-change">{showAvatarPicker ? 'Close' : 'Tap to change'}</span>
             </div>
+            {showAvatarPicker && (
+              <div className="login-avatar-grid">
+                {AVATAR_EMOJIS.map((emoji, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    className={`login-avatar-option ${avatar === emoji ? 'selected' : ''}`}
+                    onClick={() => { setAvatar(emoji); setShowAvatarPicker(false); }}
+                  >
+                    {emoji}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
+
           <div className="login-field">
             <label>Display Name</label>
             <input
               type="text"
+              name="oscars_display"
+              autoComplete="off"
               value={displayName}
               onChange={(e) => handleDisplayNameChange(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="e.g. Chris"
-              autoFocus
             />
           </div>
         </>
@@ -117,24 +129,28 @@ export default function LoginScreen({ onLogin }) {
         <label>Username</label>
         <input
           type="text"
+          name="oscars_user"
+          autoComplete="off"
           value={username}
           onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9]/g, ''))}
           onKeyDown={handleKeyDown}
           placeholder="e.g. chris"
-          autoFocus={mode === 'login'}
         />
       </div>
 
       <div className="login-field">
         <label>4-Digit Passcode</label>
         <input
-          type="password"
+          type="tel"
+          name="oscars_pass"
+          autoComplete="off"
           value={passcode}
           onChange={(e) => setPasscode(e.target.value.replace(/\D/g, '').slice(0, 4))}
           onKeyDown={handleKeyDown}
-          placeholder="1234"
+          placeholder="••••"
           inputMode="numeric"
           maxLength={4}
+          style={{ WebkitTextSecurity: 'disc' }}
         />
       </div>
 
@@ -142,13 +158,16 @@ export default function LoginScreen({ onLogin }) {
         <div className="login-field">
           <label>Confirm Passcode</label>
           <input
-            type="password"
+            type="tel"
+            name="oscars_confirm"
+            autoComplete="off"
             value={confirmPasscode}
             onChange={(e) => setConfirmPasscode(e.target.value.replace(/\D/g, '').slice(0, 4))}
             onKeyDown={handleKeyDown}
-            placeholder="1234"
+            placeholder="••••"
             inputMode="numeric"
             maxLength={4}
+            style={{ WebkitTextSecurity: 'disc' }}
           />
         </div>
       )}

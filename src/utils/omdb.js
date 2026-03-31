@@ -79,8 +79,9 @@ export async function fetchOmdbData(movie) {
       };
     }
 
-    // Not found with year — retry without year
-    if (!data || data.Response === 'False') {
+    // Not found with year, OR found but no poster — retry without year
+    const hasPoster = data && data.Poster && data.Poster !== 'N/A';
+    if (!data || data.Response === 'False' || !hasPoster) {
       data = await tryWithKey(titleEnc, null);
 
       if (data.rateLimited) {

@@ -1102,6 +1102,11 @@ export default function App() {
           currentRatings={ratings}
           onOpenDetail={(movie) => { setProfileModalId(null); setDetailMovie(movie); }}
           onOpenProfile={(id) => setProfileModalId(id)}
+          onAvatarChange={handleAvatarChange}
+          onViewFullProfile={(id) => {
+            setProfileModalId(null);
+            handleTabChange('leaderboard');
+          }}
           onSaveProfile={(field, value) => {
             firebaseSave(field, value);
             setProfile(prev => prev ? { ...prev, [field]: value } : prev);

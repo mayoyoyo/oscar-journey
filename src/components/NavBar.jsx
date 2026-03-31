@@ -67,31 +67,11 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
         </div>
         <div className="nav-right">
           {profile && (
-            <span className="nav-user" style={{ position: 'relative' }}>
+            <span className="nav-user profile-name-link" onClick={() => onOpenProfile && onOpenProfile(profile.id)}>
               {profile.avatar && (
-                <span className="nav-user-avatar nav-avatar-clickable"
-                  onClick={(e) => { e.stopPropagation(); setShowEmojiPicker(prev => !prev); }}
-                  title="Change avatar"
-                >
-                  {profile.avatar}
-                </span>
+                <span className="nav-user-avatar">{profile.avatar}</span>
               )}
-              <span className="profile-name-link" onClick={() => onOpenProfile && onOpenProfile(profile.id)}>
-                {profile.displayName}
-              </span>
-              {showEmojiPicker && (
-                <div className="nav-emoji-picker">
-                  {AVATAR_EMOJIS.map((emoji, i) => (
-                    <button key={i} className={`nav-emoji-option ${profile.avatar === emoji ? 'selected' : ''}`}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onAvatarChange(emoji);
-                        setShowEmojiPicker(false);
-                      }}
-                    >{emoji}</button>
-                  ))}
-                </div>
-              )}
+              {profile.displayName}
             </span>
           )}
           <button className="nav-icon-btn" onClick={onToggleTheme} title="Toggle theme">

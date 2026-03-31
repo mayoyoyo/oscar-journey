@@ -4,6 +4,7 @@ import { db } from '../utils/firebase';
 import { MOVIES_BY_ID } from '../data/movies';
 import { RARITIES, getCollectorScore } from '../utils/cards';
 import { fetchOmdbData } from '../utils/omdb';
+import { AVATAR_EMOJIS } from '../data/avatars';
 
 function FeaturedCard({ card }) {
   const [poster, setPoster] = useState(null);
@@ -58,9 +59,10 @@ function FeaturedCard({ card }) {
   );
 }
 
-export default function ProfileModal({ profileId, onClose, currentProfile, currentRatings, onOpenDetail, onSaveProfile, onOpenProfile }) {
+export default function ProfileModal({ profileId, onClose, currentProfile, currentRatings, onOpenDetail, onSaveProfile, onOpenProfile, onAvatarChange, onViewFullProfile }) {
   const [profileData, setProfileData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
   useEffect(() => {
     if (!profileId) return;
@@ -110,10 +112,29 @@ export default function ProfileModal({ profileId, onClose, currentProfile, curre
 
             {/* Avatar + identity */}
             <div className="pm-identity">
-              <div className="pm-avatar">{p.avatar || '👤'}</div>
+              <div
+                className={`pm-avatar ${isOwn ? 'pm-avatar-editable' : ''}`}
+                onClick={() => { if (isOwn) setShowEmojiPicker(prev => !prev); }}
+                title={isOwn ? 'Change avatar' : undefined}
+              >
+                {p.avatar || '👤'}
+              </div>
               <div>
                 <div className="pm-name">{p.displayName || p.id}</div>
               </div>
+              {showEmojiPicker && isOwn && (
+                <div className="pm-emoji-picker">
+                  {AVATAR_EMOJIS.map((emoji, i) => (
+                    <button key={i} className={`pm-emoji-option ${p.avatar === emoji ? 'pm-emoji-selected' : ''}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (onAvatarChange) onAvatarChange(emoji);
+                        setShowEmojiPicker(false);
+                      }}
+                    >{emoji}</button>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="pm-body">
@@ -181,7 +202,7 @@ export default function ProfileModal({ profileId, onClose, currentProfile, curre
               <div className="pm-footer">
                 <button className="pm-view-full" onClick={() => {
                   onClose();
-                  // Navigate to profiles tab — handled by parent
+                  if (onViewFullProfile) onViewFullProfile(profileId);
                 }}>
                   View full profile →
                 </button>

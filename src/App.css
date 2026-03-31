@@ -3358,6 +3358,41 @@ main {
   font-size: 2rem;
   flex-shrink: 0;
 }
+.pm-avatar-editable {
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.pm-avatar-editable:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px rgba(212,175,55,0.4);
+}
+.pm-emoji-picker {
+  position: absolute;
+  top: 70px; left: 28px;
+  background: rgba(30,26,20,0.98);
+  border: 1px solid rgba(200,170,100,0.2);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  z-index: 10;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  max-height: 200px;
+  overflow-y: auto;
+}
+.pm-emoji-option {
+  width: 32px; height: 32px;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.pm-emoji-option:hover { background: rgba(255,255,255,0.1); }
+.pm-emoji-selected { background: rgba(212,175,55,0.2); }
+
 .pm-name {
   font-size: 1.2rem;
   font-weight: 700;

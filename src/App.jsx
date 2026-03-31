@@ -218,6 +218,9 @@ export default function App() {
   const [ratings, setRatings] = useState({});
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
   const [activeTab, setActiveTab] = useState(() => {
+    const hash = window.location.hash.replace('#', '');
+    const validTabs = ['journey', 'list', 'battle', 'leaderboard'];
+    if (validTabs.includes(hash)) return hash;
     return localStorage.getItem(LS_TAB_KEY) || 'journey';
   });
   const [screen, setScreen] = useState('start'); // 'start' | 'card' | 'complete'
@@ -861,6 +864,21 @@ export default function App() {
   const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
     localStorage.setItem(LS_TAB_KEY, tab);
+    window.history.pushState(null, '', `#${tab}`);
+  }, []);
+
+  // --- Hash routing: handle browser back/forward ---
+  useEffect(() => {
+    const onHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      const validTabs = ['journey', 'list', 'battle', 'leaderboard'];
+      if (validTabs.includes(hash)) {
+        setActiveTab(hash);
+        localStorage.setItem(LS_TAB_KEY, hash);
+      }
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
   // --- Loading state ---

@@ -473,21 +473,6 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         </div>
       )}
 
-      {/* Test pack button — remove before shipping */}
-      {hasEnough && (
-        <button
-          style={{ display: 'block', margin: '8px auto', fontSize: '0.7rem', color: 'var(--cream-dim)', background: 'none', border: '1px solid var(--border)', padding: '4px 12px', borderRadius: '8px', cursor: 'pointer' }}
-          onClick={() => {
-            const watchedIds = [...watchedSet];
-            const existingCards = (profile?.wallet || []).map(c => c.movieId);
-            const pack = generatePack(watchedIds, existingCards);
-            if (pack && pack.length > 0) setPendingPack(pack);
-          }}
-        >
-          Test Pack (dev only)
-        </button>
-      )}
-
       {/* Pack opening modal */}
       {pendingPack && (
         <PackOpening

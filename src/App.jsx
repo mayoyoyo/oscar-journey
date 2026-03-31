@@ -24,6 +24,7 @@ import ActivityFeed from './components/ActivityFeed';
 import { SkeletonCard } from './components/Skeleton';
 import InfoModal from './components/InfoModal';
 import ProfileModal from './components/ProfileModal';
+import CardsAnnouncement from './components/CardsAnnouncement';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
@@ -1095,6 +1096,9 @@ export default function App() {
       {infoOpen && (
         <InfoModal onClose={() => setInfoOpen(false)} />
       )}
+
+      {/* Cards announcement — one time only */}
+      {profile && <CardsAnnouncement />}
 
       {/* Profile modal */}
       {profileModalId && (

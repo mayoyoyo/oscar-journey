@@ -218,9 +218,11 @@ export default function App() {
   const [ratings, setRatings] = useState({});
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
   const [activeTab, setActiveTab] = useState(() => {
+    const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
     const hash = window.location.hash.replace('#', '');
     const tabMap = { journey: 'journey', films: 'list', list: 'list', battle: 'battle', profiles: 'leaderboard', leaderboard: 'leaderboard' };
-    if (tabMap[hash]) return tabMap[hash];
+    if (tabMap[path]) return tabMap[path];
+    if (tabMap[hash]) return tabMap[hash]; // fallback for old hash links
     return localStorage.getItem(LS_TAB_KEY) || 'journey';
   });
   const [screen, setScreen] = useState('start'); // 'start' | 'card' | 'complete'
@@ -864,22 +866,23 @@ export default function App() {
   const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
     localStorage.setItem(LS_TAB_KEY, tab);
-    const hashNames = { journey: 'journey', list: 'films', battle: 'battle', leaderboard: 'profiles' };
-    window.history.pushState(null, '', `#${hashNames[tab] || tab}`);
+    const pathNames = { journey: '/', list: '/films', battle: '/battle', leaderboard: '/profiles' };
+    window.history.pushState(null, '', pathNames[tab] || '/');
   }, []);
 
-  // --- Hash routing: handle browser back/forward ---
+  // --- Path routing: handle browser back/forward ---
   useEffect(() => {
-    const onHashChange = () => {
-      const hash = window.location.hash.replace('#', '');
-      const tabMap = { journey: 'journey', films: 'list', list: 'list', battle: 'battle', profiles: 'leaderboard', leaderboard: 'leaderboard' };
-      if (tabMap[hash]) {
-        setActiveTab(tabMap[hash]);
-        localStorage.setItem(LS_TAB_KEY, hash);
+    const onPopState = () => {
+      const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+      const tabMap = { '': 'journey', journey: 'journey', films: 'list', battle: 'battle', profiles: 'leaderboard' };
+      const tab = tabMap[path];
+      if (tab) {
+        setActiveTab(tab);
+        localStorage.setItem(LS_TAB_KEY, tab);
       }
     };
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
   }, []);
 
   // --- Loading state ---

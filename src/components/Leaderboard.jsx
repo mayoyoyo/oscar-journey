@@ -43,14 +43,15 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
   const selectProfile = (profile) => {
     setSelectedProfile(profile);
     if (profile) {
-      window.history.pushState({ profileId: profile.id }, '', `#profiles/${profile.id}`);
+      window.history.pushState({ profileId: profile.id }, '', `/profiles/${profile.id}`);
     }
   };
 
   useEffect(() => {
     const onPopState = () => {
       const hash = window.location.hash;
-      if (!hash.includes('profiles/') && selectedProfile) {
+      const path = window.location.pathname;
+      if (!path.includes('profiles/') && selectedProfile) {
         setSelectedProfile(null);
       }
     };

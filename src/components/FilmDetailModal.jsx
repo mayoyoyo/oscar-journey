@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { fetchOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
@@ -102,6 +102,23 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     return () => document.removeEventListener('keydown', handler);
   }, [movieList, goPrev, goNext]);
 
+  // Swipe gestures for mobile navigation
+  const touchStart = useRef(null);
+  const handleTouchStart = useCallback((e) => {
+    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }, []);
+  const handleTouchEnd = useCallback((e) => {
+    if (!touchStart.current || !movieList) return;
+    const dx = e.changedTouches[0].clientX - touchStart.current.x;
+    const dy = e.changedTouches[0].clientY - touchStart.current.y;
+    // Only trigger if horizontal swipe is dominant and > 60px
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      if (dx < 0) goNext();
+      else goPrev();
+    }
+    touchStart.current = null;
+  }, [goNext, goPrev, movieList]);
+
   if (!movie) return null;
 
   const key = ratingKey(movie);
@@ -114,7 +131,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     }}>
       {movieList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
       {movieList && hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
-      <div className="modal film-detail-modal">
+      <div className="modal film-detail-modal" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
         <button className="film-detail-close" onClick={onClose}>✕</button>
         <div className="film-detail-inner">
           <div className="film-detail-poster">

@@ -4,6 +4,11 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { writeFileSync, mkdirSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const backupsDir = join(__dirname, 'backups');
 
 const app = initializeApp({
   apiKey: 'AIzaSyBbJhYf0RZfptRjkyBoGDXp_uOw_CF2HUg',
@@ -28,10 +33,10 @@ async function backup() {
     }
   }
 
-  mkdirSync('backups', { recursive: true });
+  mkdirSync(backupsDir, { recursive: true });
   const date = new Date().toISOString().split('T')[0];
   const time = new Date().toISOString().split('T')[1].slice(0, 5).replace(':', '');
-  const filename = `backups/backup-${date}-${time}.json`;
+  const filename = join(backupsDir, `backup-${date}-${time}.json`);
   writeFileSync(filename, JSON.stringify(data, null, 2));
   console.log(`\nBackup saved to ${filename}`);
   process.exit(0);

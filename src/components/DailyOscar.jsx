@@ -188,6 +188,21 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
     }
   }, []);
 
+  // Prevent scroll jump when mobile keyboard opens
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const onResize = () => {
+      const modal = document.querySelector('.daily-modal');
+      if (modal) {
+        modal.style.height = vv.height + 'px';
+        window.scrollTo(0, 0);
+      }
+    };
+    vv.addEventListener('resize', onResize);
+    return () => vv.removeEventListener('resize', onResize);
+  }, []);
+
   // Countdown to next daily
   const [countdown, setCountdown] = useState('');
   useEffect(() => {

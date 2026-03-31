@@ -5027,18 +5027,16 @@ main {
   }
   .daily-modal {
     padding: 16px;
+    height: 100dvh;
     max-height: 100dvh;
     border-radius: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    transition: height 0.15s ease;
   }
   .daily-close { top: 8px; right: 8px; z-index: 10; }
 
-  /* Mobile order: input first, poster below, hints below that */
   .daily-content { display: flex; flex-direction: column; }
-  .daily-input-section { order: -1; }
-  .daily-poster-section { order: 1; }
-  .daily-hints-section { order: 2; }
 
   .daily-quote { font-size: 0.9rem; padding: 12px 10px; }
   .daily-poster-wrap { width: 120px; margin-top: 12px; }

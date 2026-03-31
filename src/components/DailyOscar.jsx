@@ -307,19 +307,20 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
 
         {/* Input */}
         {!solved && !failed && (
-          <div className="daily-input-wrap">
+          <form className="daily-input-wrap" autoComplete="off" onSubmit={(e) => { e.preventDefault(); handleGuess(); }}>
             <input
               className="daily-input"
-              type="text"
+              type="search"
               value={guess}
               onChange={(e) => handleInput(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter') handleGuess(); }}
               placeholder={`Guess ${guesses.length + 1} of ${MAX_GUESSES}...`}
-              autoComplete="off"
+              autoComplete="new-password"
               autoCorrect="off"
               autoCapitalize="off"
               spellCheck="false"
-              name="oscars_daily_guess"
+              name={`xmovie_${Date.now()}`}
+              data-form-type="other"
+              data-lpignore="true"
             />
             {suggestions.length > 0 && (
               <div className="daily-suggestions">
@@ -331,7 +332,7 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
               </div>
             )}
             <div className="daily-remaining">{MAX_GUESSES - guesses.length} guess{MAX_GUESSES - guesses.length !== 1 ? 'es' : ''} left</div>
-          </div>
+          </form>
         )}
 
         {/* Win */}

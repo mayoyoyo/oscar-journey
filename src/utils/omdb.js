@@ -11,11 +11,25 @@ function omdbCacheKey(prefix, movie) {
   return CACHE_PREFIX + prefix + '_' + sanitizeTitle(movie.title) + '_' + movie.year;
 }
 
+// Title overrides for movies that don't match OMDB's naming
+const OMDB_TITLE_OVERRIDES = {
+  'Birdman': 'Birdman or The Unexpected Virtue of Ignorance',
+};
+
+// Year overrides for movies where our year doesn't match OMDB
+const OMDB_YEAR_OVERRIDES = {
+  'Il Postino': 1994,
+};
+
 // Clean title for better OMDb matching
 function cleanTitle(title) {
-  return title
+  return (OMDB_TITLE_OVERRIDES[title] || title)
     .replace(/[''']/g, "'")
     .replace(/[""]/g, '"');
+}
+
+function getOmdbYear(movie) {
+  return OMDB_YEAR_OVERRIDES[movie.title] || movie.year;
 }
 
 export async function fetchOmdbData(movie) {
@@ -66,7 +80,7 @@ export async function fetchOmdbData(movie) {
       return { rateLimited: true };
     };
 
-    let data = await tryWithKey(titleEnc, movie.year);
+    let data = await tryWithKey(titleEnc, getOmdbYear(movie));
 
     // All keys rate limited — return existing cache without saving failures
     if (data.rateLimited) {

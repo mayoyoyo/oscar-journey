@@ -4878,15 +4878,15 @@ main {
 .daily-input::placeholder { color: #666; }
 .daily-suggestions {
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 0; right: 0;
   background: #1c1a16;
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px 10px 0 0;
   z-index: 5;
   max-height: 200px;
   overflow-y: auto;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.4);
 }
 .daily-suggestion {
   display: block;

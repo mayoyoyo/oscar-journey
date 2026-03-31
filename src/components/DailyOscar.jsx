@@ -63,20 +63,28 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
   const todayKey = getTodayKey();
   const savedKey = LS_KEY + todayKey;
 
-  // Initialize ALL state from localStorage in one shot to prevent race conditions
+  // Initialize state — check Firebase profile first, then localStorage
   const saved = useMemo(() => loadSaved(savedKey), []);
+  const profileDaily = profile?.dailyOscar?.[todayKey];
+  const initialSolved = profileDaily?.solved || saved?.solved || false;
+  const initialFailed = profileDaily?.failed || saved?.failed || false;
+  const initialGuesses = profileDaily?.guesses || saved?.guesses || [];
+  const initialClaimed = profileDaily?.rewardClaimed || saved?.rewardClaimed || false;
+  const initialKept = profileDaily?.rewardKept || saved?.rewardKept || false;
+  const initialReward = profileDaily?.rewardCard || saved?.rewardCard || null;
+
   const [movieId, setMovieId] = useState(() => getDailyMovieId());
   const [isRandom, setIsRandom] = useState(false);
   const [guess, setGuess] = useState('');
-  const [guesses, setGuesses] = useState(saved?.guesses || []);
-  const [solved, setSolved] = useState(saved?.solved || false);
-  const [failed, setFailed] = useState(saved?.failed || false);
+  const [guesses, setGuesses] = useState(initialGuesses);
+  const [solved, setSolved] = useState(initialSolved);
+  const [failed, setFailed] = useState(initialFailed);
   const [suggestions, setSuggestions] = useState([]);
   const [omdbData, setOmdbData] = useState(null);
-  const [rewardCard, setRewardCard] = useState(saved?.rewardCard || null);
+  const [rewardCard, setRewardCard] = useState(initialReward);
   const [showPack, setShowPack] = useState(false);
-  const [rewardClaimed, setRewardClaimed] = useState(saved?.rewardClaimed || false);
-  const [rewardKept, setRewardKept] = useState(saved?.rewardKept || false);
+  const [rewardClaimed, setRewardClaimed] = useState(initialClaimed);
+  const [rewardKept, setRewardKept] = useState(initialKept);
 
   const movie = MOVIES_BY_ID[movieId];
   const quotes = QUOTES[movieId] || [];
@@ -98,11 +106,17 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
     if (movie) fetchOmdbData(movie).then(d => setOmdbData(d));
   }, [movie?.id]);
 
-  // Save state
+  // Save state to both localStorage and Firebase
   useEffect(() => {
     if (isRandom) return;
     if (guesses.length > 0 || solved || failed) {
-      localStorage.setItem(savedKey, JSON.stringify({ guesses, solved, failed, rewardCard, rewardClaimed, rewardKept }));
+      const state = { guesses, solved, failed, rewardCard, rewardClaimed, rewardKept };
+      localStorage.setItem(savedKey, JSON.stringify(state));
+      // Save to Firebase so it syncs across devices
+      if (onSaveProfile && (solved || failed)) {
+        const dailyOscar = { ...(profile?.dailyOscar || {}), [todayKey]: state };
+        onSaveProfile('dailyOscar', dailyOscar);
+      }
     }
   }, [guesses, solved, failed, rewardCard, rewardClaimed, rewardKept, savedKey, isRandom]);
 

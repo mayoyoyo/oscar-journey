@@ -247,6 +247,8 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
       <div className="daily-modal">
         <button className="daily-close" onClick={onClose}>✕</button>
 
+        <div className="daily-scroll-content">
+
         <h2 className="daily-title">Daily Oscar</h2>
         <p className="daily-subtitle">
           {solved || failed ? '' : 'Name the movie from the poster and quote'}
@@ -305,7 +307,44 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
           ))}
         </div>
 
-        {/* Input */}
+        {/* Win */}
+        {solved && (
+          <div className="daily-result">
+            <div className="daily-result-text daily-result-win">
+              Got it in {guesses.length}!
+            </div>
+            {streak > 0 && <div className="daily-streak">{streak} day streak</div>}
+            {rewardCard && !rewardClaimed && (
+              <button className="daily-reward-btn" onClick={() => setShowPack(true)}>
+                Open your reward card
+              </button>
+            )}
+            {rewardCard && rewardClaimed && (
+              <div className="daily-reward-claimed">{rewardKept ? 'Card collected!' : 'Card revealed'}</div>
+            )}
+          </div>
+        )}
+
+        {/* Lose */}
+        {failed && (
+          <div className="daily-result">
+            <div className="daily-result-text daily-result-lose">
+              It was {movie.title} ({movie.year})
+            </div>
+            <p style={{ fontSize: '0.82rem', color: '#999' }}>Better luck tomorrow!</p>
+          </div>
+        )}
+
+        {/* Timer */}
+        {(solved || failed) && (
+          <div className="daily-timer">
+            Next Daily Oscar in <strong>{countdown}</strong>
+          </div>
+        )}
+
+        </div>{/* end daily-scroll-content */}
+
+        {/* Input — outside scroll content so it stays pinned on mobile */}
         {!solved && !failed && (
           <form className="daily-input-wrap" autoComplete="off" onSubmit={(e) => { e.preventDefault(); handleGuess(); }}>
             <input
@@ -333,41 +372,6 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
             )}
             <div className="daily-remaining">{MAX_GUESSES - guesses.length} guess{MAX_GUESSES - guesses.length !== 1 ? 'es' : ''} left</div>
           </form>
-        )}
-
-        {/* Win */}
-        {solved && (
-          <div className="daily-result">
-            <div className="daily-result-text daily-result-win">
-              Got it in {guesses.length}!
-            </div>
-            {streak > 0 && <div className="daily-streak">{streak} day streak</div>}
-            {rewardCard && !rewardClaimed && (
-              <button className="daily-reward-btn" onClick={() => setShowPack(true)}>
-                Open your reward card
-              </button>
-            )}
-            {rewardCard && rewardClaimed && (
-              <div className="daily-reward-claimed">{rewardKept ? 'Card collected!' : 'Card revealed'}</div>
-            )}
-          </div>
-        )}
-
-        {/* Lose */}
-        {failed && (
-          <div className="daily-result">
-            <div className="daily-result-text daily-result-lose">
-              It was {movie.title} ({movie.year})
-            </div>
-            <p style={{ fontSize: '0.82rem', color: 'var(--cream-dim)' }}>Better luck tomorrow!</p>
-          </div>
-        )}
-
-        {/* Next reset timer */}
-        {(solved || failed) && (
-          <div className="daily-timer">
-            Next Daily Oscar in <strong>{countdown}</strong>
-          </div>
         )}
 
       </div>

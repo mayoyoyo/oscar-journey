@@ -39,7 +39,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
           ? 'Tap any film to mark it as watched. Great for first-timers catching up on what they\'ve already seen.'
           : watchedOnly
             ? 'Showing only your watched films. Tap any to rate or review.'
-            : `All ${MOVIES.length} Oscar-nominated films. Tap a title for details, or use the filters below.`}
+            : `All ${MOVIES.length} Oscar-nominated films. Tap a title for details. Use Watched Only to filter to films you've seen, or Checklist Mode to quickly mark off what you've already watched.`}
       </p>
       <div className="film-list-toggles">
         <button

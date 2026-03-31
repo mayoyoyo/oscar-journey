@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 
-// Beautiful half-star rating widget (0.5 increments, 10 stars)
+// Beautiful half-star rating widget (0.5 increments, 10 stars) with touch-swipe support
 export default function StarPicker({ label, value, onChange, disabled }) {
   const [hoverVal, setHoverVal] = useState(null);
+  const starsRef = useRef(null);
   const displayVal = hoverVal !== null ? hoverVal : value;
 
   const handleClick = (starNum, isLeftHalf) => {
@@ -15,6 +16,32 @@ export default function StarPicker({ label, value, onChange, disabled }) {
     if (disabled) return;
     setHoverVal(isLeftHalf ? starNum - 0.5 : starNum);
   };
+
+  // Touch-swipe rating: slide finger across stars
+  const getValFromTouch = useCallback((touchX) => {
+    const el = starsRef.current;
+    if (!el) return null;
+    const rect = el.getBoundingClientRect();
+    const x = touchX - rect.left;
+    const pct = Math.max(0, Math.min(1, x / rect.width));
+    // 10 stars, 0.5 increments
+    const raw = pct * 10;
+    return Math.max(0.5, Math.round(raw * 2) / 2);
+  }, []);
+
+  const handleTouchMove = useCallback((e) => {
+    if (disabled) return;
+    e.preventDefault();
+    const val = getValFromTouch(e.touches[0].clientX);
+    if (val !== null) setHoverVal(val);
+  }, [disabled, getValFromTouch]);
+
+  const handleTouchEnd = useCallback((e) => {
+    if (disabled) return;
+    const val = hoverVal;
+    setHoverVal(null);
+    if (val !== null) onChange(val === value ? null : val);
+  }, [disabled, hoverVal, onChange, value]);
 
   const stars = [];
   for (let i = 1; i <= 10; i++) {
@@ -59,13 +86,20 @@ export default function StarPicker({ label, value, onChange, disabled }) {
   }
 
   const displayText =
-    value !== null && value !== undefined ? `${value} / 10` : 'Tap to rate';
+    value !== null && value !== undefined ? `${value} / 10` : 'Slide to rate';
 
   return (
     <div className={`star-picker ${disabled ? 'star-picker-disabled' : ''}`}>
       <div className="star-picker-label">{label}</div>
       <div className="star-picker-row">
-        <div className="star-picker-stars">{stars}</div>
+        <div
+          className="star-picker-stars"
+          ref={starsRef}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {stars}
+        </div>
         <div className={`star-picker-value ${value != null ? 'has-value' : ''}`}>
           {displayText}
         </div>

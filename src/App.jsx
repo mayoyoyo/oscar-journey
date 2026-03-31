@@ -219,8 +219,8 @@ export default function App() {
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
   const [activeTab, setActiveTab] = useState(() => {
     const hash = window.location.hash.replace('#', '');
-    const validTabs = ['journey', 'list', 'battle', 'leaderboard'];
-    if (validTabs.includes(hash)) return hash;
+    const tabMap = { journey: 'journey', films: 'list', list: 'list', battle: 'battle', profiles: 'leaderboard', leaderboard: 'leaderboard' };
+    if (tabMap[hash]) return tabMap[hash];
     return localStorage.getItem(LS_TAB_KEY) || 'journey';
   });
   const [screen, setScreen] = useState('start'); // 'start' | 'card' | 'complete'
@@ -864,16 +864,17 @@ export default function App() {
   const handleTabChange = useCallback((tab) => {
     setActiveTab(tab);
     localStorage.setItem(LS_TAB_KEY, tab);
-    window.history.pushState(null, '', `#${tab}`);
+    const hashNames = { journey: 'journey', list: 'films', battle: 'battle', leaderboard: 'profiles' };
+    window.history.pushState(null, '', `#${hashNames[tab] || tab}`);
   }, []);
 
   // --- Hash routing: handle browser back/forward ---
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      const validTabs = ['journey', 'list', 'battle', 'leaderboard'];
-      if (validTabs.includes(hash)) {
-        setActiveTab(hash);
+      const tabMap = { journey: 'journey', films: 'list', list: 'list', battle: 'battle', profiles: 'leaderboard', leaderboard: 'leaderboard' };
+      if (tabMap[hash]) {
+        setActiveTab(tabMap[hash]);
         localStorage.setItem(LS_TAB_KEY, hash);
       }
     };

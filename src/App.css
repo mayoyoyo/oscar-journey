@@ -5013,42 +5013,27 @@ main {
   letter-spacing: 0.05em;
 }
 
-/* Daily content layout */
-.daily-content {
-  display: flex;
-  flex-direction: column;
-}
-.daily-input-form { position: relative; }
+.daily-input-form { position: relative; margin-bottom: 12px; }
 
 @media (max-width: 600px) {
-  .daily-overlay {
-    align-items: stretch;
-    padding: 0;
-  }
+  .daily-overlay { padding: 0; }
   .daily-modal {
-    padding: 16px;
-    height: 100dvh;
-    max-height: 100dvh;
+    padding: 16px 16px 32px;
+    max-height: none;
+    height: auto;
     border-radius: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    transition: height 0.15s ease;
+    overflow-y: visible;
   }
-  .daily-close { top: 8px; right: 8px; z-index: 10; }
-
-  .daily-content { display: flex; flex-direction: column; }
-
-  .daily-quote { font-size: 0.9rem; padding: 12px 10px; }
-  .daily-poster-wrap { width: 120px; margin-top: 12px; }
-  .daily-poster { height: 170px; }
-  .daily-title { font-size: 1.1rem; margin-bottom: 0; }
-  .daily-subtitle { font-size: 0.72rem; margin-bottom: 10px; }
-  .daily-hint { font-size: 0.72rem; padding: 5px 10px; }
-  .daily-guesses { gap: 4px; margin-bottom: 6px; }
-  .daily-guess-row { padding: 5px 12px; font-size: 0.78rem; }
+  .daily-close { top: 10px; right: 10px; z-index: 10; }
+  .daily-title { font-size: 1.2rem; }
+  .daily-subtitle { font-size: 0.75rem; margin-bottom: 12px; }
+  .daily-poster-wrap { width: 110px; }
+  .daily-poster { height: 155px; }
+  .daily-hint { font-size: 0.75rem; padding: 6px 10px; }
+  .daily-guesses { gap: 4px; margin-bottom: 8px; }
+  .daily-guess-row { padding: 6px 12px; font-size: 0.8rem; }
   .daily-input { font-size: 16px; }
-  .daily-remaining { margin-top: 4px; font-size: 0.68rem; }
-  .daily-result { padding: 8px 0; }
+  .daily-remaining { font-size: 0.7rem; }
 }
 
 /* =====================================================

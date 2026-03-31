@@ -3,7 +3,7 @@ import { RARITIES } from '../utils/cards';
 
 const LS_KEY = 'oscars_cards_announcement_seen';
 
-export default function CardsAnnouncement() {
+export default function CardsAnnouncement({ onGoToBattle }) {
   const [visible, setVisible] = useState(() => !localStorage.getItem(LS_KEY));
 
   if (!visible) return null;
@@ -50,8 +50,8 @@ export default function CardsAnnouncement() {
           <p>Feature your best pull on your profile.</p>
         </div>
 
-        <button className="cards-announce-btn" onClick={dismiss}>
-          Start Collecting
+        <button className="cards-announce-btn" onClick={() => { dismiss(); if (onGoToBattle) onGoToBattle(); }}>
+          Start Battling
         </button>
       </div>
     </div>

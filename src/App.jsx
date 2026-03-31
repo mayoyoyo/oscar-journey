@@ -1098,7 +1098,7 @@ export default function App() {
       )}
 
       {/* Cards announcement — one time only */}
-      {profile && <CardsAnnouncement />}
+      {profile && <CardsAnnouncement onGoToBattle={() => handleTabChange('battle')} />}
 
       {/* Profile modal */}
       {profileModalId && (

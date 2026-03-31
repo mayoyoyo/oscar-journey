@@ -151,7 +151,7 @@ export async function updatePersonalElo(profileId, movieAKey, movieBKey, winnerK
 // --- Activity Feed ---
 
 export async function recordActivity(profile, movie) {
-  await addDoc(collection(db, 'activity'), {
+  const entry = {
     profileId: profile.id,
     displayName: profile.displayName || profile.id,
     avatar: profile.avatar || '',
@@ -159,7 +159,13 @@ export async function recordActivity(profile, movie) {
     movieTitle: movie.title,
     movieYear: movie.year,
     timestamp: serverTimestamp(),
-  });
+  };
+  // Card pull metadata
+  if (profile.cardPull) {
+    entry.cardPull = true;
+    entry.cardRarity = movie.cardRarity || null;
+  }
+  await addDoc(collection(db, 'activity'), entry);
 }
 
 export async function getRecentActivity(limitCount = 20) {

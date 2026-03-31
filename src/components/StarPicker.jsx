@@ -6,11 +6,13 @@ export default function StarPicker({ label, value, onChange, disabled }) {
   const displayVal = hoverVal !== null ? hoverVal : value;
 
   const handleClick = (starNum, isLeftHalf) => {
+    if (disabled) return;
     const newVal = isLeftHalf ? starNum - 0.5 : starNum;
     onChange(newVal === value ? null : newVal);
   };
 
   const handleHover = (starNum, isLeftHalf) => {
+    if (disabled) return;
     setHoverVal(isLeftHalf ? starNum - 0.5 : starNum);
   };
 

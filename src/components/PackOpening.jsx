@@ -77,6 +77,7 @@ export default function PackOpening({ cards, wallet, onClose, onKeep, onReplace,
   };
 
   const handleKeep = () => {
+    if (walletFull) return;
     const newWallet = [...wallet, card];
     onKeep(card);
     setFinalWallet(newWallet);

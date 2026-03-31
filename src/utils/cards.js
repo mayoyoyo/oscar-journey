@@ -1,4 +1,4 @@
-import { MOVIES_BY_ID } from '../data/movies';
+import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 
 // Rarity tiers
 export const RARITIES = {
@@ -65,16 +65,10 @@ export function getDropProgressLabel(battlesSinceLast) {
   return `Guaranteed in ${HARD_PITY - battlesSinceLast}!`;
 }
 
-// Generate a single card from watched movies
+// Generate a single card from all movies
 export function generatePack(watchedMovieIds, existingCardIds = []) {
-  const pool = watchedMovieIds
-    .map(id => MOVIES_BY_ID[id])
-    .filter(Boolean);
-
-  if (pool.length === 0) return null;
-
-  const uncollected = pool.filter(m => !existingCardIds.includes(m.id));
-  const source = uncollected.length > 0 ? uncollected : pool;
+  const uncollected = MOVIES.filter(m => !existingCardIds.includes(m.id));
+  const source = uncollected.length > 0 ? uncollected : MOVIES;
   const pick = source[Math.floor(Math.random() * source.length)];
 
   return [{

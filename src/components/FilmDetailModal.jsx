@@ -8,7 +8,7 @@ import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import CeremonyTooltip from './CeremonyTooltip';
 
-export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate }) {
+export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [globalElo, setGlobalElo] = useState(null);
@@ -204,7 +204,9 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 {watchedBy.map((w, i) => {
                   const profileRatings = aggregateRating?.ratings.filter(r => r.profile === w.displayName) || [];
                   return (
-                    <span key={i} className={`all-rating-chip ${w.hasRated ? '' : 'no-rating'}`}>
+                    <span key={i} className={`all-rating-chip profile-name-link ${w.hasRated ? '' : 'no-rating'}`}
+                      onClick={() => onOpenProfile && onOpenProfile(w.id)}
+                    >
                       {w.avatar} {w.displayName}{profileRatings.length > 0
                         ? ': ' + profileRatings.map(r => `${r.value}★`).join(', ')
                         : ' (watched, not rated)'}

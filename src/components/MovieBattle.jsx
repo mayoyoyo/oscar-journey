@@ -5,6 +5,9 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
+import { HARD_PITY, RARITIES, generatePack, MAX_WALLET, shouldDropCard, getDropProgressLabel } from '../utils/cards';
+import { recordActivity } from '../utils/firebaseStorage';
+import PackOpening from './PackOpening';
 
 // --- Smart Matchmaking ---
 
@@ -150,7 +153,7 @@ function getConfidenceLabel(matchCount) {
 
 // --- Component ---
 
-export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetail }) {
+export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetail, onSaveProfile }) {
   const [movieA, setMovieA] = useState(null);
   const [movieB, setMovieB] = useState(null);
   const [posterA, setPosterA] = useState(null);
@@ -165,6 +168,8 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
   const [viewingElo, setViewingElo] = useState(profile?.personalElo || {});
   const [matchupLabel, setMatchupLabel] = useState(null);
   const [rankingsTab, setRankingsTab] = useState('personal');
+  const [pendingPack, setPendingPack] = useState(null);
+  const [battleCount, setBattleCount] = useState(profile?.battleCount || 0);
 
   // Session tracking
   const recentMovies = useRef([]);
@@ -308,6 +313,25 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
       await refreshLeaderboard();
       sessionVotes.current++;
 
+      // Track battle count and check for card drop (variable schedule)
+      const newCount = battleCount + 1;
+      const battlesSinceLast = (profile?.battlesSinceDrop || 0) + 1;
+      setBattleCount(newCount);
+      if (onSaveProfile) {
+        onSaveProfile('battleCount', newCount);
+        onSaveProfile('battlesSinceDrop', battlesSinceLast);
+      }
+
+      if (shouldDropCard(battlesSinceLast)) {
+        const watchedIds = [...watchedSet];
+        const existingCards = (profile?.wallet || []).map(c => c.movieId);
+        const pack = generatePack(watchedIds, existingCards);
+        if (pack && pack.length > 0) {
+          setPendingPack(pack);
+          if (onSaveProfile) onSaveProfile('battlesSinceDrop', 0);
+        }
+      }
+
       setTimeout(() => {
         pickPair();
         setVoting(false);
@@ -430,6 +454,78 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
       <button className="battle-skip" onClick={() => !voting && pickPair()} disabled={voting}>
         Skip (different pair)
       </button>
+
+      {/* Card drop progress */}
+      {hasEnough && (
+        <div className="pack-progress">
+          <div className="pack-progress-label">
+            {getDropProgressLabel(profile?.battlesSinceDrop || 0)}
+          </div>
+          <div className="pack-progress-bar">
+            <div className="pack-progress-fill" style={{ width: `${Math.min(100, ((profile?.battlesSinceDrop || 0) / HARD_PITY) * 100)}%` }} />
+          </div>
+          <details className="pack-info">
+            <summary>How do cards work?</summary>
+            <p>Battle and you'll earn random movie cards. The more you battle, the higher your chances — guaranteed within {HARD_PITY} battles.</p>
+            <p>Any movie can be any rarity: <span style={{ color: RARITIES.COMMON.color }}>Common</span> (70%), <span style={{ color: RARITIES.RARE.color }}>Rare</span> (20%), <span style={{ color: RARITIES.EPIC.color }}>Epic</span> (8%), or <span style={{ color: RARITIES.LEGENDARY.color }}>Legendary</span> (2%).</p>
+            <p>Your wallet holds up to 3 cards. Feature one on your profile for everyone to see.</p>
+          </details>
+        </div>
+      )}
+
+      {/* Test pack button — remove before shipping */}
+      {hasEnough && (
+        <button
+          style={{ display: 'block', margin: '8px auto', fontSize: '0.7rem', color: 'var(--cream-dim)', background: 'none', border: '1px solid var(--border)', padding: '4px 12px', borderRadius: '8px', cursor: 'pointer' }}
+          onClick={() => {
+            const watchedIds = [...watchedSet];
+            const existingCards = (profile?.wallet || []).map(c => c.movieId);
+            const pack = generatePack(watchedIds, existingCards);
+            if (pack && pack.length > 0) setPendingPack(pack);
+          }}
+        >
+          Test Pack (dev only)
+        </button>
+      )}
+
+      {/* Pack opening modal */}
+      {pendingPack && (
+        <PackOpening
+          cards={pendingPack}
+          wallet={profile?.wallet || []}
+          onClose={() => setPendingPack(null)}
+          currentShowcase={profile?.showcase || []}
+          onSaveShowcase={(showcase) => {
+            if (onSaveProfile) onSaveProfile('showcase', showcase);
+          }}
+          onKeep={(card) => {
+            const wallet = [...(profile?.wallet || []), card];
+            if (onSaveProfile) onSaveProfile('wallet', wallet);
+            // Announce rare+ pulls to activity feed
+            if (card.rarity !== 'COMMON' && profile) {
+              const movie = MOVIES_BY_ID[card.movieId];
+              if (movie) {
+                recordActivity(
+                  { ...profile, cardPull: true },
+                  { ...movie, id: movie.id, cardRarity: card.rarity }
+                ).catch(() => {});
+              }
+            }
+          }}
+          onReplace={(card, replaceIdx) => {
+            const wallet = [...(profile?.wallet || [])];
+            const replaced = wallet[replaceIdx];
+            wallet[replaceIdx] = card;
+            if (onSaveProfile) {
+              onSaveProfile('wallet', wallet);
+              const showcase = profile?.showcase || [];
+              if (showcase.some(s => s.movieId === replaced.movieId)) {
+                onSaveProfile('showcase', showcase.filter(s => s.movieId !== replaced.movieId));
+              }
+            }
+          }}
+        />
+      )}
 
       <details className="battle-explainer"
         open={!localStorage.getItem('oscars_battle_explainer_closed')}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Header({ onOpenSettings, profile, onLogout }) {
+export default function Header({ onOpenSettings, profile, onLogout, onOpenProfile }) {
   return (
     <header>
       <div className="header-title">
@@ -10,7 +10,11 @@ export default function Header({ onOpenSettings, profile, onLogout }) {
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         {profile && (
           <>
-            <span style={{ fontSize: '0.82rem', color: 'var(--cream-dim)' }}>
+            <span
+              className="profile-name-link"
+              style={{ fontSize: '0.82rem', color: 'var(--cream-dim)' }}
+              onClick={() => onOpenProfile && onOpenProfile(profile.id)}
+            >
               {profile.displayName}
             </span>
             <button className="settings-btn" onClick={onLogout} title="Log out"

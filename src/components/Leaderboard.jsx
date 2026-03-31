@@ -5,6 +5,25 @@ import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import ProfileDetail from './ProfileDetail';
 import StatsTab from './StatsTab';
+import { getCollectorScore, RARITIES } from '../utils/cards';
+import { fetchOmdbData } from '../utils/omdb';
+
+// Mini featured card for profile grid
+function MiniShowcase({ card }) {
+  const [poster, setPoster] = React.useState(null);
+  const movie = MOVIES_BY_ID[card.movieId];
+  const rarity = RARITIES[card.rarity || 'COMMON'];
+  React.useEffect(() => {
+    if (movie) fetchOmdbData(movie).then(d => { if (d?.poster) setPoster(d.poster); });
+  }, [movie?.id]);
+  if (!movie) return null;
+  return (
+    <div className="profile-card-showcase" style={{ '--rarity-border': rarity.border, '--rarity-glow': rarity.glow }}>
+      {poster ? <img src={poster} alt={movie.title} /> : <span>🎬</span>}
+      <span className="profile-card-showcase-rarity" style={{ color: rarity.color }}>{rarity.name}</span>
+    </div>
+  );
+}
 
 // Fetch all profiles from Firestore
 async function getAllProfiles() {
@@ -12,7 +31,7 @@ async function getAllProfiles() {
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters }) {
+export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters, onSaveProfile }) {
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProfile, setSelectedProfile] = useState(null);
@@ -109,6 +128,8 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         memberSince,
         currentMovie,
         skipCount: p.skipCount || 0,
+        showcase: p.showcase || [],
+        wallet: p.wallet || [],
       });
 
       // Generate virtual profile cards for secondary raters (raters[1], raters[2], etc.)
@@ -187,6 +208,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         currentProfile={currentProfile}
         currentRatings={currentRatings}
         onOpenDetail={onOpenDetail}
+        onSaveProfile={onSaveProfile}
       />
     );
   }
@@ -257,6 +279,15 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                     <span className="stat-label">Films Skipped {p.skipCount > 0 ? '😤' : ''}</span>
                     <span className={`stat-value ${p.skipCount > 0 ? 'has-skips' : ''}`}>{p.skipCount}</span>
                   </div>
+                )}
+                {getCollectorScore(p.wallet) > 0 && (
+                  <div className="profile-card-stat">
+                    <span className="stat-label">Collector Score</span>
+                    <span className="stat-value" style={{ color: 'var(--gold)' }}>{getCollectorScore(p.wallet)}</span>
+                  </div>
+                )}
+                {p.showcase?.length > 0 && (
+                  <MiniShowcase card={p.showcase[0]} />
                 )}
                 {p.currentMovie && (
                   <div className="profile-card-current"

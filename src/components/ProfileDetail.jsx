@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import { fetchOmdbData } from '../utils/omdb';
+import { RARITIES, getCollectorScore } from '../utils/cards';
 
 // Small component to lazily load a poster for a movie tile
 function FilmTilePoster({ movie }) {
@@ -28,7 +29,7 @@ function FilmTilePoster({ movie }) {
 }
 
 // Renders the full detail view for a single profile
-export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail }) {
+export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail, onSaveProfile }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showUnwatched, setShowUnwatched] = useState(false);
   const [showSkipped, setShowSkipped] = useState(false);
@@ -294,6 +295,85 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
           </div>
         </div>
       </div>
+
+      {/* Card Showcase — visible to everyone */}
+      {profileData.showcase && profileData.showcase.length > 0 && (
+        <div style={{ marginBottom: '16px' }}>
+          <h3 style={{ fontFamily: 'Georgia, serif', color: 'var(--gold)', fontSize: '1.1rem', marginBottom: '8px' }}>
+            Featured Card
+          </h3>
+          <div className="profile-showcase">
+            {profileData.showcase.slice(0, 1).map((card, i) => {
+              const movie = MOVIES_BY_ID[card.movieId];
+              if (!movie) return null;
+              const rarity = RARITIES[card.rarity || 'COMMON'];
+              return (
+                <div
+                  key={i}
+                  className={`showcase-card showcase-card-holo showcase-card-${(card.rarity || 'COMMON').toLowerCase()}`}
+                  style={{ '--rarity-border': rarity.border, '--rarity-glow': rarity.glow }}
+                  onClick={() => onOpenDetail && onOpenDetail(movie)}
+                >
+                  <FilmTilePoster movie={movie} />
+                  <div className="showcase-card-info">
+                    <div className="showcase-card-title">{movie.title}</div>
+                    <div className="showcase-card-rarity" style={{ color: rarity.color }}>{rarity.name}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Collector Score */}
+      {(profileData.wallet?.length > 0) && (
+        <div style={{ marginBottom: '8px', fontSize: '0.8rem', color: 'var(--cream-dim)' }}>
+          Collector Score: <strong style={{ color: 'var(--gold)' }}>{getCollectorScore(profileData.wallet)}</strong>
+        </div>
+      )}
+
+      {/* Wallet — only visible on own profile */}
+      {isOwnProfile && (profileData.wallet?.length > 0) && (
+        <div style={{ marginBottom: '24px' }}>
+          <h3 style={{ fontFamily: 'Georgia, serif', color: 'var(--gold)', fontSize: '1.1rem', marginBottom: '4px' }}>
+            Your Wallet ({profileData.wallet.length}/3)
+          </h3>
+          <p style={{ fontSize: '0.75rem', color: 'var(--cream-dim)', marginBottom: '10px' }}>
+            Tap a card to feature it on your profile.
+          </p>
+          <div className="profile-showcase">
+            {profileData.wallet.map((card, i) => {
+              const movie = MOVIES_BY_ID[card.movieId];
+              if (!movie) return null;
+              const rarity = RARITIES[card.rarity || 'COMMON'];
+              const isShowcased = profileData.showcase?.some(s => s.movieId === card.movieId);
+              return (
+                <div
+                  key={i}
+                  className={`showcase-card showcase-card-holo showcase-card-${(card.rarity || 'COMMON').toLowerCase()} ${isShowcased ? 'showcase-card-active' : ''}`}
+                  style={{ '--rarity-border': rarity.border, '--rarity-glow': rarity.glow }}
+                  onClick={() => {
+                    if (!onSaveProfile) return;
+                    if (isShowcased) {
+                      onSaveProfile('showcase', []);
+                    } else {
+                      onSaveProfile('showcase', [card]);
+                    }
+                  }}
+                >
+                  <FilmTilePoster movie={movie} />
+                  <div className="showcase-card-info">
+                    <div className="showcase-card-title">{movie.title}</div>
+                    <div className="showcase-card-rarity" style={{ color: rarity.color }}>{rarity.name}</div>
+                  </div>
+                  {isShowcased && <div className="showcase-card-badge">Featured</div>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Watched Films */}
       <h2 style={{ fontFamily: 'Georgia, serif', color: 'var(--gold)', marginBottom: '16px' }}>

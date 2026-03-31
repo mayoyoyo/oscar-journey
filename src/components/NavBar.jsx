@@ -8,7 +8,7 @@ export const tabs = [
   { id: 'leaderboard', label: '👥 Profiles', icon: '👥', shortLabel: 'Profiles' },
 ];
 
-export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme, isDark, onOpenSettings, onOpenInfo, onAvatarChange, saving }) {
+export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme, isDark, onOpenSettings, onOpenInfo, onAvatarChange, saving, onOpenProfile }) {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
   // Close emoji picker on outside click
@@ -76,7 +76,9 @@ export default function NavBar({ activeTab, onTabChange, profile, onToggleTheme,
                   {profile.avatar}
                 </span>
               )}
-              {profile.displayName}
+              <span className="profile-name-link" onClick={() => onOpenProfile && onOpenProfile(profile.id)}>
+                {profile.displayName}
+              </span>
               {showEmojiPicker && (
                 <div className="nav-emoji-picker">
                   {AVATAR_EMOJIS.map((emoji, i) => (

@@ -49,7 +49,7 @@ const SKIP_MESSAGES = [
   "This is cinema, not a Netflix queue. Show some commitment.",
 ];
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail }) {
+export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -155,7 +155,9 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
                 const pRaters = p.raters || [p.displayName];
                 const primaryRating = pRatings[pRaters[0]];
                 return (
-                  <span key={p.id} className="watched-by-chip">
+                  <span key={p.id} className="watched-by-chip profile-name-link"
+                    onClick={(e) => { e.stopPropagation(); onOpenProfile && onOpenProfile(p.id); }}
+                  >
                     {p.avatar || '👤'} {p.displayName}
                     {userHasRated && primaryRating != null && (
                       <span className="watched-by-rating"> {primaryRating}/10</span>

@@ -23,6 +23,7 @@ import JourneyControls from './components/JourneyControls';
 import ActivityFeed from './components/ActivityFeed';
 import { SkeletonCard } from './components/Skeleton';
 import InfoModal from './components/InfoModal';
+import ProfileModal from './components/ProfileModal';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
@@ -224,6 +225,7 @@ export default function App() {
   const [detailMovie, setDetailMovie] = useState(null);
   const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
   const [infoOpen, setInfoOpen] = useState(false);
+  const [profileModalId, setProfileModalId] = useState(null);
   const [bannerDismissed, setBannerDismissed] = useState(() => {
     return localStorage.getItem('oscars_banner_dismissed') === 'true';
   });
@@ -878,7 +880,6 @@ export default function App() {
   return (
     <>
       <NavBar
-
         activeTab={activeTab}
         onTabChange={handleTabChange}
         profile={profile}
@@ -888,6 +889,7 @@ export default function App() {
         onOpenInfo={() => setInfoOpen(true)}
         onAvatarChange={handleAvatarChange}
         saving={saving}
+        onOpenProfile={(id) => setProfileModalId(id)}
       />
 
       <div className="app-scroll-area">
@@ -958,6 +960,7 @@ export default function App() {
                 allProfiles={allProfilesForSync}
                 currentProfileId={profile?.id}
                 onOpenDetail={setDetailMovie}
+                onOpenProfile={(id) => setProfileModalId(id)}
               />
               <NavButtons
                 currentIdx={eligiblePosition}
@@ -1014,6 +1017,10 @@ export default function App() {
           playlist={playlist}
           watchedSet={watchedSet}
           onOpenDetail={setDetailMovie}
+          onSaveProfile={(field, value) => {
+            firebaseSave(field, value);
+            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
+          }}
         />
       )}
 
@@ -1026,6 +1033,10 @@ export default function App() {
           watchedTitleSet={watchedTitleSet}
           ratings={ratings}
           raters={raters}
+          onSaveProfile={(field, value) => {
+            firebaseSave(field, value);
+            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
+          }}
         />
       )}
       </div>{/* end app-scroll-area */}
@@ -1057,6 +1068,7 @@ export default function App() {
           raters={raters}
           movieList={detailMovieList}
           onNavigate={(movie) => setDetailMovie(movie)}
+          onOpenProfile={(id) => setProfileModalId(id)}
         />
       )}
 
@@ -1079,6 +1091,21 @@ export default function App() {
       {/* Info modal */}
       {infoOpen && (
         <InfoModal onClose={() => setInfoOpen(false)} />
+      )}
+
+      {/* Profile modal */}
+      {profileModalId && (
+        <ProfileModal
+          profileId={profileModalId}
+          onClose={() => setProfileModalId(null)}
+          currentProfile={profile}
+          currentRatings={ratings}
+          onOpenDetail={(movie) => { setProfileModalId(null); setDetailMovie(movie); }}
+          onSaveProfile={(field, value) => {
+            firebaseSave(field, value);
+            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
+          }}
+        />
       )}
     </>
   );

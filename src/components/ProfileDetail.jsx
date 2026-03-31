@@ -335,10 +335,10 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
               );
             })()}
 
-            {/* Wallet — own profile only, beside featured */}
-            {isOwnProfile && profileData.wallet?.length > 0 && (
+            {/* Wallet — visible to everyone, tap-to-feature only on own profile */}
+            {profileData.wallet?.length > 0 && (
               <div className="pd-wallet">
-                <div className="pd-wallet-label">Wallet ({profileData.wallet.length}/3)</div>
+                <div className="pd-wallet-label">{isOwnProfile ? 'Your ' : ''}Wallet ({profileData.wallet.length}/3)</div>
                 <div className="pd-wallet-cards">
                   {profileData.wallet.map((card, i) => {
                     const movie = MOVIES_BY_ID[card.movieId];
@@ -351,7 +351,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
                         className={`pd-wallet-card ${isShowcased ? 'pd-wallet-active' : ''}`}
                         style={{ '--rarity-border': rarity.border, '--rarity-glow': rarity.glow }}
                         onClick={() => {
-                          if (!onSaveProfile) return;
+                          if (!isOwnProfile || !onSaveProfile) return;
                           onSaveProfile('showcase', isShowcased ? [] : [card]);
                         }}
                       >
@@ -364,7 +364,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
                     );
                   })}
                 </div>
-                <div className="pd-wallet-hint">Tap to feature</div>
+                {isOwnProfile && <div className="pd-wallet-hint">Tap to feature</div>}
               </div>
             )}
           </div>

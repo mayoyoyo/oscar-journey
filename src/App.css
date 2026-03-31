@@ -5013,42 +5013,43 @@ main {
   letter-spacing: 0.05em;
 }
 
+/* Daily content layout */
+.daily-content {
+  display: flex;
+  flex-direction: column;
+}
+.daily-input-form { position: relative; }
+
 @media (max-width: 600px) {
   .daily-overlay {
     align-items: stretch;
     padding: 0;
   }
   .daily-modal {
-    padding: 0;
+    padding: 16px;
     max-height: 100dvh;
     border-radius: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-  }
-  .daily-close { top: 8px; right: 8px; z-index: 10; }
-  .daily-scroll-content {
-    flex: 1;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 16px 16px 8px;
   }
-  .daily-input-wrap,
-  .daily-input-wrap-form {
-    padding: 8px 16px 12px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    flex-shrink: 0;
-  }
+  .daily-close { top: 8px; right: 8px; z-index: 10; }
+
+  /* Mobile order: input first, poster below, hints below that */
+  .daily-content { display: flex; flex-direction: column; }
+  .daily-input-section { order: -1; }
+  .daily-poster-section { order: 1; }
+  .daily-hints-section { order: 2; }
+
   .daily-quote { font-size: 0.9rem; padding: 12px 10px; }
-  .daily-poster-wrap { width: 120px; }
+  .daily-poster-wrap { width: 120px; margin-top: 12px; }
   .daily-poster { height: 170px; }
   .daily-title { font-size: 1.1rem; margin-bottom: 0; }
   .daily-subtitle { font-size: 0.72rem; margin-bottom: 10px; }
   .daily-hint { font-size: 0.72rem; padding: 5px 10px; }
-  .daily-guesses { gap: 4px; margin-bottom: 8px; }
-  .daily-guess-row { padding: 6px 12px; font-size: 0.8rem; }
+  .daily-guesses { gap: 4px; margin-bottom: 6px; }
+  .daily-guess-row { padding: 5px 12px; font-size: 0.78rem; }
   .daily-input { font-size: 16px; }
-  .daily-remaining { margin-top: 4px; }
+  .daily-remaining { margin-top: 4px; font-size: 0.68rem; }
   .daily-result { padding: 8px 0; }
 }
 

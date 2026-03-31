@@ -247,132 +247,135 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
       <div className="daily-modal">
         <button className="daily-close" onClick={onClose}>✕</button>
 
-        <div className="daily-scroll-content">
+        <div className="daily-content">
 
         <h2 className="daily-title">Daily Oscar</h2>
         <p className="daily-subtitle">
           {solved || failed ? '' : 'Name the movie from the poster and quote'}
         </p>
 
-        {/* Poster — always visible, revealed on solve/fail */}
-        {poster && (
-          <div className="daily-poster-wrap">
-            <img
-              className="daily-poster"
-              src={poster}
-              alt="Mystery movie"
-              style={{ filter: (solved || failed) ? 'none' : `blur(${20 - (wrongCount * 4)}px)`, transition: 'filter 0.5s ease' }}
-            />
-            {(solved || failed) && (
-              <div className="daily-poster-label">{movie.title} ({movie.year})</div>
-            )}
-          </div>
-        )}
-        {!poster && (solved || failed) && (
-          <div className="daily-poster-wrap">
-            <div className="daily-poster daily-poster-placeholder">🎬</div>
-            <div className="daily-poster-label">{movie.title} ({movie.year})</div>
-          </div>
-        )}
-
-        {/* Hints — quote always visible, more unlock with wrong guesses */}
-        {hints.length > 0 && (
-          <div className="daily-hints">
-            {hints.map((h, i) => (
-              <div key={i} className={`daily-hint ${h.type === 'quote' ? 'daily-hint-quote' : ''} ${h.type === 'initials' ? 'daily-hint-initials' : ''} ${!solved && !failed && i === hints.length - 1 && i > 0 ? 'daily-hint-new' : ''}`}>
-                {h.type === 'initials' ? (
-                  <div className="daily-blanks">
-                    {h.words.map((word, wi) => (
-                      <span key={wi} className="daily-blanks-word">
-                        {word.split('').map((ch, ci) => (
-                          <span key={ci} className={ch === '_' ? 'daily-blank' : 'daily-letter'}>{ch === '_' ? '\u00A0' : ch}</span>
-                        ))}
-                      </span>
-                    ))}
-                  </div>
-                ) : h.text}
-              </div>
-            ))}
-          </div>
-        )}
-
-
-        {/* Guesses */}
-        <div className="daily-guesses">
-          {guesses.map((g, i) => (
-            <div key={i} className={`daily-guess-row ${g.toLowerCase() === movie.title.toLowerCase() ? 'daily-guess-correct' : 'daily-guess-wrong'}`}>
-              <span>{g}</span>
-              <span>{g.toLowerCase() === movie.title.toLowerCase() ? '✓' : '✗'}</span>
+        {/* Input + guesses — comes first on mobile via CSS order */}
+        {!solved && !failed && (
+          <div className="daily-input-section">
+            <form className="daily-input-form" autoComplete="off" onSubmit={(e) => { e.preventDefault(); handleGuess(); }}>
+              <input
+                className="daily-input"
+                type="search"
+                value={guess}
+                onChange={(e) => handleInput(e.target.value)}
+                placeholder={`Guess ${guesses.length + 1} of ${MAX_GUESSES}...`}
+                autoComplete="new-password"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck="false"
+                name={`xmovie_${Date.now()}`}
+                data-form-type="other"
+                data-lpignore="true"
+              />
+              {suggestions.length > 0 && (
+                <div className="daily-suggestions">
+                  {suggestions.map(m => (
+                    <button key={m.id} className="daily-suggestion" onClick={() => handleGuess(m.title)}>
+                      {m.title}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </form>
+            <div className="daily-remaining">{MAX_GUESSES - guesses.length} guess{MAX_GUESSES - guesses.length !== 1 ? 'es' : ''} left</div>
+            <div className="daily-guesses">
+              {guesses.map((g, i) => (
+                <div key={i} className={`daily-guess-row ${g.toLowerCase() === movie.title.toLowerCase() ? 'daily-guess-correct' : 'daily-guess-wrong'}`}>
+                  <span>{g}</span>
+                  <span>{g.toLowerCase() === movie.title.toLowerCase() ? '✓' : '✗'}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+        )}
+
+        {/* Poster */}
+        <div className="daily-poster-section">
+          {poster && (
+            <div className="daily-poster-wrap">
+              <img
+                className="daily-poster"
+                src={poster}
+                alt="Mystery movie"
+                style={{ filter: (solved || failed) ? 'none' : `blur(${20 - (wrongCount * 4)}px)`, transition: 'filter 0.5s ease' }}
+              />
+              {(solved || failed) && (
+                <div className="daily-poster-label">{movie.title} ({movie.year})</div>
+              )}
+            </div>
+          )}
+          {!poster && (solved || failed) && (
+            <div className="daily-poster-wrap">
+              <div className="daily-poster daily-poster-placeholder">🎬</div>
+              <div className="daily-poster-label">{movie.title} ({movie.year})</div>
+            </div>
+          )}
         </div>
 
-        {/* Win */}
+        {/* Hints */}
+        <div className="daily-hints-section">
+          {hints.length > 0 && (
+            <div className="daily-hints">
+              {hints.map((h, i) => (
+                <div key={i} className={`daily-hint ${h.type === 'quote' ? 'daily-hint-quote' : ''} ${h.type === 'initials' ? 'daily-hint-initials' : ''} ${!solved && !failed && i === hints.length - 1 && i > 0 ? 'daily-hint-new' : ''}`}>
+                  {h.type === 'initials' ? (
+                    <div className="daily-blanks">
+                      {h.words.map((word, wi) => (
+                        <span key={wi} className="daily-blanks-word">
+                          {word.split('').map((ch, ci) => (
+                            <span key={ci} className={ch === '_' ? 'daily-blank' : 'daily-letter'}>{ch === '_' ? '\u00A0' : ch}</span>
+                          ))}
+                        </span>
+                      ))}
+                    </div>
+                  ) : h.text}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Results */}
         {solved && (
           <div className="daily-result">
-            <div className="daily-result-text daily-result-win">
-              Got it in {guesses.length}!
-            </div>
+            <div className="daily-result-text daily-result-win">Got it in {guesses.length}!</div>
             {streak > 0 && <div className="daily-streak">{streak} day streak</div>}
             {rewardCard && !rewardClaimed && (
-              <button className="daily-reward-btn" onClick={() => setShowPack(true)}>
-                Open your reward card
-              </button>
+              <button className="daily-reward-btn" onClick={() => setShowPack(true)}>Open your reward card</button>
             )}
             {rewardCard && rewardClaimed && (
               <div className="daily-reward-claimed">{rewardKept ? 'Card collected!' : 'Card revealed'}</div>
             )}
           </div>
         )}
-
-        {/* Lose */}
         {failed && (
           <div className="daily-result">
-            <div className="daily-result-text daily-result-lose">
-              It was {movie.title} ({movie.year})
-            </div>
+            <div className="daily-result-text daily-result-lose">It was {movie.title} ({movie.year})</div>
             <p style={{ fontSize: '0.82rem', color: '#999' }}>Better luck tomorrow!</p>
           </div>
         )}
-
-        {/* Timer */}
         {(solved || failed) && (
-          <div className="daily-timer">
-            Next Daily Oscar in <strong>{countdown}</strong>
+          <div className="daily-timer">Next Daily Oscar in <strong>{countdown}</strong></div>
+        )}
+
+        {/* Guesses shown after solve/fail */}
+        {(solved || failed) && guesses.length > 0 && (
+          <div className="daily-guesses">
+            {guesses.map((g, i) => (
+              <div key={i} className={`daily-guess-row ${g.toLowerCase() === movie.title.toLowerCase() ? 'daily-guess-correct' : 'daily-guess-wrong'}`}>
+                <span>{g}</span>
+                <span>{g.toLowerCase() === movie.title.toLowerCase() ? '✓' : '✗'}</span>
+              </div>
+            ))}
           </div>
         )}
 
-        </div>{/* end daily-scroll-content */}
-
-        {/* Input — outside scroll content so it stays pinned on mobile */}
-        {!solved && !failed && (
-          <form className="daily-input-wrap" autoComplete="off" onSubmit={(e) => { e.preventDefault(); handleGuess(); }}>
-            <input
-              className="daily-input"
-              type="search"
-              value={guess}
-              onChange={(e) => handleInput(e.target.value)}
-              placeholder={`Guess ${guesses.length + 1} of ${MAX_GUESSES}...`}
-              autoComplete="new-password"
-              autoCorrect="off"
-              autoCapitalize="off"
-              spellCheck="false"
-              name={`xmovie_${Date.now()}`}
-              data-form-type="other"
-              data-lpignore="true"
-            />
-            {suggestions.length > 0 && (
-              <div className="daily-suggestions">
-                {suggestions.map(m => (
-                  <button key={m.id} className="daily-suggestion" onClick={() => handleGuess(m.title)}>
-                    {m.title}
-                  </button>
-                ))}
-              </div>
-            )}
-            <div className="daily-remaining">{MAX_GUESSES - guesses.length} guess{MAX_GUESSES - guesses.length !== 1 ? 'es' : ''} left</div>
-          </form>
-        )}
+        </div>{/* end daily-content */}
 
       </div>
     </div>

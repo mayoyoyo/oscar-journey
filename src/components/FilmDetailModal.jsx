@@ -7,6 +7,7 @@ import { justWatchUrl } from '../utils/justwatch';
 import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import CeremonyTooltip from './CeremonyTooltip';
+import { getAwardLink } from '../utils/awardLinks';
 
 export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile }) {
   const [omdbData, setOmdbData] = useState(null);
@@ -195,6 +196,63 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             {omdbData?.runtime && (
               <div className="film-detail-runtime">🕐 {omdbData.runtime}</div>
             )}
+
+            {(() => {
+              const totalOscars = (movie.awards?.length || 0) + (movie.won ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+              if (totalOscars === 0) return null;
+              return (
+              <div className="film-detail-awards">
+                <div className="film-detail-awards-title">
+                  🏆 {totalOscars} Oscar{totalOscars !== 1 ? 's' : ''} Won
+                </div>
+                <div className="film-detail-awards-list">
+                  {movie.won && (
+                    <div className="award-item award-item-major">
+                      <span className="award-category">Best Picture</span>
+                    </div>
+                  )}
+                  {movie.category === 'ANIM' && (
+                    <div className="award-item award-item-major">
+                      <span className="award-category">Best Animated Feature</span>
+                    </div>
+                  )}
+                  {movie.category === 'INT' && (
+                    <div className="award-item award-item-major">
+                      <span className="award-category">Best International Feature Film</span>
+                    </div>
+                  )}
+                  {movie.alsoWon && movie.alsoWon.map((cat, i) => (
+                    <div key={`also-${i}`} className="award-item award-item-major">
+                      <span className="award-category">{cat === 'INT' ? 'Best International Feature Film' : cat === 'ANIM' ? 'Best Animated Feature' : cat}</span>
+                    </div>
+                  ))}
+                  {(movie.awards || []).map((a, i) => {
+                    const link = getAwardLink(a, movie);
+                    const content = (
+                      <>
+                        <span className="award-category">{a.category}</span>
+                        {a.winner && <span className="award-winner">{a.winner}</span>}
+                        {a.detail && <span className="award-detail">"{a.detail}"</span>}
+                        {link && <span className="award-link-icon">{"\u2197"}</span>}
+                      </>
+                    );
+                    return link ? (
+                      <a key={i} className={`award-item award-item-link ${a.winner ? 'award-item-major' : ''}`}
+                        href={link} target="_blank" rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {content}
+                      </a>
+                    ) : (
+                      <div key={i} className={`award-item ${a.winner ? 'award-item-major' : ''}`}>
+                        {content}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              );
+            })()}
 
             {/* Who watched + their ratings */}
             {watchedBy.length > 0 && (

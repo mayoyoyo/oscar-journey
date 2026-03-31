@@ -85,6 +85,11 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
                         {m.wonInCategory && <span className="ceremony-modal-trophy">🏆</span>}
                         {m.title}
                       </span>
+                      {m.awards && (
+                        <span className="ceremony-modal-award-count">
+                          🏆{m.awards.length + (m.wonInCategory ? 1 : 0)}
+                        </span>
+                      )}
                       <span className="ceremony-modal-film-year">{m.year}</span>
                     </div>
                   ))}

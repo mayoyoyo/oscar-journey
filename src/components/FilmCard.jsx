@@ -5,6 +5,7 @@ import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
 import CeremonyTooltip from './CeremonyTooltip';
+import { getAwardLink } from '../utils/awardLinks';
 
 const SKIP_MESSAGES = [
   "Really? This is an Oscar nominee. Have some respect. 😤",
@@ -137,6 +138,45 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         {omdbData?.runtime && (
           <div className="film-runtime">🕐 {omdbData.runtime}</div>
         )}
+
+        {(() => {
+          const awardsCount = (movie.awards?.length || 0) + (movie.won ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+          if (awardsCount === 0) return null;
+          return (
+          <div className="film-awards-compact">
+            <span className="film-awards-count">🏆 {awardsCount} Oscar{awardsCount !== 1 ? 's' : ''}</span>
+            <span className="film-awards-highlights">
+              {movie.won && <span className="film-award-chip">Best Picture</span>}
+              {movie.category === 'ANIM' && <span className="film-award-chip">Animated Feature</span>}
+              {movie.category === 'INT' && <span className="film-award-chip">International Feature</span>}
+              {movie.alsoWon && movie.alsoWon.map((cat, i) => (
+                <span key={`also-${i}`} className="film-award-chip">
+                  {cat === 'INT' ? 'International Feature' : cat === 'ANIM' ? 'Animated Feature' : cat}
+                </span>
+              ))}
+              {(movie.awards || []).filter(a => a.winner || a.detail).slice(0, 4).map((a, i) => {
+                const link = getAwardLink(a, movie);
+                const chipContent = a.winner
+                  ? `${a.category}: ${a.winner}${a.detail ? ` "${a.detail}"` : ''}`
+                  : `${a.category}: "${a.detail}"`;
+                return link ? (
+                  <a key={i} className="film-award-chip film-award-chip-link"
+                    href={link} target="_blank" rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >{chipContent} {"\u2197"}</a>
+                ) : (
+                  <span key={i} className="film-award-chip">{chipContent}</span>
+                );
+              })}
+              {(movie.awards || []).filter(a => !a.winner && !a.detail).length > 0 && (
+                <span className="film-award-chip film-award-technical">
+                  +{(movie.awards || []).filter(a => !a.winner && !a.detail).length} technical
+                </span>
+              )}
+            </span>
+          </div>
+          );
+        })()}
 
         {/* Watched by others + their ratings after user rates */}
         {allProfiles && (() => {

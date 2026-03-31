@@ -523,7 +523,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
           <strong>Global Rankings</strong> combine everyone's votes. <strong>Personal Rankings</strong> are yours alone — your own taste, your own ladder. You can only vote on films you've watched.
         </p>
         <p>
-          <strong>Cards</strong> — as you battle, you'll earn random movie cards. The more you battle, the higher your chances (guaranteed within {HARD_PITY}). Cards come in four rarities: <span style={{ color: RARITIES.COMMON.color }}>Common</span> (70%), <span style={{ color: RARITIES.RARE.color }}>Rare</span> (20%), <span style={{ color: RARITIES.EPIC.color }}>Epic</span> (8%), and <span style={{ color: RARITIES.LEGENDARY.color }}>Legendary</span> (2%). Your wallet holds up to 3 cards — feature your best pull on your profile.
+          <strong>Cards</strong> — as you battle, you'll earn random movie cards. The more you battle, the higher your chances (guaranteed within {HARD_PITY}). Cards come in four rarities: <span style={{ color: RARITIES.COMMON.color }}>Common</span> (60%), <span style={{ color: RARITIES.RARE.color }}>Rare</span> (25%), <span style={{ color: RARITIES.EPIC.color }}>Epic</span> (11%), and <span style={{ color: RARITIES.LEGENDARY.color }}>Legendary</span> (4%). Your wallet holds up to 3 cards — feature your best pull on your profile.
         </p>
       </details>
 

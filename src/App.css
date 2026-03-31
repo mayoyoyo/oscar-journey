@@ -705,6 +705,50 @@ main {
   color: var(--cream-dim);
 }
 
+.film-awards-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.film-awards-count {
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.film-awards-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.film-award-chip {
+  font-size: 0.72rem;
+  color: var(--cream);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 50px;
+}
+
+.film-award-technical {
+  color: var(--cream-dim);
+  font-style: italic;
+}
+
+.film-award-chip-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.film-award-chip-link:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+
 .watched-btn {
   margin-top: auto;
   display: inline-flex;
@@ -1388,6 +1432,74 @@ main {
   color: var(--cream-dim);
 }
 
+.film-detail-awards {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.film-detail-awards-title {
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.film-detail-awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.award-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  padding: 3px 0;
+  font-size: 0.8rem;
+}
+
+.award-item-major {
+  font-weight: 500;
+}
+
+.award-category {
+  color: var(--cream);
+}
+
+.award-winner {
+  color: var(--gold);
+  font-size: 0.78rem;
+}
+
+.award-detail {
+  color: var(--cream-dim);
+  font-style: italic;
+  font-size: 0.76rem;
+}
+
+.award-item-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.12s;
+  padding: 3px 6px;
+  margin: 0 -6px;
+  border-radius: 6px;
+}
+.award-item-link:hover {
+  background: var(--bg3);
+}
+
+.award-link-icon {
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  margin-left: 2px;
+}
+.award-item-link:hover .award-link-icon {
+  color: var(--gold);
+}
+
 /* =====================================================
    STAR PICKER (dual rating system)
    ===================================================== */
@@ -1847,85 +1959,192 @@ main {
 .profile-card {
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 22px;
+  border-radius: 16px;
+  overflow: hidden;
   transition: all 0.2s ease;
 }
-.profile-card-name {
-  font-family: Georgia, serif;
-  font-size: 1.15rem;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-.profile-card-stat {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 0;
-  font-size: 0.85rem;
-  color: var(--cream);
-  border-bottom: 1px solid var(--border);
-}
-.profile-card-stat:last-child,
-.profile-card-stat:last-of-type { border-bottom: none; }
-.profile-card-stat .stat-label { color: var(--cream-dim); }
-.profile-card-stat .stat-value { font-weight: 600; }
 
-.profile-card-skip .stat-value.has-skips {
+/* Header area */
+.pc-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 18px 12px;
+  background: linear-gradient(135deg, var(--bg3), var(--bg2));
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+}
+
+.pc-avatar {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.pc-name-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.pc-name {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1rem;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.pc-co-rater {
+  font-size: 0.68rem;
+  color: var(--cream-dim);
+  font-style: italic;
+}
+
+.pc-watching {
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  max-width: 150px;
+}
+.pc-watching:hover { color: var(--gold); }
+
+/* Stats grid */
+.pc-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.pc-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pc-stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cream);
+  font-family: Georgia, serif;
+}
+
+.pc-stat-label {
+  font-size: 0.62rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.pc-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 18px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.pc-detail {
+  font-size: 0.68rem;
+  color: var(--cream-dim);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 10px;
+  border-radius: 50px;
+}
+
+.pc-detail-skip {
   color: var(--red-bright);
 }
 
-.profile-card-co-rater {
-  font-size: 0.72rem;
+.pc-detail-collector {
+  color: var(--gold);
+}
+
+.pc-showcase-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  border-top: 1px solid var(--border);
+  min-height: 70px;
+}
+
+.pc-showcase-empty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--cream-dim);
+  opacity: 0.45;
+}
+
+.pc-showcase-empty-icon {
+  font-size: 1.3rem;
+}
+
+.pc-showcase-empty-text {
+  font-size: 0.72rem;
   font-style: italic;
-  margin-top: 4px;
+}
+
+.pc-showcase-section .profile-card-showcase {
+  gap: 10px;
+}
+
+.pc-showcase-section .profile-card-showcase img {
+  width: 40px;
+  height: 56px;
+  border-radius: 6px;
+}
+
+.pc-showcase-section .profile-card-showcase-movie {
+  max-width: 180px;
+  font-size: 0.72rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+  line-height: 1.3;
 }
 
 .profile-card-showcase {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 .profile-card-showcase img {
-  width: 40px;
-  height: 56px;
+  width: 32px;
+  height: 44px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 2px solid var(--rarity-border);
-  box-shadow: 0 0 10px var(--rarity-glow);
+  box-shadow: 0 0 8px var(--rarity-glow);
 }
 .profile-card-showcase-label {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 0;
 }
 .profile-card-showcase-movie {
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   color: var(--cream);
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 120px;
+  max-width: 90px;
 }
 .profile-card-showcase-rarity {
-  font-size: 0.58rem;
+  font-size: 0.55rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.profile-card-current {
-  margin-top: 4px;
-  padding-top: 4px;
-  font-size: 0.78rem;
-  color: var(--cream-dim);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .profile-card-clickable {
@@ -1934,12 +2153,28 @@ main {
 }
 .profile-card-clickable:hover {
   border-color: var(--gold);
-  box-shadow: 0 4px 20px var(--shadow);
-  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--shadow);
+  transform: translateY(-3px);
 }
 .profile-card-clickable:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
+}
+
+/* Rarity glow on profile cards */
+.pc-rarity-glow {
+  border-color: var(--card-border);
+  box-shadow: 0 0 12px var(--card-glow), inset 0 0 12px var(--card-glow);
+  animation: rarityPulse 3s ease-in-out infinite;
+}
+.pc-rarity-glow:hover {
+  border-color: var(--card-border);
+  box-shadow: 0 0 20px var(--card-glow), inset 0 0 16px var(--card-glow), 0 6px 24px var(--shadow);
+}
+
+@keyframes rarityPulse {
+  0%, 100% { box-shadow: 0 0 10px var(--card-glow), inset 0 0 10px var(--card-glow); }
+  50% { box-shadow: 0 0 18px var(--card-glow), inset 0 0 18px var(--card-glow); }
 }
 
 /* =====================================================
@@ -2445,12 +2680,7 @@ main {
   }
 }
 
-/* Avatar display on Leaderboard profile cards */
-.profile-card-avatar {
-  font-size: 2rem;
-  margin-right: 6px;
-  vertical-align: middle;
-}
+/* (profile-card-avatar removed — replaced by .pc-avatar) */
 
 /* Avatar display on ProfileDetail header */
 .profile-detail-avatar {
@@ -5264,6 +5494,13 @@ main {
   color: var(--cream-dim);
   flex-shrink: 0;
   margin-left: 12px;
+}
+
+.ceremony-modal-award-count {
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-left: 4px;
+  flex-shrink: 0;
 }
 
 .ceremony-tooltip-name {

@@ -293,6 +293,10 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             </div>
             <div className="profile-summary-label">Fav Genre</div>
           </div>
+          <div className="profile-summary-item">
+            <div className="profile-summary-value">{profileData.battleCount || 0}</div>
+            <div className="profile-summary-label">Battles</div>
+          </div>
         </div>
       </div>
 

@@ -47,7 +47,8 @@ const GENRE_TO_TONE = {
 
 // Check if a movie passes the current filters
 // smartContext: { watchedSet, allProfiles, currentProfileId }
-function moviePassesFilter(movie, filters, smartContext) {
+// isCurrentFilm: if true, exempt from skipWatched so user can rate before advancing
+function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   if (!filters) return true;
   const f = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters.eras || {}) },
@@ -75,8 +76,8 @@ function moviePassesFilter(movie, filters, smartContext) {
   if (smartContext) {
     const mid = movie.id;
 
-    // Skip watched films
-    if (f.smart.skipWatched && smartContext.watchedSet && smartContext.watchedSet.has(mid)) {
+    // Skip watched films — BUT exempt the current film so user can rate it
+    if (f.smart.skipWatched && smartContext.watchedSet && smartContext.watchedSet.has(mid) && !isCurrentFilm) {
       return false;
     }
 
@@ -509,8 +510,8 @@ export default function App() {
   const idxPassesFilter = useCallback((idx) => {
     const movie = playlist[idx];
     if (!movie) return false;
-    return moviePassesFilter(movie, activeFilters, smartContext);
-  }, [playlist, activeFilters, smartContext]);
+    return moviePassesFilter(movie, activeFilters, smartContext, idx === currentIdx);
+  }, [playlist, activeFilters, smartContext, currentIdx]);
 
   // Compute filtered eligible film counts for progress
   const eligibleStats = useMemo(() => {
@@ -554,11 +555,9 @@ export default function App() {
   }, [currentIdx, playlist.length, firebaseSave, idxPassesFilter]);
 
   const goPrev = useCallback(() => {
-    // Find previous eligible film before currentIdx
+    // Previous always goes back one step — no filter skipping
+    // User is revisiting films they've already passed
     let prev = currentIdx - 1;
-    while (prev >= 0 && !idxPassesFilter(prev)) {
-      prev--;
-    }
     if (prev < 0) return;
     setFading(true);
     setTimeout(() => {
@@ -899,8 +898,8 @@ export default function App() {
       <div className="app-scroll-area">
       {showProgress && (
         <ProgressBar
-          currentIdx={eligiblePosition}
-          total={eligibleStats.total}
+          currentIdx={currentIdx}
+          total={playlist.length}
           watchedCount={watchedSet.size}
           totalMovies={playlist.length}
         />
@@ -987,8 +986,8 @@ export default function App() {
                 onOpenProfile={(id) => setProfileModalId(id)}
               />
               <NavButtons
-                currentIdx={eligiblePosition}
-                total={eligibleStats.total}
+                currentIdx={currentIdx}
+                total={playlist.length}
                 onPrev={goPrev}
                 onNext={goNext}
                 canAdvance={canAdvance}

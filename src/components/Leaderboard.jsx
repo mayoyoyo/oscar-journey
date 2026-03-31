@@ -140,6 +140,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         memberSince,
         currentMovie,
         skipCount: p.skipCount || 0,
+        battleCount: p.battleCount || 0,
         showcase: p.showcase || [],
         wallet: p.wallet || [],
       });
@@ -246,69 +247,78 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
               }
             };
 
+            // Get best rarity from showcase for card border glow
+            const bestRarity = p.showcase?.length > 0 ? (p.showcase[0].rarity || 'COMMON') : null;
+            const rarityData = bestRarity ? RARITIES[bestRarity] : null;
+            const cardStyle = rarityData && bestRarity !== 'COMMON' ? {
+              '--card-glow': rarityData.glow,
+              '--card-border': rarityData.border,
+            } : {};
+
             return (
-              <div
-                className="profile-card profile-card-clickable"
-                key={p.id}
-                onClick={handleClick}
-                role="button"
-                tabIndex={0}
-                onKeyDown={e => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    handleClick();
-                  }
-                }}
+              <div className={`profile-card profile-card-clickable ${bestRarity && bestRarity !== 'COMMON' ? 'pc-rarity-glow' : ''}`}
+                key={p.id} style={cardStyle}
+                onClick={handleClick} role="button" tabIndex={0}
+                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); } }}
               >
-                <div className="profile-card-name">
-                  {p.avatar && <span className="profile-card-avatar">{p.avatar}</span>}
-                  {!p.avatar && p.isVirtualRater && <span className="profile-card-avatar">👥</span>}
-                  {p.displayName}
-                </div>
-                {p.isVirtualRater && (
-                  <div className="profile-card-co-rater">
-                    Co-watching with {p.parentDisplayName}
+                {/* Header — name + watching */}
+                <div className="pc-header">
+                  <span className="pc-avatar">{p.avatar || (p.isVirtualRater ? '👥' : '👤')}</span>
+                  <div className="pc-name-block">
+                    <span className="pc-name">{p.displayName}</span>
+                    {p.isVirtualRater && <span className="pc-co-rater">with {p.parentDisplayName}</span>}
+                    {p.currentMovie && (
+                      <span className="pc-watching"
+                        onClick={(e) => { e.stopPropagation(); onOpenDetail(p.currentMovie); }}
+                      >🎬 {p.currentMovie.title}</span>
+                    )}
                   </div>
-                )}
-                <div className="profile-card-stat">
-                  <span className="stat-label">Films Watched</span>
-                  <span className="stat-value">{p.watchedCount}</span>
                 </div>
-                <div className="profile-card-stat">
-                  <span className="stat-label">Avg Rating</span>
-                  <span className="stat-value">{p.avgRating ? `${p.avgRating} / 10` : '--'}</span>
-                </div>
-                <div className="profile-card-stat">
-                  <span className="stat-label">Total Ratings</span>
-                  <span className="stat-value">{p.ratingCount}</span>
-                </div>
-                <div className="profile-card-stat">
-                  <span className="stat-label">Fav Genre</span>
-                  <span className="stat-value">{p.favGenre || '--'}</span>
-                </div>
-                {!p.isVirtualRater && (
-                  <div className="profile-card-stat profile-card-skip">
-                    <span className="stat-label">Films Skipped {p.skipCount > 0 ? '😤' : ''}</span>
-                    <span className={`stat-value ${p.skipCount > 0 ? 'has-skips' : ''}`}>{p.skipCount}</span>
+
+                {/* Stats grid */}
+                <div className="pc-stats">
+                  <div className="pc-stat">
+                    <span className="pc-stat-value">{p.watchedCount}</span>
+                    <span className="pc-stat-label">Watched</span>
                   </div>
-                )}
-                {getCollectorScore(p.wallet) > 0 && (
-                  <div className="profile-card-stat">
-                    <span className="stat-label">Collector Score</span>
-                    <span className="stat-value" style={{ color: 'var(--gold)' }}>{getCollectorScore(p.wallet)}</span>
+                  <div className="pc-stat">
+                    <span className="pc-stat-value">{p.avgRating || '—'}</span>
+                    <span className="pc-stat-label">Avg</span>
                   </div>
-                )}
-                {p.showcase?.length > 0 && (
-                  <MiniShowcase card={p.showcase[0]} />
-                )}
-                {p.currentMovie && (
-                  <div className="profile-card-current"
-                    onClick={(e) => { e.stopPropagation(); onOpenDetail(p.currentMovie); }}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    🎬 {p.currentMovie.title} ({p.currentMovie.year})
+                  <div className="pc-stat">
+                    <span className="pc-stat-value">{p.ratingCount}</span>
+                    <span className="pc-stat-label">Rated</span>
                   </div>
-                )}
+                  {!p.isVirtualRater && (
+                    <div className="pc-stat">
+                      <span className="pc-stat-value">{p.battleCount}</span>
+                      <span className="pc-stat-label">Battles</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Featured card — own section */}
+                <div className="pc-showcase-section">
+                  {p.showcase?.length > 0 ? (
+                    <MiniShowcase card={p.showcase[0]} />
+                  ) : (
+                    <div className="pc-showcase-empty">
+                      <span className="pc-showcase-empty-icon">🃏</span>
+                      <span className="pc-showcase-empty-text">Battle to earn cards</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Footer details */}
+                <div className="pc-footer">
+                  {p.favGenre && <span className="pc-detail" title="Favourite genre">{p.favGenre.split(' / ')[0]}</span>}
+                  {!p.isVirtualRater && p.skipCount > 0 && (
+                    <span className="pc-detail pc-detail-skip">{p.skipCount} skipped 😤</span>
+                  )}
+                  {getCollectorScore(p.wallet) > 0 && (
+                    <span className="pc-detail pc-detail-collector" title="Collector score from cards">🃏 {getCollectorScore(p.wallet)}</span>
+                  )}
+                </div>
               </div>
             );
           })}

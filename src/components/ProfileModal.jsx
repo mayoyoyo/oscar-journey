@@ -58,7 +58,7 @@ function FeaturedCard({ card }) {
   );
 }
 
-export default function ProfileModal({ profileId, onClose, currentProfile, currentRatings, onOpenDetail, onSaveProfile }) {
+export default function ProfileModal({ profileId, onClose, currentProfile, currentRatings, onOpenDetail, onSaveProfile, onOpenProfile }) {
   const [profileData, setProfileData] = useState(null);
   const [loading, setLoading] = useState(true);
 

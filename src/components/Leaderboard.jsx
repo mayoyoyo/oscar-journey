@@ -19,8 +19,11 @@ function MiniShowcase({ card }) {
   if (!movie) return null;
   return (
     <div className="profile-card-showcase" style={{ '--rarity-border': rarity.border, '--rarity-glow': rarity.glow }}>
-      {poster ? <img src={poster} alt={movie.title} /> : <span>🎬</span>}
-      <span className="profile-card-showcase-rarity" style={{ color: rarity.color }}>{rarity.name}</span>
+      {poster ? <img src={poster} alt={movie.title} /> : <span style={{ fontSize: '1.5rem' }}>🎬</span>}
+      <div className="profile-card-showcase-label">
+        <span className="profile-card-showcase-movie">{movie.title}</span>
+        <span className="profile-card-showcase-rarity" style={{ color: rarity.color }}>{rarity.name}</span>
+      </div>
     </div>
   );
 }

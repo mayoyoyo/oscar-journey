@@ -1101,6 +1101,7 @@ export default function App() {
           currentProfile={profile}
           currentRatings={ratings}
           onOpenDetail={(movie) => { setProfileModalId(null); setDetailMovie(movie); }}
+          onOpenProfile={(id) => setProfileModalId(id)}
           onSaveProfile={(field, value) => {
             firebaseSave(field, value);
             setProfile(prev => prev ? { ...prev, [field]: value } : prev);

@@ -24,7 +24,8 @@ import ActivityFeed from './components/ActivityFeed';
 import { SkeletonCard } from './components/Skeleton';
 import InfoModal from './components/InfoModal';
 import ProfileModal from './components/ProfileModal';
-import CardsAnnouncement from './components/CardsAnnouncement';
+import DailyOscar, { getDailyStatus, getDailyStreak } from './components/DailyOscar';
+import WhatsNewAnnouncement from './components/WhatsNewAnnouncement';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
@@ -228,6 +229,7 @@ export default function App() {
   const [infoOpen, setInfoOpen] = useState(false);
   const [profileModalId, setProfileModalId] = useState(null);
   const [autoSelectProfileId, setAutoSelectProfileId] = useState(null);
+  const [dailyOpen, setDailyOpen] = useState(false);
   const [bannerDismissed, setBannerDismissed] = useState(() => {
     return localStorage.getItem('oscars_banner_dismissed') === 'true';
   });
@@ -948,6 +950,26 @@ export default function App() {
                   </div>
                 </div>
               )}
+              {/* Daily Oscar banner */}
+              {(() => {
+                const status = getDailyStatus();
+                const streak = getDailyStreak();
+                return (
+                  <div className="daily-banner" onClick={() => setDailyOpen(true)}>
+                    <div className="daily-banner-left">
+                      <span className="daily-banner-icon">🎬</span>
+                      <div>
+                        <div className="daily-banner-text">Daily Oscar</div>
+                        <div className="daily-banner-sub">
+                          {status?.solved ? 'Completed!' : status?.failed ? 'Try again tomorrow' : 'Guess today\'s movie from a quote'}
+                        </div>
+                      </div>
+                    </div>
+                    {streak > 0 && <div className="daily-banner-streak">{streak} day streak</div>}
+                  </div>
+                );
+              })()}
+
               <FilmCard
                 movie={currentMovie}
                 isWatched={isCurrentWatched}
@@ -1097,8 +1119,25 @@ export default function App() {
         <InfoModal onClose={() => setInfoOpen(false)} />
       )}
 
-      {/* Cards announcement — one time only */}
-      {profile && <CardsAnnouncement onGoToBattle={() => handleTabChange('battle')} />}
+      {/* Daily Oscar game */}
+      {dailyOpen && (
+        <DailyOscar
+          onClose={() => setDailyOpen(false)}
+          profile={profile}
+          onSaveProfile={(field, value) => {
+            firebaseSave(field, value);
+            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
+          }}
+        />
+      )}
+
+      {/* What's New announcement — one time only */}
+      {profile && (
+        <WhatsNewAnnouncement
+          onGoToBattle={() => handleTabChange('battle')}
+          onPlayDaily={() => setDailyOpen(true)}
+        />
+      )}
 
       {/* Profile modal */}
       {profileModalId && (

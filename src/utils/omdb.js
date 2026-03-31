@@ -25,15 +25,16 @@ export async function fetchOmdbData(movie) {
   const directorKey = omdbCacheKey('director', movie);
   const runtimeKey  = omdbCacheKey('runtime',  movie);
 
-  // Return cached data if we have real results (not rate-limit failures)
+  // Return cached data if we have real results (not rate-limit failures or missing posters)
   const allKeys = [posterKey, plotKey, ratingKey, directorKey, runtimeKey];
   const allCached = allKeys.every(k => localStorage.getItem(k) !== null);
   if (allCached) {
-    // Check none are "RATE_LIMITED" — those should retry
     const anyRateLimited = allKeys.some(k => localStorage.getItem(k) === 'RATE_LIMITED');
-    if (!anyRateLimited) {
+    const posterMissing = localStorage.getItem(posterKey) === NOT_FOUND;
+    // If poster is NOT_FOUND, retry — it may have been a year mismatch that the fallback can fix
+    if (!anyRateLimited && !posterMissing) {
       return {
-        poster:   localStorage.getItem(posterKey)   === NOT_FOUND ? null : localStorage.getItem(posterKey),
+        poster:   localStorage.getItem(posterKey),
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),

@@ -206,7 +206,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
   if (selectedProfile) {
     return (
       <ProfileDetail
-        profileData={selectedProfile}
+        profileData={currentProfile && selectedProfile.id === currentProfile.id ? { ...selectedProfile, ...currentProfile } : selectedProfile}
         onBack={() => setSelectedProfile(null)}
         currentProfile={currentProfile}
         currentRatings={currentRatings}

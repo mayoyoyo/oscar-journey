@@ -874,7 +874,7 @@ export default function App() {
 
   // --- Not logged in: show login screen ---
   if (!profile) {
-    return <LoginScreen onLogin={handleLogin} />;
+    return <div className="login-scroll-wrap"><LoginScreen onLogin={handleLogin} /></div>;
   }
 
   // --- Render ---

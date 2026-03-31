@@ -4878,15 +4878,15 @@ main {
 .daily-input::placeholder { color: #666; }
 .daily-suggestions {
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + 4px);
   left: 0; right: 0;
   background: #1c1a16;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 10px 10px 0 0;
-  z-index: 5;
-  max-height: 200px;
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 10px;
+  z-index: 50;
+  max-height: 180px;
   overflow-y: auto;
-  box-shadow: 0 -4px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
 }
 .daily-suggestion {
   display: block;
@@ -4900,7 +4900,7 @@ main {
   font-size: 0.85rem;
   cursor: pointer;
 }
-.daily-suggestion:hover { background: rgba(255,255,255,0.06); }
+.daily-suggestion:hover { background: rgba(212,175,55,0.08); }
 .daily-suggestion:last-child { border-bottom: none; }
 .daily-result {
   text-align: center;
@@ -5013,7 +5013,7 @@ main {
   letter-spacing: 0.05em;
 }
 
-.daily-input-form { position: relative; margin-bottom: 12px; }
+.daily-input-form { position: relative; margin-bottom: 12px; z-index: 10; }
 
 @media (max-width: 600px) {
   .daily-overlay { padding: 0; }

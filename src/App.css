@@ -5164,8 +5164,7 @@ main {
 
 .filter-check-item:not(.active) .filter-check-label {
   color: var(--cream-dim);
-  text-decoration: line-through;
-  text-decoration-color: var(--border);
+  opacity: 0.5;
 }
 
 .journey-reshuffle-btn {

@@ -5014,8 +5014,25 @@ main {
 }
 
 @media (max-width: 600px) {
-  .daily-modal { padding: 20px 16px; }
-  .daily-quote { font-size: 0.95rem; padding: 16px 12px; }
+  .daily-overlay {
+    align-items: flex-start;
+    padding: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .daily-modal {
+    padding: 20px 16px;
+    max-height: none;
+    border-radius: 0 0 16px 16px;
+    margin-bottom: 40px;
+  }
+  .daily-quote { font-size: 0.95rem; padding: 14px 12px; }
+  .daily-poster-wrap { width: 140px; }
+  .daily-poster { height: 200px; }
+  .daily-title { font-size: 1.2rem; }
+  .daily-subtitle { font-size: 0.75rem; margin-bottom: 14px; }
+  .daily-hint { font-size: 0.75rem; padding: 5px 10px; }
+  .daily-input { font-size: 16px; }
 }
 
 /* =====================================================

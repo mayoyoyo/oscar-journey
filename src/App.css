@@ -1031,12 +1031,18 @@ main {
 
 @media (max-width: 540px) {
   .modal {
-    padding: 20px;
-    border-radius: 10px;
-    max-height: 85dvh;
+    padding: 0;
+    border-radius: 12px;
+    max-height: 90dvh;
+    overflow-y: auto;
   }
   .modal-overlay {
-    padding: 10px;
+    padding: 8px;
+  }
+  .film-detail-close {
+    top: 8px;
+    right: 8px;
+    z-index: 10;
   }
 }
 
@@ -2664,10 +2670,41 @@ main {
   .journey-tagline { font-size: 0.75rem; margin: 8px 0; }
   .header-title { font-size: 1rem; }
 
-  .film-detail-inner { flex-direction: column; }
-  .film-detail-poster { width: 100%; min-width: unset; height: 220px; }
+  .film-detail-inner {
+    flex-direction: column;
+    max-height: none;
+  }
+  .film-detail-poster {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 16px 16px 8px;
+    background: linear-gradient(135deg, var(--bg3), var(--bg2));
+  }
+  .film-detail-poster img {
+    width: auto;
+    max-width: 45%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.05);
+  }
   .film-detail-poster .poster-placeholder,
-  .film-detail-poster .poster-loading { min-height: 220px; }
+  .film-detail-poster .poster-loading { min-height: 140px; height: 140px; }
+  .film-detail-body {
+    padding: 14px 16px 16px;
+  }
+  .film-detail-body .film-title { font-size: 1.2rem; }
+  .film-detail-body .film-year { font-size: 0.82rem; }
+  .film-detail-body .film-plot { font-size: 0.8rem; line-height: 1.4; }
+  .film-detail-body .film-director { font-size: 0.78rem; }
+  .film-detail-body .film-runtime { font-size: 0.78rem; }
+  .film-detail-metrics { flex-wrap: wrap; gap: 6px; }
+  .film-detail-all-ratings { gap: 4px; }
+  .all-rating-chip { font-size: 0.7rem; padding: 3px 8px; }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);

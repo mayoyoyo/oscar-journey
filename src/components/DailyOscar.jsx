@@ -181,6 +181,13 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
 
   const streak = getDailyStreak();
 
+  // Prevent mobile keyboard from auto-opening
+  useEffect(() => {
+    if (document.activeElement && document.activeElement.tagName === 'INPUT') {
+      document.activeElement.blur();
+    }
+  }, []);
+
   // Countdown to next daily
   const [countdown, setCountdown] = useState('');
   useEffect(() => {

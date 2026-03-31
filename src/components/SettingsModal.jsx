@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AVATAR_EMOJIS } from '../data/avatars';
 
+
 const DEFAULT_FILTERS = {
   eras: { '70s80s': true, '90s': true, '00s': true, '10s': true, '20s': true },
   categories: { BP: true, INT: true, ANIM: true },
@@ -52,6 +53,7 @@ export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS, SMART_LABELS
 export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
+  const [showAvatarPicker, setShowAvatarPicker] = useState(false);
 
   const handleExportData = () => {
     if (!profile) return;
@@ -105,18 +107,24 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
 
         <div className="modal-section">
           <label>Avatar</label>
-          <div className="avatar-grid" style={{ marginTop: '8px', marginBottom: '8px' }}>
-            {AVATAR_EMOJIS.map((emoji, i) => (
-              <button
-                key={i}
-                className={`avatar-option ${avatar === emoji ? 'selected' : ''}`}
-                onClick={() => onAvatarChange(emoji)}
-                type="button"
-              >
-                {emoji}
-              </button>
-            ))}
+          <div className="login-avatar-selected" style={{ marginTop: '8px' }} onClick={() => setShowAvatarPicker(p => !p)}>
+            <span className="login-avatar-emoji">{avatar}</span>
+            <span className="login-avatar-change">{showAvatarPicker ? 'Close' : 'Tap to change'}</span>
           </div>
+          {showAvatarPicker && (
+            <div className="login-avatar-grid" style={{ marginTop: '8px' }}>
+              {AVATAR_EMOJIS.map((emoji, i) => (
+                <button
+                  key={i}
+                  className={`login-avatar-option ${avatar === emoji ? 'selected' : ''}`}
+                  onClick={() => { onAvatarChange(emoji); setShowAvatarPicker(false); }}
+                  type="button"
+                >
+                  {emoji}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="modal-section">

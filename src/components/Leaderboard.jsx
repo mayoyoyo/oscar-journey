@@ -39,6 +39,25 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
   const [loading, setLoading] = useState(true);
   const [selectedProfile, setSelectedProfile] = useState(null);
 
+  // Push hash when selecting a profile, listen for back button
+  const selectProfile = (profile) => {
+    setSelectedProfile(profile);
+    if (profile) {
+      window.history.pushState({ profileId: profile.id }, '', `#profiles/${profile.id}`);
+    }
+  };
+
+  useEffect(() => {
+    const onPopState = () => {
+      const hash = window.location.hash;
+      if (!hash.includes('profiles/') && selectedProfile) {
+        setSelectedProfile(null);
+      }
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, [selectedProfile]);
+
   useEffect(() => {
     let cancelled = false;
     async function load() {
@@ -59,7 +78,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
   useEffect(() => {
     if (autoSelectProfileId && profiles.length > 0 && !loading) {
       const target = profiles.find(p => p.id === autoSelectProfileId);
-      if (target) setSelectedProfile(target);
+      if (target) selectProfile(target);
       if (onClearAutoSelect) onClearAutoSelect();
     }
   }, [autoSelectProfileId, profiles, loading]);
@@ -217,7 +236,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
     return (
       <ProfileDetail
         profileData={currentProfile && selectedProfile.id === currentProfile.id ? { ...selectedProfile, ...currentProfile } : selectedProfile}
-        onBack={() => setSelectedProfile(null)}
+        onBack={() => { setSelectedProfile(null); window.history.back(); }}
         currentProfile={currentProfile}
         currentRatings={currentRatings}
         onOpenDetail={onOpenDetail}
@@ -240,10 +259,10 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
             const handleClick = () => {
               if (p.isVirtualRater) {
                 const parent = profiles.find(prof => prof.id === p.parentProfileId);
-                if (parent) setSelectedProfile({ ...parent, focusRater: p.displayName });
+                if (parent) selectProfile({ ...parent, focusRater: p.displayName });
               } else {
                 const fullProfile = profiles.find(prof => prof.id === p.id);
-                if (fullProfile) setSelectedProfile(fullProfile);
+                if (fullProfile) selectProfile(fullProfile);
               }
             };
 

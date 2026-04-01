@@ -15,6 +15,7 @@ function omdbCacheKey(prefix, movie) {
 const POSTER_OVERRIDES = {
   'birdman-2014': '/posters/birdman-2014.jpg',
   'il-postino-1995': '/posters/il-postino-1995.jpg',
+  'cries-and-whispers-1973': '/posters/cries-and-whispers-1973.webp',
 };
 
 // Title overrides for movies that don't match OMDB's naming

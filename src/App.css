@@ -2008,6 +2008,7 @@ main {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.88rem;
+  table-layout: fixed;
 }
 
 .stats-table th {
@@ -2019,6 +2020,9 @@ main {
   padding: 8px 10px;
   border-bottom: 2px solid var(--border);
 }
+.stats-table th:first-child { width: 50%; }
+.stats-table th:nth-child(2) { width: 25%; }
+.stats-table th:nth-child(3) { width: 25%; }
 
 .stats-table td {
   padding: 8px 10px;

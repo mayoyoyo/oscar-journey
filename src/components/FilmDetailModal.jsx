@@ -30,18 +30,27 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     setPosterError(false);
     setLegendaryOwner(null);
 
-    // Check if someone owns the Legendary card for this movie
-    getDoc(doc(db, 'cardRegistry', `${movie.id}-LEGENDARY`)).then(snap => {
-      if (snap.exists()) {
-        const owner = snap.data();
-        // Fetch the owner's display name
-        getDoc(doc(db, 'profiles', owner.profileId)).then(pSnap => {
-          if (pSnap.exists()) {
-            setLegendaryOwner({ name: pSnap.data().displayName || owner.profileId, avatar: pSnap.data().avatar || '', id: owner.profileId });
+    // Check who owns the highest rarity card for this movie
+    (async () => {
+      for (const rarity of ['LEGENDARY', 'EPIC', 'RARE']) {
+        try {
+          const snap = await getDoc(doc(db, 'cardRegistry', `${movie.id}-${rarity}`));
+          if (snap.exists()) {
+            const owner = snap.data();
+            const pSnap = await getDoc(doc(db, 'profiles', owner.profileId));
+            if (pSnap.exists()) {
+              setLegendaryOwner({
+                name: pSnap.data().displayName || owner.profileId,
+                avatar: pSnap.data().avatar || '',
+                id: owner.profileId,
+                rarity,
+              });
+            }
+            return; // stop at highest found
           }
-        }).catch(() => {});
+        } catch {}
       }
-    }).catch(() => {});
+    })();
     fetchOmdbData(movie).then(data => {
       setOmdbData(data);
       setLoading(false);
@@ -172,9 +181,13 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             )}
           </div>
           {legendaryOwner && (
-            <div className="legendary-owner-badge profile-name-link" onClick={() => onOpenProfile && onOpenProfile(legendaryOwner.id)}>
-              <span className="legendary-owner-icon">✦</span>
-              Legendary held by {legendaryOwner.avatar} {legendaryOwner.name}
+            <div
+              className="card-owner-badge profile-name-link"
+              style={{ color: RARITIES[legendaryOwner.rarity]?.color }}
+              onClick={() => onOpenProfile && onOpenProfile(legendaryOwner.id)}
+            >
+              <span className="card-owner-icon">✦</span>
+              {RARITIES[legendaryOwner.rarity]?.name} held by {legendaryOwner.avatar} {legendaryOwner.name}
             </div>
           )}
           <div className="film-detail-body">

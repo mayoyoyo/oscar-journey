@@ -1371,18 +1371,17 @@ main {
   display: block;
 }
 
-.legendary-owner-badge {
+.card-owner-badge {
   text-align: center;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #f59e0b;
   padding: 6px 0;
   letter-spacing: 0.03em;
   cursor: pointer;
   transition: opacity 0.15s;
 }
-.legendary-owner-badge:hover { opacity: 0.8; }
-.legendary-owner-icon {
+.card-owner-badge:hover { opacity: 0.8; }
+.card-owner-icon {
   font-size: 0.85rem;
   margin-right: 4px;
 }

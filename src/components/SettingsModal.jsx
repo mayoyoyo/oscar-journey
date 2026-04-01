@@ -283,6 +283,47 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           </div>
         )}
 
+        <div className="modal-section" style={{ marginTop: '8px', paddingTop: '16px', borderTop: '1px solid var(--border)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <label>Version</label>
+            <span style={{ fontSize: '0.82rem', color: 'var(--gold)', fontWeight: 600 }}>v2.0.0</span>
+          </div>
+          <details style={{ marginTop: '8px' }}>
+            <summary style={{ fontSize: '0.75rem', color: 'var(--cream-dim)', cursor: 'pointer' }}>Changelog</summary>
+            <div style={{ fontSize: '0.72rem', color: 'var(--cream-dim)', lineHeight: 1.6, marginTop: '8px' }}>
+              <p><strong>v2.0.0</strong> — Custom domain, Daily Oscar, card packs</p>
+              <ul style={{ paddingLeft: '16px', margin: '4px 0' }}>
+                <li>Live at theoscarsjourney.com</li>
+                <li>Daily Oscar quiz — guess movies from quotes & blurred posters</li>
+                <li>Collectible card system with 4 rarities</li>
+                <li>Card registry — unique movie+rarity combos per user</li>
+                <li>Earn cards from Journey, Battle, and Daily Oscar</li>
+                <li>Featured card on profile with animated rarity borders</li>
+                <li>Card owner badge on film detail modals</li>
+                <li>Smart battle matchmaking (Swiss/discovery/wildcard)</li>
+                <li>Dynamic ELO K-factor</li>
+                <li>Profile modal with 3D tilt featured card</li>
+                <li>Clean URL routing (/films, /battle, /profiles)</li>
+                <li>Swipe-to-rate stars on mobile</li>
+                <li>Mobile-optimized film detail modal</li>
+                <li>SEO meta tags, sitemap, structured data</li>
+                <li>399 movie quotes for Daily Oscar</li>
+                <li>5 OMDB API keys with rotation</li>
+                <li>Automated daily backups</li>
+              </ul>
+              <p><strong>v1.0.0</strong> — Initial release</p>
+              <ul style={{ paddingLeft: '16px', margin: '4px 0' }}>
+                <li>Journey mode with randomized film queue</li>
+                <li>Films A-Z with checklist mode</li>
+                <li>Battle mode with ELO rankings</li>
+                <li>Profiles with stats and leaderboard</li>
+                <li>Multi-rater support</li>
+                <li>JustWatch integration</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
         <div className="modal-btns">
           <button className="btn-modal-cancel" onClick={onClose}>Close</button>
         </div>

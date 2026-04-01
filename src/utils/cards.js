@@ -45,7 +45,12 @@ export function getNearMiss(rarity) {
 // Pack config
 export const HARD_PITY = 25;
 export const CARDS_PER_PACK = 1;
-export const MAX_WALLET = 3;
+export function getMaxWallet(watchedCount) {
+  if (watchedCount >= 200) return 5;
+  if (watchedCount >= 100) return 4;
+  return 3;
+}
+export const MAX_WALLET = 3; // default, use getMaxWallet() for dynamic
 export const MAX_SHOWCASE = 1;
 
 // Variable reward schedule — returns true if a card should drop

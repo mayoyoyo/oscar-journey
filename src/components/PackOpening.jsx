@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MOVIES_BY_ID } from '../data/movies';
-import { RARITIES, MAX_WALLET, getNearMiss } from '../utils/cards';
+import { RARITIES, getNearMiss } from '../utils/cards';
 import { fetchOmdbData } from '../utils/omdb';
 
 function CardBackDesign() {
@@ -52,7 +52,7 @@ function MiniCard({ card, onClick, label, animClass }) {
   );
 }
 
-export default function PackOpening({ cards, wallet, onClose, onKeep, onReplace, onSaveShowcase, currentShowcase }) {
+export default function PackOpening({ cards, wallet, onClose, onKeep, onReplace, onSaveShowcase, currentShowcase, maxWallet = 3 }) {
   const [revealed, setRevealed] = useState(false);
   const [shaking, setShaking] = useState(false);
   const [phase, setPhase] = useState('reveal'); // 'reveal' | 'keep' | 'replace' | 'done'
@@ -63,7 +63,7 @@ export default function PackOpening({ cards, wallet, onClose, onKeep, onReplace,
   const [nearMiss] = useState(() => getNearMiss(card.rarity));
   const movie = MOVIES_BY_ID[card.movieId];
   const rarity = RARITIES[card.rarity];
-  const walletFull = wallet.length >= MAX_WALLET;
+  const walletFull = wallet.length >= maxWallet;
 
   const handleReveal = () => {
     if (revealed || shaking) return;
@@ -170,7 +170,7 @@ export default function PackOpening({ cards, wallet, onClose, onKeep, onReplace,
           <div className="pack-actions">
             {!walletFull ? (
               <button className="pack-close-btn" onClick={handleKeep}>
-                Add to Wallet ({wallet.length}/{MAX_WALLET})
+                Add to Wallet ({wallet.length}/{maxWallet})
               </button>
             ) : (
               <button className="pack-close-btn" onClick={() => setPhase('replace')}>
@@ -191,7 +191,7 @@ export default function PackOpening({ cards, wallet, onClose, onKeep, onReplace,
               )}
             </div>
             <div className="pack-swap-arrow">⇅</div>
-            <div className="pack-done-wallet-label">Your Wallet ({wallet.length}/{MAX_WALLET})</div>
+            <div className="pack-done-wallet-label">Your Wallet ({wallet.length}/{maxWallet})</div>
             <div className="pack-swap-wallet">
               {wallet.map((existingCard, i) => (
                 <MiniCard
@@ -212,7 +212,7 @@ export default function PackOpening({ cards, wallet, onClose, onKeep, onReplace,
         {phase === 'done' && (
           <>
             <div className="pack-done-wallet">
-              <div className="pack-done-wallet-label">Your Wallet ({finalWallet.length}/{MAX_WALLET})</div>
+              <div className="pack-done-wallet-label">Your Wallet ({finalWallet.length}/{maxWallet})</div>
               <p className="pack-done-hint">Tap a card to feature it on your profile</p>
               <div className="pack-swap-wallet">
                 {finalWallet.map((wCard, i) => {

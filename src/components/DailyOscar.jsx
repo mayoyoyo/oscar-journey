@@ -3,7 +3,7 @@ import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { QUOTES } from '../data/quotes';
 import { GENRE_LABELS } from '../data/movies';
 import { fetchOmdbData } from '../utils/omdb';
-import { RARITIES } from '../utils/cards';
+import { RARITIES, getMaxWallet } from '../utils/cards';
 import PackOpening from './PackOpening';
 
 function getDailyMovieId() {
@@ -196,6 +196,7 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
       <PackOpening
         cards={[rewardCard]}
         wallet={profile?.wallet || []}
+        maxWallet={getMaxWallet(profile?.watched?.length || 0)}
         currentShowcase={profile?.showcase || []}
         onSaveShowcase={(s) => { if (onSaveProfile) onSaveProfile('showcase', s); }}
         onClose={() => { setShowPack(false); setRewardClaimed(true); }}

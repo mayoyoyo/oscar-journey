@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import { fetchOmdbData } from '../utils/omdb';
-import { RARITIES, getCollectorScore } from '../utils/cards';
+import { RARITIES, getCollectorScore, getMaxWallet } from '../utils/cards';
 
 // Small component to lazily load a poster for a movie tile
 function FilmTilePoster({ movie }) {
@@ -338,7 +338,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             {/* Wallet — visible to everyone, tap-to-feature only on own profile */}
             {profileData.wallet?.length > 0 && (
               <div className="pd-wallet">
-                <div className="pd-wallet-label">{isOwnProfile ? 'Your ' : ''}Wallet ({profileData.wallet.length}/3)</div>
+                <div className="pd-wallet-label">{isOwnProfile ? 'Your ' : ''}Wallet ({profileData.wallet.length}/{getMaxWallet(watchedMovies.length)})</div>
                 <div className="pd-wallet-cards">
                   {profileData.wallet.map((card, i) => {
                     const movie = MOVIES_BY_ID[card.movieId];

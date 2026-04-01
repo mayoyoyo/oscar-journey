@@ -28,7 +28,7 @@ import DailyOscar, { getDailyStatus, getDailyStreak } from './components/DailyOs
 import CardEarnedBanner from './components/CardEarnedBanner';
 import PackOpening from './components/PackOpening';
 import { getTakenCards, registerCard, releaseCard } from './utils/cardRegistry';
-import { generatePack } from './utils/cards';
+import { generatePack, getMaxWallet } from './utils/cards';
 import WhatsNewAnnouncement from './components/WhatsNewAnnouncement';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
@@ -1187,6 +1187,7 @@ export default function App() {
         <PackOpening
           cards={[journeyCard]}
           wallet={profile?.wallet || []}
+          maxWallet={getMaxWallet(watchedSet.size)}
           currentShowcase={profile?.showcase || []}
           onSaveShowcase={(s) => { firebaseSave('showcase', s); setProfile(prev => prev ? { ...prev, showcase: s } : prev); }}
           onClose={() => { setShowJourneyPack(false); setJourneyCard(null); }}

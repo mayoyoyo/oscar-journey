@@ -5,7 +5,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
-import { HARD_PITY, RARITIES, generatePack, MAX_WALLET, shouldDropCard, getDropProgressLabel } from '../utils/cards';
+import { HARD_PITY, RARITIES, generatePack, getMaxWallet, shouldDropCard, getDropProgressLabel } from '../utils/cards';
 import { recordActivity } from '../utils/firebaseStorage';
 import { getTakenCards, registerCard, releaseCard } from '../utils/cardRegistry';
 import PackOpening from './PackOpening';
@@ -474,6 +474,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         <PackOpening
           cards={pendingPack}
           wallet={profile?.wallet || []}
+          maxWallet={getMaxWallet(watchedMovies.length)}
           onClose={() => setPendingPack(null)}
           currentShowcase={profile?.showcase || []}
           onSaveShowcase={(showcase) => {

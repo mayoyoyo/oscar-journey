@@ -861,6 +861,12 @@ export default function App() {
     firebaseSave('allowSkip', val);
   }, [firebaseSave]);
 
+  // --- Simple battle graphics toggle ---
+  const handleSimpleBattleChange = useCallback((val) => {
+    setProfile(prev => prev ? { ...prev, simpleBattle: val } : prev);
+    firebaseSave('simpleBattle', val);
+  }, [firebaseSave]);
+
   // --- Skip film ---
   const handleSkip = useCallback(() => {
     if (!currentMovie || playlist.length === 0) return;
@@ -1103,6 +1109,7 @@ export default function App() {
           playlist={playlist}
           watchedSet={watchedSet}
           onOpenDetail={setDetailMovie}
+          simpleBattle={profile?.simpleBattle || false}
           onSaveProfile={(field, value) => {
             firebaseSave(field, value);
             setProfile(prev => prev ? { ...prev, [field]: value } : prev);
@@ -1170,6 +1177,8 @@ export default function App() {
           onAvatarChange={handleAvatarChange}
           allowSkip={profile?.allowSkip !== false}
           onAllowSkipChange={handleAllowSkipChange}
+          simpleBattle={profile?.simpleBattle || false}
+          onSimpleBattleChange={handleSimpleBattleChange}
           onClose={() => setSettingsOpen(false)}
           onClearCache={handleClearCache}
           profile={profile}

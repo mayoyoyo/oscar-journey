@@ -49,7 +49,7 @@ const TONE_LABELS = {
 
 export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS, SMART_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, onClose, onClearCache, profile, onLogout }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
@@ -149,6 +149,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
             <span className="settings-toggle-label">Allow skipping films</span>
           </div>
           <p className="settings-hint">Shows a skip button on the journey card. We don't recommend it. 😤</p>
+        </div>
+
+        {/* Battle toggle */}
+        <div className="settings-section">
+          <label className="settings-label">Battle</label>
+          <div className={`settings-toggle-row ${simpleBattle ? 'active' : ''}`} onClick={() => onSimpleBattleChange(!simpleBattle)}>
+            <span className="settings-toggle-switch"><span className="settings-toggle-knob" /></span>
+            <span className="settings-toggle-label">Simple battle graphics</span>
+          </div>
+          <p className="settings-hint">Removes animations for faster battles. Visual feedback still shown.</p>
         </div>
 
         {/* Actions */}

@@ -2358,6 +2358,34 @@ main {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Simple battle mode — instant visual states, no animations */
+.simple-battle .battle-card {
+  transition: none;
+}
+.simple-battle .battle-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--gold-dim);
+  transition: none;
+}
+.simple-battle .battle-card:active {
+  transform: none;
+  transition: none;
+}
+.simple-battle .battle-card-winner {
+  animation: none;
+  border-color: #5a9a5a;
+}
+.simple-battle .battle-card-loser {
+  opacity: 0.5;
+  transform: scale(0.96);
+  filter: grayscale(0.3);
+  transition: none;
+}
+.simple-battle .battle-elo-change {
+  animation: none;
+}
+
 /* Cinematic entrance */
 @keyframes cinematicFadeIn {
   from { opacity: 0; transform: translateY(16px); }

@@ -13,7 +13,7 @@ function omdbCacheKey(prefix, movie) {
 
 // Manual poster overrides — used when OMDB has wrong or no poster
 const POSTER_OVERRIDES = {
-  'birdman-2014': 'https://lumiere-a.akamaihd.net/v1/images/bm_584x800_dbb541c8.jpeg?region=0%2C0%2C584%2C800',
+  'birdman-2014': '/posters/birdman-2014.jpg',
 };
 
 // Title overrides for movies that don't match OMDB's naming

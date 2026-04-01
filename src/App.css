@@ -549,6 +549,21 @@ main {
   font-size: 0.85rem;
   color: var(--gold);
   font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.film-imdb-rating:hover {
+  border-color: #f5c518;
+  background: rgba(245,197,24,0.08);
+}
+.metric-imdb-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.metric-imdb-link:hover .metric-label {
+  color: #f5c518;
 }
 
 .film-trailer-btn {

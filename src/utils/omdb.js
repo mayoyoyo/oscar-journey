@@ -46,7 +46,6 @@ export async function fetchOmdbData(movie) {
   const ratingKey   = omdbCacheKey('rating',   movie);
   const directorKey = omdbCacheKey('director', movie);
   const runtimeKey  = omdbCacheKey('runtime',  movie);
-
   // Return cached data if we have real results (not rate-limit failures or missing posters)
   const allKeys = [posterKey, plotKey, ratingKey, directorKey, runtimeKey];
   const allCached = allKeys.every(k => localStorage.getItem(k) !== null);
@@ -130,7 +129,6 @@ function storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtim
   const rating   = data.imdbRating && data.imdbRating !== 'N/A' ? data.imdbRating : null;
   const director = data.Director && data.Director !== 'N/A' ? data.Director : null;
   const runtime  = data.Runtime && data.Runtime !== 'N/A' ? data.Runtime : null;
-
   localStorage.setItem(posterKey,   poster   || NOT_FOUND);
   localStorage.setItem(plotKey,     plot     || NOT_FOUND);
   localStorage.setItem(ratingKey,   rating   || NOT_FOUND);

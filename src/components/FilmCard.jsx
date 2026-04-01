@@ -136,7 +136,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
 
         <div className="film-pills-row">
           {omdbData?.rating && (
-            <div className="film-imdb-rating">★ {omdbData.rating} <span className="rating-source">IMDb</span></div>
+            <a className="film-imdb-rating" href={`https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`} target="_blank" rel="noopener noreferrer">★ {omdbData.rating} <span className="rating-source">IMDb</span></a>
           )}
           <a className="film-trailer-btn"
             href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}

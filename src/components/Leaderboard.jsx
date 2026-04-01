@@ -44,6 +44,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
     setSelectedProfile(profile);
     if (profile) {
       window.history.pushState({ profileId: profile.id }, '', `/profiles/${profile.id}`);
+      window.scrollTo(0, 0);
     }
   };
 

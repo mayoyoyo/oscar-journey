@@ -73,10 +73,12 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
 
     // Progress by decade
     const decades = [
-      { label: '1991-1999', min: 1991, max: 1999 },
+      { label: '1970-1979', min: 1970, max: 1979 },
+      { label: '1980-1989', min: 1980, max: 1989 },
+      { label: '1990-1999', min: 1990, max: 1999 },
       { label: '2000-2009', min: 2000, max: 2009 },
       { label: '2010-2019', min: 2010, max: 2019 },
-      { label: '2020-2024', min: 2020, max: 2024 },
+      { label: '2020-2025', min: 2020, max: 2025 },
     ];
     const decadeProgress = decades.map(d => {
       const total = MOVIES.filter(m => m.year >= d.min && m.year <= d.max).length;

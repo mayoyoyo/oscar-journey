@@ -183,10 +183,10 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             {/* Ratings summary row */}
             <div className="film-detail-metrics">
               {omdbData?.rating && (
-                <div className="metric-item">
+                <a className="metric-item metric-imdb-link" href={`https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                   <span className="metric-value">★ {omdbData.rating}</span>
                   <span className="metric-label">IMDb</span>
-                </div>
+                </a>
               )}
               {aggregateRating && (
                 <div className="metric-item">

@@ -11,6 +11,11 @@ function omdbCacheKey(prefix, movie) {
   return CACHE_PREFIX + prefix + '_' + sanitizeTitle(movie.title) + '_' + movie.year;
 }
 
+// Manual poster overrides — used when OMDB has wrong or no poster
+const POSTER_OVERRIDES = {
+  'birdman-2014': 'https://lumiere-a.akamaihd.net/v1/images/bm_584x800_dbb541c8.jpeg?region=0%2C0%2C584%2C800',
+};
+
 // Title overrides for movies that don't match OMDB's naming
 const OMDB_TITLE_OVERRIDES = {
   'Birdman': 'Birdman or The Unexpected Virtue of Ignorance',
@@ -33,6 +38,7 @@ function getOmdbYear(movie) {
 }
 
 export async function fetchOmdbData(movie) {
+  const manualPoster = POSTER_OVERRIDES[movie.id] || null;
   const posterKey   = omdbCacheKey('poster',   movie);
   const plotKey     = omdbCacheKey('plot',     movie);
   const ratingKey   = omdbCacheKey('rating',   movie);
@@ -45,10 +51,9 @@ export async function fetchOmdbData(movie) {
   if (allCached) {
     const anyRateLimited = allKeys.some(k => localStorage.getItem(k) === 'RATE_LIMITED');
     const posterMissing = localStorage.getItem(posterKey) === NOT_FOUND;
-    // If poster is NOT_FOUND, retry — it may have been a year mismatch that the fallback can fix
     if (!anyRateLimited && !posterMissing) {
       return {
-        poster:   localStorage.getItem(posterKey),
+        poster:   manualPoster || localStorage.getItem(posterKey),
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
@@ -85,7 +90,7 @@ export async function fetchOmdbData(movie) {
     // All keys rate limited — return existing cache without saving failures
     if (data.rateLimited) {
       return {
-        poster:   localStorage.getItem(posterKey)   === NOT_FOUND ? null : localStorage.getItem(posterKey),
+        poster:   manualPoster || (localStorage.getItem(posterKey) === NOT_FOUND ? null : localStorage.getItem(posterKey)),
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
@@ -99,26 +104,26 @@ export async function fetchOmdbData(movie) {
       data = await tryWithKey(titleEnc, null);
 
       if (data.rateLimited) {
-        return { poster: null, plot: null, rating: null, director: null, runtime: null };
+        return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: null };
       }
 
       if (data && data.Response !== 'False') {
-        return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
+        return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey, manualPoster);
       }
 
       storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey);
-      return { poster: null, plot: null, rating: null, director: null, runtime: null };
+      return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: null };
     }
 
     return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
   } catch (e) {
     // Network error — don't cache, will retry next time
-    return { poster: null, plot: null, rating: null, director: null, runtime: null };
+    return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: null };
   }
 }
 
-function storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey) {
-  const poster   = data.Poster && data.Poster !== 'N/A' ? data.Poster : null;
+function storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey, manualPoster) {
+  const poster   = manualPoster || (data.Poster && data.Poster !== 'N/A' ? data.Poster : null);
   const plot     = data.Plot   && data.Plot   !== 'N/A' ? data.Plot   : null;
   const rating   = data.imdbRating && data.imdbRating !== 'N/A' ? data.imdbRating : null;
   const director = data.Director && data.Director !== 'N/A' ? data.Director : null;

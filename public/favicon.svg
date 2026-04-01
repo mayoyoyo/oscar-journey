@@ -1,35 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200">
   <defs>
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="0.3" y2="1">
-      <stop offset="0%" stop-color="#f5e6a3"/>
-      <stop offset="30%" stop-color="#d4af37"/>
-      <stop offset="60%" stop-color="#c9a84c"/>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5d442"/>
+      <stop offset="25%" stop-color="#d4af37"/>
+      <stop offset="60%" stop-color="#c9a227"/>
       <stop offset="100%" stop-color="#8b6914"/>
     </linearGradient>
   </defs>
-  <!-- Base platform -->
-  <ellipse cx="50" cy="192" rx="30" ry="6" fill="url(#goldGrad)"/>
-  <!-- Base cylinder -->
-  <rect x="28" y="180" width="44" height="12" rx="3" fill="url(#goldGrad)"/>
-  <ellipse cx="50" cy="180" rx="22" ry="5" fill="url(#goldGrad)"/>
-  <!-- Film reel base detail -->
-  <ellipse cx="50" cy="175" rx="16" ry="3" fill="url(#goldGrad)"/>
-  <rect x="36" y="168" width="28" height="7" rx="2" fill="url(#goldGrad)"/>
-  <!-- Pedestal column -->
-  <rect x="42" y="145" width="16" height="23" rx="2" fill="url(#goldGrad)"/>
-  <!-- Body (torso) -->
-  <ellipse cx="50" cy="110" rx="18" ry="38" fill="url(#goldGrad)"/>
-  <!-- Head -->
-  <circle cx="50" cy="62" r="12" fill="url(#goldGrad)"/>
-  <!-- Neck -->
-  <rect x="45" y="72" width="10" height="8" fill="url(#goldGrad)"/>
-  <!-- Arms holding sword -->
-  <path d="M32,95 Q28,85 34,78 L38,82 Q34,88 36,95 Z" fill="url(#goldGrad)"/>
-  <path d="M68,95 Q72,85 66,78 L62,82 Q66,88 64,95 Z" fill="url(#goldGrad)"/>
-  <!-- Sword -->
-  <rect x="48" y="42" width="4" height="50" rx="1" fill="url(#goldGrad)"/>
-  <!-- Sword crossguard -->
-  <rect x="40" y="82" width="20" height="4" rx="2" fill="url(#goldGrad)"/>
-  <!-- Sword pommel -->
-  <circle cx="50" cy="40" r="4" fill="url(#goldGrad)"/>
+  <ellipse cx="50" cy="192" rx="30" ry="6" fill="url(#g)"/>
+  <rect x="28" y="180" width="44" height="12" rx="3" fill="url(#g)"/>
+  <ellipse cx="50" cy="180" rx="22" ry="5" fill="url(#g)"/>
+  <ellipse cx="50" cy="175" rx="16" ry="3" fill="url(#g)"/>
+  <rect x="36" y="168" width="28" height="7" rx="2" fill="url(#g)"/>
+  <rect x="42" y="145" width="16" height="23" rx="2" fill="url(#g)"/>
+  <ellipse cx="50" cy="110" rx="18" ry="38" fill="url(#g)"/>
+  <circle cx="50" cy="62" r="12" fill="url(#g)"/>
+  <rect x="45" y="72" width="10" height="8" fill="url(#g)"/>
+  <path d="M32,95 Q28,85 34,78 L38,82 Q34,88 36,95 Z" fill="url(#g)"/>
+  <path d="M68,95 Q72,85 66,78 L62,82 Q66,88 64,95 Z" fill="url(#g)"/>
+  <rect x="48" y="42" width="4" height="50" rx="1" fill="url(#g)"/>
+  <rect x="40" y="82" width="20" height="4" rx="2" fill="url(#g)"/>
+  <circle cx="50" cy="40" r="4" fill="url(#g)"/>
 </svg>

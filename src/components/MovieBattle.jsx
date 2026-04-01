@@ -393,9 +393,8 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
           <div className="battle-arena">
             {/* Movie A */}
             <div
-              className="battle-card"
+              className={`battle-card ${voting && eloChange?.winner === 'a' ? 'battle-card-winner' : ''} ${voting && eloChange?.winner === 'b' ? 'battle-card-loser' : ''}`}
               onClick={() => !voting && handleVote('a')}
-              style={{ opacity: voting ? 0.7 : 1 }}
             >
               {loadingPosters ? (
                 <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -424,9 +423,8 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
 
             {/* Movie B */}
             <div
-              className="battle-card"
+              className={`battle-card ${voting && eloChange?.winner === 'b' ? 'battle-card-winner' : ''} ${voting && eloChange?.winner === 'a' ? 'battle-card-loser' : ''}`}
               onClick={() => !voting && handleVote('b')}
-              style={{ opacity: voting ? 0.7 : 1 }}
             >
               {loadingPosters ? (
                 <div className="battle-card-poster" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

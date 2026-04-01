@@ -3,6 +3,7 @@ import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import { fetchOmdbData } from '../utils/omdb';
 import { RARITIES, getCollectorScore, getMaxWallet } from '../utils/cards';
+import StatsTab from './StatsTab';
 
 // Small component to lazily load a poster for a movie tile
 function FilmTilePoster({ movie }) {
@@ -371,6 +372,19 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
               </div>
             )}
           </div>
+        </div>
+      )}
+
+      {/* Statistics */}
+      {watchedMovies.length > 0 && (
+        <div className="pd-stats-section">
+          <StatsTab
+            watchedTitleSet={new Set(watchedMovies.map(m => m.id))}
+            ratings={isOwnProfile && currentRatings ? currentRatings : (profileData.ratings || {})}
+            raters={profileData.raters || []}
+            profileName={profileData.displayName || profileData.id}
+            embedded
+          />
         </div>
       )}
 

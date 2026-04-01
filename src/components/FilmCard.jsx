@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { fetchOmdbData } from '../utils/omdb';
+import { extractDominantColor } from '../utils/colorExtract';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
@@ -64,13 +65,38 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
     });
   }, [movie?.title, movie?.year]);
 
+  const [ambientColor, setAmbientColor] = useState(null);
+
+  useEffect(() => {
+    if (omdbData?.poster) {
+      extractDominantColor(omdbData.poster, (color) => {
+        if (color) setAmbientColor(color);
+      });
+    }
+  }, [omdbData?.poster]);
+
+  const posterRef = useRef(null);
+  const isTouch = 'ontouchstart' in window;
+  const handlePosterMove = (e) => {
+    if (isTouch) return;
+    const el = posterRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 8;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -8;
+    el.style.transform = `perspective(800px) rotateY(${x}deg) rotateX(${y}deg) scale(1.02)`;
+  };
+  const handlePosterLeave = () => {
+    if (posterRef.current) posterRef.current.style.transform = '';
+  };
+
   if (!movie) return null;
 
   const key = ratingKey(movie);
   const movieRatings = ratings[key] || {};
 
   return (
-    <div className={`film-card ${fading ? 'fading' : ''}`}>
+    <div className={`film-card ${fading ? 'fading' : ''}`} style={ambientColor ? { '--ambient': ambientColor } : undefined}>
       {/* Poster column */}
       <div className="poster-col">
         {loading ? (
@@ -80,6 +106,9 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             className="poster-img"
             src={omdbData.poster}
             alt={`${movie.title} poster`}
+            ref={posterRef}
+            onMouseMove={handlePosterMove}
+            onMouseLeave={handlePosterLeave}
             onError={(e) => {
               e.target.style.display = 'none';
               e.target.parentNode.innerHTML = `

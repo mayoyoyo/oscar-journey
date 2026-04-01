@@ -345,12 +345,6 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         </div>
       )}
 
-      {/* Your Stats */}
-      {watchedTitleSet && ratings && raters && (
-        <div style={{ marginTop: '40px', borderTop: '1px solid var(--border)', paddingTop: '32px' }}>
-          <StatsTab watchedTitleSet={watchedTitleSet} ratings={ratings} raters={raters} embedded />
-        </div>
-      )}
     </div>
   );
 }

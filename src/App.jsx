@@ -950,7 +950,7 @@ export default function App() {
         onOpenProfile={(id) => setProfileModalId(id)}
       />
 
-      <div className="app-scroll-area">
+      <div className="app-scroll-area cinematic-enter">
       {showProgress && (
         <ProgressBar
           currentIdx={currentIdx}

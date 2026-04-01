@@ -6,6 +6,9 @@ import { fetchOmdbData } from '../utils/omdb';
 import { RARITIES, getMaxWallet } from '../utils/cards';
 import PackOpening from './PackOpening';
 
+// Stable movie pool — uses MOVIES array (fixed order, fixed size) filtered to those with quotes
+const DAILY_POOL = MOVIES.filter(m => QUOTES[m.id]).map(m => m.id);
+
 function getDailyMovieId() {
   const today = new Date();
   const dateStr = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
@@ -14,8 +17,7 @@ function getDailyMovieId() {
     hash = ((hash << 5) - hash) + dateStr.charCodeAt(i);
     hash |= 0;
   }
-  const movieIds = Object.keys(QUOTES);
-  return movieIds[Math.abs(hash) % movieIds.length];
+  return DAILY_POOL[Math.abs(hash) % DAILY_POOL.length];
 }
 
 function getTodayKey() {

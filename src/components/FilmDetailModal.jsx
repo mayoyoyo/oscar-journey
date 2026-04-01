@@ -223,22 +223,22 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 </div>
                 <div className="film-detail-awards-list">
                   {movie.won && (
-                    <div className="award-item award-item-major">
+                    <div className="award-item">
                       <span className="award-category">Best Picture</span>
                     </div>
                   )}
                   {movie.category === 'ANIM' && (
-                    <div className="award-item award-item-major">
+                    <div className="award-item">
                       <span className="award-category">Best Animated Feature</span>
                     </div>
                   )}
                   {movie.category === 'INT' && (
-                    <div className="award-item award-item-major">
+                    <div className="award-item">
                       <span className="award-category">Best International Feature Film</span>
                     </div>
                   )}
                   {movie.alsoWon && movie.alsoWon.map((cat, i) => (
-                    <div key={`also-${i}`} className="award-item award-item-major">
+                    <div key={`also-${i}`} className="award-item">
                       <span className="award-category">{cat === 'INT' ? 'Best International Feature Film' : cat === 'ANIM' ? 'Best Animated Feature' : cat}</span>
                     </div>
                   ))}

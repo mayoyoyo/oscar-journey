@@ -1486,17 +1486,15 @@ main {
   font-size: 0.8rem;
 }
 
-.award-item-major {
-  font-weight: 500;
-}
-
 .award-category {
   color: var(--cream);
+  font-weight: 500;
 }
 
 .award-winner {
   color: var(--gold);
   font-size: 0.78rem;
+  font-weight: 400;
 }
 
 .award-detail {

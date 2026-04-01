@@ -96,7 +96,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
   const movieRatings = ratings[key] || {};
 
   return (
-    <div className={`film-card ${fading ? 'fading' : ''}`} style={ambientColor ? { '--ambient': ambientColor } : undefined}>
+    <div className={`film-card ${fading ? 'fading' : ''} ${isWatched ? 'film-card-watched' : ''}`} style={ambientColor ? { '--ambient': ambientColor } : undefined}>
       {/* Poster column */}
       <div className="poster-col">
         {loading ? (

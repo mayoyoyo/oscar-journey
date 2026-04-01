@@ -10,6 +10,7 @@ import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
 
 import { RARITIES } from '../utils/cards';
+import { doc, getDoc as getDocFS } from 'firebase/firestore';
 
 export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet }) {
   const [omdbData, setOmdbData] = useState(null);
@@ -18,6 +19,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const [aggregateRating, setAggregateRating] = useState(null);
   const [watchedBy, setWatchedBy] = useState([]);
   const [posterError, setPosterError] = useState(false);
+  const [legendaryOwner, setLegendaryOwner] = useState(null);
 
   useEffect(() => {
     if (!movie) return;
@@ -27,6 +29,20 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     setAggregateRating(null);
     setWatchedBy([]);
     setPosterError(false);
+    setLegendaryOwner(null);
+
+    // Check if someone owns the Legendary card for this movie
+    getDocFS(doc(db, 'cardRegistry', `${movie.id}-LEGENDARY`)).then(snap => {
+      if (snap.exists()) {
+        const owner = snap.data();
+        // Fetch the owner's display name
+        getDocFS(doc(db, 'profiles', owner.profileId)).then(pSnap => {
+          if (pSnap.exists()) {
+            setLegendaryOwner({ name: pSnap.data().displayName || owner.profileId, avatar: pSnap.data().avatar || '', id: owner.profileId });
+          }
+        }).catch(() => {});
+      }
+    }).catch(() => {});
     fetchOmdbData(movie).then(data => {
       setOmdbData(data);
       setLoading(false);
@@ -156,6 +172,12 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               </div>
             )}
           </div>
+          {legendaryOwner && (
+            <div className="legendary-owner-badge profile-name-link" onClick={() => onOpenProfile && onOpenProfile(legendaryOwner.id)}>
+              <span className="legendary-owner-icon">✦</span>
+              Legendary held by {legendaryOwner.avatar} {legendaryOwner.name}
+            </div>
+          )}
           <div className="film-detail-body">
             <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
             <div className="film-title">{movie.title}</div>

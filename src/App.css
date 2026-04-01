@@ -1371,6 +1371,22 @@ main {
   display: block;
 }
 
+.legendary-owner-badge {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f59e0b;
+  padding: 6px 0;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.legendary-owner-badge:hover { opacity: 0.8; }
+.legendary-owner-icon {
+  font-size: 0.85rem;
+  margin-right: 4px;
+}
+
 .film-detail-poster-card {
   border: 3px solid var(--rarity-border) !important;
   box-shadow: 0 6px 24px rgba(0,0,0,0.3), 0 0 20px var(--rarity-glow), 0 0 40px var(--rarity-glow) !important;

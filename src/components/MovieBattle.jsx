@@ -154,7 +154,7 @@ function getConfidenceLabel(matchCount) {
 
 // --- Component ---
 
-export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetail, onSaveProfile }) {
+export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetail, onSaveProfile, simpleBattle }) {
   const [movieA, setMovieA] = useState(null);
   const [movieB, setMovieB] = useState(null);
   const [posterA, setPosterA] = useState(null);
@@ -390,7 +390,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
           {matchupLabel && (
             <div className="battle-matchup-label">{matchupLabel}</div>
           )}
-          <div className="battle-arena">
+          <div className={`battle-arena${simpleBattle ? ' simple-battle' : ''}`}>
             {/* Movie A */}
             <div
               className={`battle-card ${voting && eloChange?.winner === 'a' ? 'battle-card-winner' : ''} ${voting && eloChange?.winner === 'b' ? 'battle-card-loser' : ''}`}

@@ -1123,6 +1123,7 @@ export default function App() {
           movieList={detailMovieList}
           onNavigate={(movie) => setDetailMovie(movie)}
           onOpenProfile={(id) => setProfileModalId(id)}
+          wallet={profile?.wallet}
         />
       )}
 

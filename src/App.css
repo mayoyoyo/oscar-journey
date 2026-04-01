@@ -1371,6 +1371,11 @@ main {
   display: block;
 }
 
+.film-detail-poster-card {
+  border: 3px solid var(--rarity-border) !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3), 0 0 20px var(--rarity-glow), 0 0 40px var(--rarity-glow) !important;
+}
+
 .film-detail-poster .poster-placeholder,
 .film-detail-poster .poster-loading {
   min-height: 200px;

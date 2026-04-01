@@ -9,7 +9,9 @@ import { db } from '../utils/firebase';
 import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
 
-export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile }) {
+import { RARITIES } from '../utils/cards';
+
+export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [globalElo, setGlobalElo] = useState(null);
@@ -124,6 +126,8 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const key = ratingKey(movie);
   const movieRatings = ratings[key] || {};
   const pElo = personalElo?.[movie.id];
+  const walletCard = wallet?.find(c => c.movieId === movie.id);
+  const cardRarity = walletCard ? RARITIES[walletCard.rarity] : null;
 
   return (
     <div className="modal-overlay open" onClick={(e) => {
@@ -142,6 +146,8 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 src={omdbData.poster}
                 alt={`${movie.title} poster`}
                 onError={() => setPosterError(true)}
+                className={cardRarity ? 'film-detail-poster-card' : ''}
+                style={cardRarity ? { '--rarity-border': cardRarity.border, '--rarity-glow': cardRarity.glow } : undefined}
               />
             ) : (
               <div className="poster-placeholder" style={{ minHeight: '280px', height: '100%' }}>

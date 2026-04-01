@@ -1337,7 +1337,7 @@ main {
    FILM DETAIL MODAL (A-Z popup)
    ===================================================== */
 .film-detail-modal {
-  max-width: 640px;
+  max-width: 520px;
   padding: 0;
   overflow: hidden;
   position: relative;
@@ -1345,37 +1345,41 @@ main {
 
 .film-detail-inner {
   display: flex;
-  gap: 0;
-  max-height: 80dvh;
-  overflow: hidden;
+  flex-direction: column;
+  max-height: 85dvh;
+  overflow-y: auto;
   border-radius: 10px;
 }
 
 .film-detail-poster {
-  width: 200px;
-  min-width: 200px;
-  background: var(--bg3);
-  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 28px 24px 12px;
+  background: linear-gradient(160deg, var(--bg3), var(--bg2));
   position: relative;
 }
 
 .film-detail-poster img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  max-width: 180px;
+  height: auto;
+  max-height: 270px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.05);
   display: block;
 }
 
 .film-detail-poster .poster-placeholder,
 .film-detail-poster .poster-loading {
-  min-height: 280px;
-  height: 100%;
+  min-height: 200px;
+  height: 200px;
 }
 
 .film-detail-body {
   flex: 1;
-  padding: 28px 28px 22px;
-  overflow-y: auto;
+  padding: 20px 28px 24px;
   display: flex;
   flex-direction: column;
   gap: 10px;

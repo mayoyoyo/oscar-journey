@@ -7,6 +7,7 @@ import { fetchOmdbData } from '../utils/omdb';
 import { ratingKey } from '../utils/storage';
 import { HARD_PITY, RARITIES, generatePack, MAX_WALLET, shouldDropCard, getDropProgressLabel } from '../utils/cards';
 import { recordActivity } from '../utils/firebaseStorage';
+import { getTakenCards, registerCard, releaseCard } from '../utils/cardRegistry';
 import PackOpening from './PackOpening';
 
 // --- Smart Matchmaking ---
@@ -323,13 +324,14 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
       }
 
       if (shouldDropCard(battlesSinceLast)) {
-        const watchedIds = [...watchedSet];
-        const existingCards = (profile?.wallet || []).map(c => c.movieId);
-        const pack = generatePack(watchedIds, existingCards);
-        if (pack && pack.length > 0) {
-          setPendingPack(pack);
-          if (onSaveProfile) onSaveProfile('battlesSinceDrop', 0);
-        }
+        try {
+          const taken = await getTakenCards();
+          const pack = generatePack([], [], taken);
+          if (pack && pack.length > 0) {
+            setPendingPack(pack);
+            if (onSaveProfile) onSaveProfile('battlesSinceDrop', 0);
+          }
+        } catch { /* silent */ }
       }
 
       setTimeout(() => {
@@ -477,10 +479,10 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
           onSaveShowcase={(showcase) => {
             if (onSaveProfile) onSaveProfile('showcase', showcase);
           }}
-          onKeep={(card) => {
+          onKeep={async (card) => {
             const wallet = [...(profile?.wallet || []), card];
             if (onSaveProfile) onSaveProfile('wallet', wallet);
-            // Announce rare+ pulls to activity feed
+            try { await registerCard(card.movieId, card.rarity, profile.id); } catch {}
             if (card.rarity !== 'COMMON' && profile) {
               const movie = MOVIES_BY_ID[card.movieId];
               if (movie) {
@@ -491,7 +493,7 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
               }
             }
           }}
-          onReplace={(card, replaceIdx) => {
+          onReplace={async (card, replaceIdx) => {
             const wallet = [...(profile?.wallet || [])];
             const replaced = wallet[replaceIdx];
             wallet[replaceIdx] = card;
@@ -502,6 +504,10 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
                 onSaveProfile('showcase', showcase.filter(s => s.movieId !== replaced.movieId));
               }
             }
+            try {
+              await releaseCard(replaced.movieId, replaced.rarity);
+              await registerCard(card.movieId, card.rarity, profile.id);
+            } catch {}
           }}
         />
       )}

@@ -25,6 +25,10 @@ import { SkeletonCard } from './components/Skeleton';
 import InfoModal from './components/InfoModal';
 import ProfileModal from './components/ProfileModal';
 import DailyOscar, { getDailyStatus, getDailyStreak } from './components/DailyOscar';
+import CardEarnedBanner from './components/CardEarnedBanner';
+import PackOpening from './components/PackOpening';
+import { getTakenCards, registerCard, releaseCard } from './utils/cardRegistry';
+import { generatePack } from './utils/cards';
 import WhatsNewAnnouncement from './components/WhatsNewAnnouncement';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
@@ -243,6 +247,8 @@ export default function App() {
     return null;
   });
   const [dailyOpen, setDailyOpen] = useState(false);
+  const [journeyCard, setJourneyCard] = useState(null);
+  const [showJourneyPack, setShowJourneyPack] = useState(false);
   const [bannerDismissed, setBannerDismissed] = useState(() => {
     return localStorage.getItem('oscars_banner_dismissed') === 'true';
   });
@@ -548,7 +554,7 @@ export default function App() {
   }, [currentIdx, idxPassesFilter]);
 
   // --- Navigation ---
-  const goNext = useCallback(() => {
+  const goNext = useCallback(async () => {
     // Find next eligible film after currentIdx
     let next = currentIdx + 1;
     while (next < playlist.length && !idxPassesFilter(next)) {
@@ -558,13 +564,33 @@ export default function App() {
       setScreen('complete');
       return;
     }
+
+    // Award a card for completing this film (anti-cheat: only if not already earned)
+    const currentMovie = playlist[currentIdx];
+    if (currentMovie && profile) {
+      const earnedCards = profile.earnedCardFilms || [];
+      if (!earnedCards.includes(currentMovie.id)) {
+        try {
+          const taken = await getTakenCards();
+          const pack = generatePack([], [], taken);
+          if (pack && pack.length > 0) {
+            setJourneyCard(pack[0]);
+            // Mark this film as having earned a card
+            const newEarned = [...earnedCards, currentMovie.id];
+            firebaseSave('earnedCardFilms', newEarned);
+            setProfile(prev => prev ? { ...prev, earnedCardFilms: newEarned } : prev);
+          }
+        } catch { /* silent — don't block navigation */ }
+      }
+    }
+
     setFading(true);
     setTimeout(() => {
       setCurrentIdx(next);
       firebaseSave('currentIdx', next);
       setFading(false);
     }, 280);
-  }, [currentIdx, playlist.length, firebaseSave, idxPassesFilter]);
+  }, [currentIdx, playlist, profile, firebaseSave, idxPassesFilter]);
 
   const goPrev = useCallback(() => {
     // Previous always goes back one step — no filter skipping
@@ -998,6 +1024,14 @@ export default function App() {
                 );
               })()}
 
+              {/* Card earned banner */}
+              {journeyCard && !showJourneyPack && (
+                <CardEarnedBanner
+                  onOpen={() => setShowJourneyPack(true)}
+                  onDismiss={() => setJourneyCard(null)}
+                />
+              )}
+
               <FilmCard
                 movie={currentMovie}
                 isWatched={isCurrentWatched}
@@ -1146,6 +1180,44 @@ export default function App() {
       {/* Info modal */}
       {infoOpen && (
         <InfoModal onClose={() => setInfoOpen(false)} />
+      )}
+
+      {/* Journey card pack opening */}
+      {showJourneyPack && journeyCard && (
+        <PackOpening
+          cards={[journeyCard]}
+          wallet={profile?.wallet || []}
+          currentShowcase={profile?.showcase || []}
+          onSaveShowcase={(s) => { firebaseSave('showcase', s); setProfile(prev => prev ? { ...prev, showcase: s } : prev); }}
+          onClose={() => { setShowJourneyPack(false); setJourneyCard(null); }}
+          onKeep={async (card) => {
+            const wallet = [...(profile?.wallet || []), card];
+            firebaseSave('wallet', wallet);
+            setProfile(prev => prev ? { ...prev, wallet } : prev);
+            try { await registerCard(card.movieId, card.rarity, profile.id); } catch {}
+            setShowJourneyPack(false);
+            setJourneyCard(null);
+          }}
+          onReplace={async (card, replaceIdx) => {
+            const wallet = [...(profile?.wallet || [])];
+            const replaced = wallet[replaceIdx];
+            wallet[replaceIdx] = card;
+            firebaseSave('wallet', wallet);
+            setProfile(prev => prev ? { ...prev, wallet } : prev);
+            const showcase = profile?.showcase || [];
+            if (showcase.some(s => s.movieId === replaced.movieId)) {
+              const newShowcase = showcase.filter(s => s.movieId !== replaced.movieId);
+              firebaseSave('showcase', newShowcase);
+              setProfile(prev => prev ? { ...prev, showcase: newShowcase } : prev);
+            }
+            try {
+              await releaseCard(replaced.movieId, replaced.rarity);
+              await registerCard(card.movieId, card.rarity, profile.id);
+            } catch {}
+            setShowJourneyPack(false);
+            setJourneyCard(null);
+          }}
+        />
       )}
 
       {/* Daily Oscar game */}

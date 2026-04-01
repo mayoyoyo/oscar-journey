@@ -65,12 +65,24 @@ export function getDropProgressLabel(battlesSinceLast) {
   return `Guaranteed in ${HARD_PITY - battlesSinceLast}!`;
 }
 
-// Generate a single card from all movies
-export function generatePack(watchedMovieIds, existingCardIds = []) {
-  const uncollected = MOVIES.filter(m => !existingCardIds.includes(m.id));
-  const source = uncollected.length > 0 ? uncollected : MOVIES;
-  const pick = source[Math.floor(Math.random() * source.length)];
+// Generate a single card, avoiding taken combos
+export function generatePack(watchedMovieIds, existingCardIds = [], takenCards = new Set()) {
+  for (let attempt = 0; attempt < 100; attempt++) {
+    const pick = MOVIES[Math.floor(Math.random() * MOVIES.length)];
+    const rarity = rollRarity();
+    const key = `${pick.id}-${rarity}`;
 
+    if (!takenCards.has(key)) {
+      return [{
+        movieId: pick.id,
+        rarity,
+        pulledAt: Date.now(),
+      }];
+    }
+  }
+
+  // Fallback if everything is taken (unlikely) — just give a card
+  const pick = MOVIES[Math.floor(Math.random() * MOVIES.length)];
   return [{
     movieId: pick.id,
     rarity: rollRarity(),

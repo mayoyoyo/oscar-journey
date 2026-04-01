@@ -45,10 +45,11 @@ A single scoped block under `.simple-battle`:
 | Selector | Override | Preserved visual state |
 |----------|----------|----------------------|
 | `.simple-battle .battle-card` | `transition: none` | — |
-| `.simple-battle .battle-card:hover` | `transform: none; transition: none` | Border-color highlight (instant) |
+| `.simple-battle .battle-card:hover` | `transform: none; box-shadow: none; transition: none` | Border-color highlight (instant) |
 | `.simple-battle .battle-card-winner` | `animation: none` | Green border color |
 | `.simple-battle .battle-card-loser` | `transition: none` | `opacity: 0.5`, `scale(0.96)`, `grayscale(0.3)` (instant) |
-| `.simple-battle .elo-change` | `transition: none` | ELO number visible immediately |
+| `.simple-battle .battle-card:active` | `transform: none; transition: none` | — |
+| `.simple-battle .battle-elo-change` | `animation: none` | ELO number visible immediately |
 
 ### 5. Scope boundaries
 

@@ -10,6 +10,7 @@ import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
 
 import { RARITIES } from '../utils/cards';
+import { getCardOwner } from '../utils/cardRegistry';
 
 export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet }) {
   const [omdbData, setOmdbData] = useState(null);
@@ -31,26 +32,9 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     setLegendaryOwner(null);
 
     // Check who owns the highest rarity card for this movie
-    (async () => {
-      for (const rarity of ['LEGENDARY', 'EPIC', 'RARE']) {
-        try {
-          const snap = await getDoc(doc(db, 'cardRegistry', `${movie.id}-${rarity}`));
-          if (snap.exists()) {
-            const owner = snap.data();
-            const pSnap = await getDoc(doc(db, 'profiles', owner.profileId));
-            if (pSnap.exists()) {
-              setLegendaryOwner({
-                name: pSnap.data().displayName || owner.profileId,
-                avatar: pSnap.data().avatar || '',
-                id: owner.profileId,
-                rarity,
-              });
-            }
-            return; // stop at highest found
-          }
-        } catch {}
-      }
-    })();
+    getCardOwner(movie.id).then(owner => {
+      if (owner) setLegendaryOwner(owner);
+    });
     fetchOmdbData(movie).then(data => {
       setOmdbData(data);
       setLoading(false);

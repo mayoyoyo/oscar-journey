@@ -1,41 +1,47 @@
 import { db } from './firebase';
-import { doc, getDoc, setDoc, deleteDoc, collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 
-// Registry key format: "movieId-RARITY"
-function registryKey(movieId, rarity) {
-  return `${movieId}-${rarity}`;
-}
-
-// Check if a specific movie+rarity combo is taken
-export async function isCardTaken(movieId, rarity) {
-  const key = registryKey(movieId, rarity);
-  const snap = await getDoc(doc(db, 'cardRegistry', key));
-  return snap.exists();
-}
-
-// Register a card as owned
-export async function registerCard(movieId, rarity, profileId) {
-  const key = registryKey(movieId, rarity);
-  await setDoc(doc(db, 'cardRegistry', key), {
-    profileId,
-    movieId,
-    rarity,
-    claimedAt: Date.now(),
-  });
-}
-
-// Release a card back to the pool
-export async function releaseCard(movieId, rarity) {
-  const key = registryKey(movieId, rarity);
-  await deleteDoc(doc(db, 'cardRegistry', key));
-}
-
-// Get all taken cards (for filtering during generation)
+// Build a set of taken movie+rarity combos from all profiles' wallets
 export async function getTakenCards() {
   try {
-    const snap = await getDocs(collection(db, 'cardRegistry'));
-    return new Set(snap.docs.map(d => d.id));
+    const snap = await getDocs(collection(db, 'profiles'));
+    const taken = new Set();
+    for (const d of snap.docs) {
+      const wallet = d.data().wallet || [];
+      for (const card of wallet) {
+        taken.add(`${card.movieId}-${card.rarity}`);
+      }
+    }
+    return taken;
   } catch {
     return new Set();
   }
 }
+
+// Find the highest rarity card owner for a movie from all profiles
+export async function getCardOwner(movieId) {
+  try {
+    const snap = await getDocs(collection(db, 'profiles'));
+    for (const rarity of ['LEGENDARY', 'EPIC', 'RARE']) {
+      for (const d of snap.docs) {
+        const wallet = d.data().wallet || [];
+        const match = wallet.find(c => c.movieId === movieId && c.rarity === rarity);
+        if (match) {
+          return {
+            name: d.data().displayName || d.id,
+            avatar: d.data().avatar || '',
+            id: d.id,
+            rarity,
+          };
+        }
+      }
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+// These are no-ops now since we don't use a separate collection
+export async function registerCard() {}
+export async function releaseCard() {}

@@ -318,21 +318,6 @@ export default function App() {
       });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // --- One-time: register existing wallet cards in cardRegistry ---
-  useEffect(() => {
-    if (!profile?.wallet?.length) return;
-    const migrationKey = 'oscars_card_registry_migrated_' + profile.id;
-    if (localStorage.getItem(migrationKey)) return;
-    (async () => {
-      try {
-        for (const card of profile.wallet) {
-          await registerCard(card.movieId, card.rarity, profile.id);
-        }
-        localStorage.setItem(migrationKey, 'true');
-      } catch {}
-    })();
-  }, [profile?.id, profile?.wallet]);
-
   // --- Fetch all profiles for sync dropdown ---
   useEffect(() => {
     getDocs(collection(db, 'profiles')).then(snap => {

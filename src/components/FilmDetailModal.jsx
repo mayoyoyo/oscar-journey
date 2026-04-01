@@ -10,7 +10,6 @@ import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
 
 import { RARITIES } from '../utils/cards';
-import { doc, getDoc as getDocFS } from 'firebase/firestore';
 
 export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet }) {
   const [omdbData, setOmdbData] = useState(null);
@@ -32,11 +31,11 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     setLegendaryOwner(null);
 
     // Check if someone owns the Legendary card for this movie
-    getDocFS(doc(db, 'cardRegistry', `${movie.id}-LEGENDARY`)).then(snap => {
+    getDoc(doc(db, 'cardRegistry', `${movie.id}-LEGENDARY`)).then(snap => {
       if (snap.exists()) {
         const owner = snap.data();
         // Fetch the owner's display name
-        getDocFS(doc(db, 'profiles', owner.profileId)).then(pSnap => {
+        getDoc(doc(db, 'profiles', owner.profileId)).then(pSnap => {
           if (pSnap.exists()) {
             setLegendaryOwner({ name: pSnap.data().displayName || owner.profileId, avatar: pSnap.data().avatar || '', id: owner.profileId });
           }

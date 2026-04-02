@@ -4702,6 +4702,22 @@ main {
   .pack-card-back-icon { font-size: 1.8rem; }
   .showcase-card { width: 80px; }
   .showcase-card img { height: 110px; }
+
+  /* Swap cards mobile */
+  .pack-swap-card { width: 80px; }
+  .pack-swap-poster { height: 110px; }
+  .pack-swap-info { padding: 4px 5px; }
+  .pack-swap-title { font-size: 0.58rem; }
+  .pack-swap-rarity { font-size: 0.48rem; }
+  .pack-swap-wallet { gap: 8px; }
+  .pack-swap-arrow { font-size: 1.3rem; }
+  .pack-swap-label { font-size: 0.42rem; padding: 1px 6px; }
+  .pack-swap-discard-x { width: 20px; height: 20px; font-size: 0.6rem; }
+  .pack-modal { padding: 20px 14px; }
+  .pack-title { font-size: 1.3rem; }
+  .pack-subtitle { font-size: 0.75rem; margin-bottom: 16px; }
+  .pack-done-wallet-label { font-size: 0.72rem; }
+  .pack-done-hint { font-size: 0.65rem; }
 }
 
 /* =====================================================

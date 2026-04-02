@@ -184,11 +184,24 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.2.0</span>
+            <span className="settings-version-num">v2.3.0</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.3.0</strong> — Card rarity tuning, quote expansion, battle polish</p>
+              <ul>
+                <li>Harder card rarities — 80% Common, 15% Rare, 4% Epic, 1% Legendary</li>
+                <li>902 movie quotes (up from 555) — every movie has 2+ quotes</li>
+                <li>ELO changes overlay instead of resizing cards</li>
+                <li>Card swap fixed on mobile — fits 3-5 cards</li>
+                <li>IMDb ratings link to IMDb</li>
+                <li>Decade progress includes all eras (1970-2025)</li>
+                <li>Collector Score label with tooltip</li>
+                <li>Redesigned settings modal</li>
+                <li>Stats tables aligned consistently</li>
+                <li>Profile scroll to top when clicking a user</li>
+              </ul>
               <p><strong>v2.2.0</strong> — Visual refresh, new logo, mobile polish</p>
               <ul>
                 <li>New Oscar statuette logo and favicon</li>

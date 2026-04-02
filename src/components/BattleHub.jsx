@@ -2,64 +2,51 @@ import React, { useState, useRef, useEffect } from 'react';
 import MovieBattle from './MovieBattle';
 import QuoteBattle from './QuoteBattle';
 import QuoteTrivia from './QuoteTrivia';
+import PeopleBattle from './PeopleBattle';
 
 const MODES = [
-  { id: 'movie', icon: '⚔️', label: 'Movie Battle', desc: 'Head-to-head films' },
-  { id: 'quote', icon: '💬', label: 'Quote Battle', desc: 'Best quote wins' },
-  { id: 'trivia', icon: '🧩', label: 'Quote Trivia', desc: 'Name that movie' },
+  { id: 'movie', icon: '⚔️', label: 'Movie Battle', sub: 'Which film is better? Click to vote.' },
+  { id: 'people', icon: '🎭', label: 'People Battle', sub: 'Who had the better career?' },
+  { id: 'quote', icon: '💬', label: 'Quote Battle', sub: 'Which quote hits harder?' },
+  { id: 'trivia', icon: '🧩', label: 'Quote Trivia', sub: 'Which movie is this quote from?' },
 ];
 
 export default function BattleHub({ profile, playlist, watchedSet, onOpenDetail, simpleBattle, onSaveProfile }) {
   const [mode, setMode] = useState('movie');
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  const currentMode = MODES.find(m => m.id === mode);
+  const current = MODES.find(m => m.id === mode);
 
-  // Close dropdown on outside click
   useEffect(() => {
-    if (!dropdownOpen) return;
+    if (!menuOpen) return;
     const close = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) setDropdownOpen(false);
+      if (menuRef.current && !menuRef.current.contains(e.target)) setMenuOpen(false);
     };
     document.addEventListener('click', close);
     return () => document.removeEventListener('click', close);
-  }, [dropdownOpen]);
+  }, [menuOpen]);
 
   return (
     <div className="battle-hub">
-      {/* Desktop dropdown */}
-      <div className="battle-mode-dropdown" ref={dropdownRef}>
-        <button className="battle-mode-current" onClick={() => setDropdownOpen(p => !p)}>
-          <span>{currentMode.icon} {currentMode.label}</span>
-          <span className="battle-mode-arrow">{dropdownOpen ? '▴' : '▾'}</span>
+      {/* Title doubles as mode selector */}
+      <div className="battle-title-selector" ref={menuRef}>
+        <button className="battle-title-btn" onClick={() => setMenuOpen(p => !p)}>
+          <h2 className="battle-title-text">{current.label}</h2>
+          <span className="battle-title-arrow">{menuOpen ? '▴' : '▾'}</span>
         </button>
-        {dropdownOpen && (
-          <div className="battle-mode-menu">
+        <p className="battle-title-sub">{current.sub}</p>
+
+        {menuOpen && (
+          <div className="battle-title-menu">
             {MODES.filter(m => m.id !== mode).map(m => (
-              <button key={m.id} className="battle-mode-menu-item" onClick={() => { setMode(m.id); setDropdownOpen(false); }}>
-                <span className="battle-mode-menu-icon">{m.icon}</span>
-                <div>
-                  <div className="battle-mode-menu-label">{m.label}</div>
-                  <div className="battle-mode-menu-desc">{m.desc}</div>
-                </div>
+              <button key={m.id} className="battle-title-menu-item" onClick={() => { setMode(m.id); setMenuOpen(false); }}>
+                <span className="battle-title-menu-icon">{m.icon}</span>
+                <span className="battle-title-menu-label">{m.label}</span>
               </button>
             ))}
           </div>
         )}
-      </div>
-
-      {/* Mobile pills (hidden on desktop) */}
-      <div className="battle-mode-pills">
-        {MODES.map(m => (
-          <button
-            key={m.id}
-            className={`battle-mode-pill ${mode === m.id ? 'battle-mode-pill-active' : ''}`}
-            onClick={() => setMode(m.id)}
-          >
-            {m.icon} {m.label.split(' ')[0]}
-          </button>
-        ))}
       </div>
 
       {mode === 'movie' && (
@@ -79,6 +66,10 @@ export default function BattleHub({ profile, playlist, watchedSet, onOpenDetail,
 
       {mode === 'trivia' && (
         <QuoteTrivia profile={profile} onSaveProfile={onSaveProfile} />
+      )}
+
+      {mode === 'people' && (
+        <PeopleBattle profile={profile} onSaveProfile={onSaveProfile} />
       )}
     </div>
   );

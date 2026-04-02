@@ -307,8 +307,8 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
           <div className="pd-cards-header">
             <span className="pd-section-label">Cards</span>
             {profileData.wallet?.length > 0 && (
-              <span className="pd-collector-score">
-                Score: <strong>{getCollectorScore(profileData.wallet)}</strong>
+              <span className="pd-collector-score" title="Points from your wallet cards. Rarer cards = more points.">
+                Collector Score: <strong>{getCollectorScore(profileData.wallet)}</strong>
               </span>
             )}
           </div>

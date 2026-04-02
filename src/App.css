@@ -3587,41 +3587,45 @@ main {
 }
 .battle-mode-selector {
   display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
-  padding: 4px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  gap: 0;
+  margin: 0 auto 28px;
+  max-width: 420px;
+  border-bottom: 2px solid var(--border);
 }
 .battle-mode-btn {
   flex: 1;
-  padding: 10px 8px;
+  padding: 12px 8px 10px;
   background: none;
   border: none;
-  border-radius: 10px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
 }
-.battle-mode-btn:hover { background: var(--bg3); }
+.battle-mode-btn:hover {
+  border-bottom-color: var(--border);
+}
 .battle-mode-active {
-  background: var(--bg);
-  box-shadow: 0 2px 8px var(--shadow);
+  border-bottom-color: var(--gold);
 }
 .battle-mode-label {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: var(--cream);
+  color: var(--cream-dim);
+  transition: color 0.2s;
 }
 .battle-mode-active .battle-mode-label { color: var(--gold); }
+.battle-mode-btn:hover .battle-mode-label { color: var(--cream); }
 .battle-mode-desc {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--cream-dim);
+  opacity: 0.6;
 }
+.battle-mode-active .battle-mode-desc { opacity: 0.8; }
 .battle-mode-title {
   font-family: var(--font-display);
   color: var(--gold);
@@ -3851,10 +3855,10 @@ main {
 
 @media (max-width: 600px) {
   .battle-hub { padding: 0 12px 40px; }
-  .battle-mode-selector { gap: 4px; padding: 3px; }
-  .battle-mode-btn { padding: 8px 4px; }
-  .battle-mode-label { font-size: 0.78rem; }
-  .battle-mode-desc { font-size: 0.58rem; }
+  .battle-mode-selector { max-width: 100%; margin-bottom: 20px; }
+  .battle-mode-btn { padding: 10px 4px 8px; }
+  .battle-mode-label { font-size: 0.75rem; }
+  .battle-mode-desc { display: none; }
   .quote-battle-arena { flex-direction: column; gap: 0; }
   .quote-battle-vs { min-width: unset; padding: 8px 0; font-size: 1.2rem; }
   .quote-battle-card { min-height: 120px; padding: 20px 16px; }

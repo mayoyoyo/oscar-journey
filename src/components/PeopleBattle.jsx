@@ -93,6 +93,15 @@ export default function PeopleBattle({ profile, onSaveProfile }) {
       <div className="people-battle-score">
         {totalVotes} vote{totalVotes !== 1 ? 's' : ''} cast
       </div>
+
+      <div className="pack-progress">
+        <div className="pack-progress-label">
+          {totalVotes} votes cast
+        </div>
+        <div className="pack-progress-bar">
+          <div className="pack-progress-fill" style={{ width: `${Math.min(100, ((totalVotes % 20) / 20) * 100)}%` }} />
+        </div>
+      </div>
     </div>
   );
 }

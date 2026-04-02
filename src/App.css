@@ -3592,6 +3592,7 @@ main {
   margin: 0 auto 20px;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 500px;
 }
 .battle-mode-btn {
   padding: 6px 14px;

@@ -188,6 +188,15 @@ export default function QuoteTrivia({ profile, onSaveProfile }) {
         </div>
       </div>
 
+      <div className="pack-progress">
+        <div className="pack-progress-label">
+          Next card: {(profile?.triviaSinceDrop || 0)} / 10 correct
+        </div>
+        <div className="pack-progress-bar">
+          <div className="pack-progress-fill" style={{ width: `${Math.min(100, ((profile?.triviaSinceDrop || 0) / 10) * 100)}%` }} />
+        </div>
+      </div>
+
       {/* Leaderboard */}
       <button className="trivia-lb-toggle" onClick={() => setShowLeaderboard(p => !p)}>
         {showLeaderboard ? 'Hide' : 'Show'} Leaderboard

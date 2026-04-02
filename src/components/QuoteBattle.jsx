@@ -119,6 +119,15 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
         {score} vote{score !== 1 ? 's' : ''} cast
       </div>
 
+      <div className="pack-progress">
+        <div className="pack-progress-label">
+          Next card: {(profile?.quoteBattlesSinceDrop || 0)} / 15 votes
+        </div>
+        <div className="pack-progress-bar">
+          <div className="pack-progress-fill" style={{ width: `${Math.min(100, ((profile?.quoteBattlesSinceDrop || 0) / 15) * 100)}%` }} />
+        </div>
+      </div>
+
       {pendingPack && (
         <PackOpening
           cards={pendingPack}

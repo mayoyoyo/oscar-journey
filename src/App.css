@@ -2288,7 +2288,8 @@ main {
 .battle-card-info {
   padding: 16px;
   text-align: center;
-  flex: 1;
+  position: relative;
+  min-height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2333,11 +2334,17 @@ main {
   100% { transform: scale(1); }
 }
 .battle-elo-change {
-  text-align: center;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.4rem;
   font-weight: bold;
-  padding: 8px;
   animation: fadeInUp 0.3s ease;
+  background: rgba(var(--bg-rgb, 247,243,236), 0.85);
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
 }
 .battle-elo-change.positive { color: #2a8a2a; }
 .battle-elo-change.negative { color: var(--red-bright); }

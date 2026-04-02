@@ -13,10 +13,10 @@ export const RARITY_SCORES = { COMMON: 1, RARE: 5, EPIC: 15, LEGENDARY: 50 };
 
 // Drop rates
 const RARITY_ODDS = [
-  { rarity: 'LEGENDARY', threshold: 0.04 },  // 4%
-  { rarity: 'EPIC',      threshold: 0.15 },  // 11%
-  { rarity: 'RARE',      threshold: 0.40 },  // 25%
-  { rarity: 'COMMON',    threshold: 1.00 },  // 60%
+  { rarity: 'LEGENDARY', threshold: 0.01 },  // 1%
+  { rarity: 'EPIC',      threshold: 0.05 },  // 4%
+  { rarity: 'RARE',      threshold: 0.20 },  // 15%
+  { rarity: 'COMMON',    threshold: 1.00 },  // 80%
 ];
 
 function rollRarity() {

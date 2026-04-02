@@ -78,7 +78,6 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
 
   return (
     <div className="quote-battle-section">
-      <p className="battle-mode-sub">Which quote hits harder?</p>
 
       <div className="quote-battle-arena">
         <div

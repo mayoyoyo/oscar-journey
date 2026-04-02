@@ -141,7 +141,6 @@ export default function QuoteTrivia({ profile, onSaveProfile }) {
 
   return (
     <div className="quote-trivia-section">
-      <p className="battle-mode-sub">Which movie is this quote from?</p>
 
       <div className="trivia-quote-card">
         <div className="trivia-quote-mark">"</div>

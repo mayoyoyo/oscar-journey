@@ -68,8 +68,6 @@ export default function PeopleBattle({ profile, onSaveProfile }) {
           onClick={() => setSubMode('directors')}>Directors ({DIRECTORS.length})</button>
       </div>
 
-      <p className="battle-mode-sub">Who had the better career?</p>
-
       <div className="people-battle-arena">
         <PersonCard
           person={personA}

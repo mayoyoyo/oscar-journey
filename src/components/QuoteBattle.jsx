@@ -2,6 +2,9 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { QUOTES } from '../data/quotes';
 import { fetchOmdbData } from '../utils/omdb';
+import { generatePack, getMaxWallet } from '../utils/cards';
+import { getTakenCards, registerCard, releaseCard } from '../utils/cardRegistry';
+import PackOpening from './PackOpening';
 
 // Build pool of all quotes with movie info
 const ALL_QUOTES = [];
@@ -28,6 +31,7 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
   const [voted, setVoted] = useState(false);
   const [winner, setWinner] = useState(null);
   const [score, setScore] = useState(profile?.quoteBattleCount || 0);
+  const [pendingPack, setPendingPack] = useState(null);
 
   const pickPair = useCallback(() => {
     let a, b;
@@ -43,13 +47,30 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
 
   useState(() => { pickPair(); });
 
-  const handleVote = (choice) => {
+  const handleVote = async (choice) => {
     if (voted) return;
     setVoted(true);
     setWinner(choice);
     const newScore = score + 1;
     setScore(newScore);
-    if (onSaveProfile) onSaveProfile('quoteBattleCount', newScore);
+
+    const sinceDrop = (profile?.quoteBattlesSinceDrop || 0) + 1;
+    if (onSaveProfile) {
+      onSaveProfile('quoteBattleCount', newScore);
+      onSaveProfile('quoteBattlesSinceDrop', sinceDrop);
+    }
+
+    if (sinceDrop >= 15) {
+      try {
+        const taken = await getTakenCards();
+        const pack = generatePack([], [], taken);
+        if (pack && pack.length > 0) {
+          setPendingPack(pack);
+          if (onSaveProfile) onSaveProfile('quoteBattlesSinceDrop', 0);
+        }
+      } catch { /* silent */ }
+    }
+
     setTimeout(() => pickPair(), 1500);
   };
 
@@ -98,6 +119,40 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
       <div className="quote-battle-score">
         {score} vote{score !== 1 ? 's' : ''} cast
       </div>
+
+      {pendingPack && (
+        <PackOpening
+          cards={pendingPack}
+          wallet={profile?.wallet || []}
+          maxWallet={getMaxWallet(0)}
+          onClose={() => setPendingPack(null)}
+          currentShowcase={profile?.showcase || []}
+          onSaveShowcase={(showcase) => {
+            if (onSaveProfile) onSaveProfile('showcase', showcase);
+          }}
+          onKeep={async (card) => {
+            const wallet = [...(profile?.wallet || []), card];
+            if (onSaveProfile) onSaveProfile('wallet', wallet);
+            try { await registerCard(card.movieId, card.rarity, profile.id); } catch {}
+          }}
+          onReplace={async (card, replaceIdx) => {
+            const wallet = [...(profile?.wallet || [])];
+            const replaced = wallet[replaceIdx];
+            wallet[replaceIdx] = card;
+            if (onSaveProfile) {
+              onSaveProfile('wallet', wallet);
+              const showcase = profile?.showcase || [];
+              if (showcase.some(s => s.movieId === replaced.movieId)) {
+                onSaveProfile('showcase', showcase.filter(s => s.movieId !== replaced.movieId));
+              }
+            }
+            try {
+              await releaseCard(replaced.movieId, replaced.rarity);
+              await registerCard(card.movieId, card.rarity, profile.id);
+            } catch {}
+          }}
+        />
+      )}
     </div>
   );
 }

@@ -2,6 +2,11 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { QUOTES } from '../data/quotes';
 import { fetchOmdbData } from '../utils/omdb';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../utils/firebase';
+import { generatePack, getMaxWallet } from '../utils/cards';
+import { getTakenCards, registerCard, releaseCard } from '../utils/cardRegistry';
+import PackOpening from './PackOpening';
 
 // Build pool
 const ALL_QUOTES = [];
@@ -35,6 +40,32 @@ export default function QuoteTrivia({ profile, onSaveProfile }) {
   const [bestStreak, setBestStreak] = useState(profile?.triviaStreak || 0);
   const [totalCorrect, setTotalCorrect] = useState(profile?.triviaCorrect || 0);
   const [totalPlayed, setTotalPlayed] = useState(profile?.triviaPlayed || 0);
+  const [leaderboard, setLeaderboard] = useState([]);
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [pendingPack, setPendingPack] = useState(null);
+
+  // Load leaderboard
+  useEffect(() => {
+    getDocs(collection(db, 'profiles')).then(snap => {
+      const entries = snap.docs
+        .map(d => {
+          const data = d.data();
+          if (!data.triviaPlayed || data.triviaPlayed < 5) return null;
+          return {
+            id: d.id,
+            name: data.displayName || d.id,
+            avatar: data.avatar || '',
+            streak: data.triviaStreak || 0,
+            correct: data.triviaCorrect || 0,
+            played: data.triviaPlayed || 0,
+            accuracy: Math.round(((data.triviaCorrect || 0) / (data.triviaPlayed || 1)) * 100),
+          };
+        })
+        .filter(Boolean)
+        .sort((a, b) => b.streak - a.streak || b.accuracy - a.accuracy);
+      setLeaderboard(entries);
+    }).catch(() => {});
+  }, [totalPlayed]);
 
   const pickRound = useCallback(() => {
     const correct = ALL_QUOTES[Math.floor(Math.random() * ALL_QUOTES.length)];
@@ -61,7 +92,7 @@ export default function QuoteTrivia({ profile, onSaveProfile }) {
   // Pick initial round
   useState(() => { pickRound(); });
 
-  const handleSelect = (movie) => {
+  const handleSelect = async (movie) => {
     if (selected) return;
     setSelected(movie.id);
 
@@ -78,9 +109,23 @@ export default function QuoteTrivia({ profile, onSaveProfile }) {
         setBestStreak(newStreak);
         if (onSaveProfile) onSaveProfile('triviaStreak', newStreak);
       }
+
+      const sinceDrop = (profile?.triviaSinceDrop || 0) + 1;
       if (onSaveProfile) {
         onSaveProfile('triviaCorrect', newCorrect);
         onSaveProfile('triviaPlayed', newPlayed);
+        onSaveProfile('triviaSinceDrop', sinceDrop);
+      }
+
+      if (sinceDrop >= 10) {
+        try {
+          const taken = await getTakenCards();
+          const pack = generatePack([], [], taken);
+          if (pack && pack.length > 0) {
+            setPendingPack(pack);
+            if (onSaveProfile) onSaveProfile('triviaSinceDrop', 0);
+          }
+        } catch { /* silent */ }
       }
     } else {
       setStreak(0);
@@ -143,6 +188,76 @@ export default function QuoteTrivia({ profile, onSaveProfile }) {
           <span className="trivia-stat-label">Played</span>
         </div>
       </div>
+
+      {/* Leaderboard */}
+      <button className="trivia-lb-toggle" onClick={() => setShowLeaderboard(p => !p)}>
+        {showLeaderboard ? 'Hide' : 'Show'} Leaderboard
+      </button>
+      {showLeaderboard && leaderboard.length > 0 && (
+        <div className="trivia-leaderboard">
+          <table className="stats-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Best Streak</th>
+                <th>Accuracy</th>
+                <th>Played</th>
+              </tr>
+            </thead>
+            <tbody>
+              {leaderboard.map((e, i) => (
+                <tr key={e.id}>
+                  <td style={{ color: 'var(--gold)', fontWeight: 600 }}>{i + 1}</td>
+                  <td>{e.avatar} {e.name}</td>
+                  <td>{e.streak}</td>
+                  <td>{e.accuracy}%</td>
+                  <td>{e.played}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {showLeaderboard && leaderboard.length === 0 && (
+        <p style={{ textAlign: 'center', color: 'var(--cream-dim)', fontSize: '0.82rem', marginTop: '8px' }}>
+          Play at least 5 rounds to appear on the leaderboard.
+        </p>
+      )}
+
+      {pendingPack && (
+        <PackOpening
+          cards={pendingPack}
+          wallet={profile?.wallet || []}
+          maxWallet={getMaxWallet(0)}
+          onClose={() => setPendingPack(null)}
+          currentShowcase={profile?.showcase || []}
+          onSaveShowcase={(showcase) => {
+            if (onSaveProfile) onSaveProfile('showcase', showcase);
+          }}
+          onKeep={async (card) => {
+            const wallet = [...(profile?.wallet || []), card];
+            if (onSaveProfile) onSaveProfile('wallet', wallet);
+            try { await registerCard(card.movieId, card.rarity, profile.id); } catch {}
+          }}
+          onReplace={async (card, replaceIdx) => {
+            const wallet = [...(profile?.wallet || [])];
+            const replaced = wallet[replaceIdx];
+            wallet[replaceIdx] = card;
+            if (onSaveProfile) {
+              onSaveProfile('wallet', wallet);
+              const showcase = profile?.showcase || [];
+              if (showcase.some(s => s.movieId === replaced.movieId)) {
+                onSaveProfile('showcase', showcase.filter(s => s.movieId !== replaced.movieId));
+              }
+            }
+            try {
+              await releaseCard(replaced.movieId, replaced.rarity);
+              await registerCard(card.movieId, card.rarity, profile.id);
+            } catch {}
+          }}
+        />
+      )}
     </div>
   );
 }

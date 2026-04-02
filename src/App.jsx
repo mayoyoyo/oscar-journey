@@ -18,6 +18,7 @@ import FilmDetailModal from './components/FilmDetailModal';
 import SettingsModal, { DEFAULT_FILTERS } from './components/SettingsModal';
 import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
+import BattleHub from './components/BattleHub';
 import Leaderboard from './components/Leaderboard';
 import JourneyControls from './components/JourneyControls';
 import ActivityFeed from './components/ActivityFeed';
@@ -1104,7 +1105,7 @@ export default function App() {
 
       {/* Battle tab */}
       {activeTab === 'battle' && (
-        <MovieBattle
+        <BattleHub
           profile={profile}
           playlist={playlist}
           watchedSet={watchedSet}

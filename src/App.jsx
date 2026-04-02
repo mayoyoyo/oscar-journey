@@ -867,6 +867,12 @@ export default function App() {
     firebaseSave('simpleBattle', val);
   }, [firebaseSave]);
 
+  // --- Private profile toggle ---
+  const handlePrivateProfileChange = useCallback((val) => {
+    setProfile(prev => prev ? { ...prev, privateProfile: val } : prev);
+    firebaseSave('privateProfile', val);
+  }, [firebaseSave]);
+
   // --- Skip film ---
   const handleSkip = useCallback(() => {
     if (!currentMovie || playlist.length === 0) return;
@@ -1179,6 +1185,8 @@ export default function App() {
           onAllowSkipChange={handleAllowSkipChange}
           simpleBattle={profile?.simpleBattle || false}
           onSimpleBattleChange={handleSimpleBattleChange}
+          privateProfile={profile?.privateProfile || false}
+          onPrivateProfileChange={handlePrivateProfileChange}
           onClose={() => setSettingsOpen(false)}
           onClearCache={handleClearCache}
           profile={profile}

@@ -49,7 +49,7 @@ const TONE_LABELS = {
 
 export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS, SMART_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, onClose, onClearCache, profile, onLogout }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, privateProfile, onPrivateProfileChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
@@ -161,6 +161,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <p className="settings-hint">Removes animations for faster battles. Visual feedback still shown.</p>
         </div>
 
+        {/* Privacy */}
+        <div className="settings-section">
+          <label className="settings-label">Privacy</label>
+          <div className={`settings-toggle-row ${privateProfile ? 'active' : ''}`} onClick={() => onPrivateProfileChange(!privateProfile)}>
+            <span className="settings-toggle-switch"><span className="settings-toggle-knob" /></span>
+            <span className="settings-toggle-label">Private profile</span>
+          </div>
+          <p className="settings-hint">Hide your profile from the Profiles page. Others won't see your stats, watched films, or cards.</p>
+        </div>
+
         {/* Actions */}
         <div className="settings-section settings-actions">
           {profile && (
@@ -184,11 +194,15 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.3.0</span>
+            <span className="settings-version-num">v2.3.1</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.3.1</strong> — Private profiles</p>
+              <ul>
+                <li>Private profile toggle — hide from Profiles page</li>
+              </ul>
               <p><strong>v2.3.0</strong> — Card rarity tuning, quote expansion, battle polish</p>
               <ul>
                 <li>Harder card rarities — 80% Common, 15% Rare, 4% Epic, 1% Legendary</li>

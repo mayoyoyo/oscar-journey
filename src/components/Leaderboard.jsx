@@ -164,6 +164,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         battleCount: p.battleCount || 0,
         showcase: p.showcase || [],
         wallet: p.wallet || [],
+        privateProfile: p.privateProfile || false,
       });
 
       // Generate virtual profile cards for secondary raters (raters[1], raters[2], etc.)
@@ -221,7 +222,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
     }
 
     return [...realStats, ...virtualStats]
-      .filter(p => p.watchedCount > 0)
+      .filter(p => p.watchedCount > 0 && (!p.privateProfile || p.id === currentProfile?.id))
       .sort((a, b) => b.watchedCount - a.watchedCount);
   }, [profiles]);
 

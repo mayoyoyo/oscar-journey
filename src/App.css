@@ -3587,45 +3587,37 @@ main {
 }
 .battle-mode-selector {
   display: flex;
-  gap: 0;
-  margin: 0 auto 28px;
-  max-width: 420px;
-  border-bottom: 2px solid var(--border);
+  gap: 6px;
+  margin: 0 auto 24px;
+  justify-content: center;
 }
 .battle-mode-btn {
-  flex: 1;
-  padding: 12px 8px 10px;
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
+  padding: 6px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1px;
+  gap: 4px;
 }
 .battle-mode-btn:hover {
-  border-bottom-color: var(--border);
+  border-color: var(--gold-dim);
+  background: var(--bg3);
 }
 .battle-mode-active {
-  border-bottom-color: var(--gold);
+  background: var(--gold);
+  border-color: var(--gold);
 }
 .battle-mode-label {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--cream-dim);
-  transition: color 0.2s;
 }
-.battle-mode-active .battle-mode-label { color: var(--gold); }
+.battle-mode-active .battle-mode-label { color: var(--btn-text); }
 .battle-mode-btn:hover .battle-mode-label { color: var(--cream); }
-.battle-mode-desc {
-  font-size: 0.6rem;
-  color: var(--cream-dim);
-  opacity: 0.6;
-}
-.battle-mode-active .battle-mode-desc { opacity: 0.8; }
+.battle-mode-desc { display: none; }
 .battle-mode-title {
   font-family: var(--font-display);
   color: var(--gold);
@@ -3698,17 +3690,27 @@ main {
   margin-top: 12px;
   padding-top: 10px;
   border-top: 1px solid var(--border);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   animation: cinematicFadeIn 0.3s ease;
 }
+.quote-battle-poster {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
 .quote-battle-movie {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--cream);
   display: block;
 }
 .quote-battle-year {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--cream-dim);
 }
 .quote-card-winner {
@@ -3781,6 +3783,27 @@ main {
   font-style: italic;
   color: var(--cream);
   line-height: 1.55;
+}
+.trivia-poster-reveal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  animation: cinematicFadeIn 0.3s ease;
+}
+.trivia-poster-reveal img {
+  width: 44px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.trivia-poster-reveal span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
 }
 .trivia-options {
   display: grid;
@@ -3855,10 +3878,9 @@ main {
 
 @media (max-width: 600px) {
   .battle-hub { padding: 0 12px 40px; }
-  .battle-mode-selector { max-width: 100%; margin-bottom: 20px; }
-  .battle-mode-btn { padding: 10px 4px 8px; }
-  .battle-mode-label { font-size: 0.75rem; }
-  .battle-mode-desc { display: none; }
+  .battle-mode-selector { gap: 4px; margin-bottom: 16px; }
+  .battle-mode-btn { padding: 5px 12px; }
+  .battle-mode-label { font-size: 0.72rem; }
   .quote-battle-arena { flex-direction: column; gap: 0; }
   .quote-battle-vs { min-width: unset; padding: 8px 0; font-size: 1.2rem; }
   .quote-battle-card { min-height: 120px; padding: 20px 16px; }

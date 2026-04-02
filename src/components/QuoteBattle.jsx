@@ -1,6 +1,7 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { QUOTES } from '../data/quotes';
+import { fetchOmdbData } from '../utils/omdb';
 
 // Build pool of all quotes with movie info
 const ALL_QUOTES = [];
@@ -10,6 +11,15 @@ for (const [movieId, quotes] of Object.entries(QUOTES)) {
   for (const quote of quotes) {
     ALL_QUOTES.push({ movieId, movie, quote });
   }
+}
+
+function QuotePoster({ movie }) {
+  const [poster, setPoster] = useState(null);
+  useEffect(() => {
+    fetchOmdbData(movie).then(d => { if (d?.poster) setPoster(d.poster); });
+  }, [movie.id]);
+  if (!poster) return null;
+  return <img className="quote-battle-poster" src={poster} alt={movie.title} />;
 }
 
 export default function QuoteBattle({ profile, onSaveProfile }) {
@@ -31,7 +41,6 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
     setWinner(null);
   }, []);
 
-  // Pick initial pair
   useState(() => { pickPair(); });
 
   const handleVote = (choice) => {
@@ -41,16 +50,14 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
     const newScore = score + 1;
     setScore(newScore);
     if (onSaveProfile) onSaveProfile('quoteBattleCount', newScore);
-
-    setTimeout(() => pickPair(), 1200);
+    setTimeout(() => pickPair(), 1500);
   };
 
   if (!quoteA || !quoteB) return null;
 
   return (
     <div className="quote-battle-section">
-      <h2 className="battle-mode-title">Quote Battle</h2>
-      <p className="battle-mode-sub">Which quote hits harder? Tap to vote.</p>
+      <p className="battle-mode-sub">Which quote hits harder?</p>
 
       <div className="quote-battle-arena">
         <div
@@ -60,8 +67,11 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
           <div className="quote-battle-text">"{quoteA.quote}"</div>
           {voted && (
             <div className="quote-battle-reveal">
-              <span className="quote-battle-movie">{quoteA.movie.title}</span>
-              <span className="quote-battle-year">{quoteA.movie.year}</span>
+              <QuotePoster movie={quoteA.movie} />
+              <div>
+                <span className="quote-battle-movie">{quoteA.movie.title}</span>
+                <span className="quote-battle-year">{quoteA.movie.year}</span>
+              </div>
             </div>
           )}
         </div>
@@ -75,8 +85,11 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
           <div className="quote-battle-text">"{quoteB.quote}"</div>
           {voted && (
             <div className="quote-battle-reveal">
-              <span className="quote-battle-movie">{quoteB.movie.title}</span>
-              <span className="quote-battle-year">{quoteB.movie.year}</span>
+              <QuotePoster movie={quoteB.movie} />
+              <div>
+                <span className="quote-battle-movie">{quoteB.movie.title}</span>
+                <span className="quote-battle-year">{quoteB.movie.year}</span>
+              </div>
             </div>
           )}
         </div>
@@ -85,12 +98,6 @@ export default function QuoteBattle({ profile, onSaveProfile }) {
       <div className="quote-battle-score">
         {score} vote{score !== 1 ? 's' : ''} cast
       </div>
-
-      {voted && (
-        <button className="quote-battle-skip" onClick={pickPair}>
-          Next pair →
-        </button>
-      )}
     </div>
   );
 }

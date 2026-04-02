@@ -1,6 +1,7 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { QUOTES } from '../data/quotes';
+import { fetchOmdbData } from '../utils/omdb';
 
 // Build pool
 const ALL_QUOTES = [];
@@ -10,6 +11,20 @@ for (const [movieId, quotes] of Object.entries(QUOTES)) {
   for (const quote of quotes) {
     ALL_QUOTES.push({ movieId, movie, quote });
   }
+}
+
+function TriviaPoster({ movie }) {
+  const [poster, setPoster] = useState(null);
+  useEffect(() => {
+    fetchOmdbData(movie).then(d => { if (d?.poster) setPoster(d.poster); });
+  }, [movie.id]);
+  if (!poster) return null;
+  return (
+    <div className="trivia-poster-reveal">
+      <img src={poster} alt={movie.title} />
+      <span>{movie.title} ({movie.year})</span>
+    </div>
+  );
 }
 
 export default function QuoteTrivia({ profile, onSaveProfile }) {
@@ -81,13 +96,13 @@ export default function QuoteTrivia({ profile, onSaveProfile }) {
 
   return (
     <div className="quote-trivia-section">
-      <h2 className="battle-mode-title">Quote Trivia</h2>
       <p className="battle-mode-sub">Which movie is this quote from?</p>
 
       <div className="trivia-quote-card">
         <div className="trivia-quote-mark">"</div>
         <div className="trivia-quote-text">{currentQuote.quote}</div>
         <div className="trivia-quote-mark trivia-quote-mark-end">"</div>
+        {selected && <TriviaPoster movie={currentQuote.movie} />}
       </div>
 
       <div className="trivia-options">

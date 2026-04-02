@@ -349,6 +349,13 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
 
   return (
     <div className="battle-section">
+      <h2 style={{ fontFamily: 'var(--font-display)', color: 'var(--gold)', marginBottom: '4px', textAlign: 'center' }}>
+        Movie Battle
+      </h2>
+      <p style={{ color: 'var(--cream-dim)', fontSize: '0.88rem', textAlign: 'center', marginBottom: '24px' }}>
+        Which film is better? Click to vote.
+      </p>
+
       {!hasEnough && (
         <div className="battle-empty" style={{ marginBottom: '32px' }}>
           <h3>Almost There</h3>

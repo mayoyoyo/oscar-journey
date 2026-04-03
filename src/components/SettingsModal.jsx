@@ -194,11 +194,17 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.3.1</span>
+            <span className="settings-version-num">v2.3.2</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.3.2</strong> — Sync fix</p>
+              <ul>
+                <li>Syncing now jumps to the other person's current film instead of your first unwatched</li>
+                <li>Skip-watched filter temporarily disabled during sync so you stay on their film</li>
+                <li>Unsyncing restores your original filters and position</li>
+              </ul>
               <p><strong>v2.3.1</strong> — Private profiles</p>
               <ul>
                 <li>Private profile toggle — hide from Profiles page</li>

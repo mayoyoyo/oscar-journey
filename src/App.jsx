@@ -725,23 +725,38 @@ export default function App() {
         return;
       }
       // Save current state so we can restore on unsync
+      const currentFilters = profile?.filters || null;
       const preSyncData = {
         seed: profile?.seed,
         playlistOrder: playlist.map(m => m.id),
         currentIdx,
+        skipWatched: currentFilters?.smart?.skipWatched || false,
       };
 
       const newOrder = targetData.playlistOrder;
       const newSeed = targetData.seed;
       const newPlaylist = newOrder.map(id => MOVIES_BY_ID[id]).filter(Boolean);
+      // Jump to where the target profile actually is, not the beginning
+      const targetIdx = targetData.currentIdx || 0;
+
+      // Temporarily disable skipWatched so we land on their film
+      // even if we haven't seen the ones before it
+      if (currentFilters?.smart?.skipWatched) {
+        const newFilters = {
+          ...currentFilters,
+          smart: { ...currentFilters.smart, skipWatched: false },
+        };
+        setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
+        firebaseSave('filters', newFilters);
+      }
 
       setPlaylist(newPlaylist);
-      setCurrentIdx(0);
+      setCurrentIdx(targetIdx);
       setProfile(prev => prev ? { ...prev, syncedWith: targetProfileId, preSyncData } : prev);
 
       firebaseSave('playlistOrder', newOrder);
       firebaseSave('seed', newSeed);
-      firebaseSave('currentIdx', 0);
+      firebaseSave('currentIdx', targetIdx);
       firebaseSave('syncedWith', targetProfileId);
       firebaseSave('preSyncData', preSyncData);
     } catch (e) {
@@ -758,6 +773,17 @@ export default function App() {
       // Restore original journey
       const restoredPlaylist = saved.playlistOrder.map(id => MOVIES_BY_ID[id]).filter(Boolean);
       const restoredIdx = saved.currentIdx || 0;
+
+      // Restore skipWatched if it was on before sync
+      if (saved.skipWatched) {
+        const currentFilters = profile?.filters || {};
+        const restoredFilters = {
+          ...currentFilters,
+          smart: { ...(currentFilters.smart || {}), skipWatched: true },
+        };
+        setProfile(prev => prev ? { ...prev, filters: restoredFilters } : prev);
+        firebaseSave('filters', restoredFilters);
+      }
 
       setPlaylist(restoredPlaylist);
       setCurrentIdx(restoredIdx);

@@ -204,6 +204,7 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
                 <li>New diversity algorithm — no more back-to-back films with the same genre or decade</li>
                 <li>International and Animated films now sprinkled evenly throughout instead of at fixed intervals</li>
                 <li>Reshuffling produces noticeably different journeys each time</li>
+                <li>Hit Reshuffle for the new algorithm to take effect</li>
               </ul>
               <p><strong>v2.3.2</strong> — Sync fix</p>
               <ul>

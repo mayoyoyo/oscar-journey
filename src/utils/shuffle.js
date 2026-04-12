@@ -10,82 +10,98 @@ export function mulberry32(seed) {
   };
 }
 
-// Multi-dimensional diversity shuffle
-// Guarantees variety across genre, decade, and category dimensions
+// Map a release year to a decade bucket label
+function getDecade(year) {
+  if (year < 1991) return '70s80s';
+  if (year < 2000) return '90s';
+  if (year < 2010) return '00s';
+  if (year < 2020) return '10s';
+  return '20s';
+}
+
+// Greedy diversity shuffle — builds the playlist one film at a time,
+// scoring each candidate by how different it is from recently placed films.
+// This prevents back-to-back same-genre or same-decade films globally
+// (not just within buckets) and produces noticeably different results
+// with each new seed.
 export function diversityShuffle(movies, rng) {
-
-  // Fisher-Yates in-place shuffle using our seeded RNG
-  function shuffle(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(rng() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
+  // Fisher-Yates shuffle the pool for base randomization
+  const pool = [...movies];
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
   }
 
-  // Genre-interleave a list of films (round-robin through genre buckets)
-  function genreInterleave(films) {
-    const buckets = {};
-    for (const m of films) {
-      if (!buckets[m.genre]) buckets[m.genre] = [];
-      buckets[m.genre].push(m);
-    }
-    for (const g of Object.keys(buckets)) shuffle(buckets[g]);
-    const keys = shuffle(Object.keys(buckets));
-    const out = [];
-    while (keys.some(g => buckets[g].length > 0)) {
-      for (const g of keys) {
-        if (buckets[g].length > 0) out.push(buckets[g].shift());
-      }
-    }
-    return out;
-  }
+  const total = pool.length;
+  // Count INT/ANIM totals so we can pace their insertion evenly
+  const intTotal = movies.filter(m => m.category === 'INT').length;
+  const animTotal = movies.filter(m => m.category === 'ANIM').length;
 
-  // Step 1: Separate by category
-  const bp   = movies.filter(m => m.category === 'BP');
-  const intl = shuffle(movies.filter(m => m.category === 'INT'));
-  const anim = shuffle(movies.filter(m => m.category === 'ANIM'));
-
-  // Step 2: Split BP into decade buckets, genre-interleave each
-  const decBuckets = { '70s80s': [], '90s': [], '00s': [], '10s': [], '20s': [] };
-  for (const m of bp) {
-    if      (m.year < 1991) decBuckets['70s80s'].push(m);
-    else if (m.year < 2000) decBuckets['90s'].push(m);
-    else if (m.year < 2010) decBuckets['00s'].push(m);
-    else if (m.year < 2020) decBuckets['10s'].push(m);
-    else                    decBuckets['20s'].push(m);
-  }
-  const decQueues = {
-    '70s80s': genreInterleave(decBuckets['70s80s']),
-    '90s': genreInterleave(decBuckets['90s']),
-    '00s': genreInterleave(decBuckets['00s']),
-    '10s': genreInterleave(decBuckets['10s']),
-    '20s': genreInterleave(decBuckets['20s']),
-  };
-
-  // Step 3: Round-robin through decades to build the BP sequence
-  const decOrder = shuffle(['70s80s', '90s', '00s', '10s', '20s']);
-  const bpSeq = [];
-  while (decOrder.some(d => decQueues[d].length > 0)) {
-    for (const d of decOrder) {
-      if (decQueues[d].length > 0) bpSeq.push(decQueues[d].shift());
-    }
-  }
-
-  // Step 4: Splice INT every 10 BP films, ANIM every 12 BP films
   const result = [];
-  let intIdx = 0, animIdx = 0;
+  const lastGenreAt = {};   // genre code -> last playlist position it appeared
+  const lastDecadeAt = {};  // decade label -> last playlist position it appeared
+  let intPlaced = 0;
+  let animPlaced = 0;
 
-  for (let i = 0; i < bpSeq.length; i++) {
-    result.push(bpSeq[i]);
-    if ((i + 1) % 10 === 0 && intIdx  < intl.length) result.push(intl[intIdx++]);
-    if ((i + 1) % 12 === 0 && animIdx < anim.length) result.push(anim[animIdx++]);
-  }
+  while (pool.length > 0) {
+    const pos = result.length;
 
-  // Append any leftover INT/ANIM films
-  while (intIdx < intl.length || animIdx < anim.length) {
-    if (intIdx  < intl.length) result.push(intl[intIdx++]);
-    if (animIdx < anim.length) result.push(anim[animIdx++]);
+    // Score every remaining candidate
+    let totalScore = 0;
+    const scores = new Float64Array(pool.length);
+
+    for (let k = 0; k < pool.length; k++) {
+      const m = pool[k];
+      let score = 1;
+
+      // --- Genre spacing (strongest constraint) ---
+      // Heavily penalize placing the same genre adjacent or near-adjacent
+      const genreGap = pos - (lastGenreAt[m.genre] ?? -10);
+      if      (genreGap <= 1) score *= 0.02;
+      else if (genreGap === 2) score *= 0.15;
+      else if (genreGap === 3) score *= 0.4;
+
+      // --- Decade spacing ---
+      const dec = getDecade(m.year);
+      const decGap = pos - (lastDecadeAt[dec] ?? -10);
+      if      (decGap <= 1) score *= 0.1;
+      else if (decGap === 2) score *= 0.35;
+
+      // --- Category pacing (keep INT / ANIM evenly sprinkled) ---
+      // Compare how many we've placed vs how many we should have by now
+      if (m.category === 'INT') {
+        const expected = intTotal * (pos + 1) / total;
+        const deficit = expected - intPlaced;
+        if      (deficit > 1)    score *= 3;
+        else if (deficit > 0.3)  score *= 1.5;
+        else if (deficit < -0.5) score *= 0.15;
+      } else if (m.category === 'ANIM') {
+        const expected = animTotal * (pos + 1) / total;
+        const deficit = expected - animPlaced;
+        if      (deficit > 1)    score *= 3;
+        else if (deficit > 0.3)  score *= 1.5;
+        else if (deficit < -0.5) score *= 0.15;
+      }
+
+      scores[k] = Math.max(score, 0.001);
+      totalScore += scores[k];
+    }
+
+    // Weighted random pick — higher-scoring candidates are more likely
+    let r = rng() * totalScore;
+    let pick = 0;
+    for (let k = 0; k < scores.length; k++) {
+      r -= scores[k];
+      if (r <= 0) { pick = k; break; }
+    }
+
+    const chosen = pool[pick];
+    result.push(chosen);
+    lastGenreAt[chosen.genre] = pos;
+    lastDecadeAt[getDecade(chosen.year)] = pos;
+    if (chosen.category === 'INT') intPlaced++;
+    if (chosen.category === 'ANIM') animPlaced++;
+    pool.splice(pick, 1);
   }
 
   return result;

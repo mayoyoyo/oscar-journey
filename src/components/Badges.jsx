@@ -1,5 +1,6 @@
 import React from 'react';
 import { GENRE_LABELS } from '../data/movies';
+import TierPips from './TierPips';
 
 function speechUrl(title, year) {
   return `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ' + year + ' oscar acceptance speech best picture')}`;
@@ -34,6 +35,14 @@ export function BadgeAnim() {
   return <span className="badge-anim">🎨 Animated Feature</span>;
 }
 
+export function BadgeEssential() {
+  return <span className="badge-essential">✦ Essential</span>;
+}
+
+export function BadgeEssentialSm() {
+  return <span className="badge-essential-sm">✦ Essential</span>;
+}
+
 // Small badges for A-Z list rows
 export function BadgeWinnerSm() {
   return <span className="badge-winner-sm">★ Winner</span>;
@@ -66,9 +75,11 @@ export function MovieBadges({ movie, small = false }) {
         {movie.category === 'INT' && <BadgeIntSm />}
         {movie.category === 'ANIM' && <BadgeAnimSm />}
         {movie.category === 'BP' && <BadgeBpSm />}
+        {movie.category === 'ESSENTIAL' && <BadgeEssentialSm />}
         {alsoWon.includes('INT') && <BadgeIntSm />}
         {alsoWon.includes('ANIM') && <BadgeAnimSm />}
         <BadgeGenreSm genre={movie.genre} />
+        <TierPips movie={movie} variant="compact" />
       </span>
     );
   }
@@ -76,11 +87,13 @@ export function MovieBadges({ movie, small = false }) {
   return (
     <div className="badges">
       {movie.won && movie.category === 'BP' && <BadgeWinner movie={movie} />}
+      {movie.category === 'ESSENTIAL' && <BadgeEssential />}
       <BadgeGenre genre={movie.genre} />
       {movie.category === 'INT' && <BadgeInt />}
       {movie.category === 'ANIM' && <BadgeAnim />}
       {alsoWon.includes('INT') && <BadgeInt />}
       {alsoWon.includes('ANIM') && <BadgeAnim />}
+      <TierPips movie={movie} variant="full" />
     </div>
   );
 }

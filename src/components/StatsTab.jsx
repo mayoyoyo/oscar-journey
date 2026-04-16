@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
+import { getTierInfo, MAX_TIER } from '../utils/tierInfo';
+import TierPips from './TierPips';
 
 export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, profileName }) {
   const stats = useMemo(() => {
@@ -91,6 +93,7 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
       { label: 'Best Picture', cat: 'BP' },
       { label: 'International Feature', cat: 'INT' },
       { label: 'Animated Feature', cat: 'ANIM' },
+      { label: 'Essential (non-Oscar)', cat: 'ESSENTIAL' },
     ];
     const categoryProgress = categories.map(c => {
       const total = MOVIES.filter(m => m.category === c.cat).length;
@@ -98,9 +101,45 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
       return { ...c, total, watched };
     });
 
+    // ---- Canon score + per-tier breakdown ----
+    // Every film gets a tier 0–8. Score = sum of tier for each watched film.
+    // "Iron-clad" canon (tier 5+) matters most — reward watching them.
+    const tierBreakdown = {};
+    for (let t = 1; t <= MAX_TIER; t++) {
+      tierBreakdown[t] = { total: 0, watched: 0 };
+    }
+    let canonScore = 0;
+    let canonScoreMax = 0;
+    const unwatchedByTier = {};
+
+    for (const m of MOVIES) {
+      const { tier } = getTierInfo(m);
+      if (tier === 0) continue;
+      canonScoreMax += tier;
+      tierBreakdown[tier].total++;
+      if (watchedTitleSet.has(m.id)) {
+        canonScore += tier;
+        tierBreakdown[tier].watched++;
+      } else {
+        if (!unwatchedByTier[tier]) unwatchedByTier[tier] = [];
+        unwatchedByTier[tier].push(m);
+      }
+    }
+
+    // Top 6 recommendations: highest-tier unwatched films, preferring recent/accessible
+    const nextUp = [];
+    for (let t = MAX_TIER; t >= 1 && nextUp.length < 6; t--) {
+      const pool = unwatchedByTier[t] || [];
+      for (const m of pool) {
+        if (nextUp.length >= 6) break;
+        nextUp.push(m);
+      }
+    }
+
     return {
       totalFilms, watchedCount, perRater, agreePct, allRated,
       biggestDisagreements, genreStats, decadeProgress, categoryProgress,
+      canonScore, canonScoreMax, tierBreakdown, nextUp,
     };
   }, [watchedTitleSet, ratings, raters]);
 
@@ -134,6 +173,73 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
             <div className="stat-card-label">
               Agreement{stats.allRated.length > 0 ? ` (${stats.allRated.length} films)` : ''}
             </div>
+          </div>
+        )}
+      </div>
+
+      {/* Canon Score — weighted by tier */}
+      <div className="stats-section canon-score-section">
+        <h3>Canon Score</h3>
+        <div className="canon-score-header">
+          <div className="canon-score-big">
+            <span className="canon-score-num">{stats.canonScore}</span>
+            <span className="canon-score-denom"> / {stats.canonScoreMax}</span>
+          </div>
+          <div className="canon-score-bar">
+            <div
+              className="canon-score-fill"
+              style={{ width: `${stats.canonScoreMax > 0 ? (stats.canonScore / stats.canonScoreMax) * 100 : 0}%` }}
+            />
+          </div>
+          <div className="canon-score-caption">
+            Each film scores points equal to the number of canon lists it appears on (1–{MAX_TIER}). Watch the hardest-to-ignore films to climb fastest.
+          </div>
+        </div>
+
+        <table className="stats-table canon-tier-table">
+          <thead>
+            <tr><th>Tier</th><th>Watched</th><th>Total</th><th>%</th></tr>
+          </thead>
+          <tbody>
+            {Array.from({ length: MAX_TIER }, (_, i) => MAX_TIER - i).map(t => {
+              const row = stats.tierBreakdown[t];
+              if (!row || row.total === 0) return null;
+              const pct = row.total > 0 ? Math.round((row.watched / row.total) * 100) : 0;
+              return (
+                <tr key={t}>
+                  <td>
+                    <span className={`tier-pips tier-${t}`} style={{ padding: '3px 7px' }}>
+                      {Array.from({ length: t }, (_, i) => (
+                        <span key={i} className="tier-pip filled" />
+                      ))}
+                    </span>
+                    <span style={{ marginLeft: 8, color: 'var(--cream-dim)', fontSize: '0.85rem' }}>
+                      {t === MAX_TIER ? 'all lists' : `${t} of ${MAX_TIER}`}
+                    </span>
+                  </td>
+                  <td>{row.watched}</td>
+                  <td>{row.total}</td>
+                  <td>{pct}%</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+
+        {stats.nextUp.length > 0 && (
+          <div style={{ marginTop: 20 }}>
+            <h4 style={{ fontFamily: 'var(--font-display)', color: 'var(--gold)', fontSize: '0.95rem', marginBottom: 10 }}>
+              Next up — highest-signal unwatched
+            </h4>
+            <ul className="canon-next-up">
+              {stats.nextUp.map(m => (
+                <li key={m.id}>
+                  <span className="canon-next-title">{m.title}</span>
+                  <span className="canon-next-year">· {m.year}</span>
+                  <TierPips movie={m} variant="compact" />
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>

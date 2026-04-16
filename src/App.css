@@ -536,6 +536,116 @@ main {
   letter-spacing: 0.03em;
 }
 
+/* Essential badge — for films that made the ≥2-of-7 canon bar */
+.badge-essential {
+  background: linear-gradient(135deg, #3a2c0e 0%, #5e4614 50%, #8b6914 100%);
+  color: #f7e8b8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 5px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  border: 1px solid #a98c34;
+  box-shadow: 0 1px 6px rgba(139, 105, 20, 0.35), inset 0 1px 0 rgba(255, 230, 150, 0.18);
+}
+
+[data-theme="dark"] .badge-essential {
+  background: linear-gradient(135deg, #2a1f0a 0%, #4a3a14 50%, #7a5c1e 100%);
+  color: #f4d77a;
+  border-color: #c9a84c;
+}
+
+/* Tier pips — compact visual for "how many canon lists is this film on" */
+.tier-pips {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 9px;
+  border-radius: 50px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  cursor: help;
+  line-height: 1;
+  transition: box-shadow 0.2s ease;
+}
+
+.tier-pips:hover {
+  box-shadow: 0 0 0 2px rgba(139, 105, 20, 0.15);
+}
+
+.tier-pip {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.tier-pip.filled {
+  background: var(--gold);
+  box-shadow: 0 0 3px rgba(139, 105, 20, 0.4);
+}
+
+.tier-pip.empty {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.tier-pips:hover .tier-pip.filled {
+  transform: scale(1.15);
+}
+
+/* Higher-tier glow to reward discovery */
+.tier-pips.tier-6 .tier-pip.filled,
+.tier-pips.tier-7 .tier-pip.filled,
+.tier-pips.tier-8 .tier-pip.filled {
+  background: linear-gradient(135deg, #d4af3c 0%, var(--gold) 100%);
+  box-shadow: 0 0 5px rgba(212, 175, 60, 0.6);
+}
+
+.tier-pips.tier-7,
+.tier-pips.tier-8 {
+  background: linear-gradient(135deg, rgba(212, 175, 60, 0.15), rgba(139, 105, 20, 0.1));
+  border-color: #c9a84c;
+}
+
+.tier-pip-label {
+  margin-left: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+/* Compact pip variant for A-Z rows and tight contexts */
+.tier-pips-compact {
+  padding: 3px 7px;
+  gap: 2px;
+}
+
+.tier-pips-compact .tier-pip {
+  width: 5px;
+  height: 5px;
+}
+
+/* Small Essential badge for A-Z rows */
+.badge-essential-sm {
+  background: linear-gradient(135deg, #5e4614 0%, var(--gold) 100%);
+  color: #f7e8b8;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .badge-essential-sm {
+  background: linear-gradient(135deg, #4a3a14 0%, #c9a84c 100%);
+  color: #2a1f0a;
+}
+
 /* OMDb data fields */
 .film-pills-row {
   display: flex;
@@ -1889,6 +1999,50 @@ main {
   border-top: 1px solid var(--border);
 }
 
+/* Canon appearances block in detail modal */
+.film-detail-canon {
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.film-detail-canon-title {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.film-detail-canon-lists {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.canon-list-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  cursor: help;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.canon-list-chip:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.canon-list-chip.canon-list-oscar {
+  background: linear-gradient(135deg, #5e4614 0%, var(--gold) 100%);
+  color: #f7e8b8;
+  border-color: #a98c34;
+  font-weight: 600;
+}
+
 .film-detail-awards-title {
   font-size: 0.82rem;
   color: var(--gold);
@@ -2072,6 +2226,123 @@ main {
 
 .stats-section {
   margin-bottom: 28px;
+}
+
+/* ===== Canon Score (Essential completion) ===== */
+.canon-score-section {
+  background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.canon-score-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af3c, var(--gold), #d4af3c);
+  opacity: 0.8;
+}
+
+.canon-score-section h3 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 16px;
+}
+
+.canon-score-header {
+  margin-bottom: 20px;
+}
+
+.canon-score-big {
+  font-family: var(--font-display);
+  color: var(--gold);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.canon-score-num {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.canon-score-denom {
+  font-size: 1.2rem;
+  color: var(--cream-dim);
+  font-weight: 400;
+}
+
+.canon-score-bar {
+  height: 8px;
+  background: var(--bg3);
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+}
+
+.canon-score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), #d4af3c);
+  border-radius: 50px;
+  transition: width 0.6s ease;
+  box-shadow: 0 0 8px rgba(212, 175, 60, 0.4);
+}
+
+.canon-score-caption {
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.canon-tier-table {
+  margin-top: 12px;
+}
+
+.canon-tier-table td:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.canon-next-up {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.canon-next-up li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.canon-next-up li:hover {
+  transform: translateX(4px);
+  border-color: var(--gold);
+}
+
+.canon-next-title {
+  color: var(--cream);
+  font-weight: 600;
+  flex: 1;
+}
+
+.canon-next-year {
+  color: var(--cream-dim);
+  font-size: 0.85rem;
 }
 
 .stats-section h3 {

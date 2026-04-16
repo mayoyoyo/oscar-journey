@@ -39,7 +39,7 @@ function filmWonAward(movie, key) {
 
 const DEFAULT_FILM_FILTERS = {
   eras: { '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true },
-  categories: { BP: true, INT: true, ANIM: true },
+  categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),

@@ -125,7 +125,7 @@ const JOURNEY_TAGLINES = [
   "You're not watching a movie. You're having a cultural experience.",
   "The remote control has a play button. It does not have a 'scroll endlessly' button.",
   "Commitment issues? In this economy? Just watch the film.",
-  "This site has 399 films. You have one job.",
+  "This site has 837 films. You have one job.",
   "Think of this as a gym membership for your brain. Except you'll actually use it.",
   "Your watchlist on Netflix has 200 films. You've watched 3. We're fixing that.",
   "Award-winning cinema > doomscrolling. This is not up for debate.",

@@ -4,7 +4,7 @@ import { GENRE_LABELS } from '../data/movies';
 
 const DEFAULT_FILTERS = {
   eras: { '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true },
-  categories: { BP: true, INT: true, ANIM: true },
+  categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
   smart: {
@@ -33,6 +33,7 @@ const CATEGORY_LABELS = {
   BP: 'Best Picture',
   INT: 'International',
   ANIM: 'Animated',
+  ESSENTIAL: 'Essential (must-watch)',
 };
 
 export { DEFAULT_FILTERS, ERA_LABELS, GENRE_LABELS, CATEGORY_LABELS, SMART_LABELS };

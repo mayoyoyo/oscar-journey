@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { getTierInfo, LIST_LABELS, LIST_SHORT_LABELS, MAX_TIER } from '../utils/tierInfo';
 
 // Visual signal of how many canon lists a film appears on.
@@ -64,12 +65,23 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
         {showLabel && <span className="tier-pip-label">{tier}</span>}
       </span>
 
-      {open && (
+      {open && createPortal(
         <div className="modal-overlay open tier-pip-modal-overlay"
-          onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}
+          onClick={(e) => {
+            // Prevent clicks inside the modal from bubbling up to cards / rows beneath.
+            e.stopPropagation();
+            if (e.target === e.currentTarget) setOpen(false);
+          }}
+          onMouseDown={(e) => e.stopPropagation()}
+          onTouchStart={(e) => e.stopPropagation()}
         >
-          <div className="modal tier-pip-modal" role="dialog" aria-labelledby="tier-pip-modal-title">
-            <button className="film-detail-close" onClick={() => setOpen(false)} aria-label="Close">✕</button>
+          <div
+            className="modal tier-pip-modal"
+            role="dialog"
+            aria-labelledby="tier-pip-modal-title"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="film-detail-close" onClick={(e) => { e.stopPropagation(); setOpen(false); }} aria-label="Close">✕</button>
 
             <div className="tier-pip-modal-header">
               <span className={`tier-pips tier-${tier}`} style={{ padding: '5px 10px' }}>
@@ -96,13 +108,14 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
             </ul>
 
             {tier >= 2 && tier <= 4 && movie.category === 'ESSENTIAL' && (
-              <button className="tier-pip-focus-btn" onClick={focusTier}>
+              <button className="tier-pip-focus-btn" onClick={(e) => { e.stopPropagation(); focusTier(); }}>
                 Focus on Tier ≥ {tier} essentials
                 <span className="tier-pip-focus-sub">show only canon films this strong</span>
               </button>
             )}
             {tier > 4 && movie.category === 'ESSENTIAL' && (
-              <button className="tier-pip-focus-btn" onClick={() => {
+              <button className="tier-pip-focus-btn" onClick={(e) => {
+                e.stopPropagation();
                 window.dispatchEvent(new CustomEvent('canon-focus-tier', { detail: { tier: 4 } }));
                 setOpen(false);
               }}>
@@ -111,7 +124,8 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
               </button>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

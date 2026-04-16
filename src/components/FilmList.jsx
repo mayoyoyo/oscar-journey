@@ -309,28 +309,26 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
               <div className="film-list-filter-section-header">
                 <span>Canon depth</span>
                 <span className="film-list-filter-section-caption">
-                  how many canon lists a non-Oscar film must appear on
+                  minimum number of canon lists a non-Oscar film must appear on
                 </span>
               </div>
               <div className="canon-depth-toggle" role="radiogroup" aria-label="Minimum canon tier">
-                <button
-                  className={`canon-depth-btn ${filters.minEssentialTier === 3 ? 'active' : ''}`}
-                  role="radio"
-                  aria-checked={filters.minEssentialTier === 3}
-                  onClick={() => setFilters(f => ({ ...f, minEssentialTier: 3 }))}
-                >
-                  <span className="canon-depth-label">Tier ≥ 3</span>
-                  <span className="canon-depth-sub">strong consensus · 143 films</span>
-                </button>
-                <button
-                  className={`canon-depth-btn ${filters.minEssentialTier === 2 ? 'active' : ''}`}
-                  role="radio"
-                  aria-checked={filters.minEssentialTier === 2}
-                  onClick={() => setFilters(f => ({ ...f, minEssentialTier: 2 }))}
-                >
-                  <span className="canon-depth-label">Tier ≥ 2</span>
-                  <span className="canon-depth-sub">all canon · 438 films</span>
-                </button>
+                {[
+                  { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 films' },
+                  { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 films' },
+                  { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 films' },
+                ].map(opt => (
+                  <button
+                    key={opt.tier}
+                    className={`canon-depth-btn ${filters.minEssentialTier === opt.tier ? 'active' : ''}`}
+                    role="radio"
+                    aria-checked={filters.minEssentialTier === opt.tier}
+                    onClick={() => setFilters(f => ({ ...f, minEssentialTier: opt.tier }))}
+                  >
+                    <span className="canon-depth-label">{opt.label}</span>
+                    <span className="canon-depth-sub">{opt.sub}</span>
+                  </button>
+                ))}
               </div>
             </div>
 

@@ -12,6 +12,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     categories: { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) },
     genres: { ...DEFAULT_FILTERS.genres, ...(filters?.genres || {}) },
     runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters?.runtimes || {}) },
+    minEssentialTier: filters?.minEssentialTier ?? DEFAULT_FILTERS.minEssentialTier,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters?.smart || {}) },
   };
 
@@ -133,6 +134,35 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
               {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
               {renderSection('eras', 'Eras', 'eras', ERA_LABELS)}
               {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS)}
+
+              {/* Canon depth — mirror of the Films tab control so Journey users can adjust it too */}
+              <div className="film-list-filter-section">
+                <div className="film-list-filter-section-header">
+                  <span>Canon depth</span>
+                  <span className="film-list-filter-section-caption">
+                    minimum number of canon lists a non-Oscar film must appear on
+                  </span>
+                </div>
+                <div className="canon-depth-toggle" role="radiogroup" aria-label="Minimum canon tier">
+                  {[
+                    { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 films' },
+                    { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 films' },
+                    { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 films' },
+                  ].map(opt => (
+                    <button
+                      key={opt.tier}
+                      className={`canon-depth-btn ${currentFilters.minEssentialTier === opt.tier ? 'active' : ''}`}
+                      role="radio"
+                      aria-checked={currentFilters.minEssentialTier === opt.tier}
+                      onClick={() => onFiltersChange({ ...currentFilters, minEssentialTier: opt.tier })}
+                    >
+                      <span className="canon-depth-label">{opt.label}</span>
+                      <span className="canon-depth-sub">{opt.sub}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               {renderSection('genres', 'Genres', 'genres', GENRE_LABELS)}
               {renderSection('runtimes', 'Runtime', 'runtimes', RUNTIME_LABELS)}
             </div>

@@ -1658,10 +1658,12 @@ main {
 .canon-depth-toggle {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .canon-depth-btn {
-  flex: 1;
+  flex: 1 1 120px;
+  min-width: 0;
   background: var(--bg3);
   border: 1px solid var(--border);
   color: var(--cream);

@@ -46,6 +46,7 @@ const DEFAULT_FILM_FILTERS = {
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),
+  minEssentialTier: 3,
 };
 
 function sortKeyFn(title) {
@@ -141,6 +142,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
       .filter(m => filters.eras[eraBucket(m.year)])
       .filter(m => filters.categories[m.category] || (m.alsoWon || []).some(c => filters.categories[c]))
+      .filter(m => m.category !== 'ESSENTIAL' || (m.tier || 0) >= (filters.minEssentialTier ?? 3))
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
         const bucket = runtimeBucket(runtimeMap.get(m.id));
@@ -280,6 +282,37 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
 
             {renderSection('Eras', 'eras', ERA_LABELS)}
             {renderSection('Categories', 'categories', CATEGORY_LABELS)}
+
+            {/* Minimum tier for ESSENTIAL (canon) films */}
+            <div className="film-list-filter-section">
+              <div className="film-list-filter-section-header">
+                <span>Canon depth</span>
+                <span className="film-list-filter-section-caption">
+                  how many canon lists a non-Oscar film must appear on
+                </span>
+              </div>
+              <div className="canon-depth-toggle" role="radiogroup" aria-label="Minimum canon tier">
+                <button
+                  className={`canon-depth-btn ${filters.minEssentialTier === 3 ? 'active' : ''}`}
+                  role="radio"
+                  aria-checked={filters.minEssentialTier === 3}
+                  onClick={() => setFilters(f => ({ ...f, minEssentialTier: 3 }))}
+                >
+                  <span className="canon-depth-label">Tier ≥ 3</span>
+                  <span className="canon-depth-sub">strong consensus · 143 films</span>
+                </button>
+                <button
+                  className={`canon-depth-btn ${filters.minEssentialTier === 2 ? 'active' : ''}`}
+                  role="radio"
+                  aria-checked={filters.minEssentialTier === 2}
+                  onClick={() => setFilters(f => ({ ...f, minEssentialTier: 2 }))}
+                >
+                  <span className="canon-depth-label">Tier ≥ 2</span>
+                  <span className="canon-depth-sub">all canon · 438 films</span>
+                </button>
+              </div>
+            </div>
+
             {renderSection('Genres', 'genres', GENRE_LABELS)}
             {renderSection('Runtime', 'runtimes', RUNTIME_LABELS, runtimeSuffixes)}
             {renderSection('Oscars Won', 'wins', WIN_LABELS, winSuffixes)}

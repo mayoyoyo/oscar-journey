@@ -47,6 +47,7 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
     categories: { ...DEFAULT_FILTERS.categories, ...(filters.categories || {}) },
     genres: { ...DEFAULT_FILTERS.genres, ...(filters.genres || {}) },
     runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters.runtimes || {}) },
+    minEssentialTier: filters.minEssentialTier ?? DEFAULT_FILTERS.minEssentialTier,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters.smart || {}) },
   };
 
@@ -68,6 +69,9 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   // Category check — also match if any alsoWon category is active (e.g. Parasite is BP + INT)
   const matchesCategory = f.categories[movie.category] || (movie.alsoWon || []).some(c => f.categories[c]);
   if (!matchesCategory) return false;
+
+  // Minimum essential-tier check — applies only to ESSENTIAL films. Oscar films are unaffected.
+  if (movie.category === 'ESSENTIAL' && (movie.tier || 0) < f.minEssentialTier) return false;
 
   // Genre check
   if (f.genres[movie.genre] === false) return false;

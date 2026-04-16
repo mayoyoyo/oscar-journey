@@ -10,6 +10,9 @@ const DEFAULT_FILTERS = {
   categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
+  // Minimum tier required for ESSENTIAL films. 3 = strong consensus (143 films);
+  // 2 = lenient consensus (438 films). Oscar films (BP/INT/ANIM) ignore this.
+  minEssentialTier: 3,
   smart: {
     skipWatched: false,
     winnersOnly: false,

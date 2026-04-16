@@ -16,6 +16,11 @@ const CATEGORY_ORDER = [
 export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpenDetail }) {
   const [showModal, setShowModal] = useState(false);
 
+  // ESSENTIAL / canon films have no Oscar ceremony — render a simple year line instead.
+  if (ceremony == null) {
+    return <div className="ceremony-line ceremony-line-nooscar">Canon film · {year}</div>;
+  }
+
   const sameYear = MOVIES.filter(m => m.ceremony === ceremony);
 
   // Group by category, including alsoWon cross-listings

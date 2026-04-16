@@ -21,7 +21,10 @@ export const SERIES = [
   ['the-lord-of-the-rings-the-fellowship-of-the-ring-2001', 'the-lord-of-the-rings-the-two-towers-2002', 'the-lord-of-the-rings-the-return-of-the-king-2003'],
   ['avatar-2009', 'avatar-the-way-of-water-2022'],
   ['dune-2021', 'dune-part-two-2024'],
-  ['toy-story-3-2010', 'toy-story-4-2019'],
+  ['toy-story-1995', 'toy-story-3-2010', 'toy-story-4-2019'],
+  ['star-wars-1977', 'the-empire-strikes-back-1980', 'return-of-the-jedi-1983'],
+  ['before-sunrise-1995', 'before-sunset-2004'],
+  ['the-terminator-1984', 'terminator-2-judgment-day-1991'],
 ];
 
 // All movies: { title, year, won, genre, ceremony, category }

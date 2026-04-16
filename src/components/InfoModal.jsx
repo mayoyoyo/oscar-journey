@@ -27,7 +27,7 @@ export default function InfoModal({ onClose }) {
           <div className="info-section-icon">✨</div>
           <div>
             <h3>The Solution</h3>
-            <p>We took every <strong>Best Picture nominee</strong> from 1970 to 2025, plus every <strong>International Feature</strong> and <strong>Animated Feature</strong> winner — <strong>{MOVIES.length} films</strong> total — and shuffled them into a randomized journey. No more choosing, just press play.</p>
+            <p>We took every <strong>Best Picture nominee</strong> since 1970, every <strong>International Feature</strong> and <strong>Animated Feature</strong> winner, and <strong>438 essential non-Oscar films</strong> curated across 7 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, festival grand prizes, National Film Registry) — <strong>{MOVIES.length} films</strong> total — and shuffled them into a randomized journey. No more choosing, just press play.</p>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ export default function InfoModal({ onClose }) {
             <span className="info-feature-emoji">📋</span>
             <div>
               <strong>Films</strong>
-              <p>Browse all {MOVIES.length} films A-Z. Checklist mode for quick marking. Every film has poster, plot, IMDb rating, director, runtime, and Oscar wins.</p>
+              <p>Browse all {MOVIES.length} films A-Z. Checklist mode for quick marking. Every film has poster, plot, IMDb rating, director, runtime, and awards or canon list appearances.</p>
             </div>
           </div>
 

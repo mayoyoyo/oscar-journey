@@ -8,37 +8,28 @@ import { justWatchUrl } from '../utils/justwatch';
 import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
 
-const SKIP_MESSAGES = [
-  "Really? This is an Oscar nominee. Have some respect. 😤",
+// Universal skip messages — safe for any film (Oscar or canon).
+const SKIP_MESSAGES_UNIVERSAL = [
   "You'd skip this but watch 3 hours of TikTok? Bold choice.",
-  "The Academy didn't nominate this for you to hit 'skip'...",
   "Somewhere, a film critic just felt a disturbance in the force.",
   "Fine. But don't come crying when everyone's talking about this movie.",
-  "Skipping Oscar nominees? What's next, skipping vegetables? 🥦",
-  "This movie didn't get nominated just to be disrespected like this.",
   "Your future self who watched it: 'That was actually great.' You right now: skip. 🤡",
   "Even the popcorn is disappointed. 🍿",
-  "You sure? This one's a banger according to literally the Academy.",
   "The director put years of their life into this and you can't give it 2 hours?",
   "Skipping is temporary. Regret is forever.",
-  "This film has more awards than you have excuses. Watch it.",
   "You're one skip away from becoming the person who 'doesn't watch movies.'",
   "Bold of you to skip a film you know nothing about.",
   "You miss 100% of the films you skip. — Wayne Gretzky — Michael Scott",
   "Wow. The skip button. How original. 🙄",
-  "This movie survived Oscar campaigning, studio politics, and critics. But sure, skip it.",
   "The algorithm specifically chose this for you and you're gonna do it like that?",
   "Every great film collection started with someone NOT pressing skip.",
   "Skipping a film is like leaving a restaurant before the food arrives.",
   "You'll watch a 45-second reel 300 times but not a 2-hour masterpiece?",
   "This is the movie equivalent of skipping leg day.",
-  "The Academy voters watched 300+ films to pick this one. You can't do one?",
   "Skip now, see it trending later, feel silly. Classic.",
   "Your watchlist is crying. It thought today was the day.",
   "Just so you know, this counts as a fumble on your profile.",
   "That skip button should come with a therapist.",
-  "This film was literally nominated for BEST PICTURE and you're hitting skip??",
-  "Quitters never win Oscars. Neither do skippers.",
   "Imagine explaining to your friends why you skipped this one.",
   "The skip button exists for emergencies. This is not an emergency.",
   "Fine, skip it. But know that the movie poster is judging you right now.",
@@ -50,6 +41,40 @@ const SKIP_MESSAGES = [
   "Are you skipping because it looks boring, or because you're scared it's actually good?",
   "This is cinema, not a Netflix queue. Show some commitment.",
 ];
+
+// Oscar-specific zingers — only used when the film is an Academy-recognized title.
+const SKIP_MESSAGES_OSCAR = [
+  "Really? This is an Oscar nominee. Have some respect. 😤",
+  "The Academy didn't nominate this for you to hit 'skip'...",
+  "Skipping Oscar nominees? What's next, skipping vegetables? 🥦",
+  "This movie didn't get nominated just to be disrespected like this.",
+  "You sure? This one's a banger according to literally the Academy.",
+  "This film has more awards than you have excuses. Watch it.",
+  "This movie survived Oscar campaigning, studio politics, and critics. But sure, skip it.",
+  "The Academy voters watched 300+ films to pick this one. You can't do one?",
+  "Quitters never win Oscars. Neither do skippers.",
+];
+
+// Canon-specific zingers — only used when the film is ESSENTIAL (non-Oscar canon).
+const SKIP_MESSAGES_CANON = [
+  "Really? This film is on multiple canon lists. Have some respect. 😤",
+  "Critics, festivals, and cinephiles all agreed. You're gonna skip??",
+  "You're about to skip a film the Academy already missed. Don't make their mistake.",
+  "This film didn't crack Sight & Sound for you to hit 'skip.'",
+  "Criterion put this in their collection for a reason. Maybe find out why?",
+  "IMDb users, Letterboxd, the AFI, and the Library of Congress all disagree with your skip.",
+  "This is the exact kind of film people regret not watching sooner.",
+  "Every cinephile you admire has seen this. Just saying.",
+  "Hot take: the best films of all time don't always win Oscars. This is one of them.",
+];
+
+function pickSkipMessage(movie) {
+  const category = movie?.category;
+  const pool = [...SKIP_MESSAGES_UNIVERSAL];
+  if (category === 'ESSENTIAL') pool.push(...SKIP_MESSAGES_CANON);
+  else pool.push(...SKIP_MESSAGES_OSCAR);
+  return pool[Math.floor(Math.random() * pool.length)];
+}
 
 export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile }) {
   const [omdbData, setOmdbData] = useState(null);
@@ -278,7 +303,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             <button
               className="skip-btn"
               onClick={() => {
-                const msg = SKIP_MESSAGES[Math.floor(Math.random() * SKIP_MESSAGES.length)];
+                const msg = pickSkipMessage(movie);
                 if (window.confirm(msg + '\n\nSkip this film?')) {
                   onSkip();
                 }

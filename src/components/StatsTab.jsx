@@ -75,13 +75,19 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
 
     // Progress by decade
     const decades = [
+      { label: '1910-1919', min: 1910, max: 1919 },
+      { label: '1920-1929', min: 1920, max: 1929 },
+      { label: '1930-1939', min: 1930, max: 1939 },
+      { label: '1940-1949', min: 1940, max: 1949 },
+      { label: '1950-1959', min: 1950, max: 1959 },
+      { label: '1960-1969', min: 1960, max: 1969 },
       { label: '1970-1979', min: 1970, max: 1979 },
       { label: '1980-1989', min: 1980, max: 1989 },
       { label: '1990-1999', min: 1990, max: 1999 },
       { label: '2000-2009', min: 2000, max: 2009 },
       { label: '2010-2019', min: 2010, max: 2019 },
       { label: '2020-2025', min: 2020, max: 2025 },
-    ];
+    ].filter(d => MOVIES.some(m => m.year >= d.min && m.year <= d.max));
     const decadeProgress = decades.map(d => {
       const total = MOVIES.filter(m => m.year >= d.min && m.year <= d.max).length;
       const watched = MOVIES.filter(m => m.year >= d.min && m.year <= d.max && watchedTitleSet.has(m.id)).length;

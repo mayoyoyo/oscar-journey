@@ -52,12 +52,18 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
 
   // Era check
   const year = movie.year;
-  if (year < 1980 && !f.eras['70s']) return false;
-  if (year >= 1980 && year < 1991 && !f.eras['80s']) return false;
-  if (year >= 1991 && year < 2000 && !f.eras['90s']) return false;
-  if (year >= 2000 && year < 2010 && !f.eras['00s']) return false;
-  if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
-  if (year >= 2020 && !f.eras['20s']) return false;
+  if (year < 1920 && !f.eras['1910s']) return false;
+  else if (year >= 1920 && year < 1930 && !f.eras['1920s']) return false;
+  else if (year >= 1930 && year < 1940 && !f.eras['1930s']) return false;
+  else if (year >= 1940 && year < 1950 && !f.eras['1940s']) return false;
+  else if (year >= 1950 && year < 1960 && !f.eras['1950s']) return false;
+  else if (year >= 1960 && year < 1970 && !f.eras['1960s']) return false;
+  else if (year >= 1970 && year < 1980 && !f.eras['70s']) return false;
+  else if (year >= 1980 && year < 1991 && !f.eras['80s']) return false;
+  else if (year >= 1991 && year < 2000 && !f.eras['90s']) return false;
+  else if (year >= 2000 && year < 2010 && !f.eras['00s']) return false;
+  else if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
+  else if (year >= 2020 && !f.eras['20s']) return false;
 
   // Category check — also match if any alsoWon category is active (e.g. Parasite is BP + INT)
   const matchesCategory = f.categories[movie.category] || (movie.alsoWon || []).some(c => f.categories[c]);
@@ -108,10 +114,10 @@ const JOURNEY_TAGLINES = [
   "Somewhere, a film student is crying that you haven't seen this yet.",
   "This is cheaper than therapy and almost as life-changing.",
   "You're not 'not a movie person.' You just haven't found the right one yet.",
-  "If you can binge 8 episodes of reality TV, you can watch one Oscar nominee.",
+  "If you can binge 8 episodes of reality TV, you can watch one canonical film.",
   "Fun fact: every film on this list was better than whatever you watched last Tuesday.",
   "The skip button is for the weak. You are not weak. Probably.",
-  "Imagine telling someone you watched every Oscar nominee. That's the energy we're going for.",
+  "Imagine telling someone you watched the whole canon. That's the energy we're going for.",
   "This film won't watch itself. Although that would be a great Black Mirror episode.",
   "You're building taste. Taste takes time. This is the time.",
   "Your future self will thank you. Your current self might complain. Ignore them.",
@@ -130,9 +136,9 @@ const JOURNEY_TAGLINES = [
   "Your watchlist on Netflix has 200 films. You've watched 3. We're fixing that.",
   "Award-winning cinema > doomscrolling. This is not up for debate.",
   "You pressed 'Begin Your Journey.' The journey includes this film. Keep going.",
-  "Some people climb mountains. You watch Oscar films. Both are valid.",
-  "The Academy spent millions deciding these are the best films. Who are you to argue?",
-  "No one ever said 'I regret watching that Oscar-winning film.' Literally no one.",
+  "Some people climb mountains. You watch canonical films. Both are valid.",
+  "Critics, festivals, and the Academy all agreed these are the best. Who are you to argue?",
+  "No one ever said 'I regret watching that all-time great film.' Literally no one.",
   "If you skip this, the popcorn emoji in your avatar will judge you. 🍿",
   "You've spent more time picking a film than it takes to watch one. Just press play.",
   "Plot twist: the film you least want to watch becomes your favorite. Every time.",
@@ -142,9 +148,9 @@ const JOURNEY_TAGLINES = [
   "You're not watching movies. You're collecting opinions. Very important opinions.",
   "The skip button exists, but so does regret. Choose wisely.",
   "Remember when you said you wanted to watch more 'good' movies? This is that.",
-  "A journey of 399 films begins with a single play button.",
-  "This film has been waiting since its Oscar nomination for you specifically.",
-  "You can't spell 'Oscar' without... actually you can't rearrange those letters into anything. Just watch it.",
+  "A journey of 837 films begins with a single play button.",
+  "This film has been waiting on a list somewhere for you specifically.",
+  "You can't spell 'cinema' without... actually you can. Just watch it.",
   "Your film taste is about to get an upgrade. You're welcome in advance.",
   "Quitting is for people who don't have a cool movie tracking site.",
   "Every film you finish is a flex. Every skip is a fumble.",
@@ -154,7 +160,7 @@ const JOURNEY_TAGLINES = [
   "Film critics watch 300+ films a year. You can handle one today.",
   "Skipping films is like skipping leg day. Everyone notices.",
   "The next 2 hours could change your perspective. Or at least your dinner conversation.",
-  "Oscar nominees are like vegetables. You won't always love them, but they're good for you.",
+  "Canonical films are like vegetables. You won't always love them, but they're good for you.",
   "This film has more awards than your entire DVD collection. Respect.",
   "Entertainment without effort is TikTok. Entertainment with effort is cinema. Choose up.",
   "Fun fact: watching this film counts as personality development.",
@@ -165,7 +171,7 @@ const JOURNEY_TAGLINES = [
   "Your watch history is your autobiography. Make it a good one.",
   "The best films are the ones you almost didn't watch.",
   "Skip now, FOMO later. It's a tale as old as cinema.",
-  "If you finish all 399 films, absolutely nothing happens. But you'll feel incredible.",
+  "If you finish all 837 films, absolutely nothing happens. But you'll feel incredible.",
   "Rome wasn't built in a day. Your film taste won't be either.",
   "The only bad movie night is the one where you didn't press play.",
   "Grab a snack. Dim the lights. Pretend you're at a film festival. You basically are.",
@@ -174,7 +180,7 @@ const JOURNEY_TAGLINES = [
   "Every great director started by watching films they didn't choose. So did you. Just now.",
   "The algorithm mixed genres so you don't get bored. You're welcome.",
   "Your brain after this film: expanded. Your couch: still comfy. Win-win.",
-  "Watching Oscar films is a personality trait. A good one.",
+  "Watching great films is a personality trait. A good one.",
 ];
 
 const LS_PROFILE_KEY = 'oscars_profile_id';
@@ -1042,7 +1048,7 @@ export default function App() {
                   <button className="journey-welcome-close" onClick={() => { setBannerDismissed(true); localStorage.setItem('oscars_banner_dismissed', 'true'); }}>✕</button>
                   <div className="journey-welcome-title">🏆 The Oscars Journey</div>
                   <div className="journey-welcome-text">
-                    We picked {MOVIES.length} Oscar-nominated films and shuffled them so you never watch two similar films back-to-back. Watch each one, rate it, and move on. No overthinking — just press play.
+                    {MOVIES.length} films — every Best Picture nominee since 1970, every International and Animated Feature winner, plus 438 essential non-Oscar must-watches curated across 7 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, festival grand prizes, National Film Registry). Shuffled so you never watch two similar films back-to-back. Watch each one, rate it, and move on.
                   </div>
                 </div>
               )}

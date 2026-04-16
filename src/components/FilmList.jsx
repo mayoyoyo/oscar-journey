@@ -38,7 +38,10 @@ function filmWonAward(movie, key) {
 }
 
 const DEFAULT_FILM_FILTERS = {
-  eras: { '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true },
+  eras: {
+    '1910s': true, '1920s': true, '1930s': true, '1940s': true, '1950s': true, '1960s': true,
+    '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true,
+  },
   categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
@@ -50,6 +53,12 @@ function sortKeyFn(title) {
 }
 
 function eraBucket(year) {
+  if (year < 1920) return '1910s';
+  if (year < 1930) return '1920s';
+  if (year < 1940) return '1930s';
+  if (year < 1950) return '1940s';
+  if (year < 1960) return '1950s';
+  if (year < 1970) return '1960s';
   if (year < 1980) return '70s';
   if (year < 1991) return '80s';
   if (year < 2000) return '90s';
@@ -224,7 +233,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       <p className="film-list-hint">
         {checklistMode
           ? 'Tap any film to mark it as watched. Great for first-timers catching up on what they\'ve already seen.'
-          : `Browse all ${MOVIES.length} films — every Best Picture nominee plus International & Animated Feature winners. Use the filters to narrow down.`}
+          : `Browse all ${MOVIES.length} films — every Best Picture nominee since 1970, every International and Animated Feature winner, plus 438 essential non-Oscar canon films. Use the filters to narrow down.`}
       </p>
 
       <input

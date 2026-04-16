@@ -3,7 +3,10 @@ import { AVATAR_EMOJIS } from '../data/avatars';
 import { GENRE_LABELS } from '../data/movies';
 
 const DEFAULT_FILTERS = {
-  eras: { '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true },
+  eras: {
+    '1910s': true, '1920s': true, '1930s': true, '1940s': true, '1950s': true, '1960s': true,
+    '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true,
+  },
   categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
@@ -16,11 +19,17 @@ const DEFAULT_FILTERS = {
 
 const SMART_LABELS = {
   skipWatched: 'Skip films I\'ve watched',
-  winnersOnly: 'Winners only',
+  winnersOnly: 'Oscar winners only',
   unwatchedByAll: 'Unwatched by everyone',
 };
 
 const ERA_LABELS = {
+  '1910s': '1910s (silent era)',
+  '1920s': '1920s',
+  '1930s': '1930s',
+  '1940s': '1940s',
+  '1950s': '1950s',
+  '1960s': '1960s',
   '70s': '1970s',
   '80s': '1980s',
   '90s': '1990s',

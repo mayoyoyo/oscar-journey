@@ -2027,17 +2027,6 @@ main {
   filter: drop-shadow(0 0 4px rgba(139, 105, 20, 0.4));
 }
 
-/* Bigger, finger-friendly stars on touch devices */
-@media (hover: none) and (pointer: coarse) {
-  .star-picker-stars {
-    gap: 4px;
-    padding: 6px 0;
-    touch-action: none;
-  }
-  .star-container { width: 32px; height: 32px; }
-  .star-svg { width: 32px !important; height: 32px !important; }
-}
-
 /* =====================================================
    STATS TAB
    ===================================================== */
@@ -6361,10 +6350,8 @@ main {
 }
 
 .journey-filters-collapsible {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: rgba(0,0,0,0.12);
-  overflow: hidden;
+  /* No wrapper border/bg — would nest inside the existing .journey-controls
+     box and visually narrow the content. The header alone marks the toggle. */
 }
 .journey-filters-header {
   display: flex;
@@ -6375,14 +6362,13 @@ main {
   border: none;
   color: inherit;
   text-align: left;
-  padding: 10px 12px;
+  padding: 6px 0;
+  margin-bottom: 4px;
   cursor: pointer;
+  border-radius: 6px;
   transition: background 0.15s ease;
 }
 .journey-filters-header:hover { background: rgba(255,255,255,0.02); }
-.journey-filters-collapsible.is-open .journey-filters-header {
-  border-bottom: 1px solid var(--border);
-}
 .journey-filters-arrow {
   color: var(--gold-dim);
   font-size: 0.78rem;
@@ -6398,7 +6384,7 @@ main {
   border-radius: 10px;
   font-weight: 600;
 }
-.journey-filters-body { padding: 10px 12px; }
+.journey-filters-body { padding: 0; }
 
 /* Collapsible filter sections */
 .filter-section {

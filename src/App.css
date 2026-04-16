@@ -1641,33 +1641,21 @@ main {
 }
 .list-search::placeholder { color: var(--cream-dim); }
 
-/* Minimum-tier toggle for ESSENTIAL films in Films tab */
-.film-list-filter-section {
-  margin-bottom: 18px;
-  padding: 14px 16px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-}
-
-.film-list-filter-section-header {
-  display: flex;
+/* Canon depth section body — expanded content inside the collapsible filter */
+.canon-depth-body {
   flex-direction: column;
-  gap: 2px;
-  margin-bottom: 10px;
+  align-items: stretch;
+  padding-left: 18px;
+  padding-right: 2px;
+  gap: 10px;
 }
 
-.film-list-filter-section-header > span:first-child {
-  font-family: var(--font-display);
-  color: var(--gold);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.film-list-filter-section-caption {
+.canon-depth-caption {
+  margin: 0;
   color: var(--cream-dim);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-style: italic;
+  line-height: 1.4;
 }
 
 .canon-depth-toggle {

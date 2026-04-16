@@ -4,7 +4,7 @@ import { RUNTIME_LABELS } from '../utils/runtime';
 
 export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney, syncedWith, onUnsync }) {
   const [syncTarget, setSyncTarget] = useState('');
-  const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, genres: false, runtimes: false });
+  const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, canon: false, genres: false, runtimes: false });
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const currentFilters = {
@@ -136,45 +136,55 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
               {renderSection('eras', 'Eras', 'eras', ERA_LABELS)}
               {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS)}
 
-              {/* Canon depth — mirror of the Films tab control so Journey users can adjust it too */}
-              <div className="film-list-filter-section">
-                <div className="film-list-filter-section-header">
-                  <span>Canon depth</span>
-                  <span className="film-list-filter-section-caption">
-                    minimum number of canon lists a non-Oscar film must appear on
-                  </span>
-                </div>
-                <div className="canon-depth-toggle" role="radiogroup" aria-label="Minimum canon tier">
-                  {[
-                    { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 films' },
-                    { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 films' },
-                    { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 films' },
-                  ].map(opt => (
-                    <button
-                      key={opt.tier}
-                      className={`canon-depth-btn ${currentFilters.minEssentialTier === opt.tier ? 'active' : ''}`}
-                      role="radio"
-                      aria-checked={currentFilters.minEssentialTier === opt.tier}
-                      onClick={() => onFiltersChange({ ...currentFilters, minEssentialTier: opt.tier })}
-                    >
-                      <span className="canon-depth-label">{opt.label}</span>
-                      <span className="canon-depth-sub">{opt.sub}</span>
-                    </button>
-                  ))}
-                </div>
-
-                <button
-                  type="button"
-                  className={`essentials-only-toggle ${currentFilters.essentialsOnly ? 'active' : ''}`}
-                  onClick={() => onFiltersChange({ ...currentFilters, essentialsOnly: !currentFilters.essentialsOnly })}
-                  aria-pressed={currentFilters.essentialsOnly}
-                >
-                  <span className="essentials-only-checkbox">{currentFilters.essentialsOnly ? '\u2713' : ''}</span>
-                  <span className="essentials-only-label">
-                    <strong>Essentials only</strong>
-                    <span className="essentials-only-sub">hide Oscar films — show just the canon at the chosen tier</span>
-                  </span>
+              {/* Canon depth — collapsible section matching the other filter styles */}
+              <div className="filter-section">
+                <button className="filter-section-toggle" onClick={() => toggleSection('canon')}>
+                  <span className="filter-section-arrow">{openSections.canon ? '▾' : '▸'}</span>
+                  <span className="filter-section-label">Canon depth</span>
+                  {(currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier || currentFilters.essentialsOnly) && (
+                    <span className="filter-section-count">
+                      {currentFilters.essentialsOnly ? 'only' : ''}{currentFilters.essentialsOnly && currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier ? ' · ' : ''}{currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier ? `≥${currentFilters.minEssentialTier}` : ''}
+                    </span>
+                  )}
                 </button>
+                {openSections.canon && (
+                  <div className="filter-checklist canon-depth-body">
+                    <p className="canon-depth-caption">
+                      Minimum number of canon lists a non-Oscar film must appear on.
+                    </p>
+                    <div className="canon-depth-toggle" role="radiogroup" aria-label="Minimum canon tier">
+                      {[
+                        { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 films' },
+                        { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 films' },
+                        { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 films' },
+                      ].map(opt => (
+                        <button
+                          key={opt.tier}
+                          className={`canon-depth-btn ${currentFilters.minEssentialTier === opt.tier ? 'active' : ''}`}
+                          role="radio"
+                          aria-checked={currentFilters.minEssentialTier === opt.tier}
+                          onClick={() => onFiltersChange({ ...currentFilters, minEssentialTier: opt.tier })}
+                        >
+                          <span className="canon-depth-label">{opt.label}</span>
+                          <span className="canon-depth-sub">{opt.sub}</span>
+                        </button>
+                      ))}
+                    </div>
+
+                    <button
+                      type="button"
+                      className={`essentials-only-toggle ${currentFilters.essentialsOnly ? 'active' : ''}`}
+                      onClick={() => onFiltersChange({ ...currentFilters, essentialsOnly: !currentFilters.essentialsOnly })}
+                      aria-pressed={currentFilters.essentialsOnly}
+                    >
+                      <span className="essentials-only-checkbox">{currentFilters.essentialsOnly ? '\u2713' : ''}</span>
+                      <span className="essentials-only-label">
+                        <strong>Essentials only</strong>
+                        <span className="essentials-only-sub">hide Oscar films — show just the canon at the chosen tier</span>
+                      </span>
+                    </button>
+                  </div>
+                )}
               </div>
 
               {renderSection('genres', 'Genres', 'genres', GENRE_LABELS)}

@@ -131,7 +131,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !q || m.title.toLowerCase().includes(q))
       .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
       .filter(m => filters.eras[eraBucket(m.year)])
-      .filter(m => filters.categories[m.category])
+      .filter(m => filters.categories[m.category] || (m.alsoWon || []).some(c => filters.categories[c]))
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
         const bucket = runtimeBucket(runtimeMap.get(m.id));

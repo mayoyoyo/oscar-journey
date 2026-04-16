@@ -238,7 +238,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             )}
 
             {(() => {
-              const totalOscars = (movie.awards?.length || 0) + (movie.won ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+              const totalOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
               if (totalOscars === 0) return null;
               return (
               <div className="film-detail-awards">
@@ -260,7 +260,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                     );
                     return (
                       <>
-                        {movie.won && <SpeechAward label="Best Picture" query="best picture" />}
+                        {movie.won && movie.category === 'BP' && <SpeechAward label="Best Picture" query="best picture" />}
                         {movie.category === 'ANIM' && <SpeechAward label="Best Animated Feature" query="best animated feature" />}
                         {movie.category === 'INT' && <SpeechAward label="Best International Feature Film" query="best international feature" />}
                         {movie.alsoWon && movie.alsoWon.map((cat, i) => {

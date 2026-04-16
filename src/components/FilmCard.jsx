@@ -180,13 +180,13 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         )}
 
         {(() => {
-          const awardsCount = (movie.awards?.length || 0) + (movie.won ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+          const awardsCount = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
           if (awardsCount === 0) return null;
           return (
           <div className="film-awards-compact">
             <span className="film-awards-count">🏆 {awardsCount} Oscar{awardsCount !== 1 ? 's' : ''}</span>
             <span className="film-awards-highlights">
-              {movie.won && <span className="film-award-chip">Best Picture</span>}
+              {movie.won && movie.category === 'BP' && <span className="film-award-chip">Best Picture</span>}
               {movie.category === 'ANIM' && <span className="film-award-chip">Animated Feature</span>}
               {movie.category === 'INT' && <span className="film-award-chip">International Feature</span>}
               {movie.alsoWon && movie.alsoWon.map((cat, i) => (

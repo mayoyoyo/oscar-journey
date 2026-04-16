@@ -433,7 +433,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
                 onClick={() => onOpenDetail && onOpenDetail(movie)}>
                 <div className="film-tile-poster-wrap">
                   <FilmTilePoster movie={movie} />
-                  {movie.won && <span className="film-tile-winner">Winner</span>}
+                  {movie.won && movie.category === 'BP' && <span className="film-tile-winner">Winner</span>}
                 </div>
                 <div className="film-tile-info">
                   <div className="film-tile-title">{movie.title}</div>

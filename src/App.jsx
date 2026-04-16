@@ -59,8 +59,9 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
   if (year >= 2020 && !f.eras['20s']) return false;
 
-  // Category check
-  if (!f.categories[movie.category]) return false;
+  // Category check — also match if any alsoWon category is active (e.g. Parasite is BP + INT)
+  const matchesCategory = f.categories[movie.category] || (movie.alsoWon || []).some(c => f.categories[c]);
+  if (!matchesCategory) return false;
 
   // Genre check
   if (f.genres[movie.genre] === false) return false;

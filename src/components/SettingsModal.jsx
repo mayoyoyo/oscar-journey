@@ -182,11 +182,18 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.4.4</span>
+            <span className="settings-version-num">v2.4.5</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.4.5</strong> — Daily Oscar watched badge & winner-label fixes</p>
+              <ul>
+                <li>Daily Oscar — green "✓ Watched" pill on the poster when the mystery movie is already in your watched list</li>
+                <li>Fixed International and Animated Feature winners being labeled "Best Picture" everywhere (film cards, detail modal, profile tiles, badges)</li>
+                <li>Fixed Oscar count being inflated by 1 for International and Animated winners (e.g. A Separation now shows 1 Oscar instead of 2)</li>
+                <li>Films filtered by International or Animated now also include Best Picture nominees that won in those categories (e.g. Parasite, Life Is Beautiful, Drive My Car)</li>
+              </ul>
               <p><strong>v2.4.4</strong> — Journey polish round 2</p>
               <ul>
                 <li>Refined typography across journey action buttons (Mark as Watched, Watched, Skip, Next Film) — uppercase with wider tracking, no more mixed-case generic feel</li>

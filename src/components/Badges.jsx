@@ -62,7 +62,7 @@ export function MovieBadges({ movie, small = false }) {
   if (small) {
     return (
       <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'wrap' }}>
-        {movie.won && <BadgeWinnerSm />}
+        {movie.won && movie.category === 'BP' && <BadgeWinnerSm />}
         {movie.category === 'INT' && <BadgeIntSm />}
         {movie.category === 'ANIM' && <BadgeAnimSm />}
         {movie.category === 'BP' && <BadgeBpSm />}
@@ -75,7 +75,7 @@ export function MovieBadges({ movie, small = false }) {
 
   return (
     <div className="badges">
-      {movie.won && <BadgeWinner movie={movie} />}
+      {movie.won && movie.category === 'BP' && <BadgeWinner movie={movie} />}
       <BadgeGenre genre={movie.genre} />
       {movie.category === 'INT' && <BadgeInt />}
       {movie.category === 'ANIM' && <BadgeAnim />}

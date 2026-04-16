@@ -11,13 +11,13 @@ const DAILY_POOL = MOVIES.filter(m => QUOTES[m.id]).map(m => m.id);
 
 function getDailyMovieId() {
   const today = new Date();
-  const dateStr = `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
-  let hash = 0;
-  for (let i = 0; i < dateStr.length; i++) {
-    hash = ((hash << 5) - hash) + dateStr.charCodeAt(i);
-    hash |= 0;
-  }
-  return DAILY_POOL[Math.abs(hash) % DAILY_POOL.length];
+  const days = Math.floor(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) / 86400000);
+  // Murmur3-style bit mixer — sequential days produce uncorrelated outputs
+  let x = days >>> 0;
+  x = Math.imul(x ^ (x >>> 16), 0x85ebca6b) >>> 0;
+  x = Math.imul(x ^ (x >>> 13), 0xc2b2ae35) >>> 0;
+  x = (x ^ (x >>> 16)) >>> 0;
+  return DAILY_POOL[x % DAILY_POOL.length];
 }
 
 function getTodayKey() {

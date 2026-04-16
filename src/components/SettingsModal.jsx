@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { AVATAR_EMOJIS } from '../data/avatars';
+import { GENRE_LABELS } from '../data/movies';
 
 const DEFAULT_FILTERS = {
-  eras: { '70s80s': true, '90s': true, '00s': true, '10s': true, '20s': true },
+  eras: { '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true },
   categories: { BP: true, INT: true, ANIM: true },
-  tones: {
-    drama: true, thriller: true, comedy: true, scifi: true,
-    war: true, biopic: true, musical: true, action: true, animation: true,
-  },
+  genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
+  runtimes: { short: true, medium: true, long: true },
   smart: {
     skipWatched: false,
     winnersOnly: false,
@@ -22,7 +21,8 @@ const SMART_LABELS = {
 };
 
 const ERA_LABELS = {
-  '70s80s': '1970s\u20131980s',
+  '70s': '1970s',
+  '80s': '1980s',
   '90s': '1990s',
   '00s': '2000s',
   '10s': '2010s',
@@ -35,19 +35,7 @@ const CATEGORY_LABELS = {
   ANIM: 'Animated',
 };
 
-const TONE_LABELS = {
-  drama: 'Drama',
-  thriller: 'Thriller / Suspense',
-  comedy: 'Comedy / Light Drama',
-  scifi: 'Sci-Fi / Fantasy',
-  war: 'War',
-  biopic: 'Biopic',
-  musical: 'Musical',
-  action: 'Action / Adventure',
-  animation: 'Animation',
-};
-
-export { DEFAULT_FILTERS, ERA_LABELS, TONE_LABELS, CATEGORY_LABELS, SMART_LABELS };
+export { DEFAULT_FILTERS, ERA_LABELS, GENRE_LABELS, CATEGORY_LABELS, SMART_LABELS };
 
 export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, privateProfile, onPrivateProfileChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);
@@ -194,11 +182,17 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.3.3</span>
+            <span className="settings-version-num">v2.4.0</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.4.0</strong> — Filters & Daily Oscar fix</p>
+              <ul>
+                <li>Films tab — new filter panel: Eras, Categories, Genres, Runtime, and Wins (filter by what Oscars a film won)</li>
+                <li>Runtime filter added to Journey</li>
+                <li>Daily Oscar fix — picks no longer cluster on the same year</li>
+              </ul>
               <p><strong>v2.3.3</strong> — Smarter journey shuffle</p>
               <ul>
                 <li>New diversity algorithm — no more back-to-back films with the same genre or decade</li>

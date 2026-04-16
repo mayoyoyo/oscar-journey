@@ -13,7 +13,7 @@ export default function StartScreen({ onStart }) {
         <span className="big-trophy">🏆</span>
         <h1>The Oscars Journey</h1>
         <p>
-          Stop scrolling Netflix for 45 minutes and watching nothing. We picked {MOVIES.length} Oscar-nominated films and put them in a random order so you don't have to think — just press play.
+          Stop scrolling Netflix for 45 minutes and watching nothing. We picked every Best Picture nominee plus every International & Animated Feature winner — {MOVIES.length} films total — and put them in a random order so you don't have to think. Just press play.
         </p>
         <p style={{ fontSize: '0.9rem', color: 'var(--cream-dim)', marginBottom: '6px' }}>
           The journey mixes genres, decades, and categories so you never watch two similar films back-to-back. Rate every film, battle them head-to-head, and see how your taste compares with friends.

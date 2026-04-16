@@ -12,7 +12,7 @@ export default function InfoModal({ onClose }) {
         <div className="info-hero">
           <span className="info-hero-icon">🏆</span>
           <h2 className="info-hero-title">The Oscars Journey</h2>
-          <p className="info-hero-sub">Your guide to {MOVIES.length} Oscar-nominated films</p>
+          <p className="info-hero-sub">Your guide to {MOVIES.length} essential Oscar films</p>
         </div>
 
         <div className="info-section">
@@ -27,7 +27,7 @@ export default function InfoModal({ onClose }) {
           <div className="info-section-icon">✨</div>
           <div>
             <h3>The Solution</h3>
-            <p>We took <strong>{MOVIES.length} Oscar-nominated films</strong> from 1970 to 2025 and shuffled them into a randomized journey. No more choosing — just press play.</p>
+            <p>We took every <strong>Best Picture nominee</strong> from 1970 to 2025, plus every <strong>International Feature</strong> and <strong>Animated Feature</strong> winner — <strong>{MOVIES.length} films</strong> total — and shuffled them into a randomized journey. No more choosing, just press play.</p>
           </div>
         </div>
 

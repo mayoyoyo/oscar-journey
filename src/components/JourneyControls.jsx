@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, TONE_LABELS, SMART_LABELS } from './SettingsModal';
+import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, GENRE_LABELS, SMART_LABELS } from './SettingsModal';
+import { RUNTIME_LABELS } from '../utils/runtime';
 
 export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney, syncedWith, onUnsync }) {
   const [syncTarget, setSyncTarget] = useState('');
-  const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, tones: false });
+  const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, genres: false, runtimes: false });
 
   const currentFilters = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters?.eras || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) },
-    tones: { ...DEFAULT_FILTERS.tones, ...(filters?.tones || {}) },
+    genres: { ...DEFAULT_FILTERS.genres, ...(filters?.genres || {}) },
+    runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters?.runtimes || {}) },
     smart: { ...DEFAULT_FILTERS.smart, ...(filters?.smart || {}) },
   };
 
@@ -98,7 +100,8 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
           {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
           {renderSection('eras', 'Eras', 'eras', ERA_LABELS)}
           {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS)}
-          {renderSection('tones', 'Genres', 'tones', TONE_LABELS)}
+          {renderSection('genres', 'Genres', 'genres', GENRE_LABELS)}
+          {renderSection('runtimes', 'Runtime', 'runtimes', RUNTIME_LABELS)}
         </div>
 
         <div className="journey-controls-right">

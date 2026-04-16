@@ -29,25 +29,13 @@ import CardEarnedBanner from './components/CardEarnedBanner';
 import PackOpening from './components/PackOpening';
 import { getTakenCards, registerCard, releaseCard } from './utils/cardRegistry';
 import { generatePack, getMaxWallet } from './utils/cards';
+import { readCachedRuntime, runtimeBucket } from './utils/runtime';
 import WhatsNewAnnouncement from './components/WhatsNewAnnouncement';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
 function movieKey(movie) {
   return movie.id;
 }
-
-// Map genre codes to tone filter keys
-const GENRE_TO_TONE = {
-  D: 'drama', H: 'drama', I: 'drama',
-  T: 'thriller', X: 'thriller',
-  C: 'comedy', R: 'comedy',
-  S: 'scifi',
-  W: 'war',
-  B: 'biopic',
-  M: 'musical',
-  N: 'action',
-  A: 'animation',
-};
 
 // Check if a movie passes the current filters
 // smartContext: { watchedSet, allProfiles, currentProfileId }
@@ -57,13 +45,15 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   const f = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters.eras || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters.categories || {}) },
-    tones: { ...DEFAULT_FILTERS.tones, ...(filters.tones || {}) },
+    genres: { ...DEFAULT_FILTERS.genres, ...(filters.genres || {}) },
+    runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters.runtimes || {}) },
     smart: { ...DEFAULT_FILTERS.smart, ...(filters.smart || {}) },
   };
 
   // Era check
   const year = movie.year;
-  if (year < 1991 && !f.eras['70s80s']) return false;
+  if (year < 1980 && !f.eras['70s']) return false;
+  if (year >= 1980 && year < 1991 && !f.eras['80s']) return false;
   if (year >= 1991 && year < 2000 && !f.eras['90s']) return false;
   if (year >= 2000 && year < 2010 && !f.eras['00s']) return false;
   if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
@@ -72,9 +62,13 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   // Category check
   if (!f.categories[movie.category]) return false;
 
-  // Tone/genre check
-  const toneKey = GENRE_TO_TONE[movie.genre];
-  if (toneKey && !f.tones[toneKey]) return false;
+  // Genre check
+  if (f.genres[movie.genre] === false) return false;
+
+  // Runtime check — only filter when runtime is known. Unknown runtimes always pass so the
+  // filter is non-destructive while OMDB data is still being fetched in the background.
+  const rb = runtimeBucket(readCachedRuntime(movie));
+  if (rb && !f.runtimes[rb]) return false;
 
   // Smart filters
   if (smartContext) {

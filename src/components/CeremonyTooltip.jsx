@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MOVIES } from '../data/movies';
+import TierPips from './TierPips';
 
 function ordinal(n) {
   const s = ['th','st','nd','rd'];
@@ -11,30 +12,33 @@ const CATEGORY_ORDER = [
   { key: 'BP', label: 'Best Picture' },
   { key: 'INT', label: 'Best International Feature Film' },
   { key: 'ANIM', label: 'Best Animated Feature' },
+  { key: 'ESSENTIAL', label: 'Essential — non-Oscar canon' },
 ];
 
 export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpenDetail }) {
   const [showModal, setShowModal] = useState(false);
 
-  // ESSENTIAL / canon films have no Oscar ceremony — render a simple year line instead.
-  if (ceremony == null) {
-    return <div className="ceremony-line ceremony-line-nooscar">Canon film · {year}</div>;
-  }
+  // Two modes:
+  //  - Oscar film (ceremony provided): modal groups films from that specific Academy Awards
+  //    ceremony.
+  //  - Essential film (ceremony is null): modal groups all films released in the same year,
+  //    spanning Oscar categories AND essentials. Same UX either way.
+  const isCeremonyMode = ceremony != null;
 
-  const sameYear = MOVIES.filter(m => m.ceremony === ceremony);
+  // Pick the sibling set: either films that shared the ceremony, or all films from the same year.
+  const siblings = isCeremonyMode
+    ? MOVIES.filter(m => m.ceremony === ceremony)
+    : MOVIES.filter(m => m.year === year);
 
-  // Group by category, including alsoWon cross-listings
+  // Group by category (including alsoWon cross-listings for Oscar films).
   const grouped = {};
-  for (const m of sameYear) {
-    // Primary category
+  for (const m of siblings) {
     if (!grouped[m.category]) grouped[m.category] = [];
     grouped[m.category].push({ ...m, wonInCategory: m.won });
 
-    // Also show in alsoWon categories (as winner)
     if (m.alsoWon) {
       for (const cat of m.alsoWon) {
         if (!grouped[cat]) grouped[cat] = [];
-        // Only add if not already there by primary category
         if (m.category !== cat) {
           grouped[cat].push({ ...m, wonInCategory: true });
         }
@@ -42,21 +46,36 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
     }
   }
 
-  // Sort each group: winners first, then alphabetical
+  // Sort each group: winners first (for Oscar cats), then tier descending (for Essentials),
+  // then alphabetical fallback.
   for (const cat of Object.keys(grouped)) {
     grouped[cat].sort((a, b) => {
       if (a.wonInCategory && !b.wonInCategory) return -1;
       if (!a.wonInCategory && b.wonInCategory) return 1;
+      const tDiff = (b.tier || 0) - (a.tier || 0);
+      if (tDiff !== 0) return tDiff;
       return a.title.localeCompare(b.title);
     });
   }
+
+  const lineText = isCeremonyMode
+    ? `${ordinal(ceremony)} Academy Awards · ${year}`
+    : `Canon film · ${year} — see films of this year`;
+
+  const modalTitle = isCeremonyMode
+    ? `${ordinal(ceremony)} Academy Awards`
+    : `Films of ${year}`;
+
+  const modalSubtitle = isCeremonyMode
+    ? `Honoring films of ${year}`
+    : `Every Oscar nominee and canon film from ${year}`;
 
   return (
     <>
       <div className="ceremony-line ceremony-line-clickable"
         onClick={() => setShowModal(true)}
       >
-        {ordinal(ceremony)} Academy Awards · {year}
+        {lineText}
       </div>
 
       {showModal && (
@@ -66,9 +85,9 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
           <div className="modal ceremony-modal">
             <button className="film-detail-close" onClick={() => setShowModal(false)}>✕</button>
             <h2 className="ceremony-modal-title">
-              {ordinal(ceremony)} Academy Awards
+              {modalTitle}
             </h2>
-            <p className="ceremony-modal-year">Honoring films of {year}</p>
+            <p className="ceremony-modal-year">{modalSubtitle}</p>
 
             {CATEGORY_ORDER.map(({ key, label }) => {
               const films = grouped[key];
@@ -87,14 +106,16 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
                       }}
                     >
                       <span className="ceremony-modal-film-title">
-                        {m.wonInCategory && <span className="ceremony-modal-trophy">🏆</span>}
+                        {m.wonInCategory && m.category !== 'ESSENTIAL' && <span className="ceremony-modal-trophy">🏆</span>}
                         {m.title}
                       </span>
-                      {m.awards && (
+                      {m.category === 'ESSENTIAL' ? (
+                        <TierPips movie={m} variant="compact" />
+                      ) : m.awards ? (
                         <span className="ceremony-modal-award-count">
                           🏆{m.awards.length + (m.wonInCategory ? 1 : 0)}
                         </span>
-                      )}
+                      ) : null}
                       <span className="ceremony-modal-film-year">{m.year}</span>
                     </div>
                   ))}

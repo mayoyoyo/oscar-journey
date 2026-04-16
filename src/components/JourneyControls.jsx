@@ -5,6 +5,7 @@ import { RUNTIME_LABELS } from '../utils/runtime';
 export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney, syncedWith, onUnsync }) {
   const [syncTarget, setSyncTarget] = useState('');
   const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, genres: false, runtimes: false });
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const currentFilters = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters?.eras || {}) },
@@ -13,6 +14,15 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters?.runtimes || {}) },
     smart: { ...DEFAULT_FILTERS.smart, ...(filters?.smart || {}) },
   };
+
+  // Total count of "non-default" filter selections — shown in the collapsed header.
+  const activeFilterCount = (() => {
+    const baseSections = ['eras', 'categories', 'genres', 'runtimes'];
+    let n = 0;
+    for (const s of baseSections) n += Object.values(currentFilters[s]).filter(v => !v).length;
+    n += Object.values(currentFilters.smart).filter(v => v).length;
+    return n;
+  })();
 
   const toggleFilter = (section, key) => {
     const updated = {
@@ -90,18 +100,26 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       )}
 
       <div className="journey-controls-row">
-        <div className="journey-controls-left">
-          <span className="journey-controls-header">
-            Filters
+        <div className={`journey-controls-left journey-filters-collapsible ${filtersOpen ? 'is-open' : 'is-closed'}`}>
+          <button className="journey-filters-header" onClick={() => setFiltersOpen(o => !o)}>
+            <span className="journey-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
+            <span className="journey-controls-header" style={{ margin: 0 }}>Filters</span>
             {eligibleCount < totalCount && (
               <span className="journey-filter-count">{eligibleCount}/{totalCount}</span>
             )}
-          </span>
-          {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
-          {renderSection('eras', 'Eras', 'eras', ERA_LABELS)}
-          {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS)}
-          {renderSection('genres', 'Genres', 'genres', GENRE_LABELS)}
-          {renderSection('runtimes', 'Runtime', 'runtimes', RUNTIME_LABELS)}
+            {activeFilterCount > 0 && (
+              <span className="journey-filters-active">{activeFilterCount} active</span>
+            )}
+          </button>
+          {filtersOpen && (
+            <div className="journey-filters-body">
+              {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
+              {renderSection('eras', 'Eras', 'eras', ERA_LABELS)}
+              {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS)}
+              {renderSection('genres', 'Genres', 'genres', GENRE_LABELS)}
+              {renderSection('runtimes', 'Runtime', 'runtimes', RUNTIME_LABELS)}
+            </div>
+          )}
         </div>
 
         <div className="journey-controls-right">

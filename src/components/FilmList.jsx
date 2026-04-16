@@ -64,6 +64,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   const [checklistMode, setChecklistMode] = useState(false);
   const [filters, setFilters] = useState(DEFAULT_FILM_FILTERS);
   const [openSections, setOpenSections] = useState({ eras: false, categories: false, genres: false, runtimes: false, wins: false });
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [runtimeTick, setRuntimeTick] = useState(0);
   const [prefetchDone, setPrefetchDone] = useState(false);
 
@@ -235,38 +236,50 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         onChange={(e) => setQuery(e.target.value)}
       />
 
-      <div className="film-list-filters">
-        <div className="film-list-filters-header">
+      <div className={`film-list-filters ${filtersOpen ? 'is-open' : 'is-closed'}`}>
+        <button className="film-list-filters-header" onClick={() => setFiltersOpen(o => !o)}>
+          <span className="film-list-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
           <span className="journey-controls-header">Filters</span>
           {activeFilterCount > 0 && (
-            <button className="film-list-filter-reset" onClick={resetFilters}>Reset</button>
+            <span className="film-list-filters-count">{activeFilterCount} active</span>
           )}
-        </div>
+          {filtersOpen && activeFilterCount > 0 && (
+            <span
+              className="film-list-filter-reset"
+              role="button"
+              onClick={(e) => { e.stopPropagation(); resetFilters(); }}
+            >Reset</span>
+          )}
+        </button>
 
-        <div className="film-list-mode-toggles">
-          <button
-            className={`film-list-toggle ${watchedOnly ? 'active' : ''}`}
-            onClick={() => setWatchedOnly(w => !w)}
-          >
-            {watchedOnly ? '✓ Watched only' : 'Watched only'}
-          </button>
-          <button
-            className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
-            onClick={() => setChecklistMode(c => !c)}
-          >
-            {checklistMode ? '✓ Checklist mode' : 'Checklist mode'}
-          </button>
-        </div>
+        {filtersOpen && (
+          <div className="film-list-filters-body">
+            <div className="film-list-mode-toggles">
+              <button
+                className={`film-list-toggle ${watchedOnly ? 'active' : ''}`}
+                onClick={() => setWatchedOnly(w => !w)}
+              >
+                {watchedOnly ? '✓ Watched only' : 'Watched only'}
+              </button>
+              <button
+                className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
+                onClick={() => setChecklistMode(c => !c)}
+              >
+                {checklistMode ? '✓ Checklist mode' : 'Checklist mode'}
+              </button>
+            </div>
 
-        {renderSection('Eras', 'eras', ERA_LABELS)}
-        {renderSection('Categories', 'categories', CATEGORY_LABELS)}
-        {renderSection('Genres', 'genres', GENRE_LABELS)}
-        {renderSection('Runtime', 'runtimes', RUNTIME_LABELS, runtimeSuffixes)}
-        {renderSection('Oscars Won', 'wins', WIN_LABELS, winSuffixes)}
+            {renderSection('Eras', 'eras', ERA_LABELS)}
+            {renderSection('Categories', 'categories', CATEGORY_LABELS)}
+            {renderSection('Genres', 'genres', GENRE_LABELS)}
+            {renderSection('Runtime', 'runtimes', RUNTIME_LABELS, runtimeSuffixes)}
+            {renderSection('Oscars Won', 'wins', WIN_LABELS, winSuffixes)}
 
-        {runtimeLoading && (
-          <div className="film-list-runtime-status">
-            Loading runtimes… {totalKnownRuntime}/{MOVIES.length} films
+            {runtimeLoading && (
+              <div className="film-list-runtime-status">
+                Loading runtimes… {totalKnownRuntime}/{MOVIES.length} films
+              </div>
+            )}
           </div>
         )}
       </div>

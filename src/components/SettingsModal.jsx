@@ -182,11 +182,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.4.1</span>
+            <span className="settings-version-num">v2.4.2</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.4.2</strong> — Collapsible filter panels</p>
+              <ul>
+                <li>Filter panels in both Films and Journey now collapse by default — active filter count shown in the header so you can see at a glance whether anything's narrowing your view</li>
+                <li>Renamed "Wins" filter to "Oscars Won" for clarity</li>
+              </ul>
               <p><strong>v2.4.1</strong> — Modal polish & runtime fixes</p>
               <ul>
                 <li>Best Picture, Animated Feature, and International Feature wins in the film modal now link to acceptance speech searches (matching the other major awards)</li>

@@ -1501,16 +1501,43 @@ main {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 12px 14px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 .film-list-filters-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  gap: 8px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-align: left;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.film-list-filters.is-open .film-list-filters-header {
+  border-bottom: 1px solid var(--border);
+}
+.film-list-filters-header:hover { background: rgba(255,255,255,0.02); }
+.film-list-filters-arrow {
+  color: var(--gold-dim);
+  font-size: 0.78rem;
+  width: 12px;
+  display: inline-block;
+}
+.film-list-filters-count {
+  margin-left: 4px;
+  font-size: 0.7rem;
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.12);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
 }
 .film-list-filter-reset {
+  margin-left: auto;
   background: transparent;
   border: 1px solid var(--border);
   color: var(--cream-dim);
@@ -1524,6 +1551,7 @@ main {
   border-color: var(--gold);
   color: var(--cream);
 }
+.film-list-filters-body { padding: 12px 14px; }
 .film-list-mode-toggles {
   display: flex;
   gap: 8px;
@@ -6311,6 +6339,46 @@ main {
   padding: 1px 8px;
   border-radius: 10px;
 }
+
+.journey-filters-collapsible {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+.journey-filters-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-align: left;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.journey-filters-header:hover { background: rgba(255,255,255,0.02); }
+.journey-filters-collapsible.is-open .journey-filters-header {
+  border-bottom: 1px solid var(--border);
+}
+.journey-filters-arrow {
+  color: var(--gold-dim);
+  font-size: 0.78rem;
+  width: 12px;
+  display: inline-block;
+}
+.journey-filters-active {
+  margin-left: 4px;
+  font-size: 0.7rem;
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.12);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.journey-filters-body { padding: 10px 12px; }
 
 /* Collapsible filter sections */
 .filter-section {

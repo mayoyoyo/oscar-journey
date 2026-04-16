@@ -523,6 +523,32 @@ export default function App() {
     setCurrentTaglineIdx(Math.floor(Math.random() * JOURNEY_TAGLINES.length));
   }, [currentIdx]);
 
+  // Canon focus: TierPips dispatches a global event when the user clicks "Focus on Tier ≥ N"
+  // in the pip detail modal. We catch it here and update the profile filters accordingly.
+  useEffect(() => {
+    const handler = (e) => {
+      const tier = e?.detail?.tier;
+      if (!tier) return;
+      setProfile(prev => {
+        if (!prev) return prev;
+        const currentFilters = prev.filters || {};
+        const newFilters = {
+          ...currentFilters,
+          minEssentialTier: tier,
+          essentialsOnly: true,
+        };
+        firebaseSave('filters', newFilters);
+        return { ...prev, filters: newFilters };
+      });
+      // Take the user back to the Journey tab so they see the focus take effect.
+      setActiveTab('journey');
+      // Also close any open detail modal so the change is visible.
+      setDetailMovie(null);
+    };
+    window.addEventListener('canon-focus-tier', handler);
+    return () => window.removeEventListener('canon-focus-tier', handler);
+  }, [firebaseSave]);
+
   // Can advance if current film is watched AND at least one rater has rated it
   const currentRatingKeyVal = currentMovie ? ratingKey(currentMovie) : null;
   const currentRatings = currentRatingKeyVal ? ratings[currentRatingKeyVal] : null;

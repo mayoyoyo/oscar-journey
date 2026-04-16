@@ -1,3 +1,5 @@
+import { RUNTIME_OVERRIDES } from './runtimeOverrides';
+
 const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238'];
 let currentKeyIndex = 0;
 const CACHE_PREFIX = 'oscars_';
@@ -21,12 +23,28 @@ const POSTER_OVERRIDES = {
 // Title overrides for movies that don't match OMDB's naming
 const OMDB_TITLE_OVERRIDES = {
   'Birdman': 'Birdman or The Unexpected Virtue of Ignorance',
+  'Cries and Whispers': 'Cries & Whispers',
 };
 
 // Year overrides for movies where our year doesn't match OMDB
 const OMDB_YEAR_OVERRIDES = {
   'Il Postino': 1994,
+  'The Emigrants': 1971,
+  'Cries and Whispers': 1972,
+  'Tess': 1979,
+  'A Room with a View': 1985,
+  'Life Is Beautiful': 1997,
+  'Spirited Away': 2001,
+  'The Hurt Locker': 2008,
+  'Judas and the Black Messiah': 2021,
+  'Sound of Metal': 2019,
 };
+
+function applyRuntimeOverride(movie, runtime) {
+  const o = RUNTIME_OVERRIDES[movie.id];
+  if (runtime || o == null) return runtime;
+  return `${o} min`;
+}
 
 // Clean title for better OMDb matching
 function cleanTitle(title) {
@@ -53,12 +71,13 @@ export async function fetchOmdbData(movie) {
     const anyRateLimited = allKeys.some(k => localStorage.getItem(k) === 'RATE_LIMITED');
     const posterMissing = localStorage.getItem(posterKey) === NOT_FOUND;
     if (!anyRateLimited && !posterMissing) {
+      const cachedRuntime = localStorage.getItem(runtimeKey) === NOT_FOUND ? null : localStorage.getItem(runtimeKey);
       return {
         poster:   manualPoster || localStorage.getItem(posterKey),
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
-        runtime:  localStorage.getItem(runtimeKey)  === NOT_FOUND ? null : localStorage.getItem(runtimeKey),
+        runtime:  applyRuntimeOverride(movie, cachedRuntime),
       };
     }
   }
@@ -90,12 +109,13 @@ export async function fetchOmdbData(movie) {
 
     // All keys rate limited — return existing cache without saving failures
     if (data.rateLimited) {
+      const cachedRuntime = localStorage.getItem(runtimeKey) === NOT_FOUND ? null : localStorage.getItem(runtimeKey);
       return {
         poster:   manualPoster || (localStorage.getItem(posterKey) === NOT_FOUND ? null : localStorage.getItem(posterKey)),
         plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
-        runtime:  localStorage.getItem(runtimeKey)  === NOT_FOUND ? null : localStorage.getItem(runtimeKey),
+        runtime:  applyRuntimeOverride(movie, cachedRuntime),
       };
     }
 
@@ -109,21 +129,21 @@ export async function fetchOmdbData(movie) {
       }
 
       if (data && data.Response !== 'False') {
-        return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey, manualPoster);
+        return storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey, runtimeKey, manualPoster);
       }
 
       storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey);
-      return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: null };
+      return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: applyRuntimeOverride(movie, null) };
     }
 
-    return storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
+    return storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
   } catch (e) {
     // Network error — don't cache, will retry next time
-    return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: null };
+    return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: applyRuntimeOverride(movie, null) };
   }
 }
 
-function storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtimeKey, manualPoster) {
+function storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey, runtimeKey, manualPoster) {
   const poster   = manualPoster || (data.Poster && data.Poster !== 'N/A' ? data.Poster : null);
   const plot     = data.Plot   && data.Plot   !== 'N/A' ? data.Plot   : null;
   const rating   = data.imdbRating && data.imdbRating !== 'N/A' ? data.imdbRating : null;
@@ -135,7 +155,7 @@ function storeAndReturn(data, posterKey, plotKey, ratingKey, directorKey, runtim
   localStorage.setItem(directorKey, director || NOT_FOUND);
   localStorage.setItem(runtimeKey,  runtime  || NOT_FOUND);
 
-  return { poster, plot, rating, director, runtime };
+  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime) };
 }
 
 function storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey) {

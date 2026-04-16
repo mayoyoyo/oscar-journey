@@ -65,10 +65,12 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   const [filters, setFilters] = useState(DEFAULT_FILM_FILTERS);
   const [openSections, setOpenSections] = useState({ eras: false, categories: false, genres: false, runtimes: false, wins: false });
   const [runtimeTick, setRuntimeTick] = useState(0);
+  const [prefetchDone, setPrefetchDone] = useState(false);
 
   // Kick off background prefetch of runtime data on mount (no-op if already started elsewhere)
   useEffect(() => {
-    prefetchRuntimes(MOVIES, () => setRuntimeTick(t => t + 1));
+    prefetchRuntimes(MOVIES, () => setRuntimeTick(t => t + 1))
+      .then(() => setPrefetchDone(true));
   }, []);
 
   // Build a runtime map; recomputes as prefetch completes batches
@@ -214,8 +216,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     long: `(${runtimeCounts.long})`,
   };
 
-  const unknownCount = MOVIES.length - totalKnownRuntime;
-  const runtimeLoading = unknownCount > 0;
+  const runtimeLoading = !prefetchDone;
 
   return (
     <div className="film-list-section">

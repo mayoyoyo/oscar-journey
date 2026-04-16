@@ -97,10 +97,17 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   );
 
   const toggleFilter = (section, key) => {
-    setFilters(prev => ({
-      ...prev,
-      [section]: { ...prev[section], [key]: !prev[section][key] },
-    }));
+    setFilters(prev => {
+      const nextSection = { ...prev[section], [key]: !prev[section][key] };
+      // "Wins" has inverted semantics (default all OFF = show all), so empty is valid.
+      // For every other section, empty means "nothing matches" which is never what the
+      // user wants. If toggling would leave it empty, auto-restore all keys to true so
+      // unchecking the lone active item cleanly reverts the filter.
+      if (section !== 'wins' && !Object.values(nextSection).some(Boolean)) {
+        for (const k of Object.keys(nextSection)) nextSection[k] = true;
+      }
+      return { ...prev, [section]: nextSection };
+    });
   };
 
   const toggleSection = (section) => {

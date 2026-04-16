@@ -25,11 +25,14 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   })();
 
   const toggleFilter = (section, key) => {
-    const updated = {
-      ...currentFilters,
-      [section]: { ...currentFilters[section], [key]: !currentFilters[section][key] },
-    };
-    onFiltersChange(updated);
+    const nextSection = { ...currentFilters[section], [key]: !currentFilters[section][key] };
+    // "smart" filters default all OFF (each is an opt-in flag), so empty is valid there.
+    // For eras / categories / genres / runtimes, empty means nothing matches — auto-restore
+    // all keys to true when the user unchecks the last active one.
+    if (section !== 'smart' && !Object.values(nextSection).some(Boolean)) {
+      for (const k of Object.keys(nextSection)) nextSection[k] = true;
+    }
+    onFiltersChange({ ...currentFilters, [section]: nextSection });
   };
 
   const toggleSection = (section) => {

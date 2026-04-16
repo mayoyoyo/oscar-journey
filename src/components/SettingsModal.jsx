@@ -182,11 +182,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.4.0</span>
+            <span className="settings-version-num">v2.4.1</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.4.1</strong> — Modal polish & runtime fixes</p>
+              <ul>
+                <li>Best Picture, Animated Feature, and International Feature wins in the film modal now link to acceptance speech searches (matching the other major awards)</li>
+                <li>Fixed missing runtime data for 10 films where OMDB had a year mismatch or N/A runtime (Birdman, The Hurt Locker, Spirited Away, etc.)</li>
+              </ul>
               <p><strong>v2.4.0</strong> — Filters & Daily Oscar fix</p>
               <ul>
                 <li>Films tab — new filter panel: Eras, Categories, Genres, Runtime, and Wins (filter by what Oscars a film won)</li>

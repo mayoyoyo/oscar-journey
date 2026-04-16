@@ -246,26 +246,31 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                   🏆 {totalOscars} Oscar{totalOscars !== 1 ? 's' : ''} Won
                 </div>
                 <div className="film-detail-awards-list">
-                  {movie.won && (
-                    <div className="award-item">
-                      <span className="award-category">Best Picture</span>
-                    </div>
-                  )}
-                  {movie.category === 'ANIM' && (
-                    <div className="award-item">
-                      <span className="award-category">Best Animated Feature</span>
-                    </div>
-                  )}
-                  {movie.category === 'INT' && (
-                    <div className="award-item">
-                      <span className="award-category">Best International Feature Film</span>
-                    </div>
-                  )}
-                  {movie.alsoWon && movie.alsoWon.map((cat, i) => (
-                    <div key={`also-${i}`} className="award-item">
-                      <span className="award-category">{cat === 'INT' ? 'Best International Feature Film' : cat === 'ANIM' ? 'Best Animated Feature' : cat}</span>
-                    </div>
-                  ))}
+                  {(() => {
+                    const speechSearch = (q) => `https://www.youtube.com/results?search_query=${encodeURIComponent(`${movie.title} ${movie.year} oscar acceptance speech ${q}`)}`;
+                    const SpeechAward = ({ label, query }) => (
+                      <a className="award-item award-item-link award-item-major"
+                        href={speechSearch(query)} target="_blank" rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        title="Watch acceptance speech"
+                      >
+                        <span className="award-category">{label}</span>
+                        <span className="award-link-icon">{"\u2197"}</span>
+                      </a>
+                    );
+                    return (
+                      <>
+                        {movie.won && <SpeechAward label="Best Picture" query="best picture" />}
+                        {movie.category === 'ANIM' && <SpeechAward label="Best Animated Feature" query="best animated feature" />}
+                        {movie.category === 'INT' && <SpeechAward label="Best International Feature Film" query="best international feature" />}
+                        {movie.alsoWon && movie.alsoWon.map((cat, i) => {
+                          const label = cat === 'INT' ? 'Best International Feature Film' : cat === 'ANIM' ? 'Best Animated Feature' : cat;
+                          const query = cat === 'INT' ? 'best international feature' : cat === 'ANIM' ? 'best animated feature' : cat.toLowerCase();
+                          return <SpeechAward key={`also-${i}`} label={label} query={query} />;
+                        })}
+                      </>
+                    );
+                  })()}
                   {(movie.awards || []).map((a, i) => {
                     const link = getAwardLink(a, movie);
                     const content = (

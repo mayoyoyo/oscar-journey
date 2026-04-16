@@ -90,6 +90,7 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
 
   const movie = MOVIES_BY_ID[movieId];
   const quotes = QUOTES[movieId] || [];
+  const isWatched = !!profile?.watched?.includes(movieId);
 
   const randomize = () => {
     const ids = Object.keys(QUOTES);
@@ -234,6 +235,7 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
           <div className="daily-poster-wrap">
             <img className="daily-poster" src={poster} alt="Mystery movie"
               style={{ filter: gameActive ? `blur(${20 - (wrongCount * 4)}px)` : 'none', transition: 'filter 0.5s' }} />
+            {isWatched && <div className="daily-watched-badge">✓ Watched</div>}
             {!gameActive && <div className="daily-poster-label">{movie.title} ({movie.year})</div>}
           </div>
         )}

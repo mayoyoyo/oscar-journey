@@ -6827,41 +6827,6 @@ main {
   animation: cinematicFadeIn 0.2s ease;
 }
 
-/* Bulk-action row — All / None / Invert at the top of an expanded filter section */
-.filter-bulk-actions {
-  display: flex;
-  gap: 6px;
-  width: 100%;
-  margin-bottom: 4px;
-  padding-bottom: 6px;
-  border-bottom: 1px dashed var(--border);
-}
-
-.filter-bulk-btn {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--cream-dim);
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 50px;
-  cursor: pointer;
-  letter-spacing: 0.05em;
-  transition: all 0.15s ease;
-  text-transform: uppercase;
-}
-
-.filter-bulk-btn:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(139, 105, 20, 0.08);
-}
-
-.filter-bulk-btn:active {
-  transform: translateY(1px);
-}
-
 /* Per-row "only" button — appears on the right side of each filter checkbox row */
 .filter-only-btn {
   margin-left: 4px;

@@ -179,18 +179,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   }, []);
   const winSuffixes = Object.fromEntries(Object.entries(winCounts).map(([k, n]) => [k, `(${n})`]));
 
-  const setSectionAll = (section, labels, value) => {
-    const next = { ...filters[section] };
-    for (const k of Object.keys(labels)) next[k] = value;
-    setFilters(f => ({ ...f, [section]: next }));
-  };
-
-  const invertSection = (section, labels) => {
-    const next = { ...filters[section] };
-    for (const k of Object.keys(labels)) next[k] = !next[k];
-    setFilters(f => ({ ...f, [section]: next }));
-  };
-
   const setOnlyKey = (section, labels, onlyKey) => {
     const next = {};
     for (const k of Object.keys(labels)) next[k] = (k === onlyKey);
@@ -199,11 +187,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
 
   const renderChecklist = (section, labels, suffixes) => (
     <div className="filter-checklist">
-      <div className="filter-bulk-actions" role="group" aria-label="Bulk toggle">
-        <button type="button" className="filter-bulk-btn" onClick={() => setSectionAll(section, labels, true)}>All</button>
-        <button type="button" className="filter-bulk-btn" onClick={() => setSectionAll(section, labels, false)}>None</button>
-        <button type="button" className="filter-bulk-btn" onClick={() => invertSection(section, labels)}>Invert</button>
-      </div>
       {Object.entries(labels).map(([key, label]) => {
         const active = filters[section][key];
         const suffix = suffixes && suffixes[key];

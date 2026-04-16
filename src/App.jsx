@@ -48,6 +48,7 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
     genres: { ...DEFAULT_FILTERS.genres, ...(filters.genres || {}) },
     runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters.runtimes || {}) },
     minEssentialTier: filters.minEssentialTier ?? DEFAULT_FILTERS.minEssentialTier,
+    essentialsOnly: filters.essentialsOnly ?? DEFAULT_FILTERS.essentialsOnly,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters.smart || {}) },
   };
 
@@ -72,6 +73,9 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
 
   // Minimum essential-tier check — applies only to ESSENTIAL films. Oscar films are unaffected.
   if (movie.category === 'ESSENTIAL' && (movie.tier || 0) < f.minEssentialTier) return false;
+
+  // Focus mode: hide everything except ESSENTIAL films (that already passed the tier check above)
+  if (f.essentialsOnly && movie.category !== 'ESSENTIAL') return false;
 
   // Genre check
   if (f.genres[movie.genre] === false) return false;

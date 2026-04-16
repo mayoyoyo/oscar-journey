@@ -47,6 +47,7 @@ const DEFAULT_FILM_FILTERS = {
   runtimes: { short: true, medium: true, long: true },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),
   minEssentialTier: 3,
+  essentialsOnly: false,
 };
 
 function sortKeyFn(title) {
@@ -150,6 +151,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => filters.eras[eraBucket(m.year)])
       .filter(m => filters.categories[m.category] || (m.alsoWon || []).some(c => filters.categories[c]))
       .filter(m => m.category !== 'ESSENTIAL' || (m.tier || 0) >= (filters.minEssentialTier ?? 3))
+      .filter(m => !filters.essentialsOnly || m.category === 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
         const bucket = runtimeBucket(runtimeMap.get(m.id));
@@ -330,6 +332,19 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                   </button>
                 ))}
               </div>
+
+              <button
+                type="button"
+                className={`essentials-only-toggle ${filters.essentialsOnly ? 'active' : ''}`}
+                onClick={() => setFilters(f => ({ ...f, essentialsOnly: !f.essentialsOnly }))}
+                aria-pressed={filters.essentialsOnly}
+              >
+                <span className="essentials-only-checkbox">{filters.essentialsOnly ? '\u2713' : ''}</span>
+                <span className="essentials-only-label">
+                  <strong>Essentials only</strong>
+                  <span className="essentials-only-sub">hide Oscar films — show just the canon at the chosen tier</span>
+                </span>
+              </button>
             </div>
 
             {renderSection('Genres', 'genres', GENRE_LABELS)}

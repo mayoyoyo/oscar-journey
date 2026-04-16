@@ -13,6 +13,9 @@ const DEFAULT_FILTERS = {
   // Minimum tier required for ESSENTIAL films. 3 = strong consensus (143 films);
   // 2 = lenient consensus (438 films). Oscar films (BP/INT/ANIM) ignore this.
   minEssentialTier: 3,
+  // Focus mode: when true, hide everything except ESSENTIAL films at or above
+  // minEssentialTier — useful for "show me only the iron-clad canon."
+  essentialsOnly: false,
   smart: {
     skipWatched: false,
     winnersOnly: false,

@@ -13,6 +13,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     genres: { ...DEFAULT_FILTERS.genres, ...(filters?.genres || {}) },
     runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters?.runtimes || {}) },
     minEssentialTier: filters?.minEssentialTier ?? DEFAULT_FILTERS.minEssentialTier,
+    essentialsOnly: filters?.essentialsOnly ?? DEFAULT_FILTERS.essentialsOnly,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters?.smart || {}) },
   };
 
@@ -161,6 +162,19 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                     </button>
                   ))}
                 </div>
+
+                <button
+                  type="button"
+                  className={`essentials-only-toggle ${currentFilters.essentialsOnly ? 'active' : ''}`}
+                  onClick={() => onFiltersChange({ ...currentFilters, essentialsOnly: !currentFilters.essentialsOnly })}
+                  aria-pressed={currentFilters.essentialsOnly}
+                >
+                  <span className="essentials-only-checkbox">{currentFilters.essentialsOnly ? '\u2713' : ''}</span>
+                  <span className="essentials-only-label">
+                    <strong>Essentials only</strong>
+                    <span className="essentials-only-sub">hide Oscar films — show just the canon at the chosen tier</span>
+                  </span>
+                </button>
               </div>
 
               {renderSection('genres', 'Genres', 'genres', GENRE_LABELS)}

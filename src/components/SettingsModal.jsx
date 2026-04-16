@@ -182,11 +182,17 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.4.3</span>
+            <span className="settings-version-num">v2.4.4</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.4.4</strong> — Less jumpy journey</p>
+              <ul>
+                <li>Journey filter panel now matches the Films page styling — same bordered card, same header treatment</li>
+                <li>The quirky tagline at the bottom of Journey no longer re-rolls on every interaction; it only changes when you advance to a new film</li>
+                <li>Clicking the same star no longer clears your rating (was causing accidental resets and felt jumpy)</li>
+              </ul>
               <p><strong>v2.4.3</strong> — Journey polish</p>
               <ul>
                 <li>Smoother film-to-film transition in Journey — fade animation no longer interpolates layout/colors mid-swap</li>

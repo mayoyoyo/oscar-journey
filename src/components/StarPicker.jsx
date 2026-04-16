@@ -9,7 +9,9 @@ export default function StarPicker({ label, value, onChange, disabled }) {
   const handleClick = (starNum, isLeftHalf) => {
     if (disabled) return;
     const newVal = isLeftHalf ? starNum - 0.5 : starNum;
-    onChange(newVal === value ? null : newVal);
+    // Always set the new value — clicking the same star no longer clears the rating
+    // (was causing accidental resets and feeling jumpy)
+    onChange(newVal);
   };
 
   const handleHover = (starNum, isLeftHalf) => {
@@ -40,8 +42,8 @@ export default function StarPicker({ label, value, onChange, disabled }) {
     if (disabled) return;
     const val = hoverVal;
     setHoverVal(null);
-    if (val !== null) onChange(val === value ? null : val);
-  }, [disabled, hoverVal, onChange, value]);
+    if (val !== null) onChange(val);
+  }, [disabled, hoverVal, onChange]);
 
   const stars = [];
   for (let i = 1; i <= 10; i++) {

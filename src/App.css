@@ -6304,11 +6304,8 @@ main {
    ===================================================== */
 .journey-controls {
   margin-top: 20px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: var(--bg2);
-  padding: 16px 18px;
-  box-shadow: 0 2px 8px var(--shadow);
+  /* Bordered wrapper removed — children (filter card, reshuffle button,
+     sync controls) own their own visual styling, matching the Films page */
 }
 
 .journey-controls-row {
@@ -6349,9 +6346,12 @@ main {
   border-radius: 10px;
 }
 
+/* Mirror the Films filter card so both pages feel consistent */
 .journey-filters-collapsible {
-  /* No wrapper border/bg — would nest inside the existing .journey-controls
-     box and visually narrow the content. The header alone marks the toggle. */
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
 }
 .journey-filters-header {
   display: flex;
@@ -6362,13 +6362,14 @@ main {
   border: none;
   color: inherit;
   text-align: left;
-  padding: 6px 0;
-  margin-bottom: 4px;
+  padding: 12px 14px;
   cursor: pointer;
-  border-radius: 6px;
   transition: background 0.15s ease;
 }
 .journey-filters-header:hover { background: rgba(255,255,255,0.02); }
+.journey-filters-collapsible.is-open .journey-filters-header {
+  border-bottom: 1px solid var(--border);
+}
 .journey-filters-arrow {
   color: var(--gold-dim);
   font-size: 0.78rem;
@@ -6384,7 +6385,9 @@ main {
   border-radius: 10px;
   font-weight: 600;
 }
-.journey-filters-body { padding: 0; }
+.journey-filters-body { padding: 12px 14px; }
+.journey-filters-collapsible .filter-section { margin-bottom: 6px; }
+.journey-filters-collapsible .filter-section:last-child { margin-bottom: 0; }
 
 /* Collapsible filter sections */
 .filter-section {

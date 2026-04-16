@@ -227,6 +227,10 @@ export default function App() {
   });
   const [screen, setScreen] = useState('start'); // 'start' | 'card' | 'complete'
   const [fading, setFading] = useState(false);
+  // Stable tagline that only changes when the current film changes — not on every
+  // render (e.g., when rating changes), which previously made the page feel jumpy.
+  const [currentTaglineIdx, setCurrentTaglineIdx] = useState(() => Math.floor(Math.random() * JOURNEY_TAGLINES.length));
+  const currentTagline = JOURNEY_TAGLINES[currentTaglineIdx];
 
   // Modals
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -498,6 +502,11 @@ export default function App() {
   // --- Derived state ---
   const currentMovie = playlist[currentIdx] || null;
   const isCurrentWatched = currentMovie ? watchedSet.has(movieKey(currentMovie)) : false;
+
+  // Re-roll the tagline only when the film changes
+  useEffect(() => {
+    setCurrentTaglineIdx(Math.floor(Math.random() * JOURNEY_TAGLINES.length));
+  }, [currentIdx]);
 
   // Can advance if current film is watched AND at least one rater has rated it
   const currentRatingKeyVal = currentMovie ? ratingKey(currentMovie) : null;
@@ -1088,7 +1097,7 @@ export default function App() {
                 canAdvance={canAdvance}
               />
               <div className="journey-tagline">
-                {JOURNEY_TAGLINES[Math.floor(Math.random() * JOURNEY_TAGLINES.length)]}
+                {currentTagline}
               </div>
               <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} onOpenDetail={setDetailMovie} />
               <JourneyControls

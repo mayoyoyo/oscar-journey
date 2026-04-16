@@ -327,7 +327,9 @@ main {
   display: flex;
   min-height: 380px;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Only animate opacity + slight transform — animating "all" caused layout
+     shift to interpolate as the new film's content/ambient color loaded */
+  transition: opacity 0.22s ease-out, transform 0.22s ease-out;
   box-shadow: 0 8px 32px var(--shadow), 0 0 0 1px rgba(255,255,255,0.03);
   position: relative;
 }
@@ -345,7 +347,11 @@ main {
   z-index: 0;
 }
 
-.film-card.fading { opacity: 0; pointer-events: none; }
+.film-card.fading {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
 
 
 /* Poster column */
@@ -1214,14 +1220,21 @@ main {
 .btn-next {
   flex: 1;
   max-width: 420px;
-  padding: 16px 32px;
-  border: none;
+  /* Border included on both states so disabled⇄enabled doesn't change geometry */
+  padding: 14.5px 32px;
+  border: 1.5px solid transparent;
   border-radius: 50px;
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Animate only colors/shadow/transform — not size/spacing — so the text
+     swap between "Next Film" and "Watch & Rate to Continue" doesn't morph */
+  transition: background 0.25s ease, color 0.25s ease,
+              box-shadow 0.25s ease, border-color 0.25s ease,
+              transform 0.15s ease, filter 0.15s ease;
 }
 
 .btn-next:not(:disabled) {
@@ -1239,14 +1252,10 @@ main {
 .btn-next:disabled {
   background: var(--bg3);
   color: var(--cream-dim);
-  border: 1.5px solid var(--border);
+  border-color: var(--border);
   cursor: default;
-  opacity: 0.6;
   box-shadow: none;
-  font-weight: 500;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  opacity: 0.65;
+  opacity: 0.7;
 }
 
 /* Large primary button (start/complete) */
@@ -2016,6 +2025,17 @@ main {
 
 .star-container:hover .star-svg {
   filter: drop-shadow(0 0 4px rgba(139, 105, 20, 0.4));
+}
+
+/* Bigger, finger-friendly stars on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .star-picker-stars {
+    gap: 4px;
+    padding: 6px 0;
+    touch-action: none;
+  }
+  .star-container { width: 32px; height: 32px; }
+  .star-svg { width: 32px !important; height: 32px !important; }
 }
 
 /* =====================================================

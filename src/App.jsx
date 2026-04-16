@@ -583,7 +583,7 @@ export default function App() {
       setCurrentIdx(next);
       firebaseSave('currentIdx', next);
       setFading(false);
-    }, 280);
+    }, 220);
   }, [currentIdx, playlist, profile, firebaseSave, idxPassesFilter]);
 
   const goPrev = useCallback(() => {
@@ -596,7 +596,7 @@ export default function App() {
       setCurrentIdx(prev);
       firebaseSave('currentIdx', prev);
       setFading(false);
-    }, 280);
+    }, 220);
   }, [currentIdx, firebaseSave, idxPassesFilter]);
 
   // --- Watched toggle ---
@@ -924,7 +924,7 @@ export default function App() {
     // Don't change currentIdx — the next film naturally slides into the current position
     // But trigger a re-render of the card
     setFading(true);
-    setTimeout(() => setFading(false), 280);
+    setTimeout(() => setFading(false), 220);
   }, [currentMovie, currentIdx, playlist, firebaseSave]);
 
   // --- Tab change ---

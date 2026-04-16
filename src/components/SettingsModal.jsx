@@ -182,11 +182,17 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.4.2</span>
+            <span className="settings-version-num">v2.4.3</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v2.4.3</strong> — Mobile rating + journey polish</p>
+              <ul>
+                <li>Mobile rating overhaul — tap anywhere on the star row to set the rating (no more hunting tiny half-star targets), bigger stars on touch devices, light haptic feedback on tap and slide</li>
+                <li>Smoother film-to-film transition in Journey — fade animation no longer interpolates layout/colors mid-swap</li>
+                <li>Next Film button — refined typography (uppercase with wider tracking) and the button no longer morphs when toggling between "Next Film" and "Watch & Rate to Continue"</li>
+              </ul>
               <p><strong>v2.4.2</strong> — Collapsible filter panels</p>
               <ul>
                 <li>Filter panels in both Films and Journey now collapse by default — active filter count shown in the header so you can see at a glance whether anything's narrowing your view</li>

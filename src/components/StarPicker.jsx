@@ -17,24 +17,38 @@ export default function StarPicker({ label, value, onChange, disabled }) {
     setHoverVal(isLeftHalf ? starNum - 0.5 : starNum);
   };
 
-  // Touch-swipe rating: slide finger across stars
+  // Touch rating: any tap or drag on the row picks the value from X coordinate.
+  // Avoids the 11px-wide half-star hit-target precision problem on mobile.
   const getValFromTouch = useCallback((touchX) => {
     const el = starsRef.current;
     if (!el) return null;
     const rect = el.getBoundingClientRect();
     const x = touchX - rect.left;
     const pct = Math.max(0, Math.min(1, x / rect.width));
-    // 10 stars, 0.5 increments
     const raw = pct * 10;
     return Math.max(0.5, Math.round(raw * 2) / 2);
   }, []);
+
+  const handleTouchStart = useCallback((e) => {
+    if (disabled) return;
+    e.preventDefault(); // suppress the synthesized click on the underlying half-star spans
+    const val = getValFromTouch(e.touches[0].clientX);
+    if (val !== null) {
+      setHoverVal(val);
+      // Light haptic feedback on devices that support it (Android Chrome, etc.)
+      if (navigator.vibrate) navigator.vibrate(8);
+    }
+  }, [disabled, getValFromTouch]);
 
   const handleTouchMove = useCallback((e) => {
     if (disabled) return;
     e.preventDefault();
     const val = getValFromTouch(e.touches[0].clientX);
-    if (val !== null) setHoverVal(val);
-  }, [disabled, getValFromTouch]);
+    if (val !== null && val !== hoverVal) {
+      setHoverVal(val);
+      if (navigator.vibrate) navigator.vibrate(4);
+    }
+  }, [disabled, getValFromTouch, hoverVal]);
 
   const handleTouchEnd = useCallback((e) => {
     if (disabled) return;
@@ -95,6 +109,7 @@ export default function StarPicker({ label, value, onChange, disabled }) {
         <div
           className="star-picker-stars"
           ref={starsRef}
+          onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >

@@ -262,7 +262,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         {renderSection('Categories', 'categories', CATEGORY_LABELS)}
         {renderSection('Genres', 'genres', GENRE_LABELS)}
         {renderSection('Runtime', 'runtimes', RUNTIME_LABELS, runtimeSuffixes)}
-        {renderSection('Wins', 'wins', WIN_LABELS, winSuffixes)}
+        {renderSection('Oscars Won', 'wins', WIN_LABELS, winSuffixes)}
 
         {runtimeLoading && (
           <div className="film-list-runtime-status">

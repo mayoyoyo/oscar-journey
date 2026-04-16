@@ -35,13 +35,6 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
     setOpen(true);
   };
 
-  const focusTier = () => {
-    // Dispatch a global event so App can update filters without prop-drilling.
-    // Sets canon focus active and minimum tier to the clicked film's tier.
-    window.dispatchEvent(new CustomEvent('canon-focus-tier', { detail: { tier: Math.max(2, Math.min(4, tier)) } }));
-    setOpen(false);
-  };
-
   return (
     <>
       <span
@@ -107,22 +100,6 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
               ))}
             </ul>
 
-            {tier >= 2 && tier <= 4 && movie.category === 'ESSENTIAL' && (
-              <button className="tier-pip-focus-btn" onClick={(e) => { e.stopPropagation(); focusTier(); }}>
-                Focus on Tier ≥ {tier} essentials
-                <span className="tier-pip-focus-sub">show only canon films this strong</span>
-              </button>
-            )}
-            {tier > 4 && movie.category === 'ESSENTIAL' && (
-              <button className="tier-pip-focus-btn" onClick={(e) => {
-                e.stopPropagation();
-                window.dispatchEvent(new CustomEvent('canon-focus-tier', { detail: { tier: 4 } }));
-                setOpen(false);
-              }}>
-                Focus on Tier ≥ 4 essentials
-                <span className="tier-pip-focus-sub">show the iron-clad canon (57 films)</span>
-              </button>
-            )}
           </div>
         </div>,
         document.body

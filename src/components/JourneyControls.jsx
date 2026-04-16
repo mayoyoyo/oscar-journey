@@ -52,8 +52,31 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     return active < vals.length ? `${active}/${vals.length}` : null;
   };
 
+  const setSectionAll = (section, labels, value) => {
+    const next = { ...currentFilters[section] };
+    for (const k of Object.keys(labels)) next[k] = value;
+    onFiltersChange({ ...currentFilters, [section]: next });
+  };
+
+  const invertSection = (section, labels) => {
+    const next = { ...currentFilters[section] };
+    for (const k of Object.keys(labels)) next[k] = !next[k];
+    onFiltersChange({ ...currentFilters, [section]: next });
+  };
+
+  const setOnlyKey = (section, labels, onlyKey) => {
+    const next = {};
+    for (const k of Object.keys(labels)) next[k] = (k === onlyKey);
+    onFiltersChange({ ...currentFilters, [section]: next });
+  };
+
   const renderChecklist = (section, labels) => (
     <div className="filter-checklist">
+      <div className="filter-bulk-actions" role="group" aria-label="Bulk toggle">
+        <button type="button" className="filter-bulk-btn" onClick={() => setSectionAll(section, labels, true)}>All</button>
+        <button type="button" className="filter-bulk-btn" onClick={() => setSectionAll(section, labels, false)}>None</button>
+        <button type="button" className="filter-bulk-btn" onClick={() => invertSection(section, labels)}>Invert</button>
+      </div>
       {Object.entries(labels).map(([key, label]) => {
         const active = currentFilters[section][key];
         return (
@@ -61,6 +84,14 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
             onClick={() => toggleFilter(section, key)}>
             <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
             <span className="filter-check-label">{label}</span>
+            <button
+              type="button"
+              className="filter-only-btn"
+              onClick={(e) => { e.stopPropagation(); setOnlyKey(section, labels, key); }}
+              title={`Show only ${label}`}
+            >
+              only
+            </button>
           </div>
         );
       })}

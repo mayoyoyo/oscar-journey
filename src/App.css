@@ -6304,8 +6304,11 @@ main {
    ===================================================== */
 .journey-controls {
   margin-top: 20px;
-  /* Bordered wrapper removed — children (filter card, reshuffle button,
-     sync controls) own their own visual styling, matching the Films page */
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg2);
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .journey-controls-row {
@@ -6346,13 +6349,9 @@ main {
   border-radius: 10px;
 }
 
-/* Mirror the Films filter card so both pages feel consistent */
-.journey-filters-collapsible {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
+/* No inner box — the parent .journey-controls already provides the card.
+   Header sits flush; a divider appears below it when the section is open. */
+.journey-filters-collapsible { width: 100%; }
 .journey-filters-header {
   display: flex;
   align-items: center;
@@ -6362,12 +6361,14 @@ main {
   border: none;
   color: inherit;
   text-align: left;
-  padding: 12px 14px;
+  padding: 4px 0;
   cursor: pointer;
+  border-radius: 6px;
   transition: background 0.15s ease;
 }
-.journey-filters-header:hover { background: rgba(255,255,255,0.02); }
 .journey-filters-collapsible.is-open .journey-filters-header {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
 .journey-filters-arrow {
@@ -6385,8 +6386,8 @@ main {
   border-radius: 10px;
   font-weight: 600;
 }
-.journey-filters-body { padding: 12px 14px; }
-.journey-filters-collapsible .filter-section { margin-bottom: 6px; }
+.journey-filters-body { padding: 0; }
+.journey-filters-collapsible .filter-section { margin-bottom: 4px; }
 .journey-filters-collapsible .filter-section:last-child { margin-bottom: 0; }
 
 /* Collapsible filter sections */

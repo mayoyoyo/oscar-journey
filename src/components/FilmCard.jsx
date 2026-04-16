@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { fetchOmdbData } from '../utils/omdb';
+import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
 import { extractDominantColor } from '../utils/colorExtract';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
@@ -57,12 +57,23 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
 
   useEffect(() => {
     if (!movie) return;
-    setLoading(true);
+    let cancelled = false;
+    // Sync cache read first — avoids a loading-spinner flash when navigating
+    // between films whose data is already cached in localStorage.
+    const cached = readCachedOmdbData(movie);
+    if (cached) {
+      setOmdbData(cached);
+      setLoading(false);
+      return;
+    }
     setOmdbData(null);
+    setLoading(true);
     fetchOmdbData(movie).then(data => {
+      if (cancelled) return;
       setOmdbData(data);
       setLoading(false);
     });
+    return () => { cancelled = true; };
   }, [movie?.title, movie?.year]);
 
   const [ambientColor, setAmbientColor] = useState(null);

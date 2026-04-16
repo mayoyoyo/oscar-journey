@@ -57,6 +57,32 @@ function getOmdbYear(movie) {
   return OMDB_YEAR_OVERRIDES[movie.title] || movie.year;
 }
 
+// Synchronous cache read — returns the same shape as fetchOmdbData if all fields are
+// cached and valid, or null otherwise. Used to skip the loading flash when navigating
+// between films whose data is already cached in localStorage.
+export function readCachedOmdbData(movie) {
+  if (!movie) return null;
+  const manualPoster = POSTER_OVERRIDES[movie.id] || null;
+  const posterKey   = omdbCacheKey('poster',   movie);
+  const plotKey     = omdbCacheKey('plot',     movie);
+  const ratingKey   = omdbCacheKey('rating',   movie);
+  const directorKey = omdbCacheKey('director', movie);
+  const runtimeKey  = omdbCacheKey('runtime',  movie);
+  const allKeys = [posterKey, plotKey, ratingKey, directorKey, runtimeKey];
+  if (!allKeys.every(k => localStorage.getItem(k) !== null)) return null;
+  if (allKeys.some(k => localStorage.getItem(k) === 'RATE_LIMITED')) return null;
+  const posterCached = localStorage.getItem(posterKey);
+  if (!manualPoster && posterCached === NOT_FOUND) return null;
+  const cachedRuntime = localStorage.getItem(runtimeKey) === NOT_FOUND ? null : localStorage.getItem(runtimeKey);
+  return {
+    poster:   manualPoster || posterCached,
+    plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
+    rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
+    director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
+    runtime:  applyRuntimeOverride(movie, cachedRuntime),
+  };
+}
+
 export async function fetchOmdbData(movie) {
   const manualPoster = POSTER_OVERRIDES[movie.id] || null;
   const posterKey   = omdbCacheKey('poster',   movie);

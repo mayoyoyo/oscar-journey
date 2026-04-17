@@ -104,8 +104,6 @@ export default function InfoModal({ onClose }) {
         <div className="info-footer">
           <p>The goal is simple: watch great films you'd never pick yourself, and have opinions about them.</p>
         </div>
-
-        <button className="info-cta" onClick={onClose}>Start Watching</button>
       </div>
     </div>
   );

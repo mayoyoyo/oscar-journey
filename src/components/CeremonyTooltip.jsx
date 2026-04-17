@@ -65,9 +65,13 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
     });
   }
 
-  const lineText = isCeremonyMode
-    ? `${ordinal(ceremony)} Academy Awards · ${year}`
-    : `Canon film · ${year}`;
+  // Canon-only films don't get a ceremony line — the year is already shown
+  // below the title and "Canon film" carries no distinguishing info
+  // (absence of Academy-Awards line already signals canon).
+  if (!isCeremonyMode) return null;
+  // For Oscar films: ceremony name only, drop the year (also redundant with
+  // the year under the title).
+  const lineText = `${ordinal(ceremony)} Academy Awards`;
 
   const modalTitle = isCeremonyMode
     ? `${ordinal(ceremony)} Academy Awards`

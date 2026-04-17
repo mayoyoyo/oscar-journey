@@ -419,6 +419,29 @@ export default function App() {
       }
     }
 
+    // Sanitize filter state — over time the schema has changed (e.g. a stale
+    // '70s80s' era bucket from an old version). Drop any keys that aren't in
+    // the current DEFAULT_FILTERS, and if a section ends up fully empty, reset
+    // that section to defaults so the user isn't stuck with zero films visible.
+    if (data.filters) {
+      const original = JSON.stringify(data.filters);
+      const sanitized = { ...data.filters };
+      for (const section of ['eras', 'categories', 'genres', 'runtimes']) {
+        const cur = sanitized[section];
+        if (!cur || typeof cur !== 'object') continue;
+        const def = DEFAULT_FILTERS[section];
+        if (!def) continue;
+        const cleaned = {};
+        for (const k of Object.keys(def)) cleaned[k] = cur[k] ?? def[k];
+        const anyTrue = Object.values(cleaned).some(Boolean);
+        sanitized[section] = anyTrue ? cleaned : { ...def };
+      }
+      if (JSON.stringify(sanitized) !== original) {
+        data.filters = sanitized;
+        saveProfileField(data.id, 'filters', sanitized).catch(() => {});
+      }
+    }
+
     // Migrate watched to movie ID format
     let watchedKeys;
     if (Array.isArray(data.watched) && data.watched.length > 0) {

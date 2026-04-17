@@ -6954,14 +6954,12 @@ main {
 }
 
 .journey-filter-chip {
-  font-size: 0.68rem;
-  color: var(--gold);
-  background: rgba(139, 105, 20, 0.12);
-  border: 1px solid rgba(139, 105, 20, 0.3);
-  padding: 2px 8px;
-  border-radius: 50px;
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  background: var(--bg3);
+  padding: 1px 8px;
+  border-radius: 10px;
   font-weight: 500;
-  letter-spacing: 0.02em;
   white-space: nowrap;
   font-family: var(--font-body);
   text-transform: none;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData, parseOscarWins } from '../utils/omdb';
 import { MovieBadges } from './Badges';
-import OscarIcon from './OscarIcon';
+import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
@@ -199,7 +199,9 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
           )}
           <div className="film-detail-body">
             <div className="film-detail-ceremony-row">
-              <OscarIcon movie={movie} size="sm" />
+              {getOscarBadges(movie).map(k => (
+                <OscarIcon key={k} movie={movie} kind={k} size="sm" />
+              ))}
               <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
             </div>
             <div className="film-title">{movie.title}</div>

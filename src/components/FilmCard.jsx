@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
 import { extractDominantColor } from '../utils/colorExtract';
 import { MovieBadges } from './Badges';
-import OscarIcon from './OscarIcon';
+import OscarIcon, { getOscarBadges } from './OscarIcon';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
@@ -167,7 +167,9 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
       {/* Info column */}
       <div className="info-col">
         <div className="film-detail-ceremony-row">
-          <OscarIcon movie={movie} size="sm" />
+          {getOscarBadges(movie).map(k => (
+            <OscarIcon key={k} movie={movie} kind={k} size="sm" />
+          ))}
           <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onOpenDetail} />
         </div>
         <div className="film-title">{movie.title}</div>

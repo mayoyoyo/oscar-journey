@@ -11,6 +11,22 @@ export function getOscarStatus(movie) {
   return null;
 }
 
+// Returns every Oscar statuette that applies to this film. Values:
+//   'winner'  (gold)   — BP win
+//   'nominee' (bronze) — BP nom that lost
+//   'int'     (blue)   — won INT (alone or alongside BP)
+//   'anim'    (purple) — won ANIM (alone or alongside BP)
+// A BP winner that also won INT (e.g. Parasite) yields ['winner', 'int'].
+// An INT-only winner (Drive My Car) yields ['int']. Amour: ['nominee', 'int'].
+export function getOscarBadges(movie) {
+  const out = [];
+  const alsoWon = movie.alsoWon || [];
+  if (movie.category === 'BP') out.push(movie.won ? 'winner' : 'nominee');
+  if (movie.category === 'INT' || alsoWon.includes('INT')) out.push('int');
+  if (movie.category === 'ANIM' || alsoWon.includes('ANIM')) out.push('anim');
+  return out;
+}
+
 // Inline statuette — mirrors /public/favicon.svg (same shapes + gold gradient)
 // so the icon matches the brand / iOS homescreen icon exactly. CSS filters in
 // App.css recolor it per theme + status (bright gold / muted gold / outlined).
@@ -46,13 +62,23 @@ function StatuetteSVG() {
   );
 }
 
-export default function OscarIcon({ movie, size = 'sm' }) {
-  const status = getOscarStatus(movie);
-  if (!status) return null;
-  const title = status === 'winner' ? 'Academy Award winner' : 'Best Picture nominee';
+const TITLES = {
+  'winner':  'Academy Award winner',
+  'nominee': 'Best Picture nominee',
+  'int':     'Best International Feature winner',
+  'anim':    'Best Animated Feature winner',
+};
+
+export default function OscarIcon({ movie, kind, size = 'sm' }) {
+  // Back-compat: if no kind, derive the primary status (BP winner/nominee)
+  // just like before — so existing callers that render one icon keep doing
+  // exactly what they did. Multi-icon callers pass `kind` explicitly.
+  const k = kind ?? getOscarStatus(movie);
+  if (!k) return null;
+  const title = TITLES[k] || 'Academy Award';
   return (
     <span
-      className={`oscar-icon oscar-icon-${size} oscar-icon-${status}`}
+      className={`oscar-icon oscar-icon-${size} oscar-icon-${k}`}
       title={title}
       aria-label={title}
     >

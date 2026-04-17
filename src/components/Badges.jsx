@@ -106,21 +106,14 @@ export function MovieBadges({ movie, small = false }) {
     );
   }
 
-  // Winner pills replace the old International / Animated decorative chips
-  // — when a film WON one of those categories, we show a colored winner
-  // pill linking to the acceptance speech search instead of a plain label.
-  // Parasite (BP winner + INT winner) therefore gets both gold + blue pills.
-  // NOTE: use movie.won directly for BP — oscarStatus returns 'winner' for
-  // any Oscar win (including alsoWon INT/ANIM), so relying on it here would
-  // give Amour a gold BP pill even though it lost BP to Argo.
-  const wonBP   = movie.won === true && movie.category === 'BP';
-  const wonINT  = movie.category === 'INT' || alsoWon.includes('INT');
-  const wonANIM = movie.category === 'ANIM' || alsoWon.includes('ANIM');
+  // Colored INT/ANIM winner pills have been replaced by blue/purple tinted
+  // statuettes in the ceremony-row above the title. Only the gold BP winner
+  // pill stays here — BP is the primary Oscar and the speech link deserves
+  // a full chip, not just an icon.
+  const wonBP = movie.won === true && movie.category === 'BP';
   return (
     <div className="badges">
-      {wonBP   && <BadgeWinner movie={movie} kind="bp"   />}
-      {wonINT  && <BadgeWinner movie={movie} kind="int"  />}
-      {wonANIM && <BadgeWinner movie={movie} kind="anim" />}
+      {wonBP && <BadgeWinner movie={movie} kind="bp" />}
       <LanguagePill movie={movie} />
       <BadgeGenre genre={movie.genre} />
     </div>

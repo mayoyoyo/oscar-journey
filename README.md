@@ -16,14 +16,3 @@ A film tracker for the canon of cinema — every Best Picture nominee since 1970
 - **Collectible cards** — common / rare / epic / legendary pulls for rating and battling films. Wallet holds your top 3 to feature.
 - **Profiles & ratings** — per-user star ratings across flexible dimensions; compare your taste against friends.
 
-## Canon methodology
-
-A film qualifies as "canon" if it appears on ≥ 2 of 7 independent canonical lists (Sight & Sound 2022, AFI 100 + 10 Top 10, IMDb Top 250, Letterboxd Top 250, Cannes/Venice/Berlin grand prizes, National Film Registry, Criterion Collection). Oscar Best Picture winners get the OSCAR list as an 8th for ranking purposes. See [`docs/METHODOLOGY.md`](./docs/METHODOLOGY.md) for the full triangulation approach.
-
-## Stack
-
-- React 18 + Vite
-- Firebase Firestore (profiles, ratings, ELO, card wallet)
-- OMDb for poster/plot/runtime/rating/language/cast
-- Wikidata SPARQL for full cast + per-category Oscar awards
-- Static data bakes in `src/data/` — movies, directors, actors, cast, languages, quotes

@@ -26,8 +26,6 @@ const POSTER_OVERRIDES = {
   'au-revoir-les-enfants-1987': '/posters/au-revoir-les-enfants-1987.jpg',
   'thelonious-monk-straight-no-chaser-1988': '/posters/thelonious-monk-straight-no-chaser-1988.jpg',
   'la-cienaga-2001': '/posters/la-cienaga-2001.jpg',
-  // BP winner Crash (2005) — OMDb returns N/A poster
-  'crash-2005': '/posters/crash-2005.jpg',
 };
 
 // Title overrides for movies that don't match OMDB's naming
@@ -50,6 +48,9 @@ const OMDB_YEAR_OVERRIDES = {
   'The Hurt Locker': 2008,
   'Judas and the Black Messiah': 2021,
   'Sound of Metal': 2019,
+  // Our 2005 refers to wide release; OMDb indexes Paul Haggis's Crash as 2004.
+  // Without this, OMDb returns a different 2005 "Crash" by Christopher Jarvis.
+  'Crash': 2004,
 };
 
 function applyRuntimeOverride(movie, runtime) {

@@ -1,13 +1,6 @@
 {
   "problems": [
     {
-      "id": "crash-2005",
-      "title": "Crash",
-      "year": 2005,
-      "category": "BP",
-      "reason": "omdb-no-poster"
-    },
-    {
       "id": "sunrise-a-song-of-two-humans-1927",
       "title": "Sunrise: A Song of Two Humans",
       "year": 1927,
@@ -30,6 +23,6 @@
       "url": "https://m.media-amazon.com/images/M/MV5BNmY3NWE5YWYtMGFkNC00Y2JhLWI5MTYtMTA0OWE5NjZlNGY4XkEyXkFqcGc@._V1_SX300.jpg"
     }
   ],
-  "okCount": 823,
+  "okCount": 824,
   "overriddenCount": 10
 }

@@ -29,17 +29,26 @@ async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 async function omdbFetch(title, year) {
   const t = encodeURIComponent(title.replace(/[''']/g, "'").replace(/[""]/g, '"'));
+  // Collect results from both year and no-year searches. OMDb can return the wrong
+  // film when year is supplied (e.g. Crash y=2005 returns a different film than
+  // Crash with no year). Prefer whichever result has a non-N/A poster.
+  const results = [];
   for (let i = 0; i < OMDB_KEYS.length; i++) {
     const key = OMDB_KEYS[k];
+    let rateLimited = false;
     for (const y of [`&y=${year}`, '']) {
       const url = `https://www.omdbapi.com/?t=${t}&type=movie&apikey=${key}${y}`;
       const r = await fetch(url);
       const d = await r.json();
-      if (d.Error && /limit/i.test(d.Error)) { k = (k + 1) % OMDB_KEYS.length; break; }
-      if (d.Response === 'True') return d;
+      if (d.Error && /limit/i.test(d.Error)) { rateLimited = true; break; }
+      if (d.Response === 'True') results.push(d);
     }
+    if (rateLimited) { k = (k + 1) % OMDB_KEYS.length; continue; }
+    break;
   }
-  return null;
+  if (results.length === 0) return null;
+  // Prefer the one with a valid poster
+  return results.find(d => d.Poster && d.Poster !== 'N/A') || results[0];
 }
 
 async function urlOk(u) {

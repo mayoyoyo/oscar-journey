@@ -1,7 +1,7 @@
 import React from 'react';
 import { GENRE_LABELS } from '../data/movies';
 import TierPips from './TierPips';
-import OscarIcon, { getOscarStatus } from './OscarIcon';
+import OscarIcon, { getOscarStatus, getOscarBadges } from './OscarIcon';
 import LanguagePill from './LanguagePill';
 
 function speechUrl(title, year, kind = 'best picture') {
@@ -101,7 +101,9 @@ export function MovieBadges({ movie, small = false }) {
         {alsoWon.includes('ANIM') && <BadgeAnimSm />}
         <LanguagePill movie={movie} />
         <TierPips movie={movie} variant="compact" />
-        <OscarIcon movie={movie} size="sm" />
+        {getOscarBadges(movie).map(k => (
+          <OscarIcon key={k} movie={movie} kind={k} size="sm" />
+        ))}
       </span>
     );
   }

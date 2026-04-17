@@ -30,7 +30,7 @@ function FilmTilePoster({ movie }) {
 }
 
 // Renders the full detail view for a single profile
-export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail, onSaveProfile }) {
+export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail, onSaveProfile, onNavigateToTier }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showUnwatched, setShowUnwatched] = useState(false);
   const [showSkipped, setShowSkipped] = useState(false);
@@ -383,6 +383,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             ratings={isOwnProfile && currentRatings ? currentRatings : (profileData.ratings || {})}
             raters={profileData.raters || []}
             profileName={profileData.displayName || profileData.id}
+            onNavigateToTier={onNavigateToTier}
             embedded
           />
         </div>

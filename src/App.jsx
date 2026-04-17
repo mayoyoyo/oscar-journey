@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { MOVIES, MOVIES_BY_ID } from './data/movies';
+import { getTier } from './utils/tierInfo';
 import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffle';
 import {
   ratingKey, clearCache,
@@ -42,13 +43,24 @@ function movieKey(movie) {
 // isCurrentFilm: if true, exempt from skipWatched so user can rate before advancing
 function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   if (!filters) return true;
+  // Legacy profiles stored minEssentialTier (essentials-only gate, 2/3/4/99)
+  // and essentialsOnly (hide Oscars). The Film tab uses minTier (unified, all
+  // films) and oscarsOnly (hide Essentials — inverse). Migrate on read so
+  // either saved shape behaves sensibly until the profile re-saves.
+  const legacyTier = filters.minEssentialTier;
+  const migratedMinTier = filters.minTier
+    ?? (legacyTier === 99 ? 1 : legacyTier ?? DEFAULT_FILTERS.minTier);
+  // essentialsOnly (old) kept only ESSENTIAL; oscarsOnly (new) hides ESSENTIAL.
+  // We don't auto-flip — if a user had essentialsOnly on, treat it as a
+  // stand-alone flag and keep that behavior.
   const f = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters.eras || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters.categories || {}) },
     genres: { ...DEFAULT_FILTERS.genres, ...(filters.genres || {}) },
     runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters.runtimes || {}) },
-    minEssentialTier: filters.minEssentialTier ?? DEFAULT_FILTERS.minEssentialTier,
-    essentialsOnly: filters.essentialsOnly ?? DEFAULT_FILTERS.essentialsOnly,
+    minTier: migratedMinTier,
+    oscarsOnly: filters.oscarsOnly ?? (legacyTier === 99) ?? DEFAULT_FILTERS.oscarsOnly,
+    essentialsOnly: filters.essentialsOnly ?? false,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters.smart || {}) },
   };
 
@@ -67,14 +79,22 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   else if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
   else if (year >= 2020 && !f.eras['20s']) return false;
 
-  // Category check — also match if any alsoWon category is active (e.g. Parasite is BP + INT)
-  const matchesCategory = f.categories[movie.category] || (movie.alsoWon || []).some(c => f.categories[c]);
-  if (!matchesCategory) return false;
+  // Category check — Essentials bypass Categories (governed by Canon depth).
+  // Oscar-eligible films must match at least one checked category; alsoWon
+  // also counts (e.g. Parasite is BP + INT).
+  if (movie.category !== 'ESSENTIAL') {
+    const matchesCategory = f.categories[movie.category] || (movie.alsoWon || []).some(c => f.categories[c]);
+    if (!matchesCategory) return false;
+  }
 
-  // Minimum essential-tier check — applies only to ESSENTIAL films. Oscar films are unaffected.
-  if (movie.category === 'ESSENTIAL' && (movie.tier || 0) < f.minEssentialTier) return false;
+  // Unified canon tier — applies to ALL films via getTier() (OSCAR / OSCAR_NOM
+  // counts as a list for BP / INT / ANIM). Matches the Film tab's minTier.
+  if (getTier(movie) < f.minTier) return false;
 
-  // Focus mode: hide everything except ESSENTIAL films (that already passed the tier check above)
+  // Canon focus mode — mutually exclusive in the UI:
+  //   oscarsOnly      → hide ESSENTIAL (non-Oscar canon films)
+  //   essentialsOnly  → hide Oscar-eligible films (BP / INT / ANIM)
+  if (f.oscarsOnly && movie.category === 'ESSENTIAL') return false;
   if (f.essentialsOnly && movie.category !== 'ESSENTIAL') return false;
 
   // Genre check
@@ -225,6 +245,10 @@ export default function App() {
   const [watchedSet, setWatchedSet] = useState(new Set());
   const [ratings, setRatings] = useState({});
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
+  // One-shot filter preset for the Films tab. Set when a user drills in from
+  // the Canon Score tier breakdown ("show me the 14 films at tier 6"). FilmList
+  // consumes it on mount and clears via onFilterPresetApplied.
+  const [listFilterPreset, setListFilterPreset] = useState(null);
   const [activeTab, setActiveTab] = useState(() => {
     const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
     const hash = window.location.hash.replace('#', '');
@@ -996,15 +1020,42 @@ export default function App() {
     window.history.pushState(null, '', pathNames[tab] || '/');
   }, []);
 
+  // Drill-down from Canon Score → Films tab with tier preselected.
+  // Stage the preset first so FilmList sees it on its next render, then flip
+  // the tab. The filter panel stays collapsed — the collapsed header chip
+  // ("Canon ≥N") + reduced film count already signal the narrowing.
+  const handleNavigateToTier = useCallback((tier) => {
+    setListFilterPreset({ minTier: tier, oscarsOnly: false, essentialsOnly: false });
+    setActiveTab('list');
+    localStorage.setItem(LS_TAB_KEY, 'list');
+    window.history.pushState(null, '', '/films');
+  }, []);
+
   // --- Path routing: handle browser back/forward ---
   useEffect(() => {
     const onPopState = () => {
+      // Match on the FIRST segment so nested routes like /profiles/chris still
+      // resolve to the leaderboard tab. Without this, hitting back from /films
+      // to /profiles/chris would only update the URL — activeTab stayed stuck
+      // on 'list' because 'profiles/chris' isn't in the simple tabMap.
       const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+      const segments = path.split('/');
+      const firstSegment = segments[0];
       const tabMap = { '': 'journey', journey: 'journey', films: 'list', battle: 'battle', profiles: 'leaderboard' };
-      const tab = tabMap[path];
+      const tab = tabMap[firstSegment];
       if (tab) {
         setActiveTab(tab);
         localStorage.setItem(LS_TAB_KEY, tab);
+      }
+      // Keep autoSelectProfileId in sync with the URL. Leaderboard's own
+      // state is lost when it unmounts (tab switch), so it uses this prop
+      // to restore the detail-view selection on remount.
+      //  - /profiles/<id>  → set to <id>  (re-open that profile's detail)
+      //  - /profiles       → null         (stay on the profile list, don't
+      //                                    re-open a previously-viewed one)
+      //  - anything else   → leave as-is
+      if (firstSegment === 'profiles') {
+        setAutoSelectProfileId(segments[1] || null);
       }
     };
     window.addEventListener('popstate', onPopState);
@@ -1185,6 +1236,8 @@ export default function App() {
           onToggleWatched={toggleWatchedForMovie}
           ratings={ratings}
           raters={raters}
+          filterPreset={listFilterPreset}
+          onFilterPresetApplied={() => setListFilterPreset(null)}
         />
       )}
 
@@ -1218,6 +1271,7 @@ export default function App() {
           }}
           autoSelectProfileId={autoSelectProfileId}
           onClearAutoSelect={() => setAutoSelectProfileId(null)}
+          onNavigateToTier={handleNavigateToTier}
         />
       )}
       </div>{/* end app-scroll-area */}

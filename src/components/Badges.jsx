@@ -9,17 +9,17 @@ function speechUrl(title, year, kind = 'best picture') {
 }
 
 // Full-size winner pill. `kind` drives both the label and the color scheme:
-//   'bp'   (default) → gold  "Winner · Speech"
-//   'int'            → blue  "Intl Winner · Speech"
-//   'anim'           → purple "Anim Winner · Speech"
+//   'bp'   (default) → gold  "Winner"
+//   'int'            → blue  "Intl Winner"
+//   'anim'           → purple "Anim Winner"
 // Replaces the old standalone BadgeInt / BadgeAnim chips — the winner pill
-// carries both the category and the speech link, cleaner than two pills.
+// carries both the category and the speech link (via tooltip + ↗ icon).
 export function BadgeWinner({ movie, kind = 'bp' }) {
   const meta = {
-    bp:   { label: 'Winner · Speech',      query: 'best picture',              cls: 'badge-winner-bp' },
-    int:  { label: 'Intl Winner · Speech', query: 'best international feature',cls: 'badge-winner-int' },
-    anim: { label: 'Anim Winner · Speech', query: 'best animated feature',     cls: 'badge-winner-anim' },
-  }[kind] || { label: 'Winner · Speech', query: 'best picture', cls: 'badge-winner-bp' };
+    bp:   { label: 'Winner',      query: 'best picture',              cls: 'badge-winner-bp' },
+    int:  { label: 'Intl Winner', query: 'best international feature',cls: 'badge-winner-int' },
+    anim: { label: 'Anim Winner', query: 'best animated feature',     cls: 'badge-winner-anim' },
+  }[kind] || { label: 'Winner', query: 'best picture', cls: 'badge-winner-bp' };
   if (movie) {
     return (
       <a className={`badge-winner badge-winner-link ${meta.cls}`}

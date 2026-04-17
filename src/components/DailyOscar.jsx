@@ -173,12 +173,15 @@ export default function DailyOscar({ onClose, onSaveProfile, profile }) {
       setSolved(true);
       const s = getDailyStreak() + 1;
       localStorage.setItem('oscars_daily_streak', String(s));
+      // Persist to Firestore so other profiles (Leaderboard / profile tiles) can display it.
+      if (onSaveProfile) onSaveProfile('dailyStreak', s);
       const rarity = rollDailyRarity(newGuesses.length);
       const card = { movieId: MOVIES[Math.floor(Math.random() * MOVIES.length)].id, rarity, pulledAt: Date.now(), source: 'daily' };
       setRewardCard(card);
     } else if (newGuesses.length >= MAX_GUESSES) {
       setFailed(true);
       localStorage.setItem('oscars_daily_streak', '0');
+      if (onSaveProfile) onSaveProfile('dailyStreak', 0);
     }
   };
 

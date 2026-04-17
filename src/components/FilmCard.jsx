@@ -4,11 +4,14 @@ import { extractDominantColor } from '../utils/colorExtract';
 import { MovieBadges } from './Badges';
 import LanguagePill from './LanguagePill';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
+import TierPips from './TierPips';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
 import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
+import ACTORS from '../data/actors.json';
+import DIRECTORS from '../data/directors.json';
 
 // Universal skip messages — safe for any film (Oscar or canon).
 const SKIP_MESSAGES_UNIVERSAL = [
@@ -176,6 +179,17 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         <div className="film-title">{movie.title}</div>
         <div className="film-year">
           <span>{movie.year}</span>
+          {omdbData?.runtime && (() => {
+            // Match the detail modal: pretty-print OMDb's "138 min" to "2h 18m"
+            // (or "18m" for sub-hour) and keep it inline with the year.
+            const m = parseInt(String(omdbData.runtime).match(/\d+/)?.[0], 10);
+            if (!m) return null;
+            const h = Math.floor(m / 60);
+            const mm = m % 60;
+            const pretty = h > 0 ? `${h}h${mm ? ` ${mm}m` : ''}` : `${mm}m`;
+            return <span className="film-year-runtime"> · {pretty}</span>;
+          })()}
+          <TierPips movie={movie} variant="compact" />
           <LanguagePill movie={movie} />
         </div>
         <MovieBadges movie={movie} />
@@ -204,14 +218,23 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         {personalElo?.[movie.id] && (
           <div className="film-elo-rating">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO</span></div>
         )}
+        {(() => {
+          // Directed by — prefer hand-curated directors.json over OMDb (which
+          // over-credits committees on some older / animated films).
+          const director = DIRECTORS[movie.id] || omdbData?.director;
+          if (!director) return null;
+          return <div className="film-director"><strong>Directed by</strong> {director}</div>;
+        })()}
+        {(() => {
+          // Starring — top-billed from actors.json, fallback to OMDb. Middle
+          // dots between names to match the detail modal's credits-line feel.
+          const actors = ACTORS[movie.id] || omdbData?.actors;
+          if (!actors) return null;
+          const pretty = actors.split(',').map(s => s.trim()).filter(Boolean).join(' · ');
+          return <div className="film-starring"><strong>Starring</strong> {pretty}</div>;
+        })()}
         {omdbData?.plot && (
           <div className="film-plot">{omdbData.plot}</div>
-        )}
-        {omdbData?.director && (
-          <div className="film-director">Dir. {omdbData.director}</div>
-        )}
-        {omdbData?.runtime && (
-          <div className="film-runtime">🕐 {omdbData.runtime}</div>
         )}
 
         {(() => {

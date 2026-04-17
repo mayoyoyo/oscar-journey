@@ -34,7 +34,7 @@ async function getAllProfiles() {
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters, onSaveProfile, autoSelectProfileId, onClearAutoSelect }) {
+export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters, onSaveProfile, autoSelectProfileId, onClearAutoSelect, onNavigateToTier }) {
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProfile, setSelectedProfile] = useState(null);
@@ -164,6 +164,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         battleCount: p.battleCount || 0,
         showcase: p.showcase || [],
         wallet: p.wallet || [],
+        dailyStreak: p.dailyStreak || 0,
         privateProfile: p.privateProfile || false,
       });
 
@@ -239,11 +240,19 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
     return (
       <ProfileDetail
         profileData={currentProfile && selectedProfile.id === currentProfile.id ? { ...selectedProfile, ...currentProfile } : selectedProfile}
-        onBack={() => { setSelectedProfile(null); window.history.back(); }}
+        onBack={() => {
+          // Always land on the leaderboard list — explicit pushState beats
+          // window.history.back(), which could take you to a sibling tab
+          // like /films if that's where you came from (e.g. after a Canon
+          // Score tier drill-down → profile detail round-trip).
+          setSelectedProfile(null);
+          window.history.pushState(null, '', '/profiles');
+        }}
         currentProfile={currentProfile}
         currentRatings={currentRatings}
         onOpenDetail={onOpenDetail}
         onSaveProfile={onSaveProfile}
+        onNavigateToTier={onNavigateToTier}
       />
     );
   }
@@ -337,8 +346,8 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   {!p.isVirtualRater && p.skipCount > 0 && (
                     <span className="pc-detail pc-detail-skip">{p.skipCount} skipped 😤</span>
                   )}
-                  {getCollectorScore(p.wallet) > 0 && (
-                    <span className="pc-detail pc-detail-collector" title="Collector score from cards">🃏 {getCollectorScore(p.wallet)}</span>
+                  {p.dailyStreak > 0 && (
+                    <span className="pc-detail pc-detail-streak" title="Daily Oscar streak">🎬 {p.dailyStreak} day{p.dailyStreak === 1 ? '' : 's'}</span>
                   )}
                 </div>
               </div>

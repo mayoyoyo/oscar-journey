@@ -66,7 +66,9 @@ const DEFAULT_FILM_FILTERS = {
     '1910s': true, '1920s': true, '1930s': true, '1940s': true, '1950s': true, '1960s': true,
     '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true,
   },
-  categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
+  // Categories only governs Oscar-eligible films. Essentials bypass this
+  // section entirely — they're gated by Canon depth (tier + focus mode).
+  categories: { BP: true, INT: true, ANIM: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),
@@ -74,8 +76,11 @@ const DEFAULT_FILM_FILTERS = {
   // Tier uses the getTierInfo count, which folds OSCAR/OSCAR_NOM into the
   // canon-list count so Oscar films are part of the same ranking.
   minTier: 1,
-  // Independent shortcut: hide ESSENTIAL films, leaving only BP/INT/ANIM.
+  // Canon focus — mutually exclusive in the UI:
+  //   oscarsOnly      → hide ESSENTIAL canon, leave BP / INT / ANIM
+  //   essentialsOnly  → hide Oscar-eligible films, leave just non-Oscar canon
   oscarsOnly: false,
+  essentialsOnly: false,
 };
 
 // Per-tier copy shown in the Canon depth section. Keys are the minimum
@@ -112,7 +117,7 @@ function eraBucket(year) {
   return '20s';
 }
 
-export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters }) {
+export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters, filterPreset, onFilterPresetApplied }) {
   const [query, setQuery] = useState('');
   // `watchMode` is a three-way enum: 'all' | 'watched' | 'unwatched'.
   // Watched-only and Unwatched-only are mutually exclusive — clicking one
@@ -132,6 +137,24 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     prefetchRuntimes(MOVIES, () => setRuntimeTick(t => t + 1))
       .then(() => setPrefetchDone(true));
   }, []);
+
+  // Consume one-shot filterPreset from parent — set when the user drills in
+  // from the Canon Score tier breakdown. Merges the preset keys (minTier,
+  // oscarsOnly, essentialsOnly) into the current filters and signals back to
+  // the parent to clear the preset so it only fires once.
+  // Filter panel stays COLLAPSED — the user came here to see the films, not
+  // manage filters. The collapsed header already shows the narrowing via
+  // the film count + summary chip (e.g. "Canon ≥7").
+  useEffect(() => {
+    if (!filterPreset) return;
+    setFilters(prev => ({
+      ...prev,
+      ...(filterPreset.minTier != null ? { minTier: filterPreset.minTier } : {}),
+      ...(filterPreset.oscarsOnly != null ? { oscarsOnly: filterPreset.oscarsOnly } : {}),
+      ...(filterPreset.essentialsOnly != null ? { essentialsOnly: filterPreset.essentialsOnly } : {}),
+    }));
+    if (onFilterPresetApplied) onFilterPresetApplied();
+  }, [filterPreset, onFilterPresetApplied]);
 
   // Build a runtime map; recomputes as prefetch completes batches
   const runtimeMap = useMemo(() => {
@@ -198,6 +221,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     // Canon-depth counters
     if (filters.minTier !== DEFAULT_FILM_FILTERS.minTier) n++;
     if (filters.oscarsOnly !== DEFAULT_FILM_FILTERS.oscarsOnly) n++;
+    if (filters.essentialsOnly !== DEFAULT_FILM_FILTERS.essentialsOnly) n++;
     return n;
   })();
 
@@ -235,24 +259,25 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       })
       .filter(m => filters.eras[eraBucket(m.year)])
       .filter(m => {
-        // OR semantics: a film passes if any of its applicable category flags
-        // are checked. BP/ESSENTIAL use the m.category field; INT/ANIM use
-        // the broader predicates (non-English / genre=A / alsoWon) so they
-        // actually catch films like Toy Story and Seven Samurai, not just
-        // Oscar category winners.
+        // Essentials bypass Categories — they're governed by Canon depth.
+        if (m.category === 'ESSENTIAL') return true;
+        // Oscar-eligible films: OR semantics over BP / broad-INT / broad-ANIM.
+        // INT and ANIM use broad predicates (non-English / genre=A / alsoWon)
+        // so they catch international winners that are also BP-nominated or
+        // animated films like Toy Story across the Oscar catalog.
         const c = filters.categories;
         if (c.BP && m.category === 'BP') return true;
-        if (c.ESSENTIAL && m.category === 'ESSENTIAL') return true;
         if (c.INT && isInternational(m)) return true;
         if (c.ANIM && isAnimated(m)) return true;
         return false;
       })
-      // Canon depth + oscars-only are bypassed when there's an active search — if you know
+      // Canon depth + focus mode are bypassed when there's an active search — if you know
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
       // Tier applies UNIFORMLY to all films via the unified getTier helper, which counts
       // OSCAR / OSCAR_NOM as a canon-list entry for BP / INT / ANIM films.
       .filter(m => !!q || getTier(m) >= (filters.minTier ?? 1))
       .filter(m => !!q || !filters.oscarsOnly || m.category !== 'ESSENTIAL')
+      .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
         const bucket = runtimeBucket(runtimeMap.get(m.id));
@@ -290,8 +315,9 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
     if (getTier(m) < (filters.minTier ?? 1)) return false;
     if (filters.oscarsOnly && m.category === 'ESSENTIAL') return false;
+    if (filters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
-  }), [filters.minTier, filters.oscarsOnly]);
+  }), [filters.minTier, filters.oscarsOnly, filters.essentialsOnly]);
 
   const eraCounts = useMemo(() => {
     const c = {};
@@ -303,10 +329,13 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   }, [eligiblePool]);
 
   const categoryCounts = useMemo(() => {
-    const c = { BP: 0, ESSENTIAL: 0, INT: 0, ANIM: 0 };
+    // Counts reflect Oscar-eligible films only — essentials bypass Categories,
+    // so a count for ESSENTIAL would be misleading here. INT / ANIM are
+    // broad predicates applied to the Oscar-eligible subset.
+    const c = { BP: 0, INT: 0, ANIM: 0 };
     for (const m of eligiblePool) {
+      if (m.category === 'ESSENTIAL') continue;
       if (m.category === 'BP') c.BP++;
-      else if (m.category === 'ESSENTIAL') c.ESSENTIAL++;
       if (isInternational(m)) c.INT++;
       if (isAnimated(m)) c.ANIM++;
     }
@@ -443,6 +472,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                 {(() => {
                   const parts = [];
                   if (filters.oscarsOnly) parts.push('Oscars only');
+                  if (filters.essentialsOnly) parts.push('Essentials only');
                   if (filters.minTier > 1) parts.push(`tier ≥${filters.minTier}`);
                   if (parts.length === 0) return null;
                   return <span className="filter-section-count">{parts.join(' · ')}</span>;
@@ -450,11 +480,12 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
               </button>
               {openSections.canon && (
                 <div className="filter-checklist canon-depth-body">
-                  {/* Oscars-only toggle — independent of tier slider */}
+                  {/* Oscars-only / Essentials-only toggles — mutually exclusive.
+                      Turning one on turns the other off. */}
                   <button
                     type="button"
                     className={`essentials-only-toggle ${filters.oscarsOnly ? 'active' : ''}`}
-                    onClick={() => setFilters(f => ({ ...f, oscarsOnly: !f.oscarsOnly }))}
+                    onClick={() => setFilters(f => ({ ...f, oscarsOnly: !f.oscarsOnly, essentialsOnly: false }))}
                     aria-pressed={filters.oscarsOnly}
                   >
                     <span className="essentials-only-checkbox">{filters.oscarsOnly ? '\u2713' : ''}</span>
@@ -462,6 +493,21 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                       <strong>Oscars only</strong>
                       <span className="essentials-only-sub">
                         Hide canon-only essentials — show just BP nominees and Int/Anim winners.
+                      </span>
+                    </span>
+                  </button>
+
+                  <button
+                    type="button"
+                    className={`essentials-only-toggle ${filters.essentialsOnly ? 'active' : ''}`}
+                    onClick={() => setFilters(f => ({ ...f, essentialsOnly: !f.essentialsOnly, oscarsOnly: false }))}
+                    aria-pressed={filters.essentialsOnly}
+                  >
+                    <span className="essentials-only-checkbox">{filters.essentialsOnly ? '\u2713' : ''}</span>
+                    <span className="essentials-only-label">
+                      <strong>Essentials only</strong>
+                      <span className="essentials-only-sub">
+                        Hide Oscar-eligible films — show just the non-Oscar canon.
                       </span>
                     </span>
                   </button>

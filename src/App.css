@@ -362,7 +362,10 @@ main {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  /* Stick the poster to the top of its column so it doesn't jump down when
+     the info column grows (e.g. after clicking "Mark as Watched" which adds
+     the star picker). */
+  align-items: flex-start;
   justify-content: center;
   padding: 28px 0 28px 20px;
   z-index: 1;
@@ -1083,15 +1086,27 @@ main {
 }
 
 .film-director {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--cream-dim);
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.film-director strong {
+  color: var(--cream);
+  font-weight: 700;
 }
 
-.film-runtime {
-  font-size: 0.78rem;
+.film-starring {
+  font-size: 0.82rem;
   color: var(--cream-dim);
-  opacity: 0.7;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.film-starring strong {
+  color: var(--cream);
+  font-weight: 700;
 }
 
 .film-awards-compact {
@@ -2890,9 +2905,36 @@ main {
   margin-top: 12px;
 }
 
+/* `display: flex` on a td removes the cell from the table layout and
+   throws off baseline alignment of sibling cells, which is why the WATCHED /
+   TOTAL numbers looked vertically off. Use vertical-align: middle on every
+   cell instead, keep the first cell's pill + "N of 8" on one line via
+   white-space: nowrap. */
+.canon-tier-table td,
+.canon-tier-table th {
+  vertical-align: middle;
+}
 .canon-tier-table td:first-child {
-  display: flex;
-  align-items: center;
+  white-space: nowrap;
+}
+
+/* Drill-down affordance: tier rows jump to the Films tab filtered to that
+   tier. Hover ramps border-color + background so the row reads as a button
+   without shifting layout. */
+.canon-tier-row-interactive {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.canon-tier-row-interactive:hover td {
+  background: var(--bg3);
+}
+.canon-tier-row-interactive:hover td:first-child {
+  color: var(--gold);
+}
+/* .tier-pips has cursor: help globally — override inside an interactive row
+   so the whole row reads as a single clickable target, not a "?" hover zone. */
+.canon-tier-row-interactive .tier-pips {
+  cursor: pointer;
 }
 
 .canon-next-up {
@@ -3569,6 +3611,10 @@ main {
   color: var(--gold);
 }
 
+.pc-detail-streak {
+  color: var(--gold);
+}
+
 .pc-showcase-section {
   display: flex;
   justify-content: center;
@@ -3938,8 +3984,21 @@ main {
   border-radius: 12px;
 }
 .pd-stats-section .stats-section {
-  margin: 0;
+  /* Keep flat sections (Top 5, Ratings by Genre, Progress by Decade) from
+     bleeding into each other visually — but no extra padding since the
+     outer .pd-stats-section already pads to 20px. */
+  margin: 0 0 28px 0;
   padding: 0;
+}
+.pd-stats-section .stats-section:last-child {
+  margin-bottom: 0;
+}
+/* The Canon Score section is a self-contained sub-card (gold top stripe,
+   inner table). When nested inside .pd-stats-section the generic rule above
+   strips its inner padding, leaving the "Canon Score" header flush against
+   the outer card edge. Restore the 20px padding for this specific sub-card. */
+.pd-stats-section .stats-section.canon-score-section {
+  padding: 20px;
 }
 
 .pd-section-heading {
@@ -4076,9 +4135,10 @@ main {
   .poster-loading { min-height: 150px; height: 200px; }
   .info-col { padding: 14px 16px; }
   .film-title { font-size: 1.2rem; }
-  .film-year { font-size: 0.82rem; }
+  .film-year { font-size: 0.82rem; gap: 6px; }
   .film-plot { font-size: 0.8rem; line-height: 1.4; }
   .film-director { font-size: 0.78rem; }
+  .film-starring { font-size: 0.78rem; }
   .film-runtime { font-size: 0.78rem; }
   .film-pills-row { gap: 6px; flex-wrap: wrap; }
   .film-pills-row > * { font-size: 0.72rem; }

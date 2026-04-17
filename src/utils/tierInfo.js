@@ -9,6 +9,7 @@
 
 export const LIST_LABELS = {
   OSCAR: 'Academy Award (Best Picture / Intl. / Animated)',
+  OSCAR_NOM: 'Best Picture nominee',
   SS: 'Sight & Sound 2022 (critics + directors)',
   AFI: 'AFI 100 + 10 Top 10',
   IMDB: 'IMDb Top 250',
@@ -20,6 +21,7 @@ export const LIST_LABELS = {
 
 export const LIST_SHORT_LABELS = {
   OSCAR: 'Oscar',
+  OSCAR_NOM: 'BP nominee',
   SS: 'Sight & Sound',
   AFI: 'AFI',
   IMDB: 'IMDb',
@@ -37,11 +39,15 @@ export function getTierInfo(movie) {
     return { tier: movie.tier ?? movie.lists.length, lists: movie.lists };
   }
 
-  // Oscar films: derive OSCAR contribution from won state
+  // Oscar films: derive OSCAR contribution from won state. BP nominees that
+  // didn't win get an OSCAR_NOM pip — being nominated is a real accolade and
+  // should mark the film as recognized.
   const lists = [];
   if (movie.won) {
     // Any film with won=true won a major Academy Award category
     lists.push('OSCAR');
+  } else if (movie.category === 'BP') {
+    lists.push('OSCAR_NOM');
   }
   return { tier: lists.length, lists };
 }

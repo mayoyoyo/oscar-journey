@@ -554,6 +554,36 @@ main {
   border-color: var(--border);
 }
 
+/* =====================================================
+   OSCAR STATUETTE ICON
+   Binary visual demarcation: Oscar (winner/nominee) vs. Essential (no icon).
+   Matches /public/favicon.svg for brand continuity.
+   ===================================================== */
+.oscar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.oscar-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.oscar-icon-sm { width: 15px; height: 24px; }
+.oscar-icon-md { width: 22px; height: 36px; }
+
+/* Winner — full gold gradient + soft glow */
+.oscar-icon-winner { color: var(--gold); }
+.oscar-icon-winner svg {
+  filter: drop-shadow(0 0 3px rgba(212, 175, 60, 0.55));
+}
+
+/* Nominee — muted gray, no glow. "Reached the academy but didn't win." */
+.oscar-icon-nominee { color: #6f6c63; }
+[data-theme="dark"] .oscar-icon-nominee { color: #77736a; }
+
 /* Tier pips — compact visual for "how many canon lists is this film on" */
 .tier-pips {
   display: inline-flex;
@@ -3855,10 +3885,14 @@ main {
   .profile-summary-item { min-width: 0; flex: 1 1 30%; padding: 10px 8px; }
   .profile-film-row { gap: 6px; }
 
-  /* Films A-Z list — compact for mobile */
+  /* Films A-Z list — compact, single-line row for mobile.
+     Layout: [dot] [title (flex)] [pips] [oscar] [year]
+     No wrap — the row MUST stay one line so mark-as-watched / checklist-mode
+     taps stay above the fold. */
   .film-row {
     gap: 6px;
     padding: 8px 4px;
+    flex-wrap: nowrap;
   }
   .film-row-check {
     min-width: 20px;
@@ -3871,7 +3905,7 @@ main {
   }
   .film-row-title {
     font-size: 0.84rem;
-    flex: 1 1 60%;
+    flex: 1 1 auto;
     min-width: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -3881,12 +3915,28 @@ main {
     font-size: 0.75rem;
     min-width: unset;
   }
-  /* Hide badges on mobile — they're visible in the modal */
+  /* Pips get tighter on mobile so they sit beside the title cleanly */
+  .film-row .tier-pips-compact {
+    padding: 2px 6px;
+    gap: 2px;
+  }
+  .film-row .tier-pips-compact .tier-pip {
+    width: 4px;
+    height: 4px;
+  }
+  /* Slightly smaller statuette on mobile so it aligns with the text line */
+  .film-row .oscar-icon-sm {
+    width: 13px;
+    height: 21px;
+  }
+  /* Legacy small text badges — no longer rendered in rows, but keep the
+     hide rule as a safety net if anything else routes MovieBadges here. */
   .film-row .badge-winner-sm,
   .film-row .badge-genre-sm,
   .film-row .badge-bp-sm,
   .film-row .badge-int-sm,
-  .film-row .badge-anim-sm {
+  .film-row .badge-anim-sm,
+  .film-row .badge-essential-sm {
     display: none;
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { GENRE_LABELS } from '../data/movies';
 import TierPips from './TierPips';
+import OscarIcon, { getOscarStatus } from './OscarIcon';
 
 function speechUrl(title, year) {
   return `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ' + year + ' oscar acceptance speech best picture')}`;
@@ -64,30 +65,31 @@ export function BadgeBpSm() {
   return <span className="badge-bp-sm">Best Picture</span>;
 }
 
-// Renders the full set of badges for a movie
+// Renders the full set of badges for a movie.
+//
+// As of the Oscar-icon redesign: "Essential" is no longer a text tag. The Oscar
+// statuette icon (gold=winner, gray=nominee, none=essential/canon-only) carries
+// the Oscars-vs-Essentials demarcation; absence of an icon implies canon-only.
+// Tier pips sit inline so every A-Z row stays on a single line.
 export function MovieBadges({ movie, small = false }) {
   const alsoWon = movie.alsoWon || [];
+  const oscarStatus = getOscarStatus(movie);
 
   if (small) {
+    // Compact row layout: pips + Oscar icon only. No genre/category text chips
+    // (they're hidden on mobile anyway and redundant with the modal).
     return (
-      <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'wrap' }}>
-        {movie.won && movie.category === 'BP' && <BadgeWinnerSm />}
-        {movie.category === 'INT' && <BadgeIntSm />}
-        {movie.category === 'ANIM' && <BadgeAnimSm />}
-        {movie.category === 'BP' && <BadgeBpSm />}
-        {movie.category === 'ESSENTIAL' && <BadgeEssentialSm />}
-        {alsoWon.includes('INT') && <BadgeIntSm />}
-        {alsoWon.includes('ANIM') && <BadgeAnimSm />}
-        <BadgeGenreSm genre={movie.genre} />
+      <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'nowrap' }}>
         <TierPips movie={movie} variant="compact" />
+        <OscarIcon movie={movie} size="sm" />
       </span>
     );
   }
 
   return (
     <div className="badges">
-      {movie.won && movie.category === 'BP' && <BadgeWinner movie={movie} />}
-      {movie.category === 'ESSENTIAL' && <BadgeEssential />}
+      {oscarStatus === 'winner' && movie.category === 'BP' && <BadgeWinner movie={movie} />}
+      <OscarIcon movie={movie} size="md" />
       <BadgeGenre genre={movie.genre} />
       {movie.category === 'INT' && <BadgeInt />}
       {movie.category === 'ANIM' && <BadgeAnim />}

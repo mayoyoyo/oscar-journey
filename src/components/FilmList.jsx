@@ -476,8 +476,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                       <span className={`film-row-dot ${isWatched ? 'watched' : ''}`} />
                     )}
                     <span className="film-row-title">{m.title}</span>
-                    <span className="film-row-year">{m.year}</span>
                     <MovieBadges movie={m} small />
+                    <span className="film-row-year">{m.year}</span>
                   </div>
                 );
               })}

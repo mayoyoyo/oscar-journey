@@ -26,9 +26,15 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
   //    spanning Oscar categories AND essentials. Same UX either way.
   const isCeremonyMode = ceremony != null;
 
-  // Pick the sibling set: either films that shared the ceremony, or all films from the same year.
+  // Pick the sibling set. In ceremony mode we include all films that shared the ceremony
+  // PLUS any ESSENTIAL canon films released the same year — so viewing a 1994 Oscar film's
+  // ceremony surfaces Pulp Fiction alongside Forrest Gump. In year mode we just grab
+  // everything from that year.
   const siblings = isCeremonyMode
-    ? MOVIES.filter(m => m.ceremony === ceremony)
+    ? [
+        ...MOVIES.filter(m => m.ceremony === ceremony),
+        ...MOVIES.filter(m => m.category === 'ESSENTIAL' && m.year === year),
+      ]
     : MOVIES.filter(m => m.year === year);
 
   // Group by category (including alsoWon cross-listings for Oscar films).

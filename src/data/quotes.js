@@ -424,8 +424,20 @@ export const QUOTES = {
 
   // ====================================================================
   // ESSENTIAL (non-Oscar canon) — verified against Wikiquote.
+  // A small set below the Wikiquote-verified list was added manually
+  // after the auto-verifier missed them (URL normalization / disambig
+  // issues). Only lines rock-solid certain; silent-film and uncertain
+  // films were left without quotes.
   // ====================================================================
 
+  // --- Manually restored after auto-verifier missed their pages ---
+  '12-angry-men-1957': ["It's always difficult to keep personal prejudice out of a thing like this."],
+  'singin-in-the-rain-1952': ["I'm singin' in the rain, just singin' in the rain.", "Dignity. Always dignity."],
+  'psycho-1960': ["A boy's best friend is his mother.", "We all go a little mad sometimes."],
+  'lawrence-of-arabia-1962': ["Nothing is written.", "Big things have small beginnings."],
+  'alien-1979': ["In space, no one can hear you scream."],
+
+  // --- Wikiquote-verified ---
   'the-third-man-1949': ["In Italy, for thirty years under the Borgias, they had warfare, terror, murder and bloodshed, but they produced Michelangelo, Leonardo da Vinci and the Renaissance. In Switzerland, they had brotherly love, they had five hundred years of democracy and peace, and what did that produce? The cuckoo clock.", "Don't be so gloomy. After all it's not that awful."],
   'some-like-it-hot-1959': ["Nobody's perfect.", "Well, nobody's perfect!"],
   'citizen-kane-1941': ["Rosebud.", "You provide the prose poems. I'll provide the war.", "I think it would be fun to run a newspaper.", "I don't think there's one word that can describe a man's life."],

@@ -2,6 +2,7 @@ import React from 'react';
 import { GENRE_LABELS } from '../data/movies';
 import TierPips from './TierPips';
 import OscarIcon, { getOscarStatus } from './OscarIcon';
+import LanguagePill from './LanguagePill';
 
 function speechUrl(title, year) {
   return `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ' + year + ' oscar acceptance speech best picture')}`;
@@ -76,10 +77,11 @@ export function MovieBadges({ movie, small = false }) {
   const oscarStatus = getOscarStatus(movie);
 
   if (small) {
-    // Desktop row: genre + INT/ANIM chips + pips + Oscar icon.
-    // Mobile strips the chips via the @media rule in App.css so rows stay
-    // single-line. BP / Winner / Essential chips are intentionally NOT
-    // rendered — the Oscar icon (gold / silver / absent) carries all of that.
+    // Desktop row: genre + INT/ANIM + language + pips + Oscar icon.
+    // Mobile strips the TEXT chips via the @media rule in App.css so rows
+    // stay single-line; the language pill collapses to flag-only. BP /
+    // Winner / Essential chips are intentionally NOT rendered — the Oscar
+    // icon (gold / silver / absent) carries all of that.
     return (
       <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'nowrap' }}>
         <BadgeGenreSm genre={movie.genre} />
@@ -87,6 +89,7 @@ export function MovieBadges({ movie, small = false }) {
         {movie.category === 'ANIM' && <BadgeAnimSm />}
         {alsoWon.includes('INT') && <BadgeIntSm />}
         {alsoWon.includes('ANIM') && <BadgeAnimSm />}
+        <LanguagePill movie={movie} />
         <TierPips movie={movie} variant="compact" />
         <OscarIcon movie={movie} size="sm" />
       </span>

@@ -2082,6 +2082,26 @@ main {
   white-space: nowrap;
 }
 
+/* Language/flag pill — shown only for non-English films.
+   Desktop: flag emoji + language name.
+   Mobile: flag emoji only (.badge-lang-label hidden in the row media rule). */
+.badge-lang-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.badge-lang-flag {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 .list-count {
   font-size: 0.82rem;
   color: var(--cream-dim);
@@ -3998,6 +4018,16 @@ main {
   .film-row .badge-int-sm,
   .film-row .badge-anim-sm,
   .film-row .badge-essential-sm {
+    display: none;
+  }
+  /* Language pill: keep it on mobile but collapse to flag-only. The flag
+     alone signals non-English without eating row width. */
+  .film-row .badge-lang-sm {
+    padding: 0;
+    background: none;
+    border: none;
+  }
+  .film-row .badge-lang-label {
     display: none;
   }
 }

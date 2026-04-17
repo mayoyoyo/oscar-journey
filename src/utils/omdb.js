@@ -232,14 +232,18 @@ function storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey,
   const director = data.Director && data.Director !== 'N/A' ? data.Director : null;
   const runtime  = data.Runtime && data.Runtime !== 'N/A' ? data.Runtime : null;
   const awards   = data.Awards && data.Awards !== 'N/A' ? data.Awards : null;
+  const language = data.Language && data.Language !== 'N/A' ? data.Language : null;
+  const country  = data.Country  && data.Country  !== 'N/A' ? data.Country  : null;
   localStorage.setItem(posterKey,   poster   || NOT_FOUND);
   localStorage.setItem(plotKey,     plot     || NOT_FOUND);
   localStorage.setItem(ratingKey,   rating   || NOT_FOUND);
   localStorage.setItem(directorKey, director || NOT_FOUND);
   localStorage.setItem(runtimeKey,  runtime  || NOT_FOUND);
   localStorage.setItem(omdbCacheKey('awards', movie), awards || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('language', movie), language || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('country', movie), country || NOT_FOUND);
 
-  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime), awards };
+  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime), awards, language, country };
 }
 
 // Parse "Won 2 Oscars. Another 159 wins & 164 nominations." → 2
@@ -256,6 +260,20 @@ export function parseOscarWins(awardsText) {
 export function readCachedAwards(movie) {
   if (!movie) return null;
   const v = localStorage.getItem(omdbCacheKey('awards', movie));
+  if (!v || v === NOT_FOUND || v === 'RATE_LIMITED') return null;
+  return v;
+}
+
+// Language / country accessors used by the language-flag pill.
+export function readCachedLanguage(movie) {
+  if (!movie) return null;
+  const v = localStorage.getItem(omdbCacheKey('language', movie));
+  if (!v || v === NOT_FOUND || v === 'RATE_LIMITED') return null;
+  return v;
+}
+export function readCachedCountry(movie) {
+  if (!movie) return null;
+  const v = localStorage.getItem(omdbCacheKey('country', movie));
   if (!v || v === NOT_FOUND || v === 'RATE_LIMITED') return null;
   return v;
 }

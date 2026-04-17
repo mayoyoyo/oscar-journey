@@ -632,4 +632,10 @@ export const QUOTES = {
   'this-is-spinal-tap-1984': ["The numbers all go to 11.", "You can't really dust for vomit.", "None more black."],
   'the-princess-bride-1987': ["As you wish.", "There is a shortage of perfect breasts in this world. It would be a pity to damage yours.", "Inconceivable!"],
   'when-harry-met-sally-1989': ["I'll have what she's having."],
+
+  // --- Tier 2 (batch 6: 1960s-1970s arthouse + more) ---
+  'badlands-1973': ["He was handsomer than anybody I'd ever met. He looked just like James Dean."],
+  'paper-moon-1973': ["I know a woman who looks like a bullfrog but that don't mean she's the damn thing's mother."],
+  'z-1969': ["A single cannon is fired and a teacher's monthly salary goes up in smoke.", "Any similarity to real persons and events is not coincidental. It is intentional."],
+  'if-1968': ["There's no such thing as a wrong war. Violence and revolution are the only pure acts."],
 };

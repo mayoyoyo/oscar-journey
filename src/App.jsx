@@ -360,11 +360,10 @@ export default function App() {
     let pl;
     let needsNewPlaylist = false;
 
-    // v3.0.0 one-time migration: regenerate the playlist so existing profiles
-    // get the 438 new essentials properly front-loaded (instead of appended at
-    // the tail) and benefit from the new shuffle algorithm. Watched state and
-    // ratings are untouched — only order changes.
-    const SHUFFLE_VERSION = 3;
+    // Shuffle migration: bumped to 4 after wiring canon-list cross-references
+    // for Oscar films + tuning the front-loading exponent. Every profile gets
+    // a fresh playlist with the upgraded tier data. Watched + ratings untouched.
+    const SHUFFLE_VERSION = 4;
     const needsVersionMigration = (data.shuffleVersion || 0) < SHUFFLE_VERSION;
 
     if (needsVersionMigration) {

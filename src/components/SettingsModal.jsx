@@ -196,12 +196,12 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v2.5.0</span>
+            <span className="settings-version-num">v3.0.0</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
-              <p><strong>v2.5.0</strong> — Essentials expansion: 438 non-Oscar canon films</p>
+              <p><strong>v3.0.0</strong> — Essentials expansion: 438 non-Oscar canon films</p>
               <ul>
                 <li>New <strong>Essential</strong> category — 438 must-watch films that the Academy overlooked, curated by triangulating 7 independent canon lists (Sight &amp; Sound, Criterion, IMDb Top 250, Letterboxd Top 250, AFI, festival grand prizes, National Film Registry). A film qualifies if it appears on ≥ 2 lists</li>
                 <li>Catalog grows from 399 → <strong>837 films</strong>, covering decades 1910s–2020s (existing era filters expanded back to 1910s)</li>

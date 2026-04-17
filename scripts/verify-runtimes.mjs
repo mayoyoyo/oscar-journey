@@ -17,7 +17,7 @@ const OMDB_PATH = path.resolve(__dirname, '../src/utils/omdb.js');
 const OVERRIDES_PATH = path.resolve(__dirname, '../src/utils/runtimeOverrides.js');
 const REPORT_PATH = path.resolve(__dirname, 'runtime-report.json');
 
-const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238'];
+const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8', 'fbe9d009', '8a3c9a0', 'b76841fa'];
 let k = 0;
 
 // Read OMDb overrides directly from source so script and app stay in sync.
@@ -91,8 +91,12 @@ function parseRuntime(r) {
 
 async function main() {
   const movies = (await import(pathToFileURL(MOVIES_PATH).href + '?t=' + Date.now())).MOVIES;
+  // --all flag bypasses the skip so we can verify every film including overridden ones.
+  const includeOverridden = process.argv.includes('--all');
   console.log(`Checking runtimes across ${movies.length} films...`);
-  console.log(`Skipping ${Object.keys(existingOverrides).length} already overridden.`);
+  if (!includeOverridden) {
+    console.log(`Skipping ${Object.keys(existingOverrides).length} already overridden (pass --all to include).`);
+  }
 
   const flagged = [];
   const ok = [];
@@ -101,7 +105,7 @@ async function main() {
 
   for (let i = 0; i < movies.length; i++) {
     const m = movies[i];
-    if (existingOverrides[m.id] != null) { overriddenCount++; continue; }
+    if (!includeOverridden && existingOverrides[m.id] != null) { overriddenCount++; continue; }
 
     const data = await omdbFetch(m.title, getYear(m));
     if (!data) {

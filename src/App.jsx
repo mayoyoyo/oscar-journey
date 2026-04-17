@@ -1046,10 +1046,9 @@ export default function App() {
       <div className="app-scroll-area cinematic-enter">
       {showProgress && (
         <ProgressBar
-          currentIdx={currentIdx}
-          total={playlist.length}
-          watchedCount={watchedSet.size}
-          totalMovies={playlist.length}
+          currentIdx={eligiblePosition}
+          total={eligibleStats.total}
+          watchedCount={eligibleStats.watched}
         />
       )}
 

@@ -266,7 +266,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             </div>
 
             {omdbData?.director && (
-              <div className="film-detail-director">Dir. {omdbData.director}</div>
+              <div className="film-detail-director"><strong>Directed by</strong> {omdbData.director}</div>
             )}
             {(() => {
               // Static actors.json is the primary source (always hydrated);
@@ -277,7 +277,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               // OMDb returns "Actor 1, Actor 2, Actor 3" — convert commas to
               // middle dots so it reads like a credits line.
               const pretty = actors.split(',').map(s => s.trim()).filter(Boolean).join(' · ');
-              return <div className="film-detail-starring">Starring {pretty}</div>;
+              return <div className="film-detail-starring"><strong>Starring</strong> {pretty}</div>;
             })()}
             {omdbData?.plot && (
               <div className="film-detail-plot">{omdbData.plot}</div>

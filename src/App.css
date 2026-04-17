@@ -489,11 +489,13 @@ main {
 .film-detail-starring {
   color: var(--cream-dim);
   font-size: 0.88rem;
-  line-height: 1.4;
+  line-height: 1.6;
   margin-top: 2px;
 }
-.film-detail-starring::first-letter {
-  /* "Starring" label sits in cream; names below it inherit dim. */
+.film-detail-starring strong,
+.film-detail-director strong {
+  color: var(--cream);
+  font-weight: 700;
 }
 
 .badges {
@@ -2424,8 +2426,9 @@ main {
 }
 
 .film-detail-director {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--cream-dim);
+  line-height: 1.5;
 }
 
 .film-detail-runtime {

@@ -305,6 +305,12 @@ export default function App() {
   // --- Helper: save to Firestore with retry logic ---
   const firebaseSave = useCallback((field, value) => {
     if (!profile) return;
+    // Keep the local React profile state in sync with the Firestore write
+    // so other views (ProfileDetail) read the same value without a round
+    // trip. Previously goNext updated Firestore + the currentIdx local
+    // state but left profile.currentIdx stale — causing the Profile page
+    // to show the old anchor film while Journey tracked the new one.
+    setProfile(prev => prev ? { ...prev, [field]: value } : prev);
     setSaving(true);
     if (saveTimeout.current) clearTimeout(saveTimeout.current);
 

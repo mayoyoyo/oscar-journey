@@ -1,0 +1,1213 @@
+{
+  "changes": [
+    {
+      "id": "patton-1970",
+      "title": "Patton",
+      "year": 1970,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "five-easy-pieces-1970",
+      "title": "Five Easy Pieces",
+      "year": 1970,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "m-a-s-h-1970",
+      "title": "M*A*S*H",
+      "year": 1970,
+      "lists": [
+        "AFI",
+        "FEST",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-french-connection-1971",
+      "title": "The French Connection",
+      "year": 1971,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "a-clockwork-orange-1971",
+      "title": "A Clockwork Orange",
+      "year": 1971,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-last-picture-show-1971",
+      "title": "The Last Picture Show",
+      "year": 1971,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-godfather-1972",
+      "title": "The Godfather",
+      "year": 1972,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "cabaret-1972",
+      "title": "Cabaret",
+      "year": 1972,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "deliverance-1972",
+      "title": "Deliverance",
+      "year": 1972,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-sting-1973",
+      "title": "The Sting",
+      "year": 1973,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "american-graffiti-1973",
+      "title": "American Graffiti",
+      "year": 1973,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "cries-and-whispers-1973",
+      "title": "Cries and Whispers",
+      "year": 1973,
+      "lists": [
+        "SS"
+      ]
+    },
+    {
+      "id": "the-exorcist-1973",
+      "title": "The Exorcist",
+      "year": 1973,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-godfather-part-ii-1974",
+      "title": "The Godfather Part II",
+      "year": 1974,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "chinatown-1974",
+      "title": "Chinatown",
+      "year": 1974,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-conversation-1974",
+      "title": "The Conversation",
+      "year": 1974,
+      "lists": [
+        "FEST",
+        "NFR"
+      ]
+    },
+    {
+      "id": "one-flew-over-the-cuckoos-nest-1975",
+      "title": "One Flew Over the Cuckoo's Nest",
+      "year": 1975,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "barry-lyndon-1975",
+      "title": "Barry Lyndon",
+      "year": 1975,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "dog-day-afternoon-1975",
+      "title": "Dog Day Afternoon",
+      "year": 1975,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "jaws-1975",
+      "title": "Jaws",
+      "year": 1975,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "nashville-1975",
+      "title": "Nashville",
+      "year": 1975,
+      "lists": [
+        "AFI",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "rocky-1976",
+      "title": "Rocky",
+      "year": 1976,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "all-the-presidents-men-1976",
+      "title": "All the President's Men",
+      "year": 1976,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "network-1976",
+      "title": "Network",
+      "year": 1976,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "taxi-driver-1976",
+      "title": "Taxi Driver",
+      "year": 1976,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "FEST",
+        "NFR",
+        "CRIT"
+      ]
+    },
+    {
+      "id": "annie-hall-1977",
+      "title": "Annie Hall",
+      "year": 1977,
+      "lists": [
+        "AFI",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "star-wars-1977",
+      "title": "Star Wars",
+      "year": 1977,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-deer-hunter-1978",
+      "title": "The Deer Hunter",
+      "year": 1978,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "kramer-vs-kramer-1979",
+      "title": "Kramer vs. Kramer",
+      "year": 1979,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "all-that-jazz-1979",
+      "title": "All That Jazz",
+      "year": 1979,
+      "lists": [
+        "FEST",
+        "NFR"
+      ]
+    },
+    {
+      "id": "apocalypse-now-1979",
+      "title": "Apocalypse Now",
+      "year": 1979,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "FEST",
+        "NFR"
+      ]
+    },
+    {
+      "id": "breaking-away-1979",
+      "title": "Breaking Away",
+      "year": 1979,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "coal-miners-daughter-1980",
+      "title": "Coal Miner's Daughter",
+      "year": 1980,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-elephant-man-1980",
+      "title": "The Elephant Man",
+      "year": 1980,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "raging-bull-1980",
+      "title": "Raging Bull",
+      "year": 1980,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR",
+        "CRIT"
+      ]
+    },
+    {
+      "id": "atlantic-city-1981",
+      "title": "Atlantic City",
+      "year": 1981,
+      "lists": [
+        "FEST",
+        "NFR"
+      ]
+    },
+    {
+      "id": "raiders-of-the-lost-ark-1981",
+      "title": "Raiders of the Lost Ark",
+      "year": 1981,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "reds-1981",
+      "title": "Reds",
+      "year": 1981,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "e-t-the-extra-terrestrial-1982",
+      "title": "E.T. the Extra-Terrestrial",
+      "year": 1982,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "missing-1982",
+      "title": "Missing",
+      "year": 1982,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "tootsie-1982",
+      "title": "Tootsie",
+      "year": 1982,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-verdict-1982",
+      "title": "The Verdict",
+      "year": 1982,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "the-big-chill-1983",
+      "title": "The Big Chill",
+      "year": 1983,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-right-stuff-1983",
+      "title": "The Right Stuff",
+      "year": 1983,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "amadeus-1984",
+      "title": "Amadeus",
+      "year": 1984,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "witness-1985",
+      "title": "Witness",
+      "year": 1985,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "platoon-1986",
+      "title": "Platoon",
+      "year": 1986,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-mission-1986",
+      "title": "The Mission",
+      "year": 1986,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "broadcast-news-1987",
+      "title": "Broadcast News",
+      "year": 1987,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "moonstruck-1987",
+      "title": "Moonstruck",
+      "year": 1987,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "rain-man-1988",
+      "title": "Rain Man",
+      "year": 1988,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "dead-poets-society-1989",
+      "title": "Dead Poets Society",
+      "year": 1989,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "field-of-dreams-1989",
+      "title": "Field of Dreams",
+      "year": 1989,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "dances-with-wolves-1990",
+      "title": "Dances with Wolves",
+      "year": 1990,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "goodfellas-1990",
+      "title": "Goodfellas",
+      "year": 1990,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-silence-of-the-lambs-1991",
+      "title": "The Silence of the Lambs",
+      "year": 1991,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "beauty-and-the-beast-1991",
+      "title": "Beauty and the Beast",
+      "year": 1991,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "unforgiven-1992",
+      "title": "Unforgiven",
+      "year": 1992,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "a-few-good-men-1992",
+      "title": "A Few Good Men",
+      "year": 1992,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "schindlers-list-1993",
+      "title": "Schindler's List",
+      "year": 1993,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "in-the-name-of-the-father-1993",
+      "title": "In the Name of the Father",
+      "year": 1993,
+      "lists": [
+        "IMDB",
+        "FEST"
+      ]
+    },
+    {
+      "id": "the-piano-1993",
+      "title": "The Piano",
+      "year": 1993,
+      "lists": [
+        "SS",
+        "FEST",
+        "CRIT"
+      ]
+    },
+    {
+      "id": "forrest-gump-1994",
+      "title": "Forrest Gump",
+      "year": 1994,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "pulp-fiction-1994",
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "SS",
+        "FEST",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-shawshank-redemption-1994",
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "braveheart-1995",
+      "title": "Braveheart",
+      "year": 1995,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "apollo-13-1995",
+      "title": "Apollo 13",
+      "year": 1995,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "sense-and-sensibility-1995",
+      "title": "Sense and Sensibility",
+      "year": 1995,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "fargo-1996",
+      "title": "Fargo",
+      "year": 1996,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "jerry-maguire-1996",
+      "title": "Jerry Maguire",
+      "year": 1996,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "secrets-lies-1996",
+      "title": "Secrets & Lies",
+      "year": 1996,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "titanic-1997",
+      "title": "Titanic",
+      "year": 1997,
+      "lists": [
+        "AFI",
+        "NFR"
+      ]
+    },
+    {
+      "id": "good-will-hunting-1997",
+      "title": "Good Will Hunting",
+      "year": 1997,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "l-a-confidential-1997",
+      "title": "L.A. Confidential",
+      "year": 1997,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "life-is-beautiful-1998",
+      "title": "Life Is Beautiful",
+      "year": 1998,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "saving-private-ryan-1998",
+      "title": "Saving Private Ryan",
+      "year": 1998,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-thin-red-line-1998",
+      "title": "The Thin Red Line",
+      "year": 1998,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "american-beauty-1999",
+      "title": "American Beauty",
+      "year": 1999,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-green-mile-1999",
+      "title": "The Green Mile",
+      "year": 1999,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-sixth-sense-1999",
+      "title": "The Sixth Sense",
+      "year": 1999,
+      "lists": [
+        "AFI",
+        "IMDB"
+      ]
+    },
+    {
+      "id": "gladiator-2000",
+      "title": "Gladiator",
+      "year": 2000,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "a-beautiful-mind-2001",
+      "title": "A Beautiful Mind",
+      "year": 2001,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-lord-of-the-rings-the-fellowship-of-the-ring-2001",
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "lists": [
+        "AFI",
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-lord-of-the-rings-the-two-towers-2002",
+      "title": "The Lord of the Rings: The Two Towers",
+      "year": 2002,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-pianist-2002",
+      "title": "The Pianist",
+      "year": 2002,
+      "lists": [
+        "IMDB",
+        "FEST"
+      ]
+    },
+    {
+      "id": "the-lord-of-the-rings-the-return-of-the-king-2003",
+      "title": "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "million-dollar-baby-2004",
+      "title": "Million Dollar Baby",
+      "year": 2004,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "brokeback-mountain-2005",
+      "title": "Brokeback Mountain",
+      "year": 2005,
+      "lists": [
+        "FEST",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-departed-2006",
+      "title": "The Departed",
+      "year": 2006,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "no-country-for-old-men-2007",
+      "title": "No Country for Old Men",
+      "year": 2007,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "there-will-be-blood-2007",
+      "title": "There Will Be Blood",
+      "year": 2007,
+      "lists": [
+        "IMDB",
+        "SS"
+      ]
+    },
+    {
+      "id": "the-hurt-locker-2009",
+      "title": "The Hurt Locker",
+      "year": 2009,
+      "lists": [
+        "NFR"
+      ]
+    },
+    {
+      "id": "inglourious-basterds-2009",
+      "title": "Inglourious Basterds",
+      "year": 2009,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "up-2009",
+      "title": "Up",
+      "year": 2009,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "inception-2010",
+      "title": "Inception",
+      "year": 2010,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "toy-story-3-2010",
+      "title": "Toy Story 3",
+      "year": 2010,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-tree-of-life-2011",
+      "title": "The Tree of Life",
+      "year": 2011,
+      "lists": [
+        "SS",
+        "FEST"
+      ]
+    },
+    {
+      "id": "amour-2012",
+      "title": "Amour",
+      "year": 2012,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "django-unchained-2012",
+      "title": "Django Unchained",
+      "year": 2012,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "12-years-a-slave-2013",
+      "title": "12 Years a Slave",
+      "year": 2013,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "the-wolf-of-wall-street-2013",
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-grand-budapest-hotel-2014",
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "whiplash-2014",
+      "title": "Whiplash",
+      "year": 2014,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "spotlight-2015",
+      "title": "Spotlight",
+      "year": 2015,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "mad-max-fury-road-2015",
+      "title": "Mad Max: Fury Road",
+      "year": 2015,
+      "lists": [
+        "IMDB",
+        "SS"
+      ]
+    },
+    {
+      "id": "room-2015",
+      "title": "Room",
+      "year": 2015,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "moonlight-2016",
+      "title": "Moonlight",
+      "year": 2016,
+      "lists": [
+        "SS"
+      ]
+    },
+    {
+      "id": "the-shape-of-water-2017",
+      "title": "The Shape of Water",
+      "year": 2017,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "get-out-2017",
+      "title": "Get Out",
+      "year": 2017,
+      "lists": [
+        "SS"
+      ]
+    },
+    {
+      "id": "green-book-2018",
+      "title": "Green Book",
+      "year": 2018,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "roma-2018",
+      "title": "Roma",
+      "year": 2018,
+      "lists": [
+        "FEST",
+        "CRIT"
+      ]
+    },
+    {
+      "id": "parasite-2019",
+      "title": "Parasite",
+      "year": 2019,
+      "lists": [
+        "IMDB",
+        "SS",
+        "FEST"
+      ]
+    },
+    {
+      "id": "ford-v-ferrari-2019",
+      "title": "Ford v Ferrari",
+      "year": 2019,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-irishman-2019",
+      "title": "The Irishman",
+      "year": 2019,
+      "lists": [
+        "CRIT"
+      ]
+    },
+    {
+      "id": "joker-2019",
+      "title": "Joker",
+      "year": 2019,
+      "lists": [
+        "IMDB",
+        "FEST"
+      ]
+    },
+    {
+      "id": "marriage-story-2019",
+      "title": "Marriage Story",
+      "year": 2019,
+      "lists": [
+        "CRIT"
+      ]
+    },
+    {
+      "id": "1917-2019",
+      "title": "1917",
+      "year": 2019,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "nomadland-2020",
+      "title": "Nomadland",
+      "year": 2020,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "the-father-2020",
+      "title": "The Father",
+      "year": 2020,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "triangle-of-sadness-2022",
+      "title": "Triangle of Sadness",
+      "year": 2022,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "oppenheimer-2023",
+      "title": "Oppenheimer",
+      "year": 2023,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "anatomy-of-a-fall-2023",
+      "title": "Anatomy of a Fall",
+      "year": 2023,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "poor-things-2023",
+      "title": "Poor Things",
+      "year": 2023,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "anora-2024",
+      "title": "Anora",
+      "year": 2024,
+      "lists": [
+        "FEST"
+      ]
+    },
+    {
+      "id": "all-about-my-mother-1999",
+      "title": "All About My Mother",
+      "year": 1999,
+      "lists": [
+        "SS"
+      ]
+    },
+    {
+      "id": "the-lives-of-others-2006",
+      "title": "The Lives of Others",
+      "year": 2006,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "a-separation-2011",
+      "title": "A Separation",
+      "year": 2011,
+      "lists": [
+        "IMDB",
+        "FEST"
+      ]
+    },
+    {
+      "id": "shrek-2001",
+      "title": "Shrek",
+      "year": 2001,
+      "lists": [
+        "AFI"
+      ]
+    },
+    {
+      "id": "spirited-away-2002",
+      "title": "Spirited Away",
+      "year": 2002,
+      "lists": [
+        "IMDB",
+        "SS",
+        "FEST"
+      ]
+    },
+    {
+      "id": "finding-nemo-2003",
+      "title": "Finding Nemo",
+      "year": 2003,
+      "lists": [
+        "AFI",
+        "IMDB"
+      ]
+    },
+    {
+      "id": "the-incredibles-2004",
+      "title": "The Incredibles",
+      "year": 2004,
+      "lists": [
+        "IMDB",
+        "NFR"
+      ]
+    },
+    {
+      "id": "ratatouille-2007",
+      "title": "Ratatouille",
+      "year": 2007,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "wall-e-2008",
+      "title": "WALL-E",
+      "year": 2008,
+      "lists": [
+        "IMDB",
+        "NFR",
+        "CRIT"
+      ]
+    },
+    {
+      "id": "coco-2017",
+      "title": "Coco",
+      "year": 2017,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "spider-man-into-the-spider-verse-2018",
+      "title": "Spider-Man Into the Spider-Verse",
+      "year": 2018,
+      "lists": [
+        "IMDB"
+      ]
+    },
+    {
+      "id": "flow-2024",
+      "title": "Flow",
+      "year": 2024,
+      "lists": [
+        "CRIT"
+      ]
+    }
+  ],
+  "totalMatched": 136,
+  "byList": {
+    "AFI": 47,
+    "IMDB": 76,
+    "SS": 23,
+    "FEST": 30,
+    "NFR": 64,
+    "CRIT": 8
+  }
+}

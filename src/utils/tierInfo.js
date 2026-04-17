@@ -34,22 +34,22 @@ export const LIST_SHORT_LABELS = {
 export const MAX_TIER = 8; // 7 canon lists + OSCAR
 
 export function getTierInfo(movie) {
-  // Essential films: baked-in tier + lists
-  if (movie.lists && Array.isArray(movie.lists)) {
-    return { tier: movie.tier ?? movie.lists.length, lists: movie.lists };
+  // Start with any baked-in canon lists (AFI, IMDb, SS, NFR, etc.)
+  const lists = (movie.lists && Array.isArray(movie.lists)) ? [...movie.lists] : [];
+
+  // For Oscar films (BP/INT/ANIM), also append the OSCAR or OSCAR_NOM pip.
+  // Essentials don't get OSCAR — their tier is purely their canon-list count.
+  if (movie.category !== 'ESSENTIAL') {
+    if (movie.won && !lists.includes('OSCAR')) {
+      lists.push('OSCAR');
+    } else if (movie.category === 'BP' && !movie.won && !lists.includes('OSCAR_NOM')) {
+      lists.push('OSCAR_NOM');
+    }
   }
 
-  // Oscar films: derive OSCAR contribution from won state. BP nominees that
-  // didn't win get an OSCAR_NOM pip — being nominated is a real accolade and
-  // should mark the film as recognized.
-  const lists = [];
-  if (movie.won) {
-    // Any film with won=true won a major Academy Award category
-    lists.push('OSCAR');
-  } else if (movie.category === 'BP') {
-    lists.push('OSCAR_NOM');
-  }
-  return { tier: lists.length, lists };
+  // For essentials, prefer the baked-in tier field if present (same value either way).
+  const tier = (movie.category === 'ESSENTIAL' && movie.tier != null) ? movie.tier : lists.length;
+  return { tier, lists };
 }
 
 export function getTier(movie) {

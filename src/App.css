@@ -1977,22 +1977,20 @@ main {
 .film-list-filters.is-open .film-list-filters-bar {
   border-bottom: 1px solid var(--border);
 }
-/* Everything on one flex row: filter toggle + mode chips + match count +
-   active count + reset. Wraps only if truly no room (very narrow mobile). */
+/* Inline row holding the Filters toggle + mode chips (Watched only /
+   Checklist mode). Lives above the collapsible filter body so the toggles
+   stay reachable without opening filters. */
 .film-list-filters-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
-  padding: 10px 14px;
   flex-wrap: wrap;
 }
-.film-list-filters-bar .film-list-filters-header {
-  padding: 4px 6px;
-  width: auto;
-  flex: 0 0 auto;
-}
-.film-list-filters-bar .film-list-toggle {
-  flex: 0 0 auto;
+.film-list-mode-toggles-inline {
+  padding: 0 14px;
+  padding-bottom: 0;
+  flex-shrink: 0;
 }
 .film-list-filters-header:hover { background: rgba(255,255,255,0.02); }
 .film-list-filters-arrow {
@@ -2010,17 +2008,23 @@ main {
   border-radius: 10px;
   font-weight: 600;
 }
-/* Match-count sits to the right of the mode chips on the filter bar. */
+/* Match-count badge sits in the filter header — replaces the old
+   separate "N films · M watched" line below the filter block. */
 .film-list-filters-match {
   margin-left: auto;
   font-size: 0.78rem;
   color: var(--cream-dim);
   font-weight: 500;
   letter-spacing: 0.02em;
-  flex: 0 0 auto;
 }
 .film-list-filters-watched {
   color: var(--gold-dim);
+}
+/* When both match-count and active-count + reset are rendered, push
+   match-count to flex-right and keep active/reset after it. */
+.film-list-filters-header .film-list-filters-count,
+.film-list-filters-header .film-list-filter-reset {
+  margin-left: 8px;
 }
 .film-list-filter-reset {
   margin-left: auto;

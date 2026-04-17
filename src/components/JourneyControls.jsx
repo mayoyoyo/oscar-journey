@@ -64,13 +64,20 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   };
 
   const sectionCount = (section) => {
-    const vals = Object.values(currentFilters[section]);
-    const active = vals.filter(Boolean).length;
+    const cur = currentFilters[section];
+    const def = DEFAULT_FILTERS[section] || {};
+    const entries = Object.entries(cur);
+    const active = entries.filter(([, v]) => v).length;
     if (section === 'smart') {
       // For smart filters, show count of enabled ones (they're off by default)
       return active > 0 ? `${active} on` : null;
     }
-    return active < vals.length ? `${active}/${vals.length}` : null;
+    // Hide the badge when current state matches defaults — otherwise a
+    // partially-default filter (e.g. pre-1970s off by default) would show a
+    // misleading ratio even though the user hasn't customized anything.
+    const matchesDefault = entries.every(([k, v]) => v === def[k]);
+    if (matchesDefault) return null;
+    return `${active}/${entries.length}`;
   };
 
   // Per-option counts based on canon depth + essentialsOnly. Used to hide rows that would
@@ -150,13 +157,17 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       if (v) chips.push(SMART_LABELS[k] || k);
     }
 
-    // Generic helper for set-based filters (eras / categories / genres / runtimes)
+    // Generic helper for set-based filters (eras / categories / genres / runtimes).
+    // Skips the chip when the user hasn't diverged from DEFAULT_FILTERS — otherwise
+    // partially-default filters (like pre-1970s off by default) would always chip.
     const summarize = (key, labelMap, sectionLabel) => {
       const entries = Object.entries(currentFilters[key]);
+      const def = DEFAULT_FILTERS[key] || {};
+      const matchesDefault = entries.every(([k, v]) => v === def[k]);
+      if (matchesDefault) return;
       const active = entries.filter(([, v]) => v);
       const inactive = entries.filter(([, v]) => !v);
-      if (inactive.length === 0) return; // all on = no filter
-      if (active.length === 0) return; // all off (shouldn't happen given auto-restore)
+      if (active.length === 0) return;
       if (active.length <= 3) {
         chips.push(`${sectionLabel}: ${active.map(([k]) => labelMap[k] || k).join(', ')}`);
       } else if (inactive.length <= 2) {

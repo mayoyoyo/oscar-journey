@@ -3,8 +3,11 @@ import { AVATAR_EMOJIS } from '../data/avatars';
 import { GENRE_LABELS } from '../data/movies';
 
 const DEFAULT_FILTERS = {
+  // Pre-1970 eras default OFF — most users want the modern era by default.
+  // All 12 buckets are present so existing profiles with saved state merge cleanly;
+  // users can opt into earlier decades via the filter panel.
   eras: {
-    '1910s': true, '1920s': true, '1930s': true, '1940s': true, '1950s': true, '1960s': true,
+    '1910s': false, '1920s': false, '1930s': false, '1940s': false, '1950s': false, '1960s': false,
     '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true,
   },
   categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },

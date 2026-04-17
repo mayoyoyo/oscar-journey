@@ -8,7 +8,6 @@ import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
-import { getTierInfo, LIST_LABELS, LIST_SHORT_LABELS } from '../utils/tierInfo';
 
 import { RARITIES } from '../utils/cards';
 import { getCardOwner } from '../utils/cardRegistry';
@@ -256,29 +255,6 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             {omdbData?.runtime && (
               <div className="film-detail-runtime">🕐 {omdbData.runtime}</div>
             )}
-
-            {/* Canon appearances — list membership for ESSENTIAL films and Oscar winners */}
-            {(() => {
-              const { tier, lists } = getTierInfo(movie);
-              if (lists.length === 0) return null;
-              // Hide the redundant OSCAR-only case — it's already shown via the Oscar awards block below
-              const nonOscarLists = lists.filter(l => l !== 'OSCAR');
-              if (nonOscarLists.length === 0) return null;
-              return (
-                <div className="film-detail-canon">
-                  <div className="film-detail-canon-title">
-                    ✦ Canon — on {tier} of 8 major lists
-                  </div>
-                  <div className="film-detail-canon-lists">
-                    {lists.map(l => (
-                      <span key={l} className={`canon-list-chip ${l === 'OSCAR' ? 'canon-list-oscar' : ''}`} title={LIST_LABELS[l]}>
-                        {LIST_SHORT_LABELS[l] || l}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })()}
 
             {(() => {
               const totalOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);

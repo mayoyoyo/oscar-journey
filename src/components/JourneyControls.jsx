@@ -140,6 +140,46 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     );
   };
 
+  // Compact summary chips of what's been narrowed — shown next to the collapsed Filters header.
+  // Each chip describes one customized facet (era subset, genre subset, canon mode, etc.).
+  const filterChips = useMemo(() => {
+    const chips = [];
+
+    // Smart filters (each enabled flag becomes its own chip)
+    for (const [k, v] of Object.entries(currentFilters.smart)) {
+      if (v) chips.push(SMART_LABELS[k] || k);
+    }
+
+    // Generic helper for set-based filters (eras / categories / genres / runtimes)
+    const summarize = (key, labelMap, sectionLabel) => {
+      const entries = Object.entries(currentFilters[key]);
+      const active = entries.filter(([, v]) => v);
+      const inactive = entries.filter(([, v]) => !v);
+      if (inactive.length === 0) return; // all on = no filter
+      if (active.length === 0) return; // all off (shouldn't happen given auto-restore)
+      if (active.length <= 3) {
+        chips.push(`${sectionLabel}: ${active.map(([k]) => labelMap[k] || k).join(', ')}`);
+      } else if (inactive.length <= 2) {
+        chips.push(`${sectionLabel}: not ${inactive.map(([k]) => labelMap[k] || k).join(', ')}`);
+      } else {
+        chips.push(`${sectionLabel}: ${active.length}/${entries.length}`);
+      }
+    };
+    summarize('eras', ERA_LABELS, 'Eras');
+    summarize('categories', CATEGORY_LABELS, 'Categories');
+    summarize('genres', GENRE_LABELS, 'Genres');
+    summarize('runtimes', RUNTIME_LABELS, 'Runtime');
+
+    // Canon depth + essentials-only
+    if (currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier) {
+      if (currentFilters.minEssentialTier === 99) chips.push('Oscars only');
+      else chips.push(`Canon ≥${currentFilters.minEssentialTier}`);
+    }
+    if (currentFilters.essentialsOnly) chips.push('Essentials only');
+
+    return chips;
+  }, [currentFilters]);
+
   // Find synced profile name
   const syncedProfile = syncedWith ? profiles?.find(p => p.id === syncedWith) : null;
 
@@ -165,7 +205,14 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
             {eligibleCount < totalCount && (
               <span className="journey-filter-count">{eligibleCount}/{totalCount}</span>
             )}
-            {activeFilterCount > 0 && (
+            {!filtersOpen && filterChips.length > 0 && (
+              <span className="journey-filter-chips">
+                {filterChips.map((c, i) => (
+                  <span key={i} className="journey-filter-chip">{c}</span>
+                ))}
+              </span>
+            )}
+            {filtersOpen && activeFilterCount > 0 && (
               <span className="journey-filters-active">{activeFilterCount} active</span>
             )}
           </button>

@@ -3,6 +3,7 @@ import { fetchOmdbData, readCachedOmdbData, parseOscarWins } from '../utils/omdb
 import { MovieBadges } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
+import LanguagePill from './LanguagePill';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
 import StarPicker from './StarPicker';
@@ -218,6 +219,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 return <span className="film-year-runtime"> · {pretty}</span>;
               })()}
               <TierPips movie={movie} variant="compact" />
+              <LanguagePill movie={movie} />
             </div>
             <MovieBadges movie={movie} />
 

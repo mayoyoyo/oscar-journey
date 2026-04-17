@@ -889,11 +889,6 @@ main {
   font-size: 0.84rem;
   color: var(--cream-dim);
   line-height: 1.55;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin-top: 4px;
   padding-top: 8px;
   border-top: 1px solid var(--border);

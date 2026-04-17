@@ -200,7 +200,19 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
             </div>
             <div className="film-title">{movie.title}</div>
-            <div className="film-year">{movie.year}</div>
+            <div className="film-year">
+              {movie.year}
+              {omdbData?.runtime && (() => {
+                // OMDb returns runtime as "138 min". Reformat to "2h 18m"
+                // (or just "18m" for sub-hour shorts) and show inline with year.
+                const m = parseInt(String(omdbData.runtime).match(/\d+/)?.[0], 10);
+                if (!m) return null;
+                const h = Math.floor(m / 60);
+                const mm = m % 60;
+                const pretty = h > 0 ? `${h}h${mm ? ` ${mm}m` : ''}` : `${mm}m`;
+                return <span className="film-year-runtime"> · {pretty}</span>;
+              })()}
+            </div>
             <MovieBadges movie={movie} />
 
             {/* Ratings summary row */}
@@ -250,14 +262,11 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               </a>
             </div>
 
-            {omdbData?.plot && (
-              <div className="film-detail-plot">{omdbData.plot}</div>
-            )}
             {omdbData?.director && (
               <div className="film-detail-director">Dir. {omdbData.director}</div>
             )}
-            {omdbData?.runtime && (
-              <div className="film-detail-runtime">🕐 {omdbData.runtime}</div>
+            {omdbData?.plot && (
+              <div className="film-detail-plot">{omdbData.plot}</div>
             )}
 
             {(() => {

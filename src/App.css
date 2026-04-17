@@ -472,6 +472,11 @@ main {
   font-weight: 500;
   margin-bottom: 2px;
 }
+.film-year-runtime {
+  color: var(--cream-dim);
+  font-weight: 400;
+  opacity: 0.85;
+}
 
 .badges {
   display: flex;

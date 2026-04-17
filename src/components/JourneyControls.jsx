@@ -2,6 +2,20 @@ import React, { useState, useMemo } from 'react';
 import { MOVIES } from '../data/movies';
 import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, GENRE_LABELS, SMART_LABELS } from './SettingsModal';
 import { RUNTIME_LABELS } from '../utils/runtime';
+import { getTier } from '../utils/tierInfo';
+
+// Per-tier copy shown in the Canon depth stepper. Mirrors the Film tab's
+// TIER_LEVELS so both surfaces describe the canon threshold identically.
+const TIER_LEVELS = {
+  1: { label: 'Everything',            sub: 'The whole catalog — no canon floor applied.' },
+  2: { label: 'Canon threshold',       sub: 'On 2+ canonical lists. The working bar for "belongs in the canon."' },
+  3: { label: 'Strong consensus',      sub: 'On 3+ lists. Backed by multiple disjoint cultural authorities.' },
+  4: { label: 'Iron-clad',             sub: 'On 4+ lists. No serious critic argues against these.' },
+  5: { label: 'Near-universal',        sub: 'On 5+ lists. Staples of every major canon.' },
+  6: { label: 'Universal canon',       sub: 'On 6+ lists. Essentially undisputed across worldviews.' },
+  7: { label: 'All-time masterpieces', sub: 'On 7 of 8 lists. In the conversation for greatest ever made.' },
+};
+const MAX_SLIDER_TIER = 7;
 
 function eraBucketJourney(year) {
   if (year < 1920) return '1910s';
@@ -23,12 +37,26 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, canon: false, genres: false, runtimes: false });
   const [filtersOpen, setFiltersOpen] = useState(false);
 
+  // Migrate legacy shape (minEssentialTier / old essentialsOnly-hides-Oscars semantic)
+  // into the unified tier + oscarsOnly / essentialsOnly shape. Done at read time so
+  // existing profiles display correctly before their next save overwrites the keys.
+  const legacyTier = filters?.minEssentialTier;
+  const migratedMinTier = filters?.minTier
+    ?? (legacyTier === 99 ? 1 : legacyTier ?? DEFAULT_FILTERS.minTier);
+  const migratedOscarsOnly = filters?.oscarsOnly ?? (legacyTier === 99) ?? DEFAULT_FILTERS.oscarsOnly;
+
   const currentFilters = {
     eras: { ...DEFAULT_FILTERS.eras, ...(filters?.eras || {}) },
-    categories: { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) },
+    // Drop stale ESSENTIAL key from saved profiles — Categories no longer governs it.
+    categories: (() => {
+      const merged = { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) };
+      delete merged.ESSENTIAL;
+      return merged;
+    })(),
     genres: { ...DEFAULT_FILTERS.genres, ...(filters?.genres || {}) },
     runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters?.runtimes || {}) },
-    minEssentialTier: filters?.minEssentialTier ?? DEFAULT_FILTERS.minEssentialTier,
+    minTier: migratedMinTier,
+    oscarsOnly: migratedOscarsOnly,
     essentialsOnly: filters?.essentialsOnly ?? DEFAULT_FILTERS.essentialsOnly,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters?.smart || {}) },
   };
@@ -47,7 +75,8 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     for (const [k, v] of Object.entries(currentFilters.smart)) {
       if (v !== (DEFAULT_FILTERS.smart[k] ?? false)) n++;
     }
-    if (currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier) n++;
+    if (currentFilters.minTier !== DEFAULT_FILTERS.minTier) n++;
+    if (currentFilters.oscarsOnly !== DEFAULT_FILTERS.oscarsOnly) n++;
     if (currentFilters.essentialsOnly !== DEFAULT_FILTERS.essentialsOnly) n++;
     return n;
   })();
@@ -60,11 +89,22 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     if (section !== 'smart' && !Object.values(nextSection).some(Boolean)) {
       for (const k of Object.keys(nextSection)) nextSection[k] = true;
     }
+    // Write the migrated canon keys back on every save so legacy keys retire over time.
     onFiltersChange({ ...currentFilters, [section]: nextSection });
+  };
+
+  const setOnlyKey = (section, labels, onlyKey) => {
+    const next = {};
+    for (const k of Object.keys(labels)) next[k] = (k === onlyKey);
+    onFiltersChange({ ...currentFilters, [section]: next });
   };
 
   const toggleSection = (section) => {
     setOpenSections(prev => ({ ...prev, [section]: !prev[section] }));
+  };
+
+  const resetFilters = () => {
+    onFiltersChange({ ...DEFAULT_FILTERS });
   };
 
   const handleReshuffle = () => {
@@ -90,13 +130,14 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     return `${active}/${entries.length}`;
   };
 
-  // Per-option counts based on canon depth + essentialsOnly. Used to hide rows that would
-  // match zero films (e.g. 1910s when canon depth is set to ≥3).
+  // Per-option eligibility pool based on unified tier + focus mode. Used to hide
+  // rows that would match zero films (e.g. 1910s when tier ≥ 5).
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (m.category === 'ESSENTIAL' && (m.tier || 0) < (currentFilters.minEssentialTier ?? 2)) return false;
+    if (getTier(m) < (currentFilters.minTier ?? 1)) return false;
+    if (currentFilters.oscarsOnly && m.category === 'ESSENTIAL') return false;
     if (currentFilters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
-  }), [currentFilters.minEssentialTier, currentFilters.essentialsOnly]);
+  }), [currentFilters.minTier, currentFilters.oscarsOnly, currentFilters.essentialsOnly]);
 
   const eraCounts = useMemo(() => {
     const c = {};
@@ -125,17 +166,25 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   const renderChecklist = (section, labels, counts) => (
     <div className="filter-checklist">
       {Object.entries(labels).map(([key, label]) => {
+        // Hide rows that have zero matching films at the current canon settings.
         if (counts && (counts[key] || 0) === 0) return null;
         const active = currentFilters[section][key];
-        const suffix = counts ? `(${counts[key] || 0})` : null;
         return (
           <div key={key} className={`filter-check-item ${active ? 'active' : ''}`}
             onClick={() => toggleFilter(section, key)}>
             <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
-            <span className="filter-check-label">
-              {label}
-              {suffix && <span className="filter-check-suffix"> {suffix}</span>}
-            </span>
+            <span className="filter-check-label">{label}</span>
+            {/* "only" shortcut — skip for smart filters (each is independent opt-in). */}
+            {section !== 'smart' && (
+              <button
+                type="button"
+                className="filter-only-btn"
+                onClick={(e) => { e.stopPropagation(); setOnlyKey(section, labels, key); }}
+                title={`Show only ${label}`}
+              >
+                only
+              </button>
+            )}
           </div>
         );
       })}
@@ -191,12 +240,9 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     summarize('genres', GENRE_LABELS, 'Genres');
     summarize('runtimes', RUNTIME_LABELS, 'Runtime');
 
-    // Canon depth + essentials-only
-    if (currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier) {
-      if (currentFilters.minEssentialTier === 99) chips.push('Oscars only');
-      else chips.push(`Canon ≥${currentFilters.minEssentialTier}`);
-    }
+    if (currentFilters.oscarsOnly) chips.push('Oscars only');
     if (currentFilters.essentialsOnly) chips.push('Essentials only');
+    if (currentFilters.minTier > 1) chips.push(`Tier ≥${currentFilters.minTier}`);
 
     return chips;
   }, [currentFilters]);
@@ -238,72 +284,105 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
             {filtersOpen && activeFilterCount > 0 && (
               <span className="journey-filters-active">{activeFilterCount} active</span>
             )}
+            {/* Reset chip — inline in header whenever any filter is customized,
+                matching the Film tab's behavior. Stop propagation so it doesn't
+                toggle the collapsible. */}
+            {activeFilterCount > 0 && (
+              <span
+                className="film-list-filter-reset"
+                role="button"
+                onClick={(e) => { e.stopPropagation(); resetFilters(); }}
+              >Reset</span>
+            )}
           </button>
           {filtersOpen && (
             <div className="journey-filters-body">
-              {/* Canon depth — collapsible section matching the other filter styles */}
+              {/* Canon depth — two independent controls mirroring the Film tab:
+                    (1) Oscars-only toggle: hide ESSENTIAL canon films
+                    (2) Minimum tier +/- stepper (1..7) applied to ALL films
+                        via getTier() (OSCAR / OSCAR_NOM counts as a canon list). */}
               <div className="filter-section">
                 <button className="filter-section-toggle" onClick={() => toggleSection('canon')}>
                   <span className="filter-section-arrow">{openSections.canon ? '▾' : '▸'}</span>
                   <span className="filter-section-label">Canon depth</span>
                   {(() => {
                     const parts = [];
-                    if (currentFilters.essentialsOnly) parts.push('only');
-                    if (currentFilters.minEssentialTier === 99) parts.push('Oscars');
-                    else if (currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier) parts.push(`≥${currentFilters.minEssentialTier}`);
+                    if (currentFilters.oscarsOnly) parts.push('Oscars only');
+                    if (currentFilters.essentialsOnly) parts.push('Essentials only');
+                    if (currentFilters.minTier > 1) parts.push(`tier ≥${currentFilters.minTier}`);
                     if (parts.length === 0) return null;
                     return <span className="filter-section-count">{parts.join(' · ')}</span>;
                   })()}
                 </button>
                 {openSections.canon && (
                   <div className="filter-checklist canon-depth-body">
-                    <p className="canon-depth-caption">
-                      Minimum number of canon lists a non-Oscar film must appear on.
-                    </p>
-                    <div className="canon-depth-toggle" role="radiogroup" aria-label="Canon depth">
-                      {[
-                        { tier: 99, label: 'Oscars only', sub: 'no essentials · 399 films' },
-                        { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 essentials' },
-                        { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 essentials' },
-                        { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 essentials' },
-                      ].map(opt => (
-                        <button
-                          key={opt.tier}
-                          className={`canon-depth-btn ${currentFilters.minEssentialTier === opt.tier ? 'active' : ''}`}
-                          role="radio"
-                          aria-checked={currentFilters.minEssentialTier === opt.tier}
-                          onClick={() => onFiltersChange({
-                            ...currentFilters,
-                            minEssentialTier: opt.tier,
-                            essentialsOnly: opt.tier === 99 ? false : currentFilters.essentialsOnly,
-                          })}
-                        >
-                          <span className="canon-depth-label">{opt.label}</span>
-                          <span className="canon-depth-sub">{opt.sub}</span>
-                        </button>
-                      ))}
-                    </div>
+                    {/* Oscars-only / Essentials-only toggles — mutually exclusive.
+                        Turning one on turns the other off. */}
+                    <button
+                      type="button"
+                      className={`essentials-only-toggle ${currentFilters.oscarsOnly ? 'active' : ''}`}
+                      onClick={() => onFiltersChange({
+                        ...currentFilters,
+                        oscarsOnly: !currentFilters.oscarsOnly,
+                        essentialsOnly: false,
+                      })}
+                      aria-pressed={currentFilters.oscarsOnly}
+                    >
+                      <span className="essentials-only-checkbox">{currentFilters.oscarsOnly ? '\u2713' : ''}</span>
+                      <span className="essentials-only-label">
+                        <strong>Oscars only</strong>
+                        <span className="essentials-only-sub">
+                          Hide canon-only essentials — show just BP nominees and Int/Anim winners.
+                        </span>
+                      </span>
+                    </button>
 
                     <button
                       type="button"
-                      className={`essentials-only-toggle ${currentFilters.essentialsOnly ? 'active' : ''} ${currentFilters.minEssentialTier === 99 ? 'disabled' : ''}`}
-                      onClick={() => {
-                        if (currentFilters.minEssentialTier === 99) return;
-                        onFiltersChange({ ...currentFilters, essentialsOnly: !currentFilters.essentialsOnly });
-                      }}
+                      className={`essentials-only-toggle ${currentFilters.essentialsOnly ? 'active' : ''}`}
+                      onClick={() => onFiltersChange({
+                        ...currentFilters,
+                        essentialsOnly: !currentFilters.essentialsOnly,
+                        oscarsOnly: false,
+                      })}
                       aria-pressed={currentFilters.essentialsOnly}
-                      disabled={currentFilters.minEssentialTier === 99}
                     >
                       <span className="essentials-only-checkbox">{currentFilters.essentialsOnly ? '\u2713' : ''}</span>
                       <span className="essentials-only-label">
                         <strong>Essentials only</strong>
                         <span className="essentials-only-sub">
-                          {currentFilters.minEssentialTier === 99
-                            ? 'n/a — Oscars-only mode is on'
-                            : 'hide Oscar films — show just the canon at the chosen tier'}
+                          Hide Oscar-eligible films — show just the non-Oscar canon.
                         </span>
                       </span>
                     </button>
+
+                    {/* Minimum tier +/- stepper */}
+                    <div className="tier-stepper">
+                      <div className="tier-stepper-header">
+                        <span className="tier-stepper-title">Minimum tier</span>
+                        <div className="tier-stepper-controls">
+                          <button
+                            type="button"
+                            className="tier-stepper-btn"
+                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.max(1, (currentFilters.minTier ?? 1) - 1) })}
+                            disabled={currentFilters.minTier <= 1}
+                            aria-label="Lower minimum tier"
+                          >−</button>
+                          <span className="tier-stepper-value">≥ {currentFilters.minTier}</span>
+                          <button
+                            type="button"
+                            className="tier-stepper-btn"
+                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.min(MAX_SLIDER_TIER, (currentFilters.minTier ?? 1) + 1) })}
+                            disabled={currentFilters.minTier >= MAX_SLIDER_TIER}
+                            aria-label="Raise minimum tier"
+                          >+</button>
+                        </div>
+                      </div>
+                      <div className="tier-stepper-desc">
+                        <strong>{TIER_LEVELS[currentFilters.minTier]?.label}</strong>
+                        <span>{TIER_LEVELS[currentFilters.minTier]?.sub}</span>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

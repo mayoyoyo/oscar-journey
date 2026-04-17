@@ -1083,15 +1083,27 @@ main {
 }
 
 .film-director {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--cream-dim);
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.film-director strong {
+  color: var(--cream);
+  font-weight: 700;
 }
 
-.film-runtime {
-  font-size: 0.78rem;
+.film-starring {
+  font-size: 0.82rem;
   color: var(--cream-dim);
-  opacity: 0.7;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+.film-starring strong {
+  color: var(--cream);
+  font-weight: 700;
 }
 
 .film-awards-compact {
@@ -4076,9 +4088,10 @@ main {
   .poster-loading { min-height: 150px; height: 200px; }
   .info-col { padding: 14px 16px; }
   .film-title { font-size: 1.2rem; }
-  .film-year { font-size: 0.82rem; }
+  .film-year { font-size: 0.82rem; gap: 6px; }
   .film-plot { font-size: 0.8rem; line-height: 1.4; }
   .film-director { font-size: 0.78rem; }
+  .film-starring { font-size: 0.78rem; }
   .film-runtime { font-size: 0.78rem; }
   .film-pills-row { gap: 6px; flex-wrap: wrap; }
   .film-pills-row > * { font-size: 0.72rem; }

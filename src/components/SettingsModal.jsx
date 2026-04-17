@@ -10,15 +10,22 @@ const DEFAULT_FILTERS = {
     '1910s': false, '1920s': false, '1930s': false, '1940s': false, '1950s': false, '1960s': false,
     '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true,
   },
-  categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
+  // Categories only governs Oscar-eligible films (BP nominees, INT/ANIM
+  // broadly defined). Essentials bypass Categories entirely — they're gated
+  // by Canon depth (tier + oscarsOnly / essentialsOnly).
+  categories: { BP: true, INT: true, ANIM: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
-  // Minimum tier required for ESSENTIAL films. 2 = all canon (438 films, default);
-  // 3 = strong consensus (143); 4 = iron-clad (57); 99 = Oscars-only.
-  // Oscar films (BP/INT/ANIM) ignore this filter.
-  minEssentialTier: 2,
-  // Focus mode: when true, hide everything except ESSENTIAL films at or above
-  // minEssentialTier — useful for "show me only the iron-clad canon."
+  // Unified canon-tier floor applied to ALL films via getTier() — OSCAR /
+  // OSCAR_NOM counts as a canon list for BP / INT / ANIM, so one knob gates
+  // the whole 837-film catalog. 1 = everything, 2 = canon threshold, up to
+  // 7 = all-time masterpieces. Matches the Film tab's stepper exactly.
+  minTier: 1,
+  // Focus mode: when true, hide ESSENTIAL (non-Oscar) films — leaving just
+  // BP nominees + Int/Anim winners. Mirrors the Film tab's "Oscars only".
+  oscarsOnly: false,
+  // Inverse focus mode: when true, hide Oscar-eligible films — leaving just
+  // the non-Oscar canon. Mutually exclusive with oscarsOnly in the UI.
   essentialsOnly: false,
   smart: {
     skipWatched: false,
@@ -46,11 +53,13 @@ const ERA_LABELS = {
   '20s': '2020s',
 };
 
+// Note: ESSENTIAL is intentionally absent. Essentials are governed by Canon
+// depth (tier + oscarsOnly / essentialsOnly), not Categories. INT and ANIM
+// use broad predicates (any non-English / any animated) in FilmList.
 const CATEGORY_LABELS = {
   BP: 'Best Picture',
   INT: 'International',
   ANIM: 'Animated',
-  ESSENTIAL: 'Essential (must-watch)',
 };
 
 export { DEFAULT_FILTERS, ERA_LABELS, GENRE_LABELS, CATEGORY_LABELS, SMART_LABELS };

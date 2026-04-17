@@ -32,7 +32,7 @@ const SMART_LABELS = {
 };
 
 const ERA_LABELS = {
-  '1910s': '1910s (silent era)',
+  '1910s': '1910s',
   '1920s': '1920s',
   '1930s': '1930s',
   '1940s': '1940s',

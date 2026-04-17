@@ -1,6 +1,11 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
+import { fetchOmdbData, readCachedOmdbData, parseOscarWins } from '../utils/omdb';
 import { MovieBadges } from './Badges';
+import OscarIcon, { getOscarBadges } from './OscarIcon';
+import TierPips from './TierPips';
+import LanguagePill from './LanguagePill';
+import ACTORS from '../data/actors.json';
+import DIRECTORS from '../data/directors.json';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
@@ -8,7 +13,6 @@ import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
-import { getTierInfo, LIST_LABELS, LIST_SHORT_LABELS } from '../utils/tierInfo';
 
 import { RARITIES } from '../utils/cards';
 import { getCardOwner } from '../utils/cardRegistry';
@@ -195,9 +199,28 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             </div>
           )}
           <div className="film-detail-body">
-            <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
+            <div className="film-detail-ceremony-row">
+              {getOscarBadges(movie).map(k => (
+                <OscarIcon key={k} movie={movie} kind={k} size="sm" />
+              ))}
+              <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
+            </div>
             <div className="film-title">{movie.title}</div>
-            <div className="film-year">{movie.year}</div>
+            <div className="film-year">
+              <span>{movie.year}</span>
+              {omdbData?.runtime && (() => {
+                // OMDb returns runtime as "138 min". Reformat to "2h 18m"
+                // (or just "18m" for sub-hour shorts) and show inline with year.
+                const m = parseInt(String(omdbData.runtime).match(/\d+/)?.[0], 10);
+                if (!m) return null;
+                const h = Math.floor(m / 60);
+                const mm = m % 60;
+                const pretty = h > 0 ? `${h}h${mm ? ` ${mm}m` : ''}` : `${mm}m`;
+                return <span className="film-year-runtime"> · {pretty}</span>;
+              })()}
+              <TierPips movie={movie} variant="compact" />
+              <LanguagePill movie={movie} />
+            </div>
             <MovieBadges movie={movie} />
 
             {/* Ratings summary row */}
@@ -247,41 +270,37 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               </a>
             </div>
 
+            {(() => {
+              // Static directors.json is the primary source (hand-curated to
+              // trim over-credited committees like Bambi, OMDb is the
+              // fallback for anything missing from the bake).
+              const director = DIRECTORS[movie.id] || omdbData?.director;
+              if (!director) return null;
+              return <div className="film-detail-director"><strong>Directed by</strong> {director}</div>;
+            })()}
+            {(() => {
+              // Static actors.json is the primary source (always hydrated);
+              // OMDb cache field is a fallback for profiles that refreshed
+              // after actors data was added to the live cache.
+              const actors = ACTORS[movie.id] || omdbData?.actors;
+              if (!actors) return null;
+              // OMDb returns "Actor 1, Actor 2, Actor 3" — convert commas to
+              // middle dots so it reads like a credits line.
+              const pretty = actors.split(',').map(s => s.trim()).filter(Boolean).join(' · ');
+              return <div className="film-detail-starring"><strong>Starring</strong> {pretty}</div>;
+            })()}
             {omdbData?.plot && (
               <div className="film-detail-plot">{omdbData.plot}</div>
             )}
-            {omdbData?.director && (
-              <div className="film-detail-director">Dir. {omdbData.director}</div>
-            )}
-            {omdbData?.runtime && (
-              <div className="film-detail-runtime">🕐 {omdbData.runtime}</div>
-            )}
-
-            {/* Canon appearances — list membership for ESSENTIAL films and Oscar winners */}
-            {(() => {
-              const { tier, lists } = getTierInfo(movie);
-              if (lists.length === 0) return null;
-              // Hide the redundant OSCAR-only case — it's already shown via the Oscar awards block below
-              const nonOscarLists = lists.filter(l => l !== 'OSCAR');
-              if (nonOscarLists.length === 0) return null;
-              return (
-                <div className="film-detail-canon">
-                  <div className="film-detail-canon-title">
-                    ✦ Canon — on {tier} of 8 major lists
-                  </div>
-                  <div className="film-detail-canon-lists">
-                    {lists.map(l => (
-                      <span key={l} className={`canon-list-chip ${l === 'OSCAR' ? 'canon-list-oscar' : ''}`} title={LIST_LABELS[l]}>
-                        {LIST_SHORT_LABELS[l] || l}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })()}
 
             {(() => {
-              const totalOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+              const codedOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+              // Fallback for essentials / canon films with no hand-coded awards
+              // data: parse OMDb's "Awards" string, which tells us the Oscar
+              // win count even if we don't know which categories. Only used when
+              // codedOscars is 0 so we never double-count.
+              const omdbOscars = codedOscars === 0 ? parseOscarWins(omdbData?.awards) : 0;
+              const totalOscars = codedOscars + omdbOscars;
               if (totalOscars === 0) return null;
               return (
               <div className="film-detail-awards">

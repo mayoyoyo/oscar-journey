@@ -471,6 +471,31 @@ main {
   color: var(--cream-dim);
   font-weight: 500;
   margin-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* Tier pips sit inline with the year + runtime line in the detail modal */
+.film-year .tier-pips {
+  vertical-align: middle;
+}
+.film-year-runtime {
+  color: var(--cream-dim);
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.film-detail-starring {
+  color: var(--cream-dim);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-top: 2px;
+}
+.film-detail-starring strong,
+.film-detail-director strong {
+  color: var(--cream);
+  font-weight: 700;
 }
 
 .badges {
@@ -502,6 +527,28 @@ main {
   filter: brightness(1.15);
   box-shadow: 0 2px 10px rgba(139, 105, 20, 0.35);
   transform: translateY(-1px);
+}
+
+/* Color variants for the winner pill — gold is the default BP treatment,
+   int uses a blue scheme for the Best International Feature award, and
+   anim uses purple for Best Animated Feature. Same shape + typography;
+   just swap the gradient + shadow tone. */
+.badge-winner-int {
+  background: linear-gradient(135deg, #1a3a7a 0%, #3b6fc7 50%, #74a6ee 100%);
+  color: #0a0a0f;
+  box-shadow: 0 1px 4px rgba(59, 111, 199, 0.28);
+}
+.badge-winner-int.badge-winner-link:hover {
+  box-shadow: 0 2px 10px rgba(59, 111, 199, 0.45);
+}
+
+.badge-winner-anim {
+  background: linear-gradient(135deg, #5a2d7a 0%, #9a4ec7 50%, #c78aee 100%);
+  color: #0a0a0f;
+  box-shadow: 0 1px 4px rgba(154, 78, 199, 0.28);
+}
+.badge-winner-anim.badge-winner-link:hover {
+  box-shadow: 0 2px 10px rgba(154, 78, 199, 0.45);
 }
 
 .badge-genre {
@@ -552,6 +599,143 @@ main {
 [data-theme="dark"] .badge-essential {
   color: var(--cream-dim);
   border-color: var(--border);
+}
+
+/* =====================================================
+   OSCAR STATUETTE ICON
+   Binary visual demarcation: Oscar (winner/nominee) vs. Essential (no icon).
+   The SVG itself always paints a rich favicon-style gold gradient; CSS
+   filters below recolor / outline / glow it per theme + status.
+
+   Design intent:
+   - Light mode is a contrast game. Winner = gold gradient + 1px black
+     outline (so the gold reads against cream). Nominee = desaturated to
+     slate so it's clearly "this is an Oscar, but not a winner."
+   - Dark mode is a brightness game. Every Oscar is gold (the statue IS
+     gold), but winners pop via extra brightness + radiant glow.
+   ===================================================== */
+.oscar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  position: relative;
+}
+.oscar-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.oscar-icon-sm { width: 16px; height: 26px; }
+.oscar-icon-md { width: 22px; height: 36px; }
+
+/* Ceremony-header row: pairs "Nth Academy Awards · YYYY" with the
+   statuette on its left. Both only ever render for Oscar films, so
+   co-locating them keeps the modal pill row clean. Constrain the
+   statuette height to the header line so the row doesn't grow.
+   line-height: 1 on the text collapses its line-box to cap-height so
+   `align-items: center` actually centers the visual glyphs (uppercase
+   text sits high in a normal line-box and would otherwise look top-aligned). */
+.film-detail-ceremony-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.film-detail-ceremony-row .ceremony-line {
+  margin: 0;
+  line-height: 1;
+}
+.film-detail-ceremony-row .oscar-icon-sm {
+  width: 10px;
+  height: 16px;
+}
+
+/* ---- LIGHT mode (default) ----
+   Glow on a light background is counter-intuitive: a "brighter" halo
+   disappears into the cream bg. The trick is a *warm-toned dark* shadow
+   — rgba gold at low opacity — which reads as "ambient gold light" by
+   darkening the neighboring pixels in the gold hue rather than
+   brightening them. Paired with a saturation/brightness boost on the
+   icon itself, the statuette feels lit from within.
+   Layered drop-shadows:
+   - 1px tight dark-gold: crisp rim, substitutes for a hard outline
+   - 3px soft dark-gold: warm ambient bloom (the "glow")
+   - 7px very soft warm: extended halo that blends into the cream */
+.oscar-icon-winner svg {
+  filter:
+    saturate(1.25) brightness(1.08)
+    drop-shadow(0 0 1px rgba(120, 80, 10, 0.85))
+    drop-shadow(0 0 3px rgba(184, 134, 11, 0.7))
+    drop-shadow(0 0 7px rgba(212, 175, 55, 0.45));
+}
+/* Nominee: muted bronze. Partial desaturate (not full grayscale) keeps
+   a whisper of gold hue, and the opacity knob dims the whole shape so
+   it doesn't compete with the winner for attention. Reads as "this
+   is an Oscar, just not a winner." */
+.oscar-icon-nominee svg {
+  filter: saturate(0.45) brightness(0.6) opacity(0.7);
+}
+/* Size hierarchy: BP winner renders at full size (1.0). BP nominee and
+   the tinted Intl/Anim winners all scale to 0.85 so the gold BP statuette
+   remains visually dominant — you should be able to spot "this film won
+   Best Picture" at a glance from the row. transform-origin centers the
+   shrink so alignment with adjacent elements stays clean. */
+.oscar-icon-nominee,
+.oscar-icon-int,
+.oscar-icon-anim {
+  transform: scale(0.85);
+  transform-origin: center;
+}
+/* Intl winner — same filter stack as the gold BP winner but hue-rotated
+   180° to blue. Keeps the gradient + glow geometry identical. */
+.oscar-icon-int svg {
+  filter:
+    hue-rotate(180deg)
+    saturate(1.25) brightness(1.02)
+    drop-shadow(0 0 1px rgba(20, 60, 120, 0.85))
+    drop-shadow(0 0 3px rgba(40, 110, 200, 0.7))
+    drop-shadow(0 0 7px rgba(80, 160, 230, 0.45));
+}
+/* Anim winner — hue-rotated ~260° to purple. */
+.oscar-icon-anim svg {
+  filter:
+    hue-rotate(260deg)
+    saturate(1.1) brightness(1.02)
+    drop-shadow(0 0 1px rgba(80, 30, 120, 0.85))
+    drop-shadow(0 0 3px rgba(140, 70, 200, 0.7))
+    drop-shadow(0 0 7px rgba(180, 130, 230, 0.45));
+}
+
+/* ---- DARK mode ---- */
+/* Winner: bright gold + radiant glow (the "always visible" glow). */
+[data-theme="dark"] .oscar-icon-winner svg {
+  filter:
+    brightness(1.12)
+    drop-shadow(0 0 2px rgba(255, 220, 120, 0.9))
+    drop-shadow(0 0 5px rgba(229, 184, 74, 0.8))
+    drop-shadow(0 0 10px rgba(229, 184, 74, 0.45));
+}
+/* Nominee: same gold, muted. Darker + slightly desaturated so it reads
+   as "Oscar-eligible but not the winner." No glow. */
+[data-theme="dark"] .oscar-icon-nominee svg {
+  filter: brightness(0.62) saturate(0.9);
+}
+[data-theme="dark"] .oscar-icon-int svg {
+  filter:
+    hue-rotate(180deg)
+    brightness(1.12) saturate(1.15)
+    drop-shadow(0 0 2px rgba(130, 180, 255, 0.9))
+    drop-shadow(0 0 5px rgba(60, 120, 220, 0.8))
+    drop-shadow(0 0 10px rgba(60, 120, 220, 0.45));
+}
+[data-theme="dark"] .oscar-icon-anim svg {
+  filter:
+    hue-rotate(260deg)
+    brightness(1.12) saturate(1.1)
+    drop-shadow(0 0 2px rgba(200, 160, 255, 0.9))
+    drop-shadow(0 0 5px rgba(140, 90, 220, 0.8))
+    drop-shadow(0 0 10px rgba(140, 90, 220, 0.45));
 }
 
 /* Tier pips — compact visual for "how many canon lists is this film on" */
@@ -609,7 +793,9 @@ main {
   transform: scale(1.15);
 }
 
-/* Higher-tier glow to reward discovery */
+/* Higher-tier glow to reward discovery. Kicks in at tier 5 (near-universal
+   canon) and gets richer from there. */
+.tier-pips.tier-5 .tier-pip.filled,
 .tier-pips.tier-6 .tier-pip.filled,
 .tier-pips.tier-7 .tier-pip.filled,
 .tier-pips.tier-8 .tier-pip.filled {
@@ -617,6 +803,8 @@ main {
   box-shadow: 0 0 5px rgba(212, 175, 60, 0.6);
 }
 
+.tier-pips.tier-5,
+.tier-pips.tier-6,
 .tier-pips.tier-7,
 .tier-pips.tier-8 {
   background: linear-gradient(135deg, rgba(212, 175, 60, 0.15), rgba(139, 105, 20, 0.1));
@@ -1750,6 +1938,79 @@ main {
   transition: all 0.15s ease;
 }
 
+/* Tier +/- stepper inside the Canon depth body */
+.tier-stepper {
+  padding: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.tier-stepper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.tier-stepper-title {
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.04em;
+}
+.tier-stepper-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tier-stepper-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--cream);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.tier-stepper-btn:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.tier-stepper-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.tier-stepper-value {
+  min-width: 42px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+}
+.tier-stepper-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tier-stepper-desc strong {
+  color: var(--cream);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+.tier-stepper-desc span {
+  color: var(--cream-dim);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
 .essentials-only-toggle.active .essentials-only-checkbox {
   background: var(--gold);
   border-color: var(--gold);
@@ -1780,7 +2041,18 @@ main {
   border: 1px solid var(--border);
   border-radius: 10px;
   margin-bottom: 20px;
-  overflow: hidden;
+  /* Sticky to the top of the films tab on scroll so the count + filter
+     toggle stay accessible without scrolling back up. Z-index sits above
+     letter-group headers but below modal overlays. */
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+/* Body inside filters scrolls if content is long, but the sticky header
+   (.film-list-filters-header) stays pinned via the outer sticky above. */
+.film-list-filters-body {
+  max-height: calc(100dvh - 180px);
+  overflow-y: auto;
 }
 .film-list-filters-header {
   display: flex;
@@ -1813,6 +2085,42 @@ main {
   padding: 2px 8px;
   border-radius: 10px;
   font-weight: 600;
+}
+/* Match-count sits in the filter header — replaces the old separate
+   "N films · M watched" line below the filter block.
+   nowrap keeps it from splitting at the "·" on tight widths. */
+.film-list-filters-match {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.film-list-filters-watched {
+  color: var(--gold-dim);
+  white-space: nowrap;
+}
+/* Responsive copy: full-length "509 films · 77 watched" on desktop;
+   short "509 · 77✓" on mobile where every pixel matters. */
+.film-list-filters-match-full { display: inline; }
+.film-list-filters-match-short { display: none; }
+@media (max-width: 540px) {
+  .film-list-filters-match-full { display: none; }
+  .film-list-filters-match-short { display: inline; }
+  /* Let the bar wrap naturally on very narrow screens — the "1 active"
+     badge + Reset button move to a second row rather than squashing
+     the other elements. */
+  .film-list-filters-header {
+    flex-wrap: wrap;
+  }
+}
+/* When both match-count and active-count + reset are rendered, push
+   match-count to flex-right and keep active/reset after it. */
+.film-list-filters-header .film-list-filters-count,
+.film-list-filters-header .film-list-filter-reset {
+  margin-left: 8px;
+  white-space: nowrap;
 }
 .film-list-filter-reset {
   margin-left: auto;
@@ -1991,6 +2299,36 @@ main {
   white-space: nowrap;
 }
 
+/* Language/flag pill — shown only for non-English films.
+   Desktop row: flag emoji + language name.
+   Mobile row: flag emoji only (.badge-lang-label hidden in the row media rule).
+   Detail modal (.badges context): matches the size of other modal pills. */
+.badge-lang-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.badge-lang-flag {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+/* In the full detail-modal badges row, match the weight of BadgeGenre etc. */
+.badges .badge-lang-sm {
+  font-size: 0.7rem;
+  padding: 5px 12px;
+  letter-spacing: 0.04em;
+}
+.badges .badge-lang-flag {
+  font-size: 1rem;
+}
+
 .list-count {
   font-size: 0.82rem;
   color: var(--cream-dim);
@@ -2134,8 +2472,9 @@ main {
 }
 
 .film-detail-director {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--cream-dim);
+  line-height: 1.5;
 }
 
 .film-detail-runtime {
@@ -3855,10 +4194,14 @@ main {
   .profile-summary-item { min-width: 0; flex: 1 1 30%; padding: 10px 8px; }
   .profile-film-row { gap: 6px; }
 
-  /* Films A-Z list — compact for mobile */
+  /* Films A-Z list — compact, single-line row for mobile.
+     Layout: [dot] [title (flex)] [pips] [oscar] [year]
+     No wrap — the row MUST stay one line so mark-as-watched / checklist-mode
+     taps stay above the fold. */
   .film-row {
     gap: 6px;
     padding: 8px 4px;
+    flex-wrap: nowrap;
   }
   .film-row-check {
     min-width: 20px;
@@ -3871,7 +4214,7 @@ main {
   }
   .film-row-title {
     font-size: 0.84rem;
-    flex: 1 1 60%;
+    flex: 1 1 auto;
     min-width: 0;
     white-space: nowrap;
     overflow: hidden;
@@ -3881,12 +4224,38 @@ main {
     font-size: 0.75rem;
     min-width: unset;
   }
-  /* Hide badges on mobile — they're visible in the modal */
+  /* Pips get tighter on mobile so they sit beside the title cleanly */
+  .film-row .tier-pips-compact {
+    padding: 2px 6px;
+    gap: 2px;
+  }
+  .film-row .tier-pips-compact .tier-pip {
+    width: 4px;
+    height: 4px;
+  }
+  /* Slightly smaller statuette on mobile so it aligns with the text line */
+  .film-row .oscar-icon-sm {
+    width: 13px;
+    height: 21px;
+  }
+  /* Legacy small text badges — no longer rendered in rows, but keep the
+     hide rule as a safety net if anything else routes MovieBadges here. */
   .film-row .badge-winner-sm,
   .film-row .badge-genre-sm,
   .film-row .badge-bp-sm,
   .film-row .badge-int-sm,
-  .film-row .badge-anim-sm {
+  .film-row .badge-anim-sm,
+  .film-row .badge-essential-sm {
+    display: none;
+  }
+  /* Language pill: keep it on mobile but collapse to flag-only. The flag
+     alone signals non-English without eating row width. */
+  .film-row .badge-lang-sm {
+    padding: 0;
+    background: none;
+    border: none;
+  }
+  .film-row .badge-lang-label {
     display: none;
   }
 }
@@ -7085,6 +7454,31 @@ main {
   background: rgba(139,105,20,0.1);
   border-color: var(--gold);
   color: var(--cream);
+}
+
+/* Color-accented check-items for the three category-award rows in the
+   Oscars Won filter. Left-border stripe (always visible) + tinted active
+   background so the row reads as gold/blue/purple like its statuette. */
+.filter-check-item-gold {
+  border-left: 3px solid #d4af37;
+}
+.filter-check-item-gold.active {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: #d4af37;
+}
+.filter-check-item-blue {
+  border-left: 3px solid #3b6fc7;
+}
+.filter-check-item-blue.active {
+  background: rgba(59, 111, 199, 0.15);
+  border-color: #3b6fc7;
+}
+.filter-check-item-purple {
+  border-left: 3px solid #9a4ec7;
+}
+.filter-check-item-purple.active {
+  background: rgba(154, 78, 199, 0.15);
+  border-color: #9a4ec7;
 }
 
 .filter-checkbox {

@@ -1,0 +1,806 @@
+{
+  "the-emigrants-1972": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "cries-and-whispers-1973": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "il-postino-1995": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "life-is-beautiful-1998": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "crouching-tiger-hidden-dragon-2000": {
+    "lang": "Mandarin",
+    "country": "Taiwan"
+  },
+  "letters-from-iwo-jima-2006": {
+    "lang": "Japanese",
+    "country": "United States"
+  },
+  "amour-2012": {
+    "lang": "French",
+    "country": "France"
+  },
+  "roma-2018": {
+    "lang": "Spanish",
+    "country": "Mexico"
+  },
+  "parasite-2019": {
+    "lang": "Korean",
+    "country": "South Korea"
+  },
+  "minari-2020": {
+    "lang": "Korean",
+    "country": "United States"
+  },
+  "coda-2021": {
+    "lang": "American Sign",
+    "country": "France"
+  },
+  "drive-my-car-2021": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "all-quiet-on-the-western-front-2022": {
+    "lang": "German",
+    "country": "Germany"
+  },
+  "anatomy-of-a-fall-2023": {
+    "lang": "French",
+    "country": "France"
+  },
+  "past-lives-2023": {
+    "lang": "Korean",
+    "country": "United States"
+  },
+  "the-zone-of-interest-2023": {
+    "lang": "German",
+    "country": "United Kingdom"
+  },
+  "emilia-p-rez-2024": {
+    "lang": "Spanish",
+    "country": "France"
+  },
+  "im-still-here-2024": {
+    "lang": "Portuguese",
+    "country": "Brazil"
+  },
+  "the-secret-agent-2025": {
+    "lang": "Portuguese",
+    "country": "Brazil"
+  },
+  "sentimental-value-2025": {
+    "lang": "Norwegian",
+    "country": "Norway"
+  },
+  "mediterraneo-1991": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "indochine-1992": {
+    "lang": "French",
+    "country": "France"
+  },
+  "belle-epoque-1992": {
+    "lang": "Spanish",
+    "country": "Spain"
+  },
+  "burnt-by-the-sun-1994": {
+    "lang": "Russian",
+    "country": "Russia"
+  },
+  "antonias-line-1995": {
+    "lang": "Dutch",
+    "country": "Netherlands"
+  },
+  "kolya-1996": {
+    "lang": "Czech",
+    "country": "Czech Republic"
+  },
+  "character-1997": {
+    "lang": "Dutch",
+    "country": "Netherlands"
+  },
+  "all-about-my-mother-1999": {
+    "lang": "Spanish",
+    "country": "Spain"
+  },
+  "no-mans-land-2001": {
+    "lang": "Bosnian",
+    "country": "France"
+  },
+  "nowhere-in-africa-2001": {
+    "lang": "German",
+    "country": "Germany"
+  },
+  "the-barbarian-invasions-2003": {
+    "lang": "French",
+    "country": "Canada"
+  },
+  "the-sea-inside-2004": {
+    "lang": "Spanish",
+    "country": "Spain"
+  },
+  "tsotsi-2005": {
+    "lang": "Zulu",
+    "country": "United Kingdom"
+  },
+  "the-lives-of-others-2006": {
+    "lang": "German",
+    "country": "Germany"
+  },
+  "the-counterfeiters-2007": {
+    "lang": "German",
+    "country": "Austria"
+  },
+  "departures-2008": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-secret-in-their-eyes-2009": {
+    "lang": "Spanish",
+    "country": "Argentina"
+  },
+  "in-a-better-world-2010": {
+    "lang": "Danish",
+    "country": "Denmark"
+  },
+  "a-separation-2011": {
+    "lang": "Persian",
+    "country": "Iran"
+  },
+  "the-great-beauty-2013": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "ida-2013": {
+    "lang": "Polish",
+    "country": "Poland"
+  },
+  "son-of-saul-2015": {
+    "lang": "Hungarian",
+    "country": "Hungary"
+  },
+  "the-salesman-2016": {
+    "lang": "Persian",
+    "country": "Iran"
+  },
+  "a-fantastic-woman-2017": {
+    "lang": "Spanish",
+    "country": "Chile"
+  },
+  "another-round-2020": {
+    "lang": "Danish",
+    "country": "Denmark"
+  },
+  "spirited-away-2002": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-boy-and-the-heron-2023": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "rashomon-1950": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "wild-strawberries-1957": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "the-battle-of-algiers-1966": {
+    "lang": "Arabic",
+    "country": "Italy"
+  },
+  "m-1931": {
+    "lang": "German",
+    "country": "Germany"
+  },
+  "bicycle-thieves-1948": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "ikiru-1952": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-wages-of-fear-1953": {
+    "lang": "French",
+    "country": "France"
+  },
+  "tokyo-story-1953": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "seven-samurai-1954": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "ordet-1955": {
+    "lang": "Danish",
+    "country": "Denmark"
+  },
+  "the-seventh-seal-1957": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "la-dolce-vita-1960": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "la-notte-1961": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "the-ascent-1977": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "come-and-see-1985": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "taste-of-cherry-1997": {
+    "lang": "Persian",
+    "country": "Iran"
+  },
+  "metropolis-1927": {
+    "lang": "German",
+    "country": "Germany"
+  },
+  "late-spring-1949": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "ugetsu-1953": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "sansho-the-bailiff-1954": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "pather-panchali-1955": {
+    "lang": "Bengali",
+    "country": "India"
+  },
+  "a-man-escaped-1956": {
+    "lang": "French",
+    "country": "France"
+  },
+  "aparajito-1956": {
+    "lang": "Bengali",
+    "country": "India"
+  },
+  "the-cranes-are-flying-1957": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "throne-of-blood-1957": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-400-blows-1959": {
+    "lang": "French",
+    "country": "France"
+  },
+  "viridiana-1961": {
+    "lang": "Spanish",
+    "country": "Mexico"
+  },
+  "yojimbo-1961": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "harakiri-1962": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "8-and-a-half-1963": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "high-and-low-1963": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-leopard-1963": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "andrei-rublev-1966": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "persona-1966": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "jeanne-dielman-23-quai-du-commerce-1080-bruxelles-1975": {
+    "lang": "French",
+    "country": "Belgium"
+  },
+  "mirror-1975": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "stalker-1979": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "ran-1985": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "vagabond-1985": {
+    "lang": "French",
+    "country": "France"
+  },
+  "where-is-the-friends-house-1987": {
+    "lang": "Persian",
+    "country": "Iran"
+  },
+  "close-up-1990": {
+    "lang": "Persian",
+    "country": "Iran"
+  },
+  "a-brighter-summer-day-1991": {
+    "lang": "Mandarin",
+    "country": "Taiwan"
+  },
+  "farewell-my-concubine-1993": {
+    "lang": "Mandarin",
+    "country": "China"
+  },
+  "chungking-express-1994": {
+    "lang": "Cantonese",
+    "country": "Hong Kong"
+  },
+  "la-haine-1995": {
+    "lang": "French",
+    "country": "France"
+  },
+  "in-the-mood-for-love-2000": {
+    "lang": "Cantonese",
+    "country": "Hong Kong"
+  },
+  "yi-yi-2000": {
+    "lang": "Mandarin",
+    "country": "Taiwan"
+  },
+  "memories-of-murder-2003": {
+    "lang": "Korean",
+    "country": "South Korea"
+  },
+  "4-months-3-weeks-and-2-days-2007": {
+    "lang": "Romanian",
+    "country": "Romania"
+  },
+  "portrait-of-a-lady-on-fire-2019": {
+    "lang": "French",
+    "country": "France"
+  },
+  "the-rules-of-the-game-1939": {
+    "lang": "French",
+    "country": "France"
+  },
+  "children-of-paradise-1945": {
+    "lang": "French",
+    "country": "France"
+  },
+  "rome-open-city-1945": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "miracle-in-milan-1951": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "miss-julie-1951": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "forbidden-games-1952": {
+    "lang": "French",
+    "country": "France"
+  },
+  "umberto-d-1952": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "gate-of-hell-1953": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-earrings-of-madame-de-1953": {
+    "lang": "French",
+    "country": "France"
+  },
+  "la-strada-1954": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "rififi-1955": {
+    "lang": "French",
+    "country": "France"
+  },
+  "nights-of-cabiria-1957": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "apur-sansar-1959": {
+    "lang": "Bengali",
+    "country": "India"
+  },
+  "black-orpheus-1959": {
+    "lang": "Portuguese",
+    "country": "Brazil"
+  },
+  "les-cousins-1959": {
+    "lang": "Portuguese",
+    "country": "France"
+  },
+  "pickpocket-1959": {
+    "lang": "French",
+    "country": "France"
+  },
+  "breathless-1960": {
+    "lang": "French",
+    "country": "France"
+  },
+  "lavventura-1960": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "le-trou-1960": {
+    "lang": "French",
+    "country": "France"
+  },
+  "last-year-at-marienbad-1961": {
+    "lang": "French",
+    "country": "France"
+  },
+  "cleo-from-5-to-7-1962": {
+    "lang": "French",
+    "country": "France"
+  },
+  "ivans-childhood-1962": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "contempt-1963": {
+    "lang": "French",
+    "country": "France"
+  },
+  "hands-over-the-city-1963": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "winter-light-1963": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "dry-summer-1964": {
+    "lang": "Turkish",
+    "country": "Turkey"
+  },
+  "i-am-cuba-1964": {
+    "lang": "Spanish",
+    "country": "Cuba"
+  },
+  "kwaidan-1964": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "red-desert-1964": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "the-umbrellas-of-cherbourg-1964": {
+    "lang": "French",
+    "country": "France"
+  },
+  "woman-in-the-dunes-1964": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "alphaville-1965": {
+    "lang": "French",
+    "country": "France"
+  },
+  "black-girl-1965": {
+    "lang": "French",
+    "country": "Senegal"
+  },
+  "pierrot-le-fou-1965": {
+    "lang": "French",
+    "country": "France"
+  },
+  "red-beard-1965": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "a-man-and-a-woman-1966": {
+    "lang": "French",
+    "country": "France"
+  },
+  "au-hasard-balthazar-1966": {
+    "lang": "French",
+    "country": "France"
+  },
+  "daisies-1966": {
+    "lang": "Czech",
+    "country": "Czechoslovakia"
+  },
+  "the-face-of-another-1966": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "belle-de-jour-1967": {
+    "lang": "French",
+    "country": "France"
+  },
+  "le-samourai-1967": {
+    "lang": "French",
+    "country": "France"
+  },
+  "playtime-1967": {
+    "lang": "French",
+    "country": "France"
+  },
+  "samurai-rebellion-1967": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-young-girls-of-rochefort-1967": {
+    "lang": "French",
+    "country": "France"
+  },
+  "the-cremator-1968": {
+    "lang": "Czech",
+    "country": "Czechoslovakia"
+  },
+  "army-of-shadows-1969": {
+    "lang": "French",
+    "country": "France"
+  },
+  "the-color-of-pomegranates-1969": {
+    "lang": "Armenian",
+    "country": "Soviet Union"
+  },
+  "z-1969": {
+    "lang": "French",
+    "country": "France"
+  },
+  "solaris-1972": {
+    "lang": "Russian",
+    "country": "Soviet Union"
+  },
+  "the-canterbury-tales-1972": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "scenes-from-a-marriage-1973": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "the-mother-and-the-whore-1973": {
+    "lang": "French",
+    "country": "France"
+  },
+  "the-spirit-of-the-beehive-1973": {
+    "lang": "Spanish",
+    "country": "Spain"
+  },
+  "touki-bouki-1973": {
+    "lang": "Wolof",
+    "country": "Senegal"
+  },
+  "ali-fear-eats-the-soul-1974": {
+    "lang": "German",
+    "country": "West Germany"
+  },
+  "celine-and-julie-go-boating-1974": {
+    "lang": "French",
+    "country": "France"
+  },
+  "adoption-1975": {
+    "lang": "Hungarian",
+    "country": "Hungary"
+  },
+  "salo-or-the-120-days-of-sodom-1975": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "a-special-day-1977": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "alambrista-1977": {
+    "lang": "Spanish",
+    "country": "United States"
+  },
+  "autumn-sonata-1978": {
+    "lang": "Swedish",
+    "country": "West Germany"
+  },
+  "the-tree-of-wooden-clogs-1978": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "the-tin-drum-1979": {
+    "lang": "German",
+    "country": "West Germany"
+  },
+  "kagemusha-1980": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "das-boot-1981": {
+    "lang": "German",
+    "country": "West Germany"
+  },
+  "fanny-and-alexander-1982": {
+    "lang": "Swedish",
+    "country": "Sweden"
+  },
+  "veronika-voss-1982": {
+    "lang": "German",
+    "country": "West Germany"
+  },
+  "el-norte-1983": {
+    "lang": "Spanish",
+    "country": "United States"
+  },
+  "largent-1983": {
+    "lang": "French",
+    "country": "France"
+  },
+  "mishima-a-life-in-four-chapters-1985": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "shoah-1985": {
+    "lang": "German",
+    "country": "France"
+  },
+  "tampopo-1985": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "au-revoir-les-enfants-1987": {
+    "lang": "French",
+    "country": "France"
+  },
+  "wings-of-desire-1987": {
+    "lang": "German",
+    "country": "West Germany"
+  },
+  "cinema-paradiso-1988": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "grave-of-the-fireflies-1988": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "my-neighbor-totoro-1988": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "the-wedding-banquet-1993": {
+    "lang": "Mandarin",
+    "country": "Taiwan"
+  },
+  "before-the-rain-1994": {
+    "lang": "Macedonian",
+    "country": "United Kingdom"
+  },
+  "satantango-1994": {
+    "lang": "Hungarian",
+    "country": "Hungary"
+  },
+  "underground-1995": {
+    "lang": "Serbian",
+    "country": "Federal Republic of Yugoslavia"
+  },
+  "cure-1997": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "princess-mononoke-1997": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "beau-travail-1998": {
+    "lang": "French",
+    "country": "France"
+  },
+  "central-station-1998": {
+    "lang": "Portuguese",
+    "country": "Brazil"
+  },
+  "eternity-and-a-day-1998": {
+    "lang": "Greek",
+    "country": "France"
+  },
+  "the-celebration-1998": {
+    "lang": "Danish",
+    "country": "Denmark"
+  },
+  "rosetta-1999": {
+    "lang": "French",
+    "country": "France"
+  },
+  "werckmeister-harmonies-2000": {
+    "lang": "Hungarian",
+    "country": "Hungary"
+  },
+  "la-cienaga-2001": {
+    "lang": "Spanish",
+    "country": "Argentina"
+  },
+  "monsoon-wedding-2001": {
+    "lang": "Hindi",
+    "country": "India"
+  },
+  "city-of-god-2002": {
+    "lang": "Portuguese",
+    "country": "Brazil"
+  },
+  "oldboy-2003": {
+    "lang": "Korean",
+    "country": "South Korea"
+  },
+  "the-best-of-youth-2003": {
+    "lang": "Italian",
+    "country": "Italy"
+  },
+  "howls-moving-castle-2004": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "pans-labyrinth-2006": {
+    "lang": "Spanish",
+    "country": "Mexico"
+  },
+  "still-walking-2008": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "incendies-2010": {
+    "lang": "French",
+    "country": "Canada"
+  },
+  "the-hunt-2012": {
+    "lang": "Danish",
+    "country": "Denmark"
+  },
+  "dheepan-2015": {
+    "lang": "Tamil",
+    "country": "France"
+  },
+  "the-handmaiden-2016": {
+    "lang": "Korean",
+    "country": "South Korea"
+  },
+  "your-name-2016": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "shoplifters-2018": {
+    "lang": "Japanese",
+    "country": "Japan"
+  },
+  "perfect-days-2023": {
+    "lang": "Japanese",
+    "country": "Japan"
+  }
+}

@@ -20,11 +20,15 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
     return () => document.removeEventListener('keydown', handler);
   }, [open]);
 
-  if (tier === 0) return null;
+  // Tier 1 is always Oscar-only (essentials start at tier 2). The Oscar
+  // statuette icon already signals "this is an Oscar film" — a lone pip next
+  // to it is noise, not signal. Hide pips for tier < 2.
+  if (tier < 2) return null;
 
-  const dots = variant === 'compact'
-    ? Array.from({ length: tier }, () => true)
-    : Array.from({ length: MAX_TIER }, (_, i) => i < tier);
+  // Render only filled dots — same shape in both variants so the modal
+  // and the A-Z row read as the same pill. Variant still drives pill size
+  // via the .tier-pips-full / .tier-pips-compact classes.
+  const dots = Array.from({ length: tier }, () => true);
 
   const titleForHover = lists.map(l => LIST_SHORT_LABELS[l] || l).join(' · ');
   const ariaLabel = `Tier ${tier} of ${MAX_TIER}. On ${lists.length} canon ${lists.length === 1 ? 'list' : 'lists'}: ${titleForHover}`;

@@ -1,0 +1,3479 @@
+[
+  {
+    "id": "the-third-man-1949",
+    "title": "The Third Man",
+    "year": 1949,
+    "awards": "Won 1 Oscar. 6 wins & 4 nominations total",
+    "oscarWins": 1,
+    "qid": "Q271830",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Robert Krasker"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "some-like-it-hot-1959",
+    "title": "Some Like It Hot",
+    "year": 1959,
+    "awards": "Won 1 Oscar. 11 wins & 13 nominations total",
+    "oscarWins": 1,
+    "qid": "Q190086",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Orry-Kelly"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Costume Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "citizen-kane-1941",
+    "title": "Citizen Kane",
+    "year": 1941,
+    "awards": "Won 1 Oscar. 16 wins & 13 nominations total",
+    "oscarWins": 1,
+    "qid": "Q24815",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture"
+      }
+    ],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "casablanca-1942",
+    "title": "Casablanca",
+    "year": 1942,
+    "awards": "Won 3 Oscars. 18 wins & 12 nominations total",
+    "oscarWins": 3,
+    "qid": "Q7903",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Warner Bros."
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Michael Curtiz"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Julius J. Epstein, Philip G. Epstein and Howard Koch"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Michael Curtiz"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Julius J. Epstein, Philip G. Epstein and Howard Koch"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "all-about-eve-1950",
+    "title": "All About Eve",
+    "year": 1950,
+    "awards": "Won 6 Oscars. 27 wins & 22 nominations total",
+    "oscarWins": 6,
+    "qid": "Q200299",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Joseph L. Mankiewicz"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "George Sanders"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Joseph L. Mankiewicz"
+      },
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Edith Head and Charles LeMaire"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Thomas T. Moulton"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Joseph L. Mankiewicz"
+        },
+        {
+          "category": "Supporting Actor",
+          "winner": "George Sanders"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Joseph L. Mankiewicz"
+        },
+        {
+          "category": "Costume Design"
+        },
+        {
+          "category": "Sound"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "5/6"
+  },
+  {
+    "id": "sunset-boulevard-1950",
+    "title": "Sunset Boulevard",
+    "year": 1950,
+    "awards": "Won 3 Oscars. 21 wins & 20 nominations total",
+    "oscarWins": 3,
+    "qid": "Q860442",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "Charles Brackett, Billy Wilder, and D. M. Marshman Jr."
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Art Direction: Hans Dreier and John Meehan; Set Decoration: Samuel M. Comer and Ray Moyer"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Franz Waxman"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Screenplay",
+          "winner": "Charles Brackett, Billy Wilder, and D. M. Marshman Jr."
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Franz Waxman"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-apartment-1960",
+    "title": "The Apartment",
+    "year": 1960,
+    "awards": "Won 5 Oscars. 25 wins & 8 nominations total",
+    "oscarWins": 5,
+    "qid": "Q270510",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "rowspan=\"2\"| Billy Wilder"
+      },
+      {
+        "award": "Academy Award for Best Director"
+      },
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "Billy Wilder and I. A. L. Diamond"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Alexandre Trauner and Edward G. Boyle"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Daniel Mandell"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director"
+        },
+        {
+          "category": "Original Screenplay",
+          "winner": "Billy Wilder and I. A. L. Diamond"
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Film Editing"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "lawrence-of-arabia-1962",
+    "title": "Lawrence of Arabia",
+    "year": 1962,
+    "awards": "Won 7 Oscars. 31 wins & 14 nominations total",
+    "oscarWins": 7,
+    "qid": "Q170596",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Sam Spiegel"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "David Lean"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Art Direction: John Box and John Stoll; Set Decoration: Dario Simoni"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Freddie Young"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Anne V. Coates"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Maurice Jarre"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "John Cox"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "David Lean"
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Maurice Jarre"
+        },
+        {
+          "category": "Sound"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "2001-a-space-odyssey-1968",
+    "title": "2001: A Space Odyssey",
+    "year": 1968,
+    "awards": "Won 1 Oscar. 18 wins & 14 nominations total",
+    "oscarWins": 1,
+    "qid": "Q103474",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "Stanley Kubrick"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Visual Effects"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-best-years-of-our-lives-1946",
+    "title": "The Best Years of Our Lives",
+    "year": 1946,
+    "awards": "Won 7 Oscars. 25 wins & 4 nominations total",
+    "oscarWins": 7,
+    "qid": "Q645094",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Samuel Goldwyn Productions"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "William Wyler"
+      },
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Fredric March"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Harold Russell"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Robert E. Sherwood"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Daniel Mandell"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Hugo Friedhofer"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "William Wyler"
+        },
+        {
+          "category": "Actor",
+          "winner": "Fredric March"
+        },
+        {
+          "category": "Supporting Actor",
+          "winner": "Harold Russell"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Robert E. Sherwood"
+        },
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Hugo Friedhofer"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-treasure-of-the-sierra-madre-1948",
+    "title": "The Treasure of the Sierra Madre",
+    "year": 1948,
+    "awards": "Won 3 Oscars. 18 wins & 5 nominations total",
+    "oscarWins": 3,
+    "qid": "Q4677176",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "John Huston"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Walter Huston"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "John Huston"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "John Huston"
+        },
+        {
+          "category": "Supporting Actor",
+          "winner": "Walter Huston"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "John Huston"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "on-the-waterfront-1954",
+    "title": "On the Waterfront",
+    "year": 1954,
+    "awards": "Won 8 Oscars. 30 wins & 11 nominations total",
+    "oscarWins": 8,
+    "qid": "Q211372",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Sam Spiegel"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Elia Kazan"
+      },
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Marlon Brando"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Eva Marie Saint"
+      },
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "Budd Schulberg"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Richard Day"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Boris Kaufman"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Gene Milford"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Elia Kazan"
+        },
+        {
+          "category": "Actor",
+          "winner": "Marlon Brando"
+        },
+        {
+          "category": "Supporting Actress",
+          "winner": "Eva Marie Saint"
+        },
+        {
+          "category": "Original Screenplay",
+          "winner": "Budd Schulberg"
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Film Editing"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-bridge-on-the-river-kwai-1957",
+    "title": "The Bridge on the River Kwai",
+    "year": 1957,
+    "awards": "Won 7 Oscars. 30 wins & 7 nominations total",
+    "oscarWins": 7,
+    "qid": "Q188718",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Sam Spiegel"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "David Lean"
+      },
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Alec Guinness"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Michael Wilson, Carl Foreman, and Pierre Boulle"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Jack Hildyard"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Peter Taylor"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Malcolm Arnold"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "David Lean"
+        },
+        {
+          "category": "Actor",
+          "winner": "Alec Guinness"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Michael Wilson, Carl Foreman, and Pierre Boulle"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Malcolm Arnold"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "la-dolce-vita-1960",
+    "title": "La Dolce Vita",
+    "year": 1960,
+    "awards": "Won 1 Oscar. 11 wins & 12 nominations total",
+    "oscarWins": 1,
+    "qid": "Q18407",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Costume Design, Black-and-White",
+        "winner": "Piero Gherardi"
+      },
+      {
+        "award": "Academy Award for Best Costume Design, Black-and-White"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Costume Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "judgment-at-nuremberg-1961",
+    "title": "Judgment at Nuremberg",
+    "year": 1961,
+    "awards": "Won 2 Oscars. 16 wins & 26 nominations total",
+    "oscarWins": 2,
+    "qid": "Q309545",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Maximilian Schell"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Abby Mann"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actor",
+          "winner": "Maximilian Schell"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Abby Mann"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "alien-1979",
+    "title": "Alien",
+    "year": 1979,
+    "awards": "Won 1 Oscar. 19 wins & 22 nominations total",
+    "oscarWins": 1,
+    "qid": "Q226391",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Sound Editing",
+        "winner": "Don Sharpe"
+      },
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "Robert Skotak, Stan Winston, John Richardson and Suzanne M. Benson"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Sound Editing"
+        },
+        {
+          "category": "Visual Effects"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "2/1"
+  },
+  {
+    "id": "terminator-2-judgment-day-1991",
+    "title": "Terminator 2: Judgment Day",
+    "year": 1991,
+    "awards": "Won 4 Oscars. 39 wins & 33 nominations total",
+    "oscarWins": 4,
+    "qid": "Q170564",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "Gene Warren Jr."
+      },
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "Robert Skotak"
+      },
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "Stan Winston"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Tom Johnson"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Gary Rydstrom"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Gary Summers"
+      },
+      {
+        "award": "Academy Award for Best Makeup and Hairstyling",
+        "winner": "Jeff Dawn"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Lee Orloff"
+      },
+      {
+        "award": "Academy Award for Best Makeup and Hairstyling",
+        "winner": "Stan Winston"
+      },
+      {
+        "award": "Academy Award for Best Visual Effects"
+      },
+      {
+        "award": "Academy Award for Best Makeup and Hairstyling"
+      },
+      {
+        "award": "Academy Award for Best Sound"
+      },
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "Dennis Muren"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Visual Effects"
+        },
+        {
+          "category": "Sound"
+        },
+        {
+          "category": "Makeup"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "3/4"
+  },
+  {
+    "id": "the-lion-king-1994",
+    "title": "The Lion King",
+    "year": 1994,
+    "awards": "Won 2 Oscars. 43 wins & 35 nominations total",
+    "oscarWins": 2,
+    "qid": "Q36479",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Hans Zimmer"
+      },
+      {
+        "award": "Academy Award for Best Original Song",
+        "winner": "\"Can You Feel the Love Tonight\" Music by Elton John; Lyrics by Tim Rice"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Score",
+          "winner": "Hans Zimmer"
+        },
+        {
+          "category": "Original Song",
+          "winner": "\"Can You Feel the Love Tonight\" Music by Elton John; Lyrics by Tim Rice"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "sunrise-a-song-of-two-humans-1927",
+    "title": "Sunrise: A Song of Two Humans",
+    "year": 1927,
+    "awards": "Won 3 Oscars. 9 wins & 2 nominations total",
+    "oscarWins": 3,
+    "qid": "Q431093",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Charles Rosher"
+      },
+      {
+        "award": "Academy Award for Best Actress",
+        "winner": "Janet Gaynor"
+      },
+      {
+        "award": "Academy Award for Best Actress"
+      },
+      {
+        "award": "Academy Award for Best Cinematography"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Karl Struss"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Actress",
+          "winner": "Janet Gaynor"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "2/3"
+  },
+  {
+    "id": "it-happened-one-night-1934",
+    "title": "It Happened One Night",
+    "year": 1934,
+    "awards": "Won 5 Oscars. 14 wins & 2 nominations total",
+    "oscarWins": 5,
+    "qid": "Q208632",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture"
+      },
+      {
+        "award": "Academy Award for Best Director"
+      },
+      {
+        "award": "Academy Award for Best Actor"
+      },
+      {
+        "award": "Academy Award for Best Actress"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director"
+        },
+        {
+          "category": "Actor"
+        },
+        {
+          "category": "Actress"
+        },
+        {
+          "category": "Adapted Screenplay"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "swing-time-1936",
+    "title": "Swing Time",
+    "year": 1936,
+    "awards": "Won 1 Oscar. 6 wins & 3 nominations total",
+    "oscarWins": 1,
+    "qid": "Q25193623",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "gone-with-the-wind-1939",
+    "title": "Gone with the Wind",
+    "year": 1939,
+    "awards": "Won 8 Oscars. 26 wins & 10 nominations total",
+    "oscarWins": 8,
+    "qid": "Q296479",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture"
+      },
+      {
+        "award": "Academy Award for Best Director"
+      },
+      {
+        "award": "Academy Award for Best Actress"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay"
+      },
+      {
+        "award": "Academy Award for Best Cinematography"
+      },
+      {
+        "award": "Academy Award for Best Film Editing"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director"
+        },
+        {
+          "category": "Actress"
+        },
+        {
+          "category": "Adapted Screenplay"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Film Editing"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "6/8"
+  },
+  {
+    "id": "mr-smith-goes-to-washington-1939",
+    "title": "Mr. Smith Goes to Washington",
+    "year": 1939,
+    "awards": "Won 1 Oscar. 8 wins & 12 nominations total",
+    "oscarWins": 1,
+    "qid": "Q866120",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Story",
+        "winner": "Lewis R. Foster"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Screenplay",
+          "winner": "Lewis R. Foster"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "stagecoach-1939",
+    "title": "Stagecoach",
+    "year": 1939,
+    "awards": "Won 2 Oscars. 10 wins & 5 nominations total",
+    "oscarWins": 2,
+    "qid": "Q339249",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Thomas Mitchell"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Richard Hageman, W. Franke Harling, John Leipold, and Leo Shuken"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Supporting Actor",
+          "winner": "Thomas Mitchell"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Richard Hageman, W. Franke Harling, John Leipold, and Leo Shuken"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-wizard-of-oz-1939",
+    "title": "The Wizard of Oz",
+    "year": 1939,
+    "awards": "Won 2 Oscars. 16 wins & 14 nominations total",
+    "oscarWins": 2,
+    "qid": "Q193695",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Herbert Stothart"
+      },
+      {
+        "award": "Academy Award for Best Original Song",
+        "winner": "\"Over the Rainbow\" Music by Harold Arlen; Lyrics by E. Y. Harburg"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Score",
+          "winner": "Herbert Stothart"
+        },
+        {
+          "category": "Original Song",
+          "winner": "\"Over the Rainbow\" Music by Harold Arlen; Lyrics by E. Y. Harburg"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-philadelphia-story-1940",
+    "title": "The Philadelphia Story",
+    "year": 1940,
+    "awards": "Won 2 Oscars. 9 wins & 5 nominations total",
+    "oscarWins": 2,
+    "qid": "Q7756899",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "James Stewart"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Donald Ogden Stewart"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actor",
+          "winner": "James Stewart"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Donald Ogden Stewart"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-red-shoes-1948",
+    "title": "The Red Shoes",
+    "year": 1948,
+    "awards": "Won 2 Oscars. 5 wins & 5 nominations total",
+    "oscarWins": 2,
+    "qid": "Q436239",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Brian Easdale"
+      },
+      {
+        "award": "Academy Award for Best Production Design"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Score",
+          "winner": "Brian Easdale"
+        },
+        {
+          "category": "Production Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "ben-hur-1959",
+    "title": "Ben-Hur",
+    "year": 1959,
+    "awards": "Won 11 Oscars. 29 wins & 13 nominations total",
+    "oscarWins": 11,
+    "qid": "Q176654",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/11"
+  },
+  {
+    "id": "spartacus-1960",
+    "title": "Spartacus",
+    "year": 1960,
+    "awards": "Won 4 Oscars. 12 wins & 11 nominations total",
+    "oscarWins": 4,
+    "qid": "Q83406",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Peter Ustinov"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Alexander Golitzen, Eric Orbom, Russell A. Gausman and Julia Heron"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Russell Metty"
+      },
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Arlington Valles and Bill Thomas"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Supporting Actor",
+          "winner": "Peter Ustinov"
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Costume Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "to-kill-a-mockingbird-1962",
+    "title": "To Kill a Mockingbird",
+    "year": 1962,
+    "awards": "Won 3 Oscars. 14 wins & 16 nominations total",
+    "oscarWins": 3,
+    "qid": "Q212340",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Gregory Peck"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Horton Foote"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Alexander Golitzen, Henry Bumstead and Oliver Emert"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actor",
+          "winner": "Gregory Peck"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Horton Foote"
+        },
+        {
+          "category": "Production Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "8-and-a-half-1963",
+    "title": "8½",
+    "year": 1963,
+    "awards": "Won 2 Oscars. 19 wins & 9 nominations total",
+    "oscarWins": 2,
+    "qid": "Q12018",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Costume Design"
+      },
+      {
+        "award": "Academy Award for Best International Feature Film"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Costume Design"
+        }
+      ],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-sound-of-music-1965",
+    "title": "The Sound of Music",
+    "year": 1965,
+    "awards": "Won 5 Oscars. 19 wins & 13 nominations total",
+    "oscarWins": 5,
+    "qid": "Q1022513",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "rowspan=\"2\" | Robert Wise"
+      },
+      {
+        "award": "Academy Award for Best Director"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "William H. Reynolds"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Irwin Kostal"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "James Corcoran and Fred Hynes"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director"
+        },
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Irwin Kostal"
+        },
+        {
+          "category": "Sound"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "whos-afraid-of-virginia-woolf-1966",
+    "title": "Who's Afraid of Virginia Woolf?",
+    "year": 1966,
+    "awards": "Won 5 Oscars. 22 wins & 26 nominations total",
+    "oscarWins": 5,
+    "qid": "Q856274",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actress",
+        "winner": "Elizabeth Taylor"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Sandy Dennis"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Art Direction: Richard Sylbert; Set Decoration: George James Hopkins"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Haskell Wexler"
+      },
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Irene Sharaff"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actress",
+          "winner": "Elizabeth Taylor"
+        },
+        {
+          "category": "Supporting Actress",
+          "winner": "Sandy Dennis"
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Costume Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "in-the-heat-of-the-night-1967",
+    "title": "In the Heat of the Night",
+    "year": 1967,
+    "awards": "Won 5 Oscars. 23 wins & 16 nominations total",
+    "oscarWins": 5,
+    "qid": "Q537990",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Walter Mirisch"
+      },
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Rod Steiger"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Stirling Silliphant"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Hal Ashby"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Samuel Goldwyn Studio Sound Department"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actor",
+          "winner": "Rod Steiger"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Stirling Silliphant"
+        },
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Sound"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-graduate-1967",
+    "title": "The Graduate",
+    "year": 1967,
+    "awards": "Won 1 Oscar. 22 wins & 17 nominations total",
+    "oscarWins": 1,
+    "qid": "Q217627",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Mike Nichols"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Mike Nichols"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "midnight-cowboy-1969",
+    "title": "Midnight Cowboy",
+    "year": 1969,
+    "awards": "Won 3 Oscars. 28 wins & 16 nominations total",
+    "oscarWins": 3,
+    "qid": "Q61696",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Jerome Hellman"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "John Schlesinger"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Waldo Salt"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "John Schlesinger"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Waldo Salt"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-empire-strikes-back-1980",
+    "title": "The Empire Strikes Back",
+    "year": 1980,
+    "awards": "Won 1 Oscar. 27 wins & 21 nominations total",
+    "oscarWins": 1,
+    "qid": "Q181795",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Special Achievement Academy Award",
+        "winner": "Dennis Muren"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Peter Sutton"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Steve Maslow"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Bill Varney"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Gregg Landaker"
+      },
+      {
+        "award": "Academy Award for Best Sound"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Sound"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "back-to-the-future-1985",
+    "title": "Back to the Future",
+    "year": 1985,
+    "awards": "Won 1 Oscar. 27 wins & 25 nominations total",
+    "oscarWins": 1,
+    "qid": "Q91540",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "ran-1985",
+    "title": "Ran",
+    "year": 1985,
+    "awards": "Won 1 Oscar. 30 wins & 23 nominations total",
+    "oscarWins": 1,
+    "qid": "Q348451",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "eternal-sunshine-of-the-spotless-mind-2004",
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "year": 2004,
+    "awards": "Won 1 Oscar. 73 wins & 111 nominations total",
+    "oscarWins": 1,
+    "qid": "Q208269",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actress"
+      },
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "-style=\"border-top:2px solid gray;\""
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actress"
+        },
+        {
+          "category": "Original Screenplay",
+          "winner": "-style=\"border-top:2px solid gray;\""
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "2/1"
+  },
+  {
+    "id": "the-dark-knight-2008",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "awards": "Won 2 Oscars. 163 wins & 165 nominations total",
+    "oscarWins": 2,
+    "qid": "Q163872",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Sound Editing"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Heath Ledger"
+      },
+      {
+        "award": "Academy Award for Best Sound Editing",
+        "winner": "Richard King"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Sound Editing"
+        },
+        {
+          "category": "Supporting Actor",
+          "winner": "Heath Ledger"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-last-command-1928",
+    "title": "The Last Command",
+    "year": 1928,
+    "awards": "Won 1 Oscar. 4 wins & 1 nomination total",
+    "oscarWins": 1,
+    "qid": "Q354789",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "all-quiet-on-the-western-front-1930",
+    "title": "All Quiet on the Western Front",
+    "year": 1930,
+    "awards": "Won 2 Oscars. 10 wins & 2 nominations total",
+    "oscarWins": 2,
+    "qid": "Q207332",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture"
+      },
+      {
+        "award": "Academy Award for Best Director"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "king-of-jazz-1930",
+    "title": "King of Jazz",
+    "year": 1930,
+    "awards": "Won 1 Oscar. 2 wins total",
+    "oscarWins": 1,
+    "qid": "Q1194608",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Production Design"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Herman Rosse"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Production Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-awful-truth-1937",
+    "title": "The Awful Truth",
+    "year": 1937,
+    "awards": "Won 1 Oscar. 7 wins & 5 nominations total",
+    "oscarWins": 1,
+    "qid": "Q278513",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Leo McCarey"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Leo McCarey"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "pinocchio-1940",
+    "title": "Pinocchio",
+    "year": 1940,
+    "awards": "Won 2 Oscars. 9 wins total",
+    "oscarWins": 2,
+    "qid": "Q6502703",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Leigh Harline, Paul Smith, and Ned Washington"
+      },
+      {
+        "award": "Academy Award for Best Original Song",
+        "winner": "\"When You Wish Upon a Star\" Music by Leigh Harline; Lyrics by Ned Washington"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Score",
+          "winner": "Leigh Harline, Paul Smith, and Ned Washington"
+        },
+        {
+          "category": "Original Song",
+          "winner": "\"When You Wish Upon a Star\" Music by Leigh Harline; Lyrics by Ned Washington"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "rebecca-1940",
+    "title": "Rebecca",
+    "year": 1940,
+    "awards": "Won 2 Oscars. 10 wins & 10 nominations total",
+    "oscarWins": 2,
+    "qid": "Q226664",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "David O. Selznick (for Selznick International Pictures)"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "George Barnes"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-grapes-of-wrath-1940",
+    "title": "The Grapes of Wrath",
+    "year": 1940,
+    "awards": "Won 2 Oscars. 13 wins & 6 nominations total",
+    "oscarWins": 2,
+    "qid": "Q215983",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "John Ford"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Jane Darwell"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "John Ford"
+        },
+        {
+          "category": "Supporting Actress",
+          "winner": "Jane Darwell"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "now-voyager-1942",
+    "title": "Now, Voyager",
+    "year": 1942,
+    "awards": "Won 1 Oscar. 6 wins & 2 nominations total",
+    "oscarWins": 1,
+    "qid": "Q1346566",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Max Steiner"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Score",
+          "winner": "Max Steiner"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-pride-of-the-yankees-1942",
+    "title": "The Pride of the Yankees",
+    "year": 1942,
+    "awards": "Won 1 Oscar. 2 wins & 10 nominations total",
+    "oscarWins": 1,
+    "qid": "Q1198860",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Film Editing"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Daniel Mandell"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Film Editing"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "woman-of-the-year-1942",
+    "title": "Woman of the Year",
+    "year": 1942,
+    "awards": "Won 1 Oscar. 2 wins & 2 nominations total",
+    "oscarWins": 1,
+    "qid": "Q1212587",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Writing, Original Screenplay",
+        "winner": "Michael Kanin"
+      },
+      {
+        "award": "Academy Award for Best Writing, Original Screenplay",
+        "winner": "Ring Lardner Jr."
+      },
+      {
+        "award": "Academy Award for Best Writing, Original Screenplay"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Screenplay",
+          "winner": "Michael Kanin, Ring Lardner Jr."
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "yankee-doodle-dandy-1942",
+    "title": "Yankee Doodle Dandy",
+    "year": 1942,
+    "awards": "Won 3 Oscars. 6 wins & 6 nominations total",
+    "oscarWins": 3,
+    "qid": "Q1321622",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "James Cagney"
+      },
+      {
+        "award": "Academy Award for Best Actor"
+      },
+      {
+        "award": "Academy Award for Best Original Musical Score",
+        "winner": "Heinz Eric Roemheld"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Nathan Levinson"
+      },
+      {
+        "award": "Academy Award for Best Original Musical Score",
+        "winner": "Ray Heindorf"
+      },
+      {
+        "award": "Academy Award for Best Original Musical Score"
+      },
+      {
+        "award": "Academy Award for Best Sound"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actor",
+          "winner": "James Cagney"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Heinz Eric Roemheld, Ray Heindorf"
+        },
+        {
+          "category": "Sound"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "laura-1944",
+    "title": "Laura",
+    "year": 1944,
+    "awards": "Won 1 Oscar. 5 wins & 4 nominations total",
+    "oscarWins": 1,
+    "qid": "Q253416",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Joseph LaShelle"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "national-velvet-1944",
+    "title": "National Velvet",
+    "year": 1944,
+    "awards": "Won 2 Oscars. 6 wins & 5 nominations total",
+    "oscarWins": 2,
+    "qid": "Q17104435",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Anne Revere"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Robert J. Kern"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Supporting Actress",
+          "winner": "Anne Revere"
+        },
+        {
+          "category": "Film Editing"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "leave-her-to-heaven-1945",
+    "title": "Leave Her to Heaven",
+    "year": 1945,
+    "awards": "Won 1 Oscar. 6 wins & 5 nominations total",
+    "oscarWins": 1,
+    "qid": "Q210873",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Leon Shamroy"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "mildred-pierce-1945",
+    "title": "Mildred Pierce",
+    "year": 1945,
+    "awards": "Won 1 Oscar. 3 wins & 7 nominations total",
+    "oscarWins": 1,
+    "qid": "Q981052",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actress",
+        "winner": "Joan Crawford"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actress",
+          "winner": "Joan Crawford"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-lost-weekend-1945",
+    "title": "The Lost Weekend",
+    "year": 1945,
+    "awards": "Won 4 Oscars. 18 wins & 3 nominations total",
+    "oscarWins": 4,
+    "qid": "Q237134",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Charles Brackett"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Billy Wilder"
+      },
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Ray Milland"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Billy Wilder and Charles Brackett"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Billy Wilder"
+        },
+        {
+          "category": "Actor",
+          "winner": "Ray Milland"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Billy Wilder and Charles Brackett"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "miracle-on-34th-street-1947",
+    "title": "Miracle on 34th Street",
+    "year": 1947,
+    "awards": "Won 3 Oscars. 10 wins & 1 nomination total",
+    "oscarWins": 3,
+    "qid": "Q1467214",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Writing, Adapted Screenplay",
+        "winner": "George Seaton"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor"
+      },
+      {
+        "award": "Academy Award for Best Writing, Adapted Screenplay"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Edmund Gwenn"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Adapted Screenplay",
+          "winner": "George Seaton"
+        },
+        {
+          "category": "Supporting Actor",
+          "winner": "Edmund Gwenn"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "2/3"
+  },
+  {
+    "id": "the-naked-city-1948",
+    "title": "The Naked City",
+    "year": 1948,
+    "awards": "Won 2 Oscars. 6 wins & 5 nominations total",
+    "oscarWins": 2,
+    "qid": "Q1587353",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Cinematography, Black-and-White"
+      },
+      {
+        "award": "Academy Award for Best Film Editing"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Paul Weatherwax"
+      },
+      {
+        "award": "Academy Award for Best Cinematography, Black-and-White",
+        "winner": "William H. Daniels"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Film Editing"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-heiress-1949",
+    "title": "The Heiress",
+    "year": 1949,
+    "awards": "Won 4 Oscars. 13 wins & 9 nominations total",
+    "oscarWins": 4,
+    "qid": "Q1141493",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actress",
+        "winner": "Olivia de Havilland"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "John Meehan, Harry Horner and Emile Kuri"
+      },
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Edith Head and Gile Steele"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Aaron Copland"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actress",
+          "winner": "Olivia de Havilland"
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Costume Design"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Aaron Copland"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "a-streetcar-named-desire-1951",
+    "title": "A Streetcar Named Desire",
+    "year": 1951,
+    "awards": "Won 4 Oscars. 22 wins & 15 nominations total",
+    "oscarWins": 4,
+    "qid": "Q842106",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actress",
+        "winner": "Vivien Leigh"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Karl Malden"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Kim Hunter"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Art Direction: Richard Day; Set Decoration: George James Hopkins"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actress",
+          "winner": "Vivien Leigh"
+        },
+        {
+          "category": "Supporting Actor",
+          "winner": "Karl Malden"
+        },
+        {
+          "category": "Supporting Actress",
+          "winner": "Kim Hunter"
+        },
+        {
+          "category": "Production Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-african-queen-1951",
+    "title": "The African Queen",
+    "year": 1951,
+    "awards": "Won 1 Oscar. 7 wins & 9 nominations total",
+    "oscarWins": 1,
+    "qid": "Q384397",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Humphrey Bogart"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actor",
+          "winner": "Humphrey Bogart"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "high-noon-1952",
+    "title": "High Noon",
+    "year": 1952,
+    "awards": "Won 4 Oscars. 18 wins & 12 nominations total",
+    "oscarWins": 4,
+    "qid": "Q245208",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Gary Cooper"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Elmo Williams and Harry W. Gerstad"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Dimitri Tiomkin"
+      },
+      {
+        "award": "Academy Award for Best Original Song",
+        "winner": "\"The Ballad of High Noon\" Music by Dimitri Tiomkin; Lyrics by Ned Washington"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actor",
+          "winner": "Gary Cooper"
+        },
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Dimitri Tiomkin"
+        },
+        {
+          "category": "Original Song",
+          "winner": "\"The Ballad of High Noon\" Music by Dimitri Tiomkin; Lyrics by Ned Washington"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "gate-of-hell-1953",
+    "title": "Gate of Hell",
+    "year": 1953,
+    "awards": "Won 1 Oscar. 8 wins & 1 nomination total",
+    "oscarWins": 1,
+    "qid": "Q1627902",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "roman-holiday-1953",
+    "title": "Roman Holiday",
+    "year": 1953,
+    "awards": "Won 3 Oscars. 11 wins & 20 nominations total",
+    "oscarWins": 3,
+    "qid": "Q201293",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actress",
+        "winner": "Audrey Hepburn"
+      },
+      {
+        "award": "Academy Award for Best Story",
+        "winner": "Dalton Trumbo"
+      },
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Edith Head"
+      },
+      {
+        "award": "Academy Award for Best Story"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actress",
+          "winner": "Audrey Hepburn"
+        },
+        {
+          "category": "Original Screenplay",
+          "winner": "Dalton Trumbo"
+        },
+        {
+          "category": "Costume Design"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "shane-1953",
+    "title": "Shane",
+    "year": 1953,
+    "awards": "Won 1 Oscar. 8 wins & 13 nominations total",
+    "oscarWins": 1,
+    "qid": "Q525424",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Loyal Griggs"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-war-of-the-worlds-1953",
+    "title": "The War of the Worlds",
+    "year": 1953,
+    "awards": "Won 1 Oscar. 5 wins & 2 nominations total",
+    "oscarWins": 1,
+    "qid": "Q213019",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "la-strada-1954",
+    "title": "La Strada",
+    "year": 1954,
+    "awards": "Won 1 Oscar. 12 wins & 5 nominations total",
+    "oscarWins": 1,
+    "qid": "Q18402",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Foreign Language Film",
+        "winner": "Dino De Laurentiis, Carlo Ponti"
+      }
+    ],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "marty-1955",
+    "title": "Marty",
+    "year": 1955,
+    "awards": "Won 4 Oscars. 19 wins & 6 nominations total",
+    "oscarWins": 4,
+    "qid": "Q282310",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Harold Hecht"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Delbert Mann"
+      },
+      {
+        "award": "Academy Award for Best Actor",
+        "winner": "Ernest Borgnine"
+      },
+      {
+        "award": "Academy Award for Best Adapted Screenplay",
+        "winner": "Paddy Chayefsky"
+      },
+      {
+        "award": "Academy Award for Best Picture"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Delbert Mann"
+        },
+        {
+          "category": "Actor",
+          "winner": "Ernest Borgnine"
+        },
+        {
+          "category": "Adapted Screenplay",
+          "winner": "Paddy Chayefsky"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-ten-commandments-1956",
+    "title": "The Ten Commandments",
+    "year": 1956,
+    "awards": "Won 1 Oscar. 13 wins & 12 nominations total",
+    "oscarWins": 1,
+    "qid": "Q34623",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "John P. Fulton"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Visual Effects"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "nights-of-cabiria-1957",
+    "title": "Nights of Cabiria",
+    "year": 1957,
+    "awards": "Won 1 Oscar. 17 wins & 7 nominations total",
+    "oscarWins": 1,
+    "qid": "Q18405",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best International Feature Film"
+      }
+    ],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "black-orpheus-1959",
+    "title": "Black Orpheus",
+    "year": 1959,
+    "awards": "Won 1 Oscar. 4 wins & 2 nominations total",
+    "oscarWins": 1,
+    "qid": "Q538266",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best International Feature Film"
+      }
+    ],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-hustler-1961",
+    "title": "The Hustler",
+    "year": 1961,
+    "awards": "Won 2 Oscars. 13 wins & 21 nominations total",
+    "oscarWins": 2,
+    "qid": "Q1130084",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Art Direction: Harry Horner; Set Decoration: Gene Callahan"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Eugen Schüfftan"
+      },
+      {
+        "award": "Academy Award for Best Actor in a Leading Role"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": [
+        "Academy Award for Best Actor in a Leading Role"
+      ]
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "west-side-story-1961",
+    "title": "West Side Story",
+    "year": 1961,
+    "awards": "Won 10 Oscars. 31 wins & 11 nominations total",
+    "oscarWins": 10,
+    "qid": "Q669010",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Picture",
+        "winner": "Robert Wise"
+      },
+      {
+        "award": "Academy Award for Best Director",
+        "winner": "Robert Wise and Jerome Robbins"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "George Chakiris"
+      },
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Rita Moreno"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Art Direction: Boris Leven; Set Decoration: Victor A. Gangelin"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Daniel L. Fapp"
+      },
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Irene Sharaff"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Thomas Stanford"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Saul Chaplin, Johnny Green, Irwin Kostal, and Sid Ramin"
+      },
+      {
+        "award": "Academy Award for Best Sound",
+        "winner": "Fred Hynes and Gordon E. Sawyer"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Director",
+          "winner": "Robert Wise and Jerome Robbins"
+        },
+        {
+          "category": "Supporting Actor",
+          "winner": "George Chakiris"
+        },
+        {
+          "category": "Supporting Actress",
+          "winner": "Rita Moreno"
+        },
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Costume Design"
+        },
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Saul Chaplin, Johnny Green, Irwin Kostal, and Sid Ramin"
+        },
+        {
+          "category": "Sound"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": true,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "a-man-and-a-woman-1966",
+    "title": "A Man and a Woman",
+    "year": 1966,
+    "awards": "Won 2 Oscars. 13 wins & 11 nominations total",
+    "oscarWins": 2,
+    "qid": "Q261403",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best International Feature Film",
+        "winner": "France"
+      },
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "Claude Lelouch and Pierre Uytterhoeven"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Screenplay",
+          "winner": "Claude Lelouch and Pierre Uytterhoeven"
+        }
+      ],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "bonnie-and-clyde-1967",
+    "title": "Bonnie and Clyde",
+    "year": 1967,
+    "awards": "Won 2 Oscars. 22 wins & 29 nominations total",
+    "oscarWins": 2,
+    "qid": "Q219937",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Estelle Parsons"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Burnett Guffey"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Supporting Actress",
+          "winner": "Estelle Parsons"
+        },
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "funny-girl-1968",
+    "title": "Funny Girl",
+    "year": 1968,
+    "awards": "Won 1 Oscar. 8 wins & 16 nominations total",
+    "oscarWins": 1,
+    "qid": "Q453850",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Actress",
+        "winner": "Barbra Streisand"
+      },
+      {
+        "award": "Academy Award for Best Actress"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Actress",
+          "winner": "Barbra Streisand"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "rosemarys-baby-1968",
+    "title": "Rosemary's Baby",
+    "year": 1968,
+    "awards": "Won 1 Oscar. 13 wins & 13 nominations total",
+    "oscarWins": 1,
+    "qid": "Q1210063",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Supporting Actress",
+        "winner": "Ruth Gordon"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Supporting Actress",
+          "winner": "Ruth Gordon"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "butch-cassidy-and-the-sundance-kid-1969",
+    "title": "Butch Cassidy and the Sundance Kid",
+    "year": 1969,
+    "awards": "Won 4 Oscars. 22 wins & 15 nominations total",
+    "oscarWins": 4,
+    "qid": "Q232000",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "William Goldman"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Conrad Hall"
+      },
+      {
+        "award": "Academy Award for Best Original Score",
+        "winner": "Burt Bacharach"
+      },
+      {
+        "award": "Academy Award for Best Original Song",
+        "winner": "\"Raindrops Keep Fallin' on My Head\" Music by Burt Bacharach; Lyrics by Hal David"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Screenplay",
+          "winner": "William Goldman"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Original Score",
+          "winner": "Burt Bacharach"
+        },
+        {
+          "category": "Original Song",
+          "winner": "\"Raindrops Keep Fallin' on My Head\" Music by Burt Bacharach; Lyrics by Hal David"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "z-1969",
+    "title": "Z",
+    "year": 1969,
+    "awards": "Won 2 Oscars. 12 wins & 13 nominations total",
+    "oscarWins": 2,
+    "qid": "Q9751",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best International Feature Film",
+        "winner": "Algeria"
+      },
+      {
+        "award": "Academy Award for Best Film Editing",
+        "winner": "Françoise Bonnot"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Film Editing"
+        }
+      ],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "shaft-1971",
+    "title": "Shaft",
+    "year": 1971,
+    "awards": "Won 1 Oscar. 6 wins & 6 nominations total",
+    "oscarWins": 1,
+    "qid": "Q226604",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Song",
+        "winner": "\"Theme from ''Shaft''\" Music and Lyrics by Isaac Hayes"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Song",
+          "winner": "\"Theme from ''Shaft''\" Music and Lyrics by Isaac Hayes"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "paper-moon-1973",
+    "title": "Paper Moon",
+    "year": 1973,
+    "awards": "Won 1 Oscar. 9 wins & 10 nominations total",
+    "oscarWins": 1,
+    "qid": "Q238426",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "hearts-and-minds-1974",
+    "title": "Hearts and Minds",
+    "year": 1974,
+    "awards": "Won 1 Oscar. 5 wins & 1 nomination total",
+    "oscarWins": 1,
+    "qid": "Q15710558",
+    "source": "wikidata",
+    "raw": [],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "0/1"
+  },
+  {
+    "id": "harlan-county-usa-1976",
+    "title": "Harlan County, USA",
+    "year": 1976,
+    "awards": "Won 1 Oscar. 9 wins & 1 nomination total",
+    "oscarWins": 1,
+    "qid": "Q1752675",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Documentary Feature Film",
+        "winner": "Barbara Kopple"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Documentary Feature",
+          "winner": "Barbara Kopple"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "days-of-heaven-1978",
+    "title": "Days of Heaven",
+    "year": 1978,
+    "awards": "Won 1 Oscar. 13 wins & 13 nominations total",
+    "oscarWins": 1,
+    "qid": "Q670378",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Néstor Almendros"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Cinematography"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "being-there-1979",
+    "title": "Being There",
+    "year": 1979,
+    "awards": "Won 1 Oscar. 14 wins & 15 nominations total",
+    "oscarWins": 1,
+    "qid": "Q945074",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Melvyn Douglas"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Supporting Actor",
+          "winner": "Melvyn Douglas"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-tin-drum-1979",
+    "title": "The Tin Drum",
+    "year": 1979,
+    "awards": "Won 1 Oscar. 18 wins & 6 nominations total",
+    "oscarWins": 1,
+    "qid": "Q899334",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Foreign Language Film",
+        "winner": "rowspan=6|Volker Schlöndorff"
+      }
+    ],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "fanny-and-alexander-1982",
+    "title": "Fanny and Alexander",
+    "year": 1982,
+    "awards": "Won 4 Oscars. 25 wins & 13 nominations total",
+    "oscarWins": 4,
+    "qid": "Q165651",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Foreign Language Film"
+      },
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Anna Asp"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Sven Nykvist"
+      },
+      {
+        "award": "Academy Award for Best Costume Design",
+        "winner": "Marik Vos-Lundh"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Costume Design"
+        }
+      ],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-times-of-harvey-milk-1984",
+    "title": "The Times of Harvey Milk",
+    "year": 1984,
+    "awards": "Won 1 Oscar. 11 wins & 2 nominations total",
+    "oscarWins": 1,
+    "qid": "Q1772403",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best Documentary Feature Film",
+        "winner": "Rob Epstein"
+      },
+      {
+        "award": "Academy Award for Best Documentary Feature Film",
+        "winner": "Richard Schmiechen"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Documentary Feature",
+          "winner": "Rob Epstein, Richard Schmiechen"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "cinema-paradiso-1988",
+    "title": "Cinema Paradiso",
+    "year": 1988,
+    "awards": "Won 1 Oscar. 25 wins & 33 nominations total",
+    "oscarWins": 1,
+    "qid": "Q464032",
+    "source": "wikidata",
+    "raw": [
+      {
+        "award": "Academy Award for Best International Feature Film"
+      }
+    ],
+    "mapped": {
+      "awards": [],
+      "alsoWon": [
+        "INT"
+      ],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "thelma-louise-1991",
+    "title": "Thelma & Louise",
+    "year": 1991,
+    "awards": "Won 1 Oscar. 24 wins & 52 nominations total",
+    "oscarWins": 1,
+    "qid": "Q658041",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "Callie Khouri"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Original Screenplay",
+          "winner": "Callie Khouri"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "jurassic-park-1993",
+    "title": "Jurassic Park",
+    "year": 1993,
+    "awards": "Won 3 Oscars. 44 wins & 27 nominations total",
+    "oscarWins": 3,
+    "qid": "Q167726",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Sound Editing",
+        "winner": "Gary Rydstrom and Richard Hymns"
+      },
+      {
+        "award": "Academy Award for Best Sound Mixing",
+        "winner": "Gary Summers, Gary Rydstrom, Shawn Murphy and Ron Judkins"
+      },
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "Dennis Muren, Stan Winston, Phil Tippett and Michael Lantieri"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Sound Editing"
+        },
+        {
+          "category": "Sound Mixing"
+        },
+        {
+          "category": "Visual Effects"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-usual-suspects-1995",
+    "title": "The Usual Suspects",
+    "year": 1995,
+    "awards": "Won 2 Oscars. 37 wins & 17 nominations total",
+    "oscarWins": 2,
+    "qid": "Q132351",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Supporting Actor",
+        "winner": "Kevin Spacey"
+      },
+      {
+        "award": "Academy Award for Best Original Screenplay",
+        "winner": "Christopher McQuarrie"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Supporting Actor",
+          "winner": "Kevin Spacey"
+        },
+        {
+          "category": "Original Screenplay",
+          "winner": "Christopher McQuarrie"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "the-matrix-1999",
+    "title": "The Matrix",
+    "year": 1999,
+    "awards": "Won 4 Oscars. 42 wins & 52 nominations total",
+    "oscarWins": 4,
+    "qid": "Q83495",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Film Editing"
+      },
+      {
+        "award": "Academy Award for Best Sound"
+      },
+      {
+        "award": "Academy Award for Best Sound"
+      },
+      {
+        "award": "Academy Award for Best Visual Effects"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Film Editing"
+        },
+        {
+          "category": "Sound"
+        },
+        {
+          "category": "Visual Effects"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "3/4"
+  },
+  {
+    "id": "pans-labyrinth-2006",
+    "title": "Pan's Labyrinth",
+    "year": 2006,
+    "awards": "Won 3 Oscars. 109 wins & 115 nominations total",
+    "oscarWins": 3,
+    "qid": "Q216006",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Production Design",
+        "winner": "Art Direction: Eugenio Caballero; Set Decoration: Pilar Revuelta"
+      },
+      {
+        "award": "Academy Award for Best Cinematography",
+        "winner": "Guillermo Navarro"
+      },
+      {
+        "award": "Academy Award for Best Makeup and Hairstyling",
+        "winner": "David Martí and Montse Ribé"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Production Design"
+        },
+        {
+          "category": "Cinematography"
+        },
+        {
+          "category": "Makeup"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  },
+  {
+    "id": "interstellar-2014",
+    "title": "Interstellar",
+    "year": 2014,
+    "awards": "Won 1 Oscar. 45 wins & 148 nominations total",
+    "oscarWins": 1,
+    "qid": "Q3153615",
+    "source": "wikipedia",
+    "raw": [
+      {
+        "award": "Academy Award for Best Visual Effects",
+        "winner": "data-sort-value=\"Franklin, Paul\" | Paul Franklin, Andrew Lockley, Ian Hunter, and Scott Fisher"
+      }
+    ],
+    "mapped": {
+      "awards": [
+        {
+          "category": "Visual Effects"
+        }
+      ],
+      "alsoWon": [],
+      "bestPicture": false,
+      "unknownLabels": []
+    },
+    "parity": "✓"
+  }
+]

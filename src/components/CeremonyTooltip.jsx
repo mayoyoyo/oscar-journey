@@ -13,7 +13,7 @@ const CATEGORY_ORDER = [
   { key: 'BP', label: 'Best Picture' },
   { key: 'INT', label: 'Best International Feature Film' },
   { key: 'ANIM', label: 'Best Animated Feature' },
-  { key: 'ESSENTIAL', label: 'Essential — non-Oscar canon' },
+  { key: 'ESSENTIAL', label: (year) => `${year} Essentials (non-Oscar canon)` },
 ];
 
 export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpenDetail }) {
@@ -65,9 +65,13 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
     });
   }
 
-  const lineText = isCeremonyMode
-    ? `${ordinal(ceremony)} Academy Awards · ${year}`
-    : `Canon film · ${year}`;
+  // Canon-only films don't get a ceremony line — the year is already shown
+  // below the title and "Canon film" carries no distinguishing info
+  // (absence of Academy-Awards line already signals canon).
+  if (!isCeremonyMode) return null;
+  // For Oscar films: ceremony name only, drop the year (also redundant with
+  // the year under the title).
+  const lineText = `${ordinal(ceremony)} Academy Awards`;
 
   const modalTitle = isCeremonyMode
     ? `${ordinal(ceremony)} Academy Awards`
@@ -104,9 +108,10 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
             {CATEGORY_ORDER.map(({ key, label }) => {
               const films = grouped[key];
               if (!films || films.length === 0) return null;
+              const resolvedLabel = typeof label === 'function' ? label(year) : label;
               return (
                 <div key={key} className="ceremony-modal-section">
-                  <h3 className="ceremony-modal-category">{label}</h3>
+                  <h3 className="ceremony-modal-category">{resolvedLabel}</h3>
                   {films.map(m => (
                     <div key={m.id}
                       className={`ceremony-modal-film ${m.id === currentMovieId ? 'is-current' : ''}`}
@@ -128,7 +133,8 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
                           🏆{m.awards.length + (m.wonInCategory ? 1 : 0)}
                         </span>
                       ) : null}
-                      <span className="ceremony-modal-film-year">{m.year}</span>
+                      {/* Year removed from each row — every film in this modal is
+                          from the same year, so the column was pure visual noise. */}
                     </div>
                   ))}
                 </div>

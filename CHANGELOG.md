@@ -1,6 +1,22 @@
 # Changelog
 
-## Unreleased
+## 3.1.0 — 2026-04-17
+
+### Winner pill text trim — chris-testing
+- Dropped "· Speech" from BP / Intl / Anim winner pills. Labels now read
+  **Winner**, **Intl Winner**, **Anim Winner** — the `↗` icon + tooltip
+  already signal the speech link.
+
+### Merged mayo's follow-up commits
+- Language pill is **language-based, not country-based** (one film's pill
+  reflects its primary language, not its country of production).
+- Detail modal shows **per-Oscar-category speech pills**, and the language
+  pill moves onto the year / runtime line.
+- Films list gains an **Unwatched-only** toggle alongside Watched-only
+  (three-way `watchMode` enum — mutually exclusive, click active pill to
+  return to "all").
+- Merge conflict resolved in `FilmCard.jsx` year-row: keeps runtime · tier
+  pips · language pill in the detail-modal's order.
 
 ### Filter cleanup — chris-testing
 - Removed **ESSENTIAL** from Categories filter. Essentials now governed solely

@@ -209,11 +209,29 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v3.0.0</span>
+            <span className="settings-version-num">v3.1.0</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v3.1.0</strong> — Oscar statuette redesign + unified filters (thanks <a href="https://github.com/mayo" target="_blank" rel="noopener noreferrer">@mayo</a>)</p>
+              <ul>
+                <li><strong>Oscar statuette icons</strong> replace the "✦ Essential" text badge everywhere — gold (BP winner), bronze (BP nominee), blue (Intl winner), purple (Anim winner). Multi-statuette films like Parasite and Amour render all their medals in a consistent left→right order. BP winner is full-size; other statuettes scale to 0.85× so the winner stays dominant</li>
+                <li><strong>Unified canon depth</strong> — one 1–7 tier stepper that applies to ALL films (Oscar + essential). OSCAR / OSCAR_NOM now counts as a canon list, so BP winners tier to 8 and nominees to 1+. Per-level descriptions: Everything → Canon threshold → Strong consensus → Iron-clad → Near-universal → Universal → All-time masterpieces</li>
+                <li><strong>Oscars only / Essentials only</strong> — two mutually-exclusive toggles in Canon depth. "Oscars only" hides the 438 non-Oscar canon; "Essentials only" hides BP/Intl/Anim to show just the canon. Replaces the old 4-button radio</li>
+                <li><strong>Categories cleanup</strong> — ESSENTIAL row removed (duplicated Canon depth). Categories now only governs Oscar-eligible films: Best Picture · International · Animated. International and Animated use <em>broad</em> predicates (any non-English / any animated), catching ~20% of the catalog including essentials like Seven Samurai and Toy Story</li>
+                <li><strong>Oscars Won filter</strong> — filter films by the specific category they won: Best Picture, Best Director, Best Actor/Actress, Supporting, Screenplay (Orig/Adapt), Cinematography, Score, Song, Editing, VFX, Costume, Production Design, Makeup, Sound. 96 essentials had their per-category wins backfilled (Wikipedia Accolades + Wikidata SPARQL + 17 hand-patched); The Dark Knight now renders "Sound Editing + Supporting Actor — Heath Ledger"</li>
+                <li><strong>Full-catalog search</strong> across title + director + full Wikidata cast (OMDb top-billed fallback). Type any actor's name and find every film they're in on the list</li>
+                <li><strong>Detail modal restructure</strong> — runtime inline with year (<code>1972 · 2h 55m</code>), tier pill moved to the year row, "Directed by" bold label above the synopsis, new "Starring" line (top-billed cast with · separators), per-Oscar-category speech-search pills, dropped redundant Canon-list block. Colored BP/Intl/Anim chips replaced by the tinted statuettes</li>
+                <li><strong>Journey card matches the modal</strong> — year + runtime inline, tier pips alongside, "Directed by" + "Starring" lines, winner pill text trimmed (no more "· Speech" — the ↗ icon + tooltip already signal the link)</li>
+                <li><strong>Journey filters match the Film tab</strong> — same 1–7 tier stepper, same Oscars-only / Essentials-only toggles, inline Reset chip when any filter is active, per-row "only" shortcut buttons, chip-summary of narrowed state when collapsed</li>
+                <li><strong>Sticky filter bar</strong> in Films with match count promoted into the header (<code>509 films · 77 watched</code>, or <code>509 · 77✓</code> on mobile)</li>
+                <li><strong>Language pill</strong> for non-English films — shows the primary-language flag (French, Spanish, Korean, etc.) based on <code>languages.json</code> (201 films). Now language-based, not country-based — one film, one flag that reflects what you actually hear</li>
+                <li><strong>Unwatched-only toggle</strong> alongside Watched-only in the Film tab, three-way mutually-exclusive (All · Watched · Unwatched)</li>
+                <li>New data files: <code>languages.json</code>, <code>directors.json</code> (835 films, 20 hand-trims to remove OMDb over-credits like Bambi → David Hand, Wizard of Oz → Fleming), <code>actors.json</code> (top-billed), <code>cast.json</code> (full Wikidata cast)</li>
+                <li><code>docs/METHODOLOGY.md</code> — the 2-of-N canon triangulation rule written up in full</li>
+                <li><code>apple-touch-icon</code> for iOS homescreen install</li>
+              </ul>
               <p><strong>v3.0.0</strong> — Essentials expansion: 438 non-Oscar canon films</p>
               <ul>
                 <li>New <strong>Essential</strong> category — 438 must-watch films the Academy overlooked, curated by triangulating 7 independent canon lists (Sight &amp; Sound, Criterion, IMDb Top 250, Letterboxd Top 250, AFI, festival grand prizes, National Film Registry). A film qualifies if it appears on ≥ 2 lists</li>

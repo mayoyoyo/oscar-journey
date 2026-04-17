@@ -11,19 +11,22 @@ export function getOscarStatus(movie) {
   return null;
 }
 
-// Returns every Oscar statuette that applies to this film. Values:
-//   'winner'  (gold)   — BP win
-//   'nominee' (bronze) — BP nom that lost
-//   'int'     (blue)   — won INT (alone or alongside BP)
-//   'anim'    (purple) — won ANIM (alone or alongside BP)
-// A BP winner that also won INT (e.g. Parasite) yields ['winner', 'int'].
-// An INT-only winner (Drive My Car) yields ['int']. Amour: ['nominee', 'int'].
+// Returns every Oscar statuette that applies to this film, in left→right
+// render order:
+//   1. 'nominee' (bronze) — BP nom that lost        [always leftmost]
+//   2. 'int'     (blue)   — won INT                 [middle]
+//   3. 'anim'    (purple) — won ANIM                [middle — INT and ANIM
+//                                                     don't overlap in practice]
+//   4. 'winner'  (gold)   — BP win                  [always rightmost]
+// Parasite: ['int', 'winner']. Amour: ['nominee', 'int'].
+// Drive My Car: ['int']. Spirited Away: ['anim'].
 export function getOscarBadges(movie) {
   const out = [];
   const alsoWon = movie.alsoWon || [];
-  if (movie.category === 'BP') out.push(movie.won ? 'winner' : 'nominee');
+  if (movie.category === 'BP' && !movie.won) out.push('nominee');
   if (movie.category === 'INT' || alsoWon.includes('INT')) out.push('int');
   if (movie.category === 'ANIM' || alsoWon.includes('ANIM')) out.push('anim');
+  if (movie.category === 'BP' && movie.won) out.push('winner');
   return out;
 }
 

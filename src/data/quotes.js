@@ -593,4 +593,15 @@ export const QUOTES = {
   'invasion-of-the-body-snatchers-1956': ["They're here, already! You're next!", "Look, you fools, you're in danger! Can't you see?! They're after you!"],
   'the-ten-commandments-1956': ["Let my people go!", "So let it be written. So let it be done."],
   'a-face-in-the-crowd-1957': ["I'm not just an entertainer. I'm an influence, a wielder of opinion, a force... a force!"],
+
+  // --- Tier 2 (batch 3: more 1940s-1950s, plus some earlier) ---
+  'bambi-1942': ["If you can't say somethin' nice, don't say nothin' at all."],
+  'cat-people-1942': ["I like to be liked."],
+  'the-lost-weekend-1945': ["Most men lead lives of quiet desperation. I can't take 'quiet desperation.'"],
+  'the-thief-of-bagdad-1924': ["This Arab Prince is but a thief. Seek him out!"],
+  'the-pride-of-the-yankees-1942': ["Today, I consider myself the luckiest man on the face of the earth."],
+  'yankee-doodle-dandy-1942': ["I'd rather be right than be president..."],
+  'la-strada-1954': ["What a funny face! Are you a woman, really? Or an artichoke?"],
+  'roman-holiday-1953': ["I've never been alone with a man before - even with my dress on."],
+  'the-naked-city-1948': ["There are eight million stories in the Naked City; this has been one of them."],
 };

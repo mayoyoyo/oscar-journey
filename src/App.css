@@ -6933,12 +6933,12 @@ main {
 .journey-filters-collapsible .filter-section { margin-bottom: 4px; }
 .journey-filters-collapsible .filter-section:last-child { margin-bottom: 0; }
 
-/* Inline summary chips next to the collapsed Filters header */
+/* Inline summary chips next to the collapsed Filters header.
+   No margin-left — the parent header has a flex gap that handles spacing. */
 .journey-filter-chips {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 4px;
-  margin-left: 6px;
+  gap: 8px;
   align-items: center;
 }
 
@@ -6958,7 +6958,6 @@ main {
   .journey-filter-chips {
     /* Wrap below header on narrow screens so chips don't push other controls */
     flex-basis: 100%;
-    margin-left: 0;
     margin-top: 6px;
   }
   .journey-filter-chip {

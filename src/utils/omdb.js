@@ -18,6 +18,14 @@ const POSTER_OVERRIDES = {
   'birdman-2014': '/posters/birdman-2014.jpg',
   'il-postino-1995': '/posters/il-postino-1995.jpg',
   'cries-and-whispers-1973': '/posters/cries-and-whispers-1973.webp',
+  // Essentials where OMDb's poster URL 404s on Amazon CDN — local images needed.
+  'les-cousins-1959': '/posters/les-cousins-1959.jpg',
+  'the-color-of-pomegranates-1969': '/posters/the-color-of-pomegranates-1969.jpg',
+  'adoption-1975': '/posters/adoption-1975.jpg',
+  'the-ballad-of-gregorio-cortez-1982': '/posters/the-ballad-of-gregorio-cortez-1982.jpg',
+  'au-revoir-les-enfants-1987': '/posters/au-revoir-les-enfants-1987.jpg',
+  'thelonious-monk-straight-no-chaser-1988': '/posters/thelonious-monk-straight-no-chaser-1988.jpg',
+  'la-cienaga-2001': '/posters/la-cienaga-2001.jpg',
 };
 
 // Title overrides for movies that don't match OMDB's naming

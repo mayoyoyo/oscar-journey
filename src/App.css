@@ -2902,9 +2902,17 @@ main {
   margin-top: 12px;
 }
 
+/* `display: flex` on a td removes the cell from the table layout and
+   throws off baseline alignment of sibling cells, which is why the WATCHED /
+   TOTAL numbers looked vertically off. Use vertical-align: middle on every
+   cell instead, keep the first cell's pill + "N of 8" on one line via
+   white-space: nowrap. */
+.canon-tier-table td,
+.canon-tier-table th {
+  vertical-align: middle;
+}
 .canon-tier-table td:first-child {
-  display: flex;
-  align-items: center;
+  white-space: nowrap;
 }
 
 .canon-next-up {
@@ -3581,6 +3589,10 @@ main {
   color: var(--gold);
 }
 
+.pc-detail-streak {
+  color: var(--gold);
+}
+
 .pc-showcase-section {
   display: flex;
   justify-content: center;
@@ -3950,8 +3962,21 @@ main {
   border-radius: 12px;
 }
 .pd-stats-section .stats-section {
-  margin: 0;
+  /* Keep flat sections (Top 5, Ratings by Genre, Progress by Decade) from
+     bleeding into each other visually — but no extra padding since the
+     outer .pd-stats-section already pads to 20px. */
+  margin: 0 0 28px 0;
   padding: 0;
+}
+.pd-stats-section .stats-section:last-child {
+  margin-bottom: 0;
+}
+/* The Canon Score section is a self-contained sub-card (gold top stripe,
+   inner table). When nested inside .pd-stats-section the generic rule above
+   strips its inner padding, leaving the "Canon Score" header flush against
+   the outer card edge. Restore the 20px padding for this specific sub-card. */
+.pd-stats-section .stats-section.canon-score-section {
+  padding: 20px;
 }
 
 .pd-section-heading {

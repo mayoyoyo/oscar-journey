@@ -204,19 +204,22 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
 
         <table className="stats-table canon-tier-table">
           <thead>
-            <tr><th>Tier</th><th>Watched</th><th>Total</th><th>%</th></tr>
+            <tr><th>Tier</th><th>Watched</th><th>Total</th></tr>
           </thead>
           <tbody>
             {Array.from({ length: MAX_TIER }, (_, i) => MAX_TIER - i).map(t => {
               const row = stats.tierBreakdown[t];
               if (!row || row.total === 0) return null;
-              const pct = row.total > 0 ? Math.round((row.watched / row.total) * 100) : 0;
               return (
                 <tr key={t}>
                   <td>
+                    {/* In a table column every row needs the same pill width
+                        so the column reads cleanly. Render all MAX_TIER dots —
+                        filled up to `t`, empty after — instead of only the
+                        filled ones (which leaves each row a different width). */}
                     <span className={`tier-pips tier-${t}`} style={{ padding: '3px 7px' }}>
-                      {Array.from({ length: t }, (_, i) => (
-                        <span key={i} className="tier-pip filled" />
+                      {Array.from({ length: MAX_TIER }, (_, i) => (
+                        <span key={i} className={`tier-pip ${i < t ? 'filled' : 'empty'}`} />
                       ))}
                     </span>
                     <span style={{ marginLeft: 8, color: 'var(--cream-dim)', fontSize: '0.85rem' }}>
@@ -225,29 +228,11 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
                   </td>
                   <td>{row.watched}</td>
                   <td>{row.total}</td>
-                  <td>{pct}%</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
-
-        {stats.nextUp.length > 0 && (
-          <div style={{ marginTop: 20 }}>
-            <h4 style={{ fontFamily: 'var(--font-display)', color: 'var(--gold)', fontSize: '0.95rem', marginBottom: 10 }}>
-              Next up — highest-signal unwatched
-            </h4>
-            <ul className="canon-next-up">
-              {stats.nextUp.map(m => (
-                <li key={m.id}>
-                  <span className="canon-next-title">{m.title}</span>
-                  <span className="canon-next-year">· {m.year}</span>
-                  <TierPips movie={m} variant="compact" />
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
 
       {/* Top rated per rater */}

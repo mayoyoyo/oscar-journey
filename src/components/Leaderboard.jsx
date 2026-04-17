@@ -164,6 +164,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         battleCount: p.battleCount || 0,
         showcase: p.showcase || [],
         wallet: p.wallet || [],
+        dailyStreak: p.dailyStreak || 0,
         privateProfile: p.privateProfile || false,
       });
 
@@ -337,8 +338,8 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                   {!p.isVirtualRater && p.skipCount > 0 && (
                     <span className="pc-detail pc-detail-skip">{p.skipCount} skipped 😤</span>
                   )}
-                  {getCollectorScore(p.wallet) > 0 && (
-                    <span className="pc-detail pc-detail-collector" title="Collector score from cards">🃏 {getCollectorScore(p.wallet)}</span>
+                  {p.dailyStreak > 0 && (
+                    <span className="pc-detail pc-detail-streak" title="Daily Oscar streak">🎬 {p.dailyStreak} day{p.dailyStreak === 1 ? '' : 's'}</span>
                   )}
                 </div>
               </div>

@@ -700,7 +700,9 @@ main {
   transform: scale(1.15);
 }
 
-/* Higher-tier glow to reward discovery */
+/* Higher-tier glow to reward discovery. Kicks in at tier 5 (near-universal
+   canon) and gets richer from there. */
+.tier-pips.tier-5 .tier-pip.filled,
 .tier-pips.tier-6 .tier-pip.filled,
 .tier-pips.tier-7 .tier-pip.filled,
 .tier-pips.tier-8 .tier-pip.filled {
@@ -708,6 +710,8 @@ main {
   box-shadow: 0 0 5px rgba(212, 175, 60, 0.6);
 }
 
+.tier-pips.tier-5,
+.tier-pips.tier-6,
 .tier-pips.tier-7,
 .tier-pips.tier-8 {
   background: linear-gradient(135deg, rgba(212, 175, 60, 0.15), rgba(139, 105, 20, 0.1));

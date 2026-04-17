@@ -70,9 +70,9 @@ export async function getOrCreateElo(movieKey, movieData) {
     year: movieData.year,
     elo: 1500,
     matchCount: 0,
-    won: movieData.won,
-    genre: movieData.genre,
-    category: movieData.category,
+    won: movieData.won ?? false,
+    genre: movieData.genre ?? null,
+    category: movieData.category ?? null,
   };
   await setDoc(ref, newDoc);
   return { id: movieKey, ...newDoc };

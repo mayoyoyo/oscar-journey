@@ -381,8 +381,12 @@ export default function App() {
   }, []);
 
   // --- Initialize all state from a loaded profile ---
+  // Mutate `data` with every post-write value (playlistOrder, seed, currentIdx,
+  // migrated watched/ratings, sanitized filters) before calling setProfile at
+  // the end. That guarantees React profile state matches Firestore truth from
+  // the first render — otherwise downstream views (ProfileDetail) can render
+  // stale fields that were rewritten on login.
   const initializeFromProfile = useCallback((data) => {
-    setProfile(data);
     localStorage.setItem(LS_PROFILE_KEY, data.id);
 
     // Determine seed and playlist order
@@ -418,8 +422,9 @@ export default function App() {
             [newMovies[i], newMovies[j]] = [newMovies[j], newMovies[i]];
           }
           pl = [...pl, ...newMovies];
-          // Save updated order
-          saveProfileField(data.id, 'playlistOrder', pl.map(m => m.id)).catch(() => {});
+          // Save updated order — also mirror onto `data` so React state stays truthful
+          data.playlistOrder = pl.map(m => m.id);
+          saveProfileField(data.id, 'playlistOrder', data.playlistOrder).catch(() => {});
         }
       }
     } else {
@@ -432,12 +437,15 @@ export default function App() {
       // generate a random seed.
       if (needsVersionMigration || !seed) {
         seed = Math.floor(Math.random() * 0xFFFFFFFF);
+        data.seed = seed;
         saveProfileField(data.id, 'seed', seed).catch(() => {});
       }
       pl = generatePlaylist(seed);
       const orderIds = pl.map(m => m.id);
+      data.playlistOrder = orderIds;
       saveProfileField(data.id, 'playlistOrder', orderIds).catch(() => {});
       if (needsVersionMigration) {
+        data.shuffleVersion = SHUFFLE_VERSION;
         saveProfileField(data.id, 'shuffleVersion', SHUFFLE_VERSION).catch(() => {});
         // Reset position to 0 so existing users start at the NEW front-loaded beginning.
         // Their old currentIdx pointed into the old shuffle and would bypass the
@@ -487,7 +495,8 @@ export default function App() {
             }
           }
         }
-        saveProfileField(data.id, 'watched', [...watchedKeys]).catch(() => {});
+        data.watched = [...watchedKeys];
+        saveProfileField(data.id, 'watched', data.watched).catch(() => {});
       } else if (typeof first === 'string' && first.includes('|')) {
         // INTERMEDIATE FORMAT: "Title|year" strings — migrate to IDs
         watchedKeys = new Set();
@@ -498,7 +507,8 @@ export default function App() {
           const movie = MOVIES.find(m => m.title === title && String(m.year) === yearStr);
           if (movie) watchedKeys.add(movie.id);
         }
-        saveProfileField(data.id, 'watched', [...watchedKeys]).catch(() => {});
+        data.watched = [...watchedKeys];
+        saveProfileField(data.id, 'watched', data.watched).catch(() => {});
       } else {
         // NEW FORMAT: movie IDs (strings without |)
         watchedKeys = new Set(data.watched);
@@ -530,6 +540,7 @@ export default function App() {
     }
 
     if (needsRatingMigration) {
+      data.ratings = migratedRatings;
       saveProfileField(data.id, 'ratings', migratedRatings).catch(() => {});
     }
 
@@ -539,6 +550,9 @@ export default function App() {
     // Set current index
     const idx = data.currentIdx || 0;
 
+    // Publish fully-mutated profile to React state now that every field
+    // matches what's persisted in Firestore.
+    setProfile(data);
     setPlaylist(pl);
     setCurrentIdx(Math.min(idx, pl.length - 1));
     setWatchedSet(watchedKeys);
@@ -788,18 +802,19 @@ export default function App() {
 
     setPlaylist(newPlaylist);
     setCurrentIdx(0);
-    setProfile(prev => prev ? { ...prev, syncedWith: null } : prev);
 
-    if (profile) {
-      saveProfileField(profile.id, 'seed', newSeed).catch(() => {});
-      saveProfileField(profile.id, 'playlistOrder', orderIds).catch(() => {});
-      saveProfileField(profile.id, 'currentIdx', 0).catch(() => {});
-      saveProfileField(profile.id, 'syncedWith', null).catch(() => {});
-    }
+    // Route through firebaseSave so React profile state stays in sync with
+    // Firestore. Direct saveProfileField calls left profile.playlistOrder
+    // stale — Profile view would then render an old film while Journey
+    // correctly tracked the new shuffle.
+    firebaseSave('seed', newSeed);
+    firebaseSave('playlistOrder', orderIds);
+    firebaseSave('currentIdx', 0);
+    firebaseSave('syncedWith', null);
 
     setScreen('card');
     setSettingsOpen(false);
-  }, [profile, generatePlaylist]);
+  }, [firebaseSave, generatePlaylist]);
 
   // --- Sync journey from another profile ---
   const handleSyncJourney = useCallback(async (targetProfileId) => {

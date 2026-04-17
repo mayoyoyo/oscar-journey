@@ -363,7 +363,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
           {activeFilterCount > 0 && (
             <span className="film-list-filters-count">{activeFilterCount} active</span>
           )}
-          {filtersOpen && activeFilterCount > 0 && (
+          {activeFilterCount > 0 && (
             <span
               className="film-list-filter-reset"
               role="button"

@@ -604,4 +604,12 @@ export const QUOTES = {
   'la-strada-1954': ["What a funny face! Are you a woman, really? Or an artichoke?"],
   'roman-holiday-1953': ["I've never been alone with a man before - even with my dress on."],
   'the-naked-city-1948': ["There are eight million stories in the Naked City; this has been one of them."],
+
+  // --- Tier 2 (batch 4) ---
+  'imitation-of-life-1934': ["How do you tell a child that she was born to be hurt?"],
+  'imitation-of-life-1959': ["How do you tell a child that she was born to be hurt?"],
+  'young-mr-lincoln-1939': ["I may not know much of law, Mr. Felder, but I know what's right and what's wrong."],
+  'leave-her-to-heaven-1945': ["Well, of all the seven deadly sins, jealousy is the most deadly."],
+  'the-war-of-the-worlds-1953': ["We know now we can't beat their machines. We've got to beat them."],
+  'the-incredible-shrinking-man-1957': ["As man had dominated the world of the sun, so I would dominate my world."],
 };

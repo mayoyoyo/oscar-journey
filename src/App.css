@@ -536,24 +536,22 @@ main {
   letter-spacing: 0.03em;
 }
 
-/* Essential badge — for films that made the ≥2-of-7 canon bar */
+/* Essential badge — subdued so it doesn't compete with Winner. The tier pips
+   already carry the 'this is a canon film' signal visually. */
 .badge-essential {
-  background: linear-gradient(135deg, #3a2c0e 0%, #5e4614 50%, #8b6914 100%);
-  color: #f7e8b8;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  padding: 5px 14px;
+  background: transparent;
+  color: var(--cream-dim);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
   border-radius: 50px;
-  text-transform: uppercase;
-  border: 1px solid #a98c34;
-  box-shadow: 0 1px 6px rgba(139, 105, 20, 0.35), inset 0 1px 0 rgba(255, 230, 150, 0.18);
+  border: 1px solid var(--border);
 }
 
 [data-theme="dark"] .badge-essential {
-  background: linear-gradient(135deg, #2a1f0a 0%, #4a3a14 50%, #7a5c1e 100%);
-  color: #f4d77a;
-  border-color: #c9a84c;
+  color: var(--cream-dim);
+  border-color: var(--border);
 }
 
 /* Tier pips — compact visual for "how many canon lists is this film on" */
@@ -644,21 +642,17 @@ main {
   height: 5px;
 }
 
-/* Small Essential badge for A-Z rows */
+/* Small Essential badge for A-Z rows — matches the subdued full badge */
 .badge-essential-sm {
-  background: linear-gradient(135deg, #5e4614 0%, var(--gold) 100%);
-  color: #f7e8b8;
-  font-size: 0.7rem;
+  background: transparent;
+  color: var(--cream-dim);
+  font-size: 0.68rem;
   padding: 2px 8px;
   border-radius: 20px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   white-space: nowrap;
-  font-weight: 600;
-}
-
-[data-theme="dark"] .badge-essential-sm {
-  background: linear-gradient(135deg, #4a3a14 0%, #c9a84c 100%);
-  color: #2a1f0a;
+  font-weight: 500;
+  border: 1px solid var(--border);
 }
 
 /* OMDb data fields */

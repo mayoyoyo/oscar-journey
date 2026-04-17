@@ -1046,7 +1046,7 @@ export default function App() {
           )}
           {screen === 'card' && currentMovie && eligibleStats.total > 0 && (
             <>
-              {eligiblePosition < 1 && !bannerDismissed && (
+              {watchedSet.size === 0 && eligiblePosition < 1 && !bannerDismissed && (
                 <div className="journey-welcome-banner">
                   <button className="journey-welcome-close" onClick={() => { setBannerDismissed(true); localStorage.setItem('oscars_banner_dismissed', 'true'); }}>✕</button>
                   <div className="journey-welcome-title">🏆 The Oscars Journey</div>

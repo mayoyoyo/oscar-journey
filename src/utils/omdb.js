@@ -1,6 +1,6 @@
 import { RUNTIME_OVERRIDES } from './runtimeOverrides';
 
-const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238'];
+const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8'];
 let currentKeyIndex = 0;
 const CACHE_PREFIX = 'oscars_';
 const NOT_FOUND = 'NOT_FOUND';
@@ -26,8 +26,6 @@ const POSTER_OVERRIDES = {
   'au-revoir-les-enfants-1987': '/posters/au-revoir-les-enfants-1987.jpg',
   'thelonious-monk-straight-no-chaser-1988': '/posters/thelonious-monk-straight-no-chaser-1988.jpg',
   'la-cienaga-2001': '/posters/la-cienaga-2001.jpg',
-  // The Handmaiden — OMDb can't find the film (Korean title "Agassi"), needs local poster
-  'the-handmaiden-2016': '/posters/the-handmaiden-2016.jpg',
 };
 
 // Title overrides for movies that don't match OMDB's naming

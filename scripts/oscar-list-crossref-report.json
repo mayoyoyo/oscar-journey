@@ -52,7 +52,8 @@
       "year": 1971,
       "lists": [
         "AFI",
-        "NFR"
+        "NFR",
+        "CRIT"
       ]
     },
     {
@@ -107,7 +108,8 @@
       "title": "Cries and Whispers",
       "year": 1973,
       "lists": [
-        "SS"
+        "SS",
+        "CRIT"
       ]
     },
     {
@@ -169,6 +171,7 @@
       "year": 1975,
       "lists": [
         "IMDB",
+        "CRIT",
         "LBXD"
       ]
     },
@@ -199,7 +202,8 @@
       "lists": [
         "AFI",
         "SS",
-        "NFR"
+        "NFR",
+        "CRIT"
       ]
     },
     {
@@ -328,6 +332,7 @@
       "year": 1980,
       "lists": [
         "IMDB",
+        "CRIT",
         "LBXD"
       ]
     },
@@ -395,7 +400,8 @@
       "year": 1982,
       "lists": [
         "AFI",
-        "NFR"
+        "NFR",
+        "CRIT"
       ]
     },
     {
@@ -456,6 +462,14 @@
       "year": 1986,
       "lists": [
         "FEST"
+      ]
+    },
+    {
+      "id": "the-last-emperor-1987",
+      "title": "The Last Emperor",
+      "year": 1987,
+      "lists": [
+        "CRIT"
       ]
     },
     {
@@ -528,6 +542,7 @@
         "AFI",
         "IMDB",
         "NFR",
+        "CRIT",
         "LBXD"
       ]
     },
@@ -556,6 +571,14 @@
       "year": 1992,
       "lists": [
         "AFI"
+      ]
+    },
+    {
+      "id": "howards-end-1992",
+      "title": "Howards End",
+      "year": 1992,
+      "lists": [
+        "CRIT"
       ]
     },
     {
@@ -840,6 +863,7 @@
       "year": 2007,
       "lists": [
         "IMDB",
+        "CRIT",
         "LBXD"
       ]
     },
@@ -851,6 +875,14 @@
         "IMDB",
         "SS",
         "LBXD"
+      ]
+    },
+    {
+      "id": "the-curious-case-of-benjamin-button-2008",
+      "title": "The Curious Case of Benjamin Button",
+      "year": 2008,
+      "lists": [
+        "CRIT"
       ]
     },
     {
@@ -902,7 +934,8 @@
       "year": 2011,
       "lists": [
         "SS",
-        "FEST"
+        "FEST",
+        "CRIT"
       ]
     },
     {
@@ -946,6 +979,7 @@
       "lists": [
         "IMDB",
         "NFR",
+        "CRIT",
         "LBXD"
       ]
     },
@@ -996,7 +1030,8 @@
       "title": "The Shape of Water",
       "year": 2017,
       "lists": [
-        "FEST"
+        "FEST",
+        "CRIT"
       ]
     },
     {
@@ -1032,6 +1067,7 @@
         "IMDB",
         "SS",
         "FEST",
+        "CRIT",
         "LBXD"
       ]
     },
@@ -1094,6 +1130,22 @@
       ]
     },
     {
+      "id": "sound-of-metal-2020",
+      "title": "Sound of Metal",
+      "year": 2020,
+      "lists": [
+        "CRIT"
+      ]
+    },
+    {
+      "id": "drive-my-car-2021",
+      "title": "Drive My Car",
+      "year": 2021,
+      "lists": [
+        "CRIT"
+      ]
+    },
+    {
       "id": "everything-everywhere-all-at-once-2022",
       "title": "Everything Everywhere All at Once",
       "year": 2022,
@@ -1106,7 +1158,8 @@
       "title": "Triangle of Sadness",
       "year": 2022,
       "lists": [
-        "FEST"
+        "FEST",
+        "CRIT"
       ]
     },
     {
@@ -1122,7 +1175,8 @@
       "title": "Anatomy of a Fall",
       "year": 2023,
       "lists": [
-        "FEST"
+        "FEST",
+        "CRIT"
       ]
     },
     {
@@ -1142,11 +1196,20 @@
       ]
     },
     {
+      "id": "killers-of-the-flower-moon-2023",
+      "title": "Killers of the Flower Moon",
+      "year": 2023,
+      "lists": [
+        "CRIT"
+      ]
+    },
+    {
       "id": "anora-2024",
       "title": "Anora",
       "year": 2024,
       "lists": [
-        "FEST"
+        "FEST",
+        "CRIT"
       ]
     },
     {
@@ -1265,6 +1328,14 @@
       ]
     },
     {
+      "id": "guillermo-del-toros-pinocchio-2022",
+      "title": "Guillermo del Toro's Pinocchio",
+      "year": 2022,
+      "lists": [
+        "CRIT"
+      ]
+    },
+    {
       "id": "flow-2024",
       "title": "Flow",
       "year": 2024,
@@ -1273,14 +1344,14 @@
       ]
     }
   ],
-  "totalMatched": 140,
+  "totalMatched": 147,
   "byList": {
     "AFI": 47,
     "IMDB": 76,
     "SS": 23,
     "FEST": 30,
     "NFR": 64,
-    "CRIT": 8,
+    "CRIT": 30,
     "LBXD": 44
   }
 }

@@ -45,7 +45,7 @@ export const MOVIES = [
   { id: 'the-french-connection-1971', title: "The French Connection",                           year: 1971, won: true,  genre: 'X', ceremony: 44, category: 'BP', awards: [{ category: 'Director', winner: 'William Friedkin' }, { category: 'Actor', winner: 'Gene Hackman' }, { category: 'Adapted Screenplay', winner: 'Ernest Tidyman' }, { category: 'Film Editing' }], lists: ['AFI', 'NFR'] },
   { id: 'a-clockwork-orange-1971', title: "A Clockwork Orange",                              year: 1971, won: false, genre: 'S', ceremony: 44, category: 'BP',  lists: ['AFI', 'IMDB', 'NFR', 'SS'] },
   { id: 'fiddler-on-the-roof-1971', title: "Fiddler on the Roof",                             year: 1971, won: false, genre: 'M', ceremony: 44, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Sound' }, { category: 'Original Score' }] },
-  { id: 'the-last-picture-show-1971', title: "The Last Picture Show",                           year: 1971, won: false, genre: 'D', ceremony: 44, category: 'BP', awards: [{ category: 'Supporting Actor', winner: 'Ben Johnson' }, { category: 'Supporting Actress', winner: 'Cloris Leachman' }], lists: ['AFI', 'NFR'] },
+  { id: 'the-last-picture-show-1971', title: "The Last Picture Show",                           year: 1971, won: false, genre: 'D', ceremony: 44, category: 'BP', awards: [{ category: 'Supporting Actor', winner: 'Ben Johnson' }, { category: 'Supporting Actress', winner: 'Cloris Leachman' }], lists: ['AFI', 'CRIT', 'NFR'] },
   { id: 'nicholas-and-alexandra-1971', title: "Nicholas and Alexandra",                          year: 1971, won: false, genre: 'H', ceremony: 44, category: 'BP' },
 
   // 1972 films - 45th Academy Awards
@@ -58,7 +58,7 @@ export const MOVIES = [
   // 1973 films - 46th Academy Awards
   { id: 'the-sting-1973', title: "The Sting",                                       year: 1973, won: true,  genre: 'X', ceremony: 46, category: 'BP', awards: [{ category: 'Director', winner: 'George Roy Hill' }, { category: 'Original Screenplay', winner: 'David S. Ward' }, { category: 'Film Editing' }, { category: 'Art Direction' }, { category: 'Costume Design' }, { category: 'Original Score' }, { category: 'Sound' }], lists: ['IMDB', 'NFR'] },
   { id: 'american-graffiti-1973', title: "American Graffiti",                               year: 1973, won: false, genre: 'C', ceremony: 46, category: 'BP',  lists: ['AFI', 'NFR'] },
-  { id: 'cries-and-whispers-1973', title: "Cries and Whispers",                              year: 1973, won: false, genre: 'I', ceremony: 46, category: 'BP',  lists: ['SS'] },
+  { id: 'cries-and-whispers-1973', title: "Cries and Whispers",                              year: 1973, won: false, genre: 'I', ceremony: 46, category: 'BP',  lists: ['CRIT', 'SS'] },
   { id: 'the-exorcist-1973', title: "The Exorcist",                                    year: 1973, won: false, genre: 'T', ceremony: 46, category: 'BP', awards: [{ category: 'Adapted Screenplay', winner: 'William Peter Blatty' }, { category: 'Sound' }], lists: ['IMDB', 'NFR'] },
   { id: 'a-touch-of-class-1973', title: "A Touch of Class",                                year: 1973, won: false, genre: 'C', ceremony: 46, category: 'BP', awards: [{ category: 'Actress', winner: 'Glenda Jackson' }] },
 
@@ -71,10 +71,10 @@ export const MOVIES = [
 
   // 1975 films - 48th Academy Awards
   { id: 'one-flew-over-the-cuckoos-nest-1975', title: "One Flew Over the Cuckoo's Nest",                year: 1975, won: true,  genre: 'D', ceremony: 48, category: 'BP', awards: [{ category: 'Director', winner: 'Milos Forman' }, { category: 'Actor', winner: 'Jack Nicholson' }, { category: 'Actress', winner: 'Louise Fletcher' }, { category: 'Adapted Screenplay', winner: 'Lawrence Hauben & Bo Goldman' }], lists: ['AFI', 'IMDB', 'LBXD', 'NFR'] },
-  { id: 'barry-lyndon-1975', title: "Barry Lyndon",                                    year: 1975, won: false, genre: 'H', ceremony: 48, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Art Direction' }, { category: 'Costume Design' }, { category: 'Original Score' }], lists: ['IMDB', 'LBXD'] },
+  { id: 'barry-lyndon-1975', title: "Barry Lyndon",                                    year: 1975, won: false, genre: 'H', ceremony: 48, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Art Direction' }, { category: 'Costume Design' }, { category: 'Original Score' }], lists: ['CRIT', 'IMDB', 'LBXD'] },
   { id: 'dog-day-afternoon-1975', title: "Dog Day Afternoon",                               year: 1975, won: false, genre: 'X', ceremony: 48, category: 'BP', awards: [{ category: 'Original Screenplay', winner: 'Frank Pierson' }], lists: ['LBXD', 'NFR'] },
   { id: 'jaws-1975', title: "Jaws",                                            year: 1975, won: false, genre: 'T', ceremony: 48, category: 'BP', awards: [{ category: 'Sound' }, { category: 'Film Editing' }, { category: 'Original Score' }], lists: ['AFI', 'IMDB', 'NFR', 'SS'] },
-  { id: 'nashville-1975', title: "Nashville",                                       year: 1975, won: false, genre: 'C', ceremony: 48, category: 'BP', awards: [{ category: 'Original Song', detail: 'I\'m Easy' }], lists: ['AFI', 'NFR', 'SS'] },
+  { id: 'nashville-1975', title: "Nashville",                                       year: 1975, won: false, genre: 'C', ceremony: 48, category: 'BP', awards: [{ category: 'Original Song', detail: 'I\'m Easy' }], lists: ['AFI', 'CRIT', 'NFR', 'SS'] },
 
   // 1976 films - 49th Academy Awards
   { id: 'rocky-1976', title: "Rocky",                                           year: 1976, won: true,  genre: 'D', ceremony: 49, category: 'BP', awards: [{ category: 'Director', winner: 'John G. Avildsen' }, { category: 'Film Editing' }], lists: ['AFI', 'IMDB', 'NFR'] },
@@ -107,7 +107,7 @@ export const MOVIES = [
   // 1980 films - 53rd Academy Awards
   { id: 'ordinary-people-1980', title: "Ordinary People",                                 year: 1980, won: true,  genre: 'D', ceremony: 53, category: 'BP', awards: [{ category: 'Director', winner: 'Robert Redford' }, { category: 'Supporting Actor', winner: 'Timothy Hutton' }, { category: 'Adapted Screenplay', winner: 'Alvin Sargent' }] },
   { id: 'coal-miners-daughter-1980', title: "Coal Miner's Daughter",                           year: 1980, won: false, genre: 'B', ceremony: 53, category: 'BP', awards: [{ category: 'Actress', winner: 'Sissy Spacek' }], lists: ['NFR'] },
-  { id: 'the-elephant-man-1980', title: "The Elephant Man",                                year: 1980, won: false, genre: 'D', ceremony: 53, category: 'BP',  lists: ['IMDB', 'LBXD'] },
+  { id: 'the-elephant-man-1980', title: "The Elephant Man",                                year: 1980, won: false, genre: 'D', ceremony: 53, category: 'BP',  lists: ['CRIT', 'IMDB', 'LBXD'] },
   { id: 'raging-bull-1980', title: "Raging Bull",                                     year: 1980, won: false, genre: 'B', ceremony: 53, category: 'BP', awards: [{ category: 'Actor', winner: 'Robert De Niro' }, { category: 'Film Editing' }], lists: ['AFI', 'CRIT', 'IMDB', 'LBXD', 'NFR', 'SS'] },
   { id: 'tess-1980', title: "Tess",                                            year: 1980, won: false, genre: 'H', ceremony: 53, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Art Direction' }, { category: 'Costume Design' }] },
 
@@ -122,7 +122,7 @@ export const MOVIES = [
   { id: 'gandhi-1982', title: "Gandhi",                                          year: 1982, won: true,  genre: 'B', ceremony: 55, category: 'BP', awards: [{ category: 'Director', winner: 'Richard Attenborough' }, { category: 'Actor', winner: 'Ben Kingsley' }, { category: 'Original Screenplay', winner: 'John Briley' }, { category: 'Cinematography' }, { category: 'Art Direction' }, { category: 'Costume Design' }, { category: 'Film Editing' }] },
   { id: 'e-t-the-extra-terrestrial-1982', title: "E.T. the Extra-Terrestrial",                      year: 1982, won: false, genre: 'S', ceremony: 55, category: 'BP', awards: [{ category: 'Original Score' }, { category: 'Sound' }, { category: 'Sound Effects Editing' }, { category: 'Visual Effects' }], lists: ['AFI', 'NFR'] },
   { id: 'missing-1982', title: "Missing",                                         year: 1982, won: false, genre: 'T', ceremony: 55, category: 'BP', awards: [{ category: 'Adapted Screenplay', winner: 'Costa-Gavras & Donald E. Stewart' }], lists: ['FEST'] },
-  { id: 'tootsie-1982', title: "Tootsie",                                         year: 1982, won: false, genre: 'C', ceremony: 55, category: 'BP', awards: [{ category: 'Supporting Actress', winner: 'Jessica Lange' }], lists: ['AFI', 'NFR'] },
+  { id: 'tootsie-1982', title: "Tootsie",                                         year: 1982, won: false, genre: 'C', ceremony: 55, category: 'BP', awards: [{ category: 'Supporting Actress', winner: 'Jessica Lange' }], lists: ['AFI', 'CRIT', 'NFR'] },
   { id: 'the-verdict-1982', title: "The Verdict",                                     year: 1982, won: false, genre: 'D', ceremony: 55, category: 'BP',  lists: ['AFI'] },
 
   // 1983 films - 56th Academy Awards
@@ -154,7 +154,7 @@ export const MOVIES = [
   { id: 'a-room-with-a-view-1986', title: "A Room with a View",                              year: 1986, won: false, genre: 'R', ceremony: 59, category: 'BP', awards: [{ category: 'Adapted Screenplay', winner: 'Ruth Prawer Jhabvala' }, { category: 'Art Direction' }, { category: 'Costume Design' }] },
 
   // 1987 films - 60th Academy Awards
-  { id: 'the-last-emperor-1987', title: "The Last Emperor",                                year: 1987, won: true,  genre: 'H', ceremony: 60, category: 'BP', awards: [{ category: 'Director', winner: 'Bernardo Bertolucci' }, { category: 'Adapted Screenplay', winner: 'Mark Peploe & Bernardo Bertolucci' }, { category: 'Cinematography' }, { category: 'Art Direction' }, { category: 'Costume Design' }, { category: 'Film Editing' }, { category: 'Original Score' }, { category: 'Sound' }] },
+  { id: 'the-last-emperor-1987', title: "The Last Emperor",                                year: 1987, won: true,  genre: 'H', ceremony: 60, category: 'BP', awards: [{ category: 'Director', winner: 'Bernardo Bertolucci' }, { category: 'Adapted Screenplay', winner: 'Mark Peploe & Bernardo Bertolucci' }, { category: 'Cinematography' }, { category: 'Art Direction' }, { category: 'Costume Design' }, { category: 'Film Editing' }, { category: 'Original Score' }, { category: 'Sound' }], lists: ['CRIT'] },
   { id: 'broadcast-news-1987', title: "Broadcast News",                                  year: 1987, won: false, genre: 'C', ceremony: 60, category: 'BP',  lists: ['NFR'] },
   { id: 'fatal-attraction-1987', title: "Fatal Attraction",                                year: 1987, won: false, genre: 'T', ceremony: 60, category: 'BP' },
   { id: 'hope-and-glory-1987', title: "Hope and Glory",                                  year: 1987, won: false, genre: 'W', ceremony: 60, category: 'BP' },
@@ -182,7 +182,7 @@ export const MOVIES = [
   { id: 'goodfellas-1990', title: "Goodfellas",                                      year: 1990, won: false, genre: 'X', ceremony: 63, category: 'BP', awards: [{ category: 'Supporting Actor', winner: 'Joe Pesci' }], lists: ['AFI', 'IMDB', 'LBXD', 'NFR', 'SS'] },
 
   // 1991 films - 64th Academy Awards
-  { id: 'the-silence-of-the-lambs-1991', title: "The Silence of the Lambs",                     year: 1991, won: true,  genre: 'T', ceremony: 64, category: 'BP', awards: [{ category: 'Director', winner: 'Jonathan Demme' }, { category: 'Actor', winner: 'Anthony Hopkins' }, { category: 'Actress', winner: 'Jodie Foster' }, { category: 'Adapted Screenplay', winner: 'Ted Tally' }], lists: ['AFI', 'IMDB', 'LBXD', 'NFR'] },
+  { id: 'the-silence-of-the-lambs-1991', title: "The Silence of the Lambs",                     year: 1991, won: true,  genre: 'T', ceremony: 64, category: 'BP', awards: [{ category: 'Director', winner: 'Jonathan Demme' }, { category: 'Actor', winner: 'Anthony Hopkins' }, { category: 'Actress', winner: 'Jodie Foster' }, { category: 'Adapted Screenplay', winner: 'Ted Tally' }], lists: ['AFI', 'CRIT', 'IMDB', 'LBXD', 'NFR'] },
   { id: 'beauty-and-the-beast-1991', title: "Beauty and the Beast",                          year: 1991, won: false, genre: 'A', ceremony: 64, category: 'BP', awards: [{ category: 'Original Score' }, { category: 'Original Song', detail: 'Beauty and the Beast' }], lists: ['AFI', 'NFR'] },
   { id: 'bugsy-1991', title: "Bugsy",                                         year: 1991, won: false, genre: 'X', ceremony: 64, category: 'BP', awards: [{ category: 'Art Direction' }, { category: 'Costume Design' }] },
   { id: 'jfk-1991', title: "JFK",                                           year: 1991, won: false, genre: 'T', ceremony: 64, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Film Editing' }] },
@@ -192,7 +192,7 @@ export const MOVIES = [
   { id: 'unforgiven-1992', title: "Unforgiven",                                    year: 1992, won: true,  genre: 'H', ceremony: 65, category: 'BP', awards: [{ category: 'Director', winner: 'Clint Eastwood' }, { category: 'Supporting Actor', winner: 'Gene Hackman' }, { category: 'Film Editing' }], lists: ['AFI', 'IMDB', 'NFR'] },
   { id: 'the-crying-game-1992', title: "The Crying Game",                               year: 1992, won: false, genre: 'T', ceremony: 65, category: 'BP', awards: [{ category: 'Original Screenplay', winner: 'Neil Jordan' }] },
   { id: 'a-few-good-men-1992', title: "A Few Good Men",                                year: 1992, won: false, genre: 'T', ceremony: 65, category: 'BP',  lists: ['AFI'] },
-  { id: 'howards-end-1992', title: "Howards End",                                   year: 1992, won: false, genre: 'H', ceremony: 65, category: 'BP', awards: [{ category: 'Actress', winner: 'Emma Thompson' }, { category: 'Art Direction' }, { category: 'Adapted Screenplay', winner: 'Ruth Prawer Jhabvala' }] },
+  { id: 'howards-end-1992', title: "Howards End",                                   year: 1992, won: false, genre: 'H', ceremony: 65, category: 'BP', awards: [{ category: 'Actress', winner: 'Emma Thompson' }, { category: 'Art Direction' }, { category: 'Adapted Screenplay', winner: 'Ruth Prawer Jhabvala' }], lists: ['CRIT'] },
   { id: 'scent-of-a-woman-1992', title: "Scent of a Woman",                              year: 1992, won: false, genre: 'D', ceremony: 65, category: 'BP', awards: [{ category: 'Actor', winner: 'Al Pacino' }] },
 
   // 1993 films - 66th Academy Awards
@@ -294,7 +294,7 @@ export const MOVIES = [
   { id: 'the-queen-2006', title: "The Queen",                                     year: 2006, won: false, genre: 'H', ceremony: 79, category: 'BP', awards: [{ category: 'Actress', winner: 'Helen Mirren' }] },
 
   // 2007 films - 80th Academy Awards
-  { id: 'no-country-for-old-men-2007', title: "No Country for Old Men",                        year: 2007, won: true,  genre: 'T', ceremony: 80, category: 'BP', awards: [{ category: 'Director', winner: 'Joel Coen & Ethan Coen' }, { category: 'Supporting Actor', winner: 'Javier Bardem' }, { category: 'Adapted Screenplay', winner: 'Joel Coen & Ethan Coen' }], lists: ['IMDB', 'LBXD'] },
+  { id: 'no-country-for-old-men-2007', title: "No Country for Old Men",                        year: 2007, won: true,  genre: 'T', ceremony: 80, category: 'BP', awards: [{ category: 'Director', winner: 'Joel Coen & Ethan Coen' }, { category: 'Supporting Actor', winner: 'Javier Bardem' }, { category: 'Adapted Screenplay', winner: 'Joel Coen & Ethan Coen' }], lists: ['CRIT', 'IMDB', 'LBXD'] },
   { id: 'atonement-2007', title: "Atonement",                                     year: 2007, won: false, genre: 'R', ceremony: 80, category: 'BP', awards: [{ category: 'Original Score' }] },
   { id: 'juno-2007', title: "Juno",                                          year: 2007, won: false, genre: 'C', ceremony: 80, category: 'BP', awards: [{ category: 'Original Screenplay', winner: 'Diablo Cody' }] },
   { id: 'michael-clayton-2007', title: "Michael Clayton",                               year: 2007, won: false, genre: 'T', ceremony: 80, category: 'BP', awards: [{ category: 'Supporting Actress', winner: 'Tilda Swinton' }] },
@@ -302,7 +302,7 @@ export const MOVIES = [
 
   // 2008 films - 81st Academy Awards
   { id: 'slumdog-millionaire-2008', title: "Slumdog Millionaire",                           year: 2008, won: true,  genre: 'D', ceremony: 81, category: 'BP', awards: [{ category: 'Director', winner: 'Danny Boyle' }, { category: 'Adapted Screenplay', winner: 'Simon Beaufoy' }, { category: 'Cinematography' }, { category: 'Film Editing' }, { category: 'Original Score' }, { category: 'Original Song', detail: 'Jai Ho' }, { category: 'Sound Mixing' }] },
-  { id: 'the-curious-case-of-benjamin-button-2008', title: "The Curious Case of Benjamin Button",           year: 2008, won: false, genre: 'D', ceremony: 81, category: 'BP', awards: [{ category: 'Art Direction' }, { category: 'Makeup' }, { category: 'Visual Effects' }] },
+  { id: 'the-curious-case-of-benjamin-button-2008', title: "The Curious Case of Benjamin Button",           year: 2008, won: false, genre: 'D', ceremony: 81, category: 'BP', awards: [{ category: 'Art Direction' }, { category: 'Makeup' }, { category: 'Visual Effects' }], lists: ['CRIT'] },
   { id: 'frost-nixon-2008', title: "Frost/Nixon",                                   year: 2008, won: false, genre: 'H', ceremony: 81, category: 'BP' },
   { id: 'milk-2008', title: "Milk",                                          year: 2008, won: false, genre: 'B', ceremony: 81, category: 'BP', awards: [{ category: 'Actor', winner: 'Sean Penn' }, { category: 'Original Screenplay', winner: 'Dustin Lance Black' }] },
   { id: 'the-reader-2008', title: "The Reader",                                    year: 2008, won: false, genre: 'H', ceremony: 81, category: 'BP', awards: [{ category: 'Actress', winner: 'Kate Winslet' }] },
@@ -339,7 +339,7 @@ export const MOVIES = [
   { id: 'hugo-2011', title: "Hugo",                                          year: 2011, won: false, genre: 'S', ceremony: 84, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Art Direction' }, { category: 'Sound Mixing' }, { category: 'Sound Editing' }, { category: 'Visual Effects' }] },
   { id: 'midnight-in-paris-2011', title: "Midnight in Paris",                             year: 2011, won: false, genre: 'C', ceremony: 84, category: 'BP', awards: [{ category: 'Original Screenplay' }] },
   { id: 'moneyball-2011', title: "Moneyball",                                     year: 2011, won: false, genre: 'B', ceremony: 84, category: 'BP' },
-  { id: 'the-tree-of-life-2011', title: "The Tree of Life",                              year: 2011, won: false, genre: 'I', ceremony: 84, category: 'BP',  lists: ['FEST', 'SS'] },
+  { id: 'the-tree-of-life-2011', title: "The Tree of Life",                              year: 2011, won: false, genre: 'I', ceremony: 84, category: 'BP',  lists: ['CRIT', 'FEST', 'SS'] },
   { id: 'war-horse-2011', title: "War Horse",                                     year: 2011, won: false, genre: 'W', ceremony: 84, category: 'BP' },
 
   // 2012 films - 85th Academy Awards (9 nominees)
@@ -368,7 +368,7 @@ export const MOVIES = [
   { id: 'birdman-2014', title: "Birdman",                                       year: 2014, won: true,  genre: 'C', ceremony: 87, category: 'BP', awards: [{ category: 'Director', winner: 'Alejandro G. Inarritu' }, { category: 'Original Screenplay', winner: 'Alejandro G. Inarritu & Nicolas Giacobone & Alexander Dinelaris & Armando Bo' }, { category: 'Cinematography' }] },
   { id: 'american-sniper-2014', title: "American Sniper",                               year: 2014, won: false, genre: 'W', ceremony: 87, category: 'BP', awards: [{ category: 'Sound Editing' }] },
   { id: 'boyhood-2014', title: "Boyhood",                                       year: 2014, won: false, genre: 'D', ceremony: 87, category: 'BP', awards: [{ category: 'Supporting Actress', winner: 'Patricia Arquette' }] },
-  { id: 'the-grand-budapest-hotel-2014', title: "The Grand Budapest Hotel",                      year: 2014, won: false, genre: 'C', ceremony: 87, category: 'BP', awards: [{ category: 'Original Score' }, { category: 'Production Design' }, { category: 'Makeup' }, { category: 'Costume Design' }], lists: ['IMDB', 'LBXD', 'NFR'] },
+  { id: 'the-grand-budapest-hotel-2014', title: "The Grand Budapest Hotel",                      year: 2014, won: false, genre: 'C', ceremony: 87, category: 'BP', awards: [{ category: 'Original Score' }, { category: 'Production Design' }, { category: 'Makeup' }, { category: 'Costume Design' }], lists: ['CRIT', 'IMDB', 'LBXD', 'NFR'] },
   { id: 'the-imitation-game-2014', title: "The Imitation Game",                            year: 2014, won: false, genre: 'H', ceremony: 87, category: 'BP', awards: [{ category: 'Adapted Screenplay' }] },
   { id: 'selma-2014', title: "Selma",                                         year: 2014, won: false, genre: 'H', ceremony: 87, category: 'BP', awards: [{ category: 'Original Song', detail: 'Glory' }] },
   { id: 'the-theory-of-everything-2014', title: "The Theory of Everything",                      year: 2014, won: false, genre: 'B', ceremony: 87, category: 'BP', awards: [{ category: 'Actor', winner: 'Eddie Redmayne' }] },
@@ -396,7 +396,7 @@ export const MOVIES = [
   { id: 'manchester-by-the-sea-2016', title: "Manchester by the Sea",                         year: 2016, won: false, genre: 'D', ceremony: 89, category: 'BP', awards: [{ category: 'Actor', winner: 'Casey Affleck' }, { category: 'Original Screenplay' }] },
 
   // 2017 films - 90th Academy Awards (9 nominees)
-  { id: 'the-shape-of-water-2017', title: "The Shape of Water",                            year: 2017, won: true,  genre: 'S', ceremony: 90, category: 'BP', awards: [{ category: 'Director', winner: 'Guillermo del Toro' }, { category: 'Production Design' }, { category: 'Original Score' }], lists: ['FEST'] },
+  { id: 'the-shape-of-water-2017', title: "The Shape of Water",                            year: 2017, won: true,  genre: 'S', ceremony: 90, category: 'BP', awards: [{ category: 'Director', winner: 'Guillermo del Toro' }, { category: 'Production Design' }, { category: 'Original Score' }], lists: ['CRIT', 'FEST'] },
   { id: 'call-me-by-your-name-2017', title: "Call Me by Your Name",                          year: 2017, won: false, genre: 'R', ceremony: 90, category: 'BP', awards: [{ category: 'Adapted Screenplay' }] },
   { id: 'darkest-hour-2017', title: "Darkest Hour",                                  year: 2017, won: false, genre: 'H', ceremony: 90, category: 'BP', awards: [{ category: 'Actor', winner: 'Gary Oldman' }, { category: 'Makeup' }] },
   { id: 'dunkirk-2017', title: "Dunkirk",                                       year: 2017, won: false, genre: 'W', ceremony: 90, category: 'BP', awards: [{ category: 'Film Editing' }, { category: 'Sound Editing' }, { category: 'Sound Mixing' }] },
@@ -417,7 +417,7 @@ export const MOVIES = [
   { id: 'vice-2018', title: "Vice",                                          year: 2018, won: false, genre: 'B', ceremony: 91, category: 'BP', awards: [{ category: 'Makeup' }] },
 
   // 2019 films - 92nd Academy Awards (9 nominees)
-  { id: 'parasite-2019', title: "Parasite",                                      year: 2019, won: true,  genre: 'T', ceremony: 92, category: 'BP', alsoWon: ['INT'], awards: [{ category: 'Director', winner: 'Bong Joon-ho' }, { category: 'Original Screenplay', winner: 'Bong Joon-ho & Han Jin-won' }], lists: ['FEST', 'IMDB', 'LBXD', 'SS'] },
+  { id: 'parasite-2019', title: "Parasite",                                      year: 2019, won: true,  genre: 'T', ceremony: 92, category: 'BP', alsoWon: ['INT'], awards: [{ category: 'Director', winner: 'Bong Joon-ho' }, { category: 'Original Screenplay', winner: 'Bong Joon-ho & Han Jin-won' }], lists: ['CRIT', 'FEST', 'IMDB', 'LBXD', 'SS'] },
   { id: 'ford-v-ferrari-2019', title: "Ford v Ferrari",                                year: 2019, won: false, genre: 'D', ceremony: 92, category: 'BP', awards: [{ category: 'Film Editing' }, { category: 'Sound Editing' }], lists: ['IMDB'] },
   { id: 'the-irishman-2019', title: "The Irishman",                                  year: 2019, won: false, genre: 'X', ceremony: 92, category: 'BP',  lists: ['CRIT'] },
   { id: 'jojo-rabbit-2019', title: "Jojo Rabbit",                                   year: 2019, won: false, genre: 'C', ceremony: 92, category: 'BP', awards: [{ category: 'Adapted Screenplay' }] },
@@ -434,14 +434,14 @@ export const MOVIES = [
   { id: 'mank-2020', title: "Mank",                                          year: 2020, won: false, genre: 'H', ceremony: 93, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Production Design' }] },
   { id: 'minari-2020', title: "Minari",                                        year: 2020, won: false, genre: 'I', ceremony: 93, category: 'BP', awards: [{ category: 'Supporting Actress', winner: 'Yuh-Jung Youn' }] },
   { id: 'promising-young-woman-2020', title: "Promising Young Woman",                         year: 2020, won: false, genre: 'T', ceremony: 93, category: 'BP', awards: [{ category: 'Original Screenplay', winner: 'Emerald Fennell' }] },
-  { id: 'sound-of-metal-2020', title: "Sound of Metal",                                year: 2020, won: false, genre: 'D', ceremony: 93, category: 'BP', awards: [{ category: 'Sound' }, { category: 'Film Editing' }] },
+  { id: 'sound-of-metal-2020', title: "Sound of Metal",                                year: 2020, won: false, genre: 'D', ceremony: 93, category: 'BP', awards: [{ category: 'Sound' }, { category: 'Film Editing' }], lists: ['CRIT'] },
   { id: 'the-trial-of-the-chicago-7-2020', title: "The Trial of the Chicago 7",                    year: 2020, won: false, genre: 'H', ceremony: 93, category: 'BP' },
 
   // 2021 films - 94th Academy Awards (10 nominees)
   { id: 'coda-2021', title: "CODA",                                          year: 2021, won: true,  genre: 'D', ceremony: 94, category: 'BP', awards: [{ category: 'Supporting Actor', winner: 'Troy Kotsur' }, { category: 'Adapted Screenplay', winner: 'Sian Heder' }] },
   { id: 'belfast-2021', title: "Belfast",                                       year: 2021, won: false, genre: 'H', ceremony: 94, category: 'BP', awards: [{ category: 'Original Screenplay', winner: 'Kenneth Branagh' }] },
   { id: 'dont-look-up-2021', title: "Don't Look Up",                                 year: 2021, won: false, genre: 'C', ceremony: 94, category: 'BP' },
-  { id: 'drive-my-car-2021', title: "Drive My Car",                                  year: 2021, won: false, genre: 'I', ceremony: 94, category: 'BP', alsoWon: ['INT'] },
+  { id: 'drive-my-car-2021', title: "Drive My Car",                                  year: 2021, won: false, genre: 'I', ceremony: 94, category: 'BP', alsoWon: ['INT'], lists: ['CRIT'] },
   { id: 'dune-2021', title: "Dune",                                          year: 2021, won: false, genre: 'S', ceremony: 94, category: 'BP', awards: [{ category: 'Cinematography' }, { category: 'Film Editing' }, { category: 'Original Score' }, { category: 'Production Design' }, { category: 'Sound' }, { category: 'Visual Effects' }] },
   { id: 'king-richard-2021', title: "King Richard",                                  year: 2021, won: false, genre: 'B', ceremony: 94, category: 'BP', awards: [{ category: 'Actor', winner: 'Will Smith' }] },
   { id: 'licorice-pizza-2021', title: "Licorice Pizza",                                year: 2021, won: false, genre: 'C', ceremony: 94, category: 'BP' },
@@ -457,24 +457,24 @@ export const MOVIES = [
   { id: 'the-fabelmans-2022', title: "The Fabelmans",                                 year: 2022, won: false, genre: 'B', ceremony: 95, category: 'BP' },
   { id: 't-r-2022', title: "T\u00e1r",                                           year: 2022, won: false, genre: 'D', ceremony: 95, category: 'BP' },
   { id: 'top-gun-maverick-2022', title: "Top Gun: Maverick",                             year: 2022, won: false, genre: 'N', ceremony: 95, category: 'BP', awards: [{ category: 'Sound' }] },
-  { id: 'triangle-of-sadness-2022', title: "Triangle of Sadness",                           year: 2022, won: false, genre: 'C', ceremony: 95, category: 'BP',  lists: ['FEST'] },
+  { id: 'triangle-of-sadness-2022', title: "Triangle of Sadness",                           year: 2022, won: false, genre: 'C', ceremony: 95, category: 'BP',  lists: ['CRIT', 'FEST'] },
   { id: 'women-talking-2022', title: "Women Talking",                                 year: 2022, won: false, genre: 'D', ceremony: 95, category: 'BP', awards: [{ category: 'Adapted Screenplay', winner: 'Sarah Polley' }] },
   { id: 'avatar-the-way-of-water-2022', title: "Avatar: The Way of Water",                      year: 2022, won: false, genre: 'S', ceremony: 95, category: 'BP', awards: [{ category: 'Visual Effects' }] },
 
   // 2023 films - 96th Academy Awards (10 nominees)
   { id: 'oppenheimer-2023', title: "Oppenheimer",                                   year: 2023, won: true,  genre: 'H', ceremony: 96, category: 'BP', awards: [{ category: 'Director', winner: 'Christopher Nolan' }, { category: 'Actor', winner: 'Cillian Murphy' }, { category: 'Supporting Actor', winner: 'Robert Downey Jr.' }, { category: 'Adapted Screenplay', winner: 'Christopher Nolan' }, { category: 'Cinematography' }, { category: 'Film Editing' }, { category: 'Original Score' }], lists: ['IMDB'] },
   { id: 'american-fiction-2023', title: "American Fiction",                              year: 2023, won: false, genre: 'C', ceremony: 96, category: 'BP', awards: [{ category: 'Adapted Screenplay', winner: 'Cord Jefferson' }] },
-  { id: 'anatomy-of-a-fall-2023', title: "Anatomy of a Fall",                             year: 2023, won: false, genre: 'T', ceremony: 96, category: 'BP', awards: [{ category: 'Original Screenplay', winner: 'Justine Triet & Arthur Harari' }], lists: ['FEST'] },
+  { id: 'anatomy-of-a-fall-2023', title: "Anatomy of a Fall",                             year: 2023, won: false, genre: 'T', ceremony: 96, category: 'BP', awards: [{ category: 'Original Screenplay', winner: 'Justine Triet & Arthur Harari' }], lists: ['CRIT', 'FEST'] },
   { id: 'barbie-2023', title: "Barbie",                                        year: 2023, won: false, genre: 'C', ceremony: 96, category: 'BP', awards: [{ category: 'Original Song', detail: 'What Was I Made For?' }] },
   { id: 'the-holdovers-2023', title: "The Holdovers",                                 year: 2023, won: false, genre: 'C', ceremony: 96, category: 'BP', awards: [{ category: 'Supporting Actress', winner: 'Da\'Vine Joy Randolph' }], lists: ['LBXD'] },
   { id: 'maestro-2023', title: "Maestro",                                       year: 2023, won: false, genre: 'B', ceremony: 96, category: 'BP' },
   { id: 'past-lives-2023', title: "Past Lives",                                    year: 2023, won: false, genre: 'R', ceremony: 96, category: 'BP' },
   { id: 'poor-things-2023', title: "Poor Things",                                   year: 2023, won: false, genre: 'S', ceremony: 96, category: 'BP', awards: [{ category: 'Actress', winner: 'Emma Stone' }, { category: 'Costume Design' }, { category: 'Makeup' }, { category: 'Production Design' }], lists: ['FEST'] },
   { id: 'the-zone-of-interest-2023', title: "The Zone of Interest",                          year: 2023, won: false, genre: 'W', ceremony: 96, category: 'BP', alsoWon: ['INT'], awards: [{ category: 'Sound' }] },
-  { id: 'killers-of-the-flower-moon-2023', title: "Killers of the Flower Moon",                    year: 2023, won: false, genre: 'H', ceremony: 96, category: 'BP' },
+  { id: 'killers-of-the-flower-moon-2023', title: "Killers of the Flower Moon",                    year: 2023, won: false, genre: 'H', ceremony: 96, category: 'BP',  lists: ['CRIT'] },
 
   // 2024 films - 97th Academy Awards (10 nominees)
-  { id: 'anora-2024', title: "Anora",                                         year: 2024, won: true,  genre: 'C', ceremony: 97, category: 'BP', awards: [{ category: 'Director', winner: 'Sean Baker' }, { category: 'Actress', winner: 'Mikey Madison' }, { category: 'Original Screenplay', winner: 'Sean Baker' }, { category: 'Film Editing' }], lists: ['FEST'] },
+  { id: 'anora-2024', title: "Anora",                                         year: 2024, won: true,  genre: 'C', ceremony: 97, category: 'BP', awards: [{ category: 'Director', winner: 'Sean Baker' }, { category: 'Actress', winner: 'Mikey Madison' }, { category: 'Original Screenplay', winner: 'Sean Baker' }, { category: 'Film Editing' }], lists: ['CRIT', 'FEST'] },
   { id: 'the-brutalist-2024', title: "The Brutalist",                                 year: 2024, won: false, genre: 'H', ceremony: 97, category: 'BP', awards: [{ category: 'Actor', winner: 'Adrien Brody' }, { category: 'Cinematography' }, { category: 'Original Score' }] },
   { id: 'a-complete-unknown-2024', title: "A Complete Unknown",                            year: 2024, won: false, genre: 'B', ceremony: 97, category: 'BP' },
   { id: 'conclave-2024', title: "Conclave",                                      year: 2024, won: false, genre: 'T', ceremony: 97, category: 'BP', awards: [{ category: 'Adapted Screenplay', winner: 'Peter Straughan' }] },
@@ -549,7 +549,7 @@ export const MOVIES = [
   { id: 'toy-story-4-2019', title: "Toy Story 4",                                    year: 2019, won: true, genre: 'A', ceremony: 92, category: 'ANIM' },
   { id: 'soul-2020', title: "Soul",                                           year: 2020, won: true, genre: 'A', ceremony: 93, category: 'ANIM', awards: [{ category: 'Original Score' }] },
   { id: 'encanto-2021', title: "Encanto",                                        year: 2021, won: true, genre: 'A', ceremony: 94, category: 'ANIM', awards: [{ category: 'Original Score' }] },
-  { id: 'guillermo-del-toros-pinocchio-2022', title: "Guillermo del Toro's Pinocchio",                 year: 2022, won: true, genre: 'A', ceremony: 95, category: 'ANIM' },
+  { id: 'guillermo-del-toros-pinocchio-2022', title: "Guillermo del Toro's Pinocchio",                 year: 2022, won: true, genre: 'A', ceremony: 95, category: 'ANIM',  lists: ['CRIT'] },
   { id: 'the-boy-and-the-heron-2023', title: "The Boy and the Heron",                          year: 2023, won: true, genre: 'A', ceremony: 96, category: 'ANIM' },
   { id: 'flow-2024', title: "Flow",                                           year: 2024, won: true, genre: 'A', ceremony: 97, category: 'ANIM',  lists: ['CRIT'] },
   { id: 'kpop-demon-hunters-2025', title: "KPop Demon Hunters",                              year: 2025, won: true, genre: 'A', ceremony: 98, category: 'ANIM' },

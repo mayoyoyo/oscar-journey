@@ -529,4 +529,16 @@ export const QUOTES = {
   'before-sunset-2004': ["Memories are wonderful things, if you don't have to deal with the past.", "Even being alone it's better than sitting next to your lover and feeling lonely.", "Life's hard. It's supposed to be. If we didn't suffer, we wouldn't learn a thing."],
   'eternal-sunshine-of-the-spotless-mind-2004': ["Blessed are the forgetful: for they get the better even of their blunders.", "Constantly talking isn't necessarily communicating.", "I could die right now, I'm just ... happy. I've never felt that before."],
   'the-dark-knight-2008': ["You either die a hero, or you live long enough to see yourself become the villain.", "Why so serious?", "I believe whatever doesn't kill you simply makes you... stranger.", "The night is darkest just before the dawn. And I promise you, the dawn is coming."],
+
+  // --- Tier 3 (round 2) ---
+  'mr-smith-goes-to-washington-1939': ["You can't pull that steamroller stuff. Your methods won't do here. However it happened, this boy's a Senator. This is Washington, Jim!"],
+  'the-philadelphia-story-1940': ["Oh, I wish something would happen! Nothing ever possibly in the least ever happens here!"],
+  'ace-in-the-hole-1951': ["Bad news sells best. 'Cause good news is no news.", "I don't go to church. Kneeling bags my nylons."],
+  'the-400-blows-1959': ["I'm an unstable psychotic individual with perverted tendencies."],
+  'high-and-low-1963': ["I'd rather be told the cruel truth than be fed gentle lies.", "Success isn't worth losing your humanity."],
+  '8-and-a-half-1963': ["Happiness consists of being able to tell the truth without hurting anyone.", "Accept me as I am. Only then can we discover each other."],
+  'persona-1966': ["Can you understand? What happens to everything you believe in?"],
+  'eraserhead-1977': ["In Heaven, everything is fine."],
+  'the-thing-1982': ["I don't know what the hell's in there, but it's weird and pissed off, whatever it is."],
+  'sex-lies-and-videotape-1989': ["I remember reading somewhere that men learn to love the person that they're attracted to, and that women become more and more attracted to the person that they love."],
 };

@@ -4,3 +4,7 @@ dist
 *.local
 backups/
 .worktrees/
+
+# Wikiquote fetcher cache (local-only, regenerated on demand)
+scripts/wq-cache/
+scripts/wq-extracted/

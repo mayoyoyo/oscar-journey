@@ -150,8 +150,10 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
       .filter(m => filters.eras[eraBucket(m.year)])
       .filter(m => filters.categories[m.category] || (m.alsoWon || []).some(c => filters.categories[c]))
-      .filter(m => m.category !== 'ESSENTIAL' || (m.tier || 0) >= (filters.minEssentialTier ?? 3))
-      .filter(m => !filters.essentialsOnly || m.category === 'ESSENTIAL')
+      // Canon depth + essentials-only are bypassed when there's an active search — if you know
+      // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
+      .filter(m => !!q || m.category !== 'ESSENTIAL' || (m.tier || 0) >= (filters.minEssentialTier ?? 3))
+      .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
         const bucket = runtimeBucket(runtimeMap.get(m.id));

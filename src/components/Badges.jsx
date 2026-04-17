@@ -99,6 +99,7 @@ export function MovieBadges({ movie, small = false }) {
   return (
     <div className="badges">
       {oscarStatus === 'winner' && movie.category === 'BP' && <BadgeWinner movie={movie} />}
+      <LanguagePill movie={movie} />
       <BadgeGenre genre={movie.genre} />
       {movie.category === 'INT' && <BadgeInt />}
       {movie.category === 'ANIM' && <BadgeAnim />}

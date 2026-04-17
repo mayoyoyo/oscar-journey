@@ -2083,8 +2083,9 @@ main {
 }
 
 /* Language/flag pill — shown only for non-English films.
-   Desktop: flag emoji + language name.
-   Mobile: flag emoji only (.badge-lang-label hidden in the row media rule). */
+   Desktop row: flag emoji + language name.
+   Mobile row: flag emoji only (.badge-lang-label hidden in the row media rule).
+   Detail modal (.badges context): matches the size of other modal pills. */
 .badge-lang-sm {
   display: inline-flex;
   align-items: center;
@@ -2100,6 +2101,15 @@ main {
 .badge-lang-flag {
   font-size: 0.95rem;
   line-height: 1;
+}
+/* In the full detail-modal badges row, match the weight of BadgeGenre etc. */
+.badges .badge-lang-sm {
+  font-size: 0.7rem;
+  padding: 5px 12px;
+  letter-spacing: 0.04em;
+}
+.badges .badge-lang-flag {
+  font-size: 1rem;
 }
 
 .list-count {

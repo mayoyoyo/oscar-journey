@@ -10,20 +10,21 @@ export function mulberry32(seed) {
   };
 }
 
-// Quality weight used for gentle front-loading. Higher = more likely to land early
-// in the journey. Decays to zero bias after ~200 positions so the rest is pure
-// diversity-shuffled random.
-//  - Tier 6 canon (Casablanca, City Lights, Third Man etc.): 6
-//  - Tier 5 canon (Citizen Kane, Vertigo, Do the Right Thing): 5
-//  - Tier 4 canon (Seven Samurai, Blade Runner, The Shining): 4
-//  - Tier 3 canon: 3
-//  - BP winner / INT winner / ANIM winner: 2
-//  - Tier 2 canon: 2
-//  - BP nominee (not winner): 1
+// Quality weight = number of canon lists the film is on, including OSCAR or
+// OSCAR_NOM contribution for Oscar films. Used for gentle front-loading.
+//
+// Post-v3 cross-reference, Oscar films carry their real canon weight:
+// The Godfather = 5 (AFI/IMDB/NFR/SS/OSCAR), Pulp Fiction = 6, Titanic = 3.
+// Previously every Oscar film was stuck at quality 2 regardless of stature.
 function qualityWeight(movie) {
-  if (movie.lists && Array.isArray(movie.lists)) return movie.tier || 2;
-  if (movie.category === 'BP') return movie.won ? 2 : 1;
-  return 2; // INT / ANIM winners
+  const lists = movie.lists ? [...movie.lists] : [];
+  if (movie.category !== 'ESSENTIAL') {
+    if (movie.won && !lists.includes('OSCAR')) lists.push('OSCAR');
+    else if (movie.category === 'BP' && !movie.won && !lists.includes('OSCAR_NOM')) {
+      lists.push('OSCAR_NOM');
+    }
+  }
+  return lists.length || 1;
 }
 
 // Map a release year to a decade bucket label. Granular across all eras so the

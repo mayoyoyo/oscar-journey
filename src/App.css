@@ -1841,6 +1841,79 @@ main {
   transition: all 0.15s ease;
 }
 
+/* Tier +/- stepper inside the Canon depth body */
+.tier-stepper {
+  padding: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.tier-stepper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.tier-stepper-title {
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+  letter-spacing: 0.04em;
+}
+.tier-stepper-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tier-stepper-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--cream);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.tier-stepper-btn:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.tier-stepper-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.tier-stepper-value {
+  min-width: 42px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+}
+.tier-stepper-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tier-stepper-desc strong {
+  color: var(--cream);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+.tier-stepper-desc span {
+  color: var(--cream-dim);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
 .essentials-only-toggle.active .essentials-only-checkbox {
   background: var(--gold);
   border-color: var(--gold);
@@ -1871,7 +1944,18 @@ main {
   border: 1px solid var(--border);
   border-radius: 10px;
   margin-bottom: 20px;
-  overflow: hidden;
+  /* Sticky to the top of the films tab on scroll so the count + filter
+     toggle stay accessible without scrolling back up. Z-index sits above
+     letter-group headers but below modal overlays. */
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+/* Body inside filters scrolls if content is long, but the sticky header
+   (.film-list-filters-header) stays pinned via the outer sticky above. */
+.film-list-filters-body {
+  max-height: calc(100dvh - 180px);
+  overflow-y: auto;
 }
 .film-list-filters-header {
   display: flex;
@@ -1904,6 +1988,24 @@ main {
   padding: 2px 8px;
   border-radius: 10px;
   font-weight: 600;
+}
+/* Match-count badge sits in the filter header — replaces the old
+   separate "N films · M watched" line below the filter block. */
+.film-list-filters-match {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.film-list-filters-watched {
+  color: var(--gold-dim);
+}
+/* When both match-count and active-count + reset are rendered, push
+   match-count to flex-right and keep active/reset after it. */
+.film-list-filters-header .film-list-filters-count,
+.film-list-filters-header .film-list-filter-reset {
+  margin-left: 8px;
 }
 .film-list-filter-reset {
   margin-left: auto;

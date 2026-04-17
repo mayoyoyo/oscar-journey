@@ -4,6 +4,7 @@ import { MovieBadges } from './Badges';
 import { ratingKey } from '../utils/storage';
 import { readCachedRuntime, runtimeBucket, prefetchRuntimes, RUNTIME_LABELS } from '../utils/runtime';
 import { ERA_LABELS, CATEGORY_LABELS } from './SettingsModal';
+import { getTier } from '../utils/tierInfo';
 
 // "Wins" filter — default all OFF, OR semantic. A film passes if it won at least one checked award.
 // Some Oscar categories were renamed/split across years; we group equivalents under one label.
@@ -46,9 +47,28 @@ const DEFAULT_FILM_FILTERS = {
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),
-  minEssentialTier: 2,
-  essentialsOnly: false,
+  // Unified tier floor — applies to ALL films (not just essentials).
+  // Tier uses the getTierInfo count, which folds OSCAR/OSCAR_NOM into the
+  // canon-list count so Oscar films are part of the same ranking.
+  minTier: 1,
+  // Independent shortcut: hide ESSENTIAL films, leaving only BP/INT/ANIM.
+  oscarsOnly: false,
 };
+
+// Per-tier copy shown in the Canon depth section. Keys are the minimum
+// tier value for the slider; the description previews what that floor
+// means editorially. Matches the methodology's "2-of-N triangulation".
+const TIER_LEVELS = {
+  1: { label: 'Everything',        sub: 'The whole catalog — no canon floor applied.' },
+  2: { label: 'Canon threshold',   sub: 'On 2+ canonical lists. The working bar for "belongs in the canon."' },
+  3: { label: 'Strong consensus',  sub: 'On 3+ lists. Backed by multiple disjoint cultural authorities.' },
+  4: { label: 'Iron-clad',         sub: 'On 4+ lists. No serious critic argues against these.' },
+  5: { label: 'Near-universal',    sub: 'On 5+ lists. Staples of every major canon.' },
+  6: { label: 'Universal canon',   sub: 'On 6+ lists. Essentially undisputed across worldviews.' },
+  7: { label: 'All-time masterpieces', sub: 'On 7 of 8 lists. In the conversation for greatest ever made.' },
+  8: { label: 'Legendary',         sub: 'On every canonical list. Vanishingly rare — the GOATs.' },
+};
+const MAX_SLIDER_TIER = 7;
 
 function sortKeyFn(title) {
   return title.replace(/^(The|A|An)\s+/i, '').toLowerCase();
@@ -147,9 +167,9 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     // Wins defaults all OFF; each ON one counts as a user-applied filter.
     n += Object.values(filters.wins).filter(v => v).length;
     if (watchedOnly) n++;
-    // Canon-depth / essentials-only counted if different from default
-    if (filters.minEssentialTier !== DEFAULT_FILM_FILTERS.minEssentialTier) n++;
-    if (filters.essentialsOnly !== DEFAULT_FILM_FILTERS.essentialsOnly) n++;
+    // Canon-depth counters
+    if (filters.minTier !== DEFAULT_FILM_FILTERS.minTier) n++;
+    if (filters.oscarsOnly !== DEFAULT_FILM_FILTERS.oscarsOnly) n++;
     return n;
   })();
 
@@ -165,10 +185,12 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
       .filter(m => filters.eras[eraBucket(m.year)])
       .filter(m => filters.categories[m.category] || (m.alsoWon || []).some(c => filters.categories[c]))
-      // Canon depth + essentials-only are bypassed when there's an active search — if you know
+      // Canon depth + oscars-only are bypassed when there's an active search — if you know
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
-      .filter(m => !!q || m.category !== 'ESSENTIAL' || (m.tier || 0) >= (filters.minEssentialTier ?? 2))
-      .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
+      // Tier applies UNIFORMLY to all films via the unified getTier helper, which counts
+      // OSCAR / OSCAR_NOM as a canon-list entry for BP / INT / ANIM films.
+      .filter(m => !!q || getTier(m) >= (filters.minTier ?? 1))
+      .filter(m => !!q || !filters.oscarsOnly || m.category !== 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
         const bucket = runtimeBucket(runtimeMap.get(m.id));
@@ -193,17 +215,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     return { filtered, groups, watchedCount };
   }, [query, watchedTitleSet, watchedOnly, filters, runtimeMap, activeWinKeys]);
 
-  // Pre-compute how many films won each award category — used as suffix counts in the menu
-  const winCounts = useMemo(() => {
-    const counts = Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, 0]));
-    for (const m of MOVIES) {
-      for (const k of Object.keys(WIN_CATEGORIES)) {
-        if (filmWonAward(m, k)) counts[k]++;
-      }
-    }
-    return counts;
-  }, []);
-  const winSuffixes = Object.fromEntries(Object.entries(winCounts).map(([k, n]) => [k, `(${n})`]));
 
   const setOnlyKey = (section, labels, onlyKey) => {
     const next = {};
@@ -211,14 +222,14 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     setFilters(f => ({ ...f, [section]: next }));
   };
 
-  // Per-option counts based on the current canon depth + essentials-only setting.
-  // Used to (a) show counts as suffixes and (b) hide rows where 0 films would qualify
-  // — e.g. the 1910s era when the canon depth is set to ≥3.
+  // Per-option eligibility pool — used to hide rows where 0 films qualify
+  // (e.g. the 1910s era when canon depth is set to ≥3). Counts are no longer
+  // shown as suffixes per mayo's request; we only use this to drop empty rows.
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (m.category === 'ESSENTIAL' && (m.tier || 0) < (filters.minEssentialTier ?? 2)) return false;
-    if (filters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
+    if (getTier(m) < (filters.minTier ?? 1)) return false;
+    if (filters.oscarsOnly && m.category === 'ESSENTIAL') return false;
     return true;
-  }), [filters.minEssentialTier, filters.essentialsOnly]);
+  }), [filters.minTier, filters.oscarsOnly]);
 
   const eraCounts = useMemo(() => {
     const c = {};
@@ -244,22 +255,17 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     return c;
   }, [eligiblePool]);
 
-  const renderChecklist = (section, labels, suffixes, counts) => (
+  const renderChecklist = (section, labels, counts) => (
     <div className="filter-checklist">
       {Object.entries(labels).map(([key, label]) => {
         // Hide rows that have zero matching films at the current canon settings.
         if (counts && (counts[key] || 0) === 0) return null;
         const active = filters[section][key];
-        // Auto-derive suffix from counts when explicit suffixes weren't passed.
-        const suffix = suffixes ? suffixes[key] : (counts ? `(${counts[key] || 0})` : null);
         return (
           <div key={key} className={`filter-check-item ${active ? 'active' : ''}`}
             onClick={() => toggleFilter(section, key)}>
             <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
-            <span className="filter-check-label">
-              {label}
-              {suffix && <span className="filter-check-suffix"> {suffix}</span>}
-            </span>
+            <span className="filter-check-label">{label}</span>
             <button
               type="button"
               className="filter-only-btn"
@@ -274,7 +280,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     </div>
   );
 
-  const renderSection = (label, section, labels, suffixes, counts) => {
+  const renderSection = (label, section, labels, counts) => {
     const count = sectionCount(section);
     const isOpen = openSections[section];
     return (
@@ -284,24 +290,9 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
           <span className="filter-section-label">{label}</span>
           {count && <span className="filter-section-count">{count}</span>}
         </button>
-        {isOpen && renderChecklist(section, labels, suffixes, counts)}
+        {isOpen && renderChecklist(section, labels, counts)}
       </div>
     );
-  };
-
-  const runtimeCounts = useMemo(() => {
-    const counts = { short: 0, medium: 0, long: 0 };
-    for (const m of MOVIES) {
-      const b = runtimeBucket(runtimeMap.get(m.id));
-      if (b) counts[b]++;
-    }
-    return counts;
-  }, [runtimeMap]);
-
-  const runtimeSuffixes = {
-    short: `(${runtimeCounts.short})`,
-    medium: `(${runtimeCounts.medium})`,
-    long: `(${runtimeCounts.long})`,
   };
 
   const runtimeLoading = !prefetchDone;
@@ -327,6 +318,10 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         <button className="film-list-filters-header" onClick={() => setFiltersOpen(o => !o)}>
           <span className="film-list-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
           <span className="journey-controls-header">Filters</span>
+          <span className="film-list-filters-match">
+            {filtered.length} film{filtered.length !== 1 ? 's' : ''}
+            {watchedCount > 0 && <span className="film-list-filters-watched"> · {watchedCount} watched</span>}
+          </span>
           {activeFilterCount > 0 && (
             <span className="film-list-filters-count">{activeFilterCount} active</span>
           )}
@@ -356,80 +351,77 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
               </button>
             </div>
 
-            {/* Canon depth — styled like a regular collapsible filter section for visual parity */}
+            {/* Canon depth — two independent controls:
+                  (1) Oscars-only toggle: hides non-Oscar films
+                  (2) Minimum tier slider (1..MAX_SLIDER_TIER, +/- stepper)
+                Tier applies UNIFORMLY across BP, INT, ANIM, ESSENTIAL via the
+                unified getTier() helper (OSCAR / OSCAR_NOM count as a list). */}
             <div className="filter-section">
               <button className="filter-section-toggle" onClick={() => toggleSection('canon')}>
                 <span className="filter-section-arrow">{openSections.canon ? '▾' : '▸'}</span>
                 <span className="filter-section-label">Canon depth</span>
                 {(() => {
                   const parts = [];
-                  if (filters.essentialsOnly) parts.push('only');
-                  if (filters.minEssentialTier === 99) parts.push('Oscars');
-                  else if (filters.minEssentialTier !== DEFAULT_FILM_FILTERS.minEssentialTier) parts.push(`≥${filters.minEssentialTier}`);
+                  if (filters.oscarsOnly) parts.push('Oscars only');
+                  if (filters.minTier > 1) parts.push(`tier ≥${filters.minTier}`);
                   if (parts.length === 0) return null;
                   return <span className="filter-section-count">{parts.join(' · ')}</span>;
                 })()}
               </button>
               {openSections.canon && (
                 <div className="filter-checklist canon-depth-body">
-                  <p className="canon-depth-caption">
-                    Minimum number of canon lists a non-Oscar film must appear on.
-                  </p>
-                  <div className="canon-depth-toggle" role="radiogroup" aria-label="Canon depth">
-                    {[
-                      { tier: 99, label: 'Oscars only', sub: 'no essentials · 399 films' },
-                      { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 essentials' },
-                      { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 essentials' },
-                      { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 essentials' },
-                    ].map(opt => (
-                      <button
-                        key={opt.tier}
-                        className={`canon-depth-btn ${filters.minEssentialTier === opt.tier ? 'active' : ''}`}
-                        role="radio"
-                        aria-checked={filters.minEssentialTier === opt.tier}
-                        onClick={() => setFilters(f => ({
-                          ...f,
-                          minEssentialTier: opt.tier,
-                          // Flip off essentials-only if the user picks "Oscars only" — the two combined
-                          // would produce an empty set.
-                          essentialsOnly: opt.tier === 99 ? false : f.essentialsOnly,
-                        }))}
-                      >
-                        <span className="canon-depth-label">{opt.label}</span>
-                        <span className="canon-depth-sub">{opt.sub}</span>
-                      </button>
-                    ))}
-                  </div>
-
+                  {/* Oscars-only toggle — independent of tier slider */}
                   <button
                     type="button"
-                    className={`essentials-only-toggle ${filters.essentialsOnly ? 'active' : ''} ${filters.minEssentialTier === 99 ? 'disabled' : ''}`}
-                    onClick={() => {
-                      if (filters.minEssentialTier === 99) return;
-                      setFilters(f => ({ ...f, essentialsOnly: !f.essentialsOnly }));
-                    }}
-                    aria-pressed={filters.essentialsOnly}
-                    disabled={filters.minEssentialTier === 99}
+                    className={`essentials-only-toggle ${filters.oscarsOnly ? 'active' : ''}`}
+                    onClick={() => setFilters(f => ({ ...f, oscarsOnly: !f.oscarsOnly }))}
+                    aria-pressed={filters.oscarsOnly}
                   >
-                    <span className="essentials-only-checkbox">{filters.essentialsOnly ? '\u2713' : ''}</span>
+                    <span className="essentials-only-checkbox">{filters.oscarsOnly ? '\u2713' : ''}</span>
                     <span className="essentials-only-label">
-                      <strong>Essentials only</strong>
+                      <strong>Oscars only</strong>
                       <span className="essentials-only-sub">
-                        {filters.minEssentialTier === 99
-                          ? 'n/a — Oscars-only mode is on'
-                          : 'hide Oscar films — show just the canon at the chosen tier'}
+                        Hide canon-only essentials — show just BP nominees and Int/Anim winners.
                       </span>
                     </span>
                   </button>
+
+                  {/* Minimum tier +/- stepper */}
+                  <div className="tier-stepper">
+                    <div className="tier-stepper-header">
+                      <span className="tier-stepper-title">Minimum tier</span>
+                      <div className="tier-stepper-controls">
+                        <button
+                          type="button"
+                          className="tier-stepper-btn"
+                          onClick={() => setFilters(f => ({ ...f, minTier: Math.max(1, (f.minTier ?? 1) - 1) }))}
+                          disabled={filters.minTier <= 1}
+                          aria-label="Lower minimum tier"
+                        >−</button>
+                        <span className="tier-stepper-value">≥ {filters.minTier}</span>
+                        <button
+                          type="button"
+                          className="tier-stepper-btn"
+                          onClick={() => setFilters(f => ({ ...f, minTier: Math.min(MAX_SLIDER_TIER, (f.minTier ?? 1) + 1) }))}
+                          disabled={filters.minTier >= MAX_SLIDER_TIER}
+                          aria-label="Raise minimum tier"
+                        >+</button>
+                      </div>
+                    </div>
+                    <div className="tier-stepper-desc">
+                      <strong>{TIER_LEVELS[filters.minTier]?.label}</strong>
+                      <span>{TIER_LEVELS[filters.minTier]?.sub}</span>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
 
-            {renderSection('Categories', 'categories', CATEGORY_LABELS, undefined, categoryCounts)}
-            {renderSection('Eras', 'eras', ERA_LABELS, undefined, eraCounts)}
-            {renderSection('Genres', 'genres', GENRE_LABELS, undefined, genreCounts)}
-            {renderSection('Runtime', 'runtimes', RUNTIME_LABELS, runtimeSuffixes)}
-            {renderSection('Oscars Won', 'wins', WIN_LABELS, winSuffixes)}
+            {renderSection('Categories', 'categories', CATEGORY_LABELS, categoryCounts)}
+            {renderSection('Eras', 'eras', ERA_LABELS, eraCounts)}
+            {renderSection('Genres', 'genres', GENRE_LABELS, genreCounts)}
+            {renderSection('Runtime', 'runtimes', RUNTIME_LABELS)}
+            {renderSection('Oscars Won', 'wins', WIN_LABELS)}
 
             {runtimeLoading && (
               <div className="film-list-runtime-status">
@@ -440,9 +432,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         )}
       </div>
 
-      <div className="list-count">
-        {filtered.length} film{filtered.length !== 1 ? 's' : ''} · {watchedCount} watched
-      </div>
       <div>
         {filtered.length === 0 ? (
           <p style={{ color: 'var(--cream-dim)', padding: '20px 0' }}>No films match your search.</p>

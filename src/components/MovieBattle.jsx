@@ -307,9 +307,15 @@ export default function MovieBattle({ profile, playlist, watchedSet, onOpenDetai
         winner,
       });
 
-      // Update personal ELO
+      // Update personal ELO — updatePersonalElo already persists to Firestore,
+      // also route through onSaveProfile so the app-level React profile state
+      // stays in sync. Otherwise profile.personalElo goes stale and
+      // FilmCard/FilmDetailModal render outdated battle ELO until next refresh.
       const updatedPersonal = await updatePersonalElo(profile.id, keyA, keyB, winnerKey);
-      if (updatedPersonal) setPersonalElo(updatedPersonal);
+      if (updatedPersonal) {
+        setPersonalElo(updatedPersonal);
+        if (onSaveProfile) onSaveProfile('personalElo', updatedPersonal);
+      }
 
       await refreshLeaderboard();
       sessionVotes.current++;

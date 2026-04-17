@@ -227,16 +227,9 @@ export default function App() {
     localStorage.setItem(LS_THEME_KEY, isDark ? 'dark' : 'light');
   }, [isDark]);
 
-  const toggleTheme = useCallback(() => {
-    setIsDark(prev => {
-      const next = !prev;
-      // Also save to Firestore if logged in
-      if (profile) {
-        saveProfileField(profile.id, 'theme', next ? 'dark' : 'light').catch(() => {});
-      }
-      return next;
-    });
-  }, [profile]);
+  // toggleTheme is defined further down, AFTER firebaseSave, so it can route
+  // the theme persistence through firebaseSave instead of a direct Firestore
+  // write. See `toggleTheme` below.
 
   // --- Core state ---
   const [playlist, setPlaylist] = useState([]);
@@ -305,6 +298,12 @@ export default function App() {
   // --- Helper: save to Firestore with retry logic ---
   const firebaseSave = useCallback((field, value) => {
     if (!profile) return;
+    // Keep the local React profile state in sync with the Firestore write
+    // so other views (ProfileDetail) read the same value without a round
+    // trip. Previously goNext updated Firestore + the currentIdx local
+    // state but left profile.currentIdx stale — causing the Profile page
+    // to show the old anchor film while Journey tracked the new one.
+    setProfile(prev => prev ? { ...prev, [field]: value } : prev);
     setSaving(true);
     if (saveTimeout.current) clearTimeout(saveTimeout.current);
 
@@ -324,6 +323,16 @@ export default function App() {
     };
     doSave();
   }, [profile]);
+
+  // --- Theme toggle — route through firebaseSave so profile.theme in React
+  // state stays consistent with Firestore, same as every other field. ---
+  const toggleTheme = useCallback(() => {
+    setIsDark(prev => {
+      const next = !prev;
+      if (profile) firebaseSave('theme', next ? 'dark' : 'light');
+      return next;
+    });
+  }, [profile, firebaseSave]);
 
   // --- On mount: check for saved profile ID and auto-login ---
   useEffect(() => {
@@ -375,8 +384,12 @@ export default function App() {
   }, []);
 
   // --- Initialize all state from a loaded profile ---
+  // Mutate `data` with every post-write value (playlistOrder, seed, currentIdx,
+  // migrated watched/ratings, sanitized filters) before calling setProfile at
+  // the end. That guarantees React profile state matches Firestore truth from
+  // the first render — otherwise downstream views (ProfileDetail) can render
+  // stale fields that were rewritten on login.
   const initializeFromProfile = useCallback((data) => {
-    setProfile(data);
     localStorage.setItem(LS_PROFILE_KEY, data.id);
 
     // Determine seed and playlist order
@@ -412,8 +425,9 @@ export default function App() {
             [newMovies[i], newMovies[j]] = [newMovies[j], newMovies[i]];
           }
           pl = [...pl, ...newMovies];
-          // Save updated order
-          saveProfileField(data.id, 'playlistOrder', pl.map(m => m.id)).catch(() => {});
+          // Save updated order — also mirror onto `data` so React state stays truthful
+          data.playlistOrder = pl.map(m => m.id);
+          saveProfileField(data.id, 'playlistOrder', data.playlistOrder).catch(() => {});
         }
       }
     } else {
@@ -426,12 +440,15 @@ export default function App() {
       // generate a random seed.
       if (needsVersionMigration || !seed) {
         seed = Math.floor(Math.random() * 0xFFFFFFFF);
+        data.seed = seed;
         saveProfileField(data.id, 'seed', seed).catch(() => {});
       }
       pl = generatePlaylist(seed);
       const orderIds = pl.map(m => m.id);
+      data.playlistOrder = orderIds;
       saveProfileField(data.id, 'playlistOrder', orderIds).catch(() => {});
       if (needsVersionMigration) {
+        data.shuffleVersion = SHUFFLE_VERSION;
         saveProfileField(data.id, 'shuffleVersion', SHUFFLE_VERSION).catch(() => {});
         // Reset position to 0 so existing users start at the NEW front-loaded beginning.
         // Their old currentIdx pointed into the old shuffle and would bypass the
@@ -481,7 +498,8 @@ export default function App() {
             }
           }
         }
-        saveProfileField(data.id, 'watched', [...watchedKeys]).catch(() => {});
+        data.watched = [...watchedKeys];
+        saveProfileField(data.id, 'watched', data.watched).catch(() => {});
       } else if (typeof first === 'string' && first.includes('|')) {
         // INTERMEDIATE FORMAT: "Title|year" strings — migrate to IDs
         watchedKeys = new Set();
@@ -492,7 +510,8 @@ export default function App() {
           const movie = MOVIES.find(m => m.title === title && String(m.year) === yearStr);
           if (movie) watchedKeys.add(movie.id);
         }
-        saveProfileField(data.id, 'watched', [...watchedKeys]).catch(() => {});
+        data.watched = [...watchedKeys];
+        saveProfileField(data.id, 'watched', data.watched).catch(() => {});
       } else {
         // NEW FORMAT: movie IDs (strings without |)
         watchedKeys = new Set(data.watched);
@@ -524,6 +543,7 @@ export default function App() {
     }
 
     if (needsRatingMigration) {
+      data.ratings = migratedRatings;
       saveProfileField(data.id, 'ratings', migratedRatings).catch(() => {});
     }
 
@@ -533,6 +553,9 @@ export default function App() {
     // Set current index
     const idx = data.currentIdx || 0;
 
+    // Publish fully-mutated profile to React state now that every field
+    // matches what's persisted in Firestore.
+    setProfile(data);
     setPlaylist(pl);
     setCurrentIdx(Math.min(idx, pl.length - 1));
     setWatchedSet(watchedKeys);
@@ -782,18 +805,19 @@ export default function App() {
 
     setPlaylist(newPlaylist);
     setCurrentIdx(0);
-    setProfile(prev => prev ? { ...prev, syncedWith: null } : prev);
 
-    if (profile) {
-      saveProfileField(profile.id, 'seed', newSeed).catch(() => {});
-      saveProfileField(profile.id, 'playlistOrder', orderIds).catch(() => {});
-      saveProfileField(profile.id, 'currentIdx', 0).catch(() => {});
-      saveProfileField(profile.id, 'syncedWith', null).catch(() => {});
-    }
+    // Route through firebaseSave so React profile state stays in sync with
+    // Firestore. Direct saveProfileField calls left profile.playlistOrder
+    // stale — Profile view would then render an old film while Journey
+    // correctly tracked the new shuffle.
+    firebaseSave('seed', newSeed);
+    firebaseSave('playlistOrder', orderIds);
+    firebaseSave('currentIdx', 0);
+    firebaseSave('syncedWith', null);
 
     setScreen('card');
     setSettingsOpen(false);
-  }, [profile, generatePlaylist]);
+  }, [firebaseSave, generatePlaylist]);
 
   // --- Sync journey from another profile ---
   const handleSyncJourney = useCallback(async (targetProfileId) => {
@@ -898,7 +922,13 @@ export default function App() {
   }, []);
 
   // --- Auto-skip to next eligible film when current is filtered out ---
-  // Saves position before skipping so we can snap back when filters are removed
+  // Saves position before skipping so we can snap back when filters are removed.
+  // We DO persist the new currentIdx to Firestore (via firebaseSave) — otherwise
+  // the Profile view (which renders profile.playlistOrder[profile.currentIdx])
+  // desyncs from Journey (which renders playlist[currentIdx]) whenever a filter
+  // hides the current film. preFilterIdx is only a ref anyway (lost on refresh),
+  // so the old "don't save" logic was already not truly transient — persisting
+  // is strictly more consistent.
   useEffect(() => {
     if (screen !== 'card' || !playlist.length || eligibleStats.total === 0) return;
     if (!idxPassesFilter(currentIdx)) {
@@ -913,18 +943,19 @@ export default function App() {
         next = currentIdx - 1;
         while (next >= 0 && !idxPassesFilter(next)) next--;
       }
-      if (next >= 0 && next < playlist.length) {
+      if (next >= 0 && next < playlist.length && next !== currentIdx) {
         setCurrentIdx(next);
-        // Don't save to Firestore — this is a temporary filter skip
+        firebaseSave('currentIdx', next);
       }
     } else if (preFilterIdx.current !== null) {
       // Filters changed and the saved position is now valid — snap back
-      if (idxPassesFilter(preFilterIdx.current)) {
+      if (idxPassesFilter(preFilterIdx.current) && preFilterIdx.current !== currentIdx) {
         setCurrentIdx(preFilterIdx.current);
-        preFilterIdx.current = null;
+        firebaseSave('currentIdx', preFilterIdx.current);
       }
+      preFilterIdx.current = null;
     }
-  }, [currentIdx, screen, playlist, idxPassesFilter, eligibleStats.total]);
+  }, [currentIdx, screen, playlist, idxPassesFilter, eligibleStats.total, firebaseSave]);
 
   // --- Keyboard shortcuts ---
   useEffect(() => {
@@ -1249,10 +1280,7 @@ export default function App() {
           watchedSet={watchedSet}
           onOpenDetail={setDetailMovie}
           simpleBattle={profile?.simpleBattle || false}
-          onSaveProfile={(field, value) => {
-            firebaseSave(field, value);
-            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
-          }}
+          onSaveProfile={(field, value) => firebaseSave(field, value)}
         />
       )}
 
@@ -1265,10 +1293,7 @@ export default function App() {
           watchedTitleSet={watchedTitleSet}
           ratings={ratings}
           raters={raters}
-          onSaveProfile={(field, value) => {
-            firebaseSave(field, value);
-            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
-          }}
+          onSaveProfile={(field, value) => firebaseSave(field, value)}
           autoSelectProfileId={autoSelectProfileId}
           onClearAutoSelect={() => setAutoSelectProfileId(null)}
           onNavigateToTier={handleNavigateToTier}
@@ -1340,7 +1365,7 @@ export default function App() {
           wallet={profile?.wallet || []}
           maxWallet={getMaxWallet(watchedSet.size)}
           currentShowcase={profile?.showcase || []}
-          onSaveShowcase={(s) => { firebaseSave('showcase', s); setProfile(prev => prev ? { ...prev, showcase: s } : prev); }}
+          onSaveShowcase={(s) => firebaseSave('showcase', s)}
           onClose={() => { setShowJourneyPack(false); setJourneyCard(null); }}
           onKeep={async (card) => {
             const wallet = [...(profile?.wallet || []), card];
@@ -1377,10 +1402,7 @@ export default function App() {
         <DailyOscar
           onClose={() => setDailyOpen(false)}
           profile={profile}
-          onSaveProfile={(field, value) => {
-            firebaseSave(field, value);
-            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
-          }}
+          onSaveProfile={(field, value) => firebaseSave(field, value)}
         />
       )}
 
@@ -1407,10 +1429,7 @@ export default function App() {
             setAutoSelectProfileId(id);
             handleTabChange('leaderboard');
           }}
-          onSaveProfile={(field, value) => {
-            firebaseSave(field, value);
-            setProfile(prev => prev ? { ...prev, [field]: value } : prev);
-          }}
+          onSaveProfile={(field, value) => firebaseSave(field, value)}
         />
       )}
     </>

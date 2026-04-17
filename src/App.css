@@ -2161,6 +2161,15 @@ main {
   margin-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
+/* Tighter pills on narrow mobile so Watched/Unwatched/Checklist fit on one row */
+@media (max-width: 540px) {
+  .film-list-mode-toggles { gap: 6px; }
+  .film-list-mode-toggles .film-list-toggle {
+    font-size: 0.74rem;
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+}
 .film-list-filters .filter-section { margin-bottom: 6px; }
 .film-list-filters .filter-section:last-child { margin-bottom: 0; }
 .filter-check-suffix {
@@ -7289,16 +7298,25 @@ main {
   align-items: flex-start;
 }
 
-.journey-controls-left {
-  flex: 1;
+/* Permanent action bar below (and outside) the Filters box — always-visible
+   Sync dropdown, Sync button, and Reshuffle on a single row. */
+.journey-controls-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: nowrap;
+}
+.journey-controls-actions .journey-sync-select {
+  flex: 0 1 220px;   /* fixed-ish width on desktop, shrinks on mobile */
   min-width: 0;
 }
-
-.journey-controls-right {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.journey-controls-actions .journey-sync-btn {
   flex-shrink: 0;
+}
+.journey-controls-actions .journey-reshuffle-btn {
+  flex-shrink: 0;
+  margin-left: auto;  /* push Reshuffle to the right; Sync stays left */
 }
 
 .journey-controls-header {
@@ -7383,15 +7401,16 @@ main {
   text-transform: none;
 }
 
+/* The "N active" badge is normally only rendered when filters are open.
+   On mobile we also render a mobile-only instance when filters are CLOSED
+   (in place of the verbose chips that would otherwise bleed). Hide that
+   mobile instance on desktop so the chips remain the default summary. */
+.journey-filters-active-mobile { display: none; }
+
 @media (max-width: 600px) {
-  .journey-filter-chips {
-    /* Wrap below header on narrow screens so chips don't push other controls */
-    flex-basis: 100%;
-    margin-top: 6px;
-  }
-  .journey-filter-chip {
-    font-size: 0.65rem;
-  }
+  /* Swap verbose chip summary for compact "N active" count on narrow screens */
+  .journey-filter-chips { display: none; }
+  .journey-filters-active-mobile { display: inline-block; }
 }
 
 /* Collapsible filter sections */
@@ -7665,10 +7684,18 @@ main {
     flex-direction: column;
     gap: 12px;
   }
-  .journey-controls-right {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px;
+  /* Keep all 3 actions on one row on mobile — shrink padding/font a touch
+     so the dropdown + Sync + Reshuffle never wrap. */
+  .journey-controls-actions { gap: 6px; }
+  .journey-controls-actions .journey-sync-select {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+  .journey-controls-actions .journey-sync-btn,
+  .journey-controls-actions .journey-reshuffle-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    white-space: nowrap;
   }
 }
 

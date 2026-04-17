@@ -251,6 +251,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   const syncedProfile = syncedWith ? profiles?.find(p => p.id === syncedWith) : null;
 
   return (
+    <>
     <div className="journey-controls">
       {/* Sync banner */}
       {syncedProfile && (
@@ -265,7 +266,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       )}
 
       <div className="journey-controls-row">
-        <div className={`journey-controls-left journey-filters-collapsible ${filtersOpen ? 'is-open' : 'is-closed'}`}>
+        <div className={`journey-filters-collapsible ${filtersOpen ? 'is-open' : 'is-closed'}`} style={{ flex: 1, minWidth: 0 }}>
           <button className="journey-filters-header" onClick={() => setFiltersOpen(o => !o)}>
             <span className="journey-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
             <span className="journey-controls-header" style={{ margin: 0 }}>Filters</span>
@@ -280,6 +281,12 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                   <span key={i} className="journey-filter-chip">{c}</span>
                 ))}
               </span>
+            )}
+            {/* Compact count badge: shown when filters are open (any width) OR
+                when closed on narrow mobile where the verbose chips would wrap
+                and bleed. Desktop keeps chips-only when closed. */}
+            {!filtersOpen && activeFilterCount > 0 && (
+              <span className="journey-filters-active journey-filters-active-mobile">{activeFilterCount} active</span>
             )}
             {filtersOpen && activeFilterCount > 0 && (
               <span className="journey-filters-active">{activeFilterCount} active</span>
@@ -395,45 +402,50 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
             </div>
           )}
         </div>
-
-        <div className="journey-controls-right">
-          <button className="journey-reshuffle-btn" onClick={handleReshuffle}>
-            🔀 Reshuffle
-          </button>
-
-          {profiles && profiles.length > 0 && onSyncJourney && !syncedWith && (
-            <div className="journey-sync">
-              <div style={{ display: 'flex', gap: '6px' }}>
-                <select className="journey-sync-select" value={syncTarget} onChange={e => setSyncTarget(e.target.value)}>
-                  <option value="">Sync with...</option>
-                  {profiles.filter(p => p.id !== currentProfileId).map(p => (
-                    <option key={p.id} value={p.id}>{p.avatar} {p.displayName}</option>
-                  ))}
-                </select>
-                <button
-                  className="journey-sync-btn"
-                  disabled={!syncTarget}
-                  onClick={() => {
-                    const target = profiles.find(p => p.id === syncTarget);
-                    if (target && window.confirm(
-                      `Sync with ${target.displayName}'s journey?\n\n` +
-                      `• You'll follow their exact movie order\n` +
-                      `• Your watched films and ratings are kept\n` +
-                      `• Your journey will stay linked — refreshing won't break it\n` +
-                      `• You can unsync anytime to go back to your own path`
-                    )) {
-                      onSyncJourney(syncTarget);
-                      setSyncTarget('');
-                    }
-                  }}
-                >
-                  Sync
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
       </div>
     </div>
+
+    {/* Permanent action row OUTSIDE the Filters box: Sync dropdown → Sync btn →
+        Reshuffle. Rendered as a sibling of .journey-controls so the background
+        box ends at Filters and these controls sit on the page surface below. */}
+    <div className="journey-controls-actions">
+      {profiles && profiles.length > 0 && onSyncJourney && !syncedWith && (
+        <>
+          <select
+            className="journey-sync-select"
+            value={syncTarget}
+            onChange={e => setSyncTarget(e.target.value)}
+          >
+            <option value="">Sync with...</option>
+            {profiles.filter(p => p.id !== currentProfileId).map(p => (
+              <option key={p.id} value={p.id}>{p.avatar} {p.displayName}</option>
+            ))}
+          </select>
+          <button
+            className="journey-sync-btn"
+            disabled={!syncTarget}
+            onClick={() => {
+              const target = profiles.find(p => p.id === syncTarget);
+              if (target && window.confirm(
+                `Sync with ${target.displayName}'s journey?\n\n` +
+                `• You'll follow their exact movie order\n` +
+                `• Your watched films and ratings are kept\n` +
+                `• Your journey will stay linked — refreshing won't break it\n` +
+                `• You can unsync anytime to go back to your own path`
+              )) {
+                onSyncJourney(syncTarget);
+                setSyncTarget('');
+              }
+            }}
+          >
+            Sync
+          </button>
+        </>
+      )}
+      <button className="journey-reshuffle-btn" onClick={handleReshuffle}>
+        🔀 Reshuffle
+      </button>
+    </div>
+    </>
   );
 }

@@ -24,6 +24,8 @@ const POSTER_OVERRIDES = {
 const OMDB_TITLE_OVERRIDES = {
   'Birdman': 'Birdman or The Unexpected Virtue of Ignorance',
   'Cries and Whispers': 'Cries & Whispers',
+  'Sunrise: A Song of Two Humans': 'Sunrise',
+  'Apur Sansar': 'The World of Apu',
 };
 
 // Year overrides for movies where our year doesn't match OMDB

@@ -6,6 +6,8 @@ import { readCachedRuntime, runtimeBucket, prefetchRuntimes, RUNTIME_LABELS } fr
 import { ERA_LABELS, CATEGORY_LABELS } from './SettingsModal';
 import { getTier } from '../utils/tierInfo';
 import LANGUAGES from '../data/languages.json';
+import DIRECTORS from '../data/directors.json';
+import ACTORS from '../data/actors.json';
 
 // A film is "International" if its primary language isn't English — sourced
 // from the baked-in languages.json. Also matches legacy category tags so
@@ -198,8 +200,22 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
 
   const { filtered, groups, watchedCount } = useMemo(() => {
     const q = query.trim().toLowerCase();
+    // Search matches across title, director, and cast (baked into
+    // directors.json / actors.json). Director gets the whole string; cast
+    // is comma-separated top-billed, checked as a substring of the whole
+    // string. Case-insensitive. Once cast.json (full Wikidata cast) ships,
+    // the actors lookup upgrades automatically.
+    const matchesQuery = (m) => {
+      if (!q) return true;
+      if (m.title.toLowerCase().includes(q)) return true;
+      const director = DIRECTORS[m.id];
+      if (director && director.toLowerCase().includes(q)) return true;
+      const actors = ACTORS[m.id];
+      if (actors && actors.toLowerCase().includes(q)) return true;
+      return false;
+    };
     const filtered = MOVIES
-      .filter(m => !q || m.title.toLowerCase().includes(q))
+      .filter(matchesQuery)
       .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
       .filter(m => filters.eras[eraBucket(m.year)])
       .filter(m => {
@@ -340,7 +356,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       <input
         className="list-search"
         type="search"
-        placeholder="Search films..."
+        placeholder="Search films, directors, cast..."
         autoComplete="off"
         value={query}
         onChange={(e) => setQuery(e.target.value)}

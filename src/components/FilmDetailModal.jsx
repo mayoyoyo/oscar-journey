@@ -4,6 +4,7 @@ import { MovieBadges } from './Badges';
 import OscarIcon from './OscarIcon';
 import TierPips from './TierPips';
 import ACTORS from '../data/actors.json';
+import DIRECTORS from '../data/directors.json';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
@@ -265,9 +266,14 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               </a>
             </div>
 
-            {omdbData?.director && (
-              <div className="film-detail-director"><strong>Directed by</strong> {omdbData.director}</div>
-            )}
+            {(() => {
+              // Static directors.json is the primary source (hand-curated to
+              // trim over-credited committees like Bambi, OMDb is the
+              // fallback for anything missing from the bake).
+              const director = DIRECTORS[movie.id] || omdbData?.director;
+              if (!director) return null;
+              return <div className="film-detail-director"><strong>Directed by</strong> {director}</div>;
+            })()}
             {(() => {
               // Static actors.json is the primary source (always hydrated);
               // OMDb cache field is a fallback for profiles that refreshed

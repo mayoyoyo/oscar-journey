@@ -1,6 +1,6 @@
 import { RUNTIME_OVERRIDES } from './runtimeOverrides';
 
-const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8', 'fbe9d009'];
+const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8', 'fbe9d009', '8a3c9a0'];
 let currentKeyIndex = 0;
 const CACHE_PREFIX = 'oscars_';
 const NOT_FOUND = 'NOT_FOUND';

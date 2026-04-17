@@ -1736,6 +1736,16 @@ main {
   border-color: var(--gold);
 }
 
+.essentials-only-toggle.disabled,
+.essentials-only-toggle:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.essentials-only-toggle.disabled:hover {
+  border-color: var(--border);
+}
+
 .essentials-only-checkbox {
   width: 18px;
   height: 18px;

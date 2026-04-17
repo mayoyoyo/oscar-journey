@@ -194,11 +194,47 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     setFilters(f => ({ ...f, [section]: next }));
   };
 
-  const renderChecklist = (section, labels, suffixes) => (
+  // Per-option counts based on the current canon depth + essentials-only setting.
+  // Used to (a) show counts as suffixes and (b) hide rows where 0 films would qualify
+  // — e.g. the 1910s era when the canon depth is set to ≥3.
+  const eligiblePool = useMemo(() => MOVIES.filter(m => {
+    if (m.category === 'ESSENTIAL' && (m.tier || 0) < (filters.minEssentialTier ?? 3)) return false;
+    if (filters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
+    return true;
+  }), [filters.minEssentialTier, filters.essentialsOnly]);
+
+  const eraCounts = useMemo(() => {
+    const c = {};
+    for (const m of eligiblePool) {
+      const b = eraBucket(m.year);
+      c[b] = (c[b] || 0) + 1;
+    }
+    return c;
+  }, [eligiblePool]);
+
+  const categoryCounts = useMemo(() => {
+    const c = {};
+    for (const m of eligiblePool) {
+      c[m.category] = (c[m.category] || 0) + 1;
+      for (const cat of m.alsoWon || []) c[cat] = (c[cat] || 0) + 1;
+    }
+    return c;
+  }, [eligiblePool]);
+
+  const genreCounts = useMemo(() => {
+    const c = {};
+    for (const m of eligiblePool) c[m.genre] = (c[m.genre] || 0) + 1;
+    return c;
+  }, [eligiblePool]);
+
+  const renderChecklist = (section, labels, suffixes, counts) => (
     <div className="filter-checklist">
       {Object.entries(labels).map(([key, label]) => {
+        // Hide rows that have zero matching films at the current canon settings.
+        if (counts && (counts[key] || 0) === 0) return null;
         const active = filters[section][key];
-        const suffix = suffixes && suffixes[key];
+        // Auto-derive suffix from counts when explicit suffixes weren't passed.
+        const suffix = suffixes ? suffixes[key] : (counts ? `(${counts[key] || 0})` : null);
         return (
           <div key={key} className={`filter-check-item ${active ? 'active' : ''}`}
             onClick={() => toggleFilter(section, key)}>
@@ -221,7 +257,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     </div>
   );
 
-  const renderSection = (label, section, labels, suffixes) => {
+  const renderSection = (label, section, labels, suffixes, counts) => {
     const count = sectionCount(section);
     const isOpen = openSections[section];
     return (
@@ -231,7 +267,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
           <span className="filter-section-label">{label}</span>
           {count && <span className="filter-section-count">{count}</span>}
         </button>
-        {isOpen && renderChecklist(section, labels, suffixes)}
+        {isOpen && renderChecklist(section, labels, suffixes, counts)}
       </div>
     );
   };
@@ -303,8 +339,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
               </button>
             </div>
 
-            {renderSection('Eras', 'eras', ERA_LABELS)}
-            {renderSection('Categories', 'categories', CATEGORY_LABELS)}
+            {renderSection('Eras', 'eras', ERA_LABELS, undefined, eraCounts)}
+            {renderSection('Categories', 'categories', CATEGORY_LABELS, undefined, categoryCounts)}
 
             {/* Canon depth — styled like a regular collapsible filter section for visual parity */}
             <div className="filter-section">
@@ -322,18 +358,25 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                   <p className="canon-depth-caption">
                     Minimum number of canon lists a non-Oscar film must appear on.
                   </p>
-                  <div className="canon-depth-toggle" role="radiogroup" aria-label="Minimum canon tier">
+                  <div className="canon-depth-toggle" role="radiogroup" aria-label="Canon depth">
                     {[
-                      { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 films' },
-                      { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 films' },
-                      { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 films' },
+                      { tier: 99, label: 'Oscars only', sub: 'no essentials · 399 films' },
+                      { tier: 4, label: 'Tier ≥ 4', sub: 'iron-clad · 57 essentials' },
+                      { tier: 3, label: 'Tier ≥ 3', sub: 'strong consensus · 143 essentials' },
+                      { tier: 2, label: 'Tier ≥ 2', sub: 'all canon · 438 essentials' },
                     ].map(opt => (
                       <button
                         key={opt.tier}
                         className={`canon-depth-btn ${filters.minEssentialTier === opt.tier ? 'active' : ''}`}
                         role="radio"
                         aria-checked={filters.minEssentialTier === opt.tier}
-                        onClick={() => setFilters(f => ({ ...f, minEssentialTier: opt.tier }))}
+                        onClick={() => setFilters(f => ({
+                          ...f,
+                          minEssentialTier: opt.tier,
+                          // Flip off essentials-only if the user picks "Oscars only" — the two combined
+                          // would produce an empty set.
+                          essentialsOnly: opt.tier === 99 ? false : f.essentialsOnly,
+                        }))}
                       >
                         <span className="canon-depth-label">{opt.label}</span>
                         <span className="canon-depth-sub">{opt.sub}</span>
@@ -343,21 +386,29 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
 
                   <button
                     type="button"
-                    className={`essentials-only-toggle ${filters.essentialsOnly ? 'active' : ''}`}
-                    onClick={() => setFilters(f => ({ ...f, essentialsOnly: !f.essentialsOnly }))}
+                    className={`essentials-only-toggle ${filters.essentialsOnly ? 'active' : ''} ${filters.minEssentialTier === 99 ? 'disabled' : ''}`}
+                    onClick={() => {
+                      if (filters.minEssentialTier === 99) return;
+                      setFilters(f => ({ ...f, essentialsOnly: !f.essentialsOnly }));
+                    }}
                     aria-pressed={filters.essentialsOnly}
+                    disabled={filters.minEssentialTier === 99}
                   >
                     <span className="essentials-only-checkbox">{filters.essentialsOnly ? '\u2713' : ''}</span>
                     <span className="essentials-only-label">
                       <strong>Essentials only</strong>
-                      <span className="essentials-only-sub">hide Oscar films — show just the canon at the chosen tier</span>
+                      <span className="essentials-only-sub">
+                        {filters.minEssentialTier === 99
+                          ? 'n/a — Oscars-only mode is on'
+                          : 'hide Oscar films — show just the canon at the chosen tier'}
+                      </span>
                     </span>
                   </button>
                 </div>
               )}
             </div>
 
-            {renderSection('Genres', 'genres', GENRE_LABELS)}
+            {renderSection('Genres', 'genres', GENRE_LABELS, undefined, genreCounts)}
             {renderSection('Runtime', 'runtimes', RUNTIME_LABELS, runtimeSuffixes)}
             {renderSection('Oscars Won', 'wins', WIN_LABELS, winSuffixes)}
 

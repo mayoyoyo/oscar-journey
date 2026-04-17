@@ -558,6 +558,10 @@ main {
    OSCAR STATUETTE ICON
    Binary visual demarcation: Oscar (winner/nominee) vs. Essential (no icon).
    Matches /public/favicon.svg for brand continuity.
+
+   Design intent: winner vs nominee must be readable at a glance, in BOTH
+   light and dark themes. Winner = saturated gold + bloom halo.
+   Nominee = silver/pewter, theme-aware so it always contrasts with the bg.
    ===================================================== */
 .oscar-icon {
   display: inline-flex;
@@ -565,24 +569,29 @@ main {
   justify-content: center;
   flex-shrink: 0;
   line-height: 1;
+  position: relative;
 }
 .oscar-icon svg {
   display: block;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 .oscar-icon-sm { width: 15px; height: 24px; }
 .oscar-icon-md { width: 22px; height: 36px; }
 
-/* Winner — full gold gradient + soft glow */
-.oscar-icon-winner { color: var(--gold); }
-.oscar-icon-winner svg {
-  filter: drop-shadow(0 0 3px rgba(212, 175, 60, 0.55));
-}
+/* ---- Winner: solid gold. No glow, no halo — color does the work.
+   Theme-aware: deeper/richer gold on cream (needs contrast), bright
+   saturated gold on near-black (pops). */
+.oscar-icon-winner { color: #c9a227; }
+[data-theme="dark"] .oscar-icon-winner { color: #f3cd55; }
 
-/* Nominee — muted gray, no glow. "Reached the academy but didn't win." */
-.oscar-icon-nominee { color: #6f6c63; }
-[data-theme="dark"] .oscar-icon-nominee { color: #77736a; }
+/* ---- Nominee: silver/slate. Clearly NOT gold. Theme-aware so the
+   statuette is visible in BOTH modes — dark slate on cream, bright
+   silver on near-black. */
+.oscar-icon-nominee { color: #2e2c28; }
+[data-theme="dark"] .oscar-icon-nominee { color: #e0dbcb; }
 
 /* Tier pips — compact visual for "how many canon lists is this film on" */
 .tier-pips {

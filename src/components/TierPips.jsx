@@ -20,7 +20,10 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
     return () => document.removeEventListener('keydown', handler);
   }, [open]);
 
-  if (tier === 0) return null;
+  // Tier 1 is always Oscar-only (essentials start at tier 2). The Oscar
+  // statuette icon already signals "this is an Oscar film" — a lone pip next
+  // to it is noise, not signal. Hide pips for tier < 2.
+  if (tier < 2) return null;
 
   const dots = variant === 'compact'
     ? Array.from({ length: tier }, () => true)

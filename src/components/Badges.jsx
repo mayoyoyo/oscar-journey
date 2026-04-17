@@ -76,10 +76,17 @@ export function MovieBadges({ movie, small = false }) {
   const oscarStatus = getOscarStatus(movie);
 
   if (small) {
-    // Compact row layout: pips + Oscar icon only. No genre/category text chips
-    // (they're hidden on mobile anyway and redundant with the modal).
+    // Desktop row: category text chips (BP / INT / ANIM) + pips + Oscar icon.
+    // Mobile strips the chips via the @media rule in App.css so rows stay
+    // single-line. Winner / Essential chips are intentionally NOT rendered —
+    // the Oscar icon (gold / silver / absent) carries that signal.
     return (
       <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'nowrap' }}>
+        {movie.category === 'BP' && <BadgeBpSm />}
+        {movie.category === 'INT' && <BadgeIntSm />}
+        {movie.category === 'ANIM' && <BadgeAnimSm />}
+        {alsoWon.includes('INT') && <BadgeIntSm />}
+        {alsoWon.includes('ANIM') && <BadgeAnimSm />}
         <TierPips movie={movie} variant="compact" />
         <OscarIcon movie={movie} size="sm" />
       </span>

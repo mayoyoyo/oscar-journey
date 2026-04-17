@@ -360,7 +360,16 @@ export default function App() {
     let pl;
     let needsNewPlaylist = false;
 
-    if (data.playlistOrder && data.playlistOrder.length > 0) {
+    // v3.0.0 one-time migration: regenerate the playlist so existing profiles
+    // get the 438 new essentials properly front-loaded (instead of appended at
+    // the tail) and benefit from the new shuffle algorithm. Watched state and
+    // ratings are untouched — only order changes.
+    const SHUFFLE_VERSION = 3;
+    const needsVersionMigration = (data.shuffleVersion || 0) < SHUFFLE_VERSION;
+
+    if (needsVersionMigration) {
+      needsNewPlaylist = true;
+    } else if (data.playlistOrder && data.playlistOrder.length > 0) {
       if (typeof data.playlistOrder[0] === 'number') {
         // OLD FORMAT: numeric indices — regenerate playlist instead of trying to migrate
         needsNewPlaylist = true;
@@ -389,14 +398,19 @@ export default function App() {
     }
 
     if (needsNewPlaylist) {
-      // Generate new seed if needed
-      if (!seed) {
+      // For v3 migration, always roll a fresh seed so users get the new front-loaded
+      // order even if their old seed happened to match. For first-time profiles,
+      // generate a random seed.
+      if (needsVersionMigration || !seed) {
         seed = Math.floor(Math.random() * 0xFFFFFFFF);
         saveProfileField(data.id, 'seed', seed).catch(() => {});
       }
       pl = generatePlaylist(seed);
       const orderIds = pl.map(m => m.id);
       saveProfileField(data.id, 'playlistOrder', orderIds).catch(() => {});
+      if (needsVersionMigration) {
+        saveProfileField(data.id, 'shuffleVersion', SHUFFLE_VERSION).catch(() => {});
+      }
     }
 
     // Migrate watched to movie ID format

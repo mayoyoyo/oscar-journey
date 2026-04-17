@@ -638,4 +638,22 @@ export const QUOTES = {
   'paper-moon-1973': ["I know a woman who looks like a bullfrog but that don't mean she's the damn thing's mother."],
   'z-1969': ["A single cannon is fired and a teacher's monthly salary goes up in smoke.", "Any similarity to real persons and events is not coincidental. It is intentional."],
   'if-1968': ["There's no such thing as a wrong war. Violence and revolution are the only pure acts."],
+
+  // --- Tier 2 (batch 7: late 1980s-2000s blockbusters & cult classics) ---
+  'the-breakfast-club-1985': ["Screws fall out all the time; the world is an imperfect place."],
+  'die-hard-1988': ["Welcome to the party, pal!"],
+  'bull-durham-1988': ["The world's made for people who aren't cursed with self-awareness.", "Never fuck with a winning streak."],
+  'thelma-louise-1991': ["You get what you settle for.", "I've had it up to my ass with sedate."],
+  'groundhog-day-1993': ["Well, it's Groundhog Day... again.", "What if there is no tomorrow?! There wasn't one today!"],
+  'jurassic-park-1993': ["Your scientists were so preoccupied with whether they could that they didn't stop to think if they should.", "I'm simply saying that life, uh...finds a way.", "They're moving in herds. They do move in herds.", "Now, eventually you do plan to have dinosaurs on your, on your dinosaur tour, right?"],
+  'heat-1995': ["I'm alone, I am not lonely.", "All I am is what I'm going after."],
+  'se7en-1995': ["Become vengeance, David. Become... wrath."],
+  'the-usual-suspects-1995': ["The greatest trick the devil ever pulled was convincing the world he didn't exist.", "And like that... poof... he's gone."],
+  'trainspotting-1996': ["Choose life. Choose a job. Choose a career. Choose a family.", "One thousand years from now, there won't be any guys and there won't be any girls, just wankers."],
+  'rushmore-1998': ["I saved Latin. What did you ever do?", "Sic transit gloria. Glory fades."],
+  'the-big-lebowski-1998': ["Well, sir, it's this rug I had. It really tied the room together.", "This aggression will not stand, man.", "The Dude abides."],
+  'fight-club-1999': ["The first rule of Fight Club is: you do not talk about Fight Club.", "On a long enough time line, the survival rate for everyone drops to zero.", "I am Jack's complete lack of surprise."],
+  'magnolia-1999': ["We may be through with the past, but the past is never through with us."],
+  'the-matrix-1999': ["There is no spoon.", "You take the blue pill, the story ends. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.", "Dodge this."],
+  'memento-2000': ["So you lie to yourself to be happy."],
 };

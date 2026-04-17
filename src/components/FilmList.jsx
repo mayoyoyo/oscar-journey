@@ -5,6 +5,24 @@ import { ratingKey } from '../utils/storage';
 import { readCachedRuntime, runtimeBucket, prefetchRuntimes, RUNTIME_LABELS } from '../utils/runtime';
 import { ERA_LABELS, CATEGORY_LABELS } from './SettingsModal';
 import { getTier } from '../utils/tierInfo';
+import LANGUAGES from '../data/languages.json';
+
+// A film is "International" if its primary language isn't English — sourced
+// from the baked-in languages.json. Also matches legacy category tags so
+// Oscar INT winners stay in the set.
+function isInternational(m) {
+  if (m.category === 'INT') return true;
+  if ((m.alsoWon || []).includes('INT')) return true;
+  return LANGUAGES[m.id] != null;
+}
+// A film is "Animated" via either the Oscar ANIM category, a genre code of
+// 'A' (Animation/Family), or an alsoWon entry. Catches non-Oscar animated
+// films like Toy Story that are otherwise tagged ESSENTIAL.
+function isAnimated(m) {
+  if (m.category === 'ANIM') return true;
+  if ((m.alsoWon || []).includes('ANIM')) return true;
+  return m.genre === 'A';
+}
 
 // "Wins" filter — default all OFF, OR semantic. A film passes if it won at least one checked award.
 // Some Oscar categories were renamed/split across years; we group equivalents under one label.
@@ -184,7 +202,19 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !q || m.title.toLowerCase().includes(q))
       .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
       .filter(m => filters.eras[eraBucket(m.year)])
-      .filter(m => filters.categories[m.category] || (m.alsoWon || []).some(c => filters.categories[c]))
+      .filter(m => {
+        // OR semantics: a film passes if any of its applicable category flags
+        // are checked. BP/ESSENTIAL use the m.category field; INT/ANIM use
+        // the broader predicates (non-English / genre=A / alsoWon) so they
+        // actually catch films like Toy Story and Seven Samurai, not just
+        // Oscar category winners.
+        const c = filters.categories;
+        if (c.BP && m.category === 'BP') return true;
+        if (c.ESSENTIAL && m.category === 'ESSENTIAL') return true;
+        if (c.INT && isInternational(m)) return true;
+        if (c.ANIM && isAnimated(m)) return true;
+        return false;
+      })
       // Canon depth + oscars-only are bypassed when there's an active search — if you know
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
       // Tier applies UNIFORMLY to all films via the unified getTier helper, which counts
@@ -241,10 +271,12 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   }, [eligiblePool]);
 
   const categoryCounts = useMemo(() => {
-    const c = {};
+    const c = { BP: 0, ESSENTIAL: 0, INT: 0, ANIM: 0 };
     for (const m of eligiblePool) {
-      c[m.category] = (c[m.category] || 0) + 1;
-      for (const cat of m.alsoWon || []) c[cat] = (c[cat] || 0) + 1;
+      if (m.category === 'BP') c.BP++;
+      else if (m.category === 'ESSENTIAL') c.ESSENTIAL++;
+      if (isInternational(m)) c.INT++;
+      if (isAnimated(m)) c.ANIM++;
     }
     return c;
   }, [eligiblePool]);

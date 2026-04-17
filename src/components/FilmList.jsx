@@ -114,7 +114,12 @@ function eraBucket(year) {
 
 export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters }) {
   const [query, setQuery] = useState('');
-  const [watchedOnly, setWatchedOnly] = useState(false);
+  // `watchMode` is a three-way enum: 'all' | 'watched' | 'unwatched'.
+  // Watched-only and Unwatched-only are mutually exclusive — clicking one
+  // deselects the other. Clicking the active pill again returns to 'all'.
+  const [watchMode, setWatchMode] = useState('all');
+  const watchedOnly   = watchMode === 'watched';
+  const unwatchedOnly = watchMode === 'unwatched';
   const [checklistMode, setChecklistMode] = useState(false);
   const [filters, setFilters] = useState(DEFAULT_FILM_FILTERS);
   const [openSections, setOpenSections] = useState({ eras: false, categories: false, canon: false, genres: false, runtimes: false, wins: false });
@@ -160,7 +165,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
 
   const resetFilters = () => {
     setFilters(DEFAULT_FILM_FILTERS);
-    setWatchedOnly(false);
+    setWatchMode('all');
   };
 
   const sectionCount = (section) => {
@@ -189,7 +194,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     }
     // Wins defaults all OFF; each ON one counts as a user-applied filter.
     n += Object.values(filters.wins).filter(v => v).length;
-    if (watchedOnly) n++;
+    if (watchMode !== 'all') n++;
     // Canon-depth counters
     if (filters.minTier !== DEFAULT_FILM_FILTERS.minTier) n++;
     if (filters.oscarsOnly !== DEFAULT_FILM_FILTERS.oscarsOnly) n++;
@@ -223,7 +228,11 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     };
     const filtered = MOVIES
       .filter(matchesQuery)
-      .filter(m => !watchedOnly || watchedTitleSet.has(m.id))
+      .filter(m => {
+        if (watchedOnly) return watchedTitleSet.has(m.id);
+        if (unwatchedOnly) return !watchedTitleSet.has(m.id);
+        return true;
+      })
       .filter(m => filters.eras[eraBucket(m.year)])
       .filter(m => {
         // OR semantics: a film passes if any of its applicable category flags
@@ -266,7 +275,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     }
 
     return { filtered, groups, watchedCount };
-  }, [query, watchedTitleSet, watchedOnly, filters, runtimeMap, activeWinKeys]);
+  }, [query, watchedTitleSet, watchMode, filters, runtimeMap, activeWinKeys]);
 
 
   const setOnlyKey = (section, labels, onlyKey) => {
@@ -404,15 +413,21 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
             <div className="film-list-mode-toggles">
               <button
                 className={`film-list-toggle ${watchedOnly ? 'active' : ''}`}
-                onClick={() => setWatchedOnly(w => !w)}
+                onClick={() => setWatchMode(w => w === 'watched' ? 'all' : 'watched')}
               >
-                {watchedOnly ? '✓ Watched only' : 'Watched only'}
+                Watched
+              </button>
+              <button
+                className={`film-list-toggle ${unwatchedOnly ? 'active' : ''}`}
+                onClick={() => setWatchMode(w => w === 'unwatched' ? 'all' : 'unwatched')}
+              >
+                Unwatched
               </button>
               <button
                 className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
                 onClick={() => setChecklistMode(c => !c)}
               >
-                {checklistMode ? '✓ Checklist mode' : 'Checklist mode'}
+                Checklist mode
               </button>
             </div>
 

@@ -1,0 +1,35 @@
+{
+  "problems": [
+    {
+      "id": "crash-2005",
+      "title": "Crash",
+      "year": 2005,
+      "category": "BP",
+      "reason": "omdb-no-poster"
+    },
+    {
+      "id": "sunrise-a-song-of-two-humans-1927",
+      "title": "Sunrise: A Song of Two Humans",
+      "year": 1927,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found"
+    },
+    {
+      "id": "apur-sansar-1959",
+      "title": "Apur Sansar",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found"
+    },
+    {
+      "id": "the-umbrellas-of-cherbourg-1964",
+      "title": "The Umbrellas of Cherbourg",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "url-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BNmY3NWE5YWYtMGFkNC00Y2JhLWI5MTYtMTA0OWE5NjZlNGY4XkEyXkFqcGc@._V1_SX300.jpg"
+    }
+  ],
+  "okCount": 823,
+  "overriddenCount": 10
+}

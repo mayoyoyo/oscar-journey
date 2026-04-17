@@ -16,7 +16,6 @@ import CompletionScreen from './components/CompletionScreen';
 import FilmList from './components/FilmList';
 import FilmDetailModal from './components/FilmDetailModal';
 import SettingsModal, { DEFAULT_FILTERS } from './components/SettingsModal';
-import { getTierInfo } from './utils/tierInfo';
 import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
 import Leaderboard from './components/Leaderboard';
@@ -53,26 +52,20 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
     smart: { ...DEFAULT_FILTERS.smart, ...(filters.smart || {}) },
   };
 
-  // Era check — iron-clad canon (tier 5+) always passes regardless of era filter.
-  // The 21 pre-1970 tier-5+ films (City Lights, Casablanca, Citizen Kane, Vertigo,
-  // Some Like It Hot, etc.) belong in the journey even when users default-out the
-  // pre-1970 decades. Tier 1-4 films respect the era filter normally.
+  // Era check
   const year = movie.year;
-  const isIronClad = (getTierInfo(movie).tier || 0) >= 5;
-  if (!isIronClad) {
-    if (year < 1920 && !f.eras['1910s']) return false;
-    else if (year >= 1920 && year < 1930 && !f.eras['1920s']) return false;
-    else if (year >= 1930 && year < 1940 && !f.eras['1930s']) return false;
-    else if (year >= 1940 && year < 1950 && !f.eras['1940s']) return false;
-    else if (year >= 1950 && year < 1960 && !f.eras['1950s']) return false;
-    else if (year >= 1960 && year < 1970 && !f.eras['1960s']) return false;
-    else if (year >= 1970 && year < 1980 && !f.eras['70s']) return false;
-    else if (year >= 1980 && year < 1991 && !f.eras['80s']) return false;
-    else if (year >= 1991 && year < 2000 && !f.eras['90s']) return false;
-    else if (year >= 2000 && year < 2010 && !f.eras['00s']) return false;
-    else if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
-    else if (year >= 2020 && !f.eras['20s']) return false;
-  }
+  if (year < 1920 && !f.eras['1910s']) return false;
+  else if (year >= 1920 && year < 1930 && !f.eras['1920s']) return false;
+  else if (year >= 1930 && year < 1940 && !f.eras['1930s']) return false;
+  else if (year >= 1940 && year < 1950 && !f.eras['1940s']) return false;
+  else if (year >= 1950 && year < 1960 && !f.eras['1950s']) return false;
+  else if (year >= 1960 && year < 1970 && !f.eras['1960s']) return false;
+  else if (year >= 1970 && year < 1980 && !f.eras['70s']) return false;
+  else if (year >= 1980 && year < 1991 && !f.eras['80s']) return false;
+  else if (year >= 1991 && year < 2000 && !f.eras['90s']) return false;
+  else if (year >= 2000 && year < 2010 && !f.eras['00s']) return false;
+  else if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
+  else if (year >= 2020 && !f.eras['20s']) return false;
 
   // Category check — also match if any alsoWon category is active (e.g. Parasite is BP + INT)
   const matchesCategory = f.categories[movie.category] || (movie.alsoWon || []).some(c => f.categories[c]);

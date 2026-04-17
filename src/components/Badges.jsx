@@ -104,15 +104,19 @@ export function MovieBadges({ movie, small = false }) {
     );
   }
 
-  // Colored INT/ANIM winner pills have been replaced by blue/purple tinted
-  // statuettes in the ceremony-row above the title. Only the gold BP winner
-  // pill stays here — BP is the primary Oscar and the speech link deserves
-  // a full chip, not just an icon.
-  const wonBP = movie.won === true && movie.category === 'BP';
+  // Each Oscar win gets its own "· SPEECH" pill (gold/blue/purple) next
+  // to the matching tinted statuette in the ceremony-row. The pill is the
+  // obvious CTA; the statuette carries the visual hierarchy.
+  // LanguagePill lives next to the film title (FilmDetailModal) rather
+  // than in this badges row now.
+  const wonBP   = movie.won === true && movie.category === 'BP';
+  const wonINT  = movie.category === 'INT' || alsoWon.includes('INT');
+  const wonANIM = movie.category === 'ANIM' || alsoWon.includes('ANIM');
   return (
     <div className="badges">
-      {wonBP && <BadgeWinner movie={movie} kind="bp" />}
-      <LanguagePill movie={movie} />
+      {wonBP   && <BadgeWinner movie={movie} kind="bp"   />}
+      {wonINT  && <BadgeWinner movie={movie} kind="int"  />}
+      {wonANIM && <BadgeWinner movie={movie} kind="anim" />}
       <BadgeGenre genre={movie.genre} />
     </div>
   );

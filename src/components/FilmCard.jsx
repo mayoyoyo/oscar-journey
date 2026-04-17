@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
 import { extractDominantColor } from '../utils/colorExtract';
 import { MovieBadges } from './Badges';
+import LanguagePill from './LanguagePill';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
@@ -173,7 +174,10 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onOpenDetail} />
         </div>
         <div className="film-title">{movie.title}</div>
-        <div className="film-year">{movie.year}</div>
+        <div className="film-year">
+          <span>{movie.year}</span>
+          <LanguagePill movie={movie} />
+        </div>
         <MovieBadges movie={movie} />
 
         <div className="film-pills-row">

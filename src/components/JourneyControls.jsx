@@ -231,10 +231,6 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
           </button>
           {filtersOpen && (
             <div className="journey-filters-body">
-              {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
-              {renderSection('eras', 'Eras', 'eras', ERA_LABELS, eraCounts)}
-              {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS, categoryCounts)}
-
               {/* Canon depth — collapsible section matching the other filter styles */}
               <div className="filter-section">
                 <button className="filter-section-toggle" onClick={() => toggleSection('canon')}>
@@ -302,8 +298,11 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                 )}
               </div>
 
+              {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS, categoryCounts)}
+              {renderSection('eras', 'Eras', 'eras', ERA_LABELS, eraCounts)}
               {renderSection('genres', 'Genres', 'genres', GENRE_LABELS, genreCounts)}
               {renderSection('runtimes', 'Runtime', 'runtimes', RUNTIME_LABELS)}
+              {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
             </div>
           )}
         </div>

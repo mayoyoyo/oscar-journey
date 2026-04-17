@@ -341,9 +341,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
               </button>
             </div>
 
-            {renderSection('Eras', 'eras', ERA_LABELS, undefined, eraCounts)}
-            {renderSection('Categories', 'categories', CATEGORY_LABELS, undefined, categoryCounts)}
-
             {/* Canon depth — styled like a regular collapsible filter section for visual parity */}
             <div className="filter-section">
               <button className="filter-section-toggle" onClick={() => toggleSection('canon')}>
@@ -413,6 +410,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
               )}
             </div>
 
+            {renderSection('Categories', 'categories', CATEGORY_LABELS, undefined, categoryCounts)}
+            {renderSection('Eras', 'eras', ERA_LABELS, undefined, eraCounts)}
             {renderSection('Genres', 'genres', GENRE_LABELS, undefined, genreCounts)}
             {renderSection('Runtime', 'runtimes', RUNTIME_LABELS, runtimeSuffixes)}
             {renderSection('Oscars Won', 'wins', WIN_LABELS, winSuffixes)}

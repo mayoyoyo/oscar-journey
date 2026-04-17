@@ -227,11 +227,14 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                 <button className="filter-section-toggle" onClick={() => toggleSection('canon')}>
                   <span className="filter-section-arrow">{openSections.canon ? '▾' : '▸'}</span>
                   <span className="filter-section-label">Canon depth</span>
-                  {(currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier || currentFilters.essentialsOnly) && (
-                    <span className="filter-section-count">
-                      {currentFilters.essentialsOnly ? 'only' : ''}{currentFilters.essentialsOnly && currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier ? ' · ' : ''}{currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier ? `≥${currentFilters.minEssentialTier}` : ''}
-                    </span>
-                  )}
+                  {(() => {
+                    const parts = [];
+                    if (currentFilters.essentialsOnly) parts.push('only');
+                    if (currentFilters.minEssentialTier === 99) parts.push('Oscars');
+                    else if (currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier) parts.push(`≥${currentFilters.minEssentialTier}`);
+                    if (parts.length === 0) return null;
+                    return <span className="filter-section-count">{parts.join(' · ')}</span>;
+                  })()}
                 </button>
                 {openSections.canon && (
                   <div className="filter-checklist canon-depth-body">

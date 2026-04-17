@@ -347,11 +347,14 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
               <button className="filter-section-toggle" onClick={() => toggleSection('canon')}>
                 <span className="filter-section-arrow">{openSections.canon ? '▾' : '▸'}</span>
                 <span className="filter-section-label">Canon depth</span>
-                {(filters.minEssentialTier !== DEFAULT_FILM_FILTERS.minEssentialTier || filters.essentialsOnly) && (
-                  <span className="filter-section-count">
-                    {filters.essentialsOnly ? 'only' : ''}{filters.essentialsOnly && filters.minEssentialTier !== DEFAULT_FILM_FILTERS.minEssentialTier ? ' · ' : ''}{filters.minEssentialTier !== DEFAULT_FILM_FILTERS.minEssentialTier ? `≥${filters.minEssentialTier}` : ''}
-                  </span>
-                )}
+                {(() => {
+                  const parts = [];
+                  if (filters.essentialsOnly) parts.push('only');
+                  if (filters.minEssentialTier === 99) parts.push('Oscars');
+                  else if (filters.minEssentialTier !== DEFAULT_FILM_FILTERS.minEssentialTier) parts.push(`≥${filters.minEssentialTier}`);
+                  if (parts.length === 0) return null;
+                  return <span className="filter-section-count">{parts.join(' · ')}</span>;
+                })()}
               </button>
               {openSections.canon && (
                 <div className="filter-checklist canon-depth-body">

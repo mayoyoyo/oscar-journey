@@ -1,8 +1,8 @@
 {
   "total": 668,
-  "foundWithDuration": 656,
+  "foundWithDuration": 657,
   "foundNoDuration": 2,
-  "stillMissing": 10,
+  "stillMissing": 9,
   "results": [
     {
       "id": "il-postino-1995",
@@ -313,10 +313,10 @@
       "category": "BP",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 128,
-      "wikidataRaw": 128,
+      "wikidataRuntime": 103,
+      "wikidataRaw": 103,
       "wikidataUnit": "minute",
-      "wikidataId": "Q201687"
+      "wikidataId": "Q6570602"
     },
     {
       "id": "the-reader-2008",
@@ -1021,10 +1021,10 @@
       "category": "BP",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 83,
-      "wikidataRaw": 83,
+      "wikidataRuntime": 112,
+      "wikidataRaw": 112,
       "wikidataUnit": "minute",
-      "wikidataId": "Q18214225"
+      "wikidataId": "Q16954098"
     },
     {
       "id": "mad-max-fury-road-2015",
@@ -1453,10 +1453,10 @@
       "category": "BP",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 112,
-      "wikidataRaw": 112,
+      "wikidataRuntime": 134,
+      "wikidataRaw": 134,
       "wikidataUnit": "minute",
-      "wikidataId": "Q56241200"
+      "wikidataId": "Q56881140"
     },
     {
       "id": "marriage-story-2019",
@@ -1512,10 +1512,10 @@
       "category": "BP",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 87,
-      "wikidataRaw": 87,
+      "wikidataRuntime": 97,
+      "wikidataRaw": 97,
       "wikidataUnit": "minute",
-      "wikidataId": "Q76366385"
+      "wikidataId": "Q65066669"
     },
     {
       "id": "judas-and-the-black-messiah-2020",
@@ -1716,8 +1716,8 @@
       "category": "BP",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 140,
-      "wikidataRaw": 140,
+      "wikidataRuntime": 139,
+      "wikidataRaw": 139,
       "wikidataUnit": "minute",
       "wikidataId": "Q83808444"
     },
@@ -1824,10 +1824,10 @@
       "category": "BP",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 190,
-      "wikidataRaw": 190,
+      "wikidataRuntime": 162,
+      "wikidataRaw": 162,
       "wikidataUnit": "minute",
-      "wikidataId": "Q3604746"
+      "wikidataId": "Q24871"
     },
     {
       "id": "oppenheimer-2023",
@@ -2663,10 +2663,10 @@
       "category": "ANIM",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 109,
-      "wikidataRaw": 109,
+      "wikidataRuntime": 106,
+      "wikidataRaw": 106,
       "wikidataUnit": "minute",
-      "wikidataId": "Q5815826"
+      "wikidataId": "Q22251923"
     },
     {
       "id": "spider-man-into-the-spider-verse-2018",
@@ -4221,8 +4221,8 @@
       "category": "ESSENTIAL",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 160,
-      "wikidataRaw": 160,
+      "wikidataRuntime": 157,
+      "wikidataRaw": 157,
       "wikidataUnit": "minute",
       "wikidataId": "Q565231"
     },
@@ -5456,9 +5456,10 @@
       "category": "ESSENTIAL",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": null,
-      "wikidataId": null,
-      "note": "not-found-on-wikidata"
+      "wikidataRuntime": 105,
+      "wikidataRaw": 105,
+      "wikidataUnit": "minute",
+      "wikidataId": "Q1444707"
     },
     {
       "id": "the-war-of-the-worlds-1953",
@@ -6962,10 +6963,10 @@
       "category": "ESSENTIAL",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 5,
-      "wikidataRaw": 5,
+      "wikidataRuntime": 165,
+      "wikidataRaw": 165,
       "wikidataUnit": "minute",
-      "wikidataId": "Q55419656"
+      "wikidataId": "Q47075"
     },
     {
       "id": "love-streams-1984",
@@ -7034,8 +7035,8 @@
       "category": "ESSENTIAL",
       "reason": "omdb-not-found",
       "runtime": null,
-      "wikidataRuntime": 120,
-      "wikidataRaw": 120,
+      "wikidataRuntime": 118,
+      "wikidataRaw": 118,
       "wikidataUnit": "minute",
       "wikidataId": "Q1740171"
     },

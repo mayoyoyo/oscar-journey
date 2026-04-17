@@ -81,10 +81,10 @@ function diversityShuffle(ms, rng) {
         else if (def > 0.3) score *= 1.5;
         else if (def < -0.5) score *= 0.15;
       }
-      if (pos < 150) {
-        const decay = 1 - pos / 150;
+      if (pos < 100) {
+        const decay = 1 - pos / 100;
         const q = quality(m);
-        score *= Math.pow(q, decay);
+        score *= Math.pow(q, decay * 1.5);
       }
       scores[k] = Math.max(score, 0.001);
       totalScore += scores[k];

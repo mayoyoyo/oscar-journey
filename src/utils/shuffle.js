@@ -109,16 +109,16 @@ export function diversityShuffle(movies, rng) {
         else if (deficit < -0.5) score *= 0.15;
       }
 
-      // --- Front-loading — reward higher quality early, decay to none ---
-      // Most users won't finish 837 films, so surface strong canon early without
-      // breaking diversity. Exponential bias: tier 6 films get Math.pow(6, decay)
-      // boost at pos 0 (6x), while BP nominees (q=1) get 1x regardless. Decays
-      // across the first 150 positions. Enough to win against genre/decade
-      // spacing penalties so iconic films actually surface early.
-      if (pos < 150) {
-        const decay = 1 - pos / 150;
+      // --- Front-loading — surface the best films hard in the first 100 slots ---
+      // Most users won't finish 837 films, so the first ~50 films have to hook
+      // them. Exponential bias with a 1.5 multiplier: at pos 0 a tier-7 film
+      // gets 7^1.5 ≈ 18.5× boost vs tier-1's 1×. Diversity penalties (0.02 for
+      // adjacent genre) can still reorder but can't keep a universal-canon
+      // film out of the early journey.
+      if (pos < 100) {
+        const decay = 1 - pos / 100;
         const q = qualityWeight(m);
-        score *= Math.pow(q, decay);
+        score *= Math.pow(q, decay * 1.5);
       }
 
       scores[k] = Math.max(score, 0.001);

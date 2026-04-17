@@ -207,16 +207,20 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
             <div className="settings-changelog-content">
               <p><strong>v3.0.0</strong> — Essentials expansion: 438 non-Oscar canon films</p>
               <ul>
-                <li>New <strong>Essential</strong> category — 438 must-watch films that the Academy overlooked, curated by triangulating 7 independent canon lists (Sight &amp; Sound, Criterion, IMDb Top 250, Letterboxd Top 250, AFI, festival grand prizes, National Film Registry). A film qualifies if it appears on ≥ 2 lists</li>
-                <li>Catalog grows from 399 → <strong>837 films</strong>, covering decades 1910s–2020s (existing era filters expanded back to 1910s)</li>
-                <li><strong>Tier pips</strong> — every film shows gold dots representing how many canon lists it appears on (1–8). Tap pips to see list details. Oscar winners count the Academy as the 8th list, so the scale is unified</li>
-                <li><strong>Canon depth filter</strong> — choose how strict to curate: Oscars only (399), Tier ≥ 4 (iron-clad, 57 essentials), ≥ 3 (strong consensus, 143), ≥ 2 (all 438, default). Separate <em>Essentials only</em> toggle hides Oscar films for a focused canon view</li>
-                <li>Click "Canon film · YYYY" on any essential's detail to see a "Films of YYYY" modal — every film from that year across categories</li>
-                <li>Canon Score in Stats — weighted completion metric (tier × watched) + per-tier breakdown + "Next up" recommendations for highest-signal unwatched films</li>
-                <li>Filter panel now shows counts per option and auto-hides rows that match 0 films at your current canon depth</li>
-                <li>Search in Films bypasses canon depth so you can always find a film by title regardless of curation</li>
-                <li>Collapsed Journey filters header now shows summary chips of what's narrowed (e.g. "Eras: 80s, 90s · Canon ≥ 4")</li>
-                <li>All 438 essentials genre-classified via OMDb; legacy "Oscar winners only" smart filter removed — superseded by Canon depth</li>
+                <li>New <strong>Essential</strong> category — 438 must-watch films the Academy overlooked, curated by triangulating 7 independent canon lists (Sight &amp; Sound, Criterion, IMDb Top 250, Letterboxd Top 250, AFI, festival grand prizes, National Film Registry). A film qualifies if it appears on ≥ 2 lists</li>
+                <li>Catalog grows from 399 → <strong>837 films</strong>, covering decades 1910s–2020s. Journey defaults to 1970+; pre-1970 decades one click away in filters</li>
+                <li><strong>Tier pips</strong> — every film shows gold dots for the canon lists it appears on (1–8). Tap the pips to see which specific lists. BP nominees get 1 pip for Academy recognition; winners count the Academy as their 8th list</li>
+                <li><strong>Canon depth filter</strong> — Oscars only (399) · Tier ≥ 4 (iron-clad, 57) · ≥ 3 (strong consensus, 143) · ≥ 2 (all 438, default). Separate <em>Essentials only</em> toggle hides Oscar films for a pure canon view</li>
+                <li><strong>Canon Score</strong> in Stats — weighted completion metric (tier × watched) + per-tier breakdown + "Next up" recommendations for highest-signal unwatched films</li>
+                <li>Click "Canon film · YYYY" or any Oscar ceremony to open a <strong>"Films of YYYY"</strong> modal — every Oscar nominee + essential released that year, grouped by category</li>
+                <li>Filter panel rebuilt: Canon depth first, per-option counts, auto-hide 0-match rows, "only" shortcut per row in Films, summary chips on the collapsed Journey header (e.g. "Canon ≥ 4 · Essentials only"), unchecking the last item auto-restores defaults</li>
+                <li>Search in Films bypasses canon depth — find any film by title regardless of curation</li>
+                <li>Number-titled films (8½, 12 Angry Men, 2001) sort to the bottom of the A-Z list</li>
+                <li>Shuffle algorithm tuned for the bigger catalog — granular decade buckets, broader diversity spacing, gentle front-loading of high-tier canon in the first ~150 positions so you see heavy-hitters early (most users won't reach film 800)</li>
+                <li>Automatic one-time migration on first v3 load: every profile gets a fresh front-loaded playlist, resets to position 0, preserves all watched films + ratings. Stale filter keys from old versions are sanitized out</li>
+                <li>All 438 essentials genre-classified via OMDb (Drama dropped from 62% to 19% of catalog); 71 Wikiquote-verified quotes added for iron-clad essentials so they appear in Daily Oscar; 7 manual posters sourced for films OMDb couldn't serve</li>
+                <li>Removed legacy "Oscar winners only" smart filter — superseded by Canon depth's Oscars-only option</li>
+                <li>Various copy updates: InfoModal, StartScreen, JOURNEY_TAGLINES and SKIP_MESSAGES all rewritten to reflect the expanded catalog (skip messages now pick category-appropriate zingers)</li>
               </ul>
               <p><strong>v2.4.5</strong> — Daily Oscar watched badge & winner-label fixes</p>
               <ul>

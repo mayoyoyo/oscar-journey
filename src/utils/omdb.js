@@ -26,6 +26,8 @@ const POSTER_OVERRIDES = {
   'au-revoir-les-enfants-1987': '/posters/au-revoir-les-enfants-1987.jpg',
   'thelonious-monk-straight-no-chaser-1988': '/posters/thelonious-monk-straight-no-chaser-1988.jpg',
   'la-cienaga-2001': '/posters/la-cienaga-2001.jpg',
+  // The Handmaiden — OMDb can't find the film (Korean title "Agassi"), needs local poster
+  'the-handmaiden-2016': '/posters/the-handmaiden-2016.jpg',
 };
 
 // Title overrides for movies that don't match OMDB's naming

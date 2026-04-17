@@ -21,22 +21,69 @@ function escapeSparql(s) {
   return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
 
-// Query Wikidata for a film by (title, year). Tries a few strategies:
-//   1. Exact English label match with release-year filter
-//   2. Exact alias match with release-year filter
-// Returns { duration: number } or null.
-async function wikidataRuntime(title, year) {
-  const clean = title
+function normUnit(raw, unit) {
+  if (isNaN(raw) || raw <= 0) return null;
+  if (unit === 'minute') return raw;
+  if (unit === 'second') return Math.round(raw / 60);
+  if (unit === 'hour') return Math.round(raw * 60);
+  return raw; // unknown unit, assume already minutes
+}
+
+// Pick best (film, duration) among all label-matching candidates.
+// Prefers exact-year match, then among the same film prefers the SHORTEST runtime
+// to avoid picking an extended/director's cut value when multiple exist.
+function pickBest(bindings, targetYear) {
+  const candidates = [];
+  for (const b of bindings) {
+    if (!b.duration || !b.duration.value) continue;
+    const raw = Number(b.duration.value);
+    const unit = b.unitLabel && b.unitLabel.value;
+    const minutes = normUnit(raw, unit);
+    if (!minutes || minutes < 4) continue; // filter trailers/shorts noise
+    const yearVal = b.date && b.date.value ? Number(b.date.value.slice(0, 4)) : null;
+    candidates.push({
+      minutes,
+      rawDuration: raw,
+      unit,
+      year: yearVal,
+      yearDiff: yearVal == null ? 999 : Math.abs(yearVal - targetYear),
+      wikidataId: b.film.value.split('/').pop(),
+    });
+  }
+  if (!candidates.length) return null;
+  // Sort: exact year first, then closest, then shortest (picks theatrical not extended)
+  candidates.sort((a, b) => {
+    if (a.yearDiff !== b.yearDiff) return a.yearDiff - b.yearDiff;
+    return a.minutes - b.minutes;
+  });
+  return candidates[0];
+}
+
+// Title variants to try on match — strip ellipses and ending punctuation.
+function titleVariants(title) {
+  const t0 = title
     .replace(/[\u2018\u2019\u201B]/g, "'")
     .replace(/[\u201C\u201D]/g, '"');
-  const t = escapeSparql(clean);
-  // Match films/animated films/documentary films etc (all subclasses of film Q11424)
-  // Some are animated films (Q202866) which are subclass. Use wdt:P31/wdt:P279*.
-  // Pull duration WITH its unit so we can distinguish minutes vs seconds vs hours.
-  // Some Wikidata entries store duration in seconds (e.g. Oppenheimer = 10809 s).
-  const query = `SELECT DISTINCT ?film ?duration ?unitLabel WHERE {
+  const set = new Set([t0]);
+  set.add(t0.replace(/\u2026+$/g, '').trim());
+  set.add(t0.replace(/\.\.\.+$/g, '').trim());
+  set.add(t0.replace(/[?.!\u2026]+$/g, '').trim());
+  if (t0.includes('...')) set.add(t0.replace(/\.\.\./g, '\u2026'));
+  if (t0.includes('\u2026')) set.add(t0.replace(/\u2026/g, '...'));
+  // Split on colon (some films have subtitle variations)
+  const colonIdx = t0.indexOf(':');
+  if (colonIdx > 0) set.add(t0.slice(0, colonIdx).trim());
+  return [...set].filter(Boolean);
+}
+
+async function wikidataRuntime(title, year) {
+  const variants = titleVariants(title);
+  const labelClauses = variants
+    .map(v => `{ ?film rdfs:label "${escapeSparql(v)}"@en. } UNION { ?film skos:altLabel "${escapeSparql(v)}"@en. }`)
+    .join(' UNION ');
+  const query = `SELECT DISTINCT ?film ?duration ?unitLabel ?date WHERE {
   ?film wdt:P31/wdt:P279* wd:Q11424.
-  { ?film rdfs:label "${t}"@en. } UNION { ?film skos:altLabel "${t}"@en. }
+  ${labelClauses}
   ?film wdt:P577 ?date.
   FILTER(YEAR(?date) >= ${year - 1} && YEAR(?date) <= ${year + 1})
   OPTIONAL {
@@ -46,7 +93,7 @@ async function wikidataRuntime(title, year) {
     ?dsv wikibase:quantityUnit ?unit.
   }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-} LIMIT 15`;
+} LIMIT 40`;
 
   const url = 'https://query.wikidata.org/sparql?query=' + encodeURIComponent(query);
   try {
@@ -56,25 +103,16 @@ async function wikidataRuntime(title, year) {
     if (!r.ok) return null;
     const d = await r.json();
     const bindings = d.results && d.results.bindings || [];
-    // Pick first one that has a duration. Normalize unit to minutes.
-    for (const b of bindings) {
-      if (!b.duration || !b.duration.value) continue;
-      const raw = Number(b.duration.value);
-      if (isNaN(raw) || raw <= 0) continue;
-      const unit = b.unitLabel && b.unitLabel.value;
-      let minutes;
-      if (unit === 'minute') minutes = raw;
-      else if (unit === 'second') minutes = Math.round(raw / 60);
-      else if (unit === 'hour') minutes = Math.round(raw * 60);
-      else minutes = raw; // unknown unit, assume already minutes
+    const best = pickBest(bindings, year);
+    if (best) {
       return {
-        duration: minutes,
-        rawDuration: raw,
-        unit,
-        wikidataId: b.film.value.split('/').pop(),
+        duration: best.minutes,
+        rawDuration: best.rawDuration,
+        unit: best.unit,
+        wikidataId: best.wikidataId,
+        wikidataYear: best.year,
       };
     }
-    // No duration but found film
     if (bindings.length) {
       return { duration: null, wikidataId: bindings[0].film.value.split('/').pop() };
     }

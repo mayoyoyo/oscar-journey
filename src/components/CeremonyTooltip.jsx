@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { MOVIES } from '../data/movies';
 import TierPips from './TierPips';
 
@@ -78,12 +79,17 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
         {lineText}
       </div>
 
-      {showModal && (
-        <div className="modal-overlay open" onClick={(e) => {
-          if (e.target === e.currentTarget) setShowModal(false);
-        }}>
-          <div className="modal ceremony-modal">
-            <button className="film-detail-close" onClick={() => setShowModal(false)}>✕</button>
+      {showModal && createPortal(
+        <div className="modal-overlay open"
+          onClick={(e) => {
+            e.stopPropagation();
+            if (e.target === e.currentTarget) setShowModal(false);
+          }}
+          onMouseDown={(e) => e.stopPropagation()}
+          onTouchStart={(e) => e.stopPropagation()}
+        >
+          <div className="modal ceremony-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="film-detail-close" onClick={(e) => { e.stopPropagation(); setShowModal(false); }}>✕</button>
             <h2 className="ceremony-modal-title">
               {modalTitle}
             </h2>
@@ -123,7 +129,8 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
               );
             })}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

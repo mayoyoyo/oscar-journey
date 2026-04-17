@@ -1993,23 +1993,41 @@ main {
   border-radius: 10px;
   font-weight: 600;
 }
-/* Match-count badge sits in the filter header — replaces the old
-   separate "N films · M watched" line below the filter block. */
+/* Match-count sits in the filter header — replaces the old separate
+   "N films · M watched" line below the filter block.
+   nowrap keeps it from splitting at the "·" on tight widths. */
 .film-list-filters-match {
   margin-left: auto;
   font-size: 0.78rem;
   color: var(--cream-dim);
   font-weight: 500;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .film-list-filters-watched {
   color: var(--gold-dim);
+  white-space: nowrap;
+}
+/* Responsive copy: full-length "509 films · 77 watched" on desktop;
+   short "509 · 77✓" on mobile where every pixel matters. */
+.film-list-filters-match-full { display: inline; }
+.film-list-filters-match-short { display: none; }
+@media (max-width: 540px) {
+  .film-list-filters-match-full { display: none; }
+  .film-list-filters-match-short { display: inline; }
+  /* Let the bar wrap naturally on very narrow screens — the "1 active"
+     badge + Reset button move to a second row rather than squashing
+     the other elements. */
+  .film-list-filters-header {
+    flex-wrap: wrap;
+  }
 }
 /* When both match-count and active-count + reset are rendered, push
    match-count to flex-right and keep active/reset after it. */
 .film-list-filters-header .film-list-filters-count,
 .film-list-filters-header .film-list-filter-reset {
   margin-left: 8px;
+  white-space: nowrap;
 }
 .film-list-filter-reset {
   margin-left: auto;

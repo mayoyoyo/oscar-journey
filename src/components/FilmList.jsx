@@ -351,8 +351,14 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
           <span className="film-list-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
           <span className="journey-controls-header">Filters</span>
           <span className="film-list-filters-match">
-            {filtered.length} film{filtered.length !== 1 ? 's' : ''}
-            {watchedCount > 0 && <span className="film-list-filters-watched"> · {watchedCount} watched</span>}
+            <span className="film-list-filters-match-full">
+              {filtered.length} film{filtered.length !== 1 ? 's' : ''}
+              {watchedCount > 0 && <span className="film-list-filters-watched"> · {watchedCount} watched</span>}
+            </span>
+            <span className="film-list-filters-match-short">
+              {filtered.length}
+              {watchedCount > 0 && <span className="film-list-filters-watched"> · {watchedCount}✓</span>}
+            </span>
           </span>
           {activeFilterCount > 0 && (
             <span className="film-list-filters-count">{activeFilterCount} active</span>

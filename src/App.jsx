@@ -410,6 +410,12 @@ export default function App() {
       saveProfileField(data.id, 'playlistOrder', orderIds).catch(() => {});
       if (needsVersionMigration) {
         saveProfileField(data.id, 'shuffleVersion', SHUFFLE_VERSION).catch(() => {});
+        // Reset position to 0 so existing users start at the NEW front-loaded beginning.
+        // Their old currentIdx pointed into the old shuffle and would bypass the
+        // iron-clad canon films now placed at the start. Watched state keeps them
+        // from re-watching; skipWatched (if on) jumps to the first unwatched film.
+        data.currentIdx = 0;
+        saveProfileField(data.id, 'currentIdx', 0).catch(() => {});
       }
     }
 

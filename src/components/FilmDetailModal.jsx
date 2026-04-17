@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { fetchOmdbData } from '../utils/omdb';
+import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
@@ -24,19 +24,35 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
 
   useEffect(() => {
     if (!movie) return;
-    setLoading(true);
-    setOmdbData(null);
-    setGlobalElo(null);
-    setAggregateRating(null);
-    setWatchedBy([]);
+    let cancelled = false;
+
     setPosterError(false);
     setLegendaryOwner(null);
 
-    // Check who owns the highest rarity card for this movie
+    // Sync cache check — if OMDb data for this film is already in localStorage, paint it
+    // immediately instead of clearing to a loading state. This kills the "flashbang" when
+    // navigating between films in the ceremony/year modal or via arrow keys.
+    const cached = readCachedOmdbData(movie);
+    if (cached) {
+      setOmdbData(cached);
+      setLoading(false);
+    } else {
+      setOmdbData(null);
+      setLoading(true);
+    }
+
+    // Secondary data (ELO, aggregate rating, watchedBy) — leave previous values in place
+    // until the new data arrives, then overwrite atomically. Stale-while-revalidate.
+
+    // Card owner
     getCardOwner(movie.id).then(owner => {
-      if (owner) setLegendaryOwner(owner);
+      if (cancelled) return;
+      setLegendaryOwner(owner || null);
     });
+
+    // OMDb refresh (no-op beyond the cache if it was just served)
     fetchOmdbData(movie).then(data => {
+      if (cancelled) return;
       setOmdbData(data);
       setLoading(false);
     });
@@ -44,12 +60,13 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     // Fetch global ELO for this movie
     const key = movie.id;
     getDoc(doc(db, 'elo', key)).then(snap => {
-      if (snap.exists()) setGlobalElo(snap.data());
-      else setGlobalElo(null);
+      if (cancelled) return;
+      setGlobalElo(snap.exists() ? snap.data() : null);
     }).catch(() => {});
 
     // Fetch all profiles to compute aggregate star rating + who watched
     getDocs(collection(db, 'profiles')).then(snap => {
+      if (cancelled) return;
       const allRatings = [];
       const watchers = [];
       for (const d of snap.docs) {
@@ -83,6 +100,8 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
         setAggregateRating(null);
       }
     }).catch(() => {});
+
+    return () => { cancelled = true; };
   }, [movie?.title, movie?.year, movie?.id]);
 
   // Navigation within movie list

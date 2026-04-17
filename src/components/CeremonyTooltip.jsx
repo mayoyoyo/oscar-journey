@@ -67,7 +67,7 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
 
   const lineText = isCeremonyMode
     ? `${ordinal(ceremony)} Academy Awards · ${year}`
-    : `Canon film · ${year} — see films of this year`;
+    : `Canon film · ${year}`;
 
   const modalTitle = isCeremonyMode
     ? `${ordinal(ceremony)} Academy Awards`

@@ -57,12 +57,6 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     return active < vals.length ? `${active}/${vals.length}` : null;
   };
 
-  const setOnlyKey = (section, labels, onlyKey) => {
-    const next = {};
-    for (const k of Object.keys(labels)) next[k] = (k === onlyKey);
-    onFiltersChange({ ...currentFilters, [section]: next });
-  };
-
   const renderChecklist = (section, labels) => (
     <div className="filter-checklist">
       {Object.entries(labels).map(([key, label]) => {
@@ -72,14 +66,6 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
             onClick={() => toggleFilter(section, key)}>
             <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
             <span className="filter-check-label">{label}</span>
-            <button
-              type="button"
-              className="filter-only-btn"
-              onClick={(e) => { e.stopPropagation(); setOnlyKey(section, labels, key); }}
-              title={`Show only ${label}`}
-            >
-              only
-            </button>
           </div>
         );
       })}

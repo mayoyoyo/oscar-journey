@@ -601,10 +601,12 @@ main {
     drop-shadow(0 0 3px rgba(184, 134, 11, 0.7))
     drop-shadow(0 0 7px rgba(212, 175, 55, 0.45));
 }
-/* Nominee: desaturate + darken the gold gradient to a slate. Keeps the
-   same silhouette/shading but clearly not-gold. */
+/* Nominee: muted bronze. Partial desaturate (not full grayscale) keeps
+   a whisper of gold hue, and the opacity knob dims the whole shape so
+   it doesn't compete with the winner for attention. Reads as "this
+   is an Oscar, just not a winner." */
 .oscar-icon-nominee svg {
-  filter: grayscale(1) brightness(0.3);
+  filter: saturate(0.45) brightness(0.6) opacity(0.7);
 }
 
 /* ---- DARK mode ---- */

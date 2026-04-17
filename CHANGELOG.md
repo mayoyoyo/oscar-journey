@@ -2,6 +2,33 @@
 
 ## 3.1.0 — 2026-04-17
 
+### Profiles: Canon Score drill-down + Daily Oscar streak — chris-testing
+- **Canon Score tier rows are clickable.** On any profile detail page, click
+  a row in the tier breakdown table ("7 of 8", "3 of 8", etc.) and land on
+  the Films tab with `minTier` preset to that row's tier — "14 films at
+  tier 6" is now one click away. Filter panel stays collapsed; the
+  collapsed header's chip summary + shrunken film count convey the
+  narrowing.
+- **🃏 Collector score pill → 🎬 Daily Oscar streak** on profile cards.
+  DailyOscar now persists the streak to Firestore (`dailyStreak` field) on
+  solve/fail, so every profile can show its current streak.
+- **Canon Score sub-card polish.** Dropped the %-won column (3-column fit
+  is cleaner in the sub-card), dropped the "Next up — highest-signal
+  unwatched" list, render all 8 pips per row (filled + empty) so every
+  tier row is the same width, vertical-align cells to middle, restore the
+  sub-card's 20px inner padding when it's nested in the profile detail
+  page, 28px gap between the Top 5 / Ratings by Genre / Progress by Decade
+  sections so they stop bunching.
+- **Browser back/forward routing fixed.** App's popstate handler now splits
+  on `/` so nested paths like `/profiles/chris` resolve to the leaderboard
+  tab (previously stuck on whatever tab you were on). `autoSelectProfileId`
+  stays in sync with the URL — back to `/profiles/chris` re-opens that
+  profile's detail view; back to `/profiles` returns to the list instead
+  of bouncing back to the last-viewed profile.
+- **"Back to Leaderboard" button fixed.** Explicitly pushes `/profiles`
+  instead of using `window.history.back()`, which could land on `/films`
+  if you came via the Canon Score tier drill-down.
+
 ### Winner pill text trim — chris-testing
 - Dropped "· Speech" from BP / Intl / Anim winner pills. Labels now read
   **Winner**, **Intl Winner**, **Anim Winner** — the `↗` icon + tooltip
@@ -34,7 +61,7 @@
   `directors.json` (OMDb fallback).
 - New **Starring** line under the director, sourced from `actors.json`.
 
-### `feat/oscar-icon-declutter` — thanks @mayo
+### `feat/oscar-icon-declutter` — thanks mayo
 All of the following shipped as part of mayo's PR:
 
 - **Oscar statuette icon system** replaces the ✦ Essential text badge. Gold

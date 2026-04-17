@@ -4,7 +4,7 @@ import { ratingKey } from '../utils/storage';
 import { getTierInfo, MAX_TIER } from '../utils/tierInfo';
 import TierPips from './TierPips';
 
-export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, profileName }) {
+export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, profileName, onNavigateToTier }) {
   const stats = useMemo(() => {
     const totalFilms = MOVIES.length;
     const watchedCount = MOVIES.filter(m => watchedTitleSet.has(m.id)).length;
@@ -210,8 +210,17 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
             {Array.from({ length: MAX_TIER }, (_, i) => MAX_TIER - i).map(t => {
               const row = stats.tierBreakdown[t];
               if (!row || row.total === 0) return null;
+              // Rows become clickable when onNavigateToTier is wired up —
+              // drops the user on the Films tab with minTier preset to this
+              // row's tier, so "14 films at tier 6" is one click away.
+              const canDrill = typeof onNavigateToTier === 'function';
               return (
-                <tr key={t}>
+                <tr
+                  key={t}
+                  className={canDrill ? 'canon-tier-row-interactive' : ''}
+                  onClick={canDrill ? () => onNavigateToTier(t) : undefined}
+                  title={canDrill ? `View all ${row.total} tier-${t} films` : undefined}
+                >
                   <td>
                     {/* In a table column every row needs the same pill width
                         so the column reads cleanly. Render all MAX_TIER dots —

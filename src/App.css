@@ -362,7 +362,10 @@ main {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  /* Stick the poster to the top of its column so it doesn't jump down when
+     the info column grows (e.g. after clicking "Mark as Watched" which adds
+     the star picker). */
+  align-items: flex-start;
   justify-content: center;
   padding: 28px 0 28px 20px;
   z-index: 1;
@@ -2913,6 +2916,25 @@ main {
 }
 .canon-tier-table td:first-child {
   white-space: nowrap;
+}
+
+/* Drill-down affordance: tier rows jump to the Films tab filtered to that
+   tier. Hover ramps border-color + background so the row reads as a button
+   without shifting layout. */
+.canon-tier-row-interactive {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.canon-tier-row-interactive:hover td {
+  background: var(--bg3);
+}
+.canon-tier-row-interactive:hover td:first-child {
+  color: var(--gold);
+}
+/* .tier-pips has cursor: help globally — override inside an interactive row
+   so the whole row reads as a single clickable target, not a "?" hover zone. */
+.canon-tier-row-interactive .tier-pips {
+  cursor: pointer;
 }
 
 .canon-next-up {

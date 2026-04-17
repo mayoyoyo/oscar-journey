@@ -117,7 +117,7 @@ function eraBucket(year) {
   return '20s';
 }
 
-export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters }) {
+export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters, filterPreset, onFilterPresetApplied }) {
   const [query, setQuery] = useState('');
   // `watchMode` is a three-way enum: 'all' | 'watched' | 'unwatched'.
   // Watched-only and Unwatched-only are mutually exclusive — clicking one
@@ -137,6 +137,24 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     prefetchRuntimes(MOVIES, () => setRuntimeTick(t => t + 1))
       .then(() => setPrefetchDone(true));
   }, []);
+
+  // Consume one-shot filterPreset from parent — set when the user drills in
+  // from the Canon Score tier breakdown. Merges the preset keys (minTier,
+  // oscarsOnly, essentialsOnly) into the current filters and signals back to
+  // the parent to clear the preset so it only fires once.
+  // Filter panel stays COLLAPSED — the user came here to see the films, not
+  // manage filters. The collapsed header already shows the narrowing via
+  // the film count + summary chip (e.g. "Canon ≥7").
+  useEffect(() => {
+    if (!filterPreset) return;
+    setFilters(prev => ({
+      ...prev,
+      ...(filterPreset.minTier != null ? { minTier: filterPreset.minTier } : {}),
+      ...(filterPreset.oscarsOnly != null ? { oscarsOnly: filterPreset.oscarsOnly } : {}),
+      ...(filterPreset.essentialsOnly != null ? { essentialsOnly: filterPreset.essentialsOnly } : {}),
+    }));
+    if (onFilterPresetApplied) onFilterPresetApplied();
+  }, [filterPreset, onFilterPresetApplied]);
 
   // Build a runtime map; recomputes as prefetch completes batches
   const runtimeMap = useMemo(() => {

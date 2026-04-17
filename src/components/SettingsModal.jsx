@@ -214,8 +214,9 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
-              <p><strong>v3.1.0</strong> — Oscar statuette redesign + unified filters (thanks <a href="https://github.com/mayo" target="_blank" rel="noopener noreferrer">@mayo</a>)</p>
+              <p><strong>v3.1.0</strong> — Oscar statuette redesign + unified filters (thanks mayo)</p>
               <ul>
+                <li><strong>Profiles get a Canon Score drill-down</strong> — click any tier row in the Canon Score table ("14 films at tier 6") to jump to the Films tab pre-filtered to that tier. Pairs with a <strong>Daily Oscar streak pill</strong> on every profile card (replaces the old Collector score pill; streak now persists across devices)</li>
                 <li><strong>Oscar statuette icons</strong> replace the "✦ Essential" text badge everywhere — gold (BP winner), bronze (BP nominee), blue (Intl winner), purple (Anim winner). Multi-statuette films like Parasite and Amour render all their medals in a consistent left→right order. BP winner is full-size; other statuettes scale to 0.85× so the winner stays dominant</li>
                 <li><strong>Unified canon depth</strong> — one 1–7 tier stepper that applies to ALL films (Oscar + essential). OSCAR / OSCAR_NOM now counts as a canon list, so BP winners tier to 8 and nominees to 1+. Per-level descriptions: Everything → Canon threshold → Strong consensus → Iron-clad → Near-universal → Universal → All-time masterpieces</li>
                 <li><strong>Oscars only / Essentials only</strong> — two mutually-exclusive toggles in Canon depth. "Oscars only" hides the 438 non-Oscar canon; "Essentials only" hides BP/Intl/Anim to show just the canon. Replaces the old 4-button radio</li>

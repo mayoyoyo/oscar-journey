@@ -18,20 +18,38 @@ function urlVariants(title, year) {
   const withColon = title.replace(/ /g, '_');
   const noColon = withColon.replace(/:/g, '');
   const noPunct = noColon.replace(/[,!?]/g, '');
+  // Wikiquote article titles keep "the"/"and" lowercase in middle of title
+  // (e.g. "The_Good,_the_Bad_and_the_Ugly"). Our input titles come from
+  // movies.js title-case style, so we also try a lowercased-connectors variant.
+  const lowerConnectors = title
+    .replace(/\b(The|And|Of|A|In|On|To|For|At|By|Or|But|With|From)\b(?!^)/g, (m, w, offset) => {
+      // Keep capitalized if it's the very first word
+      if (offset === 0) return w;
+      return w.toLowerCase();
+    })
+    .replace(/ /g, '_');
+  const lowerNoColon = lowerConnectors.replace(/:/g, '');
+  const lowerNoPunct = lowerNoColon.replace(/[,!?]/g, '');
   // Year-specific first (most disambiguated), then (film), then bare title.
   // Bare title is last because it may hit a person or disambig page.
   const variants = [
     `${withColon}_(${year}_film)`,
     `${noColon}_(${year}_film)`,
     `${noPunct}_(${year}_film)`,
+    `${lowerConnectors}_(${year}_film)`,
+    `${lowerNoPunct}_(${year}_film)`,
     `${withColon}_(film)`,
     `${noColon}_(film)`,
     `${noPunct}_(film)`,
+    `${lowerConnectors}_(film)`,
+    `${lowerNoPunct}_(film)`,
     `${withColon}_(${year})`,
     `${noColon}_(${year})`,
     withColon,
     noColon,
     noPunct,
+    lowerConnectors,
+    lowerNoPunct,
   ];
   const seen = new Set();
   const dedup = [];
@@ -43,13 +61,18 @@ function urlVariants(title, year) {
 
 async function fetchPage(slug) {
   const url = `https://en.wikiquote.org/api/rest_v1/page/html/${encodeURIComponent(slug)}`;
-  // Retry with backoff on transient errors
-  for (let attempt = 0; attempt < 3; attempt++) {
+  // Retry with backoff on transient errors and 429 rate limits
+  for (let attempt = 0; attempt < 5; attempt++) {
     try {
       const resp = await fetch(url, { redirect: 'follow' });
       if (resp.status === 404) return null;
+      if (resp.status === 429) {
+        // rate limited — back off harder
+        await sleep(5000 * (attempt + 1));
+        continue;
+      }
       if (!resp.ok) {
-        await sleep(500 * (attempt + 1));
+        await sleep(1000 * (attempt + 1));
         continue;
       }
       const html = await resp.text();
@@ -57,7 +80,7 @@ async function fetchPage(slug) {
       if (html.length < 800) return null;
       return { html, slug, url };
     } catch (e) {
-      await sleep(500 * (attempt + 1));
+      await sleep(1000 * (attempt + 1));
     }
   }
   return null;

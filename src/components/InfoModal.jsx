@@ -12,7 +12,7 @@ export default function InfoModal({ onClose }) {
         <div className="info-hero">
           <span className="info-hero-icon">🏆</span>
           <h2 className="info-hero-title">The Oscars Journey</h2>
-          <p className="info-hero-sub">Your guide to {MOVIES.length} essential Oscar films</p>
+          <p className="info-hero-sub">Your guide to {MOVIES.length} must-watch films — every major Oscar + the canon the Academy overlooked</p>
         </div>
 
         <div className="info-section">
@@ -90,8 +90,9 @@ export default function InfoModal({ onClose }) {
         <details className="info-hidden">
           <summary>Hidden Features</summary>
           <ul>
-            <li>Click the ceremony text to see all nominees from that year</li>
+            <li>Click the ceremony or "Canon film · YYYY" line to see every film from that year across categories</li>
             <li>Click "Winner / Speech" to watch the acceptance speech</li>
+            <li>Tap the gold pips on any film to see which canon lists it's on</li>
             <li>Swipe left/right on film detail modals (mobile)</li>
             <li>Click anyone's name anywhere to view their profile</li>
             <li>Arrow keys navigate between films in modals</li>

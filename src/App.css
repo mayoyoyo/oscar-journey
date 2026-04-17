@@ -586,7 +586,10 @@ main {
 /* Ceremony-header row: pairs "Nth Academy Awards · YYYY" with the
    statuette on its left. Both only ever render for Oscar films, so
    co-locating them keeps the modal pill row clean. Constrain the
-   statuette height to the header line so the row doesn't grow. */
+   statuette height to the header line so the row doesn't grow.
+   line-height: 1 on the text collapses its line-box to cap-height so
+   `align-items: center` actually centers the visual glyphs (uppercase
+   text sits high in a normal line-box and would otherwise look top-aligned). */
 .film-detail-ceremony-row {
   display: flex;
   align-items: center;
@@ -594,10 +597,11 @@ main {
 }
 .film-detail-ceremony-row .ceremony-line {
   margin: 0;
+  line-height: 1;
 }
 .film-detail-ceremony-row .oscar-icon-sm {
-  width: 11px;
-  height: 18px;
+  width: 10px;
+  height: 16px;
 }
 
 /* ---- LIGHT mode (default) ----

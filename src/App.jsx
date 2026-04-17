@@ -94,11 +94,6 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
       return false;
     }
 
-    // Winners only
-    if (f.smart.winnersOnly && !movie.won) {
-      return false;
-    }
-
     // Unwatched by everyone
     if (f.smart.unwatchedByAll && smartContext.allProfiles) {
       const watchedBySomeone = smartContext.allProfiles.some(p =>

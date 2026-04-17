@@ -18,14 +18,12 @@ const DEFAULT_FILTERS = {
   essentialsOnly: false,
   smart: {
     skipWatched: false,
-    winnersOnly: false,
     unwatchedByAll: false,
   },
 };
 
 const SMART_LABELS = {
   skipWatched: 'Skip films I\'ve watched',
-  winnersOnly: 'Oscar winners only',
   unwatchedByAll: 'Unwatched by everyone',
 };
 

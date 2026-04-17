@@ -121,22 +121,37 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   };
 
   const sectionCount = (section) => {
-    const vals = Object.values(filters[section]);
-    const active = vals.filter(Boolean).length;
+    const cur = filters[section];
+    const def = DEFAULT_FILM_FILTERS[section] || {};
+    const entries = Object.entries(cur);
+    const active = entries.filter(([, v]) => v).length;
     if (section === 'wins') {
       // Inverted: default all-off = no filter. Show count of ON.
       return active > 0 ? `${active} on` : null;
     }
-    return active < vals.length ? `${active}/${vals.length}` : null;
+    // Hide the badge at the default state so partial-default filters (eras default
+    // to 1970s+, pre-1970 off) don't read as "filter applied" when user hasn't changed anything.
+    const matchesDefault = entries.every(([k, v]) => v === def[k]);
+    if (matchesDefault) return null;
+    return `${active}/${entries.length}`;
   };
 
-  const activeFilterCount =
-    Object.values(filters.eras).filter(v => !v).length +
-    Object.values(filters.categories).filter(v => !v).length +
-    Object.values(filters.genres).filter(v => !v).length +
-    Object.values(filters.runtimes).filter(v => !v).length +
-    Object.values(filters.wins).filter(v => v).length +
-    (watchedOnly ? 1 : 0);
+  const activeFilterCount = (() => {
+    let n = 0;
+    for (const section of ['eras', 'categories', 'genres', 'runtimes']) {
+      const def = DEFAULT_FILM_FILTERS[section] || {};
+      for (const [k, v] of Object.entries(filters[section])) {
+        if (v !== def[k]) n++;
+      }
+    }
+    // Wins defaults all OFF; each ON one counts as a user-applied filter.
+    n += Object.values(filters.wins).filter(v => v).length;
+    if (watchedOnly) n++;
+    // Canon-depth / essentials-only counted if different from default
+    if (filters.minEssentialTier !== DEFAULT_FILM_FILTERS.minEssentialTier) n++;
+    if (filters.essentialsOnly !== DEFAULT_FILM_FILTERS.essentialsOnly) n++;
+    return n;
+  })();
 
   const activeWinKeys = useMemo(
     () => Object.entries(filters.wins).filter(([, v]) => v).map(([k]) => k),
@@ -229,9 +244,22 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     return c;
   }, [eligiblePool]);
 
-  const renderChecklist = (section, labels, suffixes, counts) => (
+  const renderChecklist = (section, labels, suffixes, counts) => {
+    // When counts are provided, sort rows by count descending so tiny buckets
+    // (e.g. 1910s (1)) fall to the bottom. Keeps the original label order as tie-breaker.
+    const entries = Object.entries(labels);
+    if (counts) {
+      const indexed = entries.map(([k, v], i) => ({ k, v, i }));
+      indexed.sort((a, b) => {
+        const diff = (counts[b.k] || 0) - (counts[a.k] || 0);
+        return diff !== 0 ? diff : a.i - b.i;
+      });
+      entries.length = 0;
+      for (const { k, v } of indexed) entries.push([k, v]);
+    }
+    return (
     <div className="filter-checklist">
-      {Object.entries(labels).map(([key, label]) => {
+      {entries.map(([key, label]) => {
         // Hide rows that have zero matching films at the current canon settings.
         if (counts && (counts[key] || 0) === 0) return null;
         const active = filters[section][key];
@@ -257,7 +285,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         );
       })}
     </div>
-  );
+    );
+  };
 
   const renderSection = (label, section, labels, suffixes, counts) => {
     const count = sectionCount(section);

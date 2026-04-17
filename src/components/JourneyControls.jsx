@@ -34,11 +34,21 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   };
 
   // Total count of "non-default" filter selections — shown in the collapsed header.
+  // Only count deviations from DEFAULT_FILTERS, otherwise partially-default filters
+  // (pre-1970s off by default) would be counted as active.
   const activeFilterCount = (() => {
-    const baseSections = ['eras', 'categories', 'genres', 'runtimes'];
     let n = 0;
-    for (const s of baseSections) n += Object.values(currentFilters[s]).filter(v => !v).length;
-    n += Object.values(currentFilters.smart).filter(v => v).length;
+    for (const section of ['eras', 'categories', 'genres', 'runtimes']) {
+      const def = DEFAULT_FILTERS[section] || {};
+      for (const [k, v] of Object.entries(currentFilters[section])) {
+        if (v !== def[k]) n++;
+      }
+    }
+    for (const [k, v] of Object.entries(currentFilters.smart)) {
+      if (v !== (DEFAULT_FILTERS.smart[k] ?? false)) n++;
+    }
+    if (currentFilters.minEssentialTier !== DEFAULT_FILTERS.minEssentialTier) n++;
+    if (currentFilters.essentialsOnly !== DEFAULT_FILTERS.essentialsOnly) n++;
     return n;
   })();
 

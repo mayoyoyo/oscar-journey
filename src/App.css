@@ -583,16 +583,23 @@ main {
 .oscar-icon-sm { width: 16px; height: 26px; }
 .oscar-icon-md { width: 22px; height: 36px; }
 
-/* ---- LIGHT mode (default) ---- */
-/* Winner: gold gradient + 1px crisp black outline via stacked drop-shadows.
-   Four zero-blur drop-shadows create a clean outline around the composite
-   shape so the gold reads against the cream/light background. */
+/* ---- LIGHT mode (default) ----
+   Glow on a light background is counter-intuitive: a "brighter" halo
+   disappears into the cream bg. The trick is a *warm-toned dark* shadow
+   — rgba gold at low opacity — which reads as "ambient gold light" by
+   darkening the neighboring pixels in the gold hue rather than
+   brightening them. Paired with a saturation/brightness boost on the
+   icon itself, the statuette feels lit from within.
+   Layered drop-shadows:
+   - 1px tight dark-gold: crisp rim, substitutes for a hard outline
+   - 3px soft dark-gold: warm ambient bloom (the "glow")
+   - 7px very soft warm: extended halo that blends into the cream */
 .oscar-icon-winner svg {
   filter:
-    drop-shadow(1px 0 0 #000)
-    drop-shadow(-1px 0 0 #000)
-    drop-shadow(0 1px 0 #000)
-    drop-shadow(0 -1px 0 #000);
+    saturate(1.25) brightness(1.08)
+    drop-shadow(0 0 1px rgba(120, 80, 10, 0.85))
+    drop-shadow(0 0 3px rgba(184, 134, 11, 0.7))
+    drop-shadow(0 0 7px rgba(212, 175, 55, 0.45));
 }
 /* Nominee: desaturate + darken the gold gradient to a slate. Keeps the
    same silhouette/shading but clearly not-gold. */

@@ -1,0 +1,72 @@
+{
+  "problems": [
+    {
+      "id": "sunrise-a-song-of-two-humans-1927",
+      "title": "Sunrise: A Song of Two Humans",
+      "year": 1927,
+      "reason": "omdb-not-found"
+    },
+    {
+      "id": "apur-sansar-1959",
+      "title": "Apur Sansar",
+      "year": 1959,
+      "reason": "omdb-not-found"
+    },
+    {
+      "id": "les-cousins-1959",
+      "title": "Les Cousins",
+      "year": 1959,
+      "reason": "omdb-no-poster"
+    },
+    {
+      "id": "the-umbrellas-of-cherbourg-1964",
+      "title": "The Umbrellas of Cherbourg",
+      "year": 1964,
+      "reason": "url-failed-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BNmY3NWE5YWYtMGFkNC00Y2JhLWI5MTYtMTA0OWE5NjZlNGY4XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "id": "the-color-of-pomegranates-1969",
+      "title": "The Color of Pomegranates",
+      "year": 1969,
+      "reason": "url-failed-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BMTIwZWRlYzItYzFkYS00NmUzLTg2NDctZWExZjIwNDkzZTA0XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "id": "adoption-1975",
+      "title": "Adoption",
+      "year": 1975,
+      "reason": "url-failed-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BZjdjNjZmNzItMDYzMS00N2IwLWI0M2UtMjY0NDRmMmFmZjQwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      "id": "the-ballad-of-gregorio-cortez-1982",
+      "title": "The Ballad of Gregorio Cortez",
+      "year": 1982,
+      "reason": "url-failed-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BZDlhNTNjNWYtODA3NC00MDU1LWFhMTYtZGU0NTJmM2I4ODYyXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg"
+    },
+    {
+      "id": "au-revoir-les-enfants-1987",
+      "title": "Au revoir les enfants",
+      "year": 1987,
+      "reason": "url-failed-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BY2Y5NGViM2UtOTlhNi00NjBlLTg4YzgtZGQ4YWEyZTA3OWQwXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "id": "thelonious-monk-straight-no-chaser-1988",
+      "title": "Thelonious Monk: Straight, No Chaser",
+      "year": 1988,
+      "reason": "url-failed-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BYWU0MmY5MzUtNDRiNC00Y2I2LWFmZGMtMTYxNzZiMGVmOGYxXkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "id": "la-ciénaga-2001",
+      "title": "La Ciénaga",
+      "year": 2001,
+      "reason": "url-failed-404",
+      "url": "https://m.media-amazon.com/images/M/MV5BMTMyYTMyNWQtM2JmYS00YmYxLTlhMzUtMDI0OGMwOGRkN2EzXkEyXkFqcGdeQXVyNzYyNDE2MTA@._V1_SX300.jpg"
+    }
+  ],
+  "okCount": 428
+}

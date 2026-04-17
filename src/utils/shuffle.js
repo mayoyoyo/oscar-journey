@@ -10,13 +10,22 @@ export function mulberry32(seed) {
   };
 }
 
-// Map a release year to a decade bucket label
+// Map a release year to a decade bucket label. Granular across all eras so the
+// spacing penalty correctly separates e.g. two 1950s films or two 1920s films
+// (before the catalog expansion the pre-1990s were all lumped together).
 function getDecade(year) {
-  if (year < 1991) return '70s80s';
+  if (year < 1920) return '10s';
+  if (year < 1930) return '20s';
+  if (year < 1940) return '30s';
+  if (year < 1950) return '40s';
+  if (year < 1960) return '50s';
+  if (year < 1970) return '60s';
+  if (year < 1980) return '70s';
+  if (year < 1991) return '80s';
   if (year < 2000) return '90s';
   if (year < 2010) return '00s';
-  if (year < 2020) return '10s';
-  return '20s';
+  if (year < 2020) return '2010s';
+  return '2020s';
 }
 
 // Greedy diversity shuffle — builds the playlist one film at a time,

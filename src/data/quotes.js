@@ -419,4 +419,55 @@ export const QUOTES = {
   'the-boy-and-the-heron-2023': ["Do you dare to live?", "The world is not perfect. But it's worth protecting."],
   'flow-2024': ["The water rises for everyone.", "Survive. Together."],
   'kpop-demon-hunters-2025': ["The beat drops, and so do they.", "We perform or we perish."],
+
+  // ====================================================================
+  // ESSENTIAL (non-Oscar canon) — quotes for the iron-clad tier ≥ 4 films.
+  // Curated conservatively: only films with universally recognized lines.
+  // ====================================================================
+
+  // Tier 6
+  'city-lights-1931': ["Tomorrow the birds will sing.", "Yes, I can see now.", "You can see now?"],
+  'modern-times-1936': ["Buck up—never say die. We'll get along!", "Smile, though your heart is aching.", "Nothing to worry about."],
+  'the-third-man-1949': ["In Italy, for thirty years under the Borgias, they had warfare, terror, murder and bloodshed, but they produced Michelangelo, Leonardo da Vinci and the Renaissance. In Switzerland, they had brotherly love, they had five hundred years of democracy and peace, and what did that produce? The cuckoo clock.", "I'm not a naturally violent man.", "Don't be so gloomy. After all it's not that awful."],
+  '12-angry-men-1957': ["It's always difficult to keep personal prejudice out of a thing like this.", "Prejudice always obscures the truth.", "I just want to talk."],
+  'some-like-it-hot-1959': ["Nobody's perfect.", "I'm a girl, I'm a girl, I wish I were dead, I'm a girl.", "Well, nobody's perfect!"],
+
+  // Tier 5
+  'citizen-kane-1941': ["Rosebud.", "You provide the prose poems. I'll provide the war.", "I think it would be fun to run a newspaper.", "I don't think there's one word that can describe a man's life."],
+  'casablanca-1942': ["Here's looking at you, kid.", "We'll always have Paris.", "Of all the gin joints in all the towns in all the world, she walks into mine.", "Round up the usual suspects.", "Louis, I think this is the beginning of a beautiful friendship.", "Play it, Sam. Play 'As Time Goes By.'"],
+  'double-indemnity-1944': ["I killed him for money—and a woman. I didn't get the money, and I didn't get the woman. Pretty, isn't it?", "Straight down the line.", "How could I have known that murder could sometimes smell like honeysuckle?"],
+  'all-about-eve-1950': ["Fasten your seatbelts. It's going to be a bumpy night.", "Everybody has a heart—except some people.", "The general atmosphere is very Macbethish."],
+  'rashomon-1950': ["It's human to lie. Most of the time we can't even be honest with ourselves.", "In the end, you cannot understand the things men do."],
+  'sunset-boulevard-1950': ["I am big. It's the pictures that got small.", "All right, Mr. DeMille, I'm ready for my close-up.", "We didn't need dialogue. We had faces!", "Nobody leaves a star."],
+  'singin-in-the-rain-1952': ["I'm singin' in the rain, just singin' in the rain.", "Dignity. Always dignity.", "What a glorious feeling, I'm happy again."],
+  'rear-window-1954': ["We've become a race of Peeping Toms.", "He's not an interesting subject, Jeff.", "Tell me everything you saw—and what you think it means."],
+  'vertigo-1958': ["Only one is a wanderer; two together are always going somewhere.", "Here I was born, and there I died. It was only a moment for you; you took no notice."],
+  'psycho-1960': ["A boy's best friend is his mother.", "We all go a little mad sometimes.", "Mother—what's the phrase?—isn't quite herself today."],
+  'the-apartment-1960': ["Shut up and deal.", "That's the way it crumbles, cookie-wise.", "Why do people have to love people, anyway?"],
+  'lawrence-of-arabia-1962': ["The trick, William Potter, is not minding that it hurts.", "Nothing is written.", "Big things have small beginnings."],
+  '2001-a-space-odyssey-1968': ["Open the pod bay doors, HAL.", "I'm sorry, Dave. I'm afraid I can't do that.", "My God—it's full of stars.", "Daisy, Daisy, give me your answer do."],
+  'do-the-right-thing-1989': ["Fight the power.", "Always do the right thing.", "Wake up!"],
+
+  // Tier 4
+  'the-great-dictator-1940': ["You, the people, have the power to make this life free and beautiful.", "We think too much and feel too little.", "Look up, Hannah! Look up!"],
+  'its-a-wonderful-life-1946': ["No man is a failure who has friends.", "Every time a bell rings, an angel gets his wings.", "Atta boy, Clarence.", "I want to live again. Please, God, let me live again."],
+  'the-best-years-of-our-lives-1946': ["You know what it'll be, don't you, Fred? It may take us years to get anywhere.", "I know. I know just how you feel."],
+  'the-treasure-of-the-sierra-madre-1948': ["Badges? We ain't got no badges! We don't need no badges! I don't have to show you any stinking badges!", "Gold is a devilish sort of thing."],
+  'ikiru-1952': ["Life is so short. Fall in love, dear maiden, while your lips are still red.", "To live is to suffer; to survive is to find some meaning in the suffering."],
+  'tokyo-story-1953': ["Isn't life disappointing?", "Yes, it is.", "Children don't live up to their parents' expectations."],
+  'on-the-waterfront-1954': ["I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am.", "You don't understand! I coulda had class!"],
+  'seven-samurai-1954': ["In the end, we lost this battle too. The victory belongs to those peasants—not to us.", "This is the nature of war: by protecting others, you save yourselves."],
+  'the-night-of-the-hunter-1955': ["It's a hard world for little things.", "LOVE... HATE... the tale of Left Hand/Right Hand, the story of good and evil."],
+  'paths-of-glory-1957': ["There is no such thing as shell shock.", "The one thing that always impressed me about a soldier is that he fights for his country.", "Show me a patriot and I'll show you a hypocrite."],
+  'the-bridge-on-the-river-kwai-1957': ["Madness! Madness!", "Do not speak to me of rules. This is war. This is not a game of cricket.", "Be happy in your work."],
+  'the-seventh-seal-1957': ["I want knowledge, not faith.", "Who are you?", "I am Death.", "Life is a senseless terror."],
+  'north-by-northwest-1959': ["I've got a job, a secretary, a mother, two ex-wives and several bartenders that depend on me.", "In the world of advertising, there's no such thing as a lie. There's only the expedient exaggeration."],
+  'dr-strangelove-1964': ["Gentlemen, you can't fight in here! This is the War Room!", "Mein Führer! I can walk!", "I'm not saying we wouldn't get our hair mussed."],
+  'once-upon-a-time-in-the-west-1968': ["When you have to shoot, shoot. Don't talk.", "People scare better when they're dying."],
+  'alien-1979': ["In space, no one can hear you scream.", "I can't lie to you about your chances, but... you have my sympathies.", "Kane? What do you mean you can't see his face?"],
+  'the-shining-1980': ["Here's Johnny!", "All work and no play makes Jack a dull boy.", "Redrum.", "Come play with us, Danny. Forever and ever and ever."],
+  'blade-runner-1982': ["I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die.", "It's too bad she won't live—but then again, who does?", "Wake up! Time to die!"],
+  'terminator-2-judgment-day-1991': ["I'll be back.", "Hasta la vista, baby.", "Come with me if you want to live.", "It's in your nature to destroy yourselves."],
+  'the-lion-king-1994': ["Hakuna matata—it means no worries.", "Remember who you are.", "The past can hurt. But the way I see it, you can either run from it, or learn from it."],
+  'before-sunrise-1995': ["If there's any kind of magic in this world, it must be in the attempt of understanding someone sharing something.", "I always feel this pressure of being a strong and independent icon of womanhood.", "Isn't everything we do in life a way to be loved a little more?"],
 };

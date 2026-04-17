@@ -202,8 +202,10 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
           <button className="journey-filters-header" onClick={() => setFiltersOpen(o => !o)}>
             <span className="journey-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
             <span className="journey-controls-header" style={{ margin: 0 }}>Filters</span>
-            {eligibleCount < totalCount && (
-              <span className="journey-filter-count">{eligibleCount}/{totalCount}</span>
+            {eligibleCount > 0 && (
+              <span className="journey-filter-count" title={`${eligibleCount} of ${totalCount} films in your catalog`}>
+                {eligibleCount} film{eligibleCount === 1 ? '' : 's'}
+              </span>
             )}
             {!filtersOpen && filterChips.length > 0 && (
               <span className="journey-filter-chips">

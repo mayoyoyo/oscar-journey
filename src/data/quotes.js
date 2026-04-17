@@ -656,4 +656,18 @@ export const QUOTES = {
   'magnolia-1999': ["We may be through with the past, but the past is never through with us."],
   'the-matrix-1999': ["There is no spoon.", "You take the blue pill, the story ends. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.", "Dodge this."],
   'memento-2000': ["So you lie to yourself to be happy."],
+
+  // --- Tier 2 (batch 8: more 80s-2000s) ---
+  'scarface-1983': ["Say hello to my little friend!", "All I have in this world is my balls and my word, and I don't break 'em for no one.", "The eyes, chico. They never lie."],
+  'das-boot-1981': ["April fool. Practice makes perfect."],
+  'kagemusha-1980': ["The shadow of a man can never stand up and walk on its own."],
+  'cinema-paradiso-1988': ["Whatever you end up doing, love it.", "Life isn't like in the movies. Life... is much harder."],
+  'wings-of-desire-1987': ["To smoke, and have coffee - and if you do it together, it's fantastic."],
+  'city-of-god-2002': ["You need more than guns to be a good gangster, you need ideas."],
+  'the-prestige-2006': ["Are you watching closely?", "The secret impresses no one. The trick you use it for is everything."],
+  'pans-labyrinth-2006': ["Hello. I am Princess Moanna, and I am not afraid of you."],
+  'princess-mononoke-1997': ["To see with eyes unclouded by hate."],
+  'my-own-private-idaho-1991': ["I'm a connoisseur of roads. I've been tasting roads my whole life."],
+  'the-iron-giant-1999': ["You are what you choose to be. You choose."],
+  'fast-times-at-ridgemont-high-1982': ["Learn it. Know it. Live it."],
 };

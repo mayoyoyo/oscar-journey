@@ -1,0 +1,47 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Carl Theodor Dreyer. Written by Joseph Delteil.",
+    "clean": "Directed by Carl Theodor Dreyer. Written by Joseph Delteil."
+  },
+  {
+    "heading": "Jeanne d'Arc",
+    "raw": "Dear God, I accept my death gladly but do not let me suffer too long. Will I be with You tonight in Paradise?",
+    "clean": "Dear God, I accept my death gladly but do not let me suffer too long. Will I be with You tonight in Paradise?"
+  },
+  {
+    "heading": "Jeanne d'Arc",
+    "raw": "You claim that I am sent by the Devil. It's not true. To make me suffer, the Devil has sent you... and you... and you... and you.",
+    "clean": "You claim that I am sent by the Devil. It's not true. To make me suffer, the Devil has sent you... and you... and you... and you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Juge: What is your name?",
+    "clean": "What is your name?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jeanne d'Arc: In France, I am called Joan... in my village, I am called Jeanneton.",
+    "clean": "In France, I am called Joan... in my village, I am called Jeanneton."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Évêque Pierre Cauchon: So you think God hates the English?",
+    "clean": "Évêque Pierre Cauchon: So you think God hates the English?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jeanne d'Arc: I don't know if God loves or hates the English; but I do know that the English will all be chased from France - except those that die here!",
+    "clean": "I don't know if God loves or hates the English; but I do know that the English will all be chased from France - except those that die here!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Juge: Has God promised you things?",
+    "clean": "Has God promised you things?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jeanne d'Arc: That has nothing to do with this trial!",
+    "clean": "That has nothing to do with this trial!"
+  }
+]

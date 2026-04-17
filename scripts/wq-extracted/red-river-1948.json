@@ -1,0 +1,1362 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Howard Hawks and Arthur Rosson. Written by Borden Chase and Charles Schnee.",
+    "clean": "Directed by Howard Hawks and Arthur Rosson. Written by Borden Chase and Charles Schnee."
+  },
+  {
+    "heading": "Tom Dunson",
+    "raw": "I signed nothing. If I had, I'd stay. You'll remember I joined your train after you left St. Louis.",
+    "clean": "I signed nothing. If I had, I'd stay. You'll remember I joined your train after you left St. Louis."
+  },
+  {
+    "heading": "Tom Dunson",
+    "raw": "I'm startin' my own herd. I've watched the land south of here since we left the Salt Fork. It's good land, good grass for beef, so I'm goin' South where it is.",
+    "clean": "I'm startin' my own herd. I've watched the land south of here since we left the Salt Fork. It's good land, good grass for beef, so I'm goin' South where it is."
+  },
+  {
+    "heading": "Tom Dunson",
+    "raw": "Wherever they go, they'll be on my land. My land. We're here and we're gonna stay here. Give me ten years and I'll have that brand on the gates of the greatest ranch in Texas.",
+    "clean": "Wherever they go, they'll be on my land. My land. We're here and we're gonna stay here. Give me ten years and I'll have that brand on the gates of the greatest ranch in Texas."
+  },
+  {
+    "heading": "Tom Dunson",
+    "raw": "[to Meeker] All right, we rounded up some of your stock and some of Diego's and some of everybody else's around here...I haven't got the time or the inclination to cut 'em out. So I'll drive 'em to Missouri and give you two dollars a head when I get back.",
+    "clean": "All right, we rounded up some of your stock and some of Diego's and some of everybody else's around here...I haven't got the time or the inclination to cut 'em out. So I'll drive 'em to Missouri and give you two dollars a head when I get back."
+  },
+  {
+    "heading": "Tom Dunson",
+    "raw": "[to Bunk] You started all this...we're three or four hundred head short and you killed Dan Latimer...stealin' sugar like a kid. Well, they whip kids to teach 'em better.",
+    "clean": "You started all this...we're three or four hundred head short and you killed Dan Latimer...stealin' sugar like a kid. Well, they whip kids to teach 'em better."
+  },
+  {
+    "heading": "Tom Dunson",
+    "raw": "All right. Anybody else? Say it now, 'cause I don't want ever to hear it again. I don't like quitters, especially when they're not good enough to finish what they start. Now go on! Speak up! Say it and you can join your friends here...",
+    "clean": "All right. Anybody else? Say it now, 'cause I don't want ever to hear it again. I don't like quitters, especially when they're not good enough to finish what they start. Now go on! Speak up! Say it and you can join your friends here..."
+  },
+  {
+    "heading": "Tom Dunson",
+    "raw": "[to Matt] Go on, draw. I said 'DRAW'! [Long pause] Then I'll make ya. You're soft! Won't anything make a man out of ya?! [He seizes Matt's gun from his holster and throws it away] You once told me never to take your gun away from ya! [He hits Matt in the face several times] You yellow-bellied, chicken-livered...",
+    "clean": "Go on, draw. I said 'DRAW'! Then I'll make ya. You're soft! Won't anything make a man out of ya?! You once told me never to take your gun away from ya! You yellow-bellied, chicken-livered..."
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "If I was you, Colonel, I'd ponder on lettin' him be. He's a mighty set man when his mind's made up. Even you can't change him. Now he'll be headin' South. Mind he don't stomp on you on the way out.",
+    "clean": "If I was you, Colonel, I'd ponder on lettin' him be. He's a mighty set man when his mind's made up. Even you can't change him. Now he'll be headin' South. Mind he don't stomp on you on the way out."
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "Colonel, me and Dunson...well, it's me and Dunson.",
+    "clean": "Colonel, me and Dunson...well, it's me and Dunson."
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "Why do Indians always want to be burnin' up good wagons?",
+    "clean": "Why do Indians always want to be burnin' up good wagons?"
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "Never liked seein' strangers. This is 'cause no stranger ever good news'd me.",
+    "clean": "Never liked seein' strangers. This is 'cause no stranger ever good news'd me."
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "[about Matt and Cherry] They was having some fun - peculiar kind of fun, sizing each other up for the future. Them two's gonna tangle for certain and when they do, it ain't gonna be pretty because they got a thousand miles to do it in.",
+    "clean": "They was having some fun - peculiar kind of fun, sizing each other up for the future. Them two's gonna tangle for certain and when they do, it ain't gonna be pretty because they got a thousand miles to do it in."
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "[to Bunk] I could take the end of your nose off just as easy. A man in your age stealin' sugar!",
+    "clean": "I could take the end of your nose off just as easy. A man in your age stealin' sugar!"
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "[to Bunk] Your sweet tooth is almost as bad as having a whiskey tongue or liking a woman.",
+    "clean": "Your sweet tooth is almost as bad as having a whiskey tongue or liking a woman."
+  },
+  {
+    "heading": "Nadine Groot",
+    "raw": "It's all right. For fourteen years, I've been scared, but it's gonna be all right.",
+    "clean": "It's all right. For fourteen years, I've been scared, but it's gonna be all right."
+  },
+  {
+    "heading": "Matt Garth",
+    "raw": "It was all burnin', only Indians around, just all burnin' and smokin', smellin'. They were burnin' everything. I can see it. It's plain. I can see it. It was burnin' the wagons. People was screamin'.",
+    "clean": "It was all burnin', only Indians around, just all burnin' and smokin', smellin'. They were burnin' everything. I can see it. It's plain. I can see it. It was burnin' the wagons. People was screamin'."
+  },
+  {
+    "heading": "Matt Garth",
+    "raw": "I've been wondering too. The way he looked when we left him. It all happened so fast. I hadn't...I hadn't started out...I couldn't let him hang Teeler and Laredo...I don't know. He was wrong. I hope I'm right. I hope there's a railroad in Abilene.",
+    "clean": "I've been wondering too. The way he looked when we left him. It all happened so fast. I hadn't...I hadn't started out...I couldn't let him hang Teeler and Laredo...I don't know. He was wrong. I hope I'm right. I hope there's a railroad in Abilene."
+  },
+  {
+    "heading": "Matt Garth",
+    "raw": "Which would you rather have? What's behind, or what might be ahead?",
+    "clean": "Which would you rather have? What's behind, or what might be ahead?"
+  },
+  {
+    "heading": "Matt Garth",
+    "raw": "How can a man sleep with Indians out ahead and him behind us?",
+    "clean": "How can a man sleep with Indians out ahead and him behind us?"
+  },
+  {
+    "heading": "Cherry Valance",
+    "raw": "[to Matt] But your heart's soft. Too soft. It may get you hurt some day.",
+    "clean": "But your heart's soft. Too soft. It may get you hurt some day."
+  },
+  {
+    "heading": "Tess Millay",
+    "raw": "[to Matt] What are you so mad about? I asked you why you're angry. Is it because - because some of your men might get hurt, killed maybe?",
+    "clean": "What are you so mad about? I asked you why you're angry. Is it because - because some of your men might get hurt, killed maybe?"
+  },
+  {
+    "heading": "Tess Millay",
+    "raw": "[to Matt] I asked you before why you were so mad. Is it, is it because your cattle, the cattle Cherry told me about, might run off? Or maybe, maybe you don't like the idea of helping, helping a bunch of women.",
+    "clean": "I asked you before why you were so mad. Is it, is it because your cattle, the cattle Cherry told me about, might run off? Or maybe, maybe you don't like the idea of helping, helping a bunch of women."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "In the year 1851, Thomas Dunson accompanied by a friend, Nadine Groot, left St. Louis and joined a wagon train headed for California. Three weeks on the trail found them near the northern border of Texas. The land to the South looked good to...",
+    "clean": "In the year 1851, Thomas Dunson accompanied by a friend, Nadine Groot, left St. Louis and joined a wagon train headed for California. Three weeks on the trail found them near the northern border of Texas. The land to the South looked good to..."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "To Dunson it was just a job, a big job. Ever north they drove ten thousand cattle crawling through hot, dry country and by the end of the first two weeks they had covered over one hundred and sixty miles. Every mile had taken its toll --- quietly.",
+    "clean": "To Dunson it was just a job, a big job. Ever north they drove ten thousand cattle crawling through hot, dry country and by the end of the first two weeks they had covered over one hundred and sixty miles. Every mile had taken its toll --- quietly."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "The days became longer, sleep was at a premium, hard work became harder and Dunson became a tyrant. After three weeks, they reached San Sabo. Here at last was water and a place to rest tired muscles and sore aching bones.",
+    "clean": "The days became longer, sleep was at a premium, hard work became harder and Dunson became a tyrant. After three weeks, they reached San Sabo. Here at last was water and a place to rest tired muscles and sore aching bones."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "Thirty days on the trail and they reached the Brazos. The way now became harder. Hills and rocks impeded their progress. Each weary mile became endless. The men became morose and worried. The cattle restless and jumpy.",
+    "clean": "Thirty days on the trail and they reached the Brazos. The way now became harder. Hills and rocks impeded their progress. Each weary mile became endless. The men became morose and worried. The cattle restless and jumpy."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "Sixty days, tired cattle and tired men. Trouble was not far off. The men sat in small groups, sullen and morose. The food became worse and Dunson was constantly on the alert for the first sign of mutiny. He felt as a man alone...",
+    "clean": "Sixty days, tired cattle and tired men. Trouble was not far off. The men sat in small groups, sullen and morose. The food became worse and Dunson was constantly on the alert for the first sign of mutiny. He felt as a man alone..."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "Secretly the rest of the men hoped Teeler, Laredo and Kelsey would succeed but not Dunson. He ordered the herd to move on and move they did with Dunson driving them at every step. The Red River was not far ahead and he meant to reach it by nightfall.",
+    "clean": "Secretly the rest of the men hoped Teeler, Laredo and Kelsey would succeed but not Dunson. He ordered the herd to move on and move they did with Dunson driving them at every step. The Red River was not far ahead and he meant to reach it by nightfall."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "So Matthew Garth had the responsibility of a great herd - - and onward they went with the spectre of Dunson behind. He had promised revenge and Matt knew nothing in the world would stop him from fulfilling that promise. The time was coming...",
+    "clean": "So Matthew Garth had the responsibility of a great herd - - and onward they went with the spectre of Dunson behind. He had promised revenge and Matt knew nothing in the world would stop him from fulfilling that promise. The time was coming..."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "And that night they moved. The river was rising, they must get across while there was still time. In the meantime, Dunson had found men and ammunition and taken up the chase. He was determined to overtake Matt...",
+    "clean": "And that night they moved. The river was rising, they must get across while there was still time. In the meantime, Dunson had found men and ammunition and taken up the chase. He was determined to overtake Matt..."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "One hundred days and in Matthew Garth's heart a growing fear that there was no railroad...",
+    "clean": "One hundred days and in Matthew Garth's heart a growing fear that there was no railroad..."
+  },
+  {
+    "heading": "Early Tales of Texas (Journal)",
+    "raw": "And history was written that day in Abilene, August 14, 1865, a day that marked completion of the first drive on the Chisholm Trail. Excitement and wild hilarity greeted the trail weary men and cattle as they poured into...",
+    "clean": "And history was written that day in Abilene, August 14, 1865, a day that marked completion of the first drive on the Chisholm Trail. Excitement and wild hilarity greeted the trail weary men and cattle as they poured into..."
+  },
+  {
+    "heading": "Others",
+    "raw": "Title card: Among the annals of the great state of Texas may be found the story of the first drive on the famous Chisholm Trail. A story of one of the great cattle herds of the world, of a man and a boy - - Thomas Dunson and Matthew Garth, the story of the Red River D.",
+    "clean": "Among the annals of the great state of Texas may be found the story of the first drive on the famous Chisholm Trail. A story of one of the great cattle herds of the world, of a man and a boy - - Thomas Dunson and Matthew Garth, the story of the Red River D."
+  },
+  {
+    "heading": "Others",
+    "raw": "Simms Reeves: Plantin' and readin', plantin' and readin'. Fill a man full of lead and stick him in the ground and then read words at him. Why, when you killed a man, why try to read the Lord in as a partner on the job?",
+    "clean": "Plantin' and readin', plantin' and readin'. Fill a man full of lead and stick him in the ground and then read words at him. Why, when you killed a man, why try to read the Lord in as a partner on the job?"
+  },
+  {
+    "heading": "Others",
+    "raw": "Mr. Melville: There's three times in a man's life when he has a right to yell at the moon: when he marries, when his children come, and when he finishes a job he had to be crazy to start.",
+    "clean": "There's three times in a man's life when he has a right to yell at the moon: when he marries, when his children come, and when he finishes a job he had to be crazy to start."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fen: I know you have work to do, Tom, but I want to be part of it. I love you. I want to be with you. Please take me with you. I'm strong. I can stand anything you can.",
+    "clean": "I know you have work to do, Tom, but I want to be part of it. I love you. I want to be with you. Please take me with you. I'm strong. I can stand anything you can."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tom: It's too much for a woman.",
+    "clean": "It's too much for a woman."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tom: I've made up my mind.",
+    "clean": "I've made up my mind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fen: Oh change your mind, Tom. Just once in your life change your mind.",
+    "clean": "Oh change your mind, Tom. Just once in your life change your mind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tom: I'll send for ya. Will ya come?",
+    "clean": "I'll send for ya. Will ya come?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fen: Of course I'll come. But you're wrong.",
+    "clean": "Of course I'll come. But you're wrong."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fen: Go, please. If you're going to go, please go now. I want to be with you so much. My knees feel like...like they have knives in them. Bye.",
+    "clean": "Go, please. If you're going to go, please go now. I want to be with you so much. My knees feel like...like they have knives in them. Bye."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Don't ever trust anybody until you know 'em.",
+    "clean": "Don't ever trust anybody until you know 'em."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I won't - after this. Thanks for telling me.",
+    "clean": "I won't - after this. Thanks for telling me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Yeah, well, it looks like we'll have to take you along. [he returns Matt's gun] Well, are you gonna use it?",
+    "clean": "Yeah, well, it looks like we'll have to take you along. Well, are you gonna use it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: No, no. But don't ever try to take it away from me again.",
+    "clean": "No, no. But don't ever try to take it away from me again."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: [to Groot] He'll do.",
+    "clean": "He'll do."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: This is it. This is where we start growin' good beef...Everything a man could want. Good water and grass and plenty of it.",
+    "clean": "This is it. This is where we start growin' good beef...Everything a man could want. Good water and grass and plenty of it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Who does it belong to?",
+    "clean": "Who does it belong to?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: To me! Some day, that'll all be covered with good beef. And I'll put a mark, a brand on 'em, to show they're mine too.",
+    "clean": "To me! Some day, that'll all be covered with good beef. And I'll put a mark, a brand on 'em, to show they're mine too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: What kind of a mark?",
+    "clean": "What kind of a mark?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I've been thinkin' about that. There'll be two lines, like this, like the banks of a river. It'll be the Red River brand.",
+    "clean": "I've been thinkin' about that. There'll be two lines, like this, like the banks of a river. It'll be the Red River brand."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I see a 'D' for Dunson, but my name's Matthew...I don't see any 'M' on that brand.",
+    "clean": "I see a 'D' for Dunson, but my name's Matthew...I don't see any 'M' on that brand."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I'll put an 'M' on it when you earn it.",
+    "clean": "I'll put an 'M' on it when you earn it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: That's fair enough. I'll earn it.",
+    "clean": "That's fair enough. I'll earn it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Tell Don Diego, tell him that all the land north of that river's mine. Tell him to stay off of it.",
+    "clean": "Tell Don Diego, tell him that all the land north of that river's mine. Tell him to stay off of it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fernandez: Oh, but the land is his.",
+    "clean": "Oh, but the land is his."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Where did he get it?",
+    "clean": "Where did he get it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fernandez: Oh many years ago by grant and patent, inscribed by the King of all of Spain.",
+    "clean": "Oh many years ago by grant and patent, inscribed by the King of all of Spain."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You mean he took it away from whomever was here before. Indians maybe.",
+    "clean": "You mean he took it away from whomever was here before. Indians maybe."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fernandez: Maybe so.",
+    "clean": "Maybe so."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Well, I'm takin' it away from him.",
+    "clean": "Well, I'm takin' it away from him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fernandez: Others have thought as you, señor. Others have tried.",
+    "clean": "Others have thought as you, señor. Others have tried."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: And you've always been good enough to stop 'em?",
+    "clean": "And you've always been good enough to stop 'em?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fernandez: Amigo, it is my work.",
+    "clean": "Amigo, it is my work."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Pretty unhealthy job.",
+    "clean": "Pretty unhealthy job."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: How'd you know when he was gonna draw?",
+    "clean": "How'd you know when he was gonna draw?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: By watchin' his eyes. Remember that.",
+    "clean": "By watchin' his eyes. Remember that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I will.",
+    "clean": "I will."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Missouri?",
+    "clean": "Missouri?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: That's what I figured.",
+    "clean": "That's what I figured."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: And have you two been doin' a lot of figurin'? While you were at it, did you figure out the best way to get 'em there?",
+    "clean": "And have you two been doin' a lot of figurin'? While you were at it, did you figure out the best way to get 'em there?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Which trail to take? Yeah.",
+    "clean": "Which trail to take? Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: He's afraid.",
+    "clean": "He's afraid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: Afraid? Why you're crazy, you're looney.",
+    "clean": "Afraid? Why you're crazy, you're looney."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Am I?",
+    "clean": "Am I?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: No, he knows that kind of fighting. What else?",
+    "clean": "No, he knows that kind of fighting. What else?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: And then come the war when you was away. He learned a lot of things for hisself. He learned that a ranch ain't only beef but it's money. But the war took all the money out of the South. He didn't know about money, Matt. He never had none. He didn't know what to do.",
+    "clean": "And then come the war when you was away. He learned a lot of things for hisself. He learned that a ranch ain't only beef but it's money. But the war took all the money out of the South. He didn't know about money, Matt. He never had none. He didn't know what to do."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: You mean he just doesn't know who to fight.",
+    "clean": "You mean he just doesn't know who to fight."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: That's all right.",
+    "clean": "That's all right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: He's just been waitin' for you to head the herd north and drive. A full drive that's never been done before. Nine, ten thousand head of cattle clear to Missouri.",
+    "clean": "He's just been waitin' for you to head the herd north and drive. A full drive that's never been done before. Nine, ten thousand head of cattle clear to Missouri."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: We could make it.",
+    "clean": "We could make it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: We...well Matt, I'm glad you come home, cause, well, I'm glad you come home.",
+    "clean": "We...well Matt, I'm glad you come home, cause, well, I'm glad you come home."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I said 'Brand him.'",
+    "clean": "I said 'Brand him.'"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: He's wearing a Meeker iron.",
+    "clean": "He's wearing a Meeker iron."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I can't see it.",
+    "clean": "I can't see it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: [To Teeler] Brand him.",
+    "clean": "Brand him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: All right, but the next one up's another Diego.",
+    "clean": "All right, but the next one up's another Diego."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Brand him. Put the iron on all of 'em, Teeler. Anything you see, slap it with a 'Red River D' and burn it deep.",
+    "clean": "Brand him. Put the iron on all of 'em, Teeler. Anything you see, slap it with a 'Red River D' and burn it deep."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Why not?",
+    "clean": "Why not?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: You're gonna wind up branding every rump in the state of Texas except mine.",
+    "clean": "You're gonna wind up branding every rump in the state of Texas except mine."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Hand me that iron, Teeler. You don't think I'd do it, do ya?",
+    "clean": "Hand me that iron, Teeler. You don't think I'd do it, do ya?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I don't.",
+    "clean": "I don't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Matt, I'm goin' to Missouri with every steer, cow, and bull that I can lay my hands on.",
+    "clean": "Matt, I'm goin' to Missouri with every steer, cow, and bull that I can lay my hands on."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I think Meeker might be real pleased to see our brand on his stock.",
+    "clean": "I think Meeker might be real pleased to see our brand on his stock."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: That I'll argue with Meeker.",
+    "clean": "That I'll argue with Meeker."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: That's a good looking gun you were about to use back there. Can I see it? [Matt hands his gun over] And you'd like to see mine. [Cherry hands it to Matt] Nice! Awful nice! You know, there are only two things more beautiful than a good gun: a Swiss watch or a woman from anywhere. You ever had a good Swiss watch?",
+    "clean": "That's a good looking gun you were about to use back there. Can I see it? And you'd like to see mine. Nice! Awful nice! You know, there are only two things more beautiful than a good gun: a Swiss watch or a woman from anywhere. You ever had a good Swiss watch?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Go ahead! Try it!",
+    "clean": "Go ahead! Try it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: Hey! That's very good!",
+    "clean": "Hey! That's very good!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Hey! Hey! That's good too! Go on! Keep it going!",
+    "clean": "Hey! Hey! That's good too! Go on! Keep it going!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: There they are, Matt. Fourteen years of hard work. And they say we can't make the drive.",
+    "clean": "There they are, Matt. Fourteen years of hard work. And they say we can't make the drive."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: They could be wrong.",
+    "clean": "They could be wrong."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: They'd better be.",
+    "clean": "They'd better be."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: Why drive 'em to Missouri? Why not turn west at the Red and head 'em for Kansas?...There's a railroad in Kansas, too...I saw the one in Topeka, and there's one in Abilene...",
+    "clean": "Why drive 'em to Missouri? Why not turn west at the Red and head 'em for Kansas?...There's a railroad in Kansas, too...I saw the one in Topeka, and there's one in Abilene..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buster McGee: Abilene, that's further west!",
+    "clean": "Abilene, that's further west!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Did you see it in Abilene?",
+    "clean": "Did you see it in Abilene?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: I didn't get there. I met a girl in Kansas City. She fancied she could sing. She had...",
+    "clean": "I didn't get there. I met a girl in Kansas City. She fancied she could sing. She had..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: You know, if we could head west at the Red...",
+    "clean": "You know, if we could head west at the Red..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: We'd save ourselves a heap of...",
+    "clean": "We'd save ourselves a heap of..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: We're goin' to Missouri. I've seen buyers and cash in Sedalia. [To Cherry] What have you seen in Abilene?",
+    "clean": "We're goin' to Missouri. I've seen buyers and cash in Sedalia. What have you seen in Abilene?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: Not a thing. Just the girl told me...",
+    "clean": "Not a thing. Just the girl told me..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: We're goin' to Missouri. [Dunson walks off]",
+    "clean": "We're goin' to Missouri."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: [To Matt about Dunson] I suppose if I tangled with him, I'd have to take you on too.",
+    "clean": "I suppose if I tangled with him, I'd have to take you on too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: You'll find him a handful by himself.",
+    "clean": "You'll find him a handful by himself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: [about his false teeth, that he lost playing cards] If you was half-human, you'd give 'em back to me. You can see I could use 'em. Besides, it would help keep the dust out of my mouth.",
+    "clean": "If you was half-human, you'd give 'em back to me. You can see I could use 'em. Besides, it would help keep the dust out of my mouth."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Quo: Keep mouth shut. Dust not get in.",
+    "clean": "Keep mouth shut. Dust not get in."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: Bet I ate ten pounds in the last sixteen days. Before this shenanigan is over, I'll probably eat enough land to incorporate in the Union. The state of Groot.",
+    "clean": "Bet I ate ten pounds in the last sixteen days. Before this shenanigan is over, I'll probably eat enough land to incorporate in the Union. The state of Groot."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: [after shooting Bunk in the shoulder] You'd have shot him right between the eyes.",
+    "clean": "You'd have shot him right between the eyes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Just as sure as you're standin' there. Well, you shot him. You can take care of him.",
+    "clean": "Just as sure as you're standin' there. Well, you shot him. You can take care of him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: A man can't eat this kind of food. After we lost another grub wagon, we should have turned back.",
+    "clean": "A man can't eat this kind of food. After we lost another grub wagon, we should have turned back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Well, we didn't turn back and we're not goin' to. And even if we had, I couldn't replace what we lost. I'm broke. Got nothin' to buy it with. So you're on short rations and bad coffee. And you're gonna be until we finish the drive. And you're gonna finish it...Like it or not, that's it.",
+    "clean": "Well, we didn't turn back and we're not goin' to. And even if we had, I couldn't replace what we lost. I'm broke. Got nothin' to buy it with. So you're on short rations and bad coffee. And you're gonna be until we finish the drive. And you're gonna finish it...Like it or not, that's it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: You didn't have to do that back there.",
+    "clean": "You didn't have to do that back there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You joined in.",
+    "clean": "You joined in."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Yeah, and I thought you were wrong.",
+    "clean": "Yeah, and I thought you were wrong."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Well then why didn't ya...",
+    "clean": "Well then why didn't ya..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Don't try and tell me what to think. I'll take your orders about work, but not about what to think.",
+    "clean": "Don't try and tell me what to think. I'll take your orders about work, but not about what to think."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You think I'm to blame for that?",
+    "clean": "You think I'm to blame for that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Just as sure as you're sittin' there.",
+    "clean": "Just as sure as you're sittin' there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: And so?",
+    "clean": "And so?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: So I'll take your orders.",
+    "clean": "So I'll take your orders."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Well, here's your Red.",
+    "clean": "Well, here's your Red."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: It's quite a river.",
+    "clean": "It's quite a river."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Sure had a lot smaller herd the last time we crossed.",
+    "clean": "Sure had a lot smaller herd the last time we crossed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: One bull and a cow. Well, this looks like as good a place as any.",
+    "clean": "One bull and a cow. Well, this looks like as good a place as any."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: This will take us the rest of the day and part of the night. Why not cross fresh in the morning?",
+    "clean": "This will take us the rest of the day and part of the night. Why not cross fresh in the morning?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: We'll put 'em across now!",
+    "clean": "We'll put 'em across now!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: We've got a pretty tired bunch behind us.",
+    "clean": "We've got a pretty tired bunch behind us."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Tired men don't run away.",
+    "clean": "Tired men don't run away."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: We can't keep 'em this wore out all the rest of the drive.",
+    "clean": "We can't keep 'em this wore out all the rest of the drive."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: No, but we can keep 'em this wore out until Cherry gets back. Then nobody'll want to run away.",
+    "clean": "No, but we can keep 'em this wore out until Cherry gets back. Then nobody'll want to run away."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: That's awful good, Tom. Boys did all right.",
+    "clean": "That's awful good, Tom. Boys did all right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: Why don't you tell 'em so, Tom?",
+    "clean": "Why don't you tell 'em so, Tom?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: That's their job.",
+    "clean": "That's their job."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: They're awful tired.",
+    "clean": "They're awful tired."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I'll bet we won't have to count noses in the morning.",
+    "clean": "I'll bet we won't have to count noses in the morning."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buster: He's gettin' worse every day. Sometimes, I think he's goin' plum out of his head.",
+    "clean": "He's gettin' worse every day. Sometimes, I think he's goin' plum out of his head."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: You know, Matt, things ain't right. It's him. He's gotta get some sleep and if he don't, somethin's gonna happen.",
+    "clean": "You know, Matt, things ain't right. It's him. He's gotta get some sleep and if he don't, somethin's gonna happen."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Get down off them horses. I don't favor lookin' up to the likes of you...That's better. You should be crawlin'. Cherry, I sent you out after three of 'em. You brought back two.",
+    "clean": "Get down off them horses. I don't favor lookin' up to the likes of you...That's better. You should be crawlin'. Cherry, I sent you out after three of 'em. You brought back two."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: Bill Kelsey figured he'd rather fight. Made a good one of it for a while.",
+    "clean": "Bill Kelsey figured he'd rather fight. Made a good one of it for a while."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Laredo, Teeler, you signed on for the drive and you signed on to finish it.",
+    "clean": "Laredo, Teeler, you signed on for the drive and you signed on to finish it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Laredo: That's right, we did.",
+    "clean": "That's right, we did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You stole beans and flour, and cartridges. Besides bein' deserters, you're common thieves.",
+    "clean": "You stole beans and flour, and cartridges. Besides bein' deserters, you're common thieves."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Laredo: The law might see it different...",
+    "clean": "The law might see it different..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I'm the law. You're a thief! You too, Teeler. Anything more?",
+    "clean": "I'm the law. You're a thief! You too, Teeler. Anything more?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: I know what you're gonna do to us, but first I wanna tell ya somethin'.",
+    "clean": "I know what you're gonna do to us, but first I wanna tell ya somethin'."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Go ahead.",
+    "clean": "Go ahead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: You're crazy. You've been drinkin' and you ain't been sleepin'. If you ain't crazy, you're a skin close to it.",
+    "clean": "You're crazy. You've been drinkin' and you ain't been sleepin'. If you ain't crazy, you're a skin close to it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You through?",
+    "clean": "You through?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You finished?",
+    "clean": "You finished?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: Yeah. Now you can get your Bible and read over us after you shoot us.",
+    "clean": "Yeah. Now you can get your Bible and read over us after you shoot us."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I'm gonna hang ya.",
+    "clean": "I'm gonna hang ya."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: No. No, you're not.",
+    "clean": "No. No, you're not."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: You're not going to hang them.",
+    "clean": "You're not going to hang them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Who'll stop me?",
+    "clean": "Who'll stop me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I will.",
+    "clean": "I will."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: Give me that gun. Somebody give me - I'll kill him. Let me go! He was gonna kill me! He wasn't gonna give me a chance - [Matt slaps him]",
+    "clean": "Give me that gun. Somebody give me - I'll kill him. Let me go! He was gonna kill me! He wasn't gonna give me a chance -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Turn him loose. Cherry, give me that gun. Here's what you've been trying for. All right, use it! Go on, you got what you wanted. What are you waiting for? If you don't want to live, all you have to do is - You're a lucky man, Teeler. This is how close it came.",
+    "clean": "Turn him loose. Cherry, give me that gun. Here's what you've been trying for. All right, use it! Go on, you got what you wanted. What are you waiting for? If you don't want to live, all you have to do is - You're a lucky man, Teeler. This is how close it came."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: Matt, we're gettin' as crazy as he is. [Teeler returns the gun to Matt]",
+    "clean": "Matt, we're gettin' as crazy as he is."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Keep it. You want to finish the drive?",
+    "clean": "Keep it. You want to finish the drive?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: Where are we goin'?",
+    "clean": "Where are we goin'?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Abilene.",
+    "clean": "Abilene."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: Who's headin' it?",
+    "clean": "Who's headin' it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I am.",
+    "clean": "I am."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buster: What about Dunson?",
+    "clean": "What about Dunson?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: He stays here. We're takin' the herd.",
+    "clean": "He stays here. We're takin' the herd."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teeler: That's good enough for me.",
+    "clean": "That's good enough for me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Groot? How about you?",
+    "clean": "Groot? How about you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: You was wrong, Mr. Dunson. I've been with ya a lot of years. And up till now, right or wrong, I've always done like ya said. Got to be kind of a habit with me, I guess, 'cuz that's why I'm stayin' with ya.",
+    "clean": "You was wrong, Mr. Dunson. I've been with ya a lot of years. And up till now, right or wrong, I've always done like ya said. Got to be kind of a habit with me, I guess, 'cuz that's why I'm stayin' with ya."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Go on with 'em.",
+    "clean": "Go on with 'em."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: Thanks. Thanks for makin' it easy on me. All right, men, I'll be comin' with you.",
+    "clean": "Thanks. Thanks for makin' it easy on me. All right, men, I'll be comin' with you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Throw 'em on the trail, start driving. Buster, you wait here till I get back. [He rides off to help round up the herd]",
+    "clean": "Throw 'em on the trail, start driving. Buster, you wait here till I get back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: If you come lookin' for me, Mr. Dunson, I'll be in Abilene.",
+    "clean": "If you come lookin' for me, Mr. Dunson, I'll be in Abilene."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: If there's any chance at all, we'll get your herd to Abilene.",
+    "clean": "If there's any chance at all, we'll get your herd to Abilene."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Cherry was right. You're soft. You should've let him kill me, 'cause I'm gonna kill you. I'll catch up with ya! I don't know when, but I'll catch up. Every time you turn around, expect to see me. 'Cause one time you'll turn around and I'll be there. I'll kill ya, Matt.",
+    "clean": "Cherry was right. You're soft. You should've let him kill me, 'cause I'm gonna kill you. I'll catch up with ya! I don't know when, but I'll catch up. Every time you turn around, expect to see me. 'Cause one time you'll turn around and I'll be there. I'll kill ya, Matt."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Why does he [Dunson] think that way?",
+    "clean": "Why does he think that way?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: You love him, don't you? He must love you. That wouldn't be hard. [She kisses Matt on the lips] Did you like that?",
+    "clean": "You love him, don't you? He must love you. That wouldn't be hard. Did you like that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I've always been kind of slow in making up my mind.",
+    "clean": "I've always been kind of slow in making up my mind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Maybe I can help. [They kiss again]",
+    "clean": "Maybe I can help."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I don't need any more help but will you do that again? [They kiss again]",
+    "clean": "I don't need any more help but will you do that again?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: We can't take her with us, can we?",
+    "clean": "We can't take her with us, can we?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: Well we could, uh...",
+    "clean": "Well we could, uh..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Groot: No, no, I don't suppose we could.",
+    "clean": "No, no, I don't suppose we could."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I'll take care of Mr. Dunson. [Dunson is surprised she knows his name] I believe it's your beef we're eating.",
+    "clean": "I'll take care of Mr. Dunson. I believe it's your beef we're eating."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Who told you that?",
+    "clean": "Who told you that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: The man you promised to kill.",
+    "clean": "The man you promised to kill."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Did he tell you that too?",
+    "clean": "Did he tell you that too?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: You're tired, aren't you? Tired, hungry and just a little bit irritable. You'll feel better after you eat. We'll talk then.",
+    "clean": "You're tired, aren't you? Tired, hungry and just a little bit irritable. You'll feel better after you eat. We'll talk then."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: How'd you get that away from him?",
+    "clean": "How'd you get that away from him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I stole it...",
+    "clean": "I stole it..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: So you stole that bracelet. How did you get it?",
+    "clean": "So you stole that bracelet. How did you get it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Would you really like to know, Mr. Dunson?",
+    "clean": "Would you really like to know, Mr. Dunson?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: How'd you get it?",
+    "clean": "How'd you get it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I got it in the rain eight days ago, before he took your herd across that river and left.",
+    "clean": "I got it in the rain eight days ago, before he took your herd across that river and left."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I'm wondering whether to believe you.",
+    "clean": "I'm wondering whether to believe you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I don't care whether you do or not.",
+    "clean": "I don't care whether you do or not."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I believe that.",
+    "clean": "I believe that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: You wanna hear more?",
+    "clean": "You wanna hear more?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Go ahead.",
+    "clean": "Go ahead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: It was raining. If it hadn't rained, I wouldn't be here talking to you. He wouldn't be here where you could find him to kill him. You still intend to kill him, don't you?",
+    "clean": "It was raining. If it hadn't rained, I wouldn't be here talking to you. He wouldn't be here where you could find him to kill him. You still intend to kill him, don't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Nothing you can say is gonna...",
+    "clean": "Nothing you can say is gonna..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I didn't say anything...",
+    "clean": "I didn't say anything..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: So he went off and left ya. I didn't give him that much credit. Are you in love with him?",
+    "clean": "So he went off and left ya. I didn't give him that much credit. Are you in love with him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I thought you'd ask that. Can a woman love a man who'd go off and leave her?",
+    "clean": "I thought you'd ask that. Can a woman love a man who'd go off and leave her?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Well, she, she shouldn't...",
+    "clean": "Well, she, she shouldn't..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I wanted to go with him, but he had work to do. He had to get your cattle to market. Said I wasn't strong enough to go and nothing I could do or say to make him change his mind. But I wanted to go with him. I wanted him so much that...",
+    "clean": "I wanted to go with him, but he had work to do. He had to get your cattle to market. Said I wasn't strong enough to go and nothing I could do or say to make him change his mind. But I wanted to go with him. I wanted him so much that..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: That you felt like you had knives stickin' in ya.",
+    "clean": "That you felt like you had knives stickin' in ya."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: How did you know that? I suppose other people have felt that way before.",
+    "clean": "How did you know that? I suppose other people have felt that way before."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: They have.",
+    "clean": "They have."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Now will you tell me something, Mr. Dunson?",
+    "clean": "Now will you tell me something, Mr. Dunson?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Why do you want to kill him?",
+    "clean": "Why do you want to kill him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Because he's a thief.",
+    "clean": "Because he's a thief."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Do you think he thinks that?",
+    "clean": "Do you think he thinks that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Why did you want him to have a son?",
+    "clean": "Why did you want him to have a son?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Because I built something. Built it with my own hands. And I can't live forever and live to see it grow. I thought I had a son. But I haven't and I want one.",
+    "clean": "Because I built something. Built it with my own hands. And I can't live forever and live to see it grow. I thought I had a son. But I haven't and I want one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I'm sorry for you, Mr. Dunson. Very sorry.",
+    "clean": "I'm sorry for you, Mr. Dunson. Very sorry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: What would you say if, if I offered ya half of everything I own for a son?",
+    "clean": "What would you say if, if I offered ya half of everything I own for a son?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Your son?",
+    "clean": "Your son?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You can have a son, can't ya? That's all that matters.",
+    "clean": "You can have a son, can't ya? That's all that matters."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: By Dunson out of Millay? Half of everything you've got.",
+    "clean": "By Dunson out of Millay? Half of everything you've got."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: That's right.",
+    "clean": "That's right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I'll have your son, Mr. Dunson, if you'll stop now. Stop now and go back where you came from. I'll have your son.",
+    "clean": "I'll have your son, Mr. Dunson, if you'll stop now. Stop now and go back where you came from. I'll have your son."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Yeah, I thought so.",
+    "clean": "Yeah, I thought so."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: When did you fall in love with him?",
+    "clean": "When did you fall in love with him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: It was under a wagon, in six inches of mud. When did, when did you...when did you fall in love with her?",
+    "clean": "It was under a wagon, in six inches of mud. When did, when did you...when did you fall in love with her?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: The girl you told me about. The one you left, walked out on.",
+    "clean": "The girl you told me about. The one you left, walked out on."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: 'I told you about'? Did he tell you...?",
+    "clean": "'I told you about'? Did he tell you...?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: No, no, you told me. You knew how I felt when he left me. She must have felt the same way when you left her. That's right, isn't it? Or can't you remember?",
+    "clean": "No, no, you told me. You knew how I felt when he left me. She must have felt the same way when you left her. That's right, isn't it? Or can't you remember?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: I can remember.",
+    "clean": "I can remember."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Oh I, I hope so, because, because I want you to think about it while I ask you something. I want you to think hard.",
+    "clean": "Oh I, I hope so, because, because I want you to think about it while I ask you something. I want you to think hard."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I want to go on with you.",
+    "clean": "I want to go on with you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: That won't do any good. Nothing you can say or do...",
+    "clean": "That won't do any good. Nothing you can say or do..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: And though I know you told me that, oh please, I want to go with you. Please.",
+    "clean": "And though I know you told me that, oh please, I want to go with you. Please."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: All right.",
+    "clean": "All right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Thanks. Thanks a lot.",
+    "clean": "Thanks. Thanks a lot."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Melville: You gonna wait for Dunson, huh? I've been talkin' to some of your men. Isn't that check and the fact that you got here, isn't that gonna make any difference?",
+    "clean": "You gonna wait for Dunson, huh? I've been talkin' to some of your men. Isn't that check and the fact that you got here, isn't that gonna make any difference?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I don't think so, Mr. Melville.",
+    "clean": "I don't think so, Mr. Melville."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Melville: I suppose I'm crazy but...",
+    "clean": "I suppose I'm crazy but..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: You want me to run away?",
+    "clean": "You want me to run away?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Melville: No, of course not. Couldn't, couldn't I talk to him?",
+    "clean": "No, of course not. Couldn't, couldn't I talk to him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I still have to talk to him after that.",
+    "clean": "I still have to talk to him after that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: I know you've only a few hours, but listen for just a minute, that's all, and then I won't talk about it anymore. Just a minute. He hasn't changed his mind, Matthew.",
+    "clean": "I know you've only a few hours, but listen for just a minute, that's all, and then I won't talk about it anymore. Just a minute. He hasn't changed his mind, Matthew."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: I didn't think he would.",
+    "clean": "I didn't think he would."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Melville: You know that young man [Matt] isn't gonna use his gun, don't ya?",
+    "clean": "You know that young man isn't gonna use his gun, don't ya?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cherry: Yeah. But I haven't any such notions.",
+    "clean": "Yeah. But I haven't any such notions."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: No, just nicked the...",
+    "clean": "No, just nicked the..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tess: Then stay still. No, don't stay still. I changed my mind. Go ahead. Beat each other crazy. Maybe it will put the sense in both of ya. Go ahead. Go on. Do it!",
+    "clean": "Then stay still. No, don't stay still. I changed my mind. Go ahead. Beat each other crazy. Maybe it will put the sense in both of ya. Go ahead. Go on. Do it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You'd better marry that girl, Matt.",
+    "clean": "You'd better marry that girl, Matt."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: Yeah, I think I...Hey, when are you gonna stop telling people what to do?",
+    "clean": "Yeah, I think I...Hey, when are you gonna stop telling people what to do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: Right now. At least as soon as...",
+    "clean": "Right now. At least as soon as..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: When?",
+    "clean": "When?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: ...as soon as I tell ya one thing more.",
+    "clean": "...as soon as I tell ya one thing more."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Matt: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: When we get back to the ranch, I want ya to change the brand. It'll be like this, the Red River 'D' and we'll add an 'M' to it. You don't mind that do ya?",
+    "clean": "When we get back to the ranch, I want ya to change the brand. It'll be like this, the Red River 'D' and we'll add an 'M' to it. You don't mind that do ya?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dunson: You've earned it.",
+    "clean": "You've earned it."
+  }
+]

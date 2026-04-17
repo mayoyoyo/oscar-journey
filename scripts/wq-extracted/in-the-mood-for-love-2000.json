@@ -1,0 +1,242 @@
+[
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: In the old days, if someone had a secret they didn't want to share... you know what they did?",
+    "clean": "In the old days, if someone had a secret they didn't want to share... you know what they did?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ah Ping: Have no idea.",
+    "clean": "Have no idea."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: They went up a mountain, found a tree, carved a hole in it, and whispered the secret into the hole. Then they covered it with mud. And leave the secret there forever.",
+    "clean": "They went up a mountain, found a tree, carved a hole in it, and whispered the secret into the hole. Then they covered it with mud. And leave the secret there forever."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ah Ping: What a pain! I'd just go to get laid.",
+    "clean": "What a pain! I'd just go to get laid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: Not everyone's like you.",
+    "clean": "Not everyone's like you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: It's me. If there's an extra ticket... would you go with me?",
+    "clean": "It's me. If there's an extra ticket... would you go with me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: It's me. If there's an extra ticket... would you go with me?",
+    "clean": "It's me. If there's an extra ticket... would you go with me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Am I hopeless?",
+    "clean": "Am I hopeless?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: Not really.",
+    "clean": "Not really."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Why did you call me at the office today?",
+    "clean": "Why did you call me at the office today?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: I had nothing to do. I wanted to hear your voice.",
+    "clean": "I had nothing to do. I wanted to hear your voice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: I have a chapter to finish.",
+    "clean": "I have a chapter to finish."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Where have you got to?",
+    "clean": "Where have you got to?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: The drunken master just showed up.",
+    "clean": "The drunken master just showed up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: When did he get written in?",
+    "clean": "When did he get written in?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: Just now!",
+    "clean": "Just now!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: That handbag I saw you with this evening... Where did you buy it?",
+    "clean": "That handbag I saw you with this evening... Where did you buy it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Why do you ask?",
+    "clean": "Why do you ask?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: It looked so elegant. I want to get one for my wife.",
+    "clean": "It looked so elegant. I want to get one for my wife."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Mr. Chow, you're so good to your wife!",
+    "clean": "Mr. Chow, you're so good to your wife!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: Not really! My wife is so fussy. Her birthday is some days away. I don't know what to get her. Could you buy one for me to give her?",
+    "clean": "Not really! My wife is so fussy. Her birthday is some days away. I don't know what to get her. Could you buy one for me to give her?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Maybe she wouldn't want one just exactly the same.",
+    "clean": "Maybe she wouldn't want one just exactly the same."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: You're right, I didn't think of that.",
+    "clean": "You're right, I didn't think of that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: A woman would mind.",
+    "clean": "A woman would mind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: Yes, especially since we're neighbors. Do they come in other colors?",
+    "clean": "Yes, especially since we're neighbors. Do they come in other colors?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: I'd have to ask my husband.",
+    "clean": "I'd have to ask my husband."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: He bought it for me on a business trip abroad. They aren't on sale here.",
+    "clean": "He bought it for me on a business trip abroad. They aren't on sale here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: Then never mind.",
+    "clean": "Then never mind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Actually... I want to ask you something too. Where did you buy your tie?",
+    "clean": "Actually... I want to ask you something too. Where did you buy your tie?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: I don't know where it came from. My wife buys all my ties.",
+    "clean": "I don't know where it came from. My wife buys all my ties."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Really?",
+    "clean": "Really?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: She bought this one on a business trip abroad. It's not on sale here.",
+    "clean": "She bought this one on a business trip abroad. It's not on sale here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: What a coincidence!",
+    "clean": "What a coincidence!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Actually... My husband has one just like it. He said it was a gift from his boss. So he wears it every day.",
+    "clean": "Actually... My husband has one just like it. He said it was a gift from his boss. So he wears it every day."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: And my wife has a bag just like yours.",
+    "clean": "And my wife has a bag just like yours."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: I know, I've seen it.",
+    "clean": "I know, I've seen it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: What are you getting at, actually?",
+    "clean": "What are you getting at, actually?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: I thought I was the only one who knew.",
+    "clean": "I thought I was the only one who knew."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Why didn't you call me today?",
+    "clean": "Why didn't you call me today?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: I was afraid you won't like it.",
+    "clean": "I was afraid you won't like it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Then don't call me ever again.",
+    "clean": "Then don't call me ever again."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: I sometimes wonder what I'd be if I hadn't married. Have you ever thought of that?",
+    "clean": "I sometimes wonder what I'd be if I hadn't married. Have you ever thought of that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Maybe happier! I didn't know married life would be so complicated! When you're single, you are only responsible to yourself. Once you're married, doing well on your own is not enough.",
+    "clean": "Maybe happier! I didn't know married life would be so complicated! When you're single, you are only responsible to yourself. Once you're married, doing well on your own is not enough."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: Look at me, do you have a mistress?",
+    "clean": "Look at me, do you have a mistress?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Su Li-zhen: I didn't expect it to hurt that much.",
+    "clean": "I didn't expect it to hurt that much."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chow Mo-wan: This is just a rehearsal.",
+    "clean": "This is just a rehearsal."
+  },
+  {
+    "heading": "Captions",
+    "raw": "He remembers those vanished years. As though looking through a dusty window pane, the past is something he could see, but not touch. And everything he sees is blurred and indistinct.",
+    "clean": "He remembers those vanished years. As though looking through a dusty window pane, the past is something he could see, but not touch. And everything he sees is blurred and indistinct."
+  },
+  {
+    "heading": "Captions",
+    "raw": "It is a restless moment. She has kept her head lowered... to give him a chance to come closer. But he could not, for lack of courage. She turns and walks away.",
+    "clean": "It is a restless moment. She has kept her head lowered... to give him a chance to come closer. But he could not, for lack of courage. She turns and walks away."
+  }
+]

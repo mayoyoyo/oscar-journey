@@ -1,0 +1,77 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed and written by Ingmar Bergman.",
+    "clean": "Directed and written by Ingmar Bergman."
+  },
+  {
+    "heading": "Alma",
+    "raw": "I don't know what to say, Doctor. First her face looks soft, almost childish. Then you see her eyes... She's got such a severe look, I think.",
+    "clean": "I don't know what to say, Doctor. First her face looks soft, almost childish. Then you see her eyes... She's got such a severe look, I think."
+  },
+  {
+    "heading": "Alma",
+    "raw": "I'm interested in film and theatre, but I go so seldom. I have enormous admiration for artists. I think art has an enormous importance in life. Especially for people who are in difficulties of some kind.",
+    "clean": "I'm interested in film and theatre, but I go so seldom. I have enormous admiration for artists. I think art has an enormous importance in life. Especially for people who are in difficulties of some kind."
+  },
+  {
+    "heading": "Alma",
+    "raw": "Many people have told me that I'm a good listener. Funny, huh? No one's ever bothered to listen to me. Like you are now. You're listening. I think you're the first person who's listened to me. It can't be interesting at all. You could read a good book instead.",
+    "clean": "Many people have told me that I'm a good listener. Funny, huh? No one's ever bothered to listen to me. Like you are now. You're listening. I think you're the first person who's listened to me. It can't be interesting at all. You could read a good book instead."
+  },
+  {
+    "heading": "Alma",
+    "raw": "Can you understand? What happens to everything you believe in?",
+    "clean": "Can you understand? What happens to everything you believe in?"
+  },
+  {
+    "heading": "Alma",
+    "raw": "When you sleep your face is slack. Your mouth is swollen and ugly. You have a nasty wrinkle on your forehead. You smell of sleep and tears. I can see the pulse on your throat. You have a scar you normally cover with makeup there.",
+    "clean": "When you sleep your face is slack. Your mouth is swollen and ugly. You have a nasty wrinkle on your forehead. You smell of sleep and tears. I can see the pulse on your throat. You have a scar you normally cover with makeup there."
+  },
+  {
+    "heading": "Alma",
+    "raw": "I'm not like you. I don't feel like you. I'm Sister Alma, I'm just here to help you. I'm not Elisabet Vogler. You are Elisabet Vogler.",
+    "clean": "I'm not like you. I don't feel like you. I'm Sister Alma, I'm just here to help you. I'm not Elisabet Vogler. You are Elisabet Vogler."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Vogler: You love someone, or more correctly, say you love someone, it nets you something... tangible. As tangible as words can be, I guess.",
+    "clean": "You love someone, or more correctly, say you love someone, it nets you something... tangible. As tangible as words can be, I guess."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alma: Mr. Vogler, I'm not your wife.",
+    "clean": "Mr. Vogler, I'm not your wife."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Vogler: You are also loved. You build a little fellowship, it generates security, you see the possibility of enduring, not so? Heh. How can I say everything I've thought without losing my way and boring you?",
+    "clean": "You are also loved. You build a little fellowship, it generates security, you see the possibility of enduring, not so? Heh. How can I say everything I've thought without losing my way and boring you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alma: Mr. Vogler, I'm not your wife.",
+    "clean": "Mr. Vogler, I'm not your wife."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Vogler: Don't be so anxious, my darling. We have one another. We have faith, know each other's thoughts. We love one another. It's true, isn't it? It's the effort that's most important, not what we achieve. Isn't it? To see each other as children. Tormented and helpless lonely children. Elisabet!",
+    "clean": "Don't be so anxious, my darling. We have one another. We have faith, know each other's thoughts. We love one another. It's true, isn't it? It's the effort that's most important, not what we achieve. Isn't it? To see each other as children. Tormented and helpless lonely children. Elisabet!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alma: Repeat after me. Nothing. Nothing.",
+    "clean": "Repeat after me. Nothing. Nothing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elisabet: [whispering] Nothing.",
+    "clean": "Nothing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alma: Good. That's how it should be.",
+    "clean": "Good. That's how it should be."
+  }
+]

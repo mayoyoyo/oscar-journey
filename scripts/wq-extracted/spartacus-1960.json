@@ -1,0 +1,332 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Stanley Kubrick. Written by Dalton Trumbo, based on the novel of the same name by Howard Fast.",
+    "clean": "Directed by Stanley Kubrick. Written by Dalton Trumbo, based on the novel of the same name by Howard Fast."
+  },
+  {
+    "heading": "Spartacus",
+    "raw": "I'd rather be here, a free man among brothers, facing a long march and a hard fight, than the richest citizen in Rome: fat with food he didn't work for, and surrounded by slaves.",
+    "clean": "I'd rather be here, a free man among brothers, facing a long march and a hard fight, than the richest citizen in Rome: fat with food he didn't work for, and surrounded by slaves."
+  },
+  {
+    "heading": "Spartacus",
+    "raw": "When a free man dies, he loses the pleasure of life. A slave loses his pain. Death is the only freedom a slave knows. That's why he's not afraid of it. That's why we'll win.",
+    "clean": "When a free man dies, he loses the pleasure of life. A slave loses his pain. Death is the only freedom a slave knows. That's why he's not afraid of it. That's why we'll win."
+  },
+  {
+    "heading": "Spartacus",
+    "raw": "I am Spartacus!",
+    "clean": "I am Spartacus!"
+  },
+  {
+    "heading": "Spartacus",
+    "raw": "Crixus always wanted to march on Rome. Now he doesn't have to. Rome has come to us.",
+    "clean": "Crixus always wanted to march on Rome. Now he doesn't have to. Rome has come to us."
+  },
+  {
+    "heading": "Spartacus",
+    "raw": "He'll come back. He'll come back, and he'll be millions!",
+    "clean": "He'll come back. He'll come back, and he'll be millions!"
+  },
+  {
+    "heading": "Batiatus",
+    "raw": "Good luck, and may fortune smile upon... most of you.",
+    "clean": "Good luck, and may fortune smile upon... most of you."
+  },
+  {
+    "heading": "Batiatus",
+    "raw": "But I'm a civilian. I'm more of a civilian than most civilians.",
+    "clean": "But I'm a civilian. I'm more of a civilian than most civilians."
+  },
+  {
+    "heading": "Marcus Licinius Crassus",
+    "raw": "If there was no Rome, I'd dream of her. If there were no gods, I'd revere them.",
+    "clean": "If there was no Rome, I'd dream of her. If there were no gods, I'd revere them."
+  },
+  {
+    "heading": "Marcus Licinius Crassus",
+    "raw": "I'm not after glory, I'm after Spartacus! And gentlemen, I mean to have him. However, this campaign is not about killing Spartacus. It is to kill the legend of Spartacus.",
+    "clean": "I'm not after glory, I'm after Spartacus! And gentlemen, I mean to have him. However, this campaign is not about killing Spartacus. It is to kill the legend of Spartacus."
+  },
+  {
+    "heading": "Marcus Licinius Crassus",
+    "raw": "One of the disadvantages of being a patrician is that occasionally you're obliged to act like one.",
+    "clean": "One of the disadvantages of being a patrician is that occasionally you're obliged to act like one."
+  },
+  {
+    "heading": "Gracchus",
+    "raw": "You know, this republic of ours is something like a rich widow. Most Romans love her as their mother, but Crassus dreams of marrying the old girl, to put it politely.",
+    "clean": "You know, this republic of ours is something like a rich widow. Most Romans love her as their mother, but Crassus dreams of marrying the old girl, to put it politely."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: What is your name?",
+    "clean": "What is your name?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Draba: You don't want to know mine. I don't want to know your name.",
+    "clean": "You don't want to know mine. I don't want to know your name."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: Just a friendly question.",
+    "clean": "Just a friendly question."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Draba: Gladiators don't make friends. If we're ever matched in the arena together, I have to kill you.",
+    "clean": "Gladiators don't make friends. If we're ever matched in the arena together, I have to kill you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dionysus: [watching two Roman nobles being forced by a slave on horseback to fight to the death] Ah-ha ha! Come on, fat boy! Yeah!",
+    "clean": "Ah-ha ha! Come on, fat boy! Yeah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slaves: [as Spartacus enters the arena] Spartacus! Hey, Spartacus!",
+    "clean": "Spartacus! Hey, Spartacus!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: Noble Romans, fight each other like animals. [gestures to the slaves on the balcony] Your new masters, betting to see who'll die first. [the slaves laugh] Drop your weapons. [the slaves start booing]",
+    "clean": "Noble Romans, fight each other like animals. Your new masters, betting to see who'll die first. Drop your weapons."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slaves: No! No! No! No!",
+    "clean": "No! No! No! No!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crixus: I want to see their blood, right here where Draba died! [jumps down and draws his sword] When I fight matched pairs, they fight to the death!",
+    "clean": "I want to see their blood, right here where Draba died! When I fight matched pairs, they fight to the death!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dionysus: When you got wine, you don't need bread!",
+    "clean": "When you got wine, you don't need bread!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: You can't just be a gang of drunken raiders.",
+    "clean": "You can't just be a gang of drunken raiders."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dionysus: What else can we be?",
+    "clean": "What else can we be?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: Gladiators, an army of gladiators. There's never been an army like that. One gladiator is worth any two Roman soldiers that ever lived.",
+    "clean": "Gladiators, an army of gladiators. There's never been an army like that. One gladiator is worth any two Roman soldiers that ever lived."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crixus: We beat the Romans guards here, but a Roman army is different. They fight different than we do, too.",
+    "clean": "We beat the Romans guards here, but a Roman army is different. They fight different than we do, too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: We can beat anything they send against us if we really want to.",
+    "clean": "We can beat anything they send against us if we really want to."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crixus: It takes a big army.",
+    "clean": "It takes a big army."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: We'll have a big army. Once we're on the march, we'll free every slave in every town and village. Can anybody get a bigger army than that?",
+    "clean": "We'll have a big army. Once we're on the march, we'll free every slave in every town and village. Can anybody get a bigger army than that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dionysus: That's right. Once we cross the Alps, we're safe.",
+    "clean": "That's right. Once we cross the Alps, we're safe."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crixus: Nobody can cross the Alps. Every pass is defended by its own legion.",
+    "clean": "Nobody can cross the Alps. Every pass is defended by its own legion."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: Stand up. On your feet. Stand up, the way a noble Roman should.",
+    "clean": "Stand up. On your feet. Stand up, the way a noble Roman should."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slave: That's Roman pride for you, Spartacus! [the slaves laugh]",
+    "clean": "That's Roman pride for you, Spartacus!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: That's better. What's your name?",
+    "clean": "That's better. What's your name?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Glabrus: Marcus, Glabrus.",
+    "clean": "Marcus, Glabrus."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: Glabrus.",
+    "clean": "Glabrus."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Glabrus: Commander of the Garrison of Rome!",
+    "clean": "Commander of the Garrison of Rome!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: Commander?",
+    "clean": "Commander?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crixus: He was commanding it on his belly when we found him, playing dead! [the slaves laugh]",
+    "clean": "He was commanding it on his belly when we found him, playing dead!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: You disappoint me, Marcus Glabrus, playing dead. You afraid to die? It's easy to die. Haven't you seen enough gladiators in the arena to see how easy it is to die?",
+    "clean": "You disappoint me, Marcus Glabrus, playing dead. You afraid to die? It's easy to die. Haven't you seen enough gladiators in the arena to see how easy it is to die?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Glabrus: Why...what are you going to do to me?",
+    "clean": "Why...what are you going to do to me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: I don't know. [turns to the slaves] What should we do with him?",
+    "clean": "I don't know. What should we do with him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dionysus: Let's have a matched pair, him and me! [the slaves laugh]",
+    "clean": "Let's have a matched pair, him and me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Glabrus: I'll not fight like a gladiator!",
+    "clean": "I'll not fight like a gladiator!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: [showing Glabrus a Roman baton] You keep staring at this. You recognize this baton?",
+    "clean": "You keep staring at this. You recognize this baton?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: You should! It was in your tent. [holds up the baton] The symbol of the Senate! All the power of Rome! [grips and snaps the baton in two]",
+    "clean": "You should! It was in your tent. The symbol of the Senate! All the power of Rome!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dionysus: That's the power of Rome!",
+    "clean": "That's the power of Rome!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Spartacus: [thrusting the broken baton at Glabrus] Take that back to your senate. Tell them you and that broken stick is all that's left of the garrison of Rome! Tell them we want nothing from Rome, nothing, except our freedom!",
+    "clean": "Take that back to your senate. Tell them you and that broken stick is all that's left of the garrison of Rome! Tell them we want nothing from Rome, nothing, except our freedom!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus: Do you steal?",
+    "clean": "Do you steal?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: No, master.",
+    "clean": "No, master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus: Do you lie?",
+    "clean": "Do you lie?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: Not if I can avoid it.",
+    "clean": "Not if I can avoid it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus': Have you... ever dishonored the gods?",
+    "clean": "Have you... ever dishonored the gods?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: No, master.",
+    "clean": "No, master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus': Do you refrain from these vices out of respect for moral virtues?",
+    "clean": "Do you refrain from these vices out of respect for moral virtues?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: Yes, master.",
+    "clean": "Yes, master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus: Do you eat oysters?",
+    "clean": "Do you eat oysters?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: When I have them, master.",
+    "clean": "When I have them, master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus: Do you eat snails?",
+    "clean": "Do you eat snails?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: No, master.",
+    "clean": "No, master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus: Do you consider the eating of oysters to be moral, and the eating of snails to be immoral?",
+    "clean": "Do you consider the eating of oysters to be moral, and the eating of snails to be immoral?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: No, master.",
+    "clean": "No, master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus: Of course not. It is all a matter of taste, isn't it?",
+    "clean": "Of course not. It is all a matter of taste, isn't it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: Yes, master.",
+    "clean": "Yes, master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Crassus: And taste is not the same as appetite, and therefore not a question of morals, hmm?",
+    "clean": "And taste is not the same as appetite, and therefore not a question of morals, hmm?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antoninus: It could be argued so, master.",
+    "clean": "It could be argued so, master."
+  }
+]

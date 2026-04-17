@@ -1,0 +1,727 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Richard Linklater. Written by Richard Linklater, Ethan Hawke, Julie Delpy, and Kim Krizan.",
+    "clean": "Directed by Richard Linklater. Written by Richard Linklater, Ethan Hawke, Julie Delpy, and Kim Krizan."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "I'm designed to feel slightly dissatisfied.",
+    "clean": "I'm designed to feel slightly dissatisfied."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "Maybe it's just a sense of entitlement. You know, like whenever you feel like you deserve that new pair of shoes. It's OK to want things as long as you don't get pissed off if you don't get 'em. Right?",
+    "clean": "Maybe it's just a sense of entitlement. You know, like whenever you feel like you deserve that new pair of shoes. It's OK to want things as long as you don't get pissed off if you don't get 'em. Right?"
+  },
+  {
+    "heading": "Jesse",
+    "raw": "Life's hard. It's supposed to be. If we didn't suffer, we wouldn't learn a thing.",
+    "clean": "Life's hard. It's supposed to be. If we didn't suffer, we wouldn't learn a thing."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "You realize that most of the people that you meet are trying to get somewhere better, they're trying to make a little bit more cash, trying to get a little more respect, have more people admire them. It's just exhausting.",
+    "clean": "You realize that most of the people that you meet are trying to get somewhere better, they're trying to make a little bit more cash, trying to get a little more respect, have more people admire them. It's just exhausting."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "I have this idea of my best self, and I wanted to pursue that even if it might have been overriding my honest self.",
+    "clean": "I have this idea of my best self, and I wanted to pursue that even if it might have been overriding my honest self."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "In the moment I remember thinking that it didn't much matter the \"Who\" of it all. Nobody is gonna be everything to you, and that ultimately it's just a simple action of committing yourself, meeting your responsibilities that matters.",
+    "clean": "In the moment I remember thinking that it didn't much matter the \"Who\" of it all. Nobody is gonna be everything to you, and that ultimately it's just a simple action of committing yourself, meeting your responsibilities that matters."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "What is love, if it's not respect, trust, admiration? And I felt all those things. So cut to the present tense: I feel like I'm running a small nursery with somebody I used to date.",
+    "clean": "What is love, if it's not respect, trust, admiration? And I felt all those things. So cut to the present tense: I feel like I'm running a small nursery with somebody I used to date."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "I feel like if someone were to touch me, I'd dissolve into molecules.",
+    "clean": "I feel like if someone were to touch me, I'd dissolve into molecules."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "We're just living in a pretense of a marriage responsibility, and all these ideas of how people are supposed to live.",
+    "clean": "We're just living in a pretense of a marriage responsibility, and all these ideas of how people are supposed to live."
+  },
+  {
+    "heading": "Jesse",
+    "raw": "There's gotta be something more to love than commitment.",
+    "clean": "There's gotta be something more to love than commitment."
+  },
+  {
+    "heading": "Celine",
+    "raw": "Memories are wonderful things, if you don't have to deal with the past.",
+    "clean": "Memories are wonderful things, if you don't have to deal with the past."
+  },
+  {
+    "heading": "Celine",
+    "raw": "They enjoy the goal but not the process. But the reality of it is that the true work of improving things is in the little achievements of the day.",
+    "clean": "They enjoy the goal but not the process. But the reality of it is that the true work of improving things is in the little achievements of the day."
+  },
+  {
+    "heading": "Celine",
+    "raw": "I see it in the people that do the real work, and what's sad in a way is that the people that are the most giving, hardworking, and capable of making this world better, usually don't have the ego and ambition to be a leader.",
+    "clean": "I see it in the people that do the real work, and what's sad in a way is that the people that are the most giving, hardworking, and capable of making this world better, usually don't have the ego and ambition to be a leader."
+  },
+  {
+    "heading": "Celine",
+    "raw": "The concept is absurd. The idea that we can only be complete with another person is evil! Right?",
+    "clean": "The concept is absurd. The idea that we can only be complete with another person is evil! Right?"
+  },
+  {
+    "heading": "Celine",
+    "raw": "You can never replace anyone because everyone is made up of such beautiful specific details.",
+    "clean": "You can never replace anyone because everyone is made up of such beautiful specific details."
+  },
+  {
+    "heading": "Celine",
+    "raw": "I was having this awful nightmare that I was 32. And then I woke up and I was 23. So relieved. And then I woke up for real, and I was 32.",
+    "clean": "I was having this awful nightmare that I was 32. And then I woke up and I was 23. So relieved. And then I woke up for real, and I was 32."
+  },
+  {
+    "heading": "Celine",
+    "raw": "There are so many things I want to do, but I end up doing not much.",
+    "clean": "There are so many things I want to do, but I end up doing not much."
+  },
+  {
+    "heading": "Celine",
+    "raw": "Even being alone it's better than sitting next to your lover and feeling lonely.",
+    "clean": "Even being alone it's better than sitting next to your lover and feeling lonely."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: Do you consider the book to be autobiographical?",
+    "clean": "Do you consider the book to be autobiographical?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I... I don't believe that. I don't believe that.",
+    "clean": "I... I don't believe that. I don't believe that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I think I'm one of those guys.",
+    "clean": "I think I'm one of those guys."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Can I talk?",
+    "clean": "Can I talk?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: You know, I guess I've been heart-broken too many times. And then I recovered. So now, you know, from the start I make no effort because I know it’s not going to work out, I know it’s not going to work out.",
+    "clean": "You know, I guess I've been heart-broken too many times. And then I recovered. So now, you know, from the start I make no effort because I know it's not going to work out, I know it's not going to work out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: [describing how she looks different] Skinnier, I think. A little thinner.",
+    "clean": "Skinnier, I think. A little thinner."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Did you think I was fat before?",
+    "clean": "Did you think I was fat before?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yeah, you thought I was a fatty. No, you thought I was a fatty! Yeah, you, you wrote a book about a fat French girl!",
+    "clean": "Yeah, you thought I was a fatty. No, you thought I was a fatty! Yeah, you, you wrote a book about a fat French girl!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: No, listen...",
+    "clean": "No, listen..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: [laughing] Oh, no...",
+    "clean": "Oh, no..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Seriously, all right, you look beautiful.",
+    "clean": "Seriously, all right, you look beautiful."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: It's amazing what perverts we've become in the past nine years.",
+    "clean": "It's amazing what perverts we've become in the past nine years."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: At least now we don't have to pretend that each new sexual experience is a life-altering event.",
+    "clean": "At least now we don't have to pretend that each new sexual experience is a life-altering event."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I know. By now, you know, you've stuck it in so many places, it's like about to fall off.",
+    "clean": "I know. By now, you know, you've stuck it in so many places, it's like about to fall off."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Yeah, you know, and I can't realistically expect that you've become anything but a total ho, at this point.",
+    "clean": "Yeah, you know, and I can't realistically expect that you've become anything but a total ho, at this point."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yeah, thank you.",
+    "clean": "Yeah, thank you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Is that true?",
+    "clean": "Is that true?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I don't know. I always liked the story, though.",
+    "clean": "I don't know. I always liked the story, though."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: You want to know why I wrote that stupid book?",
+    "clean": "You want to know why I wrote that stupid book?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: So that you might come to a reading in Paris and I could walk up to you and ask, \"Where the fuck were you?\"",
+    "clean": "So that you might come to a reading in Paris and I could walk up to you and ask, \"Where the fuck were you?\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: [laughing] No - you thought I'd be here today?",
+    "clean": "No - you thought I'd be here today?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I'm serious. I think I wrote it, in a way, to try to find you.",
+    "clean": "I'm serious. I think I wrote it, in a way, to try to find you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Okay, that's– I know that's not true, but that's sweet of you to say.",
+    "clean": "Okay, that's- I know that's not true, but that's sweet of you to say."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I think it is true. What do you think were the chances of us ever meeting again?",
+    "clean": "I think it is true. What do you think were the chances of us ever meeting again?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: After that December, I'd say almost zero. But we're not real anyway, right? We're just, uh, characters in that old lady's dream. She's on her deathbed, fantasizing about her youth. So of course we had to meet again.",
+    "clean": "After that December, I'd say almost zero. But we're not real anyway, right? We're just, uh, characters in that old lady's dream. She's on her deathbed, fantasizing about her youth. So of course we had to meet again."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Oh, God, why weren't you there, in Vienna?",
+    "clean": "Oh, God, why weren't you there, in Vienna?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I told you why.",
+    "clean": "I told you why."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Well, I know why, I just– I wish you would have been. Our lives might have been so much different.",
+    "clean": "Well, I know why, I just- I wish you would have been. Our lives might have been so much different."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: You think so?",
+    "clean": "You think so?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I actually do.",
+    "clean": "I actually do."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Maybe not. Maybe, we would have hated each other eventually.",
+    "clean": "Maybe not. Maybe, we would have hated each other eventually."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Oh what, like we hate each other now?",
+    "clean": "Oh what, like we hate each other now?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: You know, maybe we're– we're only good at brief encounters, walking around in European cities in warm climate.",
+    "clean": "You know, maybe we're- we're only good at brief encounters, walking around in European cities in warm climate."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Oh, God, why didn't we exchange phone numbers and stuff? Why didn't we do that?",
+    "clean": "Oh, God, why didn't we exchange phone numbers and stuff? Why didn't we do that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Because we were young and stupid.",
+    "clean": "Because we were young and stupid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Do you think we still are?",
+    "clean": "Do you think we still are?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I guess when you're young, you just believe there'll be many people with whom you'll connect with. Later in life, you realize it only happens a few times.",
+    "clean": "I guess when you're young, you just believe there'll be many people with whom you'll connect with. Later in life, you realize it only happens a few times."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: And you can screw it up, you know, misconnect.",
+    "clean": "And you can screw it up, you know, misconnect."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: The past is the past. It was meant to be that way.",
+    "clean": "The past is the past. It was meant to be that way."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: What, you really believe that? That everything's fated?",
+    "clean": "What, you really believe that? That everything's fated?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Well, you know, the world might be less free than we think.",
+    "clean": "Well, you know, the world might be less free than we think."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Yeah?",
+    "clean": "Yeah?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yeah, when given these exact circumstances, that's what will happen every time: two part hydrogen, one part oxygen, you get water every time.",
+    "clean": "Yeah, when given these exact circumstances, that's what will happen every time: two part hydrogen, one part oxygen, you get water every time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: No, no, I– I– I mean what if your grandmother had lived a week longer, or, you know, or passed away a week earlier, days even. You know things might have been different. I believe that.",
+    "clean": "No, no, I- I- I mean what if your grandmother had lived a week longer, or, you know, or passed away a week earlier, days even. You know things might have been different. I believe that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: No, you can't think like that, it's...",
+    "clean": "No, you can't think like that, it's..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: No, I mean, I know you shouldn't on most things, but– It's just, on this one it seemed like something was off, you know?",
+    "clean": "No, I mean, I know you shouldn't on most things, but- It's just, on this one it seemed like something was off, you know?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Do you think you would have finished your book if you were fucking someone every five minutes?",
+    "clean": "Do you think you would have finished your book if you were fucking someone every five minutes?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I might have welcomed the challenge.",
+    "clean": "I might have welcomed the challenge."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: So, I want to try something.",
+    "clean": "So, I want to try something."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: [hugs him] I want to see if you stay together or if you dissolve into molecules.",
+    "clean": "I want to see if you stay together or if you dissolve into molecules."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: How'm I doing?",
+    "clean": "How'm I doing?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Still here.",
+    "clean": "Still here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Good, I like being here.",
+    "clean": "Good, I like being here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Baby, you are gonna miss that plane.",
+    "clean": "Baby, you are gonna miss that plane."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I know.",
+    "clean": "I know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: You know, I think that book that I wrote, in a way, was like building something.",
+    "clean": "You know, I think that book that I wrote, in a way, was like building something."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: So that I wouldn't forget the... details of the time that we spent together. You know, like just a reminder that... that once we really did meet! You know, that this was real! That this happened!",
+    "clean": "So that I wouldn't forget the... details of the time that we spent together. You know, like just a reminder that... that once we really did meet! You know, that this was real! That this happened!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I'm happy you're saying that, because... I mean, I always feel like a freak, because I'm never able to move on like... this! You know.",
+    "clean": "I'm happy you're saying that, because... I mean, I always feel like a freak, because I'm never able to move on like... this! You know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: People just have an affair, or even entire relationships... they break up and they forget! They move on like they would have changed brand of cereals!",
+    "clean": "People just have an affair, or even entire relationships... they break up and they forget! They move on like they would have changed brand of cereals!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I feel I was never able to forget anyone I've been with. Because each person have... their own, specific qualities. You can never replace anyone. What is lost is lost.",
+    "clean": "I feel I was never able to forget anyone I've been with. Because each person have... their own, specific qualities. You can never replace anyone. What is lost is lost."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Each relationship, when it ends, really damages me. I never fully recover. That's why I'm very careful with getting involved, because... It hurts too much!",
+    "clean": "Each relationship, when it ends, really damages me. I never fully recover. That's why I'm very careful with getting involved, because... It hurts too much!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Even getting laid! I actually don't do that...",
+    "clean": "Even getting laid! I actually don't do that..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I will miss on the other person the most mundane things.",
+    "clean": "I will miss on the other person the most mundane things."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Like I'm obsessed with little things.",
+    "clean": "Like I'm obsessed with little things."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I think it's the same with people.",
+    "clean": "I think it's the same with people."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I see in them little details, so specific to each of them, that move me, and that I miss, and... will always miss. You can never replace anyone, because everyone is made of such beautiful specific details.",
+    "clean": "I see in them little details, so specific to each of them, that move me, and that I miss, and... will always miss. You can never replace anyone, because everyone is made of such beautiful specific details."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Like I remember the way, your beard has a bit of red in it. And how the sun was making it glow, that... that morning, right before you left. I remember that, and... I missed it!",
+    "clean": "Like I remember the way, your beard has a bit of red in it. And how the sun was making it glow, that... that morning, right before you left. I remember that, and... I missed it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I'm really crazy, right?",
+    "clean": "I'm really crazy, right?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I was thinking... for me it's better I don't romanticize things as much anymore. I was suffering so much all the time. I still have lots of dreams, but they're not in regard to my love life. It doesn't make me sad, it's just the way it is.",
+    "clean": "I was thinking... for me it's better I don't romanticize things as much anymore. I was suffering so much all the time. I still have lots of dreams, but they're not in regard to my love life. It doesn't make me sad, it's just the way it is."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Is that why you're in a relationship with, somebody who's... never around?",
+    "clean": "Is that why you're in a relationship with, somebody who's... never around?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yes, obviously, I can't deal with the day to day life of a relationship.",
+    "clean": "Yes, obviously, I can't deal with the day to day life of a relationship."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yeah, we have, you know, this exciting time together and then he leaves and I miss him... but at least I'm not dying inside!",
+    "clean": "Yeah, we have, you know, this exciting time together and then he leaves and I miss him... but at least I'm not dying inside!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: When someone is always around me, I'm like suffocating!",
+    "clean": "When someone is always around me, I'm like suffocating!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: No, wait, you just said that you need to love and be loved...",
+    "clean": "No, wait, you just said that you need to love and be loved..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yeah, but when I do, it quickly makes me nauseous! It's a disaster!",
+    "clean": "Yeah, but when I do, it quickly makes me nauseous! It's a disaster!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I mean, I'm really happy only when I'm on my own. Even being alone... it's better than... sitting next to a lover and feeling lonely.",
+    "clean": "I mean, I'm really happy only when I'm on my own. Even being alone... it's better than... sitting next to a lover and feeling lonely."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: It's not so easy for me to be a romantic. You start off that way, and, after you've been screwed over a few times, you... you forget about all your delusional ideas, and you just take what comes into your life.",
+    "clean": "It's not so easy for me to be a romantic. You start off that way, and, after you've been screwed over a few times, you... you forget about all your delusional ideas, and you just take what comes into your life."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: That's not even true! I haven't been... screwed over, I've just had too many... blah relationships. They weren't mean, they cared for me, but... they were no real... connection, or excitement! At least, not from my side.",
+    "clean": "That's not even true! I haven't been... screwed over, I've just had too many... blah relationships. They weren't mean, they cared for me, but... they were no real... connection, or excitement! At least, not from my side."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: God, I'm sorry, is it... is it really that bad? It's not, right?",
+    "clean": "God, I'm sorry, is it... is it really that bad? It's not, right?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: In a way... I put all my romanticism into that one night and I was never able to feel all this again. Like... somehow this night took things away from me and... I expressed them to you, and you took them with you! It made me feel cold, like if love wasn't for me!",
+    "clean": "In a way... I put all my romanticism into that one night and I was never able to feel all this again. Like... somehow this night took things away from me and... I expressed them to you, and you took them with you! It made me feel cold, like if love wasn't for me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I... I don't believe that. I don't believe that.",
+    "clean": "I... I don't believe that. I don't believe that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: You know what? Reality and love are almost contradictory for me.",
+    "clean": "You know what? Reality and love are almost contradictory for me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: It's funny... Every single of my ex-es... they're now married! Men go out with me, we break up, and then they get married! And later they call me to thank me for teaching them what love is, and... that I taught them to care and respect women!",
+    "clean": "It's funny... Every single of my ex-es... they're now married! Men go out with me, we break up, and then they get married! And later they call me to thank me for teaching them what love is, and... that I taught them to care and respect women!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I think I'm one of those guys.",
+    "clean": "I think I'm one of those guys."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Can I talk?",
+    "clean": "Can I talk?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: You know, I guess I've been heart broken too many times, and then I recovered. So now, you know, from the start, I make no effort. Because I know it's not going to work out, I know it's not going to work out...",
+    "clean": "You know, I guess I've been heart broken too many times, and then I recovered. So now, you know, from the start, I make no effort. Because I know it's not going to work out, I know it's not going to work out..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: You can't do that. You can't do that. You can't live your life trying to avoid pain, at the expense of the...",
+    "clean": "You can't do that. You can't do that. You can't live your life trying to avoid pain, at the expense of the..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Ok, you know what?! Those are words! I've gotta... I've gotta get away from you... Stop the car, I want to get out!",
+    "clean": "Ok, you know what?! Those are words! I've gotta... I've gotta get away from you... Stop the car, I want to get out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: No, no, no, no, don't... don't... don't... don't get out...",
+    "clean": "No, no, no, no, don't... don't... don't... don't get out..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: No, it's... You know, it's being around you...",
+    "clean": "No, it's... You know, it's being around you..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Keep talking...",
+    "clean": "Keep talking..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Don't touch me! You know, I wanna get on a cab...",
+    "clean": "Don't touch me! You know, I wanna get on a cab..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: (directed to the taxi driver): Monsieur...",
+    "clean": "(directed to the taxi driver): Monsieur..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine (directed to the taxi driver): Monsieur, arretez-vous! Non, non, c'est bon, aux feux la!",
+    "clean": "Celine (directed to the taxi driver): Monsieur, arretez-vous! Non, non, c'est bon, aux feux la!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse (directed to the taxi driver): No, no, no, don't, keep going...",
+    "clean": "Jesse (directed to the taxi driver): No, no, no, don't, keep going..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: No, listen, I'm just so happy...",
+    "clean": "No, listen, I'm just so happy..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse (directed to the taxi driver): Thank you, just keep going...",
+    "clean": "Jesse (directed to the taxi driver): Thank you, just keep going..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: All right! Look, I'm just so happy, all right... to be with you. I am! I'm so glad you didn’t' forget about me. Okay?",
+    "clean": "All right! Look, I'm just so happy, all right... to be with you. I am! I'm so glad you didn't' forget about me. Okay?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: No, I didn't... and it pisses me off, ok? You come here to Paris, all romantic, and married. Ok? Fuck you!",
+    "clean": "No, I didn't... and it pisses me off, ok? You come here to Paris, all romantic, and married. Ok? Fuck you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Don't get me wrong, I'm not trying to get you, or anything. I mean, all I need is a married man! There's been so much water under the bridge, it's... it's not even about you anymore, it's about that time, that moment in time, that is forever gone. I don't know!",
+    "clean": "Don't get me wrong, I'm not trying to get you, or anything. I mean, all I need is a married man! There's been so much water under the bridge, it's... it's not even about you anymore, it's about that time, that moment in time, that is forever gone. I don't know!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: You... you say all that, but you didn't even remember having sex. So...",
+    "clean": "You... you say all that, but you didn't even remember having sex. So..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Of course I remember it...",
+    "clean": "Of course I remember it..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: You did?",
+    "clean": "You did?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yes! Women pretend things like that, I don't know...",
+    "clean": "Yes! Women pretend things like that, I don't know..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: They do?",
+    "clean": "They do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Yeah, what was I supposed to say? That I remember the wine in the park, and... us looking about the stars fading away, as the sun came up! We had sex twice, you idiot!",
+    "clean": "Yeah, what was I supposed to say? That I remember the wine in the park, and... us looking about the stars fading away, as the sun came up! We had sex twice, you idiot!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: All right, you know what? I'm just... happy to see you, even if... you've become an angry, maniac depressive activist. I still like you, I still enjoy being around you!",
+    "clean": "All right, you know what? I'm just... happy to see you, even if... you've become an angry, maniac depressive activist. I still like you, I still enjoy being around you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Ahhh I feel the same.",
+    "clean": "Ahhh I feel the same."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I'm... I'm sorry, I don't know what happened. I just... I had to let it all out. I...",
+    "clean": "I'm... I'm sorry, I don't know what happened. I just... I had to let it all out. I..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Don't worry about it.",
+    "clean": "Don't worry about it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I'm so miserable in my love life, in my relationship. I always act as... like... you know, I'm detached, but I'm... I'm dying inside. I'm dying because I'm so numb. I don't feel pain, or excitement... I'm not even bitter, I'm just a...",
+    "clean": "I'm so miserable in my love life, in my relationship. I always act as... like... you know, I'm detached, but I'm... I'm dying inside. I'm dying because I'm so numb. I don't feel pain, or excitement... I'm not even bitter, I'm just a..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: You think you're the one dying inside...",
+    "clean": "You think you're the one dying inside..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: My life, is 24/7... BAD!",
+    "clean": "My life, is 24/7... BAD!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I'm sorry...",
+    "clean": "I'm sorry..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: No, no, no... I mean, the only happiness I get is when I'm out with my son. I've been to marriage counseling, I've done things I never thought I would have to do. I lit candles, bought self-help books, lingerie...",
+    "clean": "No, no, no... I mean, the only happiness I get is when I'm out with my son. I've been to marriage counseling, I've done things I never thought I would have to do. I lit candles, bought self-help books, lingerie..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Did the candles help?",
+    "clean": "Did the candles help?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Oh, no laughter? That's terrible, my parents have been together for 35 years and even when they have a bad fight, they end up laughing like crazy...",
+    "clean": "Oh, no laughter? That's terrible, my parents have been together for 35 years and even when they have a bad fight, they end up laughing like crazy..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: What dreams?",
+    "clean": "What dreams?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: You know, I think I might have done that.",
+    "clean": "You know, I think I might have done that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Why are you telling me all this?",
+    "clean": "Why are you telling me all this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: I'm sorry. I don't know, I'm... I... I should... I... I shouldn't have.",
+    "clean": "I'm sorry. I don't know, I'm... I... I should... I... I shouldn't have."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: You know, it's so weird... people think they are the only ones going through tough times. I mean, when I read the article, I thought... your life was perfect. A wife, a kid, a published author!",
+    "clean": "You know, it's so weird... people think they are the only ones going through tough times. I mean, when I read the article, I thought... your life was perfect. A wife, a kid, a published author!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: Your personal life was more of a mess than mine...!",
+    "clean": "Your personal life was more of a mess than mine...!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Celine: I'm sorry!",
+    "clean": "I'm sorry!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jesse: Well... I'm glad it's... good for something.",
+    "clean": "Well... I'm glad it's... good for something."
+  }
+]

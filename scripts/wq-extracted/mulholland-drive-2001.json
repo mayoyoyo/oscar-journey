@@ -1,0 +1,307 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Written and directed by David Lynch",
+    "clean": "Written and directed by David Lynch"
+  },
+  {
+    "heading": "Betty Elms",
+    "raw": "It'll be just like in the movies. Pretending to be somebody else.",
+    "clean": "It'll be just like in the movies. Pretending to be somebody else."
+  },
+  {
+    "heading": "Diane Selwyn",
+    "raw": "You want me to make this easy for you? No fucking way! It's not gonna be. It's not easy for me!",
+    "clean": "You want me to make this easy for you? No fucking way! It's not gonna be. It's not easy for me!"
+  },
+  {
+    "heading": "Rita",
+    "raw": "What are you doing? We don't stop here.",
+    "clean": "What are you doing? We don't stop here."
+  },
+  {
+    "heading": "Rita",
+    "raw": "Silencio. No hay banda.",
+    "clean": "Silencio. No hay banda."
+  },
+  {
+    "heading": "Adam Kesher",
+    "raw": "I got the pool, she got the pool-man.",
+    "clean": "I got the pool, she got the pool-man."
+  },
+  {
+    "heading": "Adam Kesher",
+    "raw": "What picture? What are you talking about?",
+    "clean": "What picture? What are you talking about?"
+  },
+  {
+    "heading": "Adam Kesher",
+    "raw": "This is the girl.",
+    "clean": "This is the girl."
+  },
+  {
+    "heading": "The Cowboy",
+    "raw": "Hey, pretty girl, time to wake up.",
+    "clean": "Hey, pretty girl, time to wake up."
+  },
+  {
+    "heading": "Coco Lenoix",
+    "raw": "Honey, you're a good kid, but what you're telling me is a load of horse puckey. Even though it comes from a good place.",
+    "clean": "Honey, you're a good kid, but what you're telling me is a load of horse puckey. Even though it comes from a good place."
+  },
+  {
+    "heading": "Coco Lenoix",
+    "raw": "Wilkins! Wilkins! If that damn dog craps in the courtyard one more time, I'm just gonna bake his little butt for breakfast!",
+    "clean": "Wilkins! Wilkins! If that damn dog craps in the courtyard one more time, I'm just gonna bake his little butt for breakfast!"
+  },
+  {
+    "heading": "Coco Lenoix",
+    "raw": "You know, there was a man that lived here once that had a prize-fighting kangaroo. Well, you just wouldn't believe what that kangaroo did to this courtyard!",
+    "clean": "You know, there was a man that lived here once that had a prize-fighting kangaroo. Well, you just wouldn't believe what that kangaroo did to this courtyard!"
+  },
+  {
+    "heading": "Others",
+    "raw": "Bondar: [at Club Silencio] No hay banda! There is no band. Il n'est pas de orquestra! This is all a tape-recording. No hay banda! And yet, we hear a band. If we want to hear a clarinette, listen. … It's all a tape. It is an illusion.",
+    "clean": "No hay banda! There is no band. Il n'est pas de orquestra! This is all a tape-recording. No hay banda! And yet, we hear a band. If we want to hear a clarinette, listen. ... It's all a tape. It is an illusion."
+  },
+  {
+    "heading": "Others",
+    "raw": "Blue-Haired Lady: Silencio …",
+    "clean": "Silencio ..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dan: I just wanted to come here.",
+    "clean": "I just wanted to come here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Herb: To Winkie's?",
+    "clean": "To Winkie's?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dan: This Winkie's.",
+    "clean": "This Winkie's."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Herb: Okay, why this Winkie's?",
+    "clean": "Okay, why this Winkie's?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dan: It's kind of embarrassing.",
+    "clean": "It's kind of embarrassing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Herb: Go ahead.",
+    "clean": "Go ahead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dan: I had a dream about this place.",
+    "clean": "I had a dream about this place."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Herb: [slightly incredulous] Oh, boy.",
+    "clean": "Oh, boy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dan: See what I mean?",
+    "clean": "See what I mean?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Herb: Okay, so you had a dream about this place. Tell me.",
+    "clean": "Okay, so you had a dream about this place. Tell me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Herb: So you came to see if he's out there.",
+    "clean": "So you came to see if he's out there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dan: To get rid of this god-awful feeling.",
+    "clean": "To get rid of this god-awful feeling."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Herb: Right, then.",
+    "clean": "Right, then."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cynthia: Do you know somebody called \"the Cowboy\"?",
+    "clean": "Do you know somebody called \"the Cowboy\"?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: The Cowboy?",
+    "clean": "The Cowboy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cynthia: Yeah, the Cowboy. This guy, the Cowboy, wants to see you. Jason said he thought it'd be a good idea.",
+    "clean": "Yeah, the Cowboy. This guy, the Cowboy, wants to see you. Jason said he thought it'd be a good idea."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: Oh, Jason thought it'd be a good idea for me to see the Cowboy. Well, should I wear my ten-gallon hat and my six-shooters?",
+    "clean": "Oh, Jason thought it'd be a good idea for me to see the Cowboy. Well, should I wear my ten-gallon hat and my six-shooters?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: Howdy.",
+    "clean": "Howdy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: Howdy to you.",
+    "clean": "Howdy to you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: Beautiful evening.",
+    "clean": "Beautiful evening."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: Sure wanna thank you for coming all the way up here to see me from that nice little hotel downtown.",
+    "clean": "Sure wanna thank you for coming all the way up here to see me from that nice little hotel downtown."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: No problem. What's on your mind?",
+    "clean": "No problem. What's on your mind?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: Well, now. Here's a man who wants to get right down to it. Kind of anxious to get to it, are you?",
+    "clean": "Well, now. Here's a man who wants to get right down to it. Kind of anxious to get to it, are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: A man's attitude... a man's attitude goes some ways, the way his life will be. Is that something you might agree with?",
+    "clean": "A man's attitude... a man's attitude goes some ways, the way his life will be. Is that something you might agree with?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: Sure.",
+    "clean": "Sure."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: Now, did you answer because that's what you thought I wanted to hear, or did you think about what I said and answer 'cause you truly believe that to be right?",
+    "clean": "Now, did you answer because that's what you thought I wanted to hear, or did you think about what I said and answer 'cause you truly believe that to be right?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: I agree with what you said, truly.",
+    "clean": "I agree with what you said, truly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: What'd I say?",
+    "clean": "What'd I say?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: That a man's attitude determines to a large extent how his life will be.",
+    "clean": "That a man's attitude determines to a large extent how his life will be."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: So since you agree, you must be a person who does not care about the good life.",
+    "clean": "So since you agree, you must be a person who does not care about the good life."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: How's that?",
+    "clean": "How's that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: Well, stop for a little second and think about it. Can you do that for me?",
+    "clean": "Well, stop for a little second and think about it. Can you do that for me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: [laughs] Okay, I'm thinking.",
+    "clean": "Okay, I'm thinking."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: ...No, you're not thinking. You're too busy being a smart-aleck to be thinking. Now, I want you to think and stop being a smart-aleck. Can you try that for me?",
+    "clean": "...No, you're not thinking. You're too busy being a smart-aleck to be thinking. Now, I want you to think and stop being a smart-aleck. Can you try that for me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: There's sometimes a buggy. How many drivers does a buggy have?",
+    "clean": "There's sometimes a buggy. How many drivers does a buggy have?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowboy: So, let's just say I'm driving this buggy. And, if you fix your attitude, you can ride along with me.",
+    "clean": "So, let's just say I'm driving this buggy. And, if you fix your attitude, you can ride along with me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Betty: [after kissing Rita] Have you ever done this before?",
+    "clean": "Have you ever done this before?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rita: I don't know. Have you?",
+    "clean": "I don't know. Have you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Betty: I want to with you.",
+    "clean": "I want to with you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luigi Castigliane: This is the girl.",
+    "clean": "This is the girl."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adam Kesher: Hey, that girl is not in my film!",
+    "clean": "Hey, that girl is not in my film!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vincenzo Castiliane: It's no longer your film.",
+    "clean": "It's no longer your film."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Betty: What are you doing? We don't stop here.",
+    "clean": "What are you doing? We don't stop here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Driver: A surprise.",
+    "clean": "A surprise."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hitman: Now, once you hand that over to me, it's a done deal. Are you sure you want this?",
+    "clean": "Now, once you hand that over to me, it's a done deal. Are you sure you want this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Diane: More than anything in this world.",
+    "clean": "More than anything in this world."
+  }
+]

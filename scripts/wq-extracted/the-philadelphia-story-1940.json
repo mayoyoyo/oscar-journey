@@ -1,0 +1,462 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by George Cukor. Written by Philip Barry (play), Donald Ogden Stewart and Waldo Salt.",
+    "clean": "Directed by George Cukor. Written by Philip Barry (play), Donald Ogden Stewart and Waldo Salt."
+  },
+  {
+    "heading": "Dinah Lord",
+    "raw": "Oh, I wish something would happen! Nothing ever possibly in the least ever happens here!",
+    "clean": "Oh, I wish something would happen! Nothing ever possibly in the least ever happens here!"
+  },
+  {
+    "heading": "Dinah Lord",
+    "raw": "[watching the wedding, triumphant] I did it. I did it all!",
+    "clean": "I did it. I did it all!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: If you just face the facts squarely as I did.",
+    "clean": "If you just face the facts squarely as I did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Margaret: We both might face the fact that neither of us have proved to be a very great success as a wife.",
+    "clean": "We both might face the fact that neither of us have proved to be a very great success as a wife."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: We just picked the wrong first husbands, that's all.",
+    "clean": "We just picked the wrong first husbands, that's all."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: Or: 'What the Kitchen Maid Saw Through the Keyhole.' unquote...quote 'No hunter of buckshot in the rear is Cagey Crafty Connor' unquote, close paragraph.",
+    "clean": "Or: 'What the Kitchen Maid Saw Through the Keyhole.' unquote...quote 'No hunter of buckshot in the rear is Cagey Crafty Connor' unquote, close paragraph."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liz: Close job, close bank account. But Mr. Kidd, how can you possibly get inside the Lord estate, let alone the house?",
+    "clean": "Close job, close bank account. But Mr. Kidd, how can you possibly get inside the Lord estate, let alone the house?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: Now we're not gonna do it, Liz, dawgonnit, it's degrading. It's undignified.",
+    "clean": "Now we're not gonna do it, Liz, dawgonnit, it's degrading. It's undignified."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liz: And so is an empty stomach. How do we get in?",
+    "clean": "And so is an empty stomach. How do we get in?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Orange juice, certainly.",
+    "clean": "Orange juice, certainly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Don't tell me you've forsaken your beloved whiskey and whiskeys.",
+    "clean": "Don't tell me you've forsaken your beloved whiskey and whiskeys."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: No, no, no, no. I've just changed their color, that's all. I'm going for the pale pastel shades now. They're more becoming to me. How about you, Mr. Connor? You drink, don't you? Alcohol, I mean.",
+    "clean": "No, no, no, no. I've just changed their color, that's all. I'm going for the pale pastel shades now. They're more becoming to me. How about you, Mr. Connor? You drink, don't you? Alcohol, I mean."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: Oh, a little.",
+    "clean": "Oh, a little."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: A little, 'little.' And you a writer? I thought all writers drank to excess and beat their wives. You know one time, I think I secretly wanted to be a writer.",
+    "clean": "A little, 'little.' And you a writer? I thought all writers drank to excess and beat their wives. You know one time, I think I secretly wanted to be a writer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: I never saw you looking better, Red. You're getting that fine, tawny look.",
+    "clean": "I never saw you looking better, Red. You're getting that fine, tawny look."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Oh, we're going to talk about me, are we? Goody.",
+    "clean": "Oh, we're going to talk about me, are we? Goody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Only as it happens, I'm not interested in myself, for the moment.",
+    "clean": "Only as it happens, I'm not interested in myself, for the moment."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Not interested in yourself! You're fascinated, Red. You're far and away your favorite person in the world.",
+    "clean": "Not interested in yourself! You're fascinated, Red. You're far and away your favorite person in the world."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Dexter, in case you don't know it -",
+    "clean": "Dexter, in case you don't know it -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Of course, Mr. Connor, she's a girl who's generous to a fault.",
+    "clean": "Of course, Mr. Connor, she's a girl who's generous to a fault."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: To a fault, Mr. Connor.",
+    "clean": "To a fault, Mr. Connor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Except to other people's faults. For instance, she never had any understanding of my deep and gorgeous thirst.",
+    "clean": "Except to other people's faults. For instance, she never had any understanding of my deep and gorgeous thirst."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: That was your problem.",
+    "clean": "That was your problem."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Granted. But you took on that problem with me when you took me, Red. You were no help-mate there. You were a scold.",
+    "clean": "Granted. But you took on that problem with me when you took me, Red. You were no help-mate there. You were a scold."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: It was disgusting. It made you so unattractive.",
+    "clean": "It was disgusting. It made you so unattractive."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: A weakness, sure, and strength is her religion, Mr. Connor. She finds human imperfection unforgiveable. And when I gradually discovered that my relationship to her was supposed to be not that of a loving husband and a good companion, but - [He turns away from her] Oh, never mind.",
+    "clean": "A weakness, sure, and strength is her religion, Mr. Connor. She finds human imperfection unforgiveable. And when I gradually discovered that my relationship to her was supposed to be not that of a loving husband and a good companion, but - Oh, never mind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Say it.",
+    "clean": "Say it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: But that of a kind of high priest to a virgin goddess, then my drinks grew deeper and more frequent, that's all. [Mike slides off his chair and leaves them.]",
+    "clean": "But that of a kind of high priest to a virgin goddess, then my drinks grew deeper and more frequent, that's all."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: I never considered you as that, nor myself.",
+    "clean": "I never considered you as that, nor myself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: You did without knowing it. Oh, and the night that you got drunk on champagne and climbed out on the roof and stood there, NAKED, with your arms out to the moon, wailing like a banshee - [Dexter laughs at the thought.]",
+    "clean": "You did without knowing it. Oh, and the night that you got drunk on champagne and climbed out on the roof and stood there, NAKED, with your arms out to the moon, wailing like a banshee -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: I told you I never had the slightest recollection of doing any such thing.",
+    "clean": "I told you I never had the slightest recollection of doing any such thing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: I know. You drew a blank. You wanted to. Mr. Connor, what would you... [He turns and notices Mike has gone] Oh.",
+    "clean": "I know. You drew a blank. You wanted to. Mr. Connor, what would you... Oh."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: A nice story for spies, incidentally.",
+    "clean": "A nice story for spies, incidentally."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Too bad we can't supply photographs of you on the roof.",
+    "clean": "Too bad we can't supply photographs of you on the roof."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: [about marrying George] How in the world could you even think of it?",
+    "clean": "How in the world could you even think of it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Because he is everything you're not. He's been poor. He's had to work and he's had to fight for everything. And I love him, as I never even began to love you.",
+    "clean": "Because he is everything you're not. He's been poor. He's had to work and he's had to fight for everything. And I love him, as I never even began to love you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Maybe so, but I doubt it. I think he's just a swing from me. But it's too violent a swing. Kittredge is no great tower of strength, you know, Tracy. He's just a tower.",
+    "clean": "Maybe so, but I doubt it. I think he's just a swing from me. But it's too violent a swing. Kittredge is no great tower of strength, you know, Tracy. He's just a tower."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: You hardly know him.",
+    "clean": "You hardly know him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: To hardly know him is to know him well. And perhaps it offends my vanity to have anyone who is even remotely my wife re-marry so obviously beneath her.",
+    "clean": "To hardly know him is to know him well. And perhaps it offends my vanity to have anyone who is even remotely my wife re-marry so obviously beneath her."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: How dare you! Any of you in this day and age use such an idiotic...",
+    "clean": "How dare you! Any of you in this day and age use such an idiotic..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: I'm talking about the difference in mind and spirit...Kittredge is not for you.",
+    "clean": "I'm talking about the difference in mind and spirit...Kittredge is not for you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: You bet he's for me. He's a great man and a good man. Already, he's of national importance.",
+    "clean": "You bet he's for me. He's a great man and a good man. Already, he's of national importance."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: You sound like Spy Magazine talking. But whatever he is, toots, you'll have to stick. He'll give you no out as I did.",
+    "clean": "You sound like Spy Magazine talking. But whatever he is, toots, you'll have to stick. He'll give you no out as I did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: I won't require one.",
+    "clean": "I won't require one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: I suppose you'd still be attractive to any man of spirit, though. There's something engaging about it, this goddess business. There's something more challenging to the male than the, uh, more obvious charms.",
+    "clean": "I suppose you'd still be attractive to any man of spirit, though. There's something engaging about it, this goddess business. There's something more challenging to the male than the, uh, more obvious charms."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Really?",
+    "clean": "Really?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Really. We're very vain, you know - 'This citadel can and shall be taken, and I'm the boy to do it.'",
+    "clean": "Really. We're very vain, you know - 'This citadel can and shall be taken, and I'm the boy to do it.'"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: You seem quite contemptuous of me all of a sudden.",
+    "clean": "You seem quite contemptuous of me all of a sudden."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: No, Red, not of you, never of you. Red, you could be the finest woman on this earth. I'm contemptuous of something inside of you you either can't help, or make no attempt to; your so-called 'strength' - your prejudice against weakness - your blank intolerance.",
+    "clean": "No, Red, not of you, never of you. Red, you could be the finest woman on this earth. I'm contemptuous of something inside of you you either can't help, or make no attempt to; your so-called 'strength' - your prejudice against weakness - your blank intolerance."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Is that all?",
+    "clean": "Is that all?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: So help me, Dexter, if you say another word, I'll...",
+    "clean": "So help me, Dexter, if you say another word, I'll..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: I'm through, Red. For the moment, I've had my say.",
+    "clean": "I'm through, Red. For the moment, I've had my say."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: You know, we're gonna represent something, Tracy, you and I in our home, something straight, sound, and fine. Then perhaps your friend Mr. Haven will be somewhat less condescending.",
+    "clean": "You know, we're gonna represent something, Tracy, you and I in our home, something straight, sound, and fine. Then perhaps your friend Mr. Haven will be somewhat less condescending."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: George, you, you don't really mind him, do you? I mean, the fact of him...I mean...that he ever was my lord and master. That we ever were...",
+    "clean": "George, you, you don't really mind him, do you? I mean, the fact of him...I mean...that he ever was my lord and master. That we ever were..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I don't believe he ever was, Tracy, not really. I don't believe that anyone ever was - or ever will be. That's the wonderful thing about you, Tracy.",
+    "clean": "I don't believe he ever was, Tracy, not really. I don't believe that anyone ever was - or ever will be. That's the wonderful thing about you, Tracy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: What? How?",
+    "clean": "What? How?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Well, you're like some marvelous, distant, well, queen, I guess. You're so cool and fine and - and always so much your own. There's a kind of beautiful purity about you, Tracy, like, like a statue...",
+    "clean": "Well, you're like some marvelous, distant, well, queen, I guess. You're so cool and fine and - and always so much your own. There's a kind of beautiful purity about you, Tracy, like, like a statue..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: George -",
+    "clean": "George -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oh, it's grand, Tracy. It's what everybody feels about you. It's what I first worshiped you for from afar.",
+    "clean": "Oh, it's grand, Tracy. It's what everybody feels about you. It's what I first worshiped you for from afar."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: George, listen -",
+    "clean": "George, listen -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: First, now, and always! Only from a little nearer now, eh, darling!",
+    "clean": "First, now, and always! Only from a little nearer now, eh, darling!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: I-I don't want to be worshiped. I want to be loved!",
+    "clean": "I-I don't want to be worshiped. I want to be loved!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Well, you're that too, Tracy. Oh, you're that all right.",
+    "clean": "Well, you're that too, Tracy. Oh, you're that all right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: I mean really loved.",
+    "clean": "I mean really loved."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: But that goes without saying, Tracy.",
+    "clean": "But that goes without saying, Tracy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: No. No, now it's you who doesn't see what I mean.",
+    "clean": "No. No, now it's you who doesn't see what I mean."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: The prettiest sight in this fine, pretty world is the privileged class enjoying its privileges.",
+    "clean": "The prettiest sight in this fine, pretty world is the privileged class enjoying its privileges."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: You're a snob, Connor.",
+    "clean": "You're a snob, Connor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: No doubt, no doubt...Tracy. You can't marry that guy.",
+    "clean": "No doubt, no doubt...Tracy. You can't marry that guy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: George? I'm going to. Why, why not?",
+    "clean": "George? I'm going to. Why, why not?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: Well, I don't know. I thought I'd be for it at first, but you just don't seem to match up.",
+    "clean": "Well, I don't know. I thought I'd be for it at first, but you just don't seem to match up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Then the fault's with me.",
+    "clean": "Then the fault's with me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: Well, maybe so, but all the same now, you can't do it.",
+    "clean": "Well, maybe so, but all the same now, you can't do it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Come around about noon tomorrow. I mean today. Snob.",
+    "clean": "Come around about noon tomorrow. I mean today. Snob."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: What do ya mean, snob?",
+    "clean": "What do ya mean, snob?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: You're the worst kind there is. An intellectual snob. You made up your mind awfully young, it seems to me.",
+    "clean": "You're the worst kind there is. An intellectual snob. You made up your mind awfully young, it seems to me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mike: Well, thirty's about time to make up your mind. And I'm nothing of the sort, not Mr. Connor.",
+    "clean": "Well, thirty's about time to make up your mind. And I'm nothing of the sort, not Mr. Connor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: The time to make up your mind about people - is never.",
+    "clean": "The time to make up your mind about people - is never."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: [after Dexter has proposed] Dexter, are you sure?",
+    "clean": "Dexter, are you sure?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Not in the least. But I'll risk it. Will you?",
+    "clean": "Not in the least. But I'll risk it. Will you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: You bet! You didn't do it just to soften the blow?",
+    "clean": "You bet! You didn't do it just to soften the blow?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Nor to save my face?",
+    "clean": "Nor to save my face?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Oh, it's a nice little face.",
+    "clean": "Oh, it's a nice little face."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Oh Dexter, I'll be yar now, I promise to be yar.",
+    "clean": "Oh Dexter, I'll be yar now, I promise to be yar."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dexter: Be whatever you like, you're my redhead.",
+    "clean": "Be whatever you like, you're my redhead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: How do I look?",
+    "clean": "How do I look?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Lord: Like a queen - like a goddess.",
+    "clean": "Like a queen - like a goddess."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: And do you know how I feel?",
+    "clean": "And do you know how I feel?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tracy: Like a human. Like a human being.",
+    "clean": "Like a human. Like a human being."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Lord: Do you know how I feel?",
+    "clean": "Do you know how I feel?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Lord: Proud.",
+    "clean": "Proud."
+  }
+]

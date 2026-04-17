@@ -1,0 +1,687 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Victor Fleming. Written by Noel Langley, Florence Ryerson, and Edgar Allan Woolf, based on the novel The Wonderful Wizard of Oz by L. Frank Baum. Music by Harold Arlen, Lyrics by Yip Harburg.",
+    "clean": "Directed by Victor Fleming. Written by Noel Langley, Florence Ryerson, and Edgar Allan Woolf, based on the novel The Wonderful Wizard of Oz by L. Frank Baum. Music by Harold Arlen, Lyrics by Yip Harburg."
+  },
+  {
+    "heading": "Dorothy",
+    "raw": "Toto, I've a feeling we're not in Kansas anymore. We must be over the rainbow! [Note: This line is ranked #4 in the American Film Institute's list of the top 100 movie quotations in American cinema].",
+    "clean": "Toto, I've a feeling we're not in Kansas anymore. We must be over the rainbow! ."
+  },
+  {
+    "heading": "Dorothy",
+    "raw": "Well, I... I think that it... that it wasn't enough to just want to see Uncle Henry and Auntie Em... and it's that if I ever go looking for my heart's desire again, I won't look any further than my own backyard; because if it isn't there, I never really lost it to begin with.",
+    "clean": "Well, I... I think that it... that it wasn't enough to just want to see Uncle Henry and Auntie Em... and it's that if I ever go looking for my heart's desire again, I won't look any further than my own backyard; because if it isn't there, I never really lost it to begin with."
+  },
+  {
+    "heading": "Dorothy",
+    "raw": "There's no place like home; there's no place like home; there's no place like home... [Note: This line is ranked #23 in the American Film Institute's list of the top 100 movie quotations in American cinema].",
+    "clean": "There's no place like home; there's no place like home; there's no place like home... ."
+  },
+  {
+    "heading": "Dorothy",
+    "raw": "[last lines] Oh, but anyway, Toto, we're home – home! And this is my room – and you're all here – and I'm not going to leave here ever, ever again, because I love you all! And... oh, Auntie Em, there's no place like home!",
+    "clean": "Oh, but anyway, Toto, we're home - home! And this is my room - and you're all here - and I'm not going to leave here ever, ever again, because I love you all! And... oh, Auntie Em, there's no place like home!"
+  },
+  {
+    "heading": "Scarecrow",
+    "raw": "Why, if I had a brain I could...[singing] I could while away the hours,Conferrin' with the flowers,Consultin' with the rain.And my head I'd be scratchin'While my thoughts were busy hatchin'If I only had a brain.",
+    "clean": "Why, if I had a brain I could... I could while away the hours,Conferrin' with the flowers,Consultin' with the rain.And my head I'd be scratchin'While my thoughts were busy hatchin'If I only had a brain."
+  },
+  {
+    "heading": "Tin Man",
+    "raw": "[singing] When a man's an empty kettle,He should be on his mettle,And yet I'm torn apart.Just because I'm presumin'That I could be kinda humanIf I only had a heart.",
+    "clean": "When a man's an empty kettle,He should be on his mettle,And yet I'm torn apart.Just because I'm presumin'That I could be kinda humanIf I only had a heart."
+  },
+  {
+    "heading": "Cowardly Lion",
+    "raw": "Put 'em up, put 'em up! Which one of ya first?",
+    "clean": "Put 'em up, put 'em up! Which one of ya first?"
+  },
+  {
+    "heading": "Cowardly Lion",
+    "raw": "I’ll fight you both together if you want! I’ll fight you with one paw tied behind my back! I’ll fight you standin’ on one foot! I’ll fight you wit’ my eyes closed!",
+    "clean": "I'll fight you both together if you want! I'll fight you with one paw tied behind my back! I'll fight you standin' on one foot! I'll fight you wit' my eyes closed!"
+  },
+  {
+    "heading": "Cowardly Lion",
+    "raw": "[singing] Yeah, it's sad, believe me, Missy,When you're born to be the sissy,Without the vim and verve.But I could show my prowess,Be the lion, not the \"mouse,\"If I only had the nerve.",
+    "clean": "Yeah, it's sad, believe me, Missy,When you're born to be the sissy,Without the vim and verve.But I could show my prowess,Be the lion, not the \"mouse,\"If I only had the nerve."
+  },
+  {
+    "heading": "Cowardly Lion",
+    "raw": "[singing] Each rabbit would show respect to me/The chipmunks genuflect to me/Tho’ my tail would lash/I would show compash/For ev’ry underling/If I, if I were king/Just king.",
+    "clean": "Each rabbit would show respect to me/The chipmunks genuflect to me/Tho' my tail would lash/I would show compash/For ev'ry underling/If I, if I were king/Just king."
+  },
+  {
+    "heading": "Cowardly Lion",
+    "raw": "Read what my medal says. Courage! Ain't it the truth! ain't it the truth!",
+    "clean": "Read what my medal says. Courage! Ain't it the truth! ain't it the truth!"
+  },
+  {
+    "heading": "Cowardly Lion",
+    "raw": "In another hour, I'll be king of the forest! LONG LIVE THE KING!",
+    "clean": "In another hour, I'll be king of the forest! LONG LIVE THE KING!"
+  },
+  {
+    "heading": "Wicked Witch of the West",
+    "raw": "[to Glinda] Very well – I'll bide my time. [to Dorothy] And as for you, my fine lady, it's true I can't attend to you here and now as I'd like; but just try to stay out of my way – just try! I'll get you, my pretty, and your little dog too! [With a burst of laughter, she whirls around and vanishes in a burst of smoke and fire and a clap of thunder.] [Note: Bolded line is ranked #99 in the American Film Institute's list of the top 100 movie quotations in American cinema].",
+    "clean": "Very well - I'll bide my time. And as for you, my fine lady, it's true I can't attend to you here and now as I'd like; but just try to stay out of my way - just try! I'll get you, my pretty, and your little dog too! ."
+  },
+  {
+    "heading": "Wicked Witch of the West",
+    "raw": "That’s a good little girl. I knew you’d see reason. Aah! Ohhh!",
+    "clean": "That's a good little girl. I knew you'd see reason. Aah! Ohhh!"
+  },
+  {
+    "heading": "Wicked Witch of the West",
+    "raw": "[mimicking Dorothy] “Auntie Em, Auntie Em, come back!” I’ll give you, Auntie Em, my pretty! Ha-ha-ha! Ha-ha-ha!",
+    "clean": "\"Auntie Em, Auntie Em, come back!\" I'll give you, Auntie Em, my pretty! Ha-ha-ha! Ha-ha-ha!"
+  },
+  {
+    "heading": "Wicked Witch of the West",
+    "raw": "[cackling] Going so soon? I wouldn't hear of it. Why, my little party is just beginning.",
+    "clean": "Going so soon? I wouldn't hear of it. Why, my little party is just beginning."
+  },
+  {
+    "heading": "Wicked Witch of the West",
+    "raw": "[last words; screams shrilly] YOU CURSED BRAT! LOOK WHAT YOU'VE DONE! [melts] I'M MELTING! MELTING! Oh, what a world! What a world! Who would have thought a good little girl like you could destroy my beautiful wickedness?! OHH! LOOK OUT! LOOK OUT! I'M GOING! Ohhhh – Ohhhhhhhhhh!",
+    "clean": "YOU CURSED BRAT! LOOK WHAT YOU'VE DONE! I'M MELTING! MELTING! Oh, what a world! What a world! Who would have thought a good little girl like you could destroy my beautiful wickedness?! OHH! LOOK OUT! LOOK OUT! I'M GOING! Ohhhh - Ohhhhhhhhhh!"
+  },
+  {
+    "heading": "The Wizard",
+    "raw": "I AM OZ.... the Great and Powerful! Who are you?",
+    "clean": "I AM OZ.... the Great and Powerful! Who are you?"
+  },
+  {
+    "heading": "The Wizard",
+    "raw": "Pay no attention to that man behind the curtain! The Great Oz has spoken!",
+    "clean": "Pay no attention to that man behind the curtain! The Great Oz has spoken!"
+  },
+  {
+    "heading": "The Wizard",
+    "raw": "[to the Tin Man] Back where I come from, there are men who do nothing all day but good deeds. And their hearts are no bigger than yours is! But they have one thing you haven't got: a testimonial. […] A heart is not judged by how much you love; but by how much you are loved by others.",
+    "clean": "Back where I come from, there are men who do nothing all day but good deeds. And their hearts are no bigger than yours is! But they have one thing you haven't got: a testimonial. A heart is not judged by how much you love; but by how much you are loved by others."
+  },
+  {
+    "heading": "Glinda",
+    "raw": "[to Dorothy] Are you a good witch or a bad witch?",
+    "clean": "Are you a good witch or a bad witch?"
+  },
+  {
+    "heading": "Glinda",
+    "raw": "Only bad witches are ugly.",
+    "clean": "Only bad witches are ugly."
+  },
+  {
+    "heading": "Glinda",
+    "raw": "[to the Wicked Witch of the West] Rubbish! You have no power here! Begone, before somebody drops a house on you too!",
+    "clean": "Rubbish! You have no power here! Begone, before somebody drops a house on you too!"
+  },
+  {
+    "heading": "Glinda",
+    "raw": "You always had the power my dear, you just had to learn it for yourself.",
+    "clean": "You always had the power my dear, you just had to learn it for yourself."
+  },
+  {
+    "heading": "The Munchkins",
+    "raw": "Ding Dong, the witch is dead,Which old witch?The wicked witch.Ding Dong, the wicked witch is dead!",
+    "clean": "Ding Dong, the witch is dead,Which old witch?The wicked witch.Ding Dong, the wicked witch is dead!"
+  },
+  {
+    "heading": "The Munchkins",
+    "raw": "You're off to see the Wizard,The Wonderful Wizard of Oz.You'll find he is a whiz of a WizIf ever a Wiz there was.If ever, oh ever, a Wiz there wasThe Wizard of Oz is one becauseBecause, because, because, because, because...Because of the wonderful things he does.",
+    "clean": "You're off to see the Wizard,The Wonderful Wizard of Oz.You'll find he is a whiz of a WizIf ever a Wiz there was.If ever, oh ever, a Wiz there wasThe Wizard of Oz is one becauseBecause, because, because, because, because...Because of the wonderful things he does."
+  },
+  {
+    "heading": "Aunt Em",
+    "raw": "[about Toto] He's really gentle... with gentle people, that is.",
+    "clean": "He's really gentle... with gentle people, that is."
+  },
+  {
+    "heading": "Aunt Em",
+    "raw": "Almira Gulch! Just because you own half the county doesn't mean that you have the power to run the rest of us. For 23 years, I've been dying to tell you what I thought of you, and now... well, being a Christian woman, I can't say it!",
+    "clean": "Almira Gulch! Just because you own half the county doesn't mean that you have the power to run the rest of us. For 23 years, I've been dying to tell you what I thought of you, and now... well, being a Christian woman, I can't say it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Gulch: Mr. Gale?",
+    "clean": "Mr. Gale?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Uncle Henry: Howdy, Miss Gulch.",
+    "clean": "Howdy, Miss Gulch."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Gulch: I want to see you and your wife right away about Dorothy.",
+    "clean": "I want to see you and your wife right away about Dorothy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Uncle Henry: Dorothy? Well, what has Dorothy done?",
+    "clean": "Dorothy? Well, what has Dorothy done?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Gulch: What she's done? I'm all but lame from the bite on my leg!",
+    "clean": "What she's done? I'm all but lame from the bite on my leg!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Uncle Henry: You mean she bit you?",
+    "clean": "You mean she bit you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Gulch: No, her dog.",
+    "clean": "No, her dog."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Uncle Henry: Oh. She bit her dog, eh?",
+    "clean": "Oh. She bit her dog, eh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Gulch: No! (Her dog bit my leg!)",
+    "clean": "No! (Her dog bit my leg!)"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Glinda: Keep tight inside of them. Their magic must be very powerful, or she wouldn't want them so badly.",
+    "clean": "Keep tight inside of them. Their magic must be very powerful, or she wouldn't want them so badly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wicked Witch: You stay out of this, Glinda, or I'll fix you as well!",
+    "clean": "You stay out of this, Glinda, or I'll fix you as well!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Glinda: [laughs] Oh, Rubbish! you have no power here. Be gone, before somebody drops a house on you too!",
+    "clean": "Oh, Rubbish! you have no power here. Be gone, before somebody drops a house on you too!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Did you do that on purpose, or can't you make up your mind?",
+    "clean": "Did you do that on purpose, or can't you make up your mind?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: That's the trouble! I can't make up my mind. I haven't got a brain... only straw.",
+    "clean": "That's the trouble! I can't make up my mind. I haven't got a brain... only straw."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: How can you talk if you haven't got a brain?",
+    "clean": "How can you talk if you haven't got a brain?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: I don't know... but some people without brains do an awful lot of talking, don't they?",
+    "clean": "I don't know... but some people without brains do an awful lot of talking, don't they?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Yes, I guess you're right.",
+    "clean": "Yes, I guess you're right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wicked Witch: Here, Scarecrow; wanna play Ball? [throws a fireball. The Scarecrow retreats; the Tin Man smothers the flames. Exit Wicked Witch].",
+    "clean": "Here, Scarecrow; wanna play Ball? ."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: I'm not afraid of her. I'll get you to see the Great Oz, whether I get a brain or not! \"Stuff a mattress with me\", pah!",
+    "clean": "I'm not afraid of her. I'll get you to see the Great Oz, whether I get a brain or not! \"Stuff a mattress with me\", pah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: I'll get you to Oz, whether I get a heart or not! \"Beehive\", bah! Let her try and make a bee-hive out of me!",
+    "clean": "I'll get you to Oz, whether I get a heart or not! \"Beehive\", bah! Let her try and make a bee-hive out of me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Do – do you suppose we'll meet any wild animals?",
+    "clean": "Do - do you suppose we'll meet any wild animals?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: We might.",
+    "clean": "We might."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: Animals that – that eat straw?",
+    "clean": "Animals that - that eat straw?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: Uh, some. But mostly lions and tigers and bears.",
+    "clean": "Uh, some. But mostly lions and tigers and bears."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Lions?",
+    "clean": "Lions?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: And tigers?",
+    "clean": "And tigers?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: [nodding] And bears.",
+    "clean": "And bears."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Oh! Lions and tigers and bears. Oh my!",
+    "clean": "Oh! Lions and tigers and bears. Oh my!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: [noticing the horse drawing their carriage is changing colors] What kind of a horse is that? I've never seen a horse like that before!",
+    "clean": "What kind of a horse is that? I've never seen a horse like that before!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Coachman: No, and never will again, I fancy! There's only one of him, and he's it. He's the Horse of a Different Color you've heard tell about!",
+    "clean": "No, and never will again, I fancy! There's only one of him, and he's it. He's the Horse of a Different Color you've heard tell about!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Guard: The Wizard says, Go away! [Goes back to the Wizard's palace]",
+    "clean": "The Wizard says, Go away!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy, Cowardly Lion, Scarecrow, and Tin Man: [shocked together] Go away?",
+    "clean": "Dorothy, Cowardly Lion, Scarecrow, and Tin Man: Go away?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: [sadly] Looks like we came a long way for nothing.",
+    "clean": "Looks like we came a long way for nothing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: [sobs and sits down] And I was so happy. I thought I was on my way home.",
+    "clean": "And I was so happy. I thought I was on my way home."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: [comforting Dorothy] Don't cry, Dorothy. We're gonna get you to the Wizard.",
+    "clean": "Don't cry, Dorothy. We're gonna get you to the Wizard."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: [agreeing] We certainly are.",
+    "clean": "We certainly are."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: [crying] Auntie Em was so good to me, and I never appreciated it, running away and hurting her feelings. Professor Marvel said she was sick. She may be dying and it's all my fault.",
+    "clean": "Auntie Em was so good to me, and I never appreciated it, running away and hurting her feelings. Professor Marvel said she was sick. She may be dying and it's all my fault."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: I'll never forgive myself. Never, never, never. [Scarecrow and Tin Man continue to comfort Dorothy]",
+    "clean": "I'll never forgive myself. Never, never, never."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Guard: [sobbing] Please, don't cry anymore. I'll get you to the Wizard somehow. Come on. I had an Aunt Em myself once. [Sobs and opens the door for Dorothy and her friends]",
+    "clean": "Please, don't cry anymore. I'll get you to the Wizard somehow. Come on. I had an Aunt Em myself once."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: I AM OZ! The Great and Powerful. Who are you? [no answer] Who are you?",
+    "clean": "I AM OZ! The Great and Powerful. Who are you? Who are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: If you please, I am Dorothy, the small and meek. We've come to ask you...",
+    "clean": "If you please, I am Dorothy, the small and meek. We've come to ask you..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: Silence! The great and powerful Oz knows why you have come. Step forward, Tin Man.",
+    "clean": "Silence! The great and powerful Oz knows why you have come. Step forward, Tin Man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: You dare to come to me for a heart, do you? You clinking, clanking, collection of collisionous junk!",
+    "clean": "You dare to come to me for a heart, do you? You clinking, clanking, collection of collisionous junk!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: [whimpers] Y-yes, sir. Y-yes, Your Honor. You see, a while back, we were walking down the yellow brick road and--",
+    "clean": "Y-yes, sir. Y-yes, Your Honor. You see, a while back, we were walking down the yellow brick road and--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: QUIET!",
+    "clean": "QUIET!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: And you, Scarecrow! Have the effrontery to ask for a brain, you billowing bale of bovine fodder.",
+    "clean": "And you, Scarecrow! Have the effrontery to ask for a brain, you billowing bale of bovine fodder."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: Yes, Your Honor. I mean, Your Excellency. I mean, Y-Your Wizardry.",
+    "clean": "Yes, Your Honor. I mean, Your Excellency. I mean, Y-Your Wizardry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: Enough. And you, Lion…",
+    "clean": "Enough. And you, Lion..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: Well?!",
+    "clean": "Well?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: [angrily, to the Wizard] You oughta be ashamed of yourself, frightening him like that when he came to you for help.",
+    "clean": "You oughta be ashamed of yourself, frightening him like that when he came to you for help."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: Silence, whippersnapper! The beneficent Oz has every intention of granting your requests.",
+    "clean": "Silence, whippersnapper! The beneficent Oz has every intention of granting your requests."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: [comes to] What's that? What'd he say? What'd he say?",
+    "clean": "What's that? What'd he say? What'd he say?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: But first, you must prove yourselves worthy by performing a very small task. Bring me the broomstick of the Witch of the West.",
+    "clean": "But first, you must prove yourselves worthy by performing a very small task. Bring me the broomstick of the Witch of the West."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: But, if we do that, we'll have to kill her to get it.",
+    "clean": "But, if we do that, we'll have to kill her to get it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: Bring me her broomstick, and I'll grant your requests. Now, go.",
+    "clean": "Bring me her broomstick, and I'll grant your requests. Now, go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: But what if she kills us first?",
+    "clean": "But what if she kills us first?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Wizard of Oz: I said, GO!",
+    "clean": "I said, GO!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: [crying] I’m frightened! I’m frightened, Auntie Em! I’m frightened!",
+    "clean": "I'm frightened! I'm frightened, Auntie Em! I'm frightened!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Auntie Em: Dorothy? Dorothy? Where are you? It’s me? It’s Auntie Em? We’re trying to find you? Where are you?",
+    "clean": "Dorothy? Dorothy? Where are you? It's me? It's Auntie Em? We're trying to find you? Where are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: [crying] I’m here in Oz, Auntie Em! I’m locked up in the Witch’s castle and I’m trying to get home to you, Auntie Em! Oh, Auntie Em, don’t go away! I’m frightened! Come back! Come back!",
+    "clean": "I'm here in Oz, Auntie Em! I'm locked up in the Witch's castle and I'm trying to get home to you, Auntie Em! Oh, Auntie Em, don't go away! I'm frightened! Come back! Come back!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wicked Witch: [mimicking Dorothy] “Auntie Em! Auntie Em! Come back!” I’ll give you, Auntie Em, my pretty! Ha-ha-ha! Ha-ha-ha!",
+    "clean": "\"Auntie Em! Auntie Em! Come back!\" I'll give you, Auntie Em, my pretty! Ha-ha-ha! Ha-ha-ha!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: What's that? What's that?",
+    "clean": "What's that? What's that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: That's the castle of the Wicked Witch! Dorothy's in that awful place!",
+    "clean": "That's the castle of the Wicked Witch! Dorothy's in that awful place!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: Oh, I hate to think of her in there! We've got to get her out!",
+    "clean": "Oh, I hate to think of her in there! We've got to get her out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: Don't cry now! We haven't got the oil-can with us and you've been squeaking enough as it is!",
+    "clean": "Don't cry now! We haven't got the oil-can with us and you've been squeaking enough as it is!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: Who's them? Who's them?",
+    "clean": "Who's them? Who's them?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Winkies: Oh-we-um; io-on!",
+    "clean": "Oh-we-um; io-on!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: I've got a plan to get in there…",
+    "clean": "I've got a plan to get in there..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: He's got a plan!",
+    "clean": "He's got a plan!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: An' you're gonna lead us!",
+    "clean": "An' you're gonna lead us!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: M-m-me?",
+    "clean": "M-m-me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: Yes, you!",
+    "clean": "Yes, you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: I gotta get in there?",
+    "clean": "I gotta get in there?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: [hesitates]. All right; I'll go in there for Dorothy. Wicked Witch or no Wicked Witch. Guards or no guards; I'll tear 'em apart. I may not come out alive, but I'm goin' in there! There's only one thing I want you fellas to do.",
+    "clean": ". All right; I'll go in there for Dorothy. Wicked Witch or no Wicked Witch. Guards or no guards; I'll tear 'em apart. I may not come out alive, but I'm goin' in there! There's only one thing I want you fellas to do."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow and Tin Man: What's that?",
+    "clean": "What's that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: Talk me out of it.",
+    "clean": "Talk me out of it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: Come on, I've got another plan!",
+    "clean": "Come on, I've got another plan!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: Do you think it'll be polite, dropping in like this?",
+    "clean": "Do you think it'll be polite, dropping in like this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: Where do we go now?",
+    "clean": "Where do we go now?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: Yeah!",
+    "clean": "Yeah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: There!",
+    "clean": "There!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain of the Winkie Guard: [After looking at the remains of the Wicked Witch of the West] She's dead! You killed her!",
+    "clean": "She's dead! You killed her!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: I didn't mean to. It's just the Scarecrow was on fire.",
+    "clean": "I didn't mean to. It's just the Scarecrow was on fire."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain of the Winkie Guard: HAIL TO DOROTHY, THE WICKED WITCH IS DEAD!!!",
+    "clean": "HAIL TO DOROTHY, THE WICKED WITCH IS DEAD!!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Winkie Guards: HAIL!!! HAIL TO DOROTHY, THE WICKED WITCH IS DEAD!!!",
+    "clean": "HAIL!!! HAIL TO DOROTHY, THE WICKED WITCH IS DEAD!!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: The broom! May we have it?",
+    "clean": "The broom! May we have it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain of the Winkie Guard: Please, and take it with you.",
+    "clean": "Please, and take it with you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Please, sir. We've done what told us, we brought you the broomstick of the Wicked Witch of the West. We melted her.",
+    "clean": "Please, sir. We've done what told us, we brought you the broomstick of the Wicked Witch of the West. We melted her."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: Oh, you liquidated her, eh? Very resourceful.",
+    "clean": "Oh, you liquidated her, eh? Very resourceful."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Who are you?",
+    "clean": "Who are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: [thunderously] I am, the Great and Powerful [softly] Wizard of Oz.",
+    "clean": "I am, the Great and Powerful Wizard of Oz."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: You are?! I don't believe it!",
+    "clean": "You are?! I don't believe it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: You;–– humbug!",
+    "clean": "You;-- humbug!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: Exactly so. I'm… a humbug.",
+    "clean": "Exactly so. I'm... a humbug."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: I think you are a very bad man.",
+    "clean": "I think you are a very bad man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: No, my dear, I'm a very good man! I'm just a very… bad wizard.",
+    "clean": "No, my dear, I'm a very good man! I'm just a very... bad wizard."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarecrow: What about the heart you promised Tin Man?! And the courage you promised Cowardly Lion?!",
+    "clean": "What about the heart you promised Tin Man?! And the courage you promised Cowardly Lion?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man and Cowardly Lion: And Scarecrow's brain?!",
+    "clean": "And Scarecrow's brain?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: Why, anyone can have a brain…",
+    "clean": "Why, anyone can have a brain..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wizard of Oz: As for you, my galvanized friend, you want a heart. You don't know how lucky you are not to have one. Hearts will never be practical until they can be made unbreakable.",
+    "clean": "As for you, my galvanized friend, you want a heart. You don't know how lucky you are not to have one. Hearts will never be practical until they can be made unbreakable."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: But I still want one.",
+    "clean": "But I still want one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Goodbye, Tin Man. Oh, don't cry! You'll rust so dreadfully. Here's your oil can.",
+    "clean": "Goodbye, Tin Man. Oh, don't cry! You'll rust so dreadfully. Here's your oil can."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tin Man: Oh, thank you. Now I know I've got a heart, 'cause it's breaking... And it's saying Thank you, Dorothy.",
+    "clean": "Oh, thank you. Now I know I've got a heart, 'cause it's breaking... And it's saying Thank you, Dorothy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: Goodbye, Lion. I know it isn't right, but I'm going to miss the way you used to holler for help before you found your courage.",
+    "clean": "Goodbye, Lion. I know it isn't right, but I'm going to miss the way you used to holler for help before you found your courage."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cowardly Lion: Oh, thank you. I never would've found it if it hadn't been for you...",
+    "clean": "Oh, thank you. I never would've found it if it hadn't been for you..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dorothy: [to Scarecrow] I think I'm going to miss you most of all.",
+    "clean": "I think I'm going to miss you most of all."
+  },
+  {
+    "heading": "Quotes about The Wizard of Oz",
+    "raw": "It's a wonderful universal story. I mean you look at the Wizard of Oz — it takes a reality which is the beginning of the movie, and turns it into a mythology. … You know all great story telling is a form of myth. Caleb Deschanel, These Amazing Shadows (2011)",
+    "clean": "It's a wonderful universal story. I mean you look at the Wizard of Oz - it takes a reality which is the beginning of the movie, and turns it into a mythology. ... You know all great story telling is a form of myth. Caleb Deschanel, These Amazing Shadows (2011)"
+  },
+  {
+    "heading": "Quotes about The Wizard of Oz",
+    "raw": "I would watch Wizard of Oz, like every day, when I was two. I had a hard time understanding that I couldn't go into the film, because it felt so real to me. Zooey Deschanel, These Amazing Shadows (2011)",
+    "clean": "I would watch Wizard of Oz, like every day, when I was two. I had a hard time understanding that I couldn't go into the film, because it felt so real to me. Zooey Deschanel, These Amazing Shadows (2011)"
+  }
+]

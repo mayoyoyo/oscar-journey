@@ -1,0 +1,797 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Howard Hawks, co-written by Ben Hecht, Seton I. Miller, John Lee Mahin, W.R. Burnett and Fred Pasley, based on the 1929 novel by Armitage Trail.",
+    "clean": "Directed by Howard Hawks, co-written by Ben Hecht, Seton I. Miller, John Lee Mahin, W.R. Burnett and Fred Pasley, based on the 1929 novel by Armitage Trail."
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "You see that? [Referring to a sign outside the window reads: THE WORLD IS YOURS. COOK TOURS] Someday I look at that sign and I say, \"Okay, she's mine.\"",
+    "clean": "You see that? Someday I look at that sign and I say, \"Okay, she's mine.\""
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "Listen, Little Boy, in this business there's only one law you gotta follow to keep out of trouble: Do it first, do it yourself, and keep on doing it.",
+    "clean": "Listen, Little Boy, in this business there's only one law you gotta follow to keep out of trouble: Do it first, do it yourself, and keep on doing it."
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "Ah, he ain't so tough. Hanging out in a flower shop. You afraid of a guy like that?",
+    "clean": "Ah, he ain't so tough. Hanging out in a flower shop. You afraid of a guy like that?"
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "I don't know nothin'. I don't see nothin'. I don't hear nothin'. When I do I don't tell the cops. Understand?",
+    "clean": "I don't know nothin'. I don't see nothin'. I don't hear nothin'. When I do I don't tell the cops. Understand?"
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "[Smashes the window] Just changing the name on the door.",
+    "clean": "Just changing the name on the door."
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "This fellow's got ideas I don't like.",
+    "clean": "This fellow's got ideas I don't like."
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "[Holding a tommy gun] Lookit, Johnny, you can carry it around like a baby!",
+    "clean": "Lookit, Johnny, you can carry it around like a baby!"
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "Nice little thug. He give 'em a writ of hocus pocus.",
+    "clean": "Nice little thug. He give 'em a writ of hocus pocus."
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "Hey, Cesca, you and me, huh? We'll show them. We'll lick them all, the North Side, the South Side! We'll lick the whole world!",
+    "clean": "Hey, Cesca, you and me, huh? We'll show them. We'll lick them all, the North Side, the South Side! We'll lick the whole world!"
+  },
+  {
+    "heading": "Tony Camonte",
+    "raw": "I get you a hunk of soap, you take a bath in it.",
+    "clean": "I get you a hunk of soap, you take a bath in it."
+  },
+  {
+    "heading": "Francesca 'Cesca' Camonte",
+    "raw": "You're a butcher! That's what you are! You're a butcher!",
+    "clean": "You're a butcher! That's what you are! You're a butcher!"
+  },
+  {
+    "heading": "Inspector Ben Guarino",
+    "raw": "I told you you'd show up this way. Get you in a jam without a gun and you squeal like a yellow rat. Come on, climb into this (handcuffs).",
+    "clean": "I told you you'd show up this way. Get you in a jam without a gun and you squeal like a yellow rat. Come on, climb into this (handcuffs)."
+  },
+  {
+    "heading": "Mrs. Camonte",
+    "raw": "He hurt you. He hurt you. He hurt everybody.",
+    "clean": "He hurt you. He hurt you. He hurt everybody."
+  },
+  {
+    "heading": "John 'Johnny' Lovo",
+    "raw": "What do you use to think with, an empty beer keg?",
+    "clean": "What do you use to think with, an empty beer keg?"
+  },
+  {
+    "heading": "John 'Johnny' Lovo",
+    "raw": "When you're layin' in an alley with your head blown off, maybe you'll learn how this business ought to be run.",
+    "clean": "When you're layin' in an alley with your head blown off, maybe you'll learn how this business ought to be run."
+  },
+  {
+    "heading": "Gaffney",
+    "raw": "Seven of 'em. Lined up against a wall. Mowed down just like that. They didn't have a chance.",
+    "clean": "Seven of 'em. Lined up against a wall. Mowed down just like that. They didn't have a chance."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Louie: That's the most I got is bottle of creme de menthe.",
+    "clean": "That's the most I got is bottle of creme de menthe."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Henchman 1: You got things pretty much your own way now, haven't you, Louie?",
+    "clean": "Henchman 1: You got things pretty much your own way now, haven't you, Louie?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Louie: Sure. Everything is just fine.",
+    "clean": "Sure. Everything is just fine."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Henchman 1: Well, that's good, but Pete was saying just tonight...",
+    "clean": "Henchman 1: Well, that's good, but Pete was saying just tonight..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Louie: Ah! He say that the South Side, she's get outta line. I say, what are we gonna do with the South Side? Let some of the other boys get theirs too. I got all I want.",
+    "clean": "Ah! He say that the South Side, she's get outta line. I say, what are we gonna do with the South Side? Let some of the other boys get theirs too. I got all I want."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Henchman 2: Johnny Lovo, he's talkin' about starting something.",
+    "clean": "Henchman 2: Johnny Lovo, he's talkin' about starting something."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Louie: Yeah? He's lookin' for trouble, eh? Johnny's very foolish. Look at me. A man always gotta know whether he's got it or not. I got plenty. I got house. I got automobile. I got nice girl. I got stomach trouble too.",
+    "clean": "Yeah? He's lookin' for trouble, eh? Johnny's very foolish. Look at me. A man always gotta know whether he's got it or not. I got plenty. I got house. I got automobile. I got nice girl. I got stomach trouble too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Henchman 1: Better get some sleep here.",
+    "clean": "Henchman 1: Better get some sleep here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Louie: All right, boys. Well, she was a pretty good party, eh? Next week, I'm going to give a party... which the boys have never seen nothing like it before. We'll have much more music, much more girls, much more everything. Everybody should say, \"Ah! Big Louie, he sit on top of the world!\" Eh?",
+    "clean": "All right, boys. Well, she was a pretty good party, eh? Next week, I'm going to give a party... which the boys have never seen nothing like it before. We'll have much more music, much more girls, much more everything. Everybody should say, \"Ah! Big Louie, he sit on top of the world!\" Eh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Henchman 2: Good-bye, Louie.",
+    "clean": "Henchman 2: Good-bye, Louie."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Louie: Good-bye, boys. Take-a good \"careful\" of yourself, eh? All right. I see you some more. [Makes a phone call] Hello. I want Lakeside 34107 please. Yeah. 34107 Lakeside. Sure. That's the wrong num... No. I want Lakeside 34107.",
+    "clean": "Good-bye, boys. Take-a good \"careful\" of yourself, eh? All right. I see you some more. Hello. I want Lakeside 34107 please. Yeah. 34107 Lakeside. Sure. That's the wrong num... No. I want Lakeside 34107."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hitman: Hello, Louie. [Shoots him]",
+    "clean": "Hello, Louie."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Franesca: The police are here for you! It's all my fault, I shouldn't have come...",
+    "clean": "The police are here for you! It's all my fault, I shouldn't have come..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Your fault, my fault, who cares? So long as you're here.",
+    "clean": "Your fault, my fault, who cares? So long as you're here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: There's only one thing that gets orders and gives orders. [Points to Tommy Gun] And this is it. That's how I got the south side for you, and that's how I'm gonna get the north side for you. It's a typewriter. I'm gonna write my name all over this town with it, in big letters!",
+    "clean": "There's only one thing that gets orders and gives orders. And this is it. That's how I got the south side for you, and that's how I'm gonna get the north side for you. It's a typewriter. I'm gonna write my name all over this town with it, in big letters!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "John: Hey, stop him somebody!",
+    "clean": "Hey, stop him somebody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Get out of my way Johnny, I'm gonna spit! [Maniacally opens fire at wall]",
+    "clean": "Get out of my way Johnny, I'm gonna spit!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Kind of gaudy, isn't it?",
+    "clean": "Kind of gaudy, isn't it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Ain't it though? Glad you like it.",
+    "clean": "Ain't it though? Glad you like it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Why don't you get yourself a girl, Tony?",
+    "clean": "Why don't you get yourself a girl, Tony?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: I'm workin' on that now.",
+    "clean": "I'm workin' on that now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Yeah? Well, don't tire yourself out.",
+    "clean": "Yeah? Well, don't tire yourself out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Hey, hey. Get a name. Get a name.",
+    "clean": "Hey, hey. Get a name. Get a name."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Angelo: [Speaking into telephone angrily] What's your name? No, no, I no wanna know what's your brother's name, I wanna know what's your name. Oh, you do, huh? Listen, I come on over there, I smack you right in the teeth! I get you, you brother...",
+    "clean": "What's your name? No, no, I no wanna know what's your brother's name, I wanna know what's your name. Oh, you do, huh? Listen, I come on over there, I smack you right in the teeth! I get you, you brother..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Hey! What's the matter? That's no way to talk. Talk nice. Tell him to state his business.",
+    "clean": "Hey! What's the matter? That's no way to talk. Talk nice. Tell him to state his business."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Angelo: Go state your business! [He hangs up]",
+    "clean": "Go state your business!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: I'm not hungry. Except for you. You got something I like.",
+    "clean": "I'm not hungry. Except for you. You got something I like."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Yeah. I'm nice with a lot of dressing. You work fast, don't you Tony.",
+    "clean": "Yeah. I'm nice with a lot of dressing. You work fast, don't you Tony."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Angelo: [Phones rings again and Angelo answers] This is Mr. Camonte's sec... [caller interrupts] Oh, no. Please, you're wrong. I no hang up on you. I thought you was through. [Caller replies] I told you before. You have to write a letter. You have to make... [Caller rants] Oh, you do, huh? Let me tell you... [Caller continues ranting and Angelo slams the receiver and aims his gun at phone] Aw, shut up, you! ...",
+    "clean": "This is Mr. Camonte's sec... Oh, no. Please, you're wrong. I no hang up on you. I thought you was through. I told you before. You have to write a letter. You have to make... Oh, you do, huh? Let me tell you... Aw, shut up, you! ..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: [Thwwarting him] Hey, what's the matter with you? You crazy?",
+    "clean": "Hey, what's the matter with you? You crazy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: [while sitting at a table, Tony rubs his foot on Poppy's leg] Please, Tony! My stockings!",
+    "clean": "Please, Tony! My stockings!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: What's a matter?",
+    "clean": "What's a matter?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Well don't do that, Tony. They're brand new.",
+    "clean": "Well don't do that, Tony. They're brand new."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Hands off, eh?",
+    "clean": "Hands off, eh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: No... feet.",
+    "clean": "No... feet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: You keep the motor running. Bring the presents. You stay here. Come on, fellas.",
+    "clean": "You keep the motor running. Bring the presents. You stay here. Come on, fellas."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Angelo: Ah, now we'll know what happened to that girl, Sadie.",
+    "clean": "Ah, now we'll know what happened to that girl, Sadie."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Angelo, did she take the guy with the collar?",
+    "clean": "Angelo, did she take the guy with the collar?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Angelo: Nah. She climb back in the hay with the army.",
+    "clean": "Nah. She climb back in the hay with the army."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Yeah? That's fine. She's a smart girl, that kid.",
+    "clean": "Yeah? That's fine. She's a smart girl, that kid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Angelo: Come on. What're you doin'?",
+    "clean": "Come on. What're you doin'?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Not bad, huh? Just watch this one.",
+    "clean": "Not bad, huh? Just watch this one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Man 1: Hello, Tony. How are you?",
+    "clean": "Man 1: Hello, Tony. How are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Ahhh, that's-a pretty hot!",
+    "clean": "Ahhh, that's-a pretty hot!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woman: Hello.",
+    "clean": "Hello."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Hello.",
+    "clean": "Hello."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Man 2: Hello.",
+    "clean": "Man 2: Hello."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Hello, stranger.",
+    "clean": "Hello, stranger."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maitre 'd: Chair.",
+    "clean": "Chair."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Well, Johnny! Well, you're lookin' swell. I thought we were gonna see something of you.",
+    "clean": "Well, Johnny! Well, you're lookin' swell. I thought we were gonna see something of you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Well, here I am.",
+    "clean": "Well, here I am."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Where have you been? On a vacation?",
+    "clean": "Where have you been? On a vacation?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: I've been workin'. Up on the North Side, huh, Johnny?",
+    "clean": "I've been workin'. Up on the North Side, huh, Johnny?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Johnny: That's what the papers say.",
+    "clean": "That's what the papers say."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Don't work too hard.",
+    "clean": "Don't work too hard."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: I just finish up tonight. Now I play a while.",
+    "clean": "I just finish up tonight. Now I play a while."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Johnny: You get your own table, Camonte.",
+    "clean": "You get your own table, Camonte."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Why is that?",
+    "clean": "Why is that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Johnny: This is a table for two.",
+    "clean": "This is a table for two."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Well, maybe you get another table, huh, Johnny?",
+    "clean": "Well, maybe you get another table, huh, Johnny?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Johnny: Hey, listen, you! Who do you think you are?",
+    "clean": "Hey, listen, you! Who do you think you are?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Waiter: What are you tryin' to do? [Joins the thwarting of a gunman]",
+    "clean": "What are you tryin' to do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: All right, go on.",
+    "clean": "All right, go on."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: Nothing seems to bother you much, does it?",
+    "clean": "Nothing seems to bother you much, does it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Well, I get used to noises.",
+    "clean": "Well, I get used to noises."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maid: Hello, Guino. [She walks on]",
+    "clean": "Hello, Guino."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Guino: Hello, baby.",
+    "clean": "Hello, baby."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Why are you always high-hatting me? Go on, beat it. I suppose you need an organ grinder to work with?",
+    "clean": "Why are you always high-hatting me? Go on, beat it. I suppose you need an organ grinder to work with?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Guino: Tony's inside. He see you in that outfit?",
+    "clean": "Tony's inside. He see you in that outfit?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: I looked pretty good from two stories up. Am I different now? Wanna dance with me?",
+    "clean": "I looked pretty good from two stories up. Am I different now? Wanna dance with me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Guino: Listen, you're Tony's sister, see? Besides, you're only a kid.",
+    "clean": "Listen, you're Tony's sister, see? Besides, you're only a kid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: I'm 20. You like that music? Now do you wanna dance?",
+    "clean": "I'm 20. You like that music? Now do you wanna dance?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Afraid! Afraid of Tony's sister! Why, you... Well, I notice you stood there and watched. Someday you'll find out you've been missing something. [She locks arms with another man and flicks a hand at Guino derisively and walks into ballroom]",
+    "clean": "Afraid! Afraid of Tony's sister! Why, you... Well, I notice you stood there and watched. Someday you'll find out you've been missing something."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Hey, how about it, you and me, huh?",
+    "clean": "Hey, how about it, you and me, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: I thought you weren't dancing.",
+    "clean": "I thought you weren't dancing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: I changed my mind. I need exercise. We show 'em somethin', huh?",
+    "clean": "I changed my mind. I need exercise. We show 'em somethin', huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: I think you missed me, huh?",
+    "clean": "I think you missed me, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: That's right. We make up for lost time.",
+    "clean": "That's right. We make up for lost time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Poppy: How do you wanna play, Tony? Like this?",
+    "clean": "How do you wanna play, Tony? Like this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: That's it.",
+    "clean": "That's it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: You wait here. I take her home myself.",
+    "clean": "You wait here. I take her home myself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: You can't!",
+    "clean": "You can't!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Shut up!",
+    "clean": "Shut up!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: You'll be sorry for this.",
+    "clean": "You'll be sorry for this."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Next time I catch you in a place like that, I'm gonna kill you.",
+    "clean": "Next time I catch you in a place like that, I'm gonna kill you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: You're telling me what to do? I'll do what I want, same as you! Understand?",
+    "clean": "You're telling me what to do? I'll do what I want, same as you! Understand?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: You listen to me!",
+    "clean": "You listen to me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: I hate you!",
+    "clean": "I hate you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Never mind what I do!",
+    "clean": "Never mind what I do!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: That's all right.",
+    "clean": "That's all right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: You're gonna stay home, understand?",
+    "clean": "You're gonna stay home, understand?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: I'm no baby! I can take care of myself!",
+    "clean": "I'm no baby! I can take care of myself!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Yeah, runnin' around with the fellas, huh? Letting 'em hold you like that? Letting 'em look at you? Dressin' up like that for fellas to see, huh?",
+    "clean": "Yeah, runnin' around with the fellas, huh? Letting 'em hold you like that? Letting 'em look at you? Dressin' up like that for fellas to see, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: What I do with fellas is my business!",
+    "clean": "What I do with fellas is my business!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother: Cesca!",
+    "clean": "Cesca!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Oh, Mama.",
+    "clean": "Oh, Mama."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother: Cesca, what's the matter? What-a Tony do to you, huh? What he do?",
+    "clean": "Cesca, what's the matter? What-a Tony do to you, huh? What he do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: He hit me. He said he'd kill me, and I wasn't doing anything. I was only dancing!",
+    "clean": "He hit me. He said he'd kill me, and I wasn't doing anything. I was only dancing!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother: That's all right, figlia mia. No cry. All right, tell-a Mama. Come on upstairs. No cry, baby.",
+    "clean": "That's all right, figlia mia. No cry. All right, tell-a Mama. Come on upstairs. No cry, baby."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: He hasn't any right to. Just because I'm his sister, he can't throw me around like that.",
+    "clean": "He hasn't any right to. Just because I'm his sister, he can't throw me around like that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother: All right, no cry, baby.",
+    "clean": "All right, no cry, baby."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: I tell you. I tell you lotsa times!",
+    "clean": "I tell you. I tell you lotsa times!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother: He hurt you! He hurt you! He hurt everybody. It's all right.",
+    "clean": "He hurt you! He hurt you! He hurt everybody. It's all right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: See if you can put out his tires.",
+    "clean": "See if you can put out his tires."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother: Right.",
+    "clean": "Right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Where's Cesca?",
+    "clean": "Where's Cesca?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: Oh, I don't know. She go out.",
+    "clean": "Oh, I don't know. She go out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: What do you mean? Ain't she comin' home for dinner? Oh. Hey, I don't like that. You tell her I want she should come home for dinner. Understand?",
+    "clean": "What do you mean? Ain't she comin' home for dinner? Oh. Hey, I don't like that. You tell her I want she should come home for dinner. Understand?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: Sure. I tell her lotsa time. \"Come home. Come home. Tony no like. \" But she don't... [A noise is heard and Tony leaves kitchen to catch Cesca making out with a man in the foyer]",
+    "clean": "Sure. I tell her lotsa time. \"Come home. Come home. Tony no like. \" But she don't..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: That's a nice way I catch ya,",
+    "clean": "That's a nice way I catch ya,"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Huh? What do you mean, \"catch me\"? I wasn't doin' nothin'.",
+    "clean": "Huh? What do you mean, \"catch me\"? I wasn't doin' nothin'."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: You was kissin' him.",
+    "clean": "You was kissin' him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Sure. What of it?",
+    "clean": "Sure. What of it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Well, I don't like it.",
+    "clean": "Well, I don't like it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: You're missin' lots of fun.",
+    "clean": "You're missin' lots of fun."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Listen, I don't want anyone kissin' my sister. Understand?",
+    "clean": "Listen, I don't want anyone kissin' my sister. Understand?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: You're hurtin' my arm!",
+    "clean": "You're hurtin' my arm!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: I don't want anybody puttin' their hands on you!",
+    "clean": "I don't want anybody puttin' their hands on you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: What do you think you're doing?",
+    "clean": "What do you think you're doing?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: I'm your brother.",
+    "clean": "I'm your brother."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: You don't act it. You act more like... I don't know. Sometimes I think... I don't care what you think.",
+    "clean": "You don't act it. You act more like... I don't know. Sometimes I think... I don't care what you think."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: You do what I say.",
+    "clean": "You do what I say."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Sure, and never have any fun.",
+    "clean": "Sure, and never have any fun."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Oh, \"never have any fun. \" You call that fun, huh? Runnin' around with guys like that. That's \"fun. \" Listen, you want real fun, huh? Here. [Gives her cash wad] How's that?",
+    "clean": "Oh, \"never have any fun. \" You call that fun, huh? Runnin' around with guys like that. That's \"fun. \" Listen, you want real fun, huh? Here. How's that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Gee, Tony! Where'd you get it?",
+    "clean": "Gee, Tony! Where'd you get it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Never mind where I got it. You just spend it, see?",
+    "clean": "Never mind where I got it. You just spend it, see?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Tony, you're swell. [She goes upstairs]",
+    "clean": "Tony, you're swell."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Go on. Get ready for dinner. And remember, you do what I say. No more fellas, understand?",
+    "clean": "Go on. Get ready for dinner. And remember, you do what I say. No more fellas, understand?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: What for you wanna give her money, huh?",
+    "clean": "What for you wanna give her money, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Ma, she's just a kid. She wants to have fun.",
+    "clean": "Ma, she's just a kid. She wants to have fun."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: Yeah? Sometime, I think you crazy.",
+    "clean": "Yeah? Sometime, I think you crazy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tony: Cesca!",
+    "clean": "Cesca!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: What for you take that money, huh?",
+    "clean": "What for you take that money, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Because I want it. That's why.",
+    "clean": "Because I want it. That's why."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: Give it back. It's bad money. Tony no got it in no good way. It gonna bring you lotsa trouble.",
+    "clean": "Give it back. It's bad money. Tony no got it in no good way. It gonna bring you lotsa trouble."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: What do I care where he gets it? There's nothing wrong with his giving it to me. Tony wants me to have a good time.",
+    "clean": "What do I care where he gets it? There's nothing wrong with his giving it to me. Tony wants me to have a good time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: Oh, yes? You listen! Tony no love you like he make you believe. All the time, he smile on top, but what he thinks... Oh, he's got lotsa tricks. He no give money to nobody for nothing. He would to his sister.",
+    "clean": "Oh, yes? You listen! Tony no love you like he make you believe. All the time, he smile on top, but what he thinks... Oh, he's got lotsa tricks. He no give money to nobody for nothing. He would to his sister."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: Sister. Huh! That make no difference.",
+    "clean": "Sister. Huh! That make no difference."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: To him, you're just another girl. Someday when he need you, he mix you up in his business... just like anyone else, and he's gonna make you bad like him.",
+    "clean": "To him, you're just another girl. Someday when he need you, he mix you up in his business... just like anyone else, and he's gonna make you bad like him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: He can't make me do anything I don't want to. I'm gonna live my own life. I can take care of myself.",
+    "clean": "He can't make me do anything I don't want to. I'm gonna live my own life. I can take care of myself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mother Camonte: Yeah? All the time, Tony say like that. Afterward, he no belong to me no more. He's-a no good, and now you start to be just like him.",
+    "clean": "Yeah? All the time, Tony say like that. Afterward, he no belong to me no more. He's-a no good, and now you start to be just like him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cesca: No, I'm not. Don't worry about me. I'll get along all right.",
+    "clean": "No, I'm not. Don't worry about me. I'll get along all right."
+  }
+]

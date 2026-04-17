@@ -1,0 +1,72 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Stanley Kramer. Written by Abby Mann.",
+    "clean": "Directed by Stanley Kramer. Written by Abby Mann."
+  },
+  {
+    "heading": "Col. Tad Lawson",
+    "raw": "One thing about Americans: we're not cut out to be occupiers. We're new at it and not very good at it.",
+    "clean": "we're not cut out to be occupiers. We're new at it and not very good at it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Capt. Harrison Byers: I trust you'll be comfortable in this room, sir.",
+    "clean": "I trust you'll be comfortable in this room, sir."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judge Dan Haywood: Captain, I have no doubt that the entire state of Maine would be comfortable in this room!",
+    "clean": "Captain, I have no doubt that the entire state of Maine would be comfortable in this room!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Werner Lampe: You do not think it was like that, do you? [the other defendants are silent] There were executions, yes, but nothing like that. Nothing at all! [turns to another prisoner] Pöhl. Pöhl! You ran those concentration camps, you and Eichmann. They say we killed millions of people. [scoffs] Millions of people! How could it be possible? Tell them, how could it be possible?",
+    "clean": "You do not think it was like that, do you? There were executions, yes, but nothing like that. Nothing at all! Pöhl. Pöhl! You ran those concentration camps, you and Eichmann. They say we killed millions of people. Millions of people! How could it be possible? Tell them, how could it be possible?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pöhl: [matter-of-fact] It's possible.",
+    "clean": "Pöhl: It's possible."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ernst Janning: My counsel would have you believe that we were not aware of the extermination of millions. That we were only aware of the extermination of the hundreds. Does that make us any the less guilty? Maybe we didn't know the details. But if we didn't know, it was because we did not want to know.",
+    "clean": "My counsel would have you believe that we were not aware of the extermination of millions. That we were only aware of the extermination of the hundreds. Does that make us any the less guilty? Maybe we didn't know the details. But if we didn't know, it was because we did not want to know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Emil Hahn: Traitor! Traitor!",
+    "clean": "Traitor! Traitor!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judge Dan Haywood: Order, order! Put that man back in his seat and keep him there!",
+    "clean": "Order, order! Put that man back in his seat and keep him there!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hans Rolfe: I'll make you a wager...",
+    "clean": "I'll make you a wager..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judge Dan Haywood: I don't make wagers.",
+    "clean": "I don't make wagers."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hans Rolfe: A gentleman's wager... in five years, the men you sentenced to life imprisonment will be free.",
+    "clean": "A gentleman's wager... in five years, the men you sentenced to life imprisonment will be free."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ernst Janning: Judge Haywood... the reason I asked you to come: Those people, those millions of people... I never knew it would come to that. You must believe it, you must believe it!",
+    "clean": "Judge Haywood... the reason I asked you to come: Those people, those millions of people... I never knew it would come to that. You must believe it, you must believe it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judge Dan Haywood: Herr Janning, it \"came to that\" the first time you sentenced a man to death you knew to be innocent.",
+    "clean": "Herr Janning, it \"came to that\" the first time you sentenced a man to death you knew to be innocent."
+  }
+]

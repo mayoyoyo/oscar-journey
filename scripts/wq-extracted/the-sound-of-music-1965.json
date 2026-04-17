@@ -1,0 +1,687 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Robert Wise. Written by Ernest Lehman, based on the novel by Howard Lindsay and Russel Crouse, which was based on an autobiography by Maria von Trapp (The von Trapp Family Singers) and the 1959 musical of the same name by Rodgers and Hammerstein.",
+    "clean": "Directed by Robert Wise. Written by Ernest Lehman, based on the novel by Howard Lindsay and Russel Crouse, which was based on an autobiography by Maria von Trapp (The von Trapp Family Singers) and the 1959 musical of the same name by Rodgers and Hammerstein."
+  },
+  {
+    "heading": "Maria Rainer-Von Trapp",
+    "raw": "[singing] Raindrops on roses and whiskers on kittens,Bright copper kettles and warm woolen mittens,Brown paper packages tied up with strings,These are a few of my favorite things.",
+    "clean": "Raindrops on roses and whiskers on kittens,Bright copper kettles and warm woolen mittens,Brown paper packages tied up with strings,These are a few of my favorite things."
+  },
+  {
+    "heading": "Reverend Mother",
+    "raw": "[singing] How do you solve a problem like Maria?How do you catch a cloud and pin it down?Many a thing you know you'd like to tell her, many a thing she ought to understand...How do you hold a moonbeam in your hand?",
+    "clean": "How do you solve a problem like Maria?How do you catch a cloud and pin it down?Many a thing you know you'd like to tell her, many a thing she ought to understand...How do you hold a moonbeam in your hand?"
+  },
+  {
+    "heading": "Reverend Mother",
+    "raw": "[singing] Climb ev'ry mountain, search high and low.Follow ev'ry byway, every path you know.Climb ev'ry mountain, ford every stream.Follow every rainbow, till you find your dream.A dream that will need all the love you can giveEvery day of your life for as long as you live...",
+    "clean": "Climb ev'ry mountain, search high and low.Follow ev'ry byway, every path you know.Climb ev'ry mountain, ford every stream.Follow every rainbow, till you find your dream.A dream that will need all the love you can giveEvery day of your life for as long as you live..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: I just couldn't help myself. The gates were open and the hills were beckoning and everything was so green and fresh, and the Untersberg kept leading me higher and higher, as if it wanted me to go right through the clouds with it.",
+    "clean": "I just couldn't help myself. The gates were open and the hills were beckoning and everything was so green and fresh, and the Untersberg kept leading me higher and higher, as if it wanted me to go right through the clouds with it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reverend Mother: Child, suppose darkness had come and you were lost?",
+    "clean": "Child, suppose darkness had come and you were lost?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reverend Mother: Some people would call that honesty.",
+    "clean": "Some people would call that honesty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Oh, but it's terrible, Reverend Mother. You know how Sister Berthe always makes me kiss the floor after we've had a disagreement? Well, lately I've taken to kissing the floor whenever I see her coming, just to save time.",
+    "clean": "Oh, but it's terrible, Reverend Mother. You know how Sister Berthe always makes me kiss the floor after we've had a disagreement? Well, lately I've taken to kissing the floor whenever I see her coming, just to save time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: You are the twelfth in a long line of governesses who have come here to look after my children since their mother died. I trust you will be an improvement on the last one. She stayed only two hours.",
+    "clean": "You are the twelfth in a long line of governesses who have come here to look after my children since their mother died. I trust you will be an improvement on the last one. She stayed only two hours."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: What's wrong with the children, Captain?",
+    "clean": "What's wrong with the children, Captain?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Now, when I want you, this is what you will hear. [blows whistle]",
+    "clean": "Now, when I want you, this is what you will hear."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Oh, no, sir, I'm sorry, sir. I could never answer to a whistle. Whistles are for dogs and cats and other animals, but not for children, and definitely not for me. It would be too... humiliating.",
+    "clean": "Oh, no, sir, I'm sorry, sir. I could never answer to a whistle. Whistles are for dogs and cats and other animals, but not for children, and definitely not for me. It would be too... humiliating."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Fräulein, were you this much trouble at the Abbey?",
+    "clean": "Fräulein, were you this much trouble at the Abbey?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Oh, much more, sir!",
+    "clean": "Oh, much more, sir!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Excuse me, sir, I don't know your signal.",
+    "clean": "Excuse me, sir, I don't know your signal."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: You may call me \"Captain.\"",
+    "clean": "You may call me \"Captain.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: I'd like to thank each and every one of you for the precious gift you left in my pocket today.",
+    "clean": "I'd like to thank each and every one of you for the precious gift you left in my pocket today."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Um, what gift?",
+    "clean": "Um, what gift?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: It's meant to be a secret, Captain, between the children and me.",
+    "clean": "It's meant to be a secret, Captain, between the children and me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Uh-huh. Then I suggest that you keep it, and let us eat.",
+    "clean": "Uh-huh. Then I suggest that you keep it, and let us eat."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Knowing how nervous I must have been, a stranger in a new household, knowing how important it was for me to feel accepted. It was so kind and thoughtful of you to make my first moments here so warm and happy and... pleasant.",
+    "clean": "Knowing how nervous I must have been, a stranger in a new household, knowing how important it was for me to feel accepted. It was so kind and thoughtful of you to make my first moments here so warm and happy and... pleasant."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: What is the matter, Marta?",
+    "clean": "What is the matter, Marta?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marta: Nothing.",
+    "clean": "Nothing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Uh, Fräulein... is it to be at every meal, or merely at dinnertime, that you, uh, intend leading us all through this rare and wonderful new world of... indigestion?",
+    "clean": "Uh, Fräulein... is it to be at every meal, or merely at dinnertime, that you, uh, intend leading us all through this rare and wonderful new world of... indigestion?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Oh, they're all right, Captain. They're just happy.",
+    "clean": "Oh, they're all right, Captain. They're just happy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: You are not going to tell father are you?",
+    "clean": "You are not going to tell father are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Shh, help me to be understanding so that I may guide her footsteps. In the name of the Father, the Son, and the Holy Ghost, Amen.",
+    "clean": "Shh, help me to be understanding so that I may guide her footsteps. In the name of the Father, the Son, and the Holy Ghost, Amen."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: I was out walking and somebody locked the doors early. I didn't want to wake everybody, so when I saw your window open. You're not going to tell Father, are you?",
+    "clean": "I was out walking and somebody locked the doors early. I didn't want to wake everybody, so when I saw your window open. You're not going to tell Father, are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: How in the world did you climb up here?",
+    "clean": "How in the world did you climb up here?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: It's how we always got in to play tricks on the governess. Louisa can make it with a whole jar of spiders in her hand.",
+    "clean": "It's how we always got in to play tricks on the governess. Louisa can make it with a whole jar of spiders in her hand."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Spiders? Liesl, were you out walking all by yourself? If we wash that dress tonight, nobody would notice it tomorrow. You could put this on. Take your dress and put it to soak in the bathtub. Come back here and sit on the bed, and we'll have a talk.",
+    "clean": "Spiders? Liesl, were you out walking all by yourself? If we wash that dress tonight, nobody would notice it tomorrow. You could put this on. Take your dress and put it to soak in the bathtub. Come back here and sit on the bed, and we'll have a talk."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: I told you today I didn't need a governess. Well, maybe I do.",
+    "clean": "I told you today I didn't need a governess. Well, maybe I do."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Fraulein Maria, did I or did I not say that bedtime is to be strictly observed in this household?",
+    "clean": "Fraulein Maria, did I or did I not say that bedtime is to be strictly observed in this household?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Yes, well the children were scared of the thunderstorm and... You did, sir.",
+    "clean": "Yes, well the children were scared of the thunderstorm and... You did, sir."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: And do you or do you not have trouble following these simple instructions?",
+    "clean": "And do you or do you not have trouble following these simple instructions?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Only during thunderstorms, sir.",
+    "clean": "Only during thunderstorms, sir."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: [about Rolf, who gave a Nazi salute] Oh Georg, he's just a boy.",
+    "clean": "Oh Georg, he's just a boy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Yes, and I'm just an Austrian.",
+    "clean": "Yes, and I'm just an Austrian."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Max: What's gonna happen's gonna happen. Just make sure it doesn't happen to you.",
+    "clean": "What's gonna happen's gonna happen. Just make sure it doesn't happen to you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: [incensed] Max, don't you ever say that again!",
+    "clean": "Max, don't you ever say that again!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Max: You know I have no political convictions. Can I help it if other people do?",
+    "clean": "You know I have no political convictions. Can I help it if other people do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Oh yes you can help it. You must help it.",
+    "clean": "Oh yes you can help it. You must help it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Is it possible, or could I have just imagined? Have my children by any chance been climbing trees today?",
+    "clean": "Is it possible, or could I have just imagined? Have my children by any chance been climbing trees today?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Yes, Captain.",
+    "clean": "Yes, Captain."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I see. And where, may I ask, did they get these, uhm, these...",
+    "clean": "I see. And where, may I ask, did they get these, uhm, these..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Playclothes.",
+    "clean": "Playclothes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Oh, is that what you call them?",
+    "clean": "Oh, is that what you call them?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: I made them, from the drapes that used to hang in my bedroom...They still had plenty of wear left. The children have been everywhere in them.",
+    "clean": "I made them, from the drapes that used to hang in my bedroom...They still had plenty of wear left. The children have been everywhere in them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Do you mean to tell me that my children have been roaming about Salzburg dressed up in nothing but some old drapes?!",
+    "clean": "Do you mean to tell me that my children have been roaming about Salzburg dressed up in nothing but some old drapes?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Umm, hmm, and having a marvelous time.",
+    "clean": "Umm, hmm, and having a marvelous time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: They have uniforms.",
+    "clean": "They have uniforms."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Straitjackets, if you'll forgive me.",
+    "clean": "Straitjackets, if you'll forgive me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I will not forgive you for that.",
+    "clean": "I will not forgive you for that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Children can't do all the things they're supposed to if they have to worry about spoiling their precious clothes.",
+    "clean": "Children can't do all the things they're supposed to if they have to worry about spoiling their precious clothes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: They haven't complained yet.",
+    "clean": "They haven't complained yet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Well, they wouldn't dare! They love you too much. They fear you too much!",
+    "clean": "Well, they wouldn't dare! They love you too much. They fear you too much!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I don't wish you to discuss my children in this manner.",
+    "clean": "I don't wish you to discuss my children in this manner."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Well, you've got to hear from someone! You're never home long enough to know them.",
+    "clean": "Well, you've got to hear from someone! You're never home long enough to know them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I said I don't want to hear anymore from you about my children!",
+    "clean": "I said I don't want to hear anymore from you about my children!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: I know you don't, but you've got to! Now, take Liesl.",
+    "clean": "I know you don't, but you've got to! Now, take Liesl."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: [hesitatingly] You will not say one word about Liesl, Fraulein.",
+    "clean": "You will not say one word about Liesl, Fraulein."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: She's not a child anymore, and one of these days, you're going to wake up and find that she's a woman. You won't even know her. And Friedrich, he's a boy, but he wants to be a man and there's no one to show him how.",
+    "clean": "She's not a child anymore, and one of these days, you're going to wake up and find that she's a woman. You won't even know her. And Friedrich, he's a boy, but he wants to be a man and there's no one to show him how."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Don't you DARE tell ME about my son!",
+    "clean": "Don't you DARE tell ME about my son!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Brigitta could tell you about him if you let her get close to you. She notices everything.",
+    "clean": "Brigitta could tell you about him if you let her get close to you. She notices everything."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Fraulein...",
+    "clean": "Fraulein..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: And Kurt pretends he's tough not to show how hurt he is when you brush him aside...",
+    "clean": "And Kurt pretends he's tough not to show how hurt he is when you brush him aside..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: That will do!",
+    "clean": "That will do!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: ...the way you do all of them. Louisa I don't even know about yet...",
+    "clean": "...the way you do all of them. Louisa I don't even know about yet..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I said that will do!",
+    "clean": "I said that will do!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: But somebody has to find out about her, and the little ones just want to be loved. Oh, please, Captain, love them! Love them all!",
+    "clean": "But somebody has to find out about her, and the little ones just want to be loved. Oh, please, Captain, love them! Love them all!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I don't care to hear anything further from you about my children.",
+    "clean": "I don't care to hear anything further from you about my children."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: I'm not finished with you!",
+    "clean": "I'm not finished with you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Oh, yes, you are, Captain! [pauses, then corrects himself] Fraulein! You will pack your things and return to the abbey.",
+    "clean": "Oh, yes, you are, Captain! Fraulein! You will pack your things and return to the abbey."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I behaved badly. I apologize...You were right. I don't know my children...You've brought music back into the house. I'd forgotten. Fraulein, I want you to stay. I ask you to stay more than you know.",
+    "clean": "I behaved badly. I apologize...You were right. I don't know my children...You've brought music back into the house. I'd forgotten. Fraulein, I want you to stay. I ask you to stay more than you know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: My dear, is there anything you can't do?",
+    "clean": "My dear, is there anything you can't do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Well, I'm not sure I'll make a very good nun.",
+    "clean": "Well, I'm not sure I'll make a very good nun."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Oh, if you have any problems, I'd be happy to help you.",
+    "clean": "Oh, if you have any problems, I'd be happy to help you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Max: Is there a more beautiful expression of what is good in this country of ours than the innocent voices of our children?",
+    "clean": "Is there a more beautiful expression of what is good in this country of ours than the innocent voices of our children?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeller: Oh, come now, Baron, would you have us believe that Austria alone holds a monopoly on virtue?",
+    "clean": "Oh, come now, Baron, would you have us believe that Austria alone holds a monopoly on virtue?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Herr Zeller, some of us prefer Austrian voices raised in song to ugly German threats.",
+    "clean": "Herr Zeller, some of us prefer Austrian voices raised in song to ugly German threats."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeller: The ostrich buries his head in the sand, and sometimes in the flag. [He turns toward the Austrian flag, prominently displayed] Perhaps those who would warn you that the Anschluss is coming - and it is coming, Captain - perhaps they would get further with you by setting their words to music.",
+    "clean": "The ostrich buries his head in the sand, and sometimes in the flag. Perhaps those who would warn you that the Anschluss is coming - and it is coming, Captain - perhaps they would get further with you by setting their words to music."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: If the Nazis take over Austria, I have no doubt, Herr Zeller, that you will be the entire trumpet section.",
+    "clean": "If the Nazis take over Austria, I have no doubt, Herr Zeller, that you will be the entire trumpet section."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeller: You flatter me, Captain.",
+    "clean": "You flatter me, Captain."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Oh, how clumsy of me. I meant to accuse you.",
+    "clean": "Oh, how clumsy of me. I meant to accuse you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Now, where is that lovely little thing you were wearing the other evening, when the Captain couldn't keep his eyes off you.",
+    "clean": "Now, where is that lovely little thing you were wearing the other evening, when the Captain couldn't keep his eyes off you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Couldn't keep his eyes off me?",
+    "clean": "Couldn't keep his eyes off me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Come, my dear, we are women. Let's not pretend we don't know when a man notices us...",
+    "clean": "Come, my dear, we are women. Let's not pretend we don't know when a man notices us..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: The Captain notices everybody and everything.",
+    "clean": "The Captain notices everybody and everything."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Well, there's no need to feel so defensive, Maria. You are quite attractive, you know. The Captain would hardly be a man if he didn't notice you.",
+    "clean": "Well, there's no need to feel so defensive, Maria. You are quite attractive, you know. The Captain would hardly be a man if he didn't notice you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Baroness, I hope you're joking.",
+    "clean": "Baroness, I hope you're joking."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Not at all.",
+    "clean": "Not at all."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: But I've never done a thing to...",
+    "clean": "But I've never done a thing to..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: But you don't have to, Maria. There's nothing more irresistible to a man than a woman who's in love with him.",
+    "clean": "But you don't have to, Maria. There's nothing more irresistible to a man than a woman who's in love with him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: 'In love with him'?",
+    "clean": "'In love with him'?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Of course. What makes it so nice is he thinks he's in love with you.",
+    "clean": "Of course. What makes it so nice is he thinks he's in love with you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: But that's not true.",
+    "clean": "But that's not true."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Oh surely you've noticed the way he looks into your eyes. And you know, uh, you blushed in his arms when you were dancing just now. Don't take it to heart. He'll get over it soon enough, I should think. Men do, you know.",
+    "clean": "Oh surely you've noticed the way he looks into your eyes. And you know, uh, you blushed in his arms when you were dancing just now. Don't take it to heart. He'll get over it soon enough, I should think. Men do, you know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Then I should go. I mustn't stay here.",
+    "clean": "Then I should go. I mustn't stay here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reverend Mother: Maria, the love of a man and a woman is holy too. You have a great capacity to love. What you must find out is how God wants you to spend your love.",
+    "clean": "Maria, the love of a man and a woman is holy too. You have a great capacity to love. What you must find out is how God wants you to spend your love."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: But I pledged my life to God. I pledged my life to his service.",
+    "clean": "But I pledged my life to God. I pledged my life to his service."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reverend Mother: My daughter, if you love this man, it doesn't mean you love God less. No, you must find out and you must go back.",
+    "clean": "My daughter, if you love this man, it doesn't mean you love God less. No, you must find out and you must go back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Oh, Mother, you can't ask me to do that. Please let me stay, I beg of you.",
+    "clean": "Oh, Mother, you can't ask me to do that. Please let me stay, I beg of you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reverend Mother: Maria, these walls were not built to shut out problems. You have to face them. You have to live the life you were born to live.",
+    "clean": "Maria, these walls were not built to shut out problems. You have to face them. You have to live the life you were born to live."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: You left without saying goodbye, even to the children.",
+    "clean": "You left without saying goodbye, even to the children."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: It was wrong of me, forgive me.",
+    "clean": "It was wrong of me, forgive me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: Why did you?",
+    "clean": "Why did you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Please don't ask me. Anyway, the reason no longer exists.",
+    "clean": "Please don't ask me. Anyway, the reason no longer exists."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: [entering] Fraulein Maria, you've returned. Isn't it wonderful, Georg?",
+    "clean": "Fraulein Maria, you've returned. Isn't it wonderful, Georg?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: May I wish you every happiness, Baroness? And you too, Captain. The children tell me you're to be married.",
+    "clean": "May I wish you every happiness, Baroness? And you too, Captain. The children tell me you're to be married."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elsa: Thank you, my dear.",
+    "clean": "Thank you, my dear."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: You are back to, uh, stay?",
+    "clean": "You are back to, uh, stay?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Only until arrangements can be made for another governess.",
+    "clean": "Only until arrangements can be made for another governess."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: It's no use, you and I. I'm being dishonest to both of us and utterly unfair to you. When two people talk of marriage...",
+    "clean": "It's no use, you and I. I'm being dishonest to both of us and utterly unfair to you. When two people talk of marriage..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: There isn't going to be any Baroness...well, we've, uhm, called off our engagement, you see...Well, you can't marry someone when you're in love with someone else, can you? [he kisses her]",
+    "clean": "There isn't going to be any Baroness...well, we've, uhm, called off our engagement, you see...Well, you can't marry someone when you're in love with someone else, can you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: The Reverend Mother always says, 'when the Lord closes a door, somewhere he opens a window'.",
+    "clean": "The Reverend Mother always says, 'when the Lord closes a door, somewhere he opens a window'."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: What else does the Reverend Mother say?",
+    "clean": "What else does the Reverend Mother say?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: That you have to look for your life.",
+    "clean": "That you have to look for your life."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain:\"Is that why you came back? [She nods] And have you found it Maria?",
+    "clean": "\"Is that why you came back? And have you found it Maria?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: I think I have. I know I have.",
+    "clean": "I think I have. I know I have."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: I love you.",
+    "clean": "I love you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Oh, can this be happening to me?",
+    "clean": "Oh, can this be happening to me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: [he brings Maria to the center of the gazebo] Do you know when I first started loving you? That night at the dinner table when you sat at that ridiculous pine cone. [laughs]",
+    "clean": "Do you know when I first started loving you? That night at the dinner table when you sat at that ridiculous pine cone."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: What? [laughs too] I knew the first time you blew that whistle.",
+    "clean": "What? I knew the first time you blew that whistle."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Captain: [as he caresses her cheek with his right hand] Oh, my love...",
+    "clean": "Oh, my love..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: [after Ralf rejects her] Mother?",
+    "clean": "Mother?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: That sounds so nice.",
+    "clean": "That sounds so nice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: I like calling you \"Mother.\"",
+    "clean": "I like calling you \"Mother.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: I like hearing it.",
+    "clean": "I like hearing it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: You love Father very much. I can tell you do.",
+    "clean": "You love Father very much. I can tell you do."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Very much.",
+    "clean": "Very much."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: Mother, what do you do when you think you love someone? I mean, when you stop loving someone or he stops loving you?",
+    "clean": "Mother, what do you do when you think you love someone? I mean, when you stop loving someone or he stops loving you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Well, you cry a little. Then you wait for the sun to come out. It always does.",
+    "clean": "Well, you cry a little. Then you wait for the sun to come out. It always does."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: There are so many things I think I should know but I don't. I really don't.",
+    "clean": "There are so many things I think I should know but I don't. I really don't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: How can you?",
+    "clean": "How can you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Liesl: Sometimes I feel the world is ending.",
+    "clean": "Sometimes I feel the world is ending."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: Then you feel it's just beginning?",
+    "clean": "Then you feel it's just beginning?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maria: It was that way with me. And for you it will be just as wonderful.",
+    "clean": "It was that way with me. And for you it will be just as wonderful."
+  }
+]

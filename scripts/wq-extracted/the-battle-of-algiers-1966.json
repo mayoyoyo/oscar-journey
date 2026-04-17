@@ -1,0 +1,207 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Gillo Pontecorvo. Written by Franco Solinas and Gillo Pontecorvo.",
+    "clean": "Directed by Gillo Pontecorvo. Written by Franco Solinas and Gillo Pontecorvo."
+  },
+  {
+    "heading": "Col. Philippe Mathieu",
+    "raw": "Should we remain in Algeria? If you answer \"yes,\" then you must accept all the necessary consequences.",
+    "clean": "Should we remain in Algeria? If you answer \"yes,\" then you must accept all the necessary consequences."
+  },
+  {
+    "heading": "Col. Philippe Mathieu",
+    "raw": "We aren't madmen or sadists, gentlemen. Those who call us Fascists today, forget the contribution that many of us made to the Resistance. Those who call us Nazis, don't know that among us there are survivors of Dachau and Buchenwald. We are soldiers and our only duty is to win.",
+    "clean": "We aren't madmen or sadists, gentlemen. Those who call us Fascists today, forget the contribution that many of us made to the Resistance. Those who call us Nazis, don't know that among us there are survivors of Dachau and Buchenwald. We are soldiers and our only duty is to win."
+  },
+  {
+    "heading": "Col. Philippe Mathieu",
+    "raw": "It's a faceless enemy, unrecognizable, blending in with hundreds of others. It is everywhere. In cafés, in the alleys of the Casbah, or in the very streets of the European quarter.",
+    "clean": "It's a faceless enemy, unrecognizable, blending in with hundreds of others. It is everywhere. In cafés, in the alleys of the Casbah, or in the very streets of the European quarter."
+  },
+  {
+    "heading": "Col. Philippe Mathieu",
+    "raw": "To know them is to eliminate them. Consequently, the purely military aspect of the problem is secondary. More important is the policing aspect. I know you dislike that word. But it's the only one that describes the work at hand.",
+    "clean": "To know them is to eliminate them. Consequently, the purely military aspect of the problem is secondary. More important is the policing aspect. I know you dislike that word. But it's the only one that describes the work at hand."
+  },
+  {
+    "heading": "Col. Philippe Mathieu",
+    "raw": "Like rabbits in a cage. Just as I hoped.",
+    "clean": "Like rabbits in a cage. Just as I hoped."
+  },
+  {
+    "heading": "El-Hadi Jafar",
+    "raw": "The first section's dead. There's no one left. We lost contact with the second. The third is reorganizing. All that's left is the fourth. It's enough to start over with.",
+    "clean": "The first section's dead. There's no one left. We lost contact with the second. The third is reorganizing. All that's left is the fourth. It's enough to start over with."
+  },
+  {
+    "heading": "El-Hadi Jafar",
+    "raw": "[distributing the bomb baskets to female FLN fighters] Air France, Rue Mauritania. The café, Rue Michelet. The milk bar, Rue d'Isly. The bomb timers are short. They'll be set outside the Casbah. Taleb is waiting for you at the fish market. But then you must hurry. You only have 30 minutes to place them. Good luck. Good luck. God be with you.",
+    "clean": "Air France, Rue Mauritania. The café, Rue Michelet. The milk bar, Rue d'Isly. The bomb timers are short. They'll be set outside the Casbah. Taleb is waiting for you at the fish market. But then you must hurry. You only have 30 minutes to place them. Good luck. Good luck. God be with you."
+  },
+  {
+    "heading": "Ben M'Hidi",
+    "raw": "It's hard to start a revolution. Even harder to continue it. And hardest of all to win it. But, it's only afterwards, when we have won, that the true difficulties begin. In short, Ali, there's still much to do.",
+    "clean": "It's hard to start a revolution. Even harder to continue it. And hardest of all to win it. But, it's only afterwards, when we have won, that the true difficulties begin. In short, Ali, there's still much to do."
+  },
+  {
+    "heading": "Other",
+    "raw": "French Interrogator: Couldn't you have talked sooner? It would've gone easier for you.",
+    "clean": "Couldn't you have talked sooner? It would've gone easier for you."
+  },
+  {
+    "heading": "Other",
+    "raw": "Political Prisoner: [handcuffed, walking to the guillotine] God is great! God is great! Long Live Algeria! Long Live Algeria! Long Live Algeria! Long Live Algeria! Long Live Algeria! Long Live Algeria!",
+    "clean": "God is great! God is great! Long Live Algeria! Long Live Algeria! Long Live Algeria! Long Live Algeria! Long Live Algeria! Long Live Algeria!"
+  },
+  {
+    "heading": "Other",
+    "raw": "FLN Official: Remember, we are at war against colonialism. A strong army has occupied our country for 130 years. This is why the FLN has to make decisions concerning the civil life of the Algerian people. With this marriage we fulfill our duty, a duty of resistance.",
+    "clean": "Remember, we are at war against colonialism. A strong army has occupied our country for 130 years. This is why the FLN has to make decisions concerning the civil life of the Algerian people. With this marriage we fulfill our duty, a duty of resistance."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ben M'Hidi: Jaffar says you weren't in favor of the strike.",
+    "clean": "Jaffar says you weren't in favor of the strike."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ali La Pointe: No, I wasn't.",
+    "clean": "No, I wasn't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ben M'Hidi: Why not?",
+    "clean": "Why not?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ali La Pointe: Because we were ordered not to use arms.",
+    "clean": "Because we were ordered not to use arms."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ben M'Hidi: Acts of violence don't win wars. Neither wars nor revolutions. Terrorism is useful as a start. But then, the people themselves must act. That's the rationale behind this strike: to mobilize all Algerians, to assess our strength.",
+    "clean": "Acts of violence don't win wars. Neither wars nor revolutions. Terrorism is useful as a start. But then, the people themselves must act. That's the rationale behind this strike: to mobilize all Algerians, to assess our strength."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: M. Ben M'Hidi, don't you think it's a bit cowardly to use women's baskets and handbags to carry explosive devices that kill so many innocent people?",
+    "clean": "M. Ben M'Hidi, don't you think it's a bit cowardly to use women's baskets and handbags to carry explosive devices that kill so many innocent people?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ben M'Hidi: And doesn't it seem to you even more cowardly to drop napalm bombs on defenseless villages, so that there are a thousand times more innocent victims? Of course, if we had your airplanes, it would be a lot easier for us. Give us your bombers, and you can have our baskets.",
+    "clean": "And doesn't it seem to you even more cowardly to drop napalm bombs on defenseless villages, so that there are a thousand times more innocent victims? Of course, if we had your airplanes, it would be a lot easier for us. Give us your bombers, and you can have our baskets."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Col. Mathieu: What were they saying in Paris yesterday?",
+    "clean": "What were they saying in Paris yesterday?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: Nothing. Sartre's written another article.",
+    "clean": "Nothing. Sartre's written another article."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Col. Mathieu: Will you kindly explain to me why the Sartres are always born on the other side?",
+    "clean": "Will you kindly explain to me why the Sartres are always born on the other side?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: So you like Sartre, Colonel?",
+    "clean": "So you like Sartre, Colonel?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Col. Mathieu: Not really, but I like him even less as an adversary.",
+    "clean": "Not really, but I like him even less as an adversary."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "French Army Officer: Listen to me! Return to your homes! What do you want?",
+    "clean": "Listen to me! Return to your homes! What do you want?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Demonstrator #1: Independence!",
+    "clean": "Demonstrator #1: Independence!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Demonstrator #2: Our pride!",
+    "clean": "Demonstrator #2: Our pride!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Demonstrator #3: We want our freedom!",
+    "clean": "Demonstrator #3: We want our freedom!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: The law's often inconvenient, Colonel.",
+    "clean": "The law's often inconvenient, Colonel."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Col. Mathieu: And those who explode bombs in public places, do they respect the law perhaps? When you put that question to Ben M'Hidi, remember what he said?",
+    "clean": "And those who explode bombs in public places, do they respect the law perhaps? When you put that question to Ben M'Hidi, remember what he said?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ben M'Hidi: All right. You're in charge.",
+    "clean": "All right. You're in charge."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jafar: If I were in charge, you wouldn't be in Algiers now.",
+    "clean": "If I were in charge, you wouldn't be in Algiers now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ben M'Hidi: Duty first?",
+    "clean": "Duty first?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jafar: Caution is best.",
+    "clean": "Caution is best."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: Mr. Ben M'Hidi, in your opinion, does the FLN still have some chance of defeating the French army?",
+    "clean": "Mr. Ben M'Hidi, in your opinion, does the FLN still have some chance of defeating the French army?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ben M'Hidi: The FLN has more of a chance of defeating the French army than the French have of changing the course of history.",
+    "clean": "The FLN has more of a chance of defeating the French army than the French have of changing the course of history."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Col. Mathieu: It's not warriors we need.",
+    "clean": "It's not warriors we need."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: Then what?",
+    "clean": "Then what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Col. Mathieu: Political will, which is sometimes there and sometimes isn't.",
+    "clean": "Political will, which is sometimes there and sometimes isn't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: What would armed insurrection mean now?",
+    "clean": "What would armed insurrection mean now?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Col. Mathieu: What it always means: an inevitable phase in revolutionary warfare. After terrorism comes armed insurrection. Just as guerrilla warfare leads to warfare proper.",
+    "clean": "What it always means: an inevitable phase in revolutionary warfare. After terrorism comes armed insurrection. Just as guerrilla warfare leads to warfare proper."
+  }
+]

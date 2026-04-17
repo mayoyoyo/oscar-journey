@@ -1,0 +1,6702 @@
+{
+  "total": 668,
+  "foundWithDuration": 656,
+  "foundNoDuration": 2,
+  "stillMissing": 10,
+  "results": [
+    {
+      "id": "il-postino-1995",
+      "title": "Il Postino",
+      "year": 1995,
+      "category": "BP",
+      "reason": "too-short",
+      "runtime": 31,
+      "omdbTitle": "The Postman (Il Postino) - Behind the scenes",
+      "omdbYear": "1994",
+      "wikidataRuntime": 108,
+      "wikidataId": "Q258647"
+    },
+    {
+      "id": "seabiscuit-2003",
+      "title": "Seabiscuit",
+      "year": 2003,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 134,
+      "wikidataId": "Q179018"
+    },
+    {
+      "id": "million-dollar-baby-2004",
+      "title": "Million Dollar Baby",
+      "year": 2004,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q184255"
+    },
+    {
+      "id": "the-aviator-2004",
+      "title": "The Aviator",
+      "year": 2004,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 170,
+      "wikidataId": "Q201924"
+    },
+    {
+      "id": "finding-neverland-2004",
+      "title": "Finding Neverland",
+      "year": 2004,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q208204"
+    },
+    {
+      "id": "ray-2004",
+      "title": "Ray",
+      "year": 2004,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 152,
+      "wikidataId": "Q797242"
+    },
+    {
+      "id": "sideways-2004",
+      "title": "Sideways",
+      "year": 2004,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q675937"
+    },
+    {
+      "id": "crash-2005",
+      "title": "Crash",
+      "year": 2005,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q188000"
+    },
+    {
+      "id": "brokeback-mountain-2005",
+      "title": "Brokeback Mountain",
+      "year": 2005,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 134,
+      "wikidataId": "Q160618"
+    },
+    {
+      "id": "capote-2005",
+      "title": "Capote",
+      "year": 2005,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q463615"
+    },
+    {
+      "id": "good-night-and-good-luck-2005",
+      "title": "Good Night, and Good Luck.",
+      "year": 2005,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q319061"
+    },
+    {
+      "id": "munich-2005",
+      "title": "Munich",
+      "year": 2005,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 157,
+      "wikidataId": "Q152456"
+    },
+    {
+      "id": "the-departed-2006",
+      "title": "The Departed",
+      "year": 2006,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 151,
+      "wikidataId": "Q172975"
+    },
+    {
+      "id": "babel-2006",
+      "title": "Babel",
+      "year": 2006,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 142,
+      "wikidataId": "Q191074"
+    },
+    {
+      "id": "letters-from-iwo-jima-2006",
+      "title": "Letters from Iwo Jima",
+      "year": 2006,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q275187"
+    },
+    {
+      "id": "little-miss-sunshine-2006",
+      "title": "Little Miss Sunshine",
+      "year": 2006,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q192073"
+    },
+    {
+      "id": "the-queen-2006",
+      "title": "The Queen",
+      "year": 2006,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q223367"
+    },
+    {
+      "id": "no-country-for-old-men-2007",
+      "title": "No Country for Old Men",
+      "year": 2007,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q183081"
+    },
+    {
+      "id": "atonement-2007",
+      "title": "Atonement",
+      "year": 2007,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 118,
+      "wikidataId": "Q1626186"
+    },
+    {
+      "id": "juno-2007",
+      "title": "Juno",
+      "year": 2007,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q79503"
+    },
+    {
+      "id": "michael-clayton-2007",
+      "title": "Michael Clayton",
+      "year": 2007,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q694140"
+    },
+    {
+      "id": "there-will-be-blood-2007",
+      "title": "There Will Be Blood",
+      "year": 2007,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 158,
+      "wikidataId": "Q244315"
+    },
+    {
+      "id": "slumdog-millionaire-2008",
+      "title": "Slumdog Millionaire",
+      "year": 2008,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q125076"
+    },
+    {
+      "id": "the-curious-case-of-benjamin-button-2008",
+      "title": "The Curious Case of Benjamin Button",
+      "year": 2008,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 166,
+      "wikidataId": "Q183239"
+    },
+    {
+      "id": "frost-nixon-2008",
+      "title": "Frost/Nixon",
+      "year": 2008,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q691672"
+    },
+    {
+      "id": "milk-2008",
+      "title": "Milk",
+      "year": 2008,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q201687"
+    },
+    {
+      "id": "the-reader-2008",
+      "title": "The Reader",
+      "year": 2008,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 124,
+      "wikidataId": "Q159063"
+    },
+    {
+      "id": "the-hurt-locker-2009",
+      "title": "The Hurt Locker",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 131,
+      "wikidataId": "Q183066"
+    },
+    {
+      "id": "avatar-2009",
+      "title": "Avatar",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 162,
+      "wikidataId": "Q24871"
+    },
+    {
+      "id": "the-blind-side-2009",
+      "title": "The Blind Side",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q206497"
+    },
+    {
+      "id": "district-9-2009",
+      "title": "District 9",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q201819"
+    },
+    {
+      "id": "an-education-2009",
+      "title": "An Education",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q482436"
+    },
+    {
+      "id": "inglourious-basterds-2009",
+      "title": "Inglourious Basterds",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 153,
+      "wikidataId": "Q153723"
+    },
+    {
+      "id": "precious-2009",
+      "title": "Precious",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q269331"
+    },
+    {
+      "id": "a-serious-man-2009",
+      "title": "A Serious Man",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q300555"
+    },
+    {
+      "id": "up-2009",
+      "title": "Up",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q174811"
+    },
+    {
+      "id": "up-in-the-air-2009",
+      "title": "Up in the Air",
+      "year": 2009,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q211429"
+    },
+    {
+      "id": "the-kings-speech-2010",
+      "title": "The King's Speech",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 118,
+      "wikidataId": "Q160060"
+    },
+    {
+      "id": "127-hours-2010",
+      "title": "127 Hours",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q174371"
+    },
+    {
+      "id": "black-swan-2010",
+      "title": "Black Swan",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q180214"
+    },
+    {
+      "id": "the-fighter-2010",
+      "title": "The Fighter",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q323472"
+    },
+    {
+      "id": "inception-2010",
+      "title": "Inception",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 148,
+      "wikidataId": "Q25188"
+    },
+    {
+      "id": "the-kids-are-all-right-2010",
+      "title": "The Kids Are All Right",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 106,
+      "wikidataId": "Q380841"
+    },
+    {
+      "id": "the-social-network-2010",
+      "title": "The Social Network",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 121,
+      "wikidataId": "Q185888"
+    },
+    {
+      "id": "toy-story-3-2010",
+      "title": "Toy Story 3",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q187278"
+    },
+    {
+      "id": "true-grit-2010",
+      "title": "True Grit",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q326114"
+    },
+    {
+      "id": "winters-bone-2010",
+      "title": "Winter's Bone",
+      "year": 2010,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q301049"
+    },
+    {
+      "id": "the-artist-2011",
+      "title": "The Artist",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q171861"
+    },
+    {
+      "id": "the-descendants-2011",
+      "title": "The Descendants",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q273686"
+    },
+    {
+      "id": "extremely-loud-incredibly-close-2011",
+      "title": "Extremely Loud & Incredibly Close",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 129,
+      "wikidataId": "Q918769"
+    },
+    {
+      "id": "the-help-2011",
+      "title": "The Help",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 146,
+      "wikidataId": "Q204374"
+    },
+    {
+      "id": "hugo-2011",
+      "title": "Hugo",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q206576"
+    },
+    {
+      "id": "midnight-in-paris-2011",
+      "title": "Midnight in Paris",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q206124"
+    },
+    {
+      "id": "moneyball-2011",
+      "title": "Moneyball",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q221820"
+    },
+    {
+      "id": "the-tree-of-life-2011",
+      "title": "The Tree of Life",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 138,
+      "wikidataId": "Q244257"
+    },
+    {
+      "id": "war-horse-2011",
+      "title": "War Horse",
+      "year": 2011,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 146,
+      "wikidataId": "Q218589"
+    },
+    {
+      "id": "argo-2012",
+      "title": "Argo",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q59653"
+    },
+    {
+      "id": "amour-2012",
+      "title": "Amour",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q637820"
+    },
+    {
+      "id": "beasts-of-the-southern-wild-2012",
+      "title": "Beasts of the Southern Wild",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q166462"
+    },
+    {
+      "id": "django-unchained-2012",
+      "title": "Django Unchained",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 165,
+      "wikidataId": "Q571032"
+    },
+    {
+      "id": "les-mis-rables-2012",
+      "title": "Les Misérables",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 158,
+      "wikidataId": "Q28234"
+    },
+    {
+      "id": "life-of-pi-2012",
+      "title": "Life of Pi",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q152780"
+    },
+    {
+      "id": "lincoln-2012",
+      "title": "Lincoln",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 150,
+      "wikidataId": "Q32433"
+    },
+    {
+      "id": "silver-linings-playbook-2012",
+      "title": "Silver Linings Playbook",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q116845"
+    },
+    {
+      "id": "zero-dark-thirty-2012",
+      "title": "Zero Dark Thirty",
+      "year": 2012,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 157,
+      "wikidataId": "Q152531"
+    },
+    {
+      "id": "12-years-a-slave-2013",
+      "title": "12 Years a Slave",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q3023357"
+    },
+    {
+      "id": "american-hustle-2013",
+      "title": "American Hustle",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 138,
+      "wikidataId": "Q9013673"
+    },
+    {
+      "id": "captain-phillips-2013",
+      "title": "Captain Phillips",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 134,
+      "wikidataId": "Q2937646"
+    },
+    {
+      "id": "dallas-buyers-club-2013",
+      "title": "Dallas Buyers Club",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q3520498"
+    },
+    {
+      "id": "gravity-2013",
+      "title": "Gravity",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q2579784"
+    },
+    {
+      "id": "her-2013",
+      "title": "Her",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q788822"
+    },
+    {
+      "id": "nebraska-2013",
+      "title": "Nebraska",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q3337646"
+    },
+    {
+      "id": "philomena-2013",
+      "title": "Philomena",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q3381163"
+    },
+    {
+      "id": "the-wolf-of-wall-street-2013",
+      "title": "The Wolf of Wall Street",
+      "year": 2013,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 180,
+      "wikidataId": "Q1392744"
+    },
+    {
+      "id": "american-sniper-2014",
+      "title": "American Sniper",
+      "year": 2014,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q16970789"
+    },
+    {
+      "id": "boyhood-2014",
+      "title": "Boyhood",
+      "year": 2014,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 163,
+      "wikidataId": "Q4103201"
+    },
+    {
+      "id": "the-grand-budapest-hotel-2014",
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 99,
+      "wikidataId": "Q3521099"
+    },
+    {
+      "id": "the-imitation-game-2014",
+      "title": "The Imitation Game",
+      "year": 2014,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q14918344"
+    },
+    {
+      "id": "selma-2014",
+      "title": "Selma",
+      "year": 2014,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q17183770"
+    },
+    {
+      "id": "the-theory-of-everything-2014",
+      "title": "The Theory of Everything",
+      "year": 2014,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q15079318"
+    },
+    {
+      "id": "whiplash-2014",
+      "title": "Whiplash",
+      "year": 2014,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 106,
+      "wikidataId": "Q15648198"
+    },
+    {
+      "id": "spotlight-2015",
+      "title": "Spotlight",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q18154496"
+    },
+    {
+      "id": "the-big-short-2015",
+      "title": "The Big Short",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 130,
+      "wikidataId": "Q19850715"
+    },
+    {
+      "id": "bridge-of-spies-2015",
+      "title": "Bridge of Spies",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 142,
+      "wikidataId": "Q18067135"
+    },
+    {
+      "id": "brooklyn-2015",
+      "title": "Brooklyn",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q16954098"
+    },
+    {
+      "id": "mad-max-fury-road-2015",
+      "title": "Mad Max: Fury Road",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q1757288"
+    },
+    {
+      "id": "the-martian-2015",
+      "title": "The Martian",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q18547944"
+    },
+    {
+      "id": "the-revenant-2015",
+      "title": "The Revenant",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 157,
+      "wikidataId": "Q18002795"
+    },
+    {
+      "id": "room-2015",
+      "title": "Room",
+      "year": 2015,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 118,
+      "wikidataId": "Q18703032"
+    },
+    {
+      "id": "moonlight-2016",
+      "title": "Moonlight",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q21527875"
+    },
+    {
+      "id": "arrival-2016",
+      "title": "Arrival",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 116,
+      "wikidataId": "Q20382729"
+    },
+    {
+      "id": "fences-2016",
+      "title": "Fences",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 139,
+      "wikidataId": "Q25136220"
+    },
+    {
+      "id": "hacksaw-ridge-2016",
+      "title": "Hacksaw Ridge",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 131,
+      "wikidataId": "Q21010856"
+    },
+    {
+      "id": "hell-or-high-water-2016",
+      "title": "Hell or High Water",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q20026847"
+    },
+    {
+      "id": "hidden-figures-2016",
+      "title": "Hidden Figures",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q23755544"
+    },
+    {
+      "id": "la-la-land-2016",
+      "title": "La La Land",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q20856802"
+    },
+    {
+      "id": "lion-2016",
+      "title": "Lion",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 143,
+      "wikidataId": "Q18702328"
+    },
+    {
+      "id": "manchester-by-the-sea-2016",
+      "title": "Manchester by the Sea",
+      "year": 2016,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 135,
+      "wikidataId": "Q19864603"
+    },
+    {
+      "id": "the-shape-of-water-2017",
+      "title": "The Shape of Water",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q26698156"
+    },
+    {
+      "id": "call-me-by-your-name-2017",
+      "title": "Call Me by Your Name",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q25136757"
+    },
+    {
+      "id": "darkest-hour-2017",
+      "title": "Darkest Hour",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q27958298"
+    },
+    {
+      "id": "dunkirk-2017",
+      "title": "Dunkirk",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 106,
+      "wikidataId": "Q21935651"
+    },
+    {
+      "id": "get-out-2017",
+      "title": "Get Out",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 104,
+      "wikidataId": "Q25136235"
+    },
+    {
+      "id": "lady-bird-2017",
+      "title": "Lady Bird",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q27480769"
+    },
+    {
+      "id": "phantom-thread-2017",
+      "title": "Phantom Thread",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 130,
+      "wikidataId": "Q28840386"
+    },
+    {
+      "id": "the-post-2017",
+      "title": "The Post",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q30203425"
+    },
+    {
+      "id": "three-billboards-outside-ebbing-missouri-2017",
+      "title": "Three Billboards Outside Ebbing, Missouri",
+      "year": 2017,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q24053277"
+    },
+    {
+      "id": "green-book-2018",
+      "title": "Green Book",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 130,
+      "wikidataId": "Q48673898"
+    },
+    {
+      "id": "black-panther-2018",
+      "title": "Black Panther",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 134,
+      "wikidataId": "Q23780734"
+    },
+    {
+      "id": "blackkklansman-2018",
+      "title": "BlacKkKlansman",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 135,
+      "wikidataId": "Q43370948"
+    },
+    {
+      "id": "bohemian-rhapsody-2018",
+      "title": "Bohemian Rhapsody",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 134,
+      "wikidataId": "Q27894574"
+    },
+    {
+      "id": "the-favourite-2018",
+      "title": "The Favourite",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q22001133"
+    },
+    {
+      "id": "roma-2018",
+      "title": "Roma",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 135,
+      "wikidataId": "Q27959455"
+    },
+    {
+      "id": "a-star-is-born-2018",
+      "title": "A Star Is Born",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 135,
+      "wikidataId": "Q3286391"
+    },
+    {
+      "id": "vice-2018",
+      "title": "Vice",
+      "year": 2018,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q39075006"
+    },
+    {
+      "id": "parasite-2019",
+      "title": "Parasite",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q61448040"
+    },
+    {
+      "id": "ford-v-ferrari-2019",
+      "title": "Ford v Ferrari",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 152,
+      "wikidataId": "Q55081822"
+    },
+    {
+      "id": "the-irishman-2019",
+      "title": "The Irishman",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 209,
+      "wikidataId": "Q29057443"
+    },
+    {
+      "id": "jojo-rabbit-2019",
+      "title": "Jojo Rabbit",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q54862508"
+    },
+    {
+      "id": "joker-2019",
+      "title": "Joker",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q42759035"
+    },
+    {
+      "id": "little-women-2019",
+      "title": "Little Women",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q56241200"
+    },
+    {
+      "id": "marriage-story-2019",
+      "title": "Marriage Story",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 136,
+      "wikidataId": "Q48671199"
+    },
+    {
+      "id": "1917-2019",
+      "title": "1917",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q62721520"
+    },
+    {
+      "id": "once-upon-a-time-in-hollywood-2019",
+      "title": "Once Upon a Time... in Hollywood",
+      "year": 2019,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "nomadland-2020",
+      "title": "Nomadland",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q61740820"
+    },
+    {
+      "id": "the-father-2020",
+      "title": "The Father",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q65066669"
+    },
+    {
+      "id": "judas-and-the-black-messiah-2020",
+      "title": "Judas and the Black Messiah",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q73536766"
+    },
+    {
+      "id": "mank-2020",
+      "title": "Mank",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 131,
+      "wikidataId": "Q73093591"
+    },
+    {
+      "id": "minari-2020",
+      "title": "Minari",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q65679599"
+    },
+    {
+      "id": "promising-young-woman-2020",
+      "title": "Promising Young Woman",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q62595383"
+    },
+    {
+      "id": "sound-of-metal-2020",
+      "title": "Sound of Metal",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q65158549"
+    },
+    {
+      "id": "the-trial-of-the-chicago-7-2020",
+      "title": "The Trial of the Chicago 7",
+      "year": 2020,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 129,
+      "wikidataId": "Q72397975"
+    },
+    {
+      "id": "coda-2021",
+      "title": "CODA",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q104686893"
+    },
+    {
+      "id": "belfast-2021",
+      "title": "Belfast",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q100736066"
+    },
+    {
+      "id": "dont-look-up-2021",
+      "title": "Don't Look Up",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 138,
+      "wikidataId": "Q100361490"
+    },
+    {
+      "id": "drive-my-car-2021",
+      "title": "Drive My Car",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 179,
+      "wikidataId": "Q107107865"
+    },
+    {
+      "id": "dune-2021",
+      "title": "Dune",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 155,
+      "wikidataId": "Q60834962"
+    },
+    {
+      "id": "king-richard-2021",
+      "title": "King Richard",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 144,
+      "wikidataId": "Q84203429"
+    },
+    {
+      "id": "licorice-pizza-2021",
+      "title": "Licorice Pizza",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q102036245"
+    },
+    {
+      "id": "nightmare-alley-2021",
+      "title": "Nightmare Alley",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 150,
+      "wikidataId": "Q82430214"
+    },
+    {
+      "id": "the-power-of-the-dog-2021",
+      "title": "The Power of the Dog",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q85323337"
+    },
+    {
+      "id": "west-side-story-2021",
+      "title": "West Side Story",
+      "year": 2021,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 156,
+      "wikidataId": "Q63643994"
+    },
+    {
+      "id": "everything-everywhere-all-at-once-2022",
+      "title": "Everything Everywhere All at Once",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 139,
+      "wikidataId": "Q83808444"
+    },
+    {
+      "id": "all-quiet-on-the-western-front-2022",
+      "title": "All Quiet on the Western Front",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 147,
+      "wikidataId": "Q108837349"
+    },
+    {
+      "id": "the-banshees-of-inisherin-2022",
+      "title": "The Banshees of Inisherin",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q108314506"
+    },
+    {
+      "id": "elvis-2022",
+      "title": "Elvis",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 159,
+      "wikidataId": "Q84362533"
+    },
+    {
+      "id": "the-fabelmans-2022",
+      "title": "The Fabelmans",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 151,
+      "wikidataId": "Q107710009"
+    },
+    {
+      "id": "t-r-2022",
+      "title": "Tár",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 158,
+      "wikidataId": "Q108649516"
+    },
+    {
+      "id": "top-gun-maverick-2022",
+      "title": "Top Gun: Maverick",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 130,
+      "wikidataId": "Q31202708"
+    },
+    {
+      "id": "triangle-of-sadness-2022",
+      "title": "Triangle of Sadness",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 149,
+      "wikidataId": "Q97304180"
+    },
+    {
+      "id": "women-talking-2022",
+      "title": "Women Talking",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 104,
+      "wikidataId": "Q108030443"
+    },
+    {
+      "id": "avatar-the-way-of-water-2022",
+      "title": "Avatar: The Way of Water",
+      "year": 2022,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 192,
+      "wikidataId": "Q3604746"
+    },
+    {
+      "id": "oppenheimer-2023",
+      "title": "Oppenheimer",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 10809,
+      "wikidataId": "Q108839994"
+    },
+    {
+      "id": "american-fiction-2023",
+      "title": "American Fiction",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q116413183"
+    },
+    {
+      "id": "anatomy-of-a-fall-2023",
+      "title": "Anatomy of a Fall",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 150,
+      "wikidataId": "Q117037697"
+    },
+    {
+      "id": "barbie-2023",
+      "title": "Barbie",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q55436290"
+    },
+    {
+      "id": "the-holdovers-2023",
+      "title": "The Holdovers",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q112114745"
+    },
+    {
+      "id": "maestro-2023",
+      "title": "Maestro",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 129,
+      "wikidataId": "Q111907282"
+    },
+    {
+      "id": "past-lives-2023",
+      "title": "Past Lives",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 106,
+      "wikidataId": "Q116025865"
+    },
+    {
+      "id": "poor-things-2023",
+      "title": "Poor Things",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q108760382"
+    },
+    {
+      "id": "the-zone-of-interest-2023",
+      "title": "The Zone of Interest",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q115993222"
+    },
+    {
+      "id": "killers-of-the-flower-moon-2023",
+      "title": "Killers of the Flower Moon",
+      "year": 2023,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 206,
+      "wikidataId": "Q66316924"
+    },
+    {
+      "id": "anora-2024",
+      "title": "Anora",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 139,
+      "wikidataId": "Q123185887"
+    },
+    {
+      "id": "the-brutalist-2024",
+      "title": "The Brutalist",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 215,
+      "wikidataId": "Q101112656"
+    },
+    {
+      "id": "a-complete-unknown-2024",
+      "title": "A Complete Unknown",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q118175825"
+    },
+    {
+      "id": "conclave-2024",
+      "title": "Conclave",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 121,
+      "wikidataId": "Q116701124"
+    },
+    {
+      "id": "dune-part-two-2024",
+      "title": "Dune: Part Two",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 166,
+      "wikidataId": "Q109228991"
+    },
+    {
+      "id": "emilia-p-rez-2024",
+      "title": "Emilia Pérez",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q123928072"
+    },
+    {
+      "id": "im-still-here-2024",
+      "title": "I'm Still Here",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 135,
+      "wikidataId": "Q124262351"
+    },
+    {
+      "id": "nickel-boys-2024",
+      "title": "Nickel Boys",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 140,
+      "wikidataId": "Q116030637"
+    },
+    {
+      "id": "the-substance-2024",
+      "title": "The Substance",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q113380226"
+    },
+    {
+      "id": "wicked-2024",
+      "title": "Wicked",
+      "year": 2024,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 160,
+      "wikidataId": "Q24797403"
+    },
+    {
+      "id": "one-battle-after-another-2025",
+      "title": "One Battle After Another",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 9691,
+      "wikidataId": "Q117085614"
+    },
+    {
+      "id": "bugonia-2025",
+      "title": "Bugonia",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 118,
+      "wikidataId": "Q125971387"
+    },
+    {
+      "id": "f1-2025",
+      "title": "F1",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 155,
+      "wikidataId": "Q114246242"
+    },
+    {
+      "id": "frankenstein-2025",
+      "title": "Frankenstein",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 149,
+      "wikidataId": "Q124393045"
+    },
+    {
+      "id": "hamnet-2025",
+      "title": "Hamnet",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q122741016"
+    },
+    {
+      "id": "marty-supreme-2025",
+      "title": "Marty Supreme",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 150,
+      "wikidataId": "Q130118681"
+    },
+    {
+      "id": "the-secret-agent-2025",
+      "title": "The Secret Agent",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 160,
+      "wikidataId": "Q132531438"
+    },
+    {
+      "id": "sentimental-value-2025",
+      "title": "Sentimental Value",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q130284179"
+    },
+    {
+      "id": "sinners-2025",
+      "title": "Sinners",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 137,
+      "wikidataId": "Q125473145"
+    },
+    {
+      "id": "train-dreams-2025",
+      "title": "Train Dreams",
+      "year": 2025,
+      "category": "BP",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q126086662"
+    },
+    {
+      "id": "mediterraneo-1991",
+      "title": "Mediterraneo",
+      "year": 1991,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q661660"
+    },
+    {
+      "id": "indochine-1992",
+      "title": "Indochine",
+      "year": 1992,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 154,
+      "wikidataId": "Q1130644"
+    },
+    {
+      "id": "belle-epoque-1992",
+      "title": "Belle Epoque",
+      "year": 1992,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q1675466"
+    },
+    {
+      "id": "burnt-by-the-sun-1994",
+      "title": "Burnt by the Sun",
+      "year": 1994,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 145,
+      "wikidataId": "Q1127167"
+    },
+    {
+      "id": "antonias-line-1995",
+      "title": "Antonia's Line",
+      "year": 1995,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q155089"
+    },
+    {
+      "id": "kolya-1996",
+      "title": "Kolya",
+      "year": 1996,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q1141186"
+    },
+    {
+      "id": "character-1997",
+      "title": "Character",
+      "year": 1997,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q928545"
+    },
+    {
+      "id": "all-about-my-mother-1999",
+      "title": "All About My Mother",
+      "year": 1999,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 104,
+      "wikidataId": "Q329805"
+    },
+    {
+      "id": "no-mans-land-2001",
+      "title": "No Man's Land",
+      "year": 2001,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q845235"
+    },
+    {
+      "id": "nowhere-in-africa-2001",
+      "title": "Nowhere in Africa",
+      "year": 2001,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q316018"
+    },
+    {
+      "id": "the-barbarian-invasions-2003",
+      "title": "The Barbarian Invasions",
+      "year": 2003,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 99,
+      "wikidataId": "Q549012"
+    },
+    {
+      "id": "the-sea-inside-2004",
+      "title": "The Sea Inside",
+      "year": 2004,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q593615"
+    },
+    {
+      "id": "tsotsi-2005",
+      "title": "Tsotsi",
+      "year": 2005,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q626215"
+    },
+    {
+      "id": "the-lives-of-others-2006",
+      "title": "The Lives of Others",
+      "year": 2006,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 137,
+      "wikidataId": "Q153882"
+    },
+    {
+      "id": "the-counterfeiters-2007",
+      "title": "The Counterfeiters",
+      "year": 2007,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q167411"
+    },
+    {
+      "id": "departures-2008",
+      "title": "Departures",
+      "year": 2008,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 131,
+      "wikidataId": "Q1044598"
+    },
+    {
+      "id": "the-secret-in-their-eyes-2009",
+      "title": "The Secret in Their Eyes",
+      "year": 2009,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 129,
+      "wikidataId": "Q748851"
+    },
+    {
+      "id": "in-a-better-world-2010",
+      "title": "In a Better World",
+      "year": 2010,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q954182"
+    },
+    {
+      "id": "a-separation-2011",
+      "title": "A Separation",
+      "year": 2011,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q640561"
+    },
+    {
+      "id": "the-great-beauty-2013",
+      "title": "The Great Beauty",
+      "year": 2013,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 142,
+      "wikidataId": "Q6379279"
+    },
+    {
+      "id": "ida-2013",
+      "title": "Ida",
+      "year": 2013,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 80,
+      "wikidataId": "Q15087230"
+    },
+    {
+      "id": "son-of-saul-2015",
+      "title": "Son of Saul",
+      "year": 2015,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q19816400"
+    },
+    {
+      "id": "the-salesman-2016",
+      "title": "The Salesman",
+      "year": 2016,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q22344480"
+    },
+    {
+      "id": "a-fantastic-woman-2017",
+      "title": "A Fantastic Woman",
+      "year": 2017,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 104,
+      "wikidataId": "Q28127580"
+    },
+    {
+      "id": "another-round-2020",
+      "title": "Another Round",
+      "year": 2020,
+      "category": "INT",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q69303989"
+    },
+    {
+      "id": "shrek-2001",
+      "title": "Shrek",
+      "year": 2001,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q483815"
+    },
+    {
+      "id": "spirited-away-2002",
+      "title": "Spirited Away",
+      "year": 2002,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q155653"
+    },
+    {
+      "id": "finding-nemo-2003",
+      "title": "Finding Nemo",
+      "year": 2003,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q132863"
+    },
+    {
+      "id": "the-incredibles-2004",
+      "title": "The Incredibles",
+      "year": 2004,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q213326"
+    },
+    {
+      "id": "wallace-and-gromit-the-curse-of-the-were-rabbit-2005",
+      "title": "Wallace and Gromit The Curse of the Were-Rabbit",
+      "year": 2005,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "happy-feet-2006",
+      "title": "Happy Feet",
+      "year": 2006,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q126800"
+    },
+    {
+      "id": "ratatouille-2007",
+      "title": "Ratatouille",
+      "year": 2007,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q170035"
+    },
+    {
+      "id": "wall-e-2008",
+      "title": "WALL-E",
+      "year": 2008,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q104905"
+    },
+    {
+      "id": "rango-2011",
+      "title": "Rango",
+      "year": 2011,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q275432"
+    },
+    {
+      "id": "brave-2012",
+      "title": "Brave",
+      "year": 2012,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q126796"
+    },
+    {
+      "id": "frozen-2013",
+      "title": "Frozen",
+      "year": 2013,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q246283"
+    },
+    {
+      "id": "big-hero-6-2014",
+      "title": "Big Hero 6",
+      "year": 2014,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q13091172"
+    },
+    {
+      "id": "inside-out-2015",
+      "title": "Inside Out",
+      "year": 2015,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q6144664"
+    },
+    {
+      "id": "zootopia-2016",
+      "title": "Zootopia",
+      "year": 2016,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q15270647"
+    },
+    {
+      "id": "coco-2017",
+      "title": "Coco",
+      "year": 2017,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q5815826"
+    },
+    {
+      "id": "spider-man-into-the-spider-verse-2018",
+      "title": "Spider-Man Into the Spider-Verse",
+      "year": 2018,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "toy-story-4-2019",
+      "title": "Toy Story 4",
+      "year": 2019,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q18517638"
+    },
+    {
+      "id": "soul-2020",
+      "title": "Soul",
+      "year": 2020,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q64744044"
+    },
+    {
+      "id": "encanto-2021",
+      "title": "Encanto",
+      "year": 2021,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q103372692"
+    },
+    {
+      "id": "guillermo-del-toros-pinocchio-2022",
+      "title": "Guillermo del Toro's Pinocchio",
+      "year": 2022,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q73895818"
+    },
+    {
+      "id": "the-boy-and-the-heron-2023",
+      "title": "The Boy and the Heron",
+      "year": 2023,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 124,
+      "wikidataId": "Q47482560"
+    },
+    {
+      "id": "flow-2024",
+      "title": "Flow",
+      "year": 2024,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 80,
+      "wikidataId": "Q125622088"
+    },
+    {
+      "id": "kpop-demon-hunters-2025",
+      "title": "KPop Demon Hunters",
+      "year": 2025,
+      "category": "ANIM",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q130268157"
+    },
+    {
+      "id": "city-lights-1931",
+      "title": "City Lights",
+      "year": 1931,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 87,
+      "wikidataId": "Q238211"
+    },
+    {
+      "id": "modern-times-1936",
+      "title": "Modern Times",
+      "year": 1936,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 99,
+      "wikidataId": "Q45602"
+    },
+    {
+      "id": "the-third-man-1949",
+      "title": "The Third Man",
+      "year": 1949,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 104,
+      "wikidataId": "Q271830"
+    },
+    {
+      "id": "12-angry-men-1957",
+      "title": "12 Angry Men",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q2345"
+    },
+    {
+      "id": "some-like-it-hot-1959",
+      "title": "Some Like It Hot",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q190086"
+    },
+    {
+      "id": "citizen-kane-1941",
+      "title": "Citizen Kane",
+      "year": 1941,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q24815"
+    },
+    {
+      "id": "casablanca-1942",
+      "title": "Casablanca",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q132689"
+    },
+    {
+      "id": "double-indemnity-1944",
+      "title": "Double Indemnity",
+      "year": 1944,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q478209"
+    },
+    {
+      "id": "all-about-eve-1950",
+      "title": "All About Eve",
+      "year": 1950,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 138,
+      "wikidataId": "Q200299"
+    },
+    {
+      "id": "rashomon-1950",
+      "title": "Rashomon",
+      "year": 1950,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q135465"
+    },
+    {
+      "id": "sunset-boulevard-1950",
+      "title": "Sunset Boulevard",
+      "year": 1950,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q193570"
+    },
+    {
+      "id": "singin-in-the-rain-1952",
+      "title": "Singin' in the Rain",
+      "year": 1952,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q309153"
+    },
+    {
+      "id": "rear-window-1954",
+      "title": "Rear Window",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q34414"
+    },
+    {
+      "id": "wild-strawberries-1957",
+      "title": "Wild Strawberries",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 92,
+      "wikidataId": "Q239756"
+    },
+    {
+      "id": "vertigo-1958",
+      "title": "Vertigo",
+      "year": 1958,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q202548"
+    },
+    {
+      "id": "psycho-1960",
+      "title": "Psycho",
+      "year": 1960,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q163038"
+    },
+    {
+      "id": "the-apartment-1960",
+      "title": "The Apartment",
+      "year": 1960,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q270510"
+    },
+    {
+      "id": "lawrence-of-arabia-1962",
+      "title": "Lawrence of Arabia",
+      "year": 1962,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 216,
+      "wikidataId": "Q228186"
+    },
+    {
+      "id": "the-battle-of-algiers-1966",
+      "title": "The Battle of Algiers",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q784812"
+    },
+    {
+      "id": "2001-a-space-odyssey-1968",
+      "title": "2001: A Space Odyssey",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 143,
+      "wikidataId": "Q103474"
+    },
+    {
+      "id": "do-the-right-thing-1989",
+      "title": "Do the Right Thing",
+      "year": 1989,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q1141252"
+    },
+    {
+      "id": "sherlock-jr-1924",
+      "title": "Sherlock Jr.",
+      "year": 1924,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 44,
+      "wikidataId": "Q1569918"
+    },
+    {
+      "id": "the-general-1926",
+      "title": "The General",
+      "year": 1926,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 75,
+      "wikidataId": "Q850159"
+    },
+    {
+      "id": "the-passion-of-joan-of-arc-1928",
+      "title": "The Passion of Joan of Arc",
+      "year": 1928,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 82,
+      "wikidataId": "Q51520"
+    },
+    {
+      "id": "m-1931",
+      "title": "M",
+      "year": 1931,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q127021"
+    },
+    {
+      "id": "the-great-dictator-1940",
+      "title": "The Great Dictator",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q109116"
+    },
+    {
+      "id": "its-a-wonderful-life-1946",
+      "title": "It's a Wonderful Life",
+      "year": 1946,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q204191"
+    },
+    {
+      "id": "the-best-years-of-our-lives-1946",
+      "title": "The Best Years of Our Lives",
+      "year": 1946,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 172,
+      "wikidataId": "Q645094"
+    },
+    {
+      "id": "bicycle-thieves-1948",
+      "title": "Bicycle Thieves",
+      "year": 1948,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q172837"
+    },
+    {
+      "id": "the-treasure-of-the-sierra-madre-1948",
+      "title": "The Treasure of the Sierra Madre",
+      "year": 1948,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q251559"
+    },
+    {
+      "id": "ikiru-1952",
+      "title": "Ikiru",
+      "year": 1952,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 143,
+      "wikidataId": "Q152105"
+    },
+    {
+      "id": "the-wages-of-fear-1953",
+      "title": "The Wages of Fear",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 148,
+      "wikidataId": "Q465773"
+    },
+    {
+      "id": "tokyo-story-1953",
+      "title": "Tokyo Story",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 136,
+      "wikidataId": "Q26060"
+    },
+    {
+      "id": "on-the-waterfront-1954",
+      "title": "On the Waterfront",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q211372"
+    },
+    {
+      "id": "seven-samurai-1954",
+      "title": "Seven Samurai",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 207,
+      "wikidataId": "Q189540"
+    },
+    {
+      "id": "ordet-1955",
+      "title": "Ordet",
+      "year": 1955,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q2352630"
+    },
+    {
+      "id": "the-night-of-the-hunter-1955",
+      "title": "The Night of the Hunter",
+      "year": 1955,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 89,
+      "wikidataId": "Q1132629"
+    },
+    {
+      "id": "paths-of-glory-1957",
+      "title": "Paths of Glory",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q747936"
+    },
+    {
+      "id": "the-bridge-on-the-river-kwai-1957",
+      "title": "The Bridge on the River Kwai",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 156,
+      "wikidataId": "Q188718"
+    },
+    {
+      "id": "the-seventh-seal-1957",
+      "title": "The Seventh Seal",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q217189"
+    },
+    {
+      "id": "anatomy-of-a-murder-1959",
+      "title": "Anatomy of a Murder",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 160,
+      "wikidataId": "Q488376"
+    },
+    {
+      "id": "north-by-northwest-1959",
+      "title": "North by Northwest",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 136,
+      "wikidataId": "Q223139"
+    },
+    {
+      "id": "la-dolce-vita-1960",
+      "title": "La Dolce Vita",
+      "year": 1960,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 174,
+      "wikidataId": "Q18407"
+    },
+    {
+      "id": "judgment-at-nuremberg-1961",
+      "title": "Judgment at Nuremberg",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 188,
+      "wikidataId": "Q309545"
+    },
+    {
+      "id": "la-notte-1961",
+      "title": "La Notte",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q1215047"
+    },
+    {
+      "id": "dr-strangelove-1964",
+      "title": "Dr. Strangelove",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q105702"
+    },
+    {
+      "id": "once-upon-a-time-in-the-west-1968",
+      "title": "Once Upon a Time in the West",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 140,
+      "wikidataId": "Q168154"
+    },
+    {
+      "id": "a-woman-under-the-influence-1974",
+      "title": "A Woman Under the Influence",
+      "year": 1974,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 155,
+      "wikidataId": "Q1306380"
+    },
+    {
+      "id": "the-ascent-1977",
+      "title": "The Ascent",
+      "year": 1977,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q760053"
+    },
+    {
+      "id": "alien-1979",
+      "title": "Alien",
+      "year": 1979,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q103569"
+    },
+    {
+      "id": "the-shining-1980",
+      "title": "The Shining",
+      "year": 1980,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q186341"
+    },
+    {
+      "id": "blade-runner-1982",
+      "title": "Blade Runner",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q184843"
+    },
+    {
+      "id": "come-and-see-1985",
+      "title": "Come and See",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 146,
+      "wikidataId": "Q1130395"
+    },
+    {
+      "id": "terminator-2-judgment-day-1991",
+      "title": "Terminator 2: Judgment Day",
+      "year": 1991,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 137,
+      "wikidataId": "Q170564"
+    },
+    {
+      "id": "the-lion-king-1994",
+      "title": "The Lion King",
+      "year": 1994,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q36479"
+    },
+    {
+      "id": "before-sunrise-1995",
+      "title": "Before Sunrise",
+      "year": 1995,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q659609"
+    },
+    {
+      "id": "taste-of-cherry-1997",
+      "title": "Taste of Cherry",
+      "year": 1997,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q794178"
+    },
+    {
+      "id": "the-kid-1921",
+      "title": "The Kid",
+      "year": 1921,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 68,
+      "wikidataId": "Q374172"
+    },
+    {
+      "id": "the-gold-rush-1925",
+      "title": "The Gold Rush",
+      "year": 1925,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q214723"
+    },
+    {
+      "id": "metropolis-1927",
+      "title": "Metropolis",
+      "year": 1927,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 153,
+      "wikidataId": "Q151599"
+    },
+    {
+      "id": "sunrise-a-song-of-two-humans-1927",
+      "title": "Sunrise: A Song of Two Humans",
+      "year": 1927,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q431093"
+    },
+    {
+      "id": "scarface-1932",
+      "title": "Scarface",
+      "year": 1932,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q471306"
+    },
+    {
+      "id": "it-happened-one-night-1934",
+      "title": "It Happened One Night",
+      "year": 1934,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q208632"
+    },
+    {
+      "id": "swing-time-1936",
+      "title": "Swing Time",
+      "year": 1936,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q1191081"
+    },
+    {
+      "id": "make-way-for-tomorrow-1937",
+      "title": "Make Way for Tomorrow",
+      "year": 1937,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q2607713"
+    },
+    {
+      "id": "bringing-up-baby-1938",
+      "title": "Bringing Up Baby",
+      "year": 1938,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q179743"
+    },
+    {
+      "id": "gone-with-the-wind-1939",
+      "title": "Gone with the Wind",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 238,
+      "wikidataId": "Q2875"
+    },
+    {
+      "id": "mr-smith-goes-to-washington-1939",
+      "title": "Mr. Smith Goes to Washington",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 129,
+      "wikidataId": "Q866120"
+    },
+    {
+      "id": "stagecoach-1939",
+      "title": "Stagecoach",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q50714"
+    },
+    {
+      "id": "the-wizard-of-oz-1939",
+      "title": "The Wizard of Oz",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q193695"
+    },
+    {
+      "id": "the-philadelphia-story-1940",
+      "title": "The Philadelphia Story",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q498822"
+    },
+    {
+      "id": "sullivans-travels-1941",
+      "title": "Sullivan's Travels",
+      "year": 1941,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q1065711"
+    },
+    {
+      "id": "to-be-or-not-to-be-1942",
+      "title": "To Be or Not to Be",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q704972"
+    },
+    {
+      "id": "brief-encounter-1945",
+      "title": "Brief Encounter",
+      "year": 1945,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 85,
+      "wikidataId": "Q814296"
+    },
+    {
+      "id": "a-matter-of-life-and-death-1946",
+      "title": "A Matter of Life and Death",
+      "year": 1946,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q1546792"
+    },
+    {
+      "id": "red-river-1948",
+      "title": "Red River",
+      "year": 1948,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q1133647"
+    },
+    {
+      "id": "the-red-shoes-1948",
+      "title": "The Red Shoes",
+      "year": 1948,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q625780"
+    },
+    {
+      "id": "late-spring-1949",
+      "title": "Late Spring",
+      "year": 1949,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q743203"
+    },
+    {
+      "id": "ace-in-the-hole-1951",
+      "title": "Ace in the Hole",
+      "year": 1951,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q1545826"
+    },
+    {
+      "id": "ugetsu-1953",
+      "title": "Ugetsu",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q1076605"
+    },
+    {
+      "id": "sansho-the-bailiff-1954",
+      "title": "Sansho the Bailiff",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q2633405"
+    },
+    {
+      "id": "pather-panchali-1955",
+      "title": "Pather Panchali",
+      "year": 1955,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q622380"
+    },
+    {
+      "id": "a-man-escaped-1956",
+      "title": "A Man Escaped",
+      "year": 1956,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q2385009"
+    },
+    {
+      "id": "aparajito-1956",
+      "title": "Aparajito",
+      "year": 1956,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q622382"
+    },
+    {
+      "id": "the-searchers-1956",
+      "title": "The Searchers",
+      "year": 1956,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q276769"
+    },
+    {
+      "id": "sweet-smell-of-success-1957",
+      "title": "Sweet Smell of Success",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q1183253"
+    },
+    {
+      "id": "the-cranes-are-flying-1957",
+      "title": "The Cranes Are Flying",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q714524"
+    },
+    {
+      "id": "throne-of-blood-1957",
+      "title": "Throne of Blood",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q257818"
+    },
+    {
+      "id": "witness-for-the-prosecution-1957",
+      "title": "Witness for the Prosecution",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 116,
+      "wikidataId": "Q196977"
+    },
+    {
+      "id": "ben-hur-1959",
+      "title": "Ben-Hur",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 222,
+      "wikidataId": "Q180098"
+    },
+    {
+      "id": "the-400-blows-1959",
+      "title": "The 400 Blows",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 99,
+      "wikidataId": "Q162331"
+    },
+    {
+      "id": "spartacus-1960",
+      "title": "Spartacus",
+      "year": 1960,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 197,
+      "wikidataId": "Q108297"
+    },
+    {
+      "id": "viridiana-1961",
+      "title": "Viridiana",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q852841"
+    },
+    {
+      "id": "yojimbo-1961",
+      "title": "Yojimbo",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q20475"
+    },
+    {
+      "id": "harakiri-1962",
+      "title": "Harakiri",
+      "year": 1962,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 135,
+      "wikidataId": "Q1584406"
+    },
+    {
+      "id": "to-kill-a-mockingbird-1962",
+      "title": "To Kill a Mockingbird",
+      "year": 1962,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 129,
+      "wikidataId": "Q177922"
+    },
+    {
+      "id": "8-and-a-half-1963",
+      "title": "8½",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 138,
+      "wikidataId": "Q12018"
+    },
+    {
+      "id": "high-and-low-1963",
+      "title": "High and Low",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 143,
+      "wikidataId": "Q244878"
+    },
+    {
+      "id": "the-leopard-1963",
+      "title": "The Leopard",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 183,
+      "wikidataId": "Q596623"
+    },
+    {
+      "id": "the-sound-of-music-1965",
+      "title": "The Sound of Music",
+      "year": 1965,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 174,
+      "wikidataId": "Q60072"
+    },
+    {
+      "id": "andrei-rublev-1966",
+      "title": "Andrei Rublev",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 185,
+      "wikidataId": "Q503046"
+    },
+    {
+      "id": "persona-1966",
+      "title": "Persona",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 84,
+      "wikidataId": "Q695255"
+    },
+    {
+      "id": "whos-afraid-of-virginia-woolf-1966",
+      "title": "Who's Afraid of Virginia Woolf?",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 131,
+      "wikidataId": "Q325643"
+    },
+    {
+      "id": "in-cold-blood-1967",
+      "title": "In Cold Blood",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 134,
+      "wikidataId": "Q1722631"
+    },
+    {
+      "id": "in-the-heat-of-the-night-1967",
+      "title": "In the Heat of the Night",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q622240"
+    },
+    {
+      "id": "the-graduate-1967",
+      "title": "The Graduate",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q217627"
+    },
+    {
+      "id": "easy-rider-1969",
+      "title": "Easy Rider",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q503638"
+    },
+    {
+      "id": "kes-1969",
+      "title": "Kes",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 106,
+      "wikidataId": "Q1500326"
+    },
+    {
+      "id": "midnight-cowboy-1969",
+      "title": "Midnight Cowboy",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q61696"
+    },
+    {
+      "id": "wanda-1970",
+      "title": "Wanda",
+      "year": 1970,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q381528"
+    },
+    {
+      "id": "harold-and-maude-1971",
+      "title": "Harold and Maude",
+      "year": 1971,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q368577"
+    },
+    {
+      "id": "mccabe-mrs-miller-1971",
+      "title": "McCabe & Mrs. Miller",
+      "year": 1971,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q1423362"
+    },
+    {
+      "id": "jeanne-dielman-23-quai-du-commerce-1080-bruxelles-1975",
+      "title": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+      "year": 1975,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "mirror-1975",
+      "title": "Mirror",
+      "year": 1975,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q838149"
+    },
+    {
+      "id": "eraserhead-1977",
+      "title": "Eraserhead",
+      "year": 1977,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 89,
+      "wikidataId": "Q11618"
+    },
+    {
+      "id": "killer-of-sheep-1977",
+      "title": "Killer of Sheep",
+      "year": 1977,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 83,
+      "wikidataId": "Q1752684"
+    },
+    {
+      "id": "stalker-1979",
+      "title": "Stalker",
+      "year": 1979,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 163,
+      "wikidataId": "Q200437"
+    },
+    {
+      "id": "the-empire-strikes-back-1980",
+      "title": "The Empire Strikes Back",
+      "year": 1980,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q181795"
+    },
+    {
+      "id": "the-thing-1982",
+      "title": "The Thing",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q210756"
+    },
+    {
+      "id": "paris-texas-1984",
+      "title": "Paris, Texas",
+      "year": 1984,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 147,
+      "wikidataId": "Q160946"
+    },
+    {
+      "id": "back-to-the-future-1985",
+      "title": "Back to the Future",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q91540"
+    },
+    {
+      "id": "ran-1985",
+      "title": "Ran",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 160,
+      "wikidataId": "Q565231"
+    },
+    {
+      "id": "vagabond-1985",
+      "title": "Vagabond",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q2298257"
+    },
+    {
+      "id": "blue-velvet-1986",
+      "title": "Blue Velvet",
+      "year": 1986,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q660950"
+    },
+    {
+      "id": "where-is-the-friends-house-1987",
+      "title": "Where Is the Friend's House?",
+      "year": 1987,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "sex-lies-and-videotape-1989",
+      "title": "Sex, Lies, and Videotape",
+      "year": 1989,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q1367548"
+    },
+    {
+      "id": "close-up-1990",
+      "title": "Close-Up",
+      "year": 1990,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q498277"
+    },
+    {
+      "id": "a-brighter-summer-day-1991",
+      "title": "A Brighter Summer Day",
+      "year": 1991,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 237,
+      "wikidataId": "Q710745"
+    },
+    {
+      "id": "malcolm-x-1992",
+      "title": "Malcolm X",
+      "year": 1992,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 201,
+      "wikidataId": "Q923925"
+    },
+    {
+      "id": "farewell-my-concubine-1993",
+      "title": "Farewell My Concubine",
+      "year": 1993,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 171,
+      "wikidataId": "Q696413"
+    },
+    {
+      "id": "chungking-express-1994",
+      "title": "Chungking Express",
+      "year": 1994,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q766263"
+    },
+    {
+      "id": "la-haine-1995",
+      "title": "La Haine",
+      "year": 1995,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q466101"
+    },
+    {
+      "id": "toy-story-1995",
+      "title": "Toy Story",
+      "year": 1995,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 81,
+      "wikidataId": "Q171048"
+    },
+    {
+      "id": "the-truman-show-1998",
+      "title": "The Truman Show",
+      "year": 1998,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 99,
+      "wikidataId": "Q214801"
+    },
+    {
+      "id": "in-the-mood-for-love-2000",
+      "title": "In the Mood for Love",
+      "year": 2000,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q1056853"
+    },
+    {
+      "id": "yi-yi-2000",
+      "title": "Yi Yi",
+      "year": 2000,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 173,
+      "wikidataId": "Q704513"
+    },
+    {
+      "id": "mulholland-drive-2001",
+      "title": "Mulholland Drive",
+      "year": 2001,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 147,
+      "wikidataId": "Q272608"
+    },
+    {
+      "id": "memories-of-murder-2003",
+      "title": "Memories of Murder",
+      "year": 2003,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q488169"
+    },
+    {
+      "id": "before-sunset-2004",
+      "title": "Before Sunset",
+      "year": 2004,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 77,
+      "wikidataId": "Q652186"
+    },
+    {
+      "id": "eternal-sunshine-of-the-spotless-mind-2004",
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "year": 2004,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 104,
+      "wikidataId": "Q208269"
+    },
+    {
+      "id": "4-months-3-weeks-and-2-days-2007",
+      "title": "4 Months, 3 Weeks and 2 Days",
+      "year": 2007,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q238245"
+    },
+    {
+      "id": "the-dark-knight-2008",
+      "title": "The Dark Knight",
+      "year": 2008,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 153,
+      "wikidataId": "Q163872"
+    },
+    {
+      "id": "portrait-of-a-lady-on-fire-2019",
+      "title": "Portrait of a Lady on Fire",
+      "year": 2019,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 121,
+      "wikidataId": "Q63246568"
+    },
+    {
+      "id": "intolerance-1916",
+      "title": "Intolerance",
+      "year": 1916,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 197,
+      "wikidataId": "Q192206"
+    },
+    {
+      "id": "nanook-of-the-north-1922",
+      "title": "Nanook of the North",
+      "year": 1922,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 78,
+      "wikidataId": "Q918401"
+    },
+    {
+      "id": "safety-last-1923",
+      "title": "Safety Last!",
+      "year": 1923,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 73,
+      "wikidataId": "Q778755"
+    },
+    {
+      "id": "the-thief-of-bagdad-1924",
+      "title": "The Thief of Bagdad",
+      "year": 1924,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 139,
+      "wikidataId": "Q1192927"
+    },
+    {
+      "id": "body-and-soul-1925",
+      "title": "Body and Soul",
+      "year": 1925,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q4936871"
+    },
+    {
+      "id": "the-freshman-1925",
+      "title": "The Freshman",
+      "year": 1925,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 76,
+      "wikidataId": "Q2482628"
+    },
+    {
+      "id": "lonesome-1928",
+      "title": "Lonesome",
+      "year": 1928,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 69,
+      "wikidataId": "Q939497"
+    },
+    {
+      "id": "the-cameraman-1928",
+      "title": "The Cameraman",
+      "year": 1928,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 69,
+      "wikidataId": "Q2138984"
+    },
+    {
+      "id": "the-docks-of-new-york-1928",
+      "title": "The Docks of New York",
+      "year": 1928,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 76,
+      "wikidataId": "Q1586983"
+    },
+    {
+      "id": "the-last-command-1928",
+      "title": "The Last Command",
+      "year": 1928,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 85,
+      "wikidataId": "Q466816"
+    },
+    {
+      "id": "all-quiet-on-the-western-front-1930",
+      "title": "All Quiet on the Western Front",
+      "year": 1930,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 136,
+      "wikidataId": "Q272599"
+    },
+    {
+      "id": "king-of-jazz-1930",
+      "title": "King of Jazz",
+      "year": 1930,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q1194608"
+    },
+    {
+      "id": "morocco-1930",
+      "title": "Morocco",
+      "year": 1930,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q577754"
+    },
+    {
+      "id": "little-caesar-1931",
+      "title": "Little Caesar",
+      "year": 1931,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 79,
+      "wikidataId": "Q1199222"
+    },
+    {
+      "id": "the-public-enemy-1931",
+      "title": "The Public Enemy",
+      "year": 1931,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 83,
+      "wikidataId": "Q1199902"
+    },
+    {
+      "id": "trouble-in-paradise-1932",
+      "title": "Trouble in Paradise",
+      "year": 1932,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 83,
+      "wikidataId": "Q256416"
+    },
+    {
+      "id": "duck-soup-1933",
+      "title": "Duck Soup",
+      "year": 1933,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 68,
+      "wikidataId": "Q1125566"
+    },
+    {
+      "id": "king-kong-1933",
+      "title": "King Kong",
+      "year": 1933,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q309048"
+    },
+    {
+      "id": "the-emperor-jones-1933",
+      "title": "The Emperor Jones",
+      "year": 1933,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 72,
+      "wikidataId": "Q1394119"
+    },
+    {
+      "id": "imitation-of-life-1934",
+      "title": "Imitation of Life",
+      "year": 1934,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q391541"
+    },
+    {
+      "id": "a-night-at-the-opera-1935",
+      "title": "A Night at the Opera",
+      "year": 1935,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 87,
+      "wikidataId": "Q943992"
+    },
+    {
+      "id": "my-man-godfrey-1936",
+      "title": "My Man Godfrey",
+      "year": 1936,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q1811134"
+    },
+    {
+      "id": "show-boat-1936",
+      "title": "Show Boat",
+      "year": 1936,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q2019366"
+    },
+    {
+      "id": "snow-white-and-the-seven-dwarfs-1937",
+      "title": "Snow White and the Seven Dwarfs",
+      "year": 1937,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 83,
+      "wikidataId": "Q134430"
+    },
+    {
+      "id": "the-awful-truth-1937",
+      "title": "The Awful Truth",
+      "year": 1937,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 87,
+      "wikidataId": "Q278513"
+    },
+    {
+      "id": "destry-rides-again-1939",
+      "title": "Destry Rides Again",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q607524"
+    },
+    {
+      "id": "midnight-1939",
+      "title": "Midnight",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 92,
+      "wikidataId": "Q1840729"
+    },
+    {
+      "id": "only-angels-have-wings-1939",
+      "title": "Only Angels Have Wings",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 121,
+      "wikidataId": "Q1501765"
+    },
+    {
+      "id": "the-rules-of-the-game-1939",
+      "title": "The Rules of the Game",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q748599"
+    },
+    {
+      "id": "young-mr-lincoln-1939",
+      "title": "Young Mr. Lincoln",
+      "year": 1939,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q279284"
+    },
+    {
+      "id": "dance-girl-dance-1940",
+      "title": "Dance, Girl, Dance",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q2132842"
+    },
+    {
+      "id": "fantasia-1940",
+      "title": "Fantasia",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q943192"
+    },
+    {
+      "id": "his-girl-friday-1940",
+      "title": "His Girl Friday",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q1066714"
+    },
+    {
+      "id": "pinocchio-1940",
+      "title": "Pinocchio",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q4341553"
+    },
+    {
+      "id": "rebecca-1940",
+      "title": "Rebecca",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q204212"
+    },
+    {
+      "id": "the-bank-dick-1940",
+      "title": "The Bank Dick",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 72,
+      "wikidataId": "Q2481316"
+    },
+    {
+      "id": "the-grapes-of-wrath-1940",
+      "title": "The Grapes of Wrath",
+      "year": 1940,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q676039"
+    },
+    {
+      "id": "the-lady-eve-1941",
+      "title": "The Lady Eve",
+      "year": 1941,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q1212344"
+    },
+    {
+      "id": "the-maltese-falcon-1941",
+      "title": "The Maltese Falcon",
+      "year": 1941,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q221462"
+    },
+    {
+      "id": "bambi-1942",
+      "title": "Bambi",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 69,
+      "wikidataId": "Q43051"
+    },
+    {
+      "id": "cat-people-1942",
+      "title": "Cat People",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 73,
+      "wikidataId": "Q1542184"
+    },
+    {
+      "id": "now-voyager-1942",
+      "title": "Now, Voyager",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q1346566"
+    },
+    {
+      "id": "the-magnificent-ambersons-1942",
+      "title": "The Magnificent Ambersons",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q628664"
+    },
+    {
+      "id": "the-pride-of-the-yankees-1942",
+      "title": "The Pride of the Yankees",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q1198860"
+    },
+    {
+      "id": "woman-of-the-year-1942",
+      "title": "Woman of the Year",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q1212587"
+    },
+    {
+      "id": "yankee-doodle-dandy-1942",
+      "title": "Yankee Doodle Dandy",
+      "year": 1942,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q1321622"
+    },
+    {
+      "id": "the-life-and-death-of-colonel-blimp-1943",
+      "title": "The Life and Death of Colonel Blimp",
+      "year": 1943,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 163,
+      "wikidataId": "Q1319302"
+    },
+    {
+      "id": "laura-1944",
+      "title": "Laura",
+      "year": 1944,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q976149"
+    },
+    {
+      "id": "national-velvet-1944",
+      "title": "National Velvet",
+      "year": 1944,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q284686"
+    },
+    {
+      "id": "children-of-paradise-1945",
+      "title": "Children of Paradise",
+      "year": 1945,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 190,
+      "wikidataId": "Q865580"
+    },
+    {
+      "id": "detour-1945",
+      "title": "Detour",
+      "year": 1945,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 67,
+      "wikidataId": "Q2062566"
+    },
+    {
+      "id": "leave-her-to-heaven-1945",
+      "title": "Leave Her to Heaven",
+      "year": 1945,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q210873"
+    },
+    {
+      "id": "mildred-pierce-1945",
+      "title": "Mildred Pierce",
+      "year": 1945,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q979726"
+    },
+    {
+      "id": "rome-open-city-1945",
+      "title": "Rome, Open City",
+      "year": 1945,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q721146"
+    },
+    {
+      "id": "the-lost-weekend-1945",
+      "title": "The Lost Weekend",
+      "year": 1945,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q237134"
+    },
+    {
+      "id": "gilda-1946",
+      "title": "Gilda",
+      "year": 1946,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q382307"
+    },
+    {
+      "id": "my-darling-clementine-1946",
+      "title": "My Darling Clementine",
+      "year": 1946,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 92,
+      "wikidataId": "Q370252"
+    },
+    {
+      "id": "notorious-1946",
+      "title": "Notorious",
+      "year": 1946,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q587419"
+    },
+    {
+      "id": "miracle-on-34th-street-1947",
+      "title": "Miracle on 34th Street",
+      "year": 1947,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q1467214"
+    },
+    {
+      "id": "the-naked-city-1948",
+      "title": "The Naked City",
+      "year": 1948,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q1587353"
+    },
+    {
+      "id": "adams-rib-1949",
+      "title": "Adam's Rib",
+      "year": 1949,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q1059199"
+    },
+    {
+      "id": "the-heiress-1949",
+      "title": "The Heiress",
+      "year": 1949,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q1141493"
+    },
+    {
+      "id": "white-heat-1949",
+      "title": "White Heat",
+      "year": 1949,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q607337"
+    },
+    {
+      "id": "cinderella-1950",
+      "title": "Cinderella",
+      "year": 1950,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 74,
+      "wikidataId": "Q191753"
+    },
+    {
+      "id": "in-a-lonely-place-1950",
+      "title": "In a Lonely Place",
+      "year": 1950,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q1305455"
+    },
+    {
+      "id": "the-asphalt-jungle-1950",
+      "title": "The Asphalt Jungle",
+      "year": 1950,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q728485"
+    },
+    {
+      "id": "winchester-73-1950",
+      "title": "Winchester '73",
+      "year": 1950,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 92,
+      "wikidataId": "Q1425480"
+    },
+    {
+      "id": "a-streetcar-named-desire-1951",
+      "title": "A Streetcar Named Desire",
+      "year": 1951,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q212129"
+    },
+    {
+      "id": "miracle-in-milan-1951",
+      "title": "Miracle in Milan",
+      "year": 1951,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q1170844"
+    },
+    {
+      "id": "miss-julie-1951",
+      "title": "Miss Julie",
+      "year": 1951,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 89,
+      "wikidataId": "Q1471325"
+    },
+    {
+      "id": "othello-1951",
+      "title": "Othello",
+      "year": 1951,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q2704454"
+    },
+    {
+      "id": "the-african-queen-1951",
+      "title": "The African Queen",
+      "year": 1951,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q384397"
+    },
+    {
+      "id": "the-day-the-earth-stood-still-1951",
+      "title": "The Day the Earth Stood Still",
+      "year": 1951,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 92,
+      "wikidataId": "Q425992"
+    },
+    {
+      "id": "forbidden-games-1952",
+      "title": "Forbidden Games",
+      "year": 1952,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 86,
+      "wikidataId": "Q976558"
+    },
+    {
+      "id": "high-noon-1952",
+      "title": "High Noon",
+      "year": 1952,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 85,
+      "wikidataId": "Q245208"
+    },
+    {
+      "id": "umberto-d-1952",
+      "title": "Umberto D.",
+      "year": 1952,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q651982"
+    },
+    {
+      "id": "gate-of-hell-1953",
+      "title": "Gate of Hell",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q862708"
+    },
+    {
+      "id": "pickup-on-south-street-1953",
+      "title": "Pickup on South Street",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 80,
+      "wikidataId": "Q1311296"
+    },
+    {
+      "id": "roman-holiday-1953",
+      "title": "Roman Holiday",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 118,
+      "wikidataId": "Q201293"
+    },
+    {
+      "id": "shane-1953",
+      "title": "Shane",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 118,
+      "wikidataId": "Q1045165"
+    },
+    {
+      "id": "the-big-heat-1953",
+      "title": "The Big Heat",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 89,
+      "wikidataId": "Q1093085"
+    },
+    {
+      "id": "the-earrings-of-madame-de-1953",
+      "title": "The Earrings of Madame de…",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "the-war-of-the-worlds-1953",
+      "title": "The War of the Worlds",
+      "year": 1953,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 87,
+      "wikidataId": "Q1113303"
+    },
+    {
+      "id": "dial-m-for-murder-1954",
+      "title": "Dial M for Murder",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q496255"
+    },
+    {
+      "id": "hobsons-choice-1954",
+      "title": "Hobson's Choice",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q1613944"
+    },
+    {
+      "id": "journey-to-italy-1954",
+      "title": "Journey to Italy",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 81,
+      "wikidataId": "Q385866"
+    },
+    {
+      "id": "la-strada-1954",
+      "title": "La Strada",
+      "year": 1954,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 104,
+      "wikidataId": "Q18402"
+    },
+    {
+      "id": "all-that-heaven-allows-1955",
+      "title": "All That Heaven Allows",
+      "year": 1955,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 89,
+      "wikidataId": "Q1633549"
+    },
+    {
+      "id": "kiss-me-deadly-1955",
+      "title": "Kiss Me Deadly",
+      "year": 1955,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q2061752"
+    },
+    {
+      "id": "marty-1955",
+      "title": "Marty",
+      "year": 1955,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q237116"
+    },
+    {
+      "id": "rififi-1955",
+      "title": "Rififi",
+      "year": 1955,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q1856418"
+    },
+    {
+      "id": "invasion-of-the-body-snatchers-1956",
+      "title": "Invasion of the Body Snatchers",
+      "year": 1956,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 80,
+      "wikidataId": "Q45386"
+    },
+    {
+      "id": "the-ten-commandments-1956",
+      "title": "The Ten Commandments",
+      "year": 1956,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 220,
+      "wikidataId": "Q746733"
+    },
+    {
+      "id": "310-to-yuma-1957",
+      "title": "3:10 to Yuma",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 92,
+      "wikidataId": "Q247130"
+    },
+    {
+      "id": "a-face-in-the-crowd-1957",
+      "title": "A Face in the Crowd",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q497924"
+    },
+    {
+      "id": "nights-of-cabiria-1957",
+      "title": "Nights of Cabiria",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q18405"
+    },
+    {
+      "id": "the-incredible-shrinking-man-1957",
+      "title": "The Incredible Shrinking Man",
+      "year": 1957,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 81,
+      "wikidataId": "Q972001"
+    },
+    {
+      "id": "apur-sansar-1959",
+      "title": "Apur Sansar",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q622376"
+    },
+    {
+      "id": "black-orpheus-1959",
+      "title": "Black Orpheus",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q538266"
+    },
+    {
+      "id": "imitation-of-life-1959",
+      "title": "Imitation of Life",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 124,
+      "wikidataId": "Q373774"
+    },
+    {
+      "id": "les-cousins-1959",
+      "title": "Les Cousins",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q141557"
+    },
+    {
+      "id": "pickpocket-1959",
+      "title": "Pickpocket",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 75,
+      "wikidataId": "Q664726"
+    },
+    {
+      "id": "shadows-1959",
+      "title": "Shadows",
+      "year": 1959,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 87,
+      "wikidataId": "Q1535980"
+    },
+    {
+      "id": "breathless-1960",
+      "title": "Breathless",
+      "year": 1960,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 87,
+      "wikidataId": "Q86427"
+    },
+    {
+      "id": "lavventura-1960",
+      "title": "L'Avventura",
+      "year": 1960,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 145,
+      "wikidataId": "Q514531"
+    },
+    {
+      "id": "le-trou-1960",
+      "title": "Le Trou",
+      "year": 1960,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q1113049"
+    },
+    {
+      "id": "a-raisin-in-the-sun-1961",
+      "title": "A Raisin in the Sun",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q1304498"
+    },
+    {
+      "id": "last-year-at-marienbad-1961",
+      "title": "Last Year at Marienbad",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q225355"
+    },
+    {
+      "id": "one-eyed-jacks-1961",
+      "title": "One-Eyed Jacks",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q174513"
+    },
+    {
+      "id": "the-hustler-1961",
+      "title": "The Hustler",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 134,
+      "wikidataId": "Q1130084"
+    },
+    {
+      "id": "west-side-story-1961",
+      "title": "West Side Story",
+      "year": 1961,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 150,
+      "wikidataId": "Q273704"
+    },
+    {
+      "id": "cleo-from-5-to-7-1962",
+      "title": "Cléo from 5 to 7",
+      "year": 1962,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q1199628"
+    },
+    {
+      "id": "ivans-childhood-1962",
+      "title": "Ivan's Childhood",
+      "year": 1962,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q147878"
+    },
+    {
+      "id": "the-man-who-shot-liberty-valance-1962",
+      "title": "The Man Who Shot Liberty Valance",
+      "year": 1962,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q555687"
+    },
+    {
+      "id": "the-manchurian-candidate-1962",
+      "title": "The Manchurian Candidate",
+      "year": 1962,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q521387"
+    },
+    {
+      "id": "charade-1963",
+      "title": "Charade",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q496266"
+    },
+    {
+      "id": "contempt-1963",
+      "title": "Contempt",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q598109"
+    },
+    {
+      "id": "hands-over-the-city-1963",
+      "title": "Hands over the City",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "shock-corridor-1963",
+      "title": "Shock Corridor",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q1940924"
+    },
+    {
+      "id": "the-great-escape-1963",
+      "title": "The Great Escape",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 165,
+      "wikidataId": "Q110354"
+    },
+    {
+      "id": "winter-light-1963",
+      "title": "Winter Light",
+      "year": 1963,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 81,
+      "wikidataId": "Q842067"
+    },
+    {
+      "id": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb-1964",
+      "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q105702"
+    },
+    {
+      "id": "dry-summer-1964",
+      "title": "Dry Summer",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q1542380"
+    },
+    {
+      "id": "i-am-cuba-1964",
+      "title": "I Am Cuba",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 143,
+      "wikidataId": "Q2527730"
+    },
+    {
+      "id": "kwaidan-1964",
+      "title": "Kwaidan",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 183,
+      "wikidataId": "Q133488"
+    },
+    {
+      "id": "nothing-but-a-man-1964",
+      "title": "Nothing but a Man",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q2057199"
+    },
+    {
+      "id": "red-desert-1964",
+      "title": "Red Desert",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q399647"
+    },
+    {
+      "id": "the-umbrellas-of-cherbourg-1964",
+      "title": "The Umbrellas of Cherbourg",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q163868"
+    },
+    {
+      "id": "woman-in-the-dunes-1964",
+      "title": "Woman in the Dunes",
+      "year": 1964,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q1207936"
+    },
+    {
+      "id": "alphaville-1965",
+      "title": "Alphaville",
+      "year": 1965,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 89,
+      "wikidataId": "Q542688"
+    },
+    {
+      "id": "black-girl-1965",
+      "title": "Black Girl",
+      "year": 1965,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 65,
+      "wikidataId": "Q3211102"
+    },
+    {
+      "id": "pierrot-le-fou-1965",
+      "title": "Pierrot le Fou",
+      "year": 1965,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q938851"
+    },
+    {
+      "id": "red-beard-1965",
+      "title": "Red Beard",
+      "year": 1965,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 185,
+      "wikidataId": "Q847709"
+    },
+    {
+      "id": "a-man-and-a-woman-1966",
+      "title": "A Man and a Woman",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q261403"
+    },
+    {
+      "id": "au-hasard-balthazar-1966",
+      "title": "Au hasard Balthazar",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q228937"
+    },
+    {
+      "id": "cul-de-sac-1966",
+      "title": "Cul-de-Sac",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "daisies-1966",
+      "title": "Daisies",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 76,
+      "wikidataId": "Q910705"
+    },
+    {
+      "id": "seconds-1966",
+      "title": "Seconds",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 106,
+      "wikidataId": "Q1195447"
+    },
+    {
+      "id": "the-face-of-another-1966",
+      "title": "The Face of Another",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 124,
+      "wikidataId": "Q4517765"
+    },
+    {
+      "id": "the-good-the-bad-and-the-ugly-1966",
+      "title": "The Good, the Bad and the Ugly",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 161,
+      "wikidataId": "Q41483"
+    },
+    {
+      "id": "war-and-peace-1966",
+      "title": "War and Peace",
+      "year": 1966,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 432,
+      "wikidataId": "Q845176"
+    },
+    {
+      "id": "belle-de-jour-1967",
+      "title": "Belle de Jour",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q470375"
+    },
+    {
+      "id": "bonnie-and-clyde-1967",
+      "title": "Bonnie and Clyde",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q181776"
+    },
+    {
+      "id": "le-samourai-1967",
+      "title": "Le Samouraï",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q618499"
+    },
+    {
+      "id": "playtime-1967",
+      "title": "Playtime",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 126,
+      "wikidataId": "Q1454574"
+    },
+    {
+      "id": "samurai-rebellion-1967",
+      "title": "Samurai Rebellion",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q2437042"
+    },
+    {
+      "id": "the-young-girls-of-rochefort-1967",
+      "title": "The Young Girls of Rochefort",
+      "year": 1967,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q1214975"
+    },
+    {
+      "id": "faces-1968",
+      "title": "Faces",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 130,
+      "wikidataId": "Q2241601"
+    },
+    {
+      "id": "funny-girl-1968",
+      "title": "Funny Girl",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 151,
+      "wikidataId": "Q1364076"
+    },
+    {
+      "id": "if-1968",
+      "title": "If....",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q1346745"
+    },
+    {
+      "id": "monterey-pop-1968",
+      "title": "Monterey Pop",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 79,
+      "wikidataId": "Q1179100"
+    },
+    {
+      "id": "night-of-the-living-dead-1968",
+      "title": "Night of the Living Dead",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q623051"
+    },
+    {
+      "id": "rosemarys-baby-1968",
+      "title": "Rosemary's Baby",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 137,
+      "wikidataId": "Q607179"
+    },
+    {
+      "id": "the-cremator-1968",
+      "title": "The Cremator",
+      "year": 1968,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 96,
+      "wikidataId": "Q3178853"
+    },
+    {
+      "id": "army-of-shadows-1969",
+      "title": "Army of Shadows",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 138,
+      "wikidataId": "Q681225"
+    },
+    {
+      "id": "butch-cassidy-and-the-sundance-kid-1969",
+      "title": "Butch Cassidy and the Sundance Kid",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q232000"
+    },
+    {
+      "id": "medium-cool-1969",
+      "title": "Medium Cool",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q1284125"
+    },
+    {
+      "id": "salesman-1969",
+      "title": "Salesman",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 85,
+      "wikidataId": "Q2586674"
+    },
+    {
+      "id": "the-color-of-pomegranates-1969",
+      "title": "The Color of Pomegranates",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 79,
+      "wikidataId": "Q2235380"
+    },
+    {
+      "id": "the-learning-tree-1969",
+      "title": "The Learning Tree",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q1749731"
+    },
+    {
+      "id": "the-wild-bunch-1969",
+      "title": "The Wild Bunch",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 145,
+      "wikidataId": "Q994481"
+    },
+    {
+      "id": "z-1969",
+      "title": "Z",
+      "year": 1969,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q136605"
+    },
+    {
+      "id": "shaft-1971",
+      "title": "Shaft",
+      "year": 1971,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 97,
+      "wikidataId": "Q596260"
+    },
+    {
+      "id": "sweet-sweetbacks-baadasssss-song-1971",
+      "title": "Sweet Sweetback's Baadasssss Song",
+      "year": 1971,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q1812665"
+    },
+    {
+      "id": "two-lane-blacktop-1971",
+      "title": "Two-Lane Blacktop",
+      "year": 1971,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q737109"
+    },
+    {
+      "id": "pink-flamingos-1972",
+      "title": "Pink Flamingos",
+      "year": 1972,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q1140590"
+    },
+    {
+      "id": "solaris-1972",
+      "title": "Solaris",
+      "year": 1972,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 160,
+      "wikidataId": "Q125772"
+    },
+    {
+      "id": "the-canterbury-tales-1972",
+      "title": "The Canterbury Tales",
+      "year": 1972,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q858047"
+    },
+    {
+      "id": "badlands-1973",
+      "title": "Badlands",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q799202"
+    },
+    {
+      "id": "dont-look-now-1973",
+      "title": "Don't Look Now",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q660245"
+    },
+    {
+      "id": "mean-streets-1973",
+      "title": "Mean Streets",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q841335"
+    },
+    {
+      "id": "paper-moon-1973",
+      "title": "Paper Moon",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q603162"
+    },
+    {
+      "id": "scenes-from-a-marriage-1973",
+      "title": "Scenes from a Marriage",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 169,
+      "wikidataId": "Q98098574"
+    },
+    {
+      "id": "the-mother-and-the-whore-1973",
+      "title": "The Mother and the Whore",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 217,
+      "wikidataId": "Q2547714"
+    },
+    {
+      "id": "the-spirit-of-the-beehive-1973",
+      "title": "The Spirit of the Beehive",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 98,
+      "wikidataId": "Q2290517"
+    },
+    {
+      "id": "touki-bouki-1973",
+      "title": "Touki Bouki",
+      "year": 1973,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 85,
+      "wikidataId": "Q3310901"
+    },
+    {
+      "id": "ali-fear-eats-the-soul-1974",
+      "title": "Ali: Fear Eats the Soul",
+      "year": 1974,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q543810"
+    },
+    {
+      "id": "celine-and-julie-go-boating-1974",
+      "title": "Céline and Julie Go Boating",
+      "year": 1974,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "hearts-and-minds-1974",
+      "title": "Hearts and Minds",
+      "year": 1974,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q3280602"
+    },
+    {
+      "id": "adoption-1975",
+      "title": "Adoption",
+      "year": 1975,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 89,
+      "wikidataId": "Q1475202"
+    },
+    {
+      "id": "cooley-high-1975",
+      "title": "Cooley High",
+      "year": 1975,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q5167435"
+    },
+    {
+      "id": "grey-gardens-1975",
+      "title": "Grey Gardens",
+      "year": 1975,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q2104352"
+    },
+    {
+      "id": "salo-or-the-120-days-of-sodom-1975",
+      "title": "Salò, or the 120 Days of Sodom",
+      "year": 1975,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q657977"
+    },
+    {
+      "id": "harlan-county-usa-1976",
+      "title": "Harlan County, USA",
+      "year": 1976,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q1752675"
+    },
+    {
+      "id": "a-special-day-1977",
+      "title": "A Special Day",
+      "year": 1977,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q249782"
+    },
+    {
+      "id": "alambrista-1977",
+      "title": "Alambrista!",
+      "year": 1977,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 110,
+      "wikidataId": "Q3283813"
+    },
+    {
+      "id": "opening-night-1977",
+      "title": "Opening Night",
+      "year": 1977,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 139,
+      "wikidataId": "Q1504568"
+    },
+    {
+      "id": "sorcerer-1977",
+      "title": "Sorcerer",
+      "year": 1977,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 121,
+      "wikidataId": "Q541707"
+    },
+    {
+      "id": "autumn-sonata-1978",
+      "title": "Autumn Sonata",
+      "year": 1978,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q322572"
+    },
+    {
+      "id": "days-of-heaven-1978",
+      "title": "Days of Heaven",
+      "year": 1978,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 91,
+      "wikidataId": "Q670378"
+    },
+    {
+      "id": "girlfriends-1978",
+      "title": "Girlfriends",
+      "year": 1978,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 86,
+      "wikidataId": "Q5564531"
+    },
+    {
+      "id": "the-last-waltz-1978",
+      "title": "The Last Waltz",
+      "year": 1978,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 115,
+      "wikidataId": "Q847599"
+    },
+    {
+      "id": "the-tree-of-wooden-clogs-1978",
+      "title": "The Tree of Wooden Clogs",
+      "year": 1978,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 186,
+      "wikidataId": "Q1194413"
+    },
+    {
+      "id": "being-there-1979",
+      "title": "Being There",
+      "year": 1979,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 130,
+      "wikidataId": "Q945074"
+    },
+    {
+      "id": "the-black-stallion-1979",
+      "title": "The Black Stallion",
+      "year": 1979,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q2300266"
+    },
+    {
+      "id": "the-tin-drum-1979",
+      "title": "The Tin Drum",
+      "year": 1979,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 142,
+      "wikidataId": "Q313764"
+    },
+    {
+      "id": "kagemusha-1980",
+      "title": "Kagemusha",
+      "year": 1980,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 179,
+      "wikidataId": "Q854990"
+    },
+    {
+      "id": "das-boot-1981",
+      "title": "Das Boot",
+      "year": 1981,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 149,
+      "wikidataId": "Q62730"
+    },
+    {
+      "id": "chan-is-missing-1982",
+      "title": "Chan Is Missing",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": "Q3240551",
+      "note": "found-no-duration"
+    },
+    {
+      "id": "fanny-and-alexander-1982",
+      "title": "Fanny and Alexander",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 188,
+      "wikidataId": "Q165651"
+    },
+    {
+      "id": "fast-times-at-ridgemont-high-1982",
+      "title": "Fast Times at Ridgemont High",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 86,
+      "wikidataId": "Q1302846"
+    },
+    {
+      "id": "koyaanisqatsi-1982",
+      "title": "Koyaanisqatsi",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 85,
+      "wikidataId": "Q1127828"
+    },
+    {
+      "id": "the-ballad-of-gregorio-cortez-1982",
+      "title": "The Ballad of Gregorio Cortez",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": "Q47063893",
+      "note": "found-no-duration"
+    },
+    {
+      "id": "veronika-voss-1982",
+      "title": "Veronika Voss",
+      "year": 1982,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q703188"
+    },
+    {
+      "id": "el-norte-1983",
+      "title": "El Norte",
+      "year": 1983,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 141,
+      "wikidataId": "Q1446886"
+    },
+    {
+      "id": "largent-1983",
+      "title": "L'Argent",
+      "year": 1983,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 85,
+      "wikidataId": "Q2621769"
+    },
+    {
+      "id": "return-of-the-jedi-1983",
+      "title": "Return of the Jedi",
+      "year": 1983,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 130,
+      "wikidataId": "Q181803"
+    },
+    {
+      "id": "scarface-1983",
+      "title": "Scarface",
+      "year": 1983,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 5,
+      "wikidataId": "Q55419656"
+    },
+    {
+      "id": "love-streams-1984",
+      "title": "Love Streams",
+      "year": 1984,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 138,
+      "wikidataId": "Q2521232"
+    },
+    {
+      "id": "stranger-than-paradise-1984",
+      "title": "Stranger Than Paradise",
+      "year": 1984,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 88,
+      "wikidataId": "Q1345409"
+    },
+    {
+      "id": "the-terminator-1984",
+      "title": "The Terminator",
+      "year": 1984,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 108,
+      "wikidataId": "Q162255"
+    },
+    {
+      "id": "the-times-of-harvey-milk-1984",
+      "title": "The Times of Harvey Milk",
+      "year": 1984,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q1772403"
+    },
+    {
+      "id": "this-is-spinal-tap-1984",
+      "title": "This Is Spinal Tap",
+      "year": 1984,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 81,
+      "wikidataId": "Q7810384"
+    },
+    {
+      "id": "mishima-a-life-in-four-chapters-1985",
+      "title": "Mishima: A Life in Four Chapters",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 120,
+      "wikidataId": "Q1740171"
+    },
+    {
+      "id": "shoah-1985",
+      "title": "Shoah",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 540,
+      "wikidataId": "Q1720765"
+    },
+    {
+      "id": "tampopo-1985",
+      "title": "Tampopo",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q2142996"
+    },
+    {
+      "id": "the-breakfast-club-1985",
+      "title": "The Breakfast Club",
+      "year": 1985,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q499152"
+    },
+    {
+      "id": "hoosiers-1986",
+      "title": "Hoosiers",
+      "year": 1986,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q784211"
+    },
+    {
+      "id": "au-revoir-les-enfants-1987",
+      "title": "Au revoir les enfants",
+      "year": 1987,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 105,
+      "wikidataId": "Q187276"
+    },
+    {
+      "id": "la-bamba-1987",
+      "title": "La Bamba",
+      "year": 1987,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q139245"
+    },
+    {
+      "id": "matewan-1987",
+      "title": "Matewan",
+      "year": 1987,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 132,
+      "wikidataId": "Q3851789"
+    },
+    {
+      "id": "the-princess-bride-1987",
+      "title": "The Princess Bride",
+      "year": 1987,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q506418"
+    },
+    {
+      "id": "wings-of-desire-1987",
+      "title": "Wings of Desire",
+      "year": 1987,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q156911"
+    },
+    {
+      "id": "bull-durham-1988",
+      "title": "Bull Durham",
+      "year": 1988,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q567072"
+    },
+    {
+      "id": "cinema-paradiso-1988",
+      "title": "Cinema Paradiso",
+      "year": 1988,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 155,
+      "wikidataId": "Q464032"
+    },
+    {
+      "id": "die-hard-1988",
+      "title": "Die Hard",
+      "year": 1988,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 131,
+      "wikidataId": "Q105598"
+    },
+    {
+      "id": "grave-of-the-fireflies-1988",
+      "title": "Grave of the Fireflies",
+      "year": 1988,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q274520"
+    },
+    {
+      "id": "my-neighbor-totoro-1988",
+      "title": "My Neighbor Totoro",
+      "year": 1988,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 86,
+      "wikidataId": "Q39571"
+    },
+    {
+      "id": "the-thin-blue-line-1988",
+      "title": "The Thin Blue Line",
+      "year": 1988,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q162997"
+    },
+    {
+      "id": "thelonious-monk-straight-no-chaser-1988",
+      "title": "Thelonious Monk: Straight, No Chaser",
+      "year": 1988,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q3281809"
+    },
+    {
+      "id": "when-harry-met-sally-1989",
+      "title": "When Harry Met Sally...",
+      "year": 1989,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q471169"
+    },
+    {
+      "id": "house-party-1990",
+      "title": "House Party",
+      "year": 1990,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q1631381"
+    },
+    {
+      "id": "paris-is-burning-1990",
+      "title": "Paris Is Burning",
+      "year": 1990,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 71,
+      "wikidataId": "Q7137311"
+    },
+    {
+      "id": "slacker-1990",
+      "title": "Slacker",
+      "year": 1990,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q1574019"
+    },
+    {
+      "id": "to-sleep-with-anger-1990",
+      "title": "To Sleep with Anger",
+      "year": 1990,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q7811124"
+    },
+    {
+      "id": "daughters-of-the-dust-1991",
+      "title": "Daughters of the Dust",
+      "year": 1991,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 112,
+      "wikidataId": "Q3285003"
+    },
+    {
+      "id": "my-own-private-idaho-1991",
+      "title": "My Own Private Idaho",
+      "year": 1991,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q1125451"
+    },
+    {
+      "id": "thelma-louise-1991",
+      "title": "Thelma & Louise",
+      "year": 1991,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 129,
+      "wikidataId": "Q658041"
+    },
+    {
+      "id": "groundhog-day-1993",
+      "title": "Groundhog Day",
+      "year": 1993,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q488655"
+    },
+    {
+      "id": "jurassic-park-1993",
+      "title": "Jurassic Park",
+      "year": 1993,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q167726"
+    },
+    {
+      "id": "short-cuts-1993",
+      "title": "Short Cuts",
+      "year": 1993,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 187,
+      "wikidataId": "Q605226"
+    },
+    {
+      "id": "the-wedding-banquet-1993",
+      "title": "The Wedding Banquet",
+      "year": 1993,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 103,
+      "wikidataId": "Q182071"
+    },
+    {
+      "id": "before-the-rain-1994",
+      "title": "Before the Rain",
+      "year": 1994,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q911013"
+    },
+    {
+      "id": "hoop-dreams-1994",
+      "title": "Hoop Dreams",
+      "year": 1994,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 170,
+      "wikidataId": "Q511914"
+    },
+    {
+      "id": "satantango-1994",
+      "title": "Satantango",
+      "year": 1994,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 450,
+      "wikidataId": "Q53481"
+    },
+    {
+      "id": "heat-1995",
+      "title": "Heat",
+      "year": 1995,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 171,
+      "wikidataId": "Q42198"
+    },
+    {
+      "id": "se7en-1995",
+      "title": "Se7en",
+      "year": 1995,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 127,
+      "wikidataId": "Q190908"
+    },
+    {
+      "id": "the-usual-suspects-1995",
+      "title": "The Usual Suspects",
+      "year": 1995,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 106,
+      "wikidataId": "Q132351"
+    },
+    {
+      "id": "underground-1995",
+      "title": "Underground",
+      "year": 1995,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 163,
+      "wikidataId": "Q156516"
+    },
+    {
+      "id": "the-watermelon-woman-1996",
+      "title": "The Watermelon Woman",
+      "year": 1996,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q2065014"
+    },
+    {
+      "id": "trainspotting-1996",
+      "title": "Trainspotting",
+      "year": 1996,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 94,
+      "wikidataId": "Q109135"
+    },
+    {
+      "id": "cure-1997",
+      "title": "Cure",
+      "year": 1997,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q1144476"
+    },
+    {
+      "id": "eves-bayou-1997",
+      "title": "Eve's Bayou",
+      "year": 1997,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q3284333"
+    },
+    {
+      "id": "princess-mononoke-1997",
+      "title": "Princess Mononoke",
+      "year": 1997,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q186572"
+    },
+    {
+      "id": "beau-travail-1998",
+      "title": "Beau travail",
+      "year": 1998,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": null,
+      "wikidataId": null,
+      "note": "not-found-on-wikidata"
+    },
+    {
+      "id": "central-station-1998",
+      "title": "Central Station",
+      "year": 1998,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q1054036"
+    },
+    {
+      "id": "eternity-and-a-day-1998",
+      "title": "Eternity and a Day",
+      "year": 1998,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 137,
+      "wikidataId": "Q697770"
+    },
+    {
+      "id": "rushmore-1998",
+      "title": "Rushmore",
+      "year": 1998,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 93,
+      "wikidataId": "Q1347393"
+    },
+    {
+      "id": "the-big-lebowski-1998",
+      "title": "The Big Lebowski",
+      "year": 1998,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 117,
+      "wikidataId": "Q337078"
+    },
+    {
+      "id": "the-celebration-1998",
+      "title": "The Celebration",
+      "year": 1998,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q841958"
+    },
+    {
+      "id": "buena-vista-social-club-1999",
+      "title": "Buena Vista Social Club",
+      "year": 1999,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 101,
+      "wikidataId": "Q774269"
+    },
+    {
+      "id": "compensation-1999",
+      "title": "Compensation",
+      "year": 1999,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 95,
+      "wikidataId": "Q5156256"
+    },
+    {
+      "id": "fight-club-1999",
+      "title": "Fight Club",
+      "year": 1999,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 139,
+      "wikidataId": "Q190050"
+    },
+    {
+      "id": "magnolia-1999",
+      "title": "Magnolia",
+      "year": 1999,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 188,
+      "wikidataId": "Q588420"
+    },
+    {
+      "id": "rosetta-1999",
+      "title": "Rosetta",
+      "year": 1999,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q1907380"
+    },
+    {
+      "id": "the-iron-giant-1999",
+      "title": "The Iron Giant",
+      "year": 1999,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 86,
+      "wikidataId": "Q867283"
+    },
+    {
+      "id": "the-matrix-1999",
+      "title": "The Matrix",
+      "year": 1999,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 136,
+      "wikidataId": "Q83495"
+    },
+    {
+      "id": "bamboozled-2000",
+      "title": "Bamboozled",
+      "year": 2000,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 135,
+      "wikidataId": "Q2277762"
+    },
+    {
+      "id": "love-basketball-2000",
+      "title": "Love & Basketball",
+      "year": 2000,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 124,
+      "wikidataId": "Q1146503"
+    },
+    {
+      "id": "memento-2000",
+      "title": "Memento",
+      "year": 2000,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 113,
+      "wikidataId": "Q190525"
+    },
+    {
+      "id": "werckmeister-harmonies-2000",
+      "title": "Werckmeister Harmonies",
+      "year": 2000,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 145,
+      "wikidataId": "Q509169"
+    },
+    {
+      "id": "la-cienaga-2001",
+      "title": "La Ciénaga",
+      "year": 2001,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 102,
+      "wikidataId": "Q3214034"
+    },
+    {
+      "id": "monsoon-wedding-2001",
+      "title": "Monsoon Wedding",
+      "year": 2001,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q945586"
+    },
+    {
+      "id": "city-of-god-2002",
+      "title": "City of God",
+      "year": 2002,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 128,
+      "wikidataId": "Q220741"
+    },
+    {
+      "id": "oldboy-2003",
+      "title": "Oldboy",
+      "year": 2003,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 116,
+      "wikidataId": "Q475693"
+    },
+    {
+      "id": "the-best-of-youth-2003",
+      "title": "The Best of Youth",
+      "year": 2003,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 366,
+      "wikidataId": "Q1217941"
+    },
+    {
+      "id": "howls-moving-castle-2004",
+      "title": "Howl's Moving Castle",
+      "year": 2004,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q29011"
+    },
+    {
+      "id": "pans-labyrinth-2006",
+      "title": "Pan's Labyrinth",
+      "year": 2006,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 119,
+      "wikidataId": "Q216006"
+    },
+    {
+      "id": "the-prestige-2006",
+      "title": "The Prestige",
+      "year": 2006,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 125,
+      "wikidataId": "Q46551"
+    },
+    {
+      "id": "still-walking-2008",
+      "title": "Still Walking",
+      "year": 2008,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 114,
+      "wikidataId": "Q874074"
+    },
+    {
+      "id": "fantastic-mr-fox-2009",
+      "title": "Fantastic Mr. Fox",
+      "year": 2009,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 87,
+      "wikidataId": "Q465275"
+    },
+    {
+      "id": "mary-and-max-2009",
+      "title": "Mary and Max",
+      "year": 2009,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 90,
+      "wikidataId": "Q1128756"
+    },
+    {
+      "id": "incendies-2010",
+      "title": "Incendies",
+      "year": 2010,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 133,
+      "wikidataId": "Q1212650"
+    },
+    {
+      "id": "pariah-2011",
+      "title": "Pariah",
+      "year": 2011,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 86,
+      "wikidataId": "Q7137004"
+    },
+    {
+      "id": "the-hunt-2012",
+      "title": "The Hunt",
+      "year": 2012,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 111,
+      "wikidataId": "Q32303"
+    },
+    {
+      "id": "prisoners-2013",
+      "title": "Prisoners",
+      "year": 2013,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 153,
+      "wikidataId": "Q3404003"
+    },
+    {
+      "id": "interstellar-2014",
+      "title": "Interstellar",
+      "year": 2014,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 169,
+      "wikidataId": "Q13417189"
+    },
+    {
+      "id": "dheepan-2015",
+      "title": "Dheepan",
+      "year": 2015,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 109,
+      "wikidataId": "Q19816574"
+    },
+    {
+      "id": "i-daniel-blake-2016",
+      "title": "I, Daniel Blake",
+      "year": 2016,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 100,
+      "wikidataId": "Q23823458"
+    },
+    {
+      "id": "the-handmaiden-2016",
+      "title": "The Handmaiden",
+      "year": 2016,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 145,
+      "wikidataId": "Q20444585"
+    },
+    {
+      "id": "your-name-2016",
+      "title": "Your Name",
+      "year": 2016,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 107,
+      "wikidataId": "Q21697406"
+    },
+    {
+      "id": "shoplifters-2018",
+      "title": "Shoplifters",
+      "year": 2018,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 121,
+      "wikidataId": "Q48765577"
+    },
+    {
+      "id": "all-the-beauty-and-the-bloodshed-2022",
+      "title": "All the Beauty and the Bloodshed",
+      "year": 2022,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 122,
+      "wikidataId": "Q113445202"
+    },
+    {
+      "id": "perfect-days-2023",
+      "title": "Perfect Days",
+      "year": 2023,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 123,
+      "wikidataId": "Q117663112"
+    },
+    {
+      "id": "spider-man-across-the-spider-verse-2023",
+      "title": "Spider-Man: Across the Spider-Verse",
+      "year": 2023,
+      "category": "ESSENTIAL",
+      "reason": "omdb-not-found",
+      "runtime": null,
+      "wikidataRuntime": 140,
+      "wikidataId": "Q76448600"
+    }
+  ]
+}

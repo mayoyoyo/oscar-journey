@@ -1,0 +1,427 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by William Wyler. Written by Karl Tunberg, based on the novel by Lew Wallace.",
+    "clean": "Directed by William Wyler. Written by Karl Tunberg, based on the novel by Lew Wallace."
+  },
+  {
+    "heading": "Judah Ben-Hur",
+    "raw": "You may conquer the land, you may slaughter the people. That is not the end. We will rise again.",
+    "clean": "You may conquer the land, you may slaughter the people. That is not the end. We will rise again."
+  },
+  {
+    "heading": "Judah Ben-Hur",
+    "raw": "Rome is an affront to God. Rome is strangling my people and my country and the whole earth, but not forever. I tell you, the day Rome falls, there will be a shout of freedom such as the world has never heard before.",
+    "clean": "Rome is an affront to God. Rome is strangling my people and my country and the whole earth, but not forever. I tell you, the day Rome falls, there will be a shout of freedom such as the world has never heard before."
+  },
+  {
+    "heading": "Judah Ben-Hur",
+    "raw": "[to Messala] May God grant me vengeance. I pray that you live till I return.",
+    "clean": "May God grant me vengeance. I pray that you live till I return."
+  },
+  {
+    "heading": "Judah Ben-Hur",
+    "raw": "Find them, Messala. Restore them to me and I'll forget what I vowed with every stroke of that oar you chained me to.",
+    "clean": "Find them, Messala. Restore them to me and I'll forget what I vowed with every stroke of that oar you chained me to."
+  },
+  {
+    "heading": "Messala",
+    "raw": "It's an insane world, but in it there's one sanity, the loyalty of old friends. Judah, we must believe in one another.",
+    "clean": "It's an insane world, but in it there's one sanity, the loyalty of old friends. Judah, we must believe in one another."
+  },
+  {
+    "heading": "Messala",
+    "raw": "[to Judah] I wanted your help. Now you have given it to me. By making this example of you, I discourage treason. By condemning, without hesitation, an old friend, I shall be feared.",
+    "clean": "I wanted your help. Now you have given it to me. By making this example of you, I discourage treason. By condemning, without hesitation, an old friend, I shall be feared."
+  },
+  {
+    "heading": "Quintus Arrius",
+    "raw": "[to Judah] You have the spirit to fight back but the good sense to control it. Your eyes are full of hate, Forty-One. That's good. Hate keeps a man alive. It gives him strength.",
+    "clean": "You have the spirit to fight back but the good sense to control it. Your eyes are full of hate, Forty-One. That's good. Hate keeps a man alive. It gives him strength."
+  },
+  {
+    "heading": "Quintus Arrius",
+    "raw": "[to Judah] In his eagerness to save you, your God has also saved the Roman fleet.",
+    "clean": "In his eagerness to save you, your God has also saved the Roman fleet."
+  },
+  {
+    "heading": "Sheik Ilderim",
+    "raw": "One wife? One God, that I can understand - but one wife! That is not civilized. It is not generous.",
+    "clean": "One wife? One God, that I can understand - but one wife! That is not civilized. It is not generous."
+  },
+  {
+    "heading": "Sheik Ilderim",
+    "raw": "[to Judah] The Star of David, will shine out for your people and my people together and blind the eyes of Rome.",
+    "clean": "The Star of David, will shine out for your people and my people together and blind the eyes of Rome."
+  },
+  {
+    "heading": "Others",
+    "raw": "Sextus: There's also a wild man in the desert named John the Baptist and a young carpenter's son who goes around doing magic tricks, miracles they call them...This man is different. He teaches that God is near, in every man. It's actually quite profound, some of it.",
+    "clean": "There's also a wild man in the desert named John the Baptist and a young carpenter's son who goes around doing magic tricks, miracles they call them...This man is different. He teaches that God is near, in every man. It's actually quite profound, some of it."
+  },
+  {
+    "heading": "Others",
+    "raw": "Esther: I've seen too much what hate can do. My father is burned up with it. But I've heard of a young rabbi who says that forgiveness is greater and love more powerful than hatred. I believe it.",
+    "clean": "I've seen too much what hate can do. My father is burned up with it. But I've heard of a young rabbi who says that forgiveness is greater and love more powerful than hatred. I believe it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sextus: You can break a man's skull. You can arrest him. You can throw him into a dungeon. But how do you fight an idea?",
+    "clean": "You can break a man's skull. You can arrest him. You can throw him into a dungeon. But how do you fight an idea?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: Sextus, you ask how to fight an idea. Well, I'll tell you how... with another idea!",
+    "clean": "Sextus, you ask how to fight an idea. Well, I'll tell you how... with another idea!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I would do anything for you, Messala... except betray my own people.",
+    "clean": "I would do anything for you, Messala... except betray my own people."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: In the name of all the gods, Judah, what do the lives of a few Jews mean to you?",
+    "clean": "In the name of all the gods, Judah, what do the lives of a few Jews mean to you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: If I cannot persuade them, that does not mean I will help you... murder them. Besides, you must understand this, Messala. I believe in the past of my people, and in their future.",
+    "clean": "If I cannot persuade them, that does not mean I will help you... murder them. Besides, you must understand this, Messala. I believe in the past of my people, and in their future."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: Future? You are a conquered people.",
+    "clean": "Future? You are a conquered people."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: You may conquer the land; you may slaughter the people. But that is not the end; we will rise again.",
+    "clean": "You may conquer the land; you may slaughter the people. But that is not the end; we will rise again."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: You live on dead dreams; you live on the myths of the past. The glory of Solomon is gone and you think it will return?. Joshua will not rise again to save you nor David. There is only one reality in the world today. Look to the West, Judah! Don't be a fool, look to Rome!",
+    "clean": "You live on dead dreams; you live on the myths of the past. The glory of Solomon is gone and you think it will return?. Joshua will not rise again to save you nor David. There is only one reality in the world today. Look to the West, Judah! Don't be a fool, look to Rome!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I would rather be a fool than a traitor... or a killer!",
+    "clean": "I would rather be a fool than a traitor... or a killer!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: I am a soldier!",
+    "clean": "I am a soldier!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Yes! Who kills! For Rome! And Rome is evil!",
+    "clean": "Yes! Who kills! For Rome! And Rome is evil!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: I warn you...",
+    "clean": "I warn you..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: No! I warn you! Rome is an affront to God! Rome is strangling my people and my country, the whole Earth! But not forever. And I tell you the day Rome falls there will be a shout of freedom such as the world has never heard before!",
+    "clean": "No! I warn you! Rome is an affront to God! Rome is strangling my people and my country, the whole Earth! But not forever. And I tell you the day Rome falls there will be a shout of freedom such as the world has never heard before!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: Judah, either you help me or you oppose me, you have no other choice. You're either for me or against me!",
+    "clean": "Judah, either you help me or you oppose me, you have no other choice. You're either for me or against me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: If that is the choice, then I am against you.",
+    "clean": "If that is the choice, then I am against you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: If you were not a bride I would kiss you goodbye",
+    "clean": "If you were not a bride I would kiss you goodbye"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: If I were not a bride there would be no goodbyes to be said.",
+    "clean": "If I were not a bride there would be no goodbyes to be said."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: What service have you seen? Forty-One?",
+    "clean": "What service have you seen? Forty-One?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: A month's less a day in this ship.",
+    "clean": "A month's less a day in this ship."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: You keep an exact account. And before?",
+    "clean": "You keep an exact account. And before?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Three years in other ships.",
+    "clean": "Three years in other ships."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: What is your name, Forty-One?",
+    "clean": "What is your name, Forty-One?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: [pause] Judah Ben-Hur.",
+    "clean": "Judah Ben-Hur."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: Judah Ben-Hur... Let me die.",
+    "clean": "Judah Ben-Hur... Let me die."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: [repeating Arrius' words on board the galleys] We keep you alive to serve this ship. Row well and live.",
+    "clean": "We keep you alive to serve this ship. Row well and live."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: It's a strange destiny that brought me to a new life... a new home... a new father. It brought me here. It may take me away. But wherever I may be... I shall always try to wear this ring as a son of Arrius should. With gratitude and affection... and with honor.",
+    "clean": "It's a strange destiny that brought me to a new life... a new home... a new father. It brought me here. It may take me away. But wherever I may be... I shall always try to wear this ring as a son of Arrius should. With gratitude and affection... and with honor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: You're leaving.",
+    "clean": "You're leaving."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I must.",
+    "clean": "I must."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: It's a journey I can't keep you from. Your eyes have never left it all these months. I can recognize pain. But still, my counsel is to wait. Gratus is to be replaced. The governorship goes to Pontius Pilate.",
+    "clean": "It's a journey I can't keep you from. Your eyes have never left it all these months. I can recognize pain. But still, my counsel is to wait. Gratus is to be replaced. The governorship goes to Pontius Pilate."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: When?",
+    "clean": "When?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: Very soon. It's very much to our purpose.",
+    "clean": "Very soon. It's very much to our purpose."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Nothing is to the purpose if, when I come back to Judea, I come too late. That is the thought which has punished me every moment I've spent here.",
+    "clean": "Nothing is to the purpose if, when I come back to Judea, I come too late. That is the thought which has punished me every moment I've spent here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: Will Rome see you again?",
+    "clean": "Will Rome see you again?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Here is a part of my life which you have made for me. I shall remember it.",
+    "clean": "Here is a part of my life which you have made for me. I shall remember it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Arrius: Whoever the gods are, they take small interest in an old man's hopes.",
+    "clean": "Whoever the gods are, they take small interest in an old man's hopes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: They have their way.",
+    "clean": "They have their way."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I must deal with Messala in my own way.",
+    "clean": "I must deal with Messala in my own way."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Balthasar: And your way is to kill him. I see this terrible thing in your eyes, Judah Ben-Hur. But no matter what this man has done to you, you have no right to take his life. He will be punished inevitably.",
+    "clean": "And your way is to kill him. I see this terrible thing in your eyes, Judah Ben-Hur. But no matter what this man has done to you, you have no right to take his life. He will be punished inevitably."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I don't believe in miracles.",
+    "clean": "I don't believe in miracles."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: Triumph complete, Judah. The race won. The enemy destroyed.",
+    "clean": "Triumph complete, Judah. The race won. The enemy destroyed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I see no enemy.",
+    "clean": "I see no enemy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: What do you think you see? The smashed body of a wretched animal! Is enough of a man still left here for you to hate? Let me help you... [convulses with pain] You think they're dead. Your mother and sister. Dead. And the race over. It isn't over, Judah. They're not dead.",
+    "clean": "What do you think you see? The smashed body of a wretched animal! Is enough of a man still left here for you to hate? Let me help you... You think they're dead. Your mother and sister. Dead. And the race over. It isn't over, Judah. They're not dead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Where are they? Where are they? WHERE ARE THEY?!",
+    "clean": "Where are they? Where are they? WHERE ARE THEY?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Messala: [last words] Look for them in the Valley of the Lepers, if you can recognize them. [Judah doubles over with grief] It goes on. It goes on, Judah. The race... the race is not over! [dies]",
+    "clean": "Look for them in the Valley of the Lepers, if you can recognize them. It goes on. It goes on, Judah. The race... the race is not over!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I am Judah Ben-Hur.",
+    "clean": "I am Judah Ben-Hur."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I'm already part of this tragedy.",
+    "clean": "I'm already part of this tragedy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: [hugs Judah] Oh, Judah. I was afraid you would never come back... afraid of what would happen to you. But I see you again.",
+    "clean": "Oh, Judah. I was afraid you would never come back... afraid of what would happen to you. But I see you again."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Your father's waiting for me. Where is he?",
+    "clean": "Your father's waiting for me. Where is he?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: What do you mean to do? [Judah does not answer] Oh, Judah. Rest, sleep. For a few hours of the night let your mind be at peace.",
+    "clean": "What do you mean to do? Oh, Judah. Rest, sleep. For a few hours of the night let your mind be at peace."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Peace? Love and peace. Do you think I don't long for them as much as you do? Where do you see them?",
+    "clean": "Peace? Love and peace. Do you think I don't long for them as much as you do? Where do you see them?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: If you had heard this man from Nazareth.",
+    "clean": "If you had heard this man from Nazareth."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Balthasar's word.",
+    "clean": "Balthasar's word."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: He is more than Balthasar's word. His voiced traveled with such a still purpose. It was more than a voice. A man more than a man. He said, 'Blessed are the merciful, for they shall obtain mercy. Blessed are the peacemakers, for they shall be called the children of God.'",
+    "clean": "He is more than Balthasar's word. His voiced traveled with such a still purpose. It was more than a voice. A man more than a man. He said, 'Blessed are the merciful, for they shall obtain mercy. Blessed are the peacemakers, for they shall be called the children of God.'"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Children of God? In that dead valley where we left them? I tell you, every man in Judea is unclean and will stay unclean until we've scoured off our bodies the crust and filth of being at the mercy of tyranny. No other life is possible except to wash this land clean.",
+    "clean": "Children of God? In that dead valley where we left them? I tell you, every man in Judea is unclean and will stay unclean until we've scoured off our bodies the crust and filth of being at the mercy of tyranny. No other life is possible except to wash this land clean."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: In blood?",
+    "clean": "In blood?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Yes, in blood!",
+    "clean": "Yes, in blood!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: I know there is a law in life. That blood begets more blood as dog begets dog. Death generates death as the vulture breeds the vulture. But the voice I heard today on the hill said, 'Love your enemy. Do good to those who spitefully use you.'",
+    "clean": "I know there is a law in life. That blood begets more blood as dog begets dog. Death generates death as the vulture breeds the vulture. But the voice I heard today on the hill said, 'Love your enemy. Do good to those who spitefully use you.'"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: All who are born in this land hereafter can suffer as we have done.",
+    "clean": "All who are born in this land hereafter can suffer as we have done."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: As you make us do now! Are we to bear nothing together, even love?",
+    "clean": "As you make us do now! Are we to bear nothing together, even love?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: I could hardly draw a breath without feeling you in my heart. But I know... that everything I do from this moment... bears greater pain than you have ever suffered. It is better not to love me.",
+    "clean": "I could hardly draw a breath without feeling you in my heart. But I know... that everything I do from this moment... bears greater pain than you have ever suffered. It is better not to love me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: It was Judah Ben-Hur I loved. What has become of him? You seem to be now the very thing you set out to destroy, giving evil for evil. Hatred is turning you to stone. It's as though you had become Messala! [Judah looks at her, shocked] I've lost you, Judah.",
+    "clean": "It was Judah Ben-Hur I loved. What has become of him? You seem to be now the very thing you set out to destroy, giving evil for evil. Hatred is turning you to stone. It's as though you had become Messala! I've lost you, Judah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: This is where your search has brought you, Balthasar. He gave me water... and a heart to live. What has He done to merit this?",
+    "clean": "This is where your search has brought you, Balthasar. He gave me water... and a heart to live. What has He done to merit this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Balthasar: He has taken the world of our sins onto Himself. To this end He said He was born, in that stable, where I first saw Him. For this cause, He came into the world.",
+    "clean": "He has taken the world of our sins onto Himself. To this end He said He was born, in that stable, where I first saw Him. For this cause, He came into the world."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: For this death?",
+    "clean": "For this death?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Balthasar: For this beginning.",
+    "clean": "For this beginning."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miriam: [about Jesus] As though He were carrying in that cross the pain of the world.",
+    "clean": "As though He were carrying in that cross the pain of the world."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tirzah: So fearful, and yet why is it I'm not afraid anymore?",
+    "clean": "So fearful, and yet why is it I'm not afraid anymore?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: The shadow of a storm. [The sky goes dark while she, Miriam and Tirzah enter the cave] A strange darkness... but still day.",
+    "clean": "The shadow of a storm. A strange darkness... but still day."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miriam: His life is over.",
+    "clean": "His life is over."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Almost at the moment He died, I heard Him say, \"Father, forgive them for they know not what they do.\"",
+    "clean": "Almost at the moment He died, I heard Him say, \"Father, forgive them for they know not what they do.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Esther: Even then.",
+    "clean": "Even then."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judah: Even then. And I felt His voice take the sword out of my hand.",
+    "clean": "Even then. And I felt His voice take the sword out of my hand."
+  }
+]

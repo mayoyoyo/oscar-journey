@@ -1,0 +1,197 @@
+[
+  {
+    "heading": "Cop 223",
+    "raw": "We're all unlucky in love sometimes. When I am, I go jogging. The body loses water when you jog, so you have none left for tears.",
+    "clean": "We're all unlucky in love sometimes. When I am, I go jogging. The body loses water when you jog, so you have none left for tears."
+  },
+  {
+    "heading": "Cop 223",
+    "raw": "We split up on April Fool's Day. So I decided to let the joke run for a month. Every day I buy a can of pineapple with a sell-by date of May 1. May loves pineapple, and May 1 is my birthday. If May hasn't changed her mind by the time I've bought thirty cans, then our love will also expire.",
+    "clean": "We split up on April Fool's Day. So I decided to let the joke run for a month. Every day I buy a can of pineapple with a sell-by date of May 1. May loves pineapple, and May 1 is my birthday. If May hasn't changed her mind by the time I've bought thirty cans, then our love will also expire."
+  },
+  {
+    "heading": "Cop 223",
+    "raw": "Somehow everything comes with an expiry date. Swordfish expires. Meat sauce expires. Even cling-film expires. Is there anything in the world which doesn't?",
+    "clean": "Somehow everything comes with an expiry date. Swordfish expires. Meat sauce expires. Even cling-film expires. Is there anything in the world which doesn't?"
+  },
+  {
+    "heading": "Cop 223",
+    "raw": "If memories could be canned, would they also have expiry dates? If so, I hope they last for centuries.",
+    "clean": "If memories could be canned, would they also have expiry dates? If so, I hope they last for centuries."
+  },
+  {
+    "heading": "Cop 223",
+    "raw": "In May's eyes, I'm no different from a can of pineapple.",
+    "clean": "In May's eyes, I'm no different from a can of pineapple."
+  },
+  {
+    "heading": "Cop 223",
+    "raw": "At the high point of our intimacy, we were just 0.01 cm from each other. I knew nothing about her. Six hours later, she fell in love with another man.",
+    "clean": "At the high point of our intimacy, we were just 0.01 cm from each other. I knew nothing about her. Six hours later, she fell in love with another man."
+  },
+  {
+    "heading": "Cop 223",
+    "raw": "Do you... like pineapple?",
+    "clean": "Do you... like pineapple?"
+  },
+  {
+    "heading": "Cop 663",
+    "raw": "Since she left, everything in the flat is sad. Everything needed lulling to sleep. [to soap bar] You've lost a lot of weight, you know. You used to be so chubby. Have more confidence in yourself. [to washcloth] You have to stop crying, you know. Where's your strength and absorbency? You're so shabby these days.",
+    "clean": "Since she left, everything in the flat is sad. Everything needed lulling to sleep. You've lost a lot of weight, you know. You used to be so chubby. Have more confidence in yourself. You have to stop crying, you know. Where's your strength and absorbency? You're so shabby these days."
+  },
+  {
+    "heading": "Cop 663",
+    "raw": "I thought we'd stay together for the long haul, flying like a jumbo jet on a full tank. But we changed course.",
+    "clean": "I thought we'd stay together for the long haul, flying like a jumbo jet on a full tank. But we changed course."
+  },
+  {
+    "heading": "Cop 663",
+    "raw": "[after he finds out his apartment was flooded] Did I leave the tap running, or is the apartment getting more tearful? I always thought it would cope okay. Didn't expect it to cry so much. When people cry, they can dry their eyes with tissues. But when an apartment cries, it takes a lot to mop it up.",
+    "clean": "Did I leave the tap running, or is the apartment getting more tearful? I always thought it would cope okay. Didn't expect it to cry so much. When people cry, they can dry their eyes with tissues. But when an apartment cries, it takes a lot to mop it up."
+  },
+  {
+    "heading": "Cop 663",
+    "raw": "[after his date failed to meet him in \"California\" restaurant] Actually she did go to California that evening. But it was the other one.",
+    "clean": "Actually she did go to California that evening. But it was the other one."
+  },
+  {
+    "heading": "Cop 663",
+    "raw": "[to Faye about previous restaurant's owner] He has great business sense. First he sold me fish and chips, then the whole thing.",
+    "clean": "He has great business sense. First he sold me fish and chips, then the whole thing."
+  },
+  {
+    "heading": "Woman in blonde wig",
+    "raw": "Somehow I've become very cautious. When I put on a raincoat, I put on sunglasses too. Who knows when it will rain, or when it will turn out sunny?",
+    "clean": "Somehow I've become very cautious. When I put on a raincoat, I put on sunglasses too. Who knows when it will rain, or when it will turn out sunny?"
+  },
+  {
+    "heading": "Woman in blonde wig",
+    "raw": "Actually, really knowing someone doesn't mean anything. People change. A person may like pineapple today and something else tomorrow.",
+    "clean": "Actually, really knowing someone doesn't mean anything. People change. A person may like pineapple today and something else tomorrow."
+  },
+  {
+    "heading": "Stewardess",
+    "raw": "[in a letter to Cop 663] Change of flight. Your place cancelled. Here's your key. Bye.",
+    "clean": "Change of flight. Your place cancelled. Here's your key. Bye."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 223: Any canned pineapple that expires on May 1?",
+    "clean": "Cop 223: Any canned pineapple that expires on May 1?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cashier: You know what day it is today?",
+    "clean": "You know what day it is today?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 223: April 30?",
+    "clean": "Cop 223: April 30?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cashier: Right. You think we sell outdated stock?",
+    "clean": "Right. You think we sell outdated stock?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 223: There's still two hours to go.",
+    "clean": "Cop 223: There's still two hours to go."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cashier: Nobody would buy it. Get a fresh one.",
+    "clean": "Nobody would buy it. Get a fresh one."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 223: People like you are hung up on freshness. You realize what goes into a can of pineapple? The fruit must be grown, harvested, sliced, and you just throw it away! How do you think the can feels about that?",
+    "clean": "Cop 223: People like you are hung up on freshness. You realize what goes into a can of pineapple? The fruit must be grown, harvested, sliced, and you just throw it away! How do you think the can feels about that?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cashier: Buddy, I only work here. Who cares about how the cans feel? What about how I feel? Loading, more loading, unloading... How I wish cans wouldn't expire! It'd save me loads of work. You like expired cans? Help yourself! As many as you like! On the house!",
+    "clean": "Buddy, I only work here. Who cares about how the cans feel? What about how I feel? Loading, more loading, unloading... How I wish cans wouldn't expire! It'd save me loads of work. You like expired cans? Help yourself! As many as you like! On the house!"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 663: You like noisy music?",
+    "clean": "Cop 663: You like noisy music?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Faye: Yes. The louder the better. Stops me from thinking.",
+    "clean": "Yes. The louder the better. Stops me from thinking."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 663: You don't like to think? What do you like?",
+    "clean": "Cop 663: You don't like to think? What do you like?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Faye: Never thought about it.",
+    "clean": "Never thought about it."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Faye: I'm not daydreaming.",
+    "clean": "I'm not daydreaming."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Manager of \"Midnight Express\": Right. You're not daydreaming. You're sleepwalking.",
+    "clean": "Manager of \"Midnight Express\": Right. You're not daydreaming. You're sleepwalking."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 663: What are you doing in my apartment?",
+    "clean": "Cop 663: What are you doing in my apartment?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Faye: You asked me to visit.",
+    "clean": "You asked me to visit."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Manager of \"Midnight Express\": I told you 633 is a ladies man.",
+    "clean": "Manager of \"Midnight Express\": I told you 633 is a ladies man."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "His co-worker: It's 663!",
+    "clean": "It's 663!"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Manager of \"Midnight Express\": Oh, whatever it is.",
+    "clean": "Manager of \"Midnight Express\": Oh, whatever it is."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 663: Would you let a person on board with a boarding pass like this? It's dated today, but it got blurred in the rain. I don't know where it's taking me. Do you?",
+    "clean": "Cop 663: Would you let a person on board with a boarding pass like this? It's dated today, but it got blurred in the rain. I don't know where it's taking me. Do you?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Faye: No idea, but I'll give you another.",
+    "clean": "No idea, but I'll give you another."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 663: Great.",
+    "clean": "Cop 663: Great."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Faye: Where do you want to go?",
+    "clean": "Where do you want to go?"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Cop 663: Wherever you want to take me.",
+    "clean": "Cop 663: Wherever you want to take me."
+  }
+]

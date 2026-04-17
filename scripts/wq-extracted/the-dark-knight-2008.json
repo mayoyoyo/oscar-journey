@@ -1,0 +1,947 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Christopher Nolan. Written by Christopher Nolan and Jonathan Nolan.",
+    "clean": "Directed by Christopher Nolan. Written by Christopher Nolan and Jonathan Nolan."
+  },
+  {
+    "heading": "Harvey Dent/Two-Face",
+    "raw": "The night is darkest just before the dawn. And I promise you, the dawn is coming.",
+    "clean": "The night is darkest just before the dawn. And I promise you, the dawn is coming."
+  },
+  {
+    "heading": "Harvey Dent/Two-Face",
+    "raw": "You either die a hero, or you live long enough to see yourself become the villain.",
+    "clean": "You either die a hero, or you live long enough to see yourself become the villain."
+  },
+  {
+    "heading": "Harvey Dent/Two-Face",
+    "raw": "You think I wanna escape from this? There is no escape from this!",
+    "clean": "You think I wanna escape from this? There is no escape from this!"
+  },
+  {
+    "heading": "Harvey Dent/Two-Face",
+    "raw": "Have you ever had to talk to the person you love most, tell them it's all going to be alright when you know it's not? Well... you're about to know what that feels like, Gordon. Then, you can look me in the eye and tell me you're sorry.",
+    "clean": "Have you ever had to talk to the person you love most, tell them it's all going to be alright when you know it's not? Well... you're about to know what that feels like, Gordon. Then, you can look me in the eye and tell me you're sorry."
+  },
+  {
+    "heading": "Harvey Dent/Two-Face",
+    "raw": "Tell your boy it’s going to be alright, Gordon. Lie, like I lied.",
+    "clean": "Tell your boy it's going to be alright, Gordon. Lie, like I lied."
+  },
+  {
+    "heading": "The Joker",
+    "raw": "[to bank manager] I believe whatever doesn't kill you simply makes you...stranger.",
+    "clean": "I believe whatever doesn't kill you simply makes you...stranger."
+  },
+  {
+    "heading": "The Joker",
+    "raw": "[to Dent] Do I really look like a guy with a plan? You know what I am? I'm a dog chasing cars. I wouldn't know what to do with one if I caught it! You know, I just... do things.",
+    "clean": "Do I really look like a guy with a plan? You know what I am? I'm a dog chasing cars. I wouldn't know what to do with one if I caught it! You know, I just... do things."
+  },
+  {
+    "heading": "Others",
+    "raw": "Commissioner James Gordon: Goddammit, will you stop pointing that gun at my family?!",
+    "clean": "Goddammit, will you stop pointing that gun at my family?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sal Maroni: How soon can you move the money?",
+    "clean": "How soon can you move the money?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lau: I already have. For obvious reasons, I couldn't wait for your permission. Rest assured, your money is safe.",
+    "clean": "I already have. For obvious reasons, I couldn't wait for your permission. Rest assured, your money is safe."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: [enters laughing sarcastically] And I thought my jokes were bad!",
+    "clean": "And I thought my jokes were bad!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gambol: Give me one reason why I shouldn't have my boy here pull your head off.",
+    "clean": "Give me one reason why I shouldn't have my boy here pull your head off."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: How about a magic trick? [sticks a pencil into the table, point first] I'm gonna make this pencil disappear. [slams Gambol's henchman's head down upon the pencil, penetrating his eye socket] Ta-da! It's— it's gone! Oh, and by the way, the suit, it wasn't cheap. You ought to know. You bought it! [Gambol rises in anger]",
+    "clean": "How about a magic trick? I'm gonna make this pencil disappear. Ta-da! It's- it's gone! Oh, and by the way, the suit, it wasn't cheap. You ought to know. You bought it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: Sit. I want to hear proposition. [Gambol sits down]",
+    "clean": "Sit. I want to hear proposition."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Let's wind the clocks back a year. These cops and lawyers wouldn't dare cross any of you. I mean, what happened? Did your – did your balls drop off? Hmm? You see, a guy like me—",
+    "clean": "Let's wind the clocks back a year. These cops and lawyers wouldn't dare cross any of you. I mean, what happened? Did your - did your balls drop off? Hmm? You see, a guy like me-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gambol: A freak! [mobsters chuckle]",
+    "clean": "A freak!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: What do you propose?",
+    "clean": "What do you propose?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: It's simple. We, uh, kill the Batman. [the mobsters laugh]",
+    "clean": "It's simple. We, uh, kill the Batman."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sal Maroni: If it's so simple, why haven't you done it already?",
+    "clean": "If it's so simple, why haven't you done it already?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: If you're good at something, never do it for free.",
+    "clean": "If you're good at something, never do it for free."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: How much you want?",
+    "clean": "How much you want?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Uh, half. [the mobsters laugh again]",
+    "clean": "Uh, half."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gambol: You're crazy.",
+    "clean": "You're crazy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: I'm not. No, I'm not! If we don't deal with this now, soon little, uh, Gambol here won't be able to get a nickel for his grandma.",
+    "clean": "I'm not. No, I'm not! If we don't deal with this now, soon little, uh, Gambol here won't be able to get a nickel for his grandma."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gambol: [slams the table] Enough from the clown!",
+    "clean": "Enough from the clown!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: [revealing hand grenades under his jacket] Ah-ta-ta-ta. Let's not blow this out of proportion.",
+    "clean": "Ah-ta-ta-ta. Let's not blow this out of proportion."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gambol: You think you can steal from us and just walk away?",
+    "clean": "You think you can steal from us and just walk away?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gambol: I'm putting the word out. Five hundred grand for this clown dead. A million alive, so I can teach him some manners first.",
+    "clean": "I'm putting the word out. Five hundred grand for this clown dead. A million alive, so I can teach him some manners first."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: All right, so listen. Why don't you give me a call when you want to start taking things a little more seriously? Here's my card. [leaves Joker card on the table, backs out of the room]",
+    "clean": "All right, so listen. Why don't you give me a call when you want to start taking things a little more seriously? Here's my card."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jim Gordon: I hear you've got a hell of a right cross. It’s a shame Sal's going to walk.",
+    "clean": "I hear you've got a hell of a right cross. It's a shame Sal's going to walk."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harvey Dent: Well, good thing about the mob is they keep giving you second chances. [Looking through a bundle of bills] Lightly irradiated bills. Fancy stuff for a city cop. Have help?",
+    "clean": "Well, good thing about the mob is they keep giving you second chances. Lightly irradiated bills. Fancy stuff for a city cop. Have help?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: We liaise with various agencies-",
+    "clean": "We liaise with various agencies-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: Save it, Gordon. I want to meet him.",
+    "clean": "Save it, Gordon. I want to meet him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: Official policy is to arrest the vigilante know as “Batman” on sight.",
+    "clean": "Official policy is to arrest the vigilante know as \"Batman\" on sight."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: And that flood light on top of M.C.U.?",
+    "clean": "And that flood light on top of M.C.U.?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: If you have problems with malfunctioning equipment, I suggest you take them up with maintenance, counselor.",
+    "clean": "If you have problems with malfunctioning equipment, I suggest you take them up with maintenance, counselor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: I've put every known money launderer in Gotham behind bars but the mob is still getting its money out. I think you and your \"friend\" have found the last game in town and you're trying to hit them where it hurts: their wallets. It's bold. You gonna count me in?",
+    "clean": "I've put every known money launderer in Gotham behind bars but the mob is still getting its money out. I think you and your \"friend\" have found the last game in town and you're trying to hit them where it hurts: their wallets. It's bold. You gonna count me in?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: In this town, the fewer people know something, the safer the operation.",
+    "clean": "In this town, the fewer people know something, the safer the operation."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: Gordon, I don't like that you've got your own special unit, and I don't like that it's full of cops I investigated while I was at at internal affairs.",
+    "clean": "Gordon, I don't like that you've got your own special unit, and I don't like that it's full of cops I investigated while I was at at internal affairs."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: If I didn't work with cops you'd investigated while you were making your name at I.A.- I'd be working alone. I don't get political points for being an idealist. I have to do the best I can with what I have.",
+    "clean": "If I didn't work with cops you'd investigated while you were making your name at I.A.- I'd be working alone. I don't get political points for being an idealist. I have to do the best I can with what I have."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: You want me to back warrants for search and seizure on five banks without telling me what we're after?",
+    "clean": "You want me to back warrants for search and seizure on five banks without telling me what we're after?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: I can give you the names of the banks.",
+    "clean": "I can give you the names of the banks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: Well, that's a start. I'll get you your warrants. But I want your trust.",
+    "clean": "Well, that's a start. I'll get you your warrants. But I want your trust."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: You don’t have to sell me, Dent. We all know you’re Gotham’s white knight.",
+    "clean": "You don't have to sell me, Dent. We all know you're Gotham's white knight."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: I hear they have a different name for me down at M.C.U.",
+    "clean": "I hear they have a different name for me down at M.C.U."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: [softly, with his head down] I wouldn’t know about that..",
+    "clean": "I wouldn't know about that.."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce Wayne: You look tired, Alfred. You'll be all right without me?",
+    "clean": "You look tired, Alfred. You'll be all right without me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alfred Pennyworth: [glancing at a yacht full of beautiful Russian women] If you can tell me the Russian for \"Apply your own bloody suntan lotion.\"",
+    "clean": "If you can tell me the Russian for \"Apply your own bloody suntan lotion.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Guest: We're not intimidated by thugs!",
+    "clean": "We're not intimidated by thugs!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: You know, you remind me of my father. [grabs him at knifepoint] I hated my father!",
+    "clean": "You know, you remind me of my father. I hated my father!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rachel Dawes: Okay, stop!",
+    "clean": "Okay, stop!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: [appearing out of nowhere] Then you're gonna love me.",
+    "clean": "Then you're gonna love me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce Wayne: Targeting me won't get their money back. I knew the mob wouldn't go down without a fight, but this is different. They've crossed a line.",
+    "clean": "Targeting me won't get their money back. I knew the mob wouldn't go down without a fight, but this is different. They've crossed a line."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alfred Pennyworth: You crossed the line first, sir. You squeezed them, you hammered them to the point of desperation, and in their desperation, they turned to a man they didn't fully understand.",
+    "clean": "You crossed the line first, sir. You squeezed them, you hammered them to the point of desperation, and in their desperation, they turned to a man they didn't fully understand."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce: Criminals aren't complicated, Alfred. We just need to figure out what he's after.",
+    "clean": "Criminals aren't complicated, Alfred. We just need to figure out what he's after."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce: So why steal them?",
+    "clean": "So why steal them?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alfred: Well, because he thought it was good sport. Because some men aren't looking for anything logical, like money. They can't be bought, bullied, reasoned or negotiated with. Some men just want to watch the world burn.",
+    "clean": "Well, because he thought it was good sport. Because some men aren't looking for anything logical, like money. They can't be bought, bullied, reasoned or negotiated with. Some men just want to watch the world burn."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lucius Fox: What can I do for you, Mr. Reese?",
+    "clean": "What can I do for you, Mr. Reese?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Coleman Reese: You wanted me to do the diligence on the LSA Holdings deal, again. Well, I found some irregularities.",
+    "clean": "You wanted me to do the diligence on the LSA Holdings deal, again. Well, I found some irregularities."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fox: Yes, their CEO is in police custody.",
+    "clean": "Yes, their CEO is in police custody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fox: Let me get this straight: You think that your client - one of the wealthiest, most powerful men in the world - is secretly a vigilante who spends his nights beating criminals to a pulp with his bare hands, and your plan is to blackmail this person?",
+    "clean": "Let me get this straight: You think that your client - one of the wealthiest, most powerful men in the world - is secretly a vigilante who spends his nights beating criminals to a pulp with his bare hands, and your plan is to blackmail this person?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Fox: Good luck.",
+    "clean": "Good luck."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce Wayne: People are dying, Alfred. What would you have me do?",
+    "clean": "People are dying, Alfred. What would you have me do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alfred Pennyworth: Endure, Master Wayne. Take it. They'll hate you for it, but that's the point of Batman. He can be the outcast. He can make the choice that no one else can make - the right choice.",
+    "clean": "Endure, Master Wayne. Take it. They'll hate you for it, but that's the point of Batman. He can be the outcast. He can make the choice that no one else can make - the right choice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce: Well, today I found out what Batman can't do. He can't endure this. Today you get to say \"I told you so\".",
+    "clean": "Well, today I found out what Batman can't do. He can't endure this. Today you get to say \"I told you so\"."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alfred: Today, I don't want to. [pause] But I did bloody tell you. I suppose they'll lock me up as well, as your accomplice.",
+    "clean": "Today, I don't want to. But I did bloody tell you. I suppose they'll lock me up as well, as your accomplice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce: Accomplice? I'm gonna tell them the whole thing was your idea!",
+    "clean": "Accomplice? I'm gonna tell them the whole thing was your idea!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: I want the Joker.",
+    "clean": "I want the Joker."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sal Maroni: From one professional to another: If you're trying to scare somebody, pick a better spot. From this height, the fall wouldn't kill me.",
+    "clean": "From one professional to another: If you're trying to scare somebody, pick a better spot. From this height, the fall wouldn't kill me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: I'm counting on it. [drops Maroni, breaking his leg, then vaults down to him] WHERE IS HE?!",
+    "clean": "I'm counting on it. WHERE IS HE?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maroni: I don't know where he is. He found us.",
+    "clean": "I don't know where he is. He found us."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: He must have friends!",
+    "clean": "He must have friends!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maroni: Friends? You met this guy?",
+    "clean": "Friends? You met this guy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: Someone knows where he is!",
+    "clean": "Someone knows where he is!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: [snatching the coin] You'd leave a man's life to chance?",
+    "clean": "You'd leave a man's life to chance?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harvey Dent: Not exactly.",
+    "clean": "Not exactly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: His name's Schiff, Thomas. He's a paranoid schizophrenic. Former patient at Arkham - the kind of mind the Joker attracts. What do you expect to learn from him?",
+    "clean": "His name's Schiff, Thomas. He's a paranoid schizophrenic. Former patient at Arkham - the kind of mind the Joker attracts. What do you expect to learn from him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: The Joker killed Gordon. He's gonna kill Rachel!",
+    "clean": "The Joker killed Gordon. He's gonna kill Rachel!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: No one else will die because of me. [returns the coin] Gotham's in your hands now.",
+    "clean": "No one else will die because of me. Gotham's in your hands now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: [as Batman leaves] You can't. You can't give in! YOU CAN'T GIVE IN!",
+    "clean": "You can't. You can't give in! YOU CAN'T GIVE IN!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: Where's Dent?",
+    "clean": "Where's Dent?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: You have all these rules, and you think they'll save you!",
+    "clean": "You have all these rules, and you think they'll save you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: [pins the Joker against a wall] I have one rule.",
+    "clean": "I have one rule."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Then that's the rule you'll have to break to know the truth.",
+    "clean": "Then that's the rule you'll have to break to know the truth."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: Which is?",
+    "clean": "Which is?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: The only sensible way to live in this world is without rules. And tonight, you're gonna break your one rule!",
+    "clean": "The only sensible way to live in this world is without rules. And tonight, you're gonna break your one rule!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: I'm considering it.",
+    "clean": "I'm considering it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: You know, there's only minutes left, so you're gonna have to play my little game if you want to save one of them.",
+    "clean": "You know, there's only minutes left, so you're gonna have to play my little game if you want to save one of them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: \"Them\"?",
+    "clean": "\"Them\"?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: You know, for a while there, I thought you really were Dent. The way you threw yourself after her! [laughs cruelly]",
+    "clean": "You know, for a while there, I thought you really were Dent. The way you threw yourself after her!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Look at you go! Does Harvey know about you and his \"little bunny\"?",
+    "clean": "Look at you go! Does Harvey know about you and his \"little bunny\"?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: [slams Joker's head into the mirror and punches him] WHERE ARE THEY?!",
+    "clean": "WHERE ARE THEY?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Killing is making a choice!",
+    "clean": "Killing is making a choice!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: [punches him again] WHERE ARE THEY?!",
+    "clean": "WHERE ARE THEY?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bruce Wayne: That bandit, in the forest in Burma...did you catch him?",
+    "clean": "That bandit, in the forest in Burma...did you catch him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alfred: We burned the forest down.",
+    "clean": "We burned the forest down."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "James Gordon: I'm sorry about Rachel. The doctor says you’re in agonizing pain, but won't accept medication. That you're refusing to accept skin grafts.",
+    "clean": "I'm sorry about Rachel. The doctor says you're in agonizing pain, but won't accept medication. That you're refusing to accept skin grafts."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harvey Dent: Remember that name you all had for me when I was in Internal Affairs? What was it, Gordon?",
+    "clean": "Remember that name you all had for me when I was in Internal Affairs? What was it, Gordon?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: Harvey, I—",
+    "clean": "Harvey, I-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: Say it...SAY IT!",
+    "clean": "Say it...SAY IT!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: Two-Face. Harvey Two-Face.",
+    "clean": "Two-Face. Harvey Two-Face."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: Why should I hide who I am?",
+    "clean": "Why should I hide who I am?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: I know you tried to warn me. I'm sorry. Wuertz picked you up. Was he working for them? You know who picked up Rachel? Harvey, I need to know which of my men I can trust.",
+    "clean": "I know you tried to warn me. I'm sorry. Wuertz picked you up. Was he working for them? You know who picked up Rachel? Harvey, I need to know which of my men I can trust."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: Why would you listen to me now?",
+    "clean": "Why would you listen to me now?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: I'm sorry, Harvey.",
+    "clean": "I'm sorry, Harvey."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Dent: [turning to reveal the burned left side of his face] No. No, you're not. Not yet.",
+    "clean": "No. No, you're not. Not yet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: No so crazy as you look.",
+    "clean": "No so crazy as you look."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: I told you, I'm a man of my word. [slides down the pile] Where's the Italian?",
+    "clean": "I told you, I'm a man of my word. Where's the Italian?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: All tactical units will converge on the location in twenty minutes. I want auxiliary units to cover all possible getaway routes.",
+    "clean": "All tactical units will converge on the location in twenty minutes. I want auxiliary units to cover all possible getaway routes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: Wait, Joker man. What you do with all your money?",
+    "clean": "Wait, Joker man. What you do with all your money?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: You see, I'm a guy of simple taste. I enjoy, uh, dynamite, and gunpowder, and gasoline! [Joker's men douse the pile with gasoline]",
+    "clean": "You see, I'm a guy of simple taste. I enjoy, uh, dynamite, and gunpowder, and gasoline!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: What the—",
+    "clean": "What the-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: [brandishes pistol] Ah-ta-ta-ta. And you know the thing that they have in common? They're cheap.",
+    "clean": "Ah-ta-ta-ta. And you know the thing that they have in common? They're cheap."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reese: I want to know how much they're paying you to say who Batman really is.",
+    "clean": "I want to know how much they're paying you to say who Batman really is."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: [to police] This is our chance. I want Lau alive. The Joker, either way.",
+    "clean": "This is our chance. I want Lau alive. The Joker, either way."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Det. Stephens: Hey, Jim, get a load of this!",
+    "clean": "Hey, Jim, get a load of this!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Engel: Let's take the next caller.",
+    "clean": "Let's take the next caller."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Caller: Harvey Dent didn't want to give in to this maniac. Do you think you know better than him?",
+    "clean": "Harvey Dent didn't want to give in to this maniac. Do you think you know better than him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reese: I think that if we could talk to Dent today, he may feel differently, um -",
+    "clean": "I think that if we could talk to Dent today, he may feel differently, um -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Engel: And we wish him a speedy recovery, because God knows we need him now.",
+    "clean": "And we wish him a speedy recovery, because God knows we need him now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: [to Joker] You said you were a man of your word.",
+    "clean": "You said you were a man of your word."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Oh, I am. [takes Chechen's cigar, blows on the end] I'm only burning my half. [throws cigar onto the pile, setting it ablaze] All you care about is money. This town deserves a better class of criminal, and I'm gonna give it to 'em. Tell your men they work for me now. This is my city.",
+    "clean": "Oh, I am. I'm only burning my half. All you care about is money. This town deserves a better class of criminal, and I'm gonna give it to 'em. Tell your men they work for me now. This is my city."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Chechen: They won't work for a freak!",
+    "clean": "They won't work for a freak!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: [mocking the Chechen’s accent] \"Freak\"… [throws a knife to his men; they drag the Chechen away] Why don't we cut you up into little pieces and feed you to your pooches? Hm? And then we'll see how loyal a hungry dog really is! It's not about money. It's about sending a message. Everything burns!",
+    "clean": "\"Freak\"... Why don't we cut you up into little pieces and feed you to your pooches? Hm? And then we'll see how loyal a hungry dog really is! It's not about money. It's about sending a message. Everything burns!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bartender: I got to take a leak. Keep an eye out for me, will you? [goes to bathroom]",
+    "clean": "I got to take a leak. Keep an eye out for me, will you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wuertz: [after a pause] Now what? You need someone to shake it for you?",
+    "clean": "Now what? You need someone to shake it for you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: [appearing suddenly] Hello.",
+    "clean": "Hello."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wuertz: Dent! Jesus! I— I thought you was dead!",
+    "clean": "Dent! Jesus! I- I thought you was dead!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: Half. [downs Wuertz's drink, then aims a revolver at him] Who picked up Rachel, Wuertz?",
+    "clean": "Half. Who picked up Rachel, Wuertz?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wuertz: Must have been Maroni's men.",
+    "clean": "Must have been Maroni's men."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: [slams his hand on the counter] Shut up! Are you telling me that you're gonna protect the other traitor in Gordon's unit?",
+    "clean": "Shut up! Are you telling me that you're gonna protect the other traitor in Gordon's unit?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wuertz: I don't know! He never told me! Listen, Dent, I-I swear to God, I didn't know what they were gonna do to you!",
+    "clean": "I don't know! He never told me! Listen, Dent, I-I swear to God, I didn't know what they were gonna do to you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: Huh. That's funny, [spins his coin on the counter] 'cause I don't know what's gonna happen to you either. [it lands scarred side up; he kills Wuertz]",
+    "clean": "Huh. That's funny, 'cause I don't know what's gonna happen to you either."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maroni: [to driver] Don't stop for lights, cops, nothin'. [sees Two-Face next to him in the back seat]",
+    "clean": "Don't stop for lights, cops, nothin'."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: Going to join your wife? You love her?",
+    "clean": "Going to join your wife? You love her?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: You ever imagine what it would be like to listen to her die?",
+    "clean": "You ever imagine what it would be like to listen to her die?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maroni: Look, take it up with the Joker, huh? He killed your woman. He made you like this.",
+    "clean": "Look, take it up with the Joker, huh? He killed your woman. He made you like this."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: The Joker's just a mad dog. I want whoever let him off the leash. I took care of Wuertz, but who was your other man inside Gordon's unit? Who picked up Rachel? Must have been someone she trusted.",
+    "clean": "The Joker's just a mad dog. I want whoever let him off the leash. I took care of Wuertz, but who was your other man inside Gordon's unit? Who picked up Rachel? Must have been someone she trusted."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maroni: Look, if I tell you, you'll let me go?",
+    "clean": "Look, if I tell you, you'll let me go?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: It can't hurt your chances.",
+    "clean": "It can't hurt your chances."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maroni: It was Ramirez. [Two-Face cocks his gun] But you said—",
+    "clean": "It was Ramirez. But you said-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: I said it couldn't hurt your chances. [flips his coin; it lands clean side up] You're a lucky man. [flips again; scarred side up] But he's not.",
+    "clean": "I said it couldn't hurt your chances. You're a lucky man. But he's not."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: [buckles seat belt] Your driver.",
+    "clean": "Your driver."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Tonight you're all gonna be a part of a social experiment. Through the magic of diesel fuel and ammonium nitrate, I'm ready right now to blow you all sky-high.",
+    "clean": "Tonight you're all gonna be a part of a social experiment. Through the magic of diesel fuel and ammonium nitrate, I'm ready right now to blow you all sky-high."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ferry Captain: [trying his radio] Liberty, come in. [no response] It's dead.",
+    "clean": "Liberty, come in. It's dead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Anyone attempts to get off their boat, you all die.",
+    "clean": "Anyone attempts to get off their boat, you all die."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lucius Fox: [operating sonar network at Wayne Enterprises] I'm zeroing in.",
+    "clean": "I'm zeroing in."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Each of you has the remote to blow up the other boat.",
+    "clean": "Each of you has the remote to blow up the other boat."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lucius Fox: The voice is on the ferry...but it's not the source. West.",
+    "clean": "The voice is on the ferry...but it's not the source. West."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Commissioner Gordon: [answers his cell phone] Gordon.",
+    "clean": "Gordon."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: I have the Joker's location. Prewitt Building. Assemble on the building opposite.",
+    "clean": "I have the Joker's location. Prewitt Building. Assemble on the building opposite."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: We really should stop this fighting. Otherwise we'll miss the fireworks.",
+    "clean": "We really should stop this fighting. Otherwise we'll miss the fireworks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: There won't be any fireworks!",
+    "clean": "There won't be any fireworks!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: And here...we...go. [shocked by silence as the clock passes midnight without either ferry destroyed]",
+    "clean": "And here...we...go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: What were you trying to prove? That deep down, everyone's as ugly as you? You're alone!",
+    "clean": "What were you trying to prove? That deep down, everyone's as ugly as you? You're alone!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Can't rely on anyone these days. You gotta do everything yourself. Don't we? [pulls out another detonator] That's okay. I came prepared. It's a funny world we live in. Speaking of which, you know how I got these scars?",
+    "clean": "Can't rely on anyone these days. You gotta do everything yourself. Don't we? That's okay. I came prepared. It's a funny world we live in. Speaking of which, you know how I got these scars?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: No... but I know how you got these! [fires gauntlet blades into the Joker's face and throws him off the building, then hoists him back up]",
+    "clean": "No... but I know how you got these!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: You'll be in a padded cell forever!",
+    "clean": "You'll be in a padded cell forever!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Maybe we could share one. You know, they'll be doubling up at the rate this city's inhabitants are losing their minds.",
+    "clean": "Maybe we could share one. You know, they'll be doubling up at the rate this city's inhabitants are losing their minds."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: This city just showed you that it's full of people ready to believe in good.",
+    "clean": "This city just showed you that it's full of people ready to believe in good."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: Until their spirit breaks completely. Until they get a good look at the real Harvey Dent, huh? And all the heroic things he's done. You didn't think I'd risk losing the battle for Gotham's soul in a fistfight with you? No. You need an ace in the hole. Mine's Harvey.",
+    "clean": "Until their spirit breaks completely. Until they get a good look at the real Harvey Dent, huh? And all the heroic things he's done. You didn't think I'd risk losing the battle for Gotham's soul in a fistfight with you? No. You need an ace in the hole. Mine's Harvey."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: What did you do?",
+    "clean": "What did you do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Joker: I took Gotham's \"White Knight\" and I brought him down to our level. It wasn't hard. See, madness, as you know, is like gravity. All it takes is a little push.",
+    "clean": "I took Gotham's \"White Knight\" and I brought him down to our level. It wasn't hard. See, madness, as you know, is like gravity. All it takes is a little push."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: You don't want to hurt the boy, Harvey.",
+    "clean": "You don't want to hurt the boy, Harvey."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: It's not about what I want, it's about what's FAIR! You thought we could be decent men in an indecent time, but you were wrong. The world is cruel, and the only morality in a cruel world is chance — unbiased, unprejudiced, fair. His son has the same chance she had. [shows both sides of his coin] Fifty-fifty.",
+    "clean": "It's not about what I want, it's about what's FAIR! You thought we could be decent men in an indecent time, but you were wrong. The world is cruel, and the only morality in a cruel world is chance - unbiased, unprejudiced, fair. His son has the same chance she had. Fifty-fifty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: What happened to Rachel wasn't chance. We decided to act — we three.",
+    "clean": "What happened to Rachel wasn't chance. We decided to act - we three."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: Then why was it me who was only one who lost everything?!",
+    "clean": "Then why was it me who was only one who lost everything?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: ...It wasn't.",
+    "clean": "...It wasn't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: The Joker chose me!",
+    "clean": "The Joker chose me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: Because you were the best of us! He wanted to prove that even someone as good as you could fall!",
+    "clean": "Because you were the best of us! He wanted to prove that even someone as good as you could fall!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Two-Face: And he was right.",
+    "clean": "And he was right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: You're the one pointing the gun, Harvey. So point it at the people responsible.",
+    "clean": "You're the one pointing the gun, Harvey. So point it at the people responsible."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "James Gordon: The Joker won. All of Harvey's prosecutions, everything he fought for: undone. Whatever chance you gave us of fixing our city dies with Harvey's reputation. We bet it all on him. The Joker took the best of us and tore him down. People will lose hope.",
+    "clean": "The Joker won. All of Harvey's prosecutions, everything he fought for: undone. Whatever chance you gave us of fixing our city dies with Harvey's reputation. We bet it all on him. The Joker took the best of us and tore him down. People will lose hope."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: They won't. They must never know what he did.",
+    "clean": "They won't. They must never know what he did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: Five dead, two of them cops? You can't sweep that up.",
+    "clean": "Five dead, two of them cops? You can't sweep that up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: But the Joker cannot win. Gotham needs its true hero.",
+    "clean": "But the Joker cannot win. Gotham needs its true hero."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: \"You either die a hero, or you live long enough to see yourself become the villain.\" I can do those things, because I'm not a hero, not like Dent. I killed those people. That's what I can be.",
+    "clean": "\"You either die a hero, or you live long enough to see yourself become the villain.\" I can do those things, because I'm not a hero, not like Dent. I killed those people. That's what I can be."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: No. No, you can't. You're not!",
+    "clean": "No. No, you can't. You're not!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: I'm whatever Gotham needs me to be. Call it in.",
+    "clean": "I'm whatever Gotham needs me to be. Call it in."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: [speaking at Dent's funeral] ...A hero. Not the hero we deserved, but the hero we needed. Nothing less than a knight, shining...",
+    "clean": "...A hero. Not the hero we deserved, but the hero we needed. Nothing less than a knight, shining..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: [to Batman] We'll hunt you.",
+    "clean": "We'll hunt you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Batman: You'll hunt me. You'll condemn me, set the dogs on me, because that's what needs to happen, because sometimes truth isn't good enough. Sometimes people deserve more. Sometimes people deserve to have their faith rewarded. [runs]",
+    "clean": "You'll hunt me. You'll condemn me, set the dogs on me, because that's what needs to happen, because sometimes truth isn't good enough. Sometimes people deserve more. Sometimes people deserve to have their faith rewarded."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon's Son: Batman? Batman! Why is he running, Dad?",
+    "clean": "Batman? Batman! Why is he running, Dad?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: Because we have to chase him.",
+    "clean": "Because we have to chase him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Police sergeant: Okay, we're going in. Go! Go! Move!",
+    "clean": "Okay, we're going in. Go! Go! Move!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon's Son: He didn't do anything wrong.",
+    "clean": "He didn't do anything wrong."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gordon: Because he's the hero Gotham deserves, but not the one it needs right now. So we'll hunt him, because he can take it, because he's not our hero. He's a silent guardian — a watchful protector — a dark knight.",
+    "clean": "Because he's the hero Gotham deserves, but not the one it needs right now. So we'll hunt him, because he can take it, because he's not our hero. He's a silent guardian - a watchful protector - a dark knight."
+  }
+]

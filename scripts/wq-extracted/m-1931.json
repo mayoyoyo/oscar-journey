@@ -1,0 +1,152 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Fritz Lang. Written by Thea von Harbou and Fritz Lang.",
+    "clean": "Directed by Fritz Lang. Written by Thea von Harbou and Fritz Lang."
+  },
+  {
+    "heading": "Schränker",
+    "raw": "We're doing our job because we have a living to make. But this monster has no right to live. He must disappear. He must be exterminated, without pity… without scruples.",
+    "clean": "We're doing our job because we have a living to make. But this monster has no right to live. He must disappear. He must be exterminated, without pity... without scruples."
+  },
+  {
+    "heading": "Schränker",
+    "raw": "[to Hans Beckert] You talk of rights… You will get your rights. We are all law experts here, from six weeks in Tegel, to fifteen years in Brandenburg.",
+    "clean": "You talk of rights... You will get your rights. We are all law experts here, from six weeks in Tegel, to fifteen years in Brandenburg."
+  },
+  {
+    "heading": "Other",
+    "raw": "Girl in Circle: Just you wait, it won't be long, The man in black will soon be here, With his cleaver's blade so true, He'll make mincemeat out of you!",
+    "clean": "Just you wait, it won't be long, The man in black will soon be here, With his cleaver's blade so true, He'll make mincemeat out of you!"
+  },
+  {
+    "heading": "Other",
+    "raw": "Pickpocket with Seven Watches: There are more police on the street tonight than whores.",
+    "clean": "There are more police on the street tonight than whores."
+  },
+  {
+    "heading": "Other",
+    "raw": "Tillie: Don't do that!",
+    "clean": "Don't do that!"
+  },
+  {
+    "heading": "Other",
+    "raw": "Children: [singing] Just you wait a little while, the nasty man in black will come. With his little chopper, he will chop you up!",
+    "clean": "Just you wait a little while, the nasty man in black will come. With his little chopper, he will chop you up!"
+  },
+  {
+    "heading": "Other",
+    "raw": "Beggar: Stop snoring! You'll wake the lice.",
+    "clean": "Stop snoring! You'll wake the lice."
+  },
+  {
+    "heading": "Other",
+    "raw": "Tillie: BLEH!!",
+    "clean": "BLEH!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pregnant Woman: I'm always telling those kids to stop singing that terrible murderer's song… and they do nothing but sing it at the top of their voices all day… As if we hadn't heard enough of that killer.",
+    "clean": "I'm always telling those kids to stop singing that terrible murderer's song... and they do nothing but sing it at the top of their voices all day... As if we hadn't heard enough of that killer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Beckmann: Oh, leave them alone. As long as they're singing, at least we know they're still there.",
+    "clean": "Oh, leave them alone. As long as they're singing, at least we know they're still there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bartender: You're ruining my business, Sarge. These raids every night. No one can get a moment's peace! They're human beings, too.",
+    "clean": "You're ruining my business, Sarge. These raids every night. No one can get a moment's peace! They're human beings, too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Police Sergeant: You think we stay up all night just for the hell of it?",
+    "clean": "You think we stay up all night just for the hell of it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Criminal Syndicate Member: Very true.",
+    "clean": "Very true."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hans Beckert: And who are you?",
+    "clean": "And who are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elderly Lawyer: I have the dubious honor of being your defense counsel. But I am afraid it won't be much use to you.",
+    "clean": "I have the dubious honor of being your defense counsel. But I am afraid it won't be much use to you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hans Beckert: [horrified] But… but… do you want to kill me then? Murder me, just like that?",
+    "clean": "But... but... do you want to kill me then? Murder me, just like that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Schränker: We just want to render you harmless. That's what we want. But you'll only be harmless when you're dead.",
+    "clean": "Schränker: We just want to render you harmless. That's what we want. But you'll only be harmless when you're dead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hans Beckert: I demand to be handed over to the jurisdiction of the common law!",
+    "clean": "I demand to be handed over to the jurisdiction of the common law!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Criminal 1: Quite a performance! That's not bad, that, ha, ha, ha!",
+    "clean": "Criminal 1: Quite a performance! That's not bad, that, ha, ha, ha!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Schränker: That would suit you, wouldn't it?",
+    "clean": "Schränker: That would suit you, wouldn't it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Conman: [sarcastically] Anything else you'd like?",
+    "clean": "Anything else you'd like?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Schränker: So that you can invoke paragraph fifty-one…",
+    "clean": "Schränker: So that you can invoke paragraph fifty-one..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Criminal 2: That's it.",
+    "clean": "Criminal 2: That's it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hans Beckert: I can't help what I do! I can't help it, I can't…",
+    "clean": "I can't help what I do! I can't help it, I can't..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Criminal: The old story! We never can help it in court!",
+    "clean": "The old story! We never can help it in court!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Schränker: Do you mean to say that you have to murder?",
+    "clean": "Schränker: Do you mean to say that you have to murder?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judge: [last lines, about to pronounce Beckert's sentence] In the name of the people...",
+    "clean": "In the name of the people..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Beckmann: This will not bring our children back. One has to... keep closer watch... over the children. All of you!",
+    "clean": "This will not bring our children back. One has to... keep closer watch... over the children. All of you!"
+  },
+  {
+    "heading": "Quotes about M",
+    "raw": "Berlin boasted the biggest film industry in Europe, producing in Fritz Lang's Metropolis the science-fiction masterpiece of the twenties and in the same director's M the definitive film noir. Niall Ferguson, The War of the World: Twentieth-Century Conflict and the Descent of the West (2006), p. 235",
+    "clean": "Berlin boasted the biggest film industry in Europe, producing in Fritz Lang's Metropolis the science-fiction masterpiece of the twenties and in the same director's M the definitive film noir. Niall Ferguson, The War of the World: Twentieth-Century Conflict and the Descent of the West (2006), p. 235"
+  }
+]

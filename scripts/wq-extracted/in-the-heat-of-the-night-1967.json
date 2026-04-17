@@ -1,0 +1,372 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Norman Jewison. Written by Stirling Silliphant, based on the 1965 John Ball novel.",
+    "clean": "Directed by Norman Jewison. Written by Stirling Silliphant, based on the 1965 John Ball novel."
+  },
+  {
+    "heading": "Virgil Tibbs",
+    "raw": "Now listen, hear me good, Mama. Please. Don't make me have to send you to jail... There's white time in jail and there's colored time in jail. The worst kind of time you can do is colored time.",
+    "clean": "Now listen, hear me good, Mama. Please. Don't make me have to send you to jail... There's white time in jail and there's colored time in jail. The worst kind of time you can do is colored time."
+  },
+  {
+    "heading": "Chief Gillespie",
+    "raw": "I got the motive which is murder and the body which is dead!",
+    "clean": "I got the motive which is murder and the body which is dead!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chief Gillespie: Got a name, boy?",
+    "clean": "Got a name, boy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Virgil Tibbs.",
+    "clean": "Virgil Tibbs."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Virgil? [Laughing] Well, I don't think we're going to have any trouble, are we, Virgil?",
+    "clean": "Virgil? Well, I don't think we're going to have any trouble, are we, Virgil?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: No trouble at all.",
+    "clean": "No trouble at all."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: You can go now, Sam. [Deputy Sam Wood leaves the room] Whatcha hit him with?",
+    "clean": "You can go now, Sam. Whatcha hit him with?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Hit whom?",
+    "clean": "Hit whom?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: \"Whom\"? \"Whom\"? Well, you a Northern boy? What's a Northern boy like you doing all the way down here?",
+    "clean": "\"Whom\"? \"Whom\"? Well, you a Northern boy? What's a Northern boy like you doing all the way down here?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: I was waiting for the train.",
+    "clean": "I was waiting for the train."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: There ain't no trains this time in the morning.",
+    "clean": "There ain't no trains this time in the morning."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Tuesdays only 4:05 to Memphis.",
+    "clean": "Tuesdays only 4:05 to Memphis."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: You say. [train horn blowing] Well, alright. You say right. Now, look. I try to run a nice, clean, safe town here. A town where a man can sneeze and not get his brains beat out. You follow me?",
+    "clean": "You say. Well, alright. You say right. Now, look. I try to run a nice, clean, safe town here. A town where a man can sneeze and not get his brains beat out. You follow me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Why don't you tell me how you killed Mr. Colbert, and I promise you you're gonna feel a whole lot better.",
+    "clean": "Why don't you tell me how you killed Mr. Colbert, and I promise you you're gonna feel a whole lot better."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: I earned that money, ten hours a day, seven days a week.",
+    "clean": "I earned that money, ten hours a day, seven days a week."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Colored can't earn that kind of money [a few hundred dollars], boy. Hell, that's more than I earn in a month! Now where did you earn it?!",
+    "clean": "Colored can't earn that kind of money , boy. Hell, that's more than I earn in a month! Now where did you earn it?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Philadelphia.",
+    "clean": "Philadelphia."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Mississippi?",
+    "clean": "Mississippi?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Pennsylvania.",
+    "clean": "Pennsylvania."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Now just what do you do up there in little old Pennsylvania to earn that kind of money?",
+    "clean": "Now just what do you do up there in little old Pennsylvania to earn that kind of money?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: I'm a police officer.",
+    "clean": "I'm a police officer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Wood!",
+    "clean": "Wood!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wood: [Enters the office] Yes, sir?",
+    "clean": "Yes, sir?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Did you question this man before you brought him in?",
+    "clean": "Did you question this man before you brought him in?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wood: No, sir.",
+    "clean": "No, sir."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Would you mind takin' a look at that?",
+    "clean": "Would you mind takin' a look at that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Yeah! Oh, YEAH! Alright, now, I'll check on this wise city boy from Philadelphia; you take 'im outside and hold 'im.",
+    "clean": "Yeah! Oh, YEAH! Alright, now, I'll check on this wise city boy from Philadelphia; you take 'im outside and hold 'im."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: May I suggest you call my chief rather than send a wire or anything, I mean, it would be quicker, and I'll pay for the call.",
+    "clean": "May I suggest you call my chief rather than send a wire or anything, I mean, it would be quicker, and I'll pay for the call."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: You hear him? You hear him say he'll pay for the call? How much they pay you to do their police work?",
+    "clean": "You hear him? You hear him say he'll pay for the call? How much they pay you to do their police work?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: A hundred and sixty-two dollars, and thirty-nine cents per week.",
+    "clean": "A hundred and sixty-two dollars, and thirty-nine cents per week."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: [Whistles] A hundred and sixty-two dollars and thirty-nine cents a week? Well, boy! Sam, you take him outside but treat him easy, because a man that makes a hundred and sixty-two dollars and thirty-nine cents a week, man, we do not want to ruffle him!",
+    "clean": "A hundred and sixty-two dollars and thirty-nine cents a week? Well, boy! Sam, you take him outside but treat him easy, because a man that makes a hundred and sixty-two dollars and thirty-nine cents a week, man, we do not want to ruffle him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: So, you're their number one homicide expert.",
+    "clean": "So, you're their number one homicide expert."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Boy, I bet you get to look at a lot of dead bodies, don't'cha?",
+    "clean": "Boy, I bet you get to look at a lot of dead bodies, don't'cha?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Lots.",
+    "clean": "Lots."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Well?",
+    "clean": "Well?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Well, what?",
+    "clean": "Well, what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Well, I just thought that, maybe, uh, maybe you wouldn't mind takin' a look at this one?",
+    "clean": "Well, I just thought that, maybe, uh, maybe you wouldn't mind takin' a look at this one?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: No, thanks.",
+    "clean": "No, thanks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Well, why not, expert?",
+    "clean": "Well, why not, expert?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Because I've got a train to catch!",
+    "clean": "Because I've got a train to catch!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Now, wait a minute! That train don't leave till twelve o'clock noon! They pay you a hundred and sixty-two dollars and thirty-nine cents a week just to look at bodies- why can't you look at this one?!",
+    "clean": "Now, wait a minute! That train don't leave till twelve o'clock noon! They pay you a hundred and sixty-two dollars and thirty-nine cents a week just to look at bodies- why can't you look at this one?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Why don't you look at it for yourself?",
+    "clean": "Why don't you look at it for yourself?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Because I'm not an expert! Officer!",
+    "clean": "Because I'm not an expert! Officer!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Colbert: I came by to make it as clear as I possibly can: that I do not want the Negro officer taken off this case.",
+    "clean": "I came by to make it as clear as I possibly can: that I do not want the Negro officer taken off this case."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mayor Schubert: Negro officer?",
+    "clean": "Negro officer?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Yeah, well he, uh... he comes from up North, you see, and he was, uh, kinda... passing through...",
+    "clean": "Yeah, well he, uh... he comes from up North, you see, and he was, uh, kinda... passing through..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Colbert: I don't care what he is. If it wasn't for him, your impartial chief of police would still have the wrong man behind bars. I want that officer given a free hand, otherwise I will pack up my husband's engineers... and leave you... to yourselves.",
+    "clean": "I don't care what he is. If it wasn't for him, your impartial chief of police would still have the wrong man behind bars. I want that officer given a free hand, otherwise I will pack up my husband's engineers... and leave you... to yourselves."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: When I examined the deceased, it was obvious that the fatal blow was struck from an angle of seventeen degrees to the right, which makes it almost certain the person who did it was right-handed.",
+    "clean": "When I examined the deceased, it was obvious that the fatal blow was struck from an angle of seventeen degrees to the right, which makes it almost certain the person who did it was right-handed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: So what?",
+    "clean": "So what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shagbag: Ol' Harv's left-handed, Chief. Everyone in town knows that.",
+    "clean": "Ol' Harv's left-handed, Chief. Everyone in town knows that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wood: Yeah, that's what we figured out, Chief, uh-huh, Harvey's lefty.",
+    "clean": "Yeah, that's what we figured out, Chief, uh-huh, Harvey's lefty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Well, you're pretty sure of yourself, ain't you, Virgil? Virgil—that's a funny name for a nigger boy that comes from Philadelphia! What do they call you up there?",
+    "clean": "Well, you're pretty sure of yourself, ain't you, Virgil? Virgil-that's a funny name for a nigger boy that comes from Philadelphia! What do they call you up there?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: They call me Mr. Tibbs!",
+    "clean": "They call me Mr. Tibbs!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: \"Mr. Tibbs\"? Well Mr. Wood, take Mr. Tibbs, take him down to the depot, and I mean boy right now!",
+    "clean": "\"Mr. Tibbs\"? Well Mr. Wood, take Mr. Tibbs, take him down to the depot, and I mean boy right now!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Note: The bold quote is ranked #16 in the American Film Institute's list of the top 100 movie quotations in American cinema.",
+    "clean": "The bold quote is ranked #16 in the American Film Institute's list of the top 100 movie quotations in American cinema."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Endicott: Let me understand this. You two came here... to question me?",
+    "clean": "Let me understand this. You two came here... to question me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Endicott: Gillespie?",
+    "clean": "Gillespie?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Endicott: You saw it.",
+    "clean": "You saw it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: I saw it.",
+    "clean": "I saw it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Endicott: Well, what are you gonna do about it?",
+    "clean": "Well, what are you gonna do about it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: I don't know.",
+    "clean": "I don't know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Endicott: I'll remember that. [to Tibbs] There was a time... when I could've had you shot.",
+    "clean": "I'll remember that. There was a time... when I could've had you shot."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mayor Schubert: Bill... what's made you change your mind about Tibbs?",
+    "clean": "Bill... what's made you change your mind about Tibbs?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Who says I have?",
+    "clean": "Who says I have?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mayor Schubert: Last Chief we had... he'd have shot Tibbs one second after he slapped Endicott, claimed self-defense.",
+    "clean": "Last Chief we had... he'd have shot Tibbs one second after he slapped Endicott, claimed self-defense."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: I'm going home, man.",
+    "clean": "I'm going home, man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: They're your people!",
+    "clean": "They're your people!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Not mine! Yours! You made this scene.",
+    "clean": "Not mine! Yours! You made this scene."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Look, you want me to beg you, is that it?",
+    "clean": "Look, you want me to beg you, is that it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: Look, I've had your town- up to here!",
+    "clean": "Look, I've had your town- up to here!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gillespie: Boy, it would give me a world of satisfaction to horse whip you, Virgil.",
+    "clean": "Boy, it would give me a world of satisfaction to horse whip you, Virgil."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Tibbs: [laughing] My father used to say that. He even did a couple of times.",
+    "clean": "My father used to say that. He even did a couple of times."
+  }
+]

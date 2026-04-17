@@ -1,0 +1,822 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Irvin Kershner. Written by George Lucas, Leigh Brackett and Lawrence Kasdan, based on a story by George Lucas.",
+    "clean": "Directed by Irvin Kershner. Written by George Lucas, Leigh Brackett and Lawrence Kasdan, based on a story by George Lucas."
+  },
+  {
+    "heading": "Han Solo",
+    "raw": "[after cutting open a tauntaun to form a makeshift sleeping bag for Luke] And I thought they smelled bad... on the outside!",
+    "clean": "And I thought they smelled bad... on the outside!"
+  },
+  {
+    "heading": "Han Solo",
+    "raw": "[calling to C-3PO as they're about to escape the Echo Hoth base] Hurry up, goldenrod, or you're gonna be a permanent resident!",
+    "clean": "Hurry up, goldenrod, or you're gonna be a permanent resident!"
+  },
+  {
+    "heading": "Han Solo",
+    "raw": "[to Princess Leia] You like me because I'm a scoundrel. There aren't enough scoundrels in your life.",
+    "clean": "You like me because I'm a scoundrel. There aren't enough scoundrels in your life."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan Kenobi: [voice comes out of nowhere] Luke. Luke!",
+    "clean": "Luke. Luke!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: You will go to the Dagobah system.",
+    "clean": "You will go to the Dagobah system."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke : Dagobah system?",
+    "clean": "Dagobah system?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: There you will learn from Yoda, the Jedi master who instructed me.",
+    "clean": "There you will learn from Yoda, the Jedi master who instructed me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "C-3PO: Master Luke, sir, it's so good to see you fully functional again.",
+    "clean": "C-3PO: Master Luke, sir, it's so good to see you fully functional again."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: Thanks, Threepio.",
+    "clean": "Thanks, Threepio."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "C-3PO: [referring to R2-D2] Artoo expresses his relief, also.",
+    "clean": "C-3PO: Artoo expresses his relief, also."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han Solo: How are you feeling, kid? You don't look so bad to me. In fact, you look strong enough to pull the ears off a Gundark.",
+    "clean": "How are you feeling, kid? You don't look so bad to me. In fact, you look strong enough to pull the ears off a Gundark."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: Thanks to you.",
+    "clean": "Thanks to you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: That's two you owe me, junior. [turns to Princess Leia] Well, your worship, looks like you've managed to keep me around for a little while longer.",
+    "clean": "That's two you owe me, junior. Well, your worship, looks like you've managed to keep me around for a little while longer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Princess Leia Organa: I had nothing to do with it. General Rieekan thinks it's dangerous for any ships to leave the system until we've activated the energy field.",
+    "clean": "I had nothing to do with it. General Rieekan thinks it's dangerous for any ships to leave the system until we've activated the energy field."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: That's a good story. I think you just can't bear to let a gorgeous guy like me out of your sight.",
+    "clean": "That's a good story. I think you just can't bear to let a gorgeous guy like me out of your sight."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: I don't know where you get your delusions, laser brain.",
+    "clean": "I don't know where you get your delusions, laser brain."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: [to Chewie] Laugh it up, fuzzball! But you didn't see us alone in the south passage. She expressed her true feelings for me.",
+    "clean": "Laugh it up, fuzzball! But you didn't see us alone in the south passage. She expressed her true feelings for me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: My– [feels surprised at hearing Han say that] Why you stuck-up, half-witted, scruffy-looking… nerf-herder!!",
+    "clean": "My- Why you stuck-up, half-witted, scruffy-looking... nerf-herder!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: [turns back to Leia] Who's scruffy-looking? [to Luke Skywalker] Well, I must've hit pretty close to the mark to get her all riled up like that, huh, kid?",
+    "clean": "Who's scruffy-looking? Well, I must've hit pretty close to the mark to get her all riled up like that, huh, kid?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: Why, I guess you don't know everything about women yet. [kisses Luke on the lips in front of Han and Chewie]",
+    "clean": "Why, I guess you don't know everything about women yet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Capt. Firmus Piett: Admiral?",
+    "clean": "Admiral?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Adm. Kendel Ozzel: Yes, Captain?",
+    "clean": "Yes, Captain?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: I think we've got something, sir. The report is only a fragment, from a probe droid in the Hoth system, but it's the best lead we have.",
+    "clean": "I think we've got something, sir. The report is only a fragment, from a probe droid in the Hoth system, but it's the best lead we have."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ozzel: [growing impatient] We have thousands of probe droids searching the galaxy. I want proof, not leads.",
+    "clean": "We have thousands of probe droids searching the galaxy. I want proof, not leads."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: The visuals indicate life readings.",
+    "clean": "The visuals indicate life readings."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ozzel: Ridiculous! It could mean anything. If we followed up every lead...",
+    "clean": "Ridiculous! It could mean anything. If we followed up every lead..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: But sir, the Hoth system is supposed to be devoid of human forms.",
+    "clean": "But sir, the Hoth system is supposed to be devoid of human forms."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Darth Vader: [approaching the two officers after hearing their conversation] You've found something?",
+    "clean": "You've found something?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: Yes, my Lord. [shows Vader the location of the power generator on Hoth]",
+    "clean": "Yes, my Lord."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: That's it. The Rebels are there.",
+    "clean": "That's it. The Rebels are there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ozzel: My Lord, there are so many uncharted settlements. It could be smugglers. It could be...",
+    "clean": "My Lord, there are so many uncharted settlements. It could be smugglers. It could be..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: That is the system. The Force tells me so. The Rebels are there, and I am sure Skywalker is with them. Set your course for the Hoth system. [turns to General Maximilian Veers] General Veers, prepare your men.",
+    "clean": "That is the system. The Force tells me so. The Rebels are there, and I am sure Skywalker is with them. Set your course for the Hoth system. General Veers, prepare your men."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: What is it, General?",
+    "clean": "What is it, General?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gen. Maximilian Veers: My Lord, the fleet has moved out of lightspeed. Com-Scan has detected an energy field protecting an area of the sixth planet of the Hoth system. The field is strong enough to deflect any bombardment.",
+    "clean": "My Lord, the fleet has moved out of lightspeed. Com-Scan has detected an energy field protecting an area of the sixth planet of the Hoth system. The field is strong enough to deflect any bombardment."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: The Rebels are alerted to our presence. Admiral Ozzel came out of lightspeed too close to the system.",
+    "clean": "The Rebels are alerted to our presence. Admiral Ozzel came out of lightspeed too close to the system."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Veers: He, He felt surprise was wiser–",
+    "clean": "He, He felt surprise was wiser-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: [angrily] He is as clumsy as he is stupid. General, prepare your troops for a surface attack.",
+    "clean": "He is as clumsy as he is stupid. General, prepare your troops for a surface attack."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Veers: Yes, my Lord. [bows and leaves quickly]",
+    "clean": "Yes, my Lord."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ozzel: Lord Vader, the fleet has moved out of lightspeed and we're preparing to– [begins choking]",
+    "clean": "Lord Vader, the fleet has moved out of lightspeed and we're preparing to-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: You have failed me for the last time, Admiral. Captain Piett.",
+    "clean": "You have failed me for the last time, Admiral. Captain Piett."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: [nervously] Yes, my Lord?",
+    "clean": "Yes, my Lord?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Make ready to land our troops beyond their energy field, then deploy the fleet so that nothing gets off the system. You are in command now, Admiral Piett.",
+    "clean": "Make ready to land our troops beyond their energy field, then deploy the fleet so that nothing gets off the system. You are in command now, Admiral Piett."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: [sees a dead Ozzel collapse] Thank you, Lord Vader.",
+    "clean": "Thank you, Lord Vader."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: What are you doing? You're not actually going into an asteroid field!",
+    "clean": "What are you doing? You're not actually going into an asteroid field!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: They'd be crazy to follow us, wouldn't they?",
+    "clean": "They'd be crazy to follow us, wouldn't they?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: You don't have to do this to impress me.",
+    "clean": "You don't have to do this to impress me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "C-3PO: Sir, the possibilities of successfully navigating through an asteroid field are approximately 3,720 to 1!",
+    "clean": "C-3PO: Sir, the possibilities of successfully navigating through an asteroid field are approximately 3,720 to 1!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: Never tell me the odds!",
+    "clean": "Never tell me the odds!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: [kneeling before the Emperor's hologram] What is thy bidding, my master?",
+    "clean": "What is thy bidding, my master?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Emperor: There is a great disturbance in the Force.",
+    "clean": "There is a great disturbance in the Force."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: I have felt it.",
+    "clean": "I have felt it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Emperor: We have a new enemy. The young Rebel who destroyed the Death Star. I have no doubt this boy is the offspring of Anakin Skywalker.",
+    "clean": "We have a new enemy. The young Rebel who destroyed the Death Star. I have no doubt this boy is the offspring of Anakin Skywalker."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: How is that possible?",
+    "clean": "How is that possible?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Emperor: Search your feelings, Lord Vader. You will know it to be true. He could destroy us.",
+    "clean": "Search your feelings, Lord Vader. You will know it to be true. He could destroy us."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: He's just a boy. Obi-Wan can no longer help him.",
+    "clean": "He's just a boy. Obi-Wan can no longer help him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Emperor: The Force is strong with him. The son of Skywalker must not become a Jedi.",
+    "clean": "The Force is strong with him. The son of Skywalker must not become a Jedi."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: If he could be turned, he would become a powerful ally.",
+    "clean": "If he could be turned, he would become a powerful ally."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Emperor: [intrigued] Yes... He would be a great asset. Can it be done?",
+    "clean": "Yes... He would be a great asset. Can it be done?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: He will join us or die, Master.",
+    "clean": "He will join us or die, Master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: This ground sure feels strange. Doesn't feel like rock.",
+    "clean": "This ground sure feels strange. Doesn't feel like rock."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: There's an awful lot of moisture in here.",
+    "clean": "There's an awful lot of moisture in here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: I don't know. I have a bad feeling about this.",
+    "clean": "I don't know. I have a bad feeling about this."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: Yeah; so do I.",
+    "clean": "Yeah; so do I."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: You can't make the jump to light-speed in this asteroid field!",
+    "clean": "You can't make the jump to light-speed in this asteroid field!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: Sit down, sweetheart; we're taking off!",
+    "clean": "Sit down, sweetheart; we're taking off!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "C-3PO: Look!!",
+    "clean": "C-3PO: Look!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: I see it, I see it!",
+    "clean": "I see it, I see it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "C-3PO: We're doomed!",
+    "clean": "C-3PO: We're doomed!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: The cave is collapsing!",
+    "clean": "The cave is collapsing!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: [suddenly realizing that the Millennium Falcon has flown into the mouth of a giant space creature] This is no cave!",
+    "clean": "This is no cave!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: What?!",
+    "clean": "What?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: There will be a substantial reward for the one who finds the Millennium Falcon. You are free to use any methods necessary, but I want them alive. [turns to Boba Fett] No disintegrations.",
+    "clean": "There will be a substantial reward for the one who finds the Millennium Falcon. You are free to use any methods necessary, but I want them alive. No disintegrations."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Boba Fett: As you wish.",
+    "clean": "As you wish."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: Oh, no! We'll never get it out now!",
+    "clean": "Oh, no! We'll never get it out now!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: So certain, are you? Always with you, it cannot be done. Hear you nothing that I say?",
+    "clean": "So certain, are you? Always with you, it cannot be done. Hear you nothing that I say?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: Master, moving stones around is one thing, but this is... totally different!",
+    "clean": "Master, moving stones around is one thing, but this is... totally different!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: No! No different! Only different in your mind. You must unlearn what you have learned.",
+    "clean": "No! No different! Only different in your mind. You must unlearn what you have learned."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: All right, I'll give it a try.",
+    "clean": "All right, I'll give it a try."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: No! Try not. Do... or do not. There is no try.",
+    "clean": "No! Try not. Do... or do not. There is no try."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: I can't. It's too big.",
+    "clean": "I can't. It's too big."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: You want the impossible. [sees Yoda use the Force to levitate the X-wing out of the bog and gets flustered when he does it] I don't... I don't believe it!",
+    "clean": "You want the impossible. I don't... I don't believe it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: That is why you fail.",
+    "clean": "That is why you fail."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: Luke! You must complete the training.",
+    "clean": "Luke! You must complete the training."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: I can't keep the vision out of my head. They're my friends. I've gotta help them.",
+    "clean": "I can't keep the vision out of my head. They're my friends. I've gotta help them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: You must not go!",
+    "clean": "You must not go!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: But Han and Leia will die if I don't.",
+    "clean": "But Han and Leia will die if I don't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: You don't know that. [appears in spirit] Even Yoda cannot see their fate.",
+    "clean": "You don't know that. Even Yoda cannot see their fate."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: But I can help them! I feel the Force.",
+    "clean": "But I can help them! I feel the Force."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: But you cannot control it. This is a dangerous time for you, when you will be tempted by the dark side of the Force.",
+    "clean": "But you cannot control it. This is a dangerous time for you, when you will be tempted by the dark side of the Force."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: Yes, yes! To Obi-Wan you listen. The cave! Remember your failure at the cave!",
+    "clean": "Yes, yes! To Obi-Wan you listen. The cave! Remember your failure at the cave!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: But I've learned so much since then. Master Yoda, I promise to return and finish what I've begun. You have my word.",
+    "clean": "But I've learned so much since then. Master Yoda, I promise to return and finish what I've begun. You have my word."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: It is you and your abilities the Emperor wants. That is why your friends are made to suffer.",
+    "clean": "It is you and your abilities the Emperor wants. That is why your friends are made to suffer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: That's why I have to go.",
+    "clean": "That's why I have to go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: Luke, I don't want to lose you to the Emperor the way I lost Vader.",
+    "clean": "Luke, I don't want to lose you to the Emperor the way I lost Vader."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: You won't.",
+    "clean": "You won't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: Stopped they must be. On this all depends. Only a fully trained Jedi Knight with the Force as his ally will conquer Vader and his Emperor. If you end your training now, if you choose the quick and easy path as Vader did, you will become an agent of evil.",
+    "clean": "Stopped they must be. On this all depends. Only a fully trained Jedi Knight with the Force as his ally will conquer Vader and his Emperor. If you end your training now, if you choose the quick and easy path as Vader did, you will become an agent of evil."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: Patience!",
+    "clean": "Patience!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: And sacrifice Han and Leia?",
+    "clean": "And sacrifice Han and Leia?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: If you honor what they fight for, yes.",
+    "clean": "If you honor what they fight for, yes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: If you choose to face Vader, you will do it alone. I cannot interfere.",
+    "clean": "If you choose to face Vader, you will do it alone. I cannot interfere."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: I understand. R2, fire up the converters.",
+    "clean": "I understand. R2, fire up the converters."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: Luke. Don't give in to hate. That leads to the dark side.",
+    "clean": "Luke. Don't give in to hate. That leads to the dark side."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: Strong is Vader. Mind what you have learned. Save you it can.",
+    "clean": "Strong is Vader. Mind what you have learned. Save you it can."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: I will, and I'll return. I promise. [flies off with X-wing]",
+    "clean": "I will, and I'll return. I promise."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: Told you I did. Reckless is he. Now matters are worse.",
+    "clean": "Told you I did. Reckless is he. Now matters are worse."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Obi-Wan: That boy is our last hope.",
+    "clean": "That boy is our last hope."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoda: No. There is another.",
+    "clean": "No. There is another."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: You may take Captain Solo to Jabba the Hutt after I have Skywalker.",
+    "clean": "You may take Captain Solo to Jabba the Hutt after I have Skywalker."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Boba Fett: He's no good to me dead.",
+    "clean": "He's no good to me dead."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: He will not be permanently damaged.",
+    "clean": "He will not be permanently damaged."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando Calrissian: Lord Vader, what about Leia and the Wookiee?",
+    "clean": "Lord Vader, what about Leia and the Wookiee?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: They must never again leave this city.",
+    "clean": "They must never again leave this city."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: [angry] That was never a condition of our agreement, nor was giving Han to this bounty hunter!",
+    "clean": "That was never a condition of our agreement, nor was giving Han to this bounty hunter!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Perhaps you think you are being treated unfairly?",
+    "clean": "Perhaps you think you are being treated unfairly?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Good. It would be unfortunate if I had to leave a garrison here.",
+    "clean": "Good. It would be unfortunate if I had to leave a garrison here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: [under his breath] This deal is getting worse all the time.",
+    "clean": "This deal is getting worse all the time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: Get out of here, Lando.",
+    "clean": "Get out of here, Lando."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: Shut up and listen! Now Vader has agreed to turn Leia and Chewie over to me.",
+    "clean": "Shut up and listen! Now Vader has agreed to turn Leia and Chewie over to me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: Over to you?",
+    "clean": "Over to you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: They'll have to stay here, but at least they'll be safe.",
+    "clean": "They'll have to stay here, but at least they'll be safe."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: What about Han?",
+    "clean": "What about Han?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: Vader's giving him to the bounty hunter.",
+    "clean": "Vader's giving him to the bounty hunter."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: Vader wants us all dead!",
+    "clean": "Vader wants us all dead!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: No. He doesn't want you at all! He's after somebody called, uh... Skywalker!",
+    "clean": "No. He doesn't want you at all! He's after somebody called, uh... Skywalker!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: [realizing who Lando is talking about] Luke!",
+    "clean": "Luke!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: Lord Vader has set a trap for him!",
+    "clean": "Lord Vader has set a trap for him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: And we're the bait!",
+    "clean": "And we're the bait!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: Yeah. Well, he's on his way.",
+    "clean": "Yeah. Well, he's on his way."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: [getting very angry at Lando] Perfect. You've fixed us all real good, didn't you? My friend. [punches Lando in the face; the two security guards come up behind Han and hit him with their clubs, causing him to fall down on the floor. The guards prepare to hit him again]",
+    "clean": "Perfect. You've fixed us all real good, didn't you? My friend."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: [signals his guards to stop the fight] Stop! [the guards back down while Lando talks to Han, Chewie and Leia] I've done all I can. I'm sorry I couldn't do better, but I've got my own problems. I've already stuck my neck out farther than I should!",
+    "clean": "Stop! I've done all I can. I'm sorry I couldn't do better, but I've got my own problems. I've already stuck my neck out farther than I should!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: Yeah. You're a real hero. [Lando glares at Han, then leaves the room with his two security guards]",
+    "clean": "Yeah. You're a real hero."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: [tending to Han's injuries while she talks to him] Boy, you certainly have a way with people.",
+    "clean": "Boy, you certainly have a way with people."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: [referring to the carbon freezing chamber] This facility is crude, but it should be adequate to freeze Skywalker for his journey to the Emperor.",
+    "clean": "This facility is crude, but it should be adequate to freeze Skywalker for his journey to the Emperor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Imperial officer: Lord Vader! Ship approaching, X-wing class.",
+    "clean": "Lord Vader! Ship approaching, X-wing class."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Good. Monitor Skywalker and allow him to land.",
+    "clean": "Good. Monitor Skywalker and allow him to land."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: [referring to Luke Skywalker] Lord Vader, we only use this facility for carbon freezing. You put him in there, it might kill him!",
+    "clean": "Lord Vader, we only use this facility for carbon freezing. You put him in there, it might kill him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: I do not want the Emperor's prize damaged. We will test it... on Captain Solo.",
+    "clean": "I do not want the Emperor's prize damaged. We will test it... on Captain Solo."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leia: I love you.",
+    "clean": "I love you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Han: I know.",
+    "clean": "I know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: You are beaten. It is useless to resist. Don't let yourself be destroyed as Obi-Wan did.",
+    "clean": "You are beaten. It is useless to resist. Don't let yourself be destroyed as Obi-Wan did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: There is no escape. Don't make me destroy you. [deactivates his lightsaber] Luke, you do not yet realize your importance. You've only begun to discover your power. Join me, and I will complete your training. With our combined strength, we can end this destructive conflict, and bring order to the galaxy.",
+    "clean": "There is no escape. Don't make me destroy you. Luke, you do not yet realize your importance. You've only begun to discover your power. Join me, and I will complete your training. With our combined strength, we can end this destructive conflict, and bring order to the galaxy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: [wincing] I'll never join you!",
+    "clean": "I'll never join you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: If you only knew the power of the dark side. Obi-Wan never told you what happened to your father.",
+    "clean": "If you only knew the power of the dark side. Obi-Wan never told you what happened to your father."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: He told me enough. He told me you killed him.",
+    "clean": "He told me enough. He told me you killed him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: No. I am your father.",
+    "clean": "No. I am your father."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: [shocked] No. No. That's not true! That's impossible!",
+    "clean": "No. No. That's not true! That's impossible!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Search your feelings. You know it to be true.",
+    "clean": "Search your feelings. You know it to be true."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: NO!!! NO!!!",
+    "clean": "NO!!! NO!!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Luke, you can destroy the Emperor. He has foreseen this. It is your destiny. Join me, and together, we can rule the galaxy as father and son. [Luke looks down the shaft and then back at Vader] Come with me. It is the only way. [Luke lets go of the projection and falls into the shaft]",
+    "clean": "Luke, you can destroy the Emperor. He has foreseen this. It is your destiny. Join me, and together, we can rule the galaxy as father and son. Come with me. It is the only way."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: They'll be in range of our tractor beam in moments, my Lord.",
+    "clean": "They'll be in range of our tractor beam in moments, my Lord."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Did your men deactivate the hyperdrive on the Millennium Falcon?",
+    "clean": "Did your men deactivate the hyperdrive on the Millennium Falcon?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: Yes, my Lord.",
+    "clean": "Yes, my Lord."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Vader: Good. Prepare the boarding party and set your weapons for stun.",
+    "clean": "Good. Prepare the boarding party and set your weapons for stun."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Piett: Yes, my Lord.",
+    "clean": "Yes, my Lord."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: Luke, we're ready for takeoff.",
+    "clean": "Luke, we're ready for takeoff."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: Good luck, Lando.",
+    "clean": "Good luck, Lando."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: When we find Jabba the Hutt and that bounty hunter, we'll contact you.",
+    "clean": "When we find Jabba the Hutt and that bounty hunter, we'll contact you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: I'll meet you at the rendezvous point on Tatooine.",
+    "clean": "I'll meet you at the rendezvous point on Tatooine."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lando: [to Leia] Princess, we'll find Han. I promise.",
+    "clean": "Princess, we'll find Han. I promise."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Luke: Chewie, I'll be waiting for your signal. Take care, you two, and may the Force be with you.",
+    "clean": "Chewie, I'll be waiting for your signal. Take care, you two, and may the Force be with you."
+  },
+  {
+    "heading": "Voices",
+    "raw": "Frank Oz — Yoda",
+    "clean": "Frank Oz - Yoda"
+  },
+  {
+    "heading": "Voices",
+    "raw": "Clive Revill — Emperor Palpatine/Darth Sidious",
+    "clean": "Clive Revill - Emperor Palpatine/Darth Sidious"
+  },
+  {
+    "heading": "Quotes about The Empire Strikes Back",
+    "raw": "Judith Martin in The Washington Post, 23rd May 1980 Review of The Empire Strikes Back",
+    "clean": "Judith Martin in The Washington Post, 23rd May 1980 Review of The Empire Strikes Back"
+  }
+]

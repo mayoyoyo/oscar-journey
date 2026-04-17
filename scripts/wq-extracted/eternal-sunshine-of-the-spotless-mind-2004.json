@@ -1,0 +1,362 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Michel Gondry. Written by Charlie Kaufman and Michel Gondry.",
+    "clean": "Directed by Michel Gondry. Written by Charlie Kaufman and Michel Gondry."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "Sand is overrated. It's just tiny little rocks.",
+    "clean": "Sand is overrated. It's just tiny little rocks."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "Why do I fall in love with every woman I see who shows me the least bit of attention?",
+    "clean": "Why do I fall in love with every woman I see who shows me the least bit of attention?"
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "I'm constitutionally incapable of making eye-contact with a woman I don't know.",
+    "clean": "I'm constitutionally incapable of making eye-contact with a woman I don't know."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "She was nice. Nice is good.",
+    "clean": "She was nice. Nice is good."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "Random thoughts for Valentine's Day, 2004. Today is a holiday invented by greeting card companies. To make people feel like crap.",
+    "clean": "Random thoughts for Valentine's Day, 2004. Today is a holiday invented by greeting card companies. To make people feel like crap."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "This is working like gangbusters!",
+    "clean": "This is working like gangbusters!"
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "Constantly talking isn't necessarily communicating.",
+    "clean": "Constantly talking isn't necessarily communicating."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "Are we like those bored couples you feel sorry for in restaurants? Are we the dining dead?",
+    "clean": "Are we like those bored couples you feel sorry for in restaurants? Are we the dining dead?"
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "It's all being wiped away.",
+    "clean": "It's all being wiped away."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "I could die right now, I'm just … happy. I've never felt that before. I'm just exactly where I want to be.",
+    "clean": "I could die right now, I'm just ... happy. I've never felt that before. I'm just exactly where I want to be."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "I loved you on this day. I love this memory.",
+    "clean": "I loved you on this day. I love this memory."
+  },
+  {
+    "heading": "Joel Barish",
+    "raw": "I ditched work today. Took a train out to Montauk. I don't know why, I'm not an impulsive person.",
+    "clean": "I ditched work today. Took a train out to Montauk. I don't know why, I'm not an impulsive person."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "Drink up, young man. It'll make the whole seduction part less repugnant.",
+    "clean": "Drink up, young man. It'll make the whole seduction part less repugnant."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "I'm always anxious thinking I'm not living my life to the fullest, you know? Taking advantage of every possibility? Just making sure that I'm not wasting one second of the little time I have.",
+    "clean": "I'm always anxious thinking I'm not living my life to the fullest, you know? Taking advantage of every possibility? Just making sure that I'm not wasting one second of the little time I have."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "… you stop listening to what is true, and what is true is constantly changing.",
+    "clean": "... you stop listening to what is true, and what is true is constantly changing."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "I apply my personality in a paste.",
+    "clean": "I apply my personality in a paste."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "I'm a vindictive little bitch, truth be told.",
+    "clean": "I'm a vindictive little bitch, truth be told."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "I'm not a concept. Too many guys think I'm a concept or I complete them or I'm going to make them alive, but I'm just a fucked up girl who is looking for my own peace of mind. Don't assign me yours.",
+    "clean": "I'm not a concept. Too many guys think I'm a concept or I complete them or I'm going to make them alive, but I'm just a fucked up girl who is looking for my own peace of mind. Don't assign me yours."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "You look familiar. Ever shop at Barnes & Noble?",
+    "clean": "You look familiar. Ever shop at Barnes & Noble?"
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "I don't need nice. I don't need myself to be it, and I don't need anybody else to be it at me.",
+    "clean": "I don't need nice. I don't need myself to be it, and I don't need anybody else to be it at me."
+  },
+  {
+    "heading": "Clementine Kruczynski",
+    "raw": "People don’t understand how lonely it is to be a kid.",
+    "clean": "People don't understand how lonely it is to be a kid."
+  },
+  {
+    "heading": "Mary Svevo",
+    "raw": "[Quoting Alexander Pope] \"How happy is the blameless vestal's lot!The world forgetting, by the world forgot.Eternal sunshine of the spotless mind!Each prayer accepted, and each wish resigned.\"",
+    "clean": "How happy is the blameless vestal's lot!The world forgetting, by the world forgot.Eternal sunshine of the spotless mind!Each prayer accepted, and each wish resigned."
+  },
+  {
+    "heading": "Mary Svevo",
+    "raw": "[Quoting Friedrich Nietzsche] \"Blessed are the forgetful: for they get the better even of their blunders.\"",
+    "clean": "Blessed are the forgetful: for they get the better even of their blunders."
+  },
+  {
+    "heading": "Mary Svevo",
+    "raw": "Adults are, like, this mess of sadness and phobias.",
+    "clean": "Adults are, like, this mess of sadness and phobias."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: Excuse me?",
+    "clean": "Excuse me?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: I just said hi.",
+    "clean": "I just said hi."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: Oh! Hi, hello.",
+    "clean": "Oh! Hi, hello."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: I'm Clementine … no jokes about my name.",
+    "clean": "I'm Clementine ... no jokes about my name."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I don't know any jokes about your name.",
+    "clean": "I don't know any jokes about your name."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Huckleberry Hound.",
+    "clean": "Huckleberry Hound."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I don't know what that is.",
+    "clean": "I don't know what that is."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Huckleberry Hound! [singing] Oh my darling, oh my darling, oh my darling Clementine.",
+    "clean": "Huckleberry Hound! Oh my darling, oh my darling, oh my darling Clementine."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I don't know what that means.",
+    "clean": "I don't know what that means."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Are you nuts?",
+    "clean": "Are you nuts?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: It's been suggested.",
+    "clean": "It's been suggested."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: You're not a stalker or anything, right?",
+    "clean": "You're not a stalker or anything, right?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I'm not a stalker. You're the one that talked to me, remember?",
+    "clean": "I'm not a stalker. You're the one that talked to me, remember?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: That is the oldest trick in the stalker book.",
+    "clean": "That is the oldest trick in the stalker book."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: Really? There's a stalker book? Great, I gotta read that one.",
+    "clean": "Really? There's a stalker book? Great, I gotta read that one."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Joel, I'm not a concept. Too many guys think I'm a concept or I complete them or I'm going to make them alive, but I'm just a fucked up girl who is looking for my own peace of mind. Don't assign me yours.",
+    "clean": "Joel, I'm not a concept. Too many guys think I'm a concept or I complete them or I'm going to make them alive, but I'm just a fucked up girl who is looking for my own peace of mind. Don't assign me yours."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I remember that speech really well.",
+    "clean": "I remember that speech really well."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: I had you pegged, didn't I?",
+    "clean": "I had you pegged, didn't I?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: You had the whole human race pegged.",
+    "clean": "You had the whole human race pegged."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Probably.",
+    "clean": "Probably."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I still thought you were going to save me. Even after that.",
+    "clean": "I still thought you were going to save me. Even after that."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: I know.",
+    "clean": "I know."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: This is it, Joel. It's going to be gone soon.",
+    "clean": "This is it, Joel. It's going to be gone soon."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I know.",
+    "clean": "I know."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: What do we do??",
+    "clean": "What do we do??"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: Enjoy it.",
+    "clean": "Enjoy it."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I'm in my head already, aren't I?",
+    "clean": "I'm in my head already, aren't I?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Howard: I suppose so. This – this is about what it would look like.",
+    "clean": "I suppose so. This - this is about what it would look like."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: [in the house on the beach] I really should go! I've gotta catch my ride.",
+    "clean": "I really should go! I've gotta catch my ride."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: So go.",
+    "clean": "So go."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I did. I thought maybe you were a nut … but you were exciting.",
+    "clean": "I did. I thought maybe you were a nut ... but you were exciting."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: I wish you had stayed.",
+    "clean": "I wish you had stayed."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I wish I had stayed too. Now I wish I had stayed. I wish I had done a lot of things. I wish I had … I wish I had stayed. I do.",
+    "clean": "I wish I had stayed too. Now I wish I had stayed. I wish I had done a lot of things. I wish I had ... I wish I had stayed. I do."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Well, I came back downstairs and you were gone!",
+    "clean": "Well, I came back downstairs and you were gone!"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I walked out, I walked out the door!",
+    "clean": "I walked out, I walked out the door!"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I don't know. I felt like I was a scared little kid, I was like … it was above my head, I don't know.",
+    "clean": "I don't know. I felt like I was a scared little kid, I was like ... it was above my head, I don't know."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: You were scared?",
+    "clean": "You were scared?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: Yeah. I thought you knew that about me. I ran back to the bonfire, trying to outrun my humiliation, I think.",
+    "clean": "Yeah. I thought you knew that about me. I ran back to the bonfire, trying to outrun my humiliation, I think."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Was it something I said?",
+    "clean": "Was it something I said?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: Yeah, you said \"so go.\" With such disdain, you know?",
+    "clean": "Yeah, you said \"so go.\" With such disdain, you know?"
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: Oh, I'm sorry.",
+    "clean": "Oh, I'm sorry."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: It's okay.",
+    "clean": "It's okay."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: You know me, I'm impulsive.",
+    "clean": "You know me, I'm impulsive."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: That's what I love about you.",
+    "clean": "That's what I love about you."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: I can't see anything I don't like about you.",
+    "clean": "I can't see anything I don't like about you."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Clementine: But you will, you will think of things and I'll get bored with you and feel trapped because that's what happens with me.",
+    "clean": "But you will, you will think of things and I'll get bored with you and feel trapped because that's what happens with me."
+  },
+  {
+    "heading": "Quotes",
+    "raw": "Joel: Okay.",
+    "clean": "Okay."
+  }
+]

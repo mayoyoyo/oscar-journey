@@ -1,0 +1,737 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Mike Nichols. Written by Charles Webb, Calder Willingham and Buck Henry.",
+    "clean": "Directed by Mike Nichols. Written by Charles Webb, Calder Willingham and Buck Henry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: I'm just...",
+    "clean": "I'm just..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: ...worried?",
+    "clean": "...worried?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well...",
+    "clean": "Well..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: About what?",
+    "clean": "About what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: I guess about my future.",
+    "clean": "I guess about my future."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: What about it?",
+    "clean": "What about it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: I don't know. I want it to be...",
+    "clean": "I don't know. I want it to be..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: ...to be what?",
+    "clean": "...to be what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: ...Different.",
+    "clean": "...Different."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. McGuire: I want to say one word to you. Just one word.",
+    "clean": "I want to say one word to you. Just one word."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Yes, sir.",
+    "clean": "Yes, sir."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. McGuire: Are you listening?",
+    "clean": "Are you listening?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Yes, I am.",
+    "clean": "Yes, I am."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. McGuire: Plastics.",
+    "clean": "Plastics."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Exactly how do you mean?",
+    "clean": "Exactly how do you mean?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. McGuire: There's a great future in plastics. Think about it. Will you think about it? Note: the bolded line is ranked #42 in the American Film Institute's list of the top 100 movie quotations in American cinema.",
+    "clean": "There's a great future in plastics. Think about it. Will you think about it? Note: the bolded line is ranked #42 in the American Film Institute's list of the top 100 movie quotations in American cinema."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Mrs. Robinson, if you don't mind my saying so, this conversation is getting a little strange. Now, I'm sure that Mr. Robinson will be here any minute now and -",
+    "clean": "Mrs. Robinson, if you don't mind my saying so, this conversation is getting a little strange. Now, I'm sure that Mr. Robinson will be here any minute now and -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: My husband will be back quite late. He should be gone for several hours.",
+    "clean": "My husband will be back quite late. He should be gone for several hours."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Oh my God.",
+    "clean": "Oh my God."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: For God's sake, Mrs. Robinson, here we are, you've got me into your house. You give me a drink. You put on music, now you start opening up your personal life to me and tell me your husband won't be home for hours.",
+    "clean": "For God's sake, Mrs. Robinson, here we are, you've got me into your house. You give me a drink. You put on music, now you start opening up your personal life to me and tell me your husband won't be home for hours."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Mrs. Robinson, you're trying to seduce me...",
+    "clean": "Mrs. Robinson, you're trying to seduce me..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: ...aren't you?",
+    "clean": "...aren't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Well, no. I hadn't thought of it. I feel very flattered.",
+    "clean": "Well, no. I hadn't thought of it. I feel very flattered."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Mrs. Robinson. Will you forgive me for what I just said? Note: the two lines in bold are collectively ranked #63 in the American Film Institute's list of the top 100 movie quotations in American cinema.",
+    "clean": "Mrs. Robinson. Will you forgive me for what I just said? Note: the two lines in bold are collectively ranked #63 in the American Film Institute's list of the top 100 movie quotations in American cinema."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: What are you so scared of?",
+    "clean": "What are you so scared of?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: I'm not scared, Mrs. Robinson.",
+    "clean": "I'm not scared, Mrs. Robinson."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Then why do you keep running away?",
+    "clean": "Then why do you keep running away?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Because you're going to bed. I don't think I should be up here.",
+    "clean": "Because you're going to bed. I don't think I should be up here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Haven't you ever seen anybody in a slip before?",
+    "clean": "Haven't you ever seen anybody in a slip before?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Yes, I have, but I just...Look, what if Mr. Robinson walked in right now?",
+    "clean": "Yes, I have, but I just...Look, what if Mr. Robinson walked in right now?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: What if he did?",
+    "clean": "What if he did?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, it would look pretty funny, wouldn't it?",
+    "clean": "Well, it would look pretty funny, wouldn't it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Don't you think he trusts us together?",
+    "clean": "Don't you think he trusts us together?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Of course he does, but he might get the wrong idea. Anyone might.",
+    "clean": "Of course he does, but he might get the wrong idea. Anyone might."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: I don't see why? I'm twice as old as you are. How could anyone think that...",
+    "clean": "I don't see why? I'm twice as old as you are. How could anyone think that..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: But they would! Don't you see?",
+    "clean": "But they would! Don't you see?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Benjamin. I am not trying to seduce you!",
+    "clean": "Benjamin. I am not trying to seduce you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: I know that, but please, Mrs. Robinson. This is difficult..",
+    "clean": "I know that, but please, Mrs. Robinson. This is difficult.."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Would you like me to seduce you?",
+    "clean": "Would you like me to seduce you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Is that what you're trying to tell me?",
+    "clean": "Is that what you're trying to tell me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: [A long pause] I'm going home now. I apologize for what I said. I hope you can forget it. But I'm going home right now.",
+    "clean": "I'm going home now. I apologize for what I said. I hope you can forget it. But I'm going home right now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: [now naked] Don't be nervous.",
+    "clean": "Don't be nervous."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Get away from that door.",
+    "clean": "Get away from that door."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: I want to say something first.",
+    "clean": "I want to say something first."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Dear God.",
+    "clean": "Dear God."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Benjamin. I want you to know that I'm available to you, and if you won't sleep with me this time...",
+    "clean": "Benjamin. I want you to know that I'm available to you, and if you won't sleep with me this time..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Oh, my God.",
+    "clean": "Oh, my God."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: ...if you won't sleep with me this time I want you to know that you can call me up anytime you want and we'll make some kind of an arrangement. Do you understand what I...?",
+    "clean": "...if you won't sleep with me this time I want you to know that you can call me up anytime you want and we'll make some kind of an arrangement. Do you understand what I...?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Let me out.",
+    "clean": "Let me out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Benjamin. Did you understand what I said? [Screeching car tires are heard outside in the driveway]",
+    "clean": "Benjamin. Did you understand what I said?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Yes, yes, let me out.",
+    "clean": "Yes, yes, let me out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Because I find you very attractive. Now, anytime you want, you just...",
+    "clean": "Because I find you very attractive. Now, anytime you want, you just..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Oh Jesus, that's him.",
+    "clean": "Oh Jesus, that's him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Benjamin, would this be easier for you in the dark?",
+    "clean": "Benjamin, would this be easier for you in the dark?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Mrs. Robinson. I can't do this.",
+    "clean": "Mrs. Robinson. I can't do this."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: You what?",
+    "clean": "You what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: This is all terribly wrong.",
+    "clean": "This is all terribly wrong."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Do you find me undesirable?",
+    "clean": "Do you find me undesirable?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Oh, no, Mrs. Robinson. I think, I think you're the most attractive of all my parents' friends. I mean that. I find you desirable, but I, for God's sake, can you imagine my parents? Can you imagine what they would say if they just saw us in this room here right now?",
+    "clean": "Oh, no, Mrs. Robinson. I think, I think you're the most attractive of all my parents' friends. I mean that. I find you desirable, but I, for God's sake, can you imagine my parents? Can you imagine what they would say if they just saw us in this room here right now?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: What would they say?",
+    "clean": "What would they say?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: I have no idea Mrs. Robinson, but for god's sake, they brought me up, they made a good life for me and I think they deserve better than this. I think they deserve a little better than jumping into bed with the partner's wife.",
+    "clean": "I have no idea Mrs. Robinson, but for god's sake, they brought me up, they made a good life for me and I think they deserve better than this. I think they deserve a little better than jumping into bed with the partner's wife."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Are you afraid of me?",
+    "clean": "Are you afraid of me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Oh, no. You're missing the point. Look. Maybe we could do something else together. Mrs. Robinson, would you like to go to a movie?",
+    "clean": "Oh, no. You're missing the point. Look. Maybe we could do something else together. Mrs. Robinson, would you like to go to a movie?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Can I ask you a personal question?",
+    "clean": "Can I ask you a personal question?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Ask me anything you want.",
+    "clean": "Ask me anything you want."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Is this your first time?",
+    "clean": "Is this your first time?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Is this what?",
+    "clean": "Is this what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: It is, isn't it? It is your first time.",
+    "clean": "It is, isn't it? It is your first time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: That's a laugh Mrs. Robinson. That's really a laugh. Ha, ha.",
+    "clean": "That's a laugh Mrs. Robinson. That's really a laugh. Ha, ha."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Well, you can admit that, can't you?",
+    "clean": "Well, you can admit that, can't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Are you kidding?",
+    "clean": "Are you kidding?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: It's nothing to be ashamed of.",
+    "clean": "It's nothing to be ashamed of."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Wait a minute.",
+    "clean": "Wait a minute."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: On your first time if you're afraid of being inadequate.",
+    "clean": "On your first time if you're afraid of being inadequate."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Who said it was my first time? Wait a minute.",
+    "clean": "Who said it was my first time? Wait a minute."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Just because you happen to be inadequate in one way.",
+    "clean": "Just because you happen to be inadequate in one way."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: INADEQUATE?! [Mrs. Robinson starts to dress] Don't move!",
+    "clean": "INADEQUATE?! Don't move!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: Ben, what are you doing?",
+    "clean": "Ben, what are you doing?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, I would say that I'm just drifting. Here in the pool.",
+    "clean": "Well, I would say that I'm just drifting. Here in the pool."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, it's very comfortable just to drift here.",
+    "clean": "Well, it's very comfortable just to drift here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: Have you thought about graduate school?",
+    "clean": "Have you thought about graduate school?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: Would you mind telling me then what those four years of college were for? What was the point of all that hard work?",
+    "clean": "Would you mind telling me then what those four years of college were for? What was the point of all that hard work?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: You got me.",
+    "clean": "You got me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Don't talk about Elaine.",
+    "clean": "Don't talk about Elaine."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Don't talk about Elaine?",
+    "clean": "Don't talk about Elaine?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, why not?",
+    "clean": "Well, why not?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Because I don't want you to.",
+    "clean": "Because I don't want you to."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, why don't you? I wish you'd tell me.",
+    "clean": "Well, why don't you? I wish you'd tell me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: There's nothing to tell.",
+    "clean": "There's nothing to tell."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, why is she a big taboo subject all of a sudden? Well, I guess I'll have to ask her out on a date and find out what the big deal is.",
+    "clean": "Well, why is she a big taboo subject all of a sudden? Well, I guess I'll have to ask her out on a date and find out what the big deal is."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Benjamin. [Pulling his hair] Don't you ever take that girl out. Do you understand that?",
+    "clean": "Benjamin. Don't you ever take that girl out. Do you understand that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, why shouldn't I?",
+    "clean": "Well, why shouldn't I?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: I have my reasons.",
+    "clean": "I have my reasons."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well let's hear 'em.",
+    "clean": "Well let's hear 'em."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Let's hear them Mrs. Robinson, because I think I know what they are. I'm not good enough for her to associate with, am I? I'm not good enough to even talk about her, am I?",
+    "clean": "Let's hear them Mrs. Robinson, because I think I know what they are. I'm not good enough for her to associate with, am I? I'm not good enough to even talk about her, am I?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Let's drop it.",
+    "clean": "Let's drop it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: We're not dropping it. I'm good enough for you, but I'm not good enough to associate with your daughter. That's it, isn't it?",
+    "clean": "We're not dropping it. I'm good enough for you, but I'm not good enough to associate with your daughter. That's it, isn't it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Benjamin.",
+    "clean": "Benjamin."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: [Ripping the sheet off her] Isn't it?",
+    "clean": "Isn't it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: You go to hell. You go straight to hell, Mrs. Robinson. Do you think I'm proud of myself? Do you think I'm proud of this?",
+    "clean": "You go to hell. You go straight to hell, Mrs. Robinson. Do you think I'm proud of myself? Do you think I'm proud of this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: I wouldn't know.",
+    "clean": "I wouldn't know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Well, I am not! No sir, I am not proud that I spend my time with a broken-down alcoholic!",
+    "clean": "Well, I am not! No sir, I am not proud that I spend my time with a broken-down alcoholic!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: I see.",
+    "clean": "I see."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: And if you think I come here for any reason besides pure boredom, then you're all wrong; because Mrs. Robinson, this is the sickest, most perverted thing in the world that ever happened to me! And you do what you want, but I'm getting the hell out!",
+    "clean": "And if you think I come here for any reason besides pure boredom, then you're all wrong; because Mrs. Robinson, this is the sickest, most perverted thing in the world that ever happened to me! And you do what you want, but I'm getting the hell out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Are you?",
+    "clean": "Are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Goddam right I am!",
+    "clean": "Goddam right I am!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: Well, when did you decide all this?",
+    "clean": "Well, when did you decide all this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: About an hour ago.",
+    "clean": "About an hour ago."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: Wait a minute, you talked to Elaine this morning?",
+    "clean": "Wait a minute, you talked to Elaine this morning?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: No, she doesn't know about it.",
+    "clean": "No, she doesn't know about it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: Uh, you mean she doesn't know you are coming up to Berkeley?",
+    "clean": "Uh, you mean she doesn't know you are coming up to Berkeley?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: No, actually she doesn't know about us getting married yet.",
+    "clean": "No, actually she doesn't know about us getting married yet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Braddock: Well when did you two talk this over?",
+    "clean": "Well when did you two talk this over?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: We haven't.",
+    "clean": "We haven't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Braddock: You haven't?",
+    "clean": "You haven't?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Braddock: Ben, this whole idea sounds pretty half baked.",
+    "clean": "Ben, this whole idea sounds pretty half baked."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: No, it's not. It's completely baked. It's a decision I've made.",
+    "clean": "No, it's not. It's completely baked. It's a decision I've made."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Braddock: But what makes you think she wants to marry you?",
+    "clean": "But what makes you think she wants to marry you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: She doesn't. To be perfectly honest, she doesn't like me.",
+    "clean": "She doesn't. To be perfectly honest, she doesn't like me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Elaine, I like you. I like you so much. Do you believe that? [She nods silently] Do you?",
+    "clean": "Elaine, I like you. I like you so much. Do you believe that? Do you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: [He sighs deeply] You're the first thing for so long that I like, the first person I could stand to be with. My whole life is such a waste. There's just nothing. I'm sorry. I'll take you home now.",
+    "clean": "You're the first thing for so long that I like, the first person I could stand to be with. My whole life is such a waste. There's just nothing. I'm sorry. I'll take you home now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elaine: Benjamin...Will you kiss me? [He rises from bed]",
+    "clean": "Benjamin...Will you kiss me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: [After a sleepy kiss] Will you marry me? [She shakes her head no] You won't?",
+    "clean": "Will you marry me? You won't?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elaine: I don't know.",
+    "clean": "I don't know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: But you might?",
+    "clean": "But you might?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elaine: I might.",
+    "clean": "I might."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Is that so? You might marry me?",
+    "clean": "Is that so? You might marry me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elaine: Why don't you drag me off if you want to marry me so much?",
+    "clean": "Why don't you drag me off if you want to marry me so much?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Why don't I just drag you off? All right, I will. Right after we get the blood tests...",
+    "clean": "Why don't I just drag you off? All right, I will. Right after we get the blood tests..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: [gets into Benjamin's car] Drive down the block.",
+    "clean": "Drive down the block."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Mrs. Robinson, Elaine and I have a date, we're going for a drive.",
+    "clean": "Mrs. Robinson, Elaine and I have a date, we're going for a drive."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: [angrily] Do exactly as I say!",
+    "clean": "Do exactly as I say!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: [Ben drives down the block] Now, it seems to me...",
+    "clean": "Now, it seems to me..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Listen very carefully to me, Benjamin: You are not to see Elaine again, ever! Those are my orders, is that clear?",
+    "clean": "Listen very carefully to me, Benjamin: You are not to see Elaine again, ever! Those are my orders, is that clear?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Mrs. Robinson, do you think...",
+    "clean": "Mrs. Robinson, do you think..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: I can make things quite unpleasant.",
+    "clean": "I can make things quite unpleasant."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: In order to keep Elaine away from you, I'm prepared to tell her everything.",
+    "clean": "In order to keep Elaine away from you, I'm prepared to tell her everything."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: [Ben stops the car] I don't believe you.",
+    "clean": "I don't believe you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Then you better start believing me.",
+    "clean": "Then you better start believing me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: I just don't believe you would do that.",
+    "clean": "I just don't believe you would do that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mrs. Robinson: Try me.",
+    "clean": "Try me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: Listen to me. What happened between Mrs. Robinson and me was nothing. It didn't mean anything. We might just as well have been shaking hands.",
+    "clean": "Listen to me. What happened between Mrs. Robinson and me was nothing. It didn't mean anything. We might just as well have been shaking hands."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Robinson: Shaking hands? Well, that's not saying much for my wife, is it?",
+    "clean": "Shaking hands? Well, that's not saying much for my wife, is it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Benjamin: The point is I don't love your wife, I love your daughter, sir.",
+    "clean": "The point is I don't love your wife, I love your daughter, sir."
+  }
+]

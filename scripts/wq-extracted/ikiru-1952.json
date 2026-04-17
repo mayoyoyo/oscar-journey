@@ -1,0 +1,47 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Akira Kurosawa. Written by Shinobu Hashimoto, Akira Kurosawa, and Hideo Oguni.",
+    "clean": "Directed by Akira Kurosawa. Written by Shinobu Hashimoto, Akira Kurosawa, and Hideo Oguni."
+  },
+  {
+    "heading": "Kanji Watanabe",
+    "raw": "I have less than a year to live. When I found that out... somehow I was drawn to you. Once when I was a child, I almost drowned. It's just like that feeling. Darkness everywhere, and nothing for me to hold onto, no matter how hard I try. There's just you.",
+    "clean": "I have less than a year to live. When I found that out... somehow I was drawn to you. Once when I was a child, I almost drowned. It's just like that feeling. Darkness everywhere, and nothing for me to hold onto, no matter how hard I try. There's just you."
+  },
+  {
+    "heading": "Kanji Watanabe",
+    "raw": "I can't afford to hate anyone. I don't have that kind of time.",
+    "clean": "I can't afford to hate anyone. I don't have that kind of time."
+  },
+  {
+    "heading": "Kanji Watanabe",
+    "raw": "Dying is very difficult.",
+    "clean": "Dying is very difficult."
+  },
+  {
+    "heading": "Kanji Watanabe",
+    "raw": "I just can't die — I don't know what I've been living for all these years. This expensive saki is a protest against my life up to now.",
+    "clean": "I just can't die - I don't know what I've been living for all these years. This expensive saki is a protest against my life up to now."
+  },
+  {
+    "heading": "Toyo Odagiri",
+    "raw": "[telling a joke] :\"You've never had a day off, have you?\" \"No.\" \"Why? Are you indispensable?\" \"No. I don't want them to find out they can do without me.\"",
+    "clean": ":\"You've never had a day off, have you?\" \"No.\" \"Why? Are you indispensable?\" \"No. I don't want them to find out they can do without me.\""
+  },
+  {
+    "heading": "Novelist",
+    "raw": "That's not art. A striptease isn't art. It's too direct. It's more direct than art. That woman's body up there? It's a big juicy steak. It's a glass of gin. It's a hormone extract. Streptomycin. Uranium!",
+    "clean": "That's not art. A striptease isn't art. It's too direct. It's more direct than art. That woman's body up there? It's a big juicy steak. It's a glass of gin. It's a hormone extract. Streptomycin. Uranium!"
+  },
+  {
+    "heading": "Novelist",
+    "raw": "How tragic that man can never realize how beautiful life is until he is face to face with death.",
+    "clean": "How tragic that man can never realize how beautiful life is until he is face to face with death."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Toyo: What help am I?",
+    "clean": "What help am I?"
+  }
+]

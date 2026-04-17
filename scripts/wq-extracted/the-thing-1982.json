@@ -1,0 +1,302 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by John Carpenter. Written by Bill Lancaster, based on the novella Who Goes There? by John W. Campbell Jr..",
+    "clean": "Directed by John Carpenter. Written by Bill Lancaster, based on the novella Who Goes There? by John W. Campbell Jr.."
+  },
+  {
+    "heading": "MacReady",
+    "raw": "[on finding a partially-assembled spaceship beneath the tool shed] Blair's been busy out here all by himself.",
+    "clean": "Blair's been busy out here all by himself."
+  },
+  {
+    "heading": "MacReady",
+    "raw": "[the Thing roars at MacReady] YEAH, FUCK YOU TOO!!! [throws stick of dynamite]",
+    "clean": "YEAH, FUCK YOU TOO!!!"
+  },
+  {
+    "heading": "Others",
+    "raw": "Norwegian passenger with rifle: Se til helvete og kom dere vekk. Det er ikke en bikkje. Det er en slags ting! Det imiterer en bikkje. Det er ikke virkelig! Kom dere vekk, idioter! (Get the hell away. That's not a dog. It's some kind of thing! It's imitating a dog. It's not real! Get away, idiots!)",
+    "clean": "Se til helvete og kom dere vekk. Det er ikke en bikkje. Det er en slags ting! Det imiterer en bikkje. Det er ikke virkelig! Kom dere vekk, idioter! (Get the hell away. That's not a dog. It's some kind of thing! It's imitating a dog. It's not real! Get away, idiots!)"
+  },
+  {
+    "heading": "Others",
+    "raw": "Clark: I don't know what the hell's in there, but it's weird and pissed off, whatever it is.",
+    "clean": "I don't know what the hell's in there, but it's weird and pissed off, whatever it is."
+  },
+  {
+    "heading": "Others",
+    "raw": "Garry: [after passing the blood test] I know you gentlemen have been through a lot. But when you find the time... I'd rather not spend the rest of the winter TIED TO THIS FUCKING COUCH!",
+    "clean": "I know you gentlemen have been through a lot. But when you find the time... I'd rather not spend the rest of the winter TIED TO THIS FUCKING COUCH!"
+  },
+  {
+    "heading": "Others",
+    "raw": "Norris: This is just what it wants! To pit us against each other!",
+    "clean": "This is just what it wants! To pit us against each other!"
+  },
+  {
+    "heading": "Others",
+    "raw": "Windows: Are you guys gonna listen to Garry?! Are you gonna let him give the orders?! I mean, he can be one of those things!",
+    "clean": "Are you guys gonna listen to Garry?! Are you gonna let him give the orders?! I mean, he can be one of those things!"
+  },
+  {
+    "heading": "Others",
+    "raw": "Blair: Hey, wait a minute. Wait a minute, man. I want to come back inside, don't you understand? I'm alright, I'm much better. And I won't harm anybody. Now you gotta let me come back inside.",
+    "clean": "Hey, wait a minute. Wait a minute, man. I want to come back inside, don't you understand? I'm alright, I'm much better. And I won't harm anybody. Now you gotta let me come back inside."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: I don't know. Thousands of years ago it crashes, and this thing... gets thrown out, or crawls out, and it ends up freezing in the ice.",
+    "clean": "I don't know. Thousands of years ago it crashes, and this thing... gets thrown out, or crawls out, and it ends up freezing in the ice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: I just cannot believe any of this voodoo bullshit.",
+    "clean": "I just cannot believe any of this voodoo bullshit."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Palmer: Childs, happens all the time, man. They're falling out of the skies like flies. Government knows all about it, right, Mac?",
+    "clean": "Childs, happens all the time, man. They're falling out of the skies like flies. Government knows all about it, right, Mac?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: You believe any of this voodoo bullshit, Blair?",
+    "clean": "You believe any of this voodoo bullshit, Blair?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Palmer: Childs, Childs... Chariots of the Gods, man. They practically own South America. I mean, they taught the Incas everything they know.",
+    "clean": "Childs, Childs... Chariots of the Gods, man. They practically own South America. I mean, they taught the Incas everything they know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Garry: So, come on now, MacReady, Norwegians get ahold of this... and they dig it up out of the ice.",
+    "clean": "So, come on now, MacReady, Norwegians get ahold of this... and they dig it up out of the ice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Yes, Garry, they dig it up, they cart it back, it gets thawed out, wakes up - probably not the best of moods - I don't know, I wasn't there!",
+    "clean": "Yes, Garry, they dig it up, they cart it back, it gets thawed out, wakes up - probably not the best of moods - I don't know, I wasn't there!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nauls: [skates in with ripped long johns] Which one of you disrespectful men been tossing his dirty drawers in the kitchen trash can, huh? From now, I want my kitchen clean, all right? Germ free!",
+    "clean": "Which one of you disrespectful men been tossing his dirty drawers in the kitchen trash can, huh? From now, I want my kitchen clean, all right? Germ free!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: So how's this motherfucker wake up after thousands of years in the ice?",
+    "clean": "So how's this motherfucker wake up after thousands of years in the ice?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bennings: And how can it look like a dog?",
+    "clean": "And how can it look like a dog?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: I don't know how. 'Cause it's different than us, see? 'Cause it's from outer space. What do you want from me? Ask him! [motions to Blair]",
+    "clean": "I don't know how. 'Cause it's different than us, see? 'Cause it's from outer space. What do you want from me? Ask him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: You buy any of this Blair?",
+    "clean": "You buy any of this Blair?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Norris: Finish what?",
+    "clean": "Finish what?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Blair: Finish imitating these dogs.",
+    "clean": "Finish imitating these dogs."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Somebody in this camp ain't what he appears to be. Right now that may be one or two of us. By Spring, it could be all of us.",
+    "clean": "Somebody in this camp ain't what he appears to be. Right now that may be one or two of us. By Spring, it could be all of us."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know if it was really me?",
+    "clean": "So, how do we know who's human? If I was an imitation, a perfect imitation, how would you know if it was really me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: All right, we gotta find him. Nauls, why don’t you come with me and we'll go outside. Palmer, you and Windows check the inside.",
+    "clean": "All right, we gotta find him. Nauls, why don't you come with me and we'll go outside. Palmer, you and Windows check the inside."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Palmer: I ain't going with Windows. I ain't going with him, I'll go with Childs--",
+    "clean": "I ain't going with Windows. I ain't going with him, I'll go with Childs--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Windows: Hey, FUCK YOU, Palmer!",
+    "clean": "Hey, FUCK YOU, Palmer!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Palmer: I ain't going with you!",
+    "clean": "I ain't going with you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: Who says I want you going with me?!",
+    "clean": "Who says I want you going with me?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: ALL RIGHT, CUT THE BULLSHIT! Windows, you come with us. Norris, you stay here. Any of them move, you fry them. You hear anything, anything at all, you cut loose on the sirens. We all meet here in 20 minutes regardless. And everybody watch who you're with, real close.",
+    "clean": "ALL RIGHT, CUT THE BULLSHIT! Windows, you come with us. Norris, you stay here. Any of them move, you fry them. You hear anything, anything at all, you cut loose on the sirens. We all meet here in 20 minutes regardless. And everybody watch who you're with, real close."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: How you doin', old boy?",
+    "clean": "How you doin', old boy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Blair: I don't know who to trust.",
+    "clean": "I don't know who to trust."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: I know what you mean, Blair. Trust's a tough thing to come by these days. Tell you what - why don't you just trust in the Lord?",
+    "clean": "I know what you mean, Blair. Trust's a tough thing to come by these days. Tell you what - why don't you just trust in the Lord?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Blair: [throwing a fit in the radio room] Nobody gets in and out of here! NOBODY! You guys think I'M crazy! Well, that's fine! Most of ya don't know what's goin' on around here, but I'm damn well sure SOME of you do!",
+    "clean": "Nobody gets in and out of here! NOBODY! You guys think I'M crazy! Well, that's fine! Most of ya don't know what's goin' on around here, but I'm damn well sure SOME of you do!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Christ!",
+    "clean": "Christ!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: He got most of the chopper and the tractor. And he's killed the rest of the dogs.",
+    "clean": "He got most of the chopper and the tractor. And he's killed the rest of the dogs."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: [as Garry advances with his gun] Garry, wait a minute, wait a minute. Now, Childs, go around to the map room door. Talk to him.",
+    "clean": "Garry, wait a minute, wait a minute. Now, Childs, go around to the map room door. Talk to him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Norris, get a table from the lab.",
+    "clean": "Norris, get a table from the lab."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Blair: [still smashing up the radio room with an axe while yelling] D'ya think that thing wanted to be an animal?! No dogs make it a thousand miles through the cold! No, you don't understand! That thing wanted to be US! If a cell gets out, it could imitate everything on the FACE OF THE EARTH! AND NOTHING CAN STOP IT!",
+    "clean": "D'ya think that thing wanted to be an animal?! No dogs make it a thousand miles through the cold! No, you don't understand! That thing wanted to be US! If a cell gets out, it could imitate everything on the FACE OF THE EARTH! AND NOTHING CAN STOP IT!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: [appearing in the map room doorway] Okay, Blair. Come on, man, you don't wanna hurt anybody.",
+    "clean": "Okay, Blair. Come on, man, you don't wanna hurt anybody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Blair: I'LL KILL YOU!",
+    "clean": "I'LL KILL YOU!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Blair... he got back inside and blew the generator. In six hours, it'll be 100 below in here!",
+    "clean": "Blair... he got back inside and blew the generator. In six hours, it'll be 100 below in here!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Garry: Well, that's suicide!",
+    "clean": "Well, that's suicide!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Not for that Thing. It wants to freeze now. It's got no way out of here. It just wants to go to sleep in the cold until the rescue team finds it.",
+    "clean": "Not for that Thing. It wants to freeze now. It's got no way out of here. It just wants to go to sleep in the cold until the rescue team finds it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Garry: What can we do? What can we do?",
+    "clean": "What can we do? What can we do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Whether we make it or not, we can't let the Thing freeze again. Maybe we'll just warm things up a little around here. We're not gettin' outta here alive. But neither is that Thing.",
+    "clean": "Whether we make it or not, we can't let the Thing freeze again. Maybe we'll just warm things up a little around here. We're not gettin' outta here alive. But neither is that Thing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: You the only one who made it?.",
+    "clean": "You the only one who made it?."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Not the only one.",
+    "clean": "Not the only one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: Did you kill it?",
+    "clean": "Did you kill it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Where were you, Childs?",
+    "clean": "Where were you, Childs?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: Thought I saw Blair. I went out after him and got lost in the storm. Fire's got the temperature up all over the camp. Won't last long, though.",
+    "clean": "Thought I saw Blair. I went out after him and got lost in the storm. Fire's got the temperature up all over the camp. Won't last long, though."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Neither will we.",
+    "clean": "Neither will we."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: How will we make it?",
+    "clean": "How will we make it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: Maybe we shouldn't.",
+    "clean": "Maybe we shouldn't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: If you're worried about me...",
+    "clean": "If you're worried about me..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: If we've got any surprises for each other, I don't think we're in much shape to do anything about it.",
+    "clean": "If we've got any surprises for each other, I don't think we're in much shape to do anything about it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Childs: Well...What do we do?",
+    "clean": "Well...What do we do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "MacReady: [slumping back] Why don't we just...Wait here for a little while? See what happens.",
+    "clean": "Why don't we just...Wait here for a little while? See what happens."
+  }
+]

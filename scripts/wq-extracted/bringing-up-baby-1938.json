@@ -1,0 +1,117 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Howard Hawks. Written by Hager Wilde and Dudley Nichols.",
+    "clean": "Directed by Howard Hawks. Written by Hager Wilde and Dudley Nichols."
+  },
+  {
+    "heading": "Susan Vance",
+    "raw": "[limping after losing a heel] I was born on the side of a hill!",
+    "clean": "I was born on the side of a hill!"
+  },
+  {
+    "heading": "Susan Vance",
+    "raw": "[reading a letter about Baby] \"He's three years old, gentle as a kitten, and likes dogs.\" I wonder whether Mark means that he eats dogs or is fond of them?",
+    "clean": "\"He's three years old, gentle as a kitten, and likes dogs.\" I wonder whether Mark means that he eats dogs or is fond of them?"
+  },
+  {
+    "heading": "Dr. David Huxley",
+    "raw": "Now it isn't that I don't like you, Susan, because, after all, in moments of quiet, I'm strangely drawn toward you, but, well, there haven't been any quiet moments.",
+    "clean": "Now it isn't that I don't like you, Susan, because, after all, in moments of quiet, I'm strangely drawn toward you, but, well, there haven't been any quiet moments."
+  },
+  {
+    "heading": "Dr. David Huxley",
+    "raw": "When a man is wrestling a leopard in the middle of a pond, he's in no position to run!",
+    "clean": "When a man is wrestling a leopard in the middle of a pond, he's in no position to run!"
+  },
+  {
+    "heading": "Dr. Fritz Lehman",
+    "raw": "That brings out a sort of pear-shaped tone, you see?",
+    "clean": "That brings out a sort of pear-shaped tone, you see?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "David: Susan, you've got to get out of this apartment!",
+    "clean": "Susan, you've got to get out of this apartment!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Susan: I can't, I have a lease.",
+    "clean": "I can't, I have a lease."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Susan: [in tears] You mean you want me to go home?",
+    "clean": "You mean you want me to go home?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Susan: You mean you don't want me to help you any more?",
+    "clean": "You mean you don't want me to help you any more?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Susan: After all the fun we've had?",
+    "clean": "After all the fun we've had?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Susan: And after all the things I've done for you?",
+    "clean": "And after all the things I've done for you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "David: That's what I mean.",
+    "clean": "That's what I mean."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Susan: Well, don't you worry, David, because if there's anything that I can do to help you, just let me know and I'll do it.",
+    "clean": "Well, don't you worry, David, because if there's anything that I can do to help you, just let me know and I'll do it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "David: [nervously] Well, er... don't do it until I let you know.",
+    "clean": "Well, er... don't do it until I let you know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Susan: Anyway, David, when they find out who we are they'll let us out.",
+    "clean": "Anyway, David, when they find out who we are they'll let us out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "David: When they find out who you are they'll pad the cell.",
+    "clean": "When they find out who you are they'll pad the cell."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elisabeth: Well, you look perfectly idiotic in those clothes.",
+    "clean": "Well, you look perfectly idiotic in those clothes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "David: These aren't my clothes!",
+    "clean": "These aren't my clothes!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elisabeth: Well, where are your clothes?",
+    "clean": "Well, where are your clothes?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "David: I've lost my clothes!",
+    "clean": "I've lost my clothes!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Elisabeth: But why are you wearing these clothes?",
+    "clean": "But why are you wearing these clothes?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "David: Because I just went gay all of a sudden!",
+    "clean": "Because I just went gay all of a sudden!"
+  }
+]

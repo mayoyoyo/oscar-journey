@@ -1,0 +1,202 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Billy Wilder. Written by Larry Marcus, Billy Wilder, and Harry Kurnitz, based on a short story by Agatha Christie.",
+    "clean": "Directed by Billy Wilder. Written by Larry Marcus, Billy Wilder, and Harry Kurnitz, based on a short story by Agatha Christie."
+  },
+  {
+    "heading": "Sir Wilfrid Robarts",
+    "raw": "I am constantly surprised that women's hats do not provoke more murders.",
+    "clean": "I am constantly surprised that women's hats do not provoke more murders."
+  },
+  {
+    "heading": "Miss Plimsoll",
+    "raw": "[last lines; hands Sir Wilfrid his thermos bottle] Sir Wilfrid, you've forgotten your brandy!",
+    "clean": "Sir Wilfrid, you've forgotten your brandy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leonard Vole: What are you looking for?",
+    "clean": "What are you looking for?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Vole: My accordion.",
+    "clean": "My accordion."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leonard Vole: [stepping on it] I think I've found it.",
+    "clean": "I think I've found it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Vole: Step on it again. It's still breathing.",
+    "clean": "Step on it again. It's still breathing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Plimsoll: Shall we roll up the window, Sir Wilfrid?",
+    "clean": "Shall we roll up the window, Sir Wilfrid?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: Just roll up your mouth, you talk too much. If I'd known how much you talk I'd never have come out of my coma.",
+    "clean": "Just roll up your mouth, you talk too much. If I'd known how much you talk I'd never have come out of my coma."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Plimsoll: I almost married a lawyer once. I was in attendance when he had his appendectomy, and we became engaged as soon as he could sit up... and then peritonitis set in and he went just like that!",
+    "clean": "I almost married a lawyer once. I was in attendance when he had his appendectomy, and we became engaged as soon as he could sit up... and then peritonitis set in and he went just like that!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: He certainly was a lucky lawyer.",
+    "clean": "He certainly was a lucky lawyer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: Give me a match.",
+    "clean": "Give me a match."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leonard Vole: Sorry, I never carried them.",
+    "clean": "Sorry, I never carried them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: [to Mayhew] What? You said I'd like him.",
+    "clean": "What? You said I'd like him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leonard Vole: But I do have a lighter.",
+    "clean": "But I do have a lighter."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfird: You're quite right, Mayhew. I do like him.",
+    "clean": "You're quite right, Mayhew. I do like him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Leonard Vole: But this is England, where I thought you never arrest, let alone convict, people for crimes they have not committed.",
+    "clean": "But this is England, where I thought you never arrest, let alone convict, people for crimes they have not committed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: We try not to make a habit of it.",
+    "clean": "We try not to make a habit of it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: Be prepared for hysterics and even a fainting spell. Better have smelling salts handy and a nip of brandy.",
+    "clean": "Be prepared for hysterics and even a fainting spell. Better have smelling salts handy and a nip of brandy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Vole: I do not think that will be necessary. I never faint because I am not sure that I will fall gracefully and I never use smelling salts because they puff up the eyes. I am Christine Vole.",
+    "clean": "I do not think that will be necessary. I never faint because I am not sure that I will fall gracefully and I never use smelling salts because they puff up the eyes. I am Christine Vole."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: I'd better take that thermos of cocoa with me. It helps me wash down down the pills.",
+    "clean": "I'd better take that thermos of cocoa with me. It helps me wash down down the pills."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Miss Plimsoll: Let me see. My learned patient is not above substituting brandy for cocoa. [opens thermos and smells] Sniff, sniff. It is cocoa. So sorry.",
+    "clean": "Let me see. My learned patient is not above substituting brandy for cocoa. Sniff, sniff. It is cocoa. So sorry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: If you were a woman, Miss Plimsoll, I would strike you.",
+    "clean": "If you were a woman, Miss Plimsoll, I would strike you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Janet Mackensie: Perhaps you can help me, your Lordship. Six months, I have applied for my hearing aid and I am still waiting for it.",
+    "clean": "Perhaps you can help me, your Lordship. Six months, I have applied for my hearing aid and I am still waiting for it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Judge: My dear Miss Mackenzie. Considering the rubbish that is being talked nowadays, you are missing very little.",
+    "clean": "My dear Miss Mackenzie. Considering the rubbish that is being talked nowadays, you are missing very little."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: Mrs Vole. Or Mrs Helm; which do you prefer to be called?",
+    "clean": "Mrs Vole. Or Mrs Helm; which do you prefer to be called?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Helm: It does not matter.",
+    "clean": "It does not matter."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: Does it not? In this country, we are inclined to take a rather more serious view of marriage. However, Frau Helm, it would appear that when you first met the prisoner in Hamburg, you lied to him about your marital status?",
+    "clean": "Does it not? In this country, we are inclined to take a rather more serious view of marriage. However, Frau Helm, it would appear that when you first met the prisoner in Hamburg, you lied to him about your marital status?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Helm: I wanted to get out of Germany, so—",
+    "clean": "I wanted to get out of Germany, so-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: You lied, did you not? Just yes or no, please.",
+    "clean": "You lied, did you not? Just yes or no, please."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: Thank you. And subsequently, in arranging the marriage, you lied to the authorities?",
+    "clean": "Thank you. And subsequently, in arranging the marriage, you lied to the authorities?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Helm: I, um, did not tell the truth to the authorities.",
+    "clean": "I, um, did not tell the truth to the authorities."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: You lied to them?",
+    "clean": "You lied to them?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: And in the ceremony of marriage itself, when you swore to love and to honor and to cherish your husband, that, too, was a lie?",
+    "clean": "And in the ceremony of marriage itself, when you swore to love and to honor and to cherish your husband, that, too, was a lie?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: And when the police questioned you about this wretched man who believed himself married and loved, you told them—",
+    "clean": "And when the police questioned you about this wretched man who believed himself married and loved, you told them-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Helm: I told them what Leonard wanted me to say.",
+    "clean": "I told them what Leonard wanted me to say."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: You told them that he was at home with you at 25 minutes past 9, and now you say that that was a lie? [beginning to chuckle now]",
+    "clean": "You told them that he was at home with you at 25 minutes past 9, and now you say that that was a lie?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christine Helm: Yes, a lie!",
+    "clean": "Yes, a lie!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: And when you said that he had accidentally cut his wrist, again, you lied? [chuckling again]",
+    "clean": "And when you said that he had accidentally cut his wrist, again, you lied?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sir Wilfrid: [chuckling further] And now today you've told us a new story entirely! [serious now] The question is, Frau Helm, were you lying then, are you lying now, or are you not in fact a chronic and habitual LIAR?!",
+    "clean": "And now today you've told us a new story entirely! The question is, Frau Helm, were you lying then, are you lying now, or are you not in fact a chronic and habitual LIAR?!"
+  }
+]

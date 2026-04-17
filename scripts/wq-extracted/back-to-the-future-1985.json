@@ -1,0 +1,387 @@
+[
+  {
+    "heading": "Doc Brown",
+    "raw": "If my calculations are correct, when this baby hits 88 miles per hour, you're gonna see some serious shit.",
+    "clean": "If my calculations are correct, when this baby hits 88 miles per hour, you're gonna see some serious shit."
+  },
+  {
+    "heading": "Doc Brown",
+    "raw": "Next Saturday night, we're sending you back to the future!",
+    "clean": "Next Saturday night, we're sending you back to the future!"
+  },
+  {
+    "heading": "Doc Brown",
+    "raw": "I'm sure that in 1985, plutonium is available in every corner drugstore, but in 1955, it's a little hard to come by.",
+    "clean": "I'm sure that in 1985, plutonium is available in every corner drugstore, but in 1955, it's a little hard to come by."
+  },
+  {
+    "heading": "Doc Brown",
+    "raw": "Great Scott!",
+    "clean": "Great Scott!"
+  },
+  {
+    "heading": "Biff Tannen",
+    "raw": "Since you're new here, I-I'm gonna cut you a break, today. So, why don't you make like a tree and get outta here?",
+    "clean": "Since you're new here, I-I'm gonna cut you a break, today. So, why don't you make like a tree and get outta here?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: [to Jennifer] You know, this time it wasn't my fault. The Doc set all his clocks 25 minutes slow.",
+    "clean": "You know, this time it wasn't my fault. The Doc set all his clocks 25 minutes slow."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: [sarcastically] Oh, yes, sir.",
+    "clean": "Oh, yes, sir."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Strickland: You got a real attitude problem, McFly. You're a slacker. You remind me of your father when he went here. He was a slacker, too.",
+    "clean": "You got a real attitude problem, McFly. You're a slacker. You remind me of your father when he went here. He was a slacker, too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Can I go now, Mr. Strickland?",
+    "clean": "Can I go now, Mr. Strickland?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Strickland: I noticed your band is on the roster for the dance auditions after school today. Why even bother, McFly? You don't have a chance. You're too much like your old man. No McFly ever amounted to anything in the history of Hill Valley!",
+    "clean": "I noticed your band is on the roster for the dance auditions after school today. Why even bother, McFly? You don't have a chance. You're too much like your old man. No McFly ever amounted to anything in the history of Hill Valley!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Yeah, well, history is gonna change.",
+    "clean": "Yeah, well, history is gonna change."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: \"Too loud\". I can't believe it. I'm never gonna get a chance to play in front of anybody.",
+    "clean": "\"Too loud\". I can't believe it. I'm never gonna get a chance to play in front of anybody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer: Marty, one rejection isn't the end of the world.",
+    "clean": "Marty, one rejection isn't the end of the world."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Nah, I just don't think I'm cut out for music.",
+    "clean": "Nah, I just don't think I'm cut out for music."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer: But you're good, Marty, you're really good. And this audition tape of yours is great, you gotta send it in to the record company. It's like Doc's always saying.",
+    "clean": "But you're good, Marty, you're really good. And this audition tape of yours is great, you gotta send it in to the record company. It's like Doc's always saying."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Yeah. I know, I know. \"If you put your mind to it, you could accomplish anything.\"",
+    "clean": "Yeah. I know, I know. \"If you put your mind to it, you could accomplish anything.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer: That's good advice, Marty.",
+    "clean": "That's good advice, Marty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Alright, okay, Jennifer. What if I send in the tape and they don't like it? I mean, what if they say I'm no good? What if they say, \"Get outta here, kid, you got no future.\" I mean, I just don't think I can take that kind of rejection. (sighs) Jesus, I'm beginning to sound like my old man.",
+    "clean": "Alright, okay, Jennifer. What if I send in the tape and they don't like it? I mean, what if they say I'm no good? What if they say, \"Get outta here, kid, you got no future.\" I mean, I just don't think I can take that kind of rejection. (sighs) Jesus, I'm beginning to sound like my old man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: [about Jennifer] I don't like her, Marty. Any girl who just calls up a boy is just asking for trouble.",
+    "clean": "I don't like her, Marty. Any girl who just calls up a boy is just asking for trouble."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Linda: Oh, Mom, there's nothing wrong with calling a boy.",
+    "clean": "Oh, Mom, there's nothing wrong with calling a boy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: I think it's terrible; Girls chasing boys. When I was your age, I never chased a boy or called a boy or sat in a parked car with a boy.",
+    "clean": "I think it's terrible; Girls chasing boys. When I was your age, I never chased a boy or called a boy or sat in a parked car with a boy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Linda: Then how am I supposed to ever meet anybody?",
+    "clean": "Then how am I supposed to ever meet anybody?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: Well, it will just happen, like the way I met your father.",
+    "clean": "Well, it will just happen, like the way I met your father."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Linda: That was so stupid! Grandpa hit him with the car.",
+    "clean": "That was so stupid! Grandpa hit him with the car."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: [wistfully] It was meant to be. Anyway, if Grandpa hadn't hit him, then none of you would have been born.",
+    "clean": "It was meant to be. Anyway, if Grandpa hadn't hit him, then none of you would have been born."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Linda: Yeah, well, I still don't understand what Dad was doing in the middle of the street.",
+    "clean": "Yeah, well, I still don't understand what Dad was doing in the middle of the street."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: What was it, George? Birdwatching?",
+    "clean": "What was it, George? Birdwatching?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: [distracted, not really listening] What, Lorraine? What?",
+    "clean": "What, Lorraine? What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: Anyway, your grandpa hit him with the car and brought him into the house. He seemed so helpless, like a little lost puppy. And my heart just went out to him.",
+    "clean": "Anyway, your grandpa hit him with the car and brought him into the house. He seemed so helpless, like a little lost puppy. And my heart just went out to him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Linda: Yeah, Mom, we know. You've told us this story a million times. You felt sorry for him, so you decided to go with him to the Fish Under the Sea dance.",
+    "clean": "Yeah, Mom, we know. You've told us this story a million times. You felt sorry for him, so you decided to go with him to the Fish Under the Sea dance."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: Ha! What did I tell you?! 88 MILES PER HOUR! The temporal displacement occurred exactly 1:20 A.M. and zero seconds!",
+    "clean": "Ha! What did I tell you?! 88 MILES PER HOUR! The temporal displacement occurred exactly 1:20 A.M. and zero seconds!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Ah, Jesus Christ! Jesus Christ, Doc, you disintegrated Einstein!",
+    "clean": "Ah, Jesus Christ! Jesus Christ, Doc, you disintegrated Einstein!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: Calm down, Marty! [takes down notes] I didn't disintegrate anything! The molecular structure of both Einstein and the car are completely intact.",
+    "clean": "Calm down, Marty! I didn't disintegrate anything! The molecular structure of both Einstein and the car are completely intact."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Then, where the hell are they?!",
+    "clean": "Then, where the hell are they?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: The appropriate question is, \"When the hell are they?\"! You see, Einstein has just become the world's first time-traveler! I sent him into the future. One minute into the future, to be exact. And at precisely 1:21 A.M. and zero seconds, we shall catch up with him and the time machine!",
+    "clean": "The appropriate question is, \"When the hell are they?\"! You see, Einstein has just become the world's first time-traveler! I sent him into the future. One minute into the future, to be exact. And at precisely 1:21 A.M. and zero seconds, we shall catch up with him and the time machine!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Wait a minute. Wait a minute Doc, uh, are you telling me you built a time machine... out of a DeLorean?",
+    "clean": "Wait a minute. Wait a minute Doc, uh, are you telling me you built a time machine... out of a DeLorean?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: The way I see it, if you're gonna build a time machine into a car, why not do it with some style? Besides, the stainless-steel construction made the flux dispersal-- [his watch beeps] Look out! [the Delorean reappears]",
+    "clean": "The way I see it, if you're gonna build a time machine into a car, why not do it with some style? Besides, the stainless-steel construction made the flux dispersal-- Look out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lou: Are you gonna order somethin’, kid?",
+    "clean": "Are you gonna order somethin', kid?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Yeah, gimme a Tab.",
+    "clean": "Yeah, gimme a Tab."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lou: Tab? I can't give you a tab unless you order somethin'.",
+    "clean": "Tab? I can't give you a tab unless you order somethin'."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Right, gimme a Pepsi Free.",
+    "clean": "Right, gimme a Pepsi Free."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lou: You wanna a Pepsi, pal, you're gonna pay for it.",
+    "clean": "You wanna a Pepsi, pal, you're gonna pay for it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Well just gimme somethin’ without any sugar in it, okay?",
+    "clean": "Well just gimme somethin' without any sugar in it, okay?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lou: Without any sugar.",
+    "clean": "Without any sugar."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: [sees Marty's picture, still thinking Marty is lying to him] Pretty mediocre photographic fakery. They cut off your brother's hair.",
+    "clean": "Pretty mediocre photographic fakery. They cut off your brother's hair."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: I'm tellin' the truth, Doc. You gotta believe me.",
+    "clean": "I'm tellin' the truth, Doc. You gotta believe me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: Then tell me, Future Boy, who's President of the United States in 1985?",
+    "clean": "Then tell me, Future Boy, who's President of the United States in 1985?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Ronald Reagan.",
+    "clean": "Ronald Reagan."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: Ronald Reagan? The actor? [scoffs] Then who's vice-president? Jerry Lewis? I suppose Jane Wyman is the First Lady?",
+    "clean": "Ronald Reagan? The actor? Then who's vice-president? Jerry Lewis? I suppose Jane Wyman is the First Lady?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Whoa, wait. Doc!",
+    "clean": "Whoa, wait. Doc!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: And Jack Benny is Secretary of the Treasury!",
+    "clean": "And Jack Benny is Secretary of the Treasury!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Doc, you gotta listen to me!",
+    "clean": "Doc, you gotta listen to me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: I've had enough practical jokes for one evening! Good night, future boy! [slams door]",
+    "clean": "I've had enough practical jokes for one evening! Good night, future boy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: This is more serious than I thought. Apparently, your mother is amorously infatuated with you instead of your father.",
+    "clean": "This is more serious than I thought. Apparently, your mother is amorously infatuated with you instead of your father."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Whoa, wait a minute, Doc. Are you tryin' to tell me that my mother...has got the hots for me?",
+    "clean": "Whoa, wait a minute, Doc. Are you tryin' to tell me that my mother...has got the hots for me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: Precisely!",
+    "clean": "Precisely!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Whoa, this is heavy.",
+    "clean": "Whoa, this is heavy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: There's that word again: \"heavy.\" Why are things so heavy in the future? Is there a problem with the Earth's gravitational pull?",
+    "clean": "There's that word again: \"heavy.\" Why are things so heavy in the future? Is there a problem with the Earth's gravitational pull?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Lorraine. My density has bought me to you.",
+    "clean": "Lorraine. My density has bought me to you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: [confused] What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: [consults his notepad] Oh. What I meant to say was...",
+    "clean": "Oh. What I meant to say was..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: Wait a minute. Don't I know you from somewhere?",
+    "clean": "Wait a minute. Don't I know you from somewhere?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Yes. Yes. I'm George. George McFly. I'm your density. I mean, your destiny.",
+    "clean": "Yes. Yes. I'm George. George McFly. I'm your density. I mean, your destiny."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: Marty, why are you so nervous?",
+    "clean": "Marty, why are you so nervous?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Lorraine, have you ever, uh, been in a situation where you knew you had to act a certain way, but when you got there, you didn't know if you could go through with it?",
+    "clean": "Lorraine, have you ever, uh, been in a situation where you knew you had to act a certain way, but when you got there, you didn't know if you could go through with it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: You mean, like how you're supposed to act on a first date?",
+    "clean": "You mean, like how you're supposed to act on a first date?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Well, sort of.",
+    "clean": "Well, sort of."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: Oh, I, I think I know exactly what you mean.",
+    "clean": "Oh, I, I think I know exactly what you mean."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Y-y-you do?",
+    "clean": "Y-y-you do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: You know what I do in those situations?",
+    "clean": "You know what I do in those situations?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lorraine: I don't worry. [kisses him hard, then stops and pulls back to see Marty is shocked] This is all wrong. I don't know what it is, but when I kiss you, it's like I'm kissing... my brother. I guess that doesn't make any sense, does it?",
+    "clean": "I don't worry. This is all wrong. I don't know what it is, but when I kiss you, it's like I'm kissing... my brother. I guess that doesn't make any sense, does it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Believe me, it makes perfect sense.",
+    "clean": "Believe me, it makes perfect sense."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: [surprised] You're alive! [Doc unbuttons his suit to reveal the bulletproof vest] Bulletproof vest? How did you know? I di-I never got a chance to tell you. [Doc reveals Marty's torn-up 1955 letter which has been taped back together] What about all that talk about screwing up future events? The spacetime continuum?",
+    "clean": "You're alive! Bulletproof vest? How did you know? I di-I never got a chance to tell you. What about all that talk about screwing up future events? The spacetime continuum?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: Well, I figured, \"what the hell?\"",
+    "clean": "Well, I figured, \"what the hell?\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marty: Hey, Doc, (I think) we better back up. We don't have enough road to get up to 88.",
+    "clean": "Hey, Doc, (I think) we better back up. We don't have enough road to get up to 88."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Doc: Roads? Where we're going, we don't need roads.",
+    "clean": "Roads? Where we're going, we don't need roads."
+  }
+]

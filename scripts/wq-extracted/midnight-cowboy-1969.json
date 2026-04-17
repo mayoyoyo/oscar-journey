@@ -1,0 +1,422 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by John Schlesinger. Written by Waldo Salt, based on the novel of the same name by James Leo Herlihy.",
+    "clean": "Directed by John Schlesinger. Written by Waldo Salt, based on the novel of the same name by James Leo Herlihy."
+  },
+  {
+    "heading": "Joe Buck",
+    "raw": "You know what you can do with them dishes. And if you ain't man enough to do it for yourself, I'd be happy to oblige. I really would.",
+    "clean": "You know what you can do with them dishes. And if you ain't man enough to do it for yourself, I'd be happy to oblige. I really would."
+  },
+  {
+    "heading": "Joe Buck",
+    "raw": "Lotta rich women back there, Ralph, begging for it, paying for it, too...and the men - they're mostly tutti fruttis. So I'm gonna cash in on some of that, right?...Hell, what do I got to stay around here for? I got places to go, right?",
+    "clean": "Lotta rich women back there, Ralph, begging for it, paying for it, too...and the men - they're mostly tutti fruttis. So I'm gonna cash in on some of that, right?...Hell, what do I got to stay around here for? I got places to go, right?"
+  },
+  {
+    "heading": "Joe Buck",
+    "raw": "Well, sir, I ain't a for-real cowboy. But I am one helluva stud.",
+    "clean": "Well, sir, I ain't a for-real cowboy. But I am one helluva stud."
+  },
+  {
+    "heading": "Joe Buck",
+    "raw": "[to himself, in the mirror] You know what you gotta do cowboy.",
+    "clean": "You know what you gotta do cowboy."
+  },
+  {
+    "heading": "Joe Buck",
+    "raw": "[to Ratso] You want me to stay here. You're after somethin'. What are you after? You don't look like a fag.",
+    "clean": "You want me to stay here. You're after somethin'. What are you after? You don't look like a fag."
+  },
+  {
+    "heading": "Joe Buck",
+    "raw": "Yours was the only one left with a palm tree on it. The clothes are damn cheap here too, you know that?",
+    "clean": "Yours was the only one left with a palm tree on it. The clothes are damn cheap here too, you know that?"
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "[to Joe] Terrific shirt.",
+    "clean": "Terrific shirt."
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "You know, with proper management, you could be takin' home fifty, maybe a hundred dollars a day, easy.",
+    "clean": "You know, with proper management, you could be takin' home fifty, maybe a hundred dollars a day, easy."
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "The X on the windows means the landlord can't collect rent, which is a convenience, on account of it's condemned.",
+    "clean": "The X on the windows means the landlord can't collect rent, which is a convenience, on account of it's condemned."
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "Got my own private entrance here. You're the only one who knows about it. Watch the plank. Watch the plank. Break your god-damn skull. No way to collect insurance.",
+    "clean": "Got my own private entrance here. You're the only one who knows about it. Watch the plank. Watch the plank. Break your god-damn skull. No way to collect insurance."
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "It's not, not bad, huh? There's no heat here, but you know, by the time winter comes, I'll be in Florida.",
+    "clean": "It's not, not bad, huh? There's no heat here, but you know, by the time winter comes, I'll be in Florida."
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "You know, in my own place my name ain't Ratso. I mean, it just so happens that in my own place, my name is Enrico Salvatore Rizzo...At least call me Rico in my own god-damn place.",
+    "clean": "You know, in my own place my name ain't Ratso. I mean, it just so happens that in my own place, my name is Enrico Salvatore Rizzo...At least call me Rico in my own god-damn place."
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "Not bad, not bad for a cowboy. You're OK. You're OK.",
+    "clean": "Not bad, not bad for a cowboy. You're OK. You're OK."
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "You want the word on that brother and sister act. Hansel's a fag, and Gretel's got the hots for herself so who cares, right?",
+    "clean": "You want the word on that brother and sister act. Hansel's a fag, and Gretel's got the hots for herself so who cares, right?"
+  },
+  {
+    "heading": "Enrico Salvatore \"Ratso\" \"Rico\" Rizzo",
+    "raw": "I don't think I can walk anymore. I've been fallin' down a lot. I'm scared...You know what they do to ya when, when they know you can't, when they find out that you can't walk-walk. Oh Christ.",
+    "clean": "I don't think I can walk anymore. I've been fallin' down a lot. I'm scared...You know what they do to ya when, when they know you can't, when they find out that you can't walk-walk. Oh Christ."
+  },
+  {
+    "heading": "Mr. O'Daniel",
+    "raw": "[to Joe] I'm gonna use ya. I'm gonna run you ragged...You and me can have fun together. It doesn't have to be joyless.",
+    "clean": "I'm gonna use ya. I'm gonna run you ragged...You and me can have fun together. It doesn't have to be joyless."
+  },
+  {
+    "heading": "Mr. O'Daniel",
+    "raw": "I've prayed on the streets. I've prayed in the saloons. I've prayed in the toilets. It don't matter where, so long as He gets that prayer.",
+    "clean": "I've prayed on the streets. I've prayed in the saloons. I've prayed in the toilets. It don't matter where, so long as He gets that prayer."
+  },
+  {
+    "heading": "Others",
+    "raw": "Annie: Do you love me Joe? Do you love me? Love me? You're the only one Joe. You're the only one. You're better Joe. You're better than the rest of 'em. You're better than any of them Joe. You love me Joe. You're better than all of 'em. You're the best Joe.",
+    "clean": "Do you love me Joe? Do you love me? Love me? You're the only one Joe. You're the only one. You're better Joe. You're better than the rest of 'em. You're better than any of them Joe. You love me Joe. You're better than all of 'em. You're the best Joe."
+  },
+  {
+    "heading": "Others",
+    "raw": "Shirley: Like, uh, say, hay, lay, hay, hey, lay, hmmm...gay ends in y. Hmmm? Do you like that?...Gay, fey. Is that your problem, baby?",
+    "clean": "Like, uh, say, hay, lay, hay, hey, lay, hmmm...gay ends in y. Hmmm? Do you like that?...Gay, fey. Is that your problem, baby?"
+  },
+  {
+    "heading": "Others",
+    "raw": "Bus driver: Okay, folks, everything's all right. Nothing to worry about...Okay folks, nothin' to worry about. Just a little illness. We'll be in Miami in just a few minutes.",
+    "clean": "Okay, folks, everything's all right. Nothing to worry about...Okay folks, nothin' to worry about. Just a little illness. We'll be in Miami in just a few minutes."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cass: I hate to ask you, but you're such a doll.",
+    "clean": "I hate to ask you, but you're such a doll."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: You know, Cass, that's a funny thing you mentioning money. 'Cause I was just about to ask you for some.",
+    "clean": "You know, Cass, that's a funny thing you mentioning money. 'Cause I was just about to ask you for some."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cass: You were gonna ask me for money? Huh?",
+    "clean": "You were gonna ask me for money? Huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Hell, why do you think I come all the way up here from Texas for?",
+    "clean": "Hell, why do you think I come all the way up here from Texas for?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cass: You were gonna ask me for oney? Who the hell do you think you're dealing with? Some old slut on 42nd Street? In case you didn't happen to notice it, ya big Texas longhorn bull, I'm one helluva gorgeous chick.",
+    "clean": "You were gonna ask me for oney? Who the hell do you think you're dealing with? Some old slut on 42nd Street? In case you didn't happen to notice it, ya big Texas longhorn bull, I'm one helluva gorgeous chick."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Now, Cass, take it easy.",
+    "clean": "Now, Cass, take it easy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cass: You heard it. At twenty-eight years old. You think you can come up here, and pull this kind of crap up here! Well, you're out of your mind!",
+    "clean": "You heard it. At twenty-eight years old. You think you can come up here, and pull this kind of crap up here! Well, you're out of your mind!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: You really know the ropes! Damn, I wish I'd bumped into you before.",
+    "clean": "You really know the ropes! Damn, I wish I'd bumped into you before."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: [about Ratso's food] Smells worse hot than it did cold.",
+    "clean": "Smells worse hot than it did cold."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: All right, startin' tomorrow, you cook your own god-damn dinner. Or you get one of your rich Park Avenue ladies to cook for you in her penthouse.",
+    "clean": "All right, startin' tomorrow, you cook your own god-damn dinner. Or you get one of your rich Park Avenue ladies to cook for you in her penthouse."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: I gotta get outta here, gotta get outta here. Miami Beach, that's where you could score. Anybody can score there, even you. In New York, no rich lady with any class at all buys that cowboy crap anymore. They're laughin' at you on the street.",
+    "clean": "I gotta get outta here, gotta get outta here. Miami Beach, that's where you could score. Anybody can score there, even you. In New York, no rich lady with any class at all buys that cowboy crap anymore. They're laughin' at you on the street."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Ain't nobody laughin' at me on the street.",
+    "clean": "Ain't nobody laughin' at me on the street."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Behind your back, I've seen 'em laughin' at you, fella.",
+    "clean": "Behind your back, I've seen 'em laughin' at you, fella."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Aw, what the hell you know about women anyway? When's the last time you scored, boy?",
+    "clean": "Aw, what the hell you know about women anyway? When's the last time you scored, boy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: That's a matter I only talk about at confession. We're not talkin' about me now.",
+    "clean": "That's a matter I only talk about at confession. We're not talkin' about me now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: And when's the last time you've been to confession?",
+    "clean": "And when's the last time you've been to confession?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: It's between me and my confessor. And I'll tell ya another thing. Frankly, you're beginning to smell. And for a stud in New York, that's a handicap.",
+    "clean": "It's between me and my confessor. And I'll tell ya another thing. Frankly, you're beginning to smell. And for a stud in New York, that's a handicap."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Well, don't talk to me about clean. I ain't never seen you change your underwear once the whole time I've been here in New York. And that's pretty peculiar behavior.",
+    "clean": "Well, don't talk to me about clean. I ain't never seen you change your underwear once the whole time I've been here in New York. And that's pretty peculiar behavior."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: I don't have to do that kind of thing in public. I ain't got no need to expose myself.",
+    "clean": "I don't have to do that kind of thing in public. I ain't got no need to expose myself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: No, I bet you don't. I bet you ain't never even been laid! How about that? And you're gonna tell me what appeals to women!",
+    "clean": "No, I bet you don't. I bet you ain't never even been laid! How about that? And you're gonna tell me what appeals to women!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: I know enough to know that that great big, dumb cowboy crap of yours don't appeal to nobody except every jockey on 42nd Street. That's faggot stuff! You wanna call it by its name? That's strictly for fags!",
+    "clean": "I know enough to know that that great big, dumb cowboy crap of yours don't appeal to nobody except every jockey on 42nd Street. That's faggot stuff! You wanna call it by its name? That's strictly for fags!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: John Wayne! You wanna tell me he's a fag? I like the way I look. It makes me feel good. It does. And women like me, god-dammit. Hell, only one thing I've ever been good for is lovin'. Women go crazy for me. That's a really true fact. Ratso, hell: Crazy Annie, they had to send her away.",
+    "clean": "John Wayne! You wanna tell me he's a fag? I like the way I look. It makes me feel good. It does. And women like me, god-dammit. Hell, only one thing I've ever been good for is lovin'. Women go crazy for me. That's a really true fact. Ratso, hell: Crazy Annie, they had to send her away."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Then how come you ain't scored once, the whole time you've been in New York?",
+    "clean": "Then how come you ain't scored once, the whole time you've been in New York?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: 'Cause, 'cause I need management, god-dammit. 'Cause you stole twenty dollars offa me. That's why you're gonna stop crappin' around about Florida. And, and get your skinny butt movin.' And earn twenty dollars worth of management which you owe me.",
+    "clean": "'Cause, 'cause I need management, god-dammit. 'Cause you stole twenty dollars offa me. That's why you're gonna stop crappin' around about Florida. And, and get your skinny butt movin.' And earn twenty dollars worth of management which you owe me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: There you go boy, there's money for ya, that's nine dollars right there plus assorted change, minus 26 cents for milk, plus 5 cents for Dentyne - gum.",
+    "clean": "There you go boy, there's money for ya, that's nine dollars right there plus assorted change, minus 26 cents for milk, plus 5 cents for Dentyne - gum."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Where you been, 42nd Street? That's where you've been.",
+    "clean": "Where you been, 42nd Street? That's where you've been."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Buy yourself some medicine before you die in my damn hands.",
+    "clean": "Buy yourself some medicine before you die in my damn hands."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: She's hooked.",
+    "clean": "She's hooked."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: Like why, cowboy?",
+    "clean": "Like why, cowboy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: I'd say she was good for ten bucks, but I'll ask for twenty.",
+    "clean": "I'd say she was good for ten bucks, but I'll ask for twenty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: Why cowboy whore? Did you know we were gonna make it?",
+    "clean": "Why cowboy whore? Did you know we were gonna make it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: So, uh, do you really want to do business?",
+    "clean": "So, uh, do you really want to do business?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: [referring to Ratso] Who is he? Don't tell me you two are a couple!",
+    "clean": "Who is he? Don't tell me you two are a couple!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gretel: Why are you laughing, Joe? Are you really a cowboy?",
+    "clean": "Why are you laughing, Joe? Are you really a cowboy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Well, I'll tell you the truth now. I ain't a real cowboy, but I am one helluva stud.",
+    "clean": "Well, I'll tell you the truth now. I ain't a real cowboy, but I am one helluva stud."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: A very expensive stud. And I happen to be his manager.",
+    "clean": "A very expensive stud. And I happen to be his manager."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: Incidentally, how much is this gonna cost me?",
+    "clean": "Incidentally, how much is this gonna cost me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Twenty bucks.",
+    "clean": "Twenty bucks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: And taxi fare for me.",
+    "clean": "And taxi fare for me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: Oh, get lost, will ya?",
+    "clean": "Oh, get lost, will ya?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: I agree, but for that service, I charge one buck taxi fare.",
+    "clean": "I agree, but for that service, I charge one buck taxi fare."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: Maybe if you didn't call me ma'am, things might work out better.",
+    "clean": "Maybe if you didn't call me ma'am, things might work out better."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: That's the first god-damned time this thing ever quit on me. It's a fact. You think I'm lyin' to ya?",
+    "clean": "That's the first god-damned time this thing ever quit on me. It's a fact. You think I'm lyin' to ya?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: No, no, I don't think you're lyin'. I just had this funny image. I had this image of a, um, policeman without his stick, and a, uh, bugler without his horn, etcetera, etcetera, etcetera. Well, I think I'm making it worse. Maybe we ought to take a little nap and see what happens.",
+    "clean": "No, no, I don't think you're lyin'. I just had this funny image. I had this image of a, um, policeman without his stick, and a, uh, bugler without his horn, etcetera, etcetera, etcetera. Well, I think I'm making it worse. Maybe we ought to take a little nap and see what happens."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: I ain't sleepy.",
+    "clean": "I ain't sleepy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shirley: Oh! I know, scribbage.",
+    "clean": "Oh! I know, scribbage."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: You ain't gettin' me no doctor. Nope.",
+    "clean": "You ain't gettin' me no doctor. Nope."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: When you're sick, boy, you need a damn doctor.",
+    "clean": "When you're sick, boy, you need a damn doctor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Hey, no doctors, no cops. Don't be so stupid.",
+    "clean": "Hey, no doctors, no cops. Don't be so stupid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Well, what the hell you want me to do?",
+    "clean": "Well, what the hell you want me to do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Florida. You get me to Florida.",
+    "clean": "Florida. You get me to Florida."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Oh hell, I can't go to Florida now.",
+    "clean": "Oh hell, I can't go to Florida now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Just put me on a bus. Just put me on a bus. I don't need you.",
+    "clean": "Just put me on a bus. Just put me on a bus. I don't need you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: You got the damn fever, boy. How the hell you gonna get to Florida?",
+    "clean": "You got the damn fever, boy. How the hell you gonna get to Florida?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Just get me on a bus. You ain't sendin' me to Bellevue...Boy, you're really dumb. I don't need you...Dumb cowboy, boy.",
+    "clean": "Just get me on a bus. You ain't sendin' me to Bellevue...Boy, you're really dumb. I don't need you...Dumb cowboy, boy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Dammit. Shut up. Aw, just when things go right for me, you gotta pull a damn stunt like this.",
+    "clean": "Dammit. Shut up. Aw, just when things go right for me, you gotta pull a damn stunt like this."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: I've been thinkin'. I hope we're not gonna have a lot of trouble about my name down there. Because, I mean, like what's the whole point of this trip anyway, you know?",
+    "clean": "I've been thinkin'. I hope we're not gonna have a lot of trouble about my name down there. Because, I mean, like what's the whole point of this trip anyway, you know?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Keep your blankets on you.",
+    "clean": "Keep your blankets on you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Can you see this guy runnin' around the beach all sun-tanned, and he's goin' in swimmin' like, and somebody yells 'Hey, Ratso!' What's that sound like to you?",
+    "clean": "Can you see this guy runnin' around the beach all sun-tanned, and he's goin' in swimmin' like, and somebody yells 'Hey, Ratso!' What's that sound like to you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: It sounds like I knew ya.",
+    "clean": "It sounds like I knew ya."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: It sounds like crap, admit it. I'm Rico all the time, OK? We're gonna tell all these new people my name's Rico. OK?",
+    "clean": "It sounds like crap, admit it. I'm Rico all the time, OK? We're gonna tell all these new people my name's Rico. OK?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ratso: Here I am goin' to Florida, my leg hurts, my butt hurts, my chest hurts, my face hurts, and if that ain't enough, I gotta pee all over myself. [Joe chuckles] That's funny? I'm fallin' apart here.",
+    "clean": "Here I am goin' to Florida, my leg hurts, my butt hurts, my chest hurts, my face hurts, and if that ain't enough, I gotta pee all over myself. That's funny? I'm fallin' apart here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: You just took a little rest stop that wasn't on the schedule.",
+    "clean": "You just took a little rest stop that wasn't on the schedule."
+  }
+]

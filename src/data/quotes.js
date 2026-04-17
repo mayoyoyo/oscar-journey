@@ -470,4 +470,63 @@ export const QUOTES = {
   'terminator-2-judgment-day-1991': ["I'll be back.", "Hasta la vista, baby.", "Come with me if you want to live.", "It's in your nature to destroy yourselves."],
   'the-lion-king-1994': ["Hakuna matata—it means no worries.", "Remember who you are.", "The past can hurt. But the way I see it, you can either run from it, or learn from it."],
   'before-sunrise-1995': ["If there's any kind of magic in this world, it must be in the attempt of understanding someone sharing something.", "I always feel this pressure of being a strong and independent icon of womanhood.", "Isn't everything we do in life a way to be loved a little more?"],
+
+  // ====================================================================
+  // ESSENTIAL — Expanded (Wikiquote-verified tier 3+ additions)
+  // ====================================================================
+
+  // --- Tier 5 ---
+  'wild-strawberries-1957': ["I'd better tell you I'm a virgin. That's why I'm so cheeky. And I smoke a pipe.", "My wife likes ridiculing me. I let her. It's psychotherapy."],
+  'the-battle-of-algiers-1966': ["It's a faceless enemy, unrecognizable, blending in with hundreds of others.", "The FLN has more of a chance of defeating the French army than the French have of changing the course of history."],
+
+  // --- Tier 4 ---
+  'the-general-1926': ["If you lose this war don't blame me."],
+  'the-passion-of-joan-of-arc-1928': ["Dear God, I accept my death gladly but do not let me suffer too long. Will I be with You tonight in Paradise?"],
+  'm-1931': ["I can't help what I do! I can't help it, I can't...", "But this monster has no right to live. He must disappear. He must be exterminated, without pity... without scruples."],
+  'bicycle-thieves-1948': ["Why should I kill myself worrying when I'll end up just as dead?", "There's a cure for everything except death.", "You live and you suffer."],
+  'ikiru-1952': ["I can't afford to hate anyone. I don't have that kind of time.", "Dying is very difficult.", "How tragic that man can never realize how beautiful life is until he is face to face with death."],
+  'anatomy-of-a-murder-1959': ["The prosecution would like to separate the motive from the act. Well, that's like trying to take the core from an apple without breaking the skin.", "I'm just a humble country lawyer trying to do the best I can against this brilliant prosecutor from the big city of Lansing."],
+  'la-dolce-vita-1960': ["You are everything... everything! You are the first woman on the first day of creation. You are mother, sister, lover, friend, angel, devil, earth, home.", "The great thing is to burn, and not to freeze."],
+  'judgment-at-nuremberg-1961': ["Herr Janning, it \"came to that\" the first time you sentenced a man to death you knew to be innocent."],
+
+  // --- Tier 3 ---
+  'metropolis-1927': ["There can be no understanding between the hand and the head unless the heart acts as mediator."],
+  'scarface-1932': ["Do it first, do it yourself, and keep on doing it.", "I don't know nothin'. I don't see nothin'. I don't hear nothin'. When I do I don't tell the cops."],
+  'it-happened-one-night-1934': ["I come from a long line of stubborn idiots.", "Remember me? I'm the fellow you slept on last night."],
+  'bringing-up-baby-1938': ["When a man is wrestling a leopard in the middle of a pond, he's in no position to run!", "Because I just went gay all of a sudden!"],
+  'gone-with-the-wind-1939': ["Frankly, my dear, I don't give a damn.", "With enough courage, you can do without a reputation.", "What a woman."],
+  'stagecoach-1939': ["Well, there are some things a man just can't run away from.", "Well, I guess you can't break out of prison and into society in the same week."],
+  'the-wizard-of-oz-1939': ["Toto, I've a feeling we're not in Kansas anymore.", "There's no place like home.", "Pay no attention to that man behind the curtain!", "I am Oz, the Great and Powerful!", "Are you a good witch or a bad witch?"],
+  'to-be-or-not-to-be-1942': ["What a husband doesn't know won't hurt his wife.", "Well, Colonel, all I can say is... you can't have your cake and shoot it, too."],
+  'red-river-1948': ["There's three times in a man's life when he has a right to yell at the moon: when he marries, when his children come, and when he finishes a job he had to be crazy to start.", "Don't ever trust anybody until you know 'em."],
+  'the-red-shoes-1948': ["Don't forget, a great impression of simplicity can only be achieved by great agony of body and spirit.", "Why do you want to dance?", "Why do you want to live?"],
+  'the-searchers-1956': ["That'll be the day.", "Let's go home, Debbie.", "I don't believe in surrenders."],
+  'sweet-smell-of-success-1957': ["I'd hate to take a bite outta you. You're a cookie full of arsenic.", "Match me, Sidney.", "The next time you want information, don't scratch for it like a dog, ask for it like a man!"],
+  'throne-of-blood-1957': ["Without ambition, man is not man."],
+  'witness-for-the-prosecution-1957': ["I am constantly surprised that women's hats do not provoke more murders."],
+  'ben-hur-1959': ["You may conquer the land, you may slaughter the people. That is not the end. We will rise again.", "Hate keeps a man alive. It gives him strength.", "Row well and live."],
+  'spartacus-1960': ["I am Spartacus!", "When a free man dies, he loses the pleasure of life. A slave loses his pain."],
+  'yojimbo-1961': ["Coffin maker. Two coffins... No, better make it three."],
+  'the-leopard-1963': ["If we want things to stay as they are, things will have to change.", "Things will have to change in order that they remain the same."],
+  'the-sound-of-music-1965': ["Raindrops on roses and whiskers on kittens, bright copper kettles and warm woolen mittens, brown paper packages tied up with strings, these are a few of my favorite things."],
+  'whos-afraid-of-virginia-woolf-1966': ["Good. Better. Best. Bested.", "Martha, in my mind, you are buried in cement right up to the neck. No, up to the nose - it's much quieter."],
+  'in-cold-blood-1967': ["I despise people who can't control themselves.", "I'd like to apologize, but... who to?"],
+  'in-the-heat-of-the-night-1967': ["I got the motive which is murder and the body which is dead!"],
+  'the-graduate-1967': ["Plastics.", "Mrs. Robinson, you're trying to seduce me... aren't you?", "Would you like me to seduce you?"],
+  'easy-rider-1969': ["If God did not exist, it would be necessary to invent Him.", "You can get out of here, if you haven't killed anybody - at least nobody white."],
+  'midnight-cowboy-1969': ["I'm walkin' here! I'm walkin' here!", "Well, sir, I ain't a for-real cowboy. But I am one helluva stud."],
+  'harold-and-maude-1971': ["I haven't lived... I've died a few times."],
+  'stalker-1979': ["I've never met a single happy person in my life.", "Here the shortest path isn't the simplest. The more indirect, the less risk there is."],
+  'the-empire-strikes-back-1980': ["No. I am your father.", "Do. Or do not. There is no try.", "That is why you fail.", "I love you.", "I know."],
+  'back-to-the-future-1985': ["Great Scott!", "If my calculations are correct, when this baby hits 88 miles per hour, you're gonna see some serious shit.", "Why don't you make like a tree and get outta here?"],
+  'ran-1985': ["Man is born crying. When he has cried enough, he dies.", "In a mad world, only the mad are sane!"],
+  'blue-velvet-1986': ["In dreams, I walk with you. In dreams, I talk to you. In dreams, you're mine, all the time. Forever.", "Heineken!? Fuck that shit! Pabst Blue Ribbon!!"],
+  'malcolm-x-1992': ["We didn't land on Plymouth Rock. Plymouth Rock landed on us!", "The only thing I like integrated is my coffee."],
+  'chungking-express-1994': ["We're all unlucky in love sometimes. When I am, I go jogging. The body loses water when you jog, so you have none left for tears.", "Somehow everything comes with an expiry date."],
+  'toy-story-1995': ["To infinity and beyond!", "Reach for the sky!", "There's a snake in my boots.", "You've got a friend in me."],
+  'the-truman-show-1998': ["Good morning, and in case I don't see ya: Good afternoon, good evening, and good night!", "We accept the reality of the world with which we are presented, it's as simple as that.", "Cue the sun!"],
+  'mulholland-drive-2001': ["Silencio. No hay banda.", "This is the girl.", "Hey, pretty girl, time to wake up."],
+  'before-sunset-2004': ["Memories are wonderful things, if you don't have to deal with the past.", "Even being alone it's better than sitting next to your lover and feeling lonely.", "Life's hard. It's supposed to be. If we didn't suffer, we wouldn't learn a thing."],
+  'eternal-sunshine-of-the-spotless-mind-2004': ["Blessed are the forgetful: for they get the better even of their blunders.", "Constantly talking isn't necessarily communicating.", "I could die right now, I'm just ... happy. I've never felt that before."],
+  'the-dark-knight-2008': ["You either die a hero, or you live long enough to see yourself become the villain.", "Why so serious?", "I believe whatever doesn't kill you simply makes you... stranger.", "The night is darkest just before the dawn. And I promise you, the dawn is coming."],
 };

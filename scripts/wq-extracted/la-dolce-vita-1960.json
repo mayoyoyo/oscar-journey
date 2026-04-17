@@ -1,0 +1,92 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed and co-written by Federico Fellini.",
+    "clean": "Directed and co-written by Federico Fellini."
+  },
+  {
+    "heading": "Marcello Rubini",
+    "raw": "[to Sylvia] You are everything... everything! You are the first woman on the first day of creation. You are mother, sister, lover, friend, angel, devil, earth, home.",
+    "clean": "You are everything... everything! You are the first woman on the first day of creation. You are mother, sister, lover, friend, angel, devil, earth, home."
+  },
+  {
+    "heading": "Marcello Rubini",
+    "raw": "[to Emma] A man who agrees to live like this is a finished man, he's nothing but a worm! I don't believe in your aggressive, sticky, maternal love! I don't want it, I have no use for it! This isn't love, it's brutalization!",
+    "clean": "A man who agrees to live like this is a finished man, he's nothing but a worm! I don't believe in your aggressive, sticky, maternal love! I don't want it, I have no use for it! This isn't love, it's brutalization!"
+  },
+  {
+    "heading": "Marcello Rubini",
+    "raw": "I'm wasting time. I won't manage anything anymore. Once I had ambitions, but maybe I'm losing everything. I forgot everything.",
+    "clean": "I'm wasting time. I won't manage anything anymore. Once I had ambitions, but maybe I'm losing everything. I forgot everything."
+  },
+  {
+    "heading": "Steiner",
+    "raw": "Don't be like me. Salvation doesn't lie within four walls. I'm too serious to be an amateur, but not enough to be a professional. Even the most miserable life is better than a sheltered existence in an organized society where everything is calculated and perfected.",
+    "clean": "Don't be like me. Salvation doesn't lie within four walls. I'm too serious to be an amateur, but not enough to be a professional. Even the most miserable life is better than a sheltered existence in an organized society where everything is calculated and perfected."
+  },
+  {
+    "heading": "Steiner",
+    "raw": "We must get beyond passions, like a great work of art. In such miraculous harmony. We should love each other outside of time... detached.",
+    "clean": "We must get beyond passions, like a great work of art. In such miraculous harmony. We should love each other outside of time... detached."
+  },
+  {
+    "heading": "Steiner",
+    "raw": "[to Emma] The day you understand that you love Marcello more than he does, you'll be happy.",
+    "clean": "The day you understand that you love Marcello more than he does, you'll be happy."
+  },
+  {
+    "heading": "Emma",
+    "raw": "[to Paparazzo] How can you be this way? It's not possible to be like you! Hyenas! You're worse than hyenas! You don't respect anyone! You make me sick! Cowards!",
+    "clean": "How can you be this way? It's not possible to be like you! Hyenas! You're worse than hyenas! You don't respect anyone! You make me sick! Cowards!"
+  },
+  {
+    "heading": "Emma",
+    "raw": "Come home, I'll make Ravioli! I want to make love!",
+    "clean": "Come home, I'll make Ravioli! I want to make love!"
+  },
+  {
+    "heading": "Laura",
+    "raw": "[to Marcello] Stay free, available, like me. Never get married. Never choose. Even in love, it's better to be chosen.",
+    "clean": "Stay free, available, like me. Never get married. Never choose. Even in love, it's better to be chosen."
+  },
+  {
+    "heading": "Iris Tree",
+    "raw": "Le tre grandi evasioni -- fume, bere, letto. [The three great escapes—smoking, drinking, bed.]",
+    "clean": "Le tre grandi evasioni -- fume, bere, letto."
+  },
+  {
+    "heading": "Iris Tree",
+    "raw": "The great thing is to burn, and not to freeze.",
+    "clean": "The great thing is to burn, and not to freeze."
+  },
+  {
+    "heading": "Iris Tree",
+    "raw": "We must all think about tomorrow, but without forgetting to live today.",
+    "clean": "We must all think about tomorrow, but without forgetting to live today."
+  },
+  {
+    "heading": "Other",
+    "raw": "Transvestite: By 1965 there'll be total depravity. How squalid everything will be.",
+    "clean": "By 1965 there'll be total depravity. How squalid everything will be."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: What do you think you like most in life?",
+    "clean": "What do you think you like most in life?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sylvia: I like lots of things. But there are three things I like most. Love, love and love.",
+    "clean": "I like lots of things. But there are three things I like most. Love, love and love."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Journalist: How do you sleep, with pajamas or nightgown?",
+    "clean": "How do you sleep, with pajamas or nightgown?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sylvia: Neither. I sleep only in 2 drops of French perfume.",
+    "clean": "Neither. I sleep only in 2 drops of French perfume."
+  }
+]

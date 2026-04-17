@@ -1,0 +1,27 @@
+[
+  {
+    "heading": "Dialogue",
+    "raw": "Sara: I'd better tell you I'm a virgin. That's why I'm so cheeky. And I smoke a pipe.",
+    "clean": "I'd better tell you I'm a virgin. That's why I'm so cheeky. And I smoke a pipe."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sara: They started arguing about God, and then they lost their tempers. And Anders tried to twist Viktor's arm, and Viktor said that was a lousy argument for God's existence.",
+    "clean": "They started arguing about God, and then they lost their tempers. And Anders tried to twist Viktor's arm, and Viktor said that was a lousy argument for God's existence."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sara: How sweet they both are! I always agree with the one I spoke with last.\"",
+    "clean": "How sweet they both are! I always agree with the one I spoke with last.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alman: My wife likes ridiculing me. I let her. It's psychotherapy.",
+    "clean": "My wife likes ridiculing me. I let her. It's psychotherapy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marianne: I thought: That's his mother. An old woman, cold as ice, more forbidding than death. And this is her son, and there are light-years between them.",
+    "clean": "I thought: That's his mother. An old woman, cold as ice, more forbidding than death. And this is her son, and there are light-years between them."
+  }
+]

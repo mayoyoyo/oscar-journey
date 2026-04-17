@@ -1,0 +1,332 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "It was directed by Peter Weir, and written by Andrew Niccol.",
+    "clean": "It was directed by Peter Weir, and written by Andrew Niccol."
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "Good morning, and in case I don't see ya: Good afternoon, good evening, and good night!",
+    "clean": "Good morning, and in case I don't see ya: Good afternoon, good evening, and good night!"
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "You can't get any further away, before you start coming back.",
+    "clean": "You can't get any further away, before you start coming back."
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "The early bird gathers no moss! The rolling stone catches the worm!",
+    "clean": "The early bird gathers no moss! The rolling stone catches the worm!"
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "Somebody help me, I'm being spontaneous!",
+    "clean": "Somebody help me, I'm being spontaneous!"
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "[Sailing away in the artificially roughened winds and seas] Is that the best you can do? You're gonna have to kill me! [sings] What do ya do with a drunken sailor? What do ya do with a drunken sailor? What do ya do with a drunken sailor ear-lye in the mor-nin'!",
+    "clean": "Is that the best you can do? You're gonna have to kill me! What do ya do with a drunken sailor? What do ya do with a drunken sailor? What do ya do with a drunken sailor ear-lye in the mor-nin'!"
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "[to Meryl who is threatening him with a kitchen utensil] What are you gonna do? Slice me, dice me or peel me? There are so many choices.",
+    "clean": "What are you gonna do? Slice me, dice me or peel me? There are so many choices."
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "[after startling two control room directors by seemingly talking to them, then easing their concerns by seeming to revert back to his eccentricity, whilst they look at their notes temporarily] That one's for free.",
+    "clean": "That one's for free."
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "You never had a camera in my head!",
+    "clean": "You never had a camera in my head!"
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "[watching himself in the mirror in the bathroom] I here by proclaim this planet as Trumania of the Burbank Galaxy!",
+    "clean": "I here by proclaim this planet as Trumania of the Burbank Galaxy!"
+  },
+  {
+    "heading": "Truman Burbank",
+    "raw": "[After credits at end of movie] ,\"I knew this show was fake from the start, it was my incredible acting that fooled everyone\"",
+    "clean": ",\"I knew this show was fake from the start, it was my incredible acting that fooled everyone\""
+  },
+  {
+    "heading": "Christof",
+    "raw": "We accept the reality of the world with which we are presented, it's as simple as that.",
+    "clean": "We accept the reality of the world with which we are presented, it's as simple as that."
+  },
+  {
+    "heading": "Christof",
+    "raw": "If his was more than just a vague ambition, if he [Truman] was absolutely determined to discover the truth, there's no way we could prevent him.",
+    "clean": "If his was more than just a vague ambition, if he was absolutely determined to discover the truth, there's no way we could prevent him."
+  },
+  {
+    "heading": "Christof",
+    "raw": "Cue the sun!",
+    "clean": "Cue the sun!"
+  },
+  {
+    "heading": "Christof",
+    "raw": "That's our hero shot.",
+    "clean": "That's our hero shot."
+  },
+  {
+    "heading": "Christof",
+    "raw": "\"I've given Truman the chance to lead a normal life. The world, the place you live in is the sick place. Seahaven is the way the world should be.\"",
+    "clean": "I've given Truman the chance to lead a normal life. The world, the place you live in is the sick place. Seahaven is the way the world should be."
+  },
+  {
+    "heading": "Christof",
+    "raw": "I am the creator... of a television show",
+    "clean": "I am the creator... of a television show"
+  },
+  {
+    "heading": "Christof",
+    "raw": "[Christof looks in a monitor & sees Truman sailing on the sea] Where you going, Truman?",
+    "clean": "Where you going, Truman?"
+  },
+  {
+    "heading": "Marlon",
+    "raw": "[Speaking as an actor on the show.] It's all true. It’s all real. Nothing here is fake. Nothing you see on this show is fake. It’s merely controlled.",
+    "clean": "It's all true. It's all real. Nothing here is fake. Nothing you see on this show is fake. It's merely controlled."
+  },
+  {
+    "heading": "Marlon",
+    "raw": "That's a whole lot of world for one man.",
+    "clean": "That's a whole lot of world for one man."
+  },
+  {
+    "heading": "Marlon",
+    "raw": "[holding a beer can close to the camera] Now that's a beer.",
+    "clean": "Now that's a beer."
+  },
+  {
+    "heading": "Marlon",
+    "raw": "[looking at a sunset with Truman] That's the big guy... Quite a paintbrush he's got.",
+    "clean": "That's the big guy... Quite a paintbrush he's got."
+  },
+  {
+    "heading": "Marlon",
+    "raw": "[on the bridge with Truman, being fed scripted lines by the show's director] And the last thing I would ever do is lie to you, Truman.",
+    "clean": "And the last thing I would ever do is lie to you, Truman."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marlon: Where the hell's Fiji? Near Florida?",
+    "clean": "Where the hell's Fiji? Near Florida?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: [Pointing to golf ball] See here?",
+    "clean": "See here?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Marlon: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: This is us...[guides finger halfway around ball]",
+    "clean": "This is us..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: and all the way around here... Fiji. You can't get any further away before you start coming back.",
+    "clean": "and all the way around here... Fiji. You can't get any further away before you start coming back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sylvia: Look at what you've done to him!",
+    "clean": "Look at what you've done to him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christof: I have given Truman the chance to lead a normal life. The world, the place you live in, is the sick place. Seahaven is the way the world should be.",
+    "clean": "I have given Truman the chance to lead a normal life. The world, the place you live in, is the sick place. Seahaven is the way the world should be."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: It was Dad. I swear! Dressed like a homeless man. And you know what else was strange? A business man and a woman with a little dog came out of nowhere and forced him onto a bus.",
+    "clean": "It was Dad. I swear! Dressed like a homeless man. And you know what else was strange? A business man and a woman with a little dog came out of nowhere and forced him onto a bus."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman's Mother: Well! It's about time they cleaned up the trash downtown before we become just like the rest of the country.",
+    "clean": "Well! It's about time they cleaned up the trash downtown before we become just like the rest of the country."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Network Executive: For God's sake, Chris! The whole world is watching. We can't just let him die in front of a live audience!",
+    "clean": "For God's sake, Chris! The whole world is watching. We can't just let him die in front of a live audience!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christof: He was born in front of a live audience.",
+    "clean": "He was born in front of a live audience."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Lauren, right? It's on your book.",
+    "clean": "Lauren, right? It's on your book."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lauren: Lauren. Right. Right.",
+    "clean": "Lauren. Right. Right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Well, I'm Truman.",
+    "clean": "Well, I'm Truman."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lauren: Yeah. I know. Look, Truman, I'm not allowed to talk to you. You know.",
+    "clean": "Yeah. I know. Look, Truman, I'm not allowed to talk to you. You know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Yeah, well, I can understand, I'm a pretty dangerous character.",
+    "clean": "Yeah, well, I can understand, I'm a pretty dangerous character."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Blocked at every turn. Beautifully synchronized, don't you agree?",
+    "clean": "Blocked at every turn. Beautifully synchronized, don't you agree?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Meryl: You're blaming me for the traffic?",
+    "clean": "You're blaming me for the traffic?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Should I?",
+    "clean": "Should I?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Meryl: Truman, let's go home.",
+    "clean": "Truman, let's go home."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: You're right. We could be stuck here for hours. It could be like this all the way to Atlantic City. Let's go back. I'm sorry. I don't know what got into me.",
+    "clean": "You're right. We could be stuck here for hours. It could be like this all the way to Atlantic City. Let's go back. I'm sorry. I don't know what got into me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Meryl: Truman, can you slow down?",
+    "clean": "Truman, can you slow down?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Yes, I can.",
+    "clean": "Yes, I can."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Meryl: Truman. Truman, that's our turnoff.",
+    "clean": "Truman. Truman, that's our turnoff."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: I changed my mind. What's New Orleans like this time of year? Mardi Gras, woooooo! Ha ha ha ha ha! Hoo hoo hoo! Whoooohoo! Look, Meryl! Same road, no cars. It's magic! Hahaha!",
+    "clean": "I changed my mind. What's New Orleans like this time of year? Mardi Gras, woooooo! Ha ha ha ha ha! Hoo hoo hoo! Whoooohoo! Look, Meryl! Same road, no cars. It's magic! Hahaha!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Meryl: You let me out, Truman. You're not right in the head! You want to destroy yourself, you do it on your own!",
+    "clean": "You let me out, Truman. You're not right in the head! You want to destroy yourself, you do it on your own!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: I think I'd like a little company.",
+    "clean": "I think I'd like a little company."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Young Truman: I want to be an explorer, like the Great Magellan.",
+    "clean": "I want to be an explorer, like the Great Magellan."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Teacher: [indicating a map of the world] Oh, you're too late! There's nothing left to explore!",
+    "clean": "Oh, you're too late! There's nothing left to explore!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Who are you talking to?",
+    "clean": "Who are you talking to?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: [to an unseen Christof] Who are you?",
+    "clean": "Who are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christof: [voice-over] I am The Creator - of a television show that gives hope and joy and inspiration to millions.",
+    "clean": "I am The Creator - of a television show that gives hope and joy and inspiration to millions."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Then who am I?",
+    "clean": "Then who am I?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christof: You're the star.",
+    "clean": "You're the star."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Truman: Was nothing real?",
+    "clean": "Was nothing real?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christof: You were real. That's what made you so good to watch.",
+    "clean": "You were real. That's what made you so good to watch."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Network Executive: [hanging up a phone call] The sponsors are threatening to rip up their contracts!",
+    "clean": "The sponsors are threatening to rip up their contracts!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Christof: [pointing at the \"Technical fault... Please stand by...\" graphic] Why? We're getting higher ratings for this graphic than we've ever had on this show.",
+    "clean": "Why? We're getting higher ratings for this graphic than we've ever had on this show."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Security Guard 1: You want another slice?",
+    "clean": "Security Guard 1: You want another slice?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Security Guard 2: No, I'm OK.",
+    "clean": "Security Guard 2: No, I'm OK."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Security Guard 1: What else is on?",
+    "clean": "Security Guard 1: What else is on?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Security Guard 2: Yeah, let's see what else is on.",
+    "clean": "Security Guard 2: Yeah, let's see what else is on."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Security Guard 1: Where's the TV guide?",
+    "clean": "Security Guard 1: Where's the TV guide?"
+  }
+]

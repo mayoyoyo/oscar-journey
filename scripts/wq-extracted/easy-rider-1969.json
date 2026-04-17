@@ -1,0 +1,397 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Dennis Hopper. Written by Dennis Hopper, Peter Fonda, and Terry Southern.",
+    "clean": "Directed by Dennis Hopper. Written by Dennis Hopper, Peter Fonda, and Terry Southern."
+  },
+  {
+    "heading": "Wyatt",
+    "raw": "No, I mean it. You've got a nice place. It's not every man that can live off the land, you know. You do your own thing in your own time. You should be proud.",
+    "clean": "No, I mean it. You've got a nice place. It's not every man that can live off the land, you know. You do your own thing in your own time. You should be proud."
+  },
+  {
+    "heading": "Wyatt",
+    "raw": "[reading inscription] \"If God did not exist, it would be necessary to invent Him.\"",
+    "clean": "If God did not exist, it would be necessary to invent Him."
+  },
+  {
+    "heading": "Wyatt",
+    "raw": "[while tripping on LSD] Oh Mother why didn't you tell me? Why didn't anybody tell me anything?...What are you doing to me now?...Shut up!...How could you make me hate you so?...Oh God, I hate you so much.",
+    "clean": "Oh Mother why didn't you tell me? Why didn't anybody tell me anything?...What are you doing to me now?...Shut up!...How could you make me hate you so?...Oh God, I hate you so much."
+  },
+  {
+    "heading": "Wyatt",
+    "raw": "[about marijuana] It gives you a whole new way of looking at the day.",
+    "clean": "It gives you a whole new way of looking at the day."
+  },
+  {
+    "heading": "Billy",
+    "raw": "I never really thought of myself as a freak, ya know...but I Love to Freak!",
+    "clean": "I never really thought of myself as a freak, ya know...but I Love to Freak!"
+  },
+  {
+    "heading": "Billy",
+    "raw": "Whew. Man, look, I gotta get out of here, man. Now we - we got things we want to do, man, like - I just - uh - I gotta get out of here, man.",
+    "clean": "Whew. Man, look, I gotta get out of here, man. Now we - we got things we want to do, man, like - I just - uh - I gotta get out of here, man."
+  },
+  {
+    "heading": "Billy",
+    "raw": "You gotta be kidding. I mean, you know who this is, man? This is Captain America. I'm Billy. Hey, we're headliners baby. We played every fair in this part of the country. I mean, for top dollar, too!",
+    "clean": "You gotta be kidding. I mean, you know who this is, man? This is Captain America. I'm Billy. Hey, we're headliners baby. We played every fair in this part of the country. I mean, for top dollar, too!"
+  },
+  {
+    "heading": "George Hanson",
+    "raw": "You can get out of here, if you haven't killed anybody - at least nobody white.",
+    "clean": "You can get out of here, if you haven't killed anybody - at least nobody white."
+  },
+  {
+    "heading": "George Hanson",
+    "raw": "[to guard] Very groovy. Very groovy. See there. I bet nobody ever said that to you.",
+    "clean": "Very groovy. Very groovy. See there. I bet nobody ever said that to you."
+  },
+  {
+    "heading": "George Hanson",
+    "raw": "Here's to the first of the day, fellas. To ol' D. H. Lawrence. Nik-nik-nik-f-f-f-Indians!",
+    "clean": "Here's to the first of the day, fellas. To ol' D. H. Lawrence. Nik-nik-nik-f-f-f-Indians!"
+  },
+  {
+    "heading": "George Hanson",
+    "raw": "I must've started off to Mardi Gras six or seven times. Never got further than the state line.",
+    "clean": "I must've started off to Mardi Gras six or seven times. Never got further than the state line."
+  },
+  {
+    "heading": "George Hanson",
+    "raw": "'Madame Tinkertoy's House of Blue Lights. Corner of Bourbon and Toulouse, New Orleans, Louisiana.' Now this is supposed to be the finest whorehouse in the South. These ain't no pork chops. These are U.S. Prime.",
+    "clean": "'Madame Tinkertoy's House of Blue Lights. Corner of Bourbon and Toulouse, New Orleans, Louisiana.' Now this is supposed to be the finest whorehouse in the South. These ain't no pork chops. These are U.S. Prime."
+  },
+  {
+    "heading": "George Hanson",
+    "raw": "You- you mean marijuana. Lord have mercy, is that what that is? Well, let me see that. Mmmmm-mmm. Mmmm...I-I-I couldn't do that. I mean, I've got enough problems with the - with the booze and all. I mean, uh, I - I can't afford to get hooked...it-it-it leads to harder stuff.",
+    "clean": "You- you mean marijuana. Lord have mercy, is that what that is? Well, let me see that. Mmmmm-mmm. Mmmm...I-I-I couldn't do that. I mean, I've got enough problems with the - with the booze and all. I mean, uh, I - I can't afford to get hooked...it-it-it leads to harder stuff."
+  },
+  {
+    "heading": "The Stranger",
+    "raw": "It doesn't make any difference what city. All cities are alike. That's why I'm out here now...cause I'm from the city, a long way from the city - and that's where I want to be right now.",
+    "clean": "It doesn't make any difference what city. All cities are alike. That's why I'm out here now...cause I'm from the city, a long way from the city - and that's where I want to be right now."
+  },
+  {
+    "heading": "The Stranger",
+    "raw": "The people this place belongs to are buried right under you. You could be a trifle polite...It's a small thing to ask.",
+    "clean": "The people this place belongs to are buried right under you. You could be a trifle polite...It's a small thing to ask."
+  },
+  {
+    "heading": "Others",
+    "raw": "Rancher: Turn that thing off. You're making my horse skittish. ... Sure is a good-looking machine.",
+    "clean": "Turn that thing off. You're making my horse skittish. ... Sure is a good-looking machine."
+  },
+  {
+    "heading": "Others",
+    "raw": "Joanne: [reading from the I-Ching] Starting brings misfortune. Per-serverance brings danger. Not every demand for change in the existing order should be heeded. On the other hand, repeated and well-founded complaints should not fail to a hearing.",
+    "clean": "Starting brings misfortune. Per-serverance brings danger. Not every demand for change in the existing order should be heeded. On the other hand, repeated and well-founded complaints should not fail to a hearing."
+  },
+  {
+    "heading": "Others",
+    "raw": "The Devil: Hear ye, hear ye, hear ye. We've come to play for our dinner. Or should I say, stay for our dinner. Or even slay for our dinner...We've come to drink your wine, taste your food and take pleasure in your women.",
+    "clean": "Hear ye, hear ye, hear ye. We've come to play for our dinner. Or should I say, stay for our dinner. Or even slay for our dinner...We've come to drink your wine, taste your food and take pleasure in your women."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: You're pulling inside, man. You're getting a little distance tonight.",
+    "clean": "You're pulling inside, man. You're getting a little distance tonight."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: Yeah, well, I'm just getting my thing together.",
+    "clean": "Yeah, well, I'm just getting my thing together."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: Hey man, everything that we ever dreamed of is in that teardrop gas tank - and you got a stranger over there pourin' gasoline all over it. Man, all he's got to do is turn and look over into it, man, and he can see that...",
+    "clean": "Hey man, everything that we ever dreamed of is in that teardrop gas tank - and you got a stranger over there pourin' gasoline all over it. Man, all he's got to do is turn and look over into it, man, and he can see that..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: He won't know what it is, man. He won't know what it is. Don't worry, Billy. Everything's all right.",
+    "clean": "He won't know what it is, man. He won't know what it is. Don't worry, Billy. Everything's all right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: You ever want to be somebody else?",
+    "clean": "You ever want to be somebody else?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Stranger: I'd like to try Porky Pig.",
+    "clean": "I'd like to try Porky Pig."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: I never wanted to be anybody else.",
+    "clean": "I never wanted to be anybody else."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: This is nothing but sand, man. They ain't gonna make it, man. They ain't gonna grow anything here.",
+    "clean": "This is nothing but sand, man. They ain't gonna make it, man. They ain't gonna grow anything here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: They're gonna make it. Dig, man. They're gonna make it.",
+    "clean": "They're gonna make it. Dig, man. They're gonna make it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Stranger: [giving Wyatt some LSD] When you get to the right place, with the right people, quarter this. You know, this could be the right place. The time's running out.",
+    "clean": "When you get to the right place, with the right people, quarter this. You know, this could be the right place. The time's running out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: Yeah, I'm, I'm hip about time. But I just gotta go.",
+    "clean": "Yeah, I'm, I'm hip about time. But I just gotta go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: I'm sorry about the misunderstanding.",
+    "clean": "I'm sorry about the misunderstanding."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George Hanson: There was no misunderstanding. We're all in the same cage here.",
+    "clean": "There was no misunderstanding. We're all in the same cage here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: You must be some important dude. That treatment--",
+    "clean": "You must be some important dude. That treatment--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George Hanson: What does he mean \"dude\"? Dude ranch?",
+    "clean": "What does he mean \"dude\"? Dude ranch?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: \"Dude\" means a nice guy, you know? \"Dude\" means a regular sort of person.",
+    "clean": "\"Dude\" means a nice guy, you know? \"Dude\" means a regular sort of person."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Deputy: What the hell is this? Troublemakers?",
+    "clean": "What the hell is this? Troublemakers?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cat Man: You name it - I'll throw rocks at it, Sheriff.",
+    "clean": "You name it - I'll throw rocks at it, Sheriff."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cat Man: Check that joker with the long hair.",
+    "clean": "Check that joker with the long hair."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Deputy: I checked him already. Looks like we might have to bring him up to the Hilton before it's all over with.",
+    "clean": "I checked him already. Looks like we might have to bring him up to the Hilton before it's all over with."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cat Man: Ha! I think she's cute.",
+    "clean": "Ha! I think she's cute."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Deputy: Isn't she, though. I guess we'd put him in the women's cell, don't you reckon?",
+    "clean": "Isn't she, though. I guess we'd put him in the women's cell, don't you reckon?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cat Man: Oh, I think we ought to put 'em in a cage and charge a little admission to see 'em.",
+    "clean": "Oh, I think we ought to put 'em in a cage and charge a little admission to see 'em."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Those are what is known as 'country witticisms'.",
+    "clean": "Those are what is known as 'country witticisms'."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 1: You know, I thought at first that bunch over there, their mothers had maybe been frightened by a bunch of gorillas, but now I think they were caught.",
+    "clean": "Customer 1: You know, I thought at first that bunch over there, their mothers had maybe been frightened by a bunch of gorillas, but now I think they were caught."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 2: I know one of them's Alley-oop - I think. From the beads on him.",
+    "clean": "Customer 2: I know one of them's Alley-oop - I think. From the beads on him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 4: Well, one of them darned sure is not Oola.",
+    "clean": "Customer 4: Well, one of them darned sure is not Oola."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 1: Look like a bunch of refugees from a gorilla love-in.",
+    "clean": "Customer 1: Look like a bunch of refugees from a gorilla love-in."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 2: A gorilla couldn't love that.",
+    "clean": "Customer 2: A gorilla couldn't love that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 1: Nor could a mother.",
+    "clean": "Customer 1: Nor could a mother."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 3: I'd love to mate him up with one of those black wenches out there.",
+    "clean": "Customer 3: I'd love to mate him up with one of those black wenches out there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 4: Oh, now I don't know about that.",
+    "clean": "Customer 4: Oh, now I don't know about that."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 3: Well, that's about as low as they come. I'll tell ya...Man, they're green.",
+    "clean": "Customer 3: Well, that's about as low as they come. I'll tell ya...Man, they're green."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 4: No, they're not green, they're white.",
+    "clean": "Customer 4: No, they're not green, they're white."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 3: White? Huh!",
+    "clean": "Customer 3: White? Huh!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 4: Uh-huh.",
+    "clean": "Customer 4: Uh-huh."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 3: Man, you're color blind. I just gotta say that...",
+    "clean": "Customer 3: Man, you're color blind. I just gotta say that..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 1: I don't know. I thought most jails were built for humanity, and that won't quite qualify.",
+    "clean": "Customer 1: I don't know. I thought most jails were built for humanity, and that won't quite qualify."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 2: I wonder where they got those wigs from.",
+    "clean": "Customer 2: I wonder where they got those wigs from."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 1: They probably grew 'em. It looks like they're standin' in fertilizer. Nothin' else would grow on 'em...",
+    "clean": "Customer 1: They probably grew 'em. It looks like they're standin' in fertilizer. Nothin' else would grow on 'em..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Customer 3: I saw two of them one time. They were just kissin' away. Two males. Just think of it.",
+    "clean": "Customer 3: I saw two of them one time. They were just kissin' away. Two males. Just think of it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Deputy: What'cha think we ought to do with 'em?",
+    "clean": "What'cha think we ought to do with 'em?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cat Man: I don't damn know, but I don't think they'll make the parish line.",
+    "clean": "I don't damn know, but I don't think they'll make the parish line."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: You know, this used to be a helluva good country. I can't understand what's gone wrong with it.",
+    "clean": "You know, this used to be a helluva good country. I can't understand what's gone wrong with it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: Huh. Man, everybody got chicken, that's what happened, man. Hey, we can't even get into like, uh, second-rate hotel, I mean, a second-rate motel. You dig? They think we're gonna cut their throat or something, man. They're scared, man.",
+    "clean": "Huh. Man, everybody got chicken, that's what happened, man. Hey, we can't even get into like, uh, second-rate hotel, I mean, a second-rate motel. You dig? They think we're gonna cut their throat or something, man. They're scared, man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oh, they're not scared of you. They're scared of what you represent to 'em.",
+    "clean": "Oh, they're not scared of you. They're scared of what you represent to 'em."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: Hey man. All we represent to them, man, is somebody needs a haircut.",
+    "clean": "Hey man. All we represent to them, man, is somebody needs a haircut."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oh no. What you represent to them is freedom.",
+    "clean": "Oh no. What you represent to them is freedom."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: What the hell's wrong with freedom, man? That's what it's all about.",
+    "clean": "What the hell's wrong with freedom, man? That's what it's all about."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: Mmmm, well, that don't make 'em runnin' scared.",
+    "clean": "Mmmm, well, that don't make 'em runnin' scared."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: No, it makes 'em dangerous. Nik, nik, nik, nik, nik, nik, nik, nik - Swamp.",
+    "clean": "No, it makes 'em dangerous. Nik, nik, nik, nik, nik, nik, nik, nik - Swamp."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: We've done it. We've done it. We're rich. Wyatt. [laughs] Yeah, man. [laughs] Yeah. Clearly, we did it, man we did it. We did it. Huh. We're rich, man. We're retired in Florida, now, mister. Whew.",
+    "clean": "We've done it. We've done it. We're rich. Wyatt. Yeah, man. Yeah. Clearly, we did it, man we did it. We did it. Huh. We're rich, man. We're retired in Florida, now, mister. Whew."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: You know, Billy. We blew it.",
+    "clean": "You know, Billy. We blew it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: What? Huh? Wha-wha-wha- That's what it's all about, man. I mean, like you know - I mean, you go for the big money, man, and then you're free. You dig? [Laughs]",
+    "clean": "What? Huh? Wha-wha-wha- That's what it's all about, man. I mean, like you know - I mean, you go for the big money, man, and then you're free. You dig?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: We blew it. Good night, man.",
+    "clean": "We blew it. Good night, man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Driver: Hey, Roy, look at them ginks!",
+    "clean": "Hey, Roy, look at them ginks!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Roy: Pull alongside, we'll scare the hell out of 'em. [to Billy] Want me to blow your brains out? [Billy obscenely gestures at him] Why don't you get a haircut?",
+    "clean": "Pull alongside, we'll scare the hell out of 'em. Want me to blow your brains out? Why don't you get a haircut?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: [after being shot] Oh my God!",
+    "clean": "Oh my God!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wyatt: Oh my God! I'm going for help, Billy.",
+    "clean": "Oh my God! I'm going for help, Billy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Billy: I got 'em. I'm gonna get 'em. ...Man, I-I'm gonna get 'em. Where are they now?",
+    "clean": "I got 'em. I'm gonna get 'em. ...Man, I-I'm gonna get 'em. Where are they now?"
+  }
+]

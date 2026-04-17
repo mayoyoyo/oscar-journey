@@ -1,0 +1,77 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Akira Kurosawa. Written by Akira Kurosawa and Ryuzo Kikushima.",
+    "clean": "Directed by Akira Kurosawa. Written by Akira Kurosawa and Ryuzo Kikushima."
+  },
+  {
+    "heading": "English opening text",
+    "raw": "The time is 1860... the emergence of a middle class has brought an end to power of the Tokugawa Dynasty... A samurai, once a dedicated warrior in the employ of Royalty, now finds himself with no master to serve other than his own will to survive... and no devices other than his wit and sword.",
+    "clean": "The time is 1860... the emergence of a middle class has brought an end to power of the Tokugawa Dynasty... A samurai, once a dedicated warrior in the employ of Royalty, now finds himself with no master to serve other than his own will to survive... and no devices other than his wit and sword."
+  },
+  {
+    "heading": "Sanjuro Kuwabatake",
+    "raw": "[family he has just saved is crying with gratitude] Stop it. Stop it! I hate weaklings! [they keep crying] Stop crying, or I'll kill you!",
+    "clean": "Stop it. Stop it! I hate weaklings! Stop crying, or I'll kill you!"
+  },
+  {
+    "heading": "Sanjuro Kuwabatake",
+    "raw": "[Sanjuro has just killed two men and cut the arm off a third] Coffin maker. Two coffins... No, better make it three.",
+    "clean": "Coffin maker. Two coffins... No, better make it three."
+  },
+  {
+    "heading": "Sanjuro Kuwabatake",
+    "raw": "[after the gamblers have challenged him] Well, they say medicine can't cure an idiot. [draws sword and kills two of them]",
+    "clean": "Well, they say medicine can't cure an idiot."
+  },
+  {
+    "heading": "Sanjuro Kuwabatake",
+    "raw": "You haven't seen the last of me yet. There's a few dozen people I want to kill before I die.",
+    "clean": "You haven't seen the last of me yet. There's a few dozen people I want to kill before I die."
+  },
+  {
+    "heading": "Unosuke",
+    "raw": "If I don't have my pistol, I feel almost naked.",
+    "clean": "If I don't have my pistol, I feel almost naked."
+  },
+  {
+    "heading": "Orin",
+    "raw": "Whether you kill one man or a hundred, you're just a man who can only be hanged once.",
+    "clean": "Whether you kill one man or a hundred, you're just a man who can only be hanged once."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sanjuro: So you've no objection to being killed?",
+    "clean": "So you've no objection to being killed?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gambler: Hit me if you can! If you think you can do it, try it!",
+    "clean": "Hit me if you can! If you think you can do it, try it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sanjuro: You know, that might hurt a little.",
+    "clean": "You know, that might hurt a little."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gonji: I hope that you are not afraid of ghosts.",
+    "clean": "I hope that you are not afraid of ghosts."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Inokichi: Who, me? Of course I'm not afraid of ghosts; they don't exist!",
+    "clean": "Who, me? Of course I'm not afraid of ghosts; they don't exist!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hansuke: What's the matter? Why are you looking so gloomy, huh? It's a good chance for you to make a lot of money.",
+    "clean": "What's the matter? Why are you looking so gloomy, huh? It's a good chance for you to make a lot of money."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "The Cooper: You're mistaken. When the fight gets too big, nobody thinks about coffins.",
+    "clean": "You're mistaken. When the fight gets too big, nobody thinks about coffins."
+  }
+]

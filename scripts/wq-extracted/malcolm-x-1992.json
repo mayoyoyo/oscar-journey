@@ -1,0 +1,157 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Spike Lee. Written by Spike Lee and Arnold Perl, based on The Autobiography of Malcolm X by Alex Haley.",
+    "clean": "Directed by Spike Lee. Written by Spike Lee and Arnold Perl, based on The Autobiography of Malcolm X by Alex Haley."
+  },
+  {
+    "heading": "Malcolm X",
+    "raw": "Like every hustler I was trapped. Cats that hung out together trying to find a solution found nothing. Cats that might have proved space or cured cancer, West Indian Archie might have been a mathematical genius... but we were all victims of the American social order.",
+    "clean": "Like every hustler I was trapped. Cats that hung out together trying to find a solution found nothing. Cats that might have proved space or cured cancer, West Indian Archie might have been a mathematical genius... but we were all victims of the American social order."
+  },
+  {
+    "heading": "Malcolm X",
+    "raw": "We had the best organization a black man's ever had. Niggers ruined it.",
+    "clean": "We had the best organization a black man's ever had. Niggers ruined it."
+  },
+  {
+    "heading": "Malcolm X",
+    "raw": "The only thing I like integrated is my coffee.",
+    "clean": "The only thing I like integrated is my coffee."
+  },
+  {
+    "heading": "Malcolm X",
+    "raw": "We didn't land on Plymouth Rock. Plymouth Rock landed on us!",
+    "clean": "We didn't land on Plymouth Rock. Plymouth Rock landed on us!"
+  },
+  {
+    "heading": "Elijah Muhammad",
+    "raw": "You will be on the public eye. Beware on them cameras. Oh, them cameras are bad as any narcotic.",
+    "clean": "You will be on the public eye. Beware on them cameras. Oh, them cameras are bad as any narcotic."
+  },
+  {
+    "heading": "Brother Baines",
+    "raw": "A man curses because he doesn't have the words to say what's on his mind.",
+    "clean": "A man curses because he doesn't have the words to say what's on his mind."
+  },
+  {
+    "heading": "Brother Baines",
+    "raw": "A Muslim must be strikingly upright; an outstanding example so that those in the darkness can see the power of the light.",
+    "clean": "A Muslim must be strikingly upright; an outstanding example so that those in the darkness can see the power of the light."
+  },
+  {
+    "heading": "Others",
+    "raw": "Captain Green: [Witnessing Malcolm's control over a mob] That's too much power for one man to have.",
+    "clean": "That's too much power for one man to have."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: [about the disciples of Christ] What color were they?",
+    "clean": "What color were they?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: Well, I don't think we know that for certain.",
+    "clean": "Well, I don't think we know that for certain."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: But they were Hebrews, were they not?",
+    "clean": "But they were Hebrews, were they not?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: That's right.",
+    "clean": "That's right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: As was Jesus. Jesus was also a Hebrew.",
+    "clean": "As was Jesus. Jesus was also a Hebrew."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: Why don't you just ask your question.",
+    "clean": "Why don't you just ask your question."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: What color were the original Hebrews?",
+    "clean": "What color were the original Hebrews?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: I have told you that we don't know that for certain.",
+    "clean": "I have told you that we don't know that for certain."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: Then you can't believe for certain that Jesus was white.",
+    "clean": "Then you can't believe for certain that Jesus was white."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: Just... Just a moment. Just a moment. God is white. [pointing to a painting of a white Jesus hanging on the wall] Isn't it obvious?",
+    "clean": "Just... Just a moment. Just a moment. God is white. Isn't it obvious?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: Now just... just what are you saying?",
+    "clean": "Now just... just what are you saying?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: I'm not saying anything; I'm proving to you that Jesus was not, and I might quote one of my Indian brothers, he was not a pale-face.",
+    "clean": "I'm not saying anything; I'm proving to you that Jesus was not, and I might quote one of my Indian brothers, he was not a pale-face."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: [pensively] Uh-huh.",
+    "clean": "Uh-huh."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: Amen.",
+    "clean": "Amen."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chaplain Gill: Isn't that interesting.",
+    "clean": "Isn't that interesting."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Coed: Mr. X, I've read some of your speeches and I honestly believe a lot of what you say has truth to it. I have a good heart. I'm a good person despite my whiteness. What can the good white people like myself, who are not prejudiced, or racist, what can we do to help the cause?",
+    "clean": "Mr. X, I've read some of your speeches and I honestly believe a lot of what you say has truth to it. I have a good heart. I'm a good person despite my whiteness. What can the good white people like myself, who are not prejudiced, or racist, what can we do to help the cause?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: Nothing.",
+    "clean": "Nothing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Report #1: Malcolm, you said on your trip abroad you sensed a feeling of great brotherhood.",
+    "clean": "Report #1: Malcolm, you said on your trip abroad you sensed a feeling of great brotherhood."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reporter #8: Malcolm, are you prepared to go to the United Nations at this point and ask that charges be brought against the United States for its treatment of the American Negroes?",
+    "clean": "Reporter #8: Malcolm, are you prepared to go to the United Nations at this point and ask that charges be brought against the United States for its treatment of the American Negroes?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reporter #2: One of your more controversial remarks was a call for black people to get rifles and form rifle clubs sometime back. Do you still favor that for self-defense?",
+    "clean": "Reporter #2: One of your more controversial remarks was a call for black people to get rifles and form rifle clubs sometime back. Do you still favor that for self-defense?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Reporter #2: What about the guns, Malcolm?",
+    "clean": "Reporter #2: What about the guns, Malcolm?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Malcolm X: Has the white man changed since I went away? Have you put up your guns? The day you stop being violent against my people will be the day I tell folks to put away their guns.",
+    "clean": "Has the white man changed since I went away? Have you put up your guns? The day you stop being violent against my people will be the day I tell folks to put away their guns."
+  }
+]

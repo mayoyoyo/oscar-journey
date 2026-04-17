@@ -1,0 +1,787 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Victor Fleming. Written by Sidney Howard, based on the novel by Margaret Mitchell.",
+    "clean": "Directed by Victor Fleming. Written by Sidney Howard, based on the novel by Margaret Mitchell."
+  },
+  {
+    "heading": "Rhett Butler",
+    "raw": "What a woman.",
+    "clean": "What a woman."
+  },
+  {
+    "heading": "Rhett Butler",
+    "raw": "With enough courage, you can do without a reputation.",
+    "clean": "With enough courage, you can do without a reputation."
+  },
+  {
+    "heading": "Rhett Butler",
+    "raw": "I'm very drunk and I intend on getting still drunker before this evening is over.",
+    "clean": "I'm very drunk and I intend on getting still drunker before this evening is over."
+  },
+  {
+    "heading": "Rhett Butler",
+    "raw": "Frankly, my dear, I don't give a damn.",
+    "clean": "Frankly, my dear, I don't give a damn."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Brent Tarleton: What do we care if we were expelled from college, Scarlett? The war is gonna start any day now, so we'd have left college anyhow.",
+    "clean": "What do we care if we were expelled from college, Scarlett? The war is gonna start any day now, so we'd have left college anyhow."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Stuart Tarleton: War! Isn't it exciting, Scarlett? You know those fool Yankees actually want a war?",
+    "clean": "War! Isn't it exciting, Scarlett? You know those fool Yankees actually want a war?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Brent Tarleton: We'll show 'em!",
+    "clean": "We'll show 'em!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Fiddle-dee-dee. War, war, war; this war talk's spoiling all the fun at every party this spring. I get so bored I could scream. Besides, there isn't going to be any war.",
+    "clean": "Fiddle-dee-dee. War, war, war; this war talk's spoiling all the fun at every party this spring. I get so bored I could scream. Besides, there isn't going to be any war."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Brent Tarleton: Not going to be any war?",
+    "clean": "Not going to be any war?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Stuart Tarleton: Why, honey, of course there's gonna be a war.",
+    "clean": "Why, honey, of course there's gonna be a war."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: If either of you boys says \"war\" just once again, I'll go in the house and slam the door.",
+    "clean": "If either of you boys says \"war\" just once again, I'll go in the house and slam the door."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Brent Tarleton: But Scarlett, honey...",
+    "clean": "But Scarlett, honey..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Stuart Tarleton: Don't you want us to have a war?",
+    "clean": "Don't you want us to have a war?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Brent Tarleton: [protesting] Scarlett, honey, please. We're sorry.",
+    "clean": "Scarlett, honey, please. We're sorry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Stuart Tarleton: [also protesting] We'll talk about something else. I promise we will.",
+    "clean": "We'll talk about something else. I promise we will."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: [relenting] Well... [walking back to the spot with the twins] but remember, I warned you.",
+    "clean": "Well... but remember, I warned you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gerald: Have you made a spectacle of yourself running after a man who's not in love with you when you might have any man in the county?",
+    "clean": "Have you made a spectacle of yourself running after a man who's not in love with you when you might have any man in the county?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I haven't been running after him. It's just a surprise, that's all.",
+    "clean": "I haven't been running after him. It's just a surprise, that's all."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gerald: Now, don't be jerking your chin at me. If Ashley wanted to marry you, it would be with misgivings I'd say \"yes\". I want my girl to be happy. You'd not be happy with him.",
+    "clean": "Now, don't be jerking your chin at me. If Ashley wanted to marry you, it would be with misgivings I'd say \"yes\". I want my girl to be happy. You'd not be happy with him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I would, I would!",
+    "clean": "I would, I would!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gerald: What difference does it make who you marry so long as he's a Southerner and thinks like you? And when I'm gone, I'll leave Tara to you.",
+    "clean": "What difference does it make who you marry so long as he's a Southerner and thinks like you? And when I'm gone, I'll leave Tara to you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I don't want Tara. Plantations don't mean anything when...",
+    "clean": "I don't want Tara. Plantations don't mean anything when..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gerald: You mean to tell me, Katie Scarlett O'Hara, that land doesn't mean anything to you? Why, land is the only thing in the world worth working for, worth fighting for, worth dying for, because it's the only thing that lasts.",
+    "clean": "You mean to tell me, Katie Scarlett O'Hara, that land doesn't mean anything to you? Why, land is the only thing in the world worth working for, worth fighting for, worth dying for, because it's the only thing that lasts."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Oh, Pa, you talk like an Irishman.",
+    "clean": "Oh, Pa, you talk like an Irishman."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Cathleen, who's that?",
+    "clean": "Cathleen, who's that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: That man looking at us and smiling. The nasty, dark one.",
+    "clean": "That man looking at us and smiling. The nasty, dark one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cathleen Calvert: My dear, don't you know? That's Rhett Butler. He's from Charleston. He has the most terrible reputation.",
+    "clean": "My dear, don't you know? That's Rhett Butler. He's from Charleston. He has the most terrible reputation."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: He looks as if, as if he knows what I look like without my shimmy.",
+    "clean": "He looks as if, as if he knows what I look like without my shimmy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cathleen Calvert: Scarlett! My dear, he isn't received. He's had to spend most of his time up North because his folks in Charleston won't even speak to him. He was expelled from West Point, he's so fast, and then there's that business about that girl he wouldn't marry.",
+    "clean": "Scarlett! My dear, he isn't received. He's had to spend most of his time up North because his folks in Charleston won't even speak to him. He was expelled from West Point, he's so fast, and then there's that business about that girl he wouldn't marry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Tell, tell!",
+    "clean": "Tell, tell!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Cathleen Calvert: Well, he took her out buggy riding in the late afternoon without a chaperone, and then ... And then he refused to marry her! [Cathleen whispers in Scarlett's ear. Scarlett gasps, and then whispers in her ear] No. But she was ruined just the same.",
+    "clean": "Well, he took her out buggy riding in the late afternoon without a chaperone, and then ... And then he refused to marry her! No. But she was ruined just the same."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gerald: And what does the captain of our troops say?",
+    "clean": "And what does the captain of our troops say?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: Well, gentlemen, if Georgia fights, I go with her. But like my father, I hope that the Yankees let us leave the Union in peace.",
+    "clean": "Well, gentlemen, if Georgia fights, I go with her. But like my father, I hope that the Yankees let us leave the Union in peace."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Man: But Ashley, Ashley, they've insulted us!",
+    "clean": "But Ashley, Ashley, they've insulted us!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Charles: You can't mean you don't want war!",
+    "clean": "You can't mean you don't want war!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: Most of the miseries of the world were caused by wars. And when the wars were over, no one ever knew what they were about.",
+    "clean": "Most of the miseries of the world were caused by wars. And when the wars were over, no one ever knew what they were about."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gerald: Now gentlemen, Mr. Butler has been up North I hear. Don't you agree with us, Mr. Butler?",
+    "clean": "Now gentlemen, Mr. Butler has been up North I hear. Don't you agree with us, Mr. Butler?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I think it's hard winning a war with words, gentlemen.",
+    "clean": "I think it's hard winning a war with words, gentlemen."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Charles: What do you mean, sir?",
+    "clean": "What do you mean, sir?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I mean, Mr. Hamilton, there's not a cannon factory in the whole South.",
+    "clean": "I mean, Mr. Hamilton, there's not a cannon factory in the whole South."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Man: What difference does that make, sir, to a gentleman?",
+    "clean": "What difference does that make, sir, to a gentleman?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I'm afraid it's going to make a great deal of difference to a great many gentlemen, sir.",
+    "clean": "I'm afraid it's going to make a great deal of difference to a great many gentlemen, sir."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Charles: Are you hinting, Mr. Butler, that the Yankees can lick us?",
+    "clean": "Are you hinting, Mr. Butler, that the Yankees can lick us?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: No, I'm not hinting. I'm saying very plainly that the Yankees are better equipped than we. They've got factories, shipyards, coalmines...and a fleet to bottle up our harbors and starve us to death. All we've got is cotton, and slaves and...arrogance.",
+    "clean": "No, I'm not hinting. I'm saying very plainly that the Yankees are better equipped than we. They've got factories, shipyards, coalmines...and a fleet to bottle up our harbors and starve us to death. All we've got is cotton, and slaves and...arrogance."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Man: That's treacherous!",
+    "clean": "That's treacherous!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Charles: I refuse to listen to any renegade talk!",
+    "clean": "I refuse to listen to any renegade talk!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Well, I'm sorry if the truth offends you.",
+    "clean": "Well, I'm sorry if the truth offends you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Charles: Apologies aren't enough sir. I hear you were turned out of West Point, Mr. Rhett Butler. And that you aren't received in a decent family in Charleston. Not even your own.",
+    "clean": "Apologies aren't enough sir. I hear you were turned out of West Point, Mr. Rhett Butler. And that you aren't received in a decent family in Charleston. Not even your own."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I apologize again for all my shortcomings. Mr. Wilkes, perhaps you won't mind if I walk about and look over your place. I seem to be spoiling everybody's brandy and cigars and...dreams of victory.",
+    "clean": "I apologize again for all my shortcomings. Mr. Wilkes, perhaps you won't mind if I walk about and look over your place. I seem to be spoiling everybody's brandy and cigars and...dreams of victory."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: Isn't it enough that you've gathered every other man's heart today? You've always had mine. You cut your teeth on it.",
+    "clean": "Isn't it enough that you've gathered every other man's heart today? You've always had mine. You cut your teeth on it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Don't tease me now. Have I your heart, my darling? I love you. I love you.",
+    "clean": "Don't tease me now. Have I your heart, my darling? I love you. I love you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: You mustn't say such things. You'll hate me for hearing them.",
+    "clean": "You mustn't say such things. You'll hate me for hearing them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I could never hate you. And I know you must care about me. Oh, you do care, don't you?",
+    "clean": "I could never hate you. And I know you must care about me. Oh, you do care, don't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: Yes, I do care. Oh, can't we go away and forget we ever said these things?",
+    "clean": "Yes, I do care. Oh, can't we go away and forget we ever said these things?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: But how can we do that? Don't you...don't you want to marry me?",
+    "clean": "But how can we do that? Don't you...don't you want to marry me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: I'm going to marry Melanie.",
+    "clean": "I'm going to marry Melanie."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: But you can't. Not if you care for me!",
+    "clean": "But you can't. Not if you care for me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: Oh my dear, why must you make me say things that will hurt you? How can I make you understand? You're so young and unthinking. You don't know what marriage means.",
+    "clean": "Oh my dear, why must you make me say things that will hurt you? How can I make you understand? You're so young and unthinking. You don't know what marriage means."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: All I know is that I love you! And you don't love Melanie!",
+    "clean": "All I know is that I love you! And you don't love Melanie!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: She's like me, Scarlett. She's part of my blood and we understand each other.",
+    "clean": "She's like me, Scarlett. She's part of my blood and we understand each other."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: But you love me!",
+    "clean": "But you love me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: How could I help loving you - you who have all the passion for life that I lack? But that kind of love isn't enough to make a successful marriage for two people who are as different as we are.",
+    "clean": "How could I help loving you - you who have all the passion for life that I lack? But that kind of love isn't enough to make a successful marriage for two people who are as different as we are."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Why don't you say it, you coward? You're afraid to marry me. You'd rather live with that silly old fool who can't open her mouth except to say yes, no, and raise a passel of mealy-mouthed brats just like her!",
+    "clean": "Why don't you say it, you coward? You're afraid to marry me. You'd rather live with that silly old fool who can't open her mouth except to say yes, no, and raise a passel of mealy-mouthed brats just like her!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: You mustn't say things about Melanie.",
+    "clean": "You mustn't say things about Melanie."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Who are you to tell me I mustn't? You lead me on, you made me believe you wanted to marry me!",
+    "clean": "Who are you to tell me I mustn't? You lead me on, you made me believe you wanted to marry me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ashley: Now Scarlett, be fair. I never at any time-",
+    "clean": "Now Scarlett, be fair. I never at any time-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: You did! It's true! You did! I'll hate you till I die! I can't think of anything bad enough to call you! [slaps him]",
+    "clean": "You did! It's true! You did! I'll hate you till I die! I can't think of anything bad enough to call you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Has the war started?",
+    "clean": "Has the war started?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Sir, you...you should have made your presence known.",
+    "clean": "Sir, you...you should have made your presence known."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: In the middle of that beautiful love scene? That wouldn't be very tactful, would it? But don't worry, your secret is safe with me.",
+    "clean": "In the middle of that beautiful love scene? That wouldn't be very tactful, would it? But don't worry, your secret is safe with me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Sir, you are no gentleman! [turns to leave]",
+    "clean": "Sir, you are no gentleman!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: And you, miss, are no lady.",
+    "clean": "And you, miss, are no lady."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Don't think that I hold that against you. Ladies have never held any charm for me.",
+    "clean": "Don't think that I hold that against you. Ladies have never held any charm for me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: But you are a blockade runner.",
+    "clean": "But you are a blockade runner."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: For profit, and profit only.",
+    "clean": "For profit, and profit only."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Are you tryin' to tell me you don't believe in the cause?",
+    "clean": "Are you tryin' to tell me you don't believe in the cause?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I believe in Rhett Butler. He's the only cause I know. The rest doesn't mean much to me.",
+    "clean": "I believe in Rhett Butler. He's the only cause I know. The rest doesn't mean much to me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Don't start flirting with me. I'm not one of your plantation beaux. I want more than flirting from you.",
+    "clean": "Don't start flirting with me. I'm not one of your plantation beaux. I want more than flirting from you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: What do you want?",
+    "clean": "What do you want?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I'll tell you, Scarlett O'Hara, if you'll take that Southern-belle simper off your face. Someday I want you to say to me the words I heard you say to Ashley Wilkes: \"I love you!\"",
+    "clean": "I'll tell you, Scarlett O'Hara, if you'll take that Southern-belle simper off your face. Someday I want you to say to me the words I heard you say to Ashley Wilkes: \"I love you!\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: That's something you'll never hear from me, Captain Butler, as long as you live.",
+    "clean": "That's something you'll never hear from me, Captain Butler, as long as you live."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: [puts on her hat, then puts it on backwards to make a joke] How do I look?",
+    "clean": "How do I look?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: [surprised] Awful! [gets up] I thought it was about time to get you out of that fake mourning. [shows her how to wear it after she places it on backward] The war stopped being a joke when a girl like you doesn't know how to wear the latest fashion. And those pantalettes: I don't know a woman in Paris who wears pantalettes any more.",
+    "clean": "Awful! I thought it was about time to get you out of that fake mourning. The war stopped being a joke when a girl like you doesn't know how to wear the latest fashion. And those pantalettes: I don't know a woman in Paris who wears pantalettes any more."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Oh Rhett, what do they - you shouldn't talk about such things.",
+    "clean": "Oh Rhett, what do they - you shouldn't talk about such things."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: You little hypocrite. You don't mind my knowing about them, just my talking about them.",
+    "clean": "You little hypocrite. You don't mind my knowing about them, just my talking about them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: But really Rhett, I can't go on accepting these gifts although you are awfully kind.",
+    "clean": "But really Rhett, I can't go on accepting these gifts although you are awfully kind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I'm not kind. I'm just tempting you. I never give anything without expecting something in return. Now, I always get paid.",
+    "clean": "I'm not kind. I'm just tempting you. I never give anything without expecting something in return. Now, I always get paid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: If you think I'll marry you just to pay for the bonnet, I won't.",
+    "clean": "If you think I'll marry you just to pay for the bonnet, I won't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Don't flatter yourself. I'm not a marrying man.",
+    "clean": "Don't flatter yourself. I'm not a marrying man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Well, I won't kiss you for it, either.",
+    "clean": "Well, I won't kiss you for it, either."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Open your eyes and look at me. No, I don't think I will kiss you, although you need kissing badly. That's what's wrong with you. You should be kissed, and often, and by someone who knows how.",
+    "clean": "Open your eyes and look at me. No, I don't think I will kiss you, although you need kissing badly. That's what's wrong with you. You should be kissed, and often, and by someone who knows how."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: And I suppose you think you're the proper person.",
+    "clean": "And I suppose you think you're the proper person."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I might be...if the right moment ever came.",
+    "clean": "I might be...if the right moment ever came."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: You're a conceited, blackhearted varmint Rhett Butler. I don't know why I let come and see me.",
+    "clean": "You're a conceited, blackhearted varmint Rhett Butler. I don't know why I let come and see me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I'll tell you why, Scarlett. Because I'm the only man over sixteen and under sixty who's around to show you a good time.",
+    "clean": "I'll tell you why, Scarlett. Because I'm the only man over sixteen and under sixty who's around to show you a good time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Panic's a pretty sight, isn't it? We belong together, Scarlett. Let's get out of here together. No use staying here, letting the South come down around your ears. Too many nice places to go and visit. Mexico, London, Paris-",
+    "clean": "Panic's a pretty sight, isn't it? We belong together, Scarlett. Let's get out of here together. No use staying here, letting the South come down around your ears. Too many nice places to go and visit. Mexico, London, Paris-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: With you?",
+    "clean": "With you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Yes, ma'am. A man who understands you and admires you for just what you are. I figure we belong together, being the same sort. I've been waiting for you to grow up and get that sad-eyed Ashley Wilkes out of your heart... Are you going with me or are you getting out?",
+    "clean": "Yes, ma'am. A man who understands you and admires you for just what you are. I figure we belong together, being the same sort. I've been waiting for you to grow up and get that sad-eyed Ashley Wilkes out of your heart... Are you going with me or are you getting out?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I hate and despise you, Rhett Butler. I'll hate and despise you till I die. [the edge of her hoop skirt gets caught]",
+    "clean": "I hate and despise you, Rhett Butler. I'll hate and despise you till I die."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: [amused] Oh no, you won't, Scarlett. Not that long. [releases the edge of the hoop skirt]",
+    "clean": "Oh no, you won't, Scarlett. Not that long."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: [as he is about to leave to join the Confederate Army] Oh, Rhett! Please, don't go! You can't leave me! Please! I'll never forgive you!",
+    "clean": "Oh, Rhett! Please, don't go! You can't leave me! Please! I'll never forgive you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Don't hold me like that!",
+    "clean": "Don't hold me like that!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Scarlett! Look at me! I've loved you more than I've ever loved any woman and I've waited for you longer than I've ever waited for any woman. [kisses her forehead]",
+    "clean": "Scarlett! Look at me! I've loved you more than I've ever loved any woman and I've waited for you longer than I've ever waited for any woman."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Let me alone!",
+    "clean": "Let me alone!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: [forces her to look him in the eyes] Here's a soldier of the South who loves you, Scarlett. Wants to feel your arms around him, wants to carry the memory of your kisses into battle with him. Never mind about loving me, you're a woman sending a soldier to his death with a beautiful memory. Scarlett! Kiss me! Kiss me...once... [kisses her]",
+    "clean": "Here's a soldier of the South who loves you, Scarlett. Wants to feel your arms around him, wants to carry the memory of your kisses into battle with him. Never mind about loving me, you're a woman sending a soldier to his death with a beautiful memory. Scarlett! Kiss me! Kiss me...once..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: What collateral are you offering?",
+    "clean": "What collateral are you offering?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: My ear bobs.",
+    "clean": "My ear bobs."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Not interested.",
+    "clean": "Not interested."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Mortgage on Tara.",
+    "clean": "Mortgage on Tara."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: What would I do with a farm?",
+    "clean": "What would I do with a farm?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Oh, you wouldn't lose. I'd pay you back on next year's cotton.",
+    "clean": "Oh, you wouldn't lose. I'd pay you back on next year's cotton."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Not good enough. Have you nothing better?",
+    "clean": "Not good enough. Have you nothing better?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: You once said you loved me. If you still love me, Rhett...",
+    "clean": "You once said you loved me. If you still love me, Rhett..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: You haven't forgotten. I'm not a marrying man.",
+    "clean": "You haven't forgotten. I'm not a marrying man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: No, I haven't forgotten.",
+    "clean": "No, I haven't forgotten."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: You're not worth $300. You'll never mean anything but misery to any man.",
+    "clean": "You're not worth $300. You'll never mean anything but misery to any man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: You know, Scarlett, I think you're on the verge of a crying jag. So I'll change the subject and say what I came to say.",
+    "clean": "You know, Scarlett, I think you're on the verge of a crying jag. So I'll change the subject and say what I came to say."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Say it, then, and get out! What is it?",
+    "clean": "Say it, then, and get out! What is it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: That I can't go on any longer without you.",
+    "clean": "That I can't go on any longer without you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: You are the most ill-bred man to come here at a time like this with your filthy...",
+    "clean": "You are the most ill-bred man to come here at a time like this with your filthy..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I made up my mind that you were the only woman for me...the first day I saw you at Twelve Oaks. Now that you've got the lumber mill and Frank's money, you won't come to me as you did to the jail. So I see I shall have to marry you.",
+    "clean": "I made up my mind that you were the only woman for me...the first day I saw you at Twelve Oaks. Now that you've got the lumber mill and Frank's money, you won't come to me as you did to the jail. So I see I shall have to marry you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I never heard of such bad taste.",
+    "clean": "I never heard of such bad taste."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Did you ever think of marrying just for fun?",
+    "clean": "Did you ever think of marrying just for fun?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Marriage, fun? Fiddle-dee-dee. Fun for men, you mean.",
+    "clean": "Marriage, fun? Fiddle-dee-dee. Fun for men, you mean."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Rhett, don't. I shall faint.",
+    "clean": "Rhett, don't. I shall faint."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I want you to faint. This is what you were meant for. None of the fools you've ever known have kissed you like this, have they? Your Charles, or your Frank, or your stupid Ashley.",
+    "clean": "I want you to faint. This is what you were meant for. None of the fools you've ever known have kissed you like this, have they? Your Charles, or your Frank, or your stupid Ashley."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: [after agreeing to marry Rhett] Money does help and of course I am fond of you...If I said I was madly in love with you, you'd know I was lying. You always said we had a lot in common...",
+    "clean": "Money does help and of course I am fond of you...If I said I was madly in love with you, you'd know I was lying. You always said we had a lot in common..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: You're right, my dear. I'm not in love with you any more than you are with me. Heaven help the man who ever really loves you.",
+    "clean": "You're right, my dear. I'm not in love with you any more than you are with me. Heaven help the man who ever really loves you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Of course, the comic figure in all this is the long-suffering Mr. Wilkes! Mr. Wilkes, who can't be mentally faithful to his wife — and won't be unfaithful to her technically. Why doesn't he make up his mind?",
+    "clean": "Of course, the comic figure in all this is the long-suffering Mr. Wilkes! Mr. Wilkes, who can't be mentally faithful to his wife - and won't be unfaithful to her technically. Why doesn't he make up his mind?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Rhett, you-",
+    "clean": "Rhett, you-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I'm not cornered. You'll never corner me, Rhett Butler, or frighten me. You've lived in dirt so long you can't understand anything else and you're jealous of something you can't understand.",
+    "clean": "I'm not cornered. You'll never corner me, Rhett Butler, or frighten me. You've lived in dirt so long you can't understand anything else and you're jealous of something you can't understand."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Indeed. And who is the happy father?\"",
+    "clean": "Indeed. And who is the happy father?\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: You know it's yours. I don't want it any more than you do. No woman would want a child of a cad like you...I wish for anybody's child but yours!",
+    "clean": "You know it's yours. I don't want it any more than you do. No woman would want a child of a cad like you...I wish for anybody's child but yours!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Cheer up, maybe you'll have an accident.",
+    "clean": "Cheer up, maybe you'll have an accident."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: What are you doing?",
+    "clean": "What are you doing?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I'm leaving you, my dear. All you need now is a divorce and your dreams of Ashley can come true.",
+    "clean": "I'm leaving you, my dear. All you need now is a divorce and your dreams of Ashley can come true."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Oh, no! No, you're wrong, terribly wrong! I don't want a divorce. Oh, Rhett, but I knew tonight, when I...when I knew I loved you, I ran home to tell you, oh, darling, darling!",
+    "clean": "Oh, no! No, you're wrong, terribly wrong! I don't want a divorce. Oh, Rhett, but I knew tonight, when I...when I knew I loved you, I ran home to tell you, oh, darling, darling!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Please don't go on with this. Leave us some dignity to remember out of our marriage. Spare us this last.",
+    "clean": "Please don't go on with this. Leave us some dignity to remember out of our marriage. Spare us this last."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: This last? Oh, Rhett, do listen to me, I must have loved you for years, only I was such a stupid fool, I didn't know it. Please believe me, you must care! Melly said you did.",
+    "clean": "This last? Oh, Rhett, do listen to me, I must have loved you for years, only I was such a stupid fool, I didn't know it. Please believe me, you must care! Melly said you did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I believe you. What about Ashley Wilkes?",
+    "clean": "I believe you. What about Ashley Wilkes?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I...I never really loved Ashley.",
+    "clean": "I...I never really loved Ashley."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: You certainly gave a good imitation of it, up till this morning. No, Scarlett, I tried everything. If you'd only met me half way, even when I came back from London.",
+    "clean": "You certainly gave a good imitation of it, up till this morning. No, Scarlett, I tried everything. If you'd only met me half way, even when I came back from London."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I was so glad to see you. I was, Rhett, but you were so nasty.",
+    "clean": "I was so glad to see you. I was, Rhett, but you were so nasty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: And then when you were sick, it was all my fault... I hoped against hope that you'd call for me, but you didn't.",
+    "clean": "And then when you were sick, it was all my fault... I hoped against hope that you'd call for me, but you didn't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: I wanted you. I wanted you desperately but I didn't think you wanted me.",
+    "clean": "I wanted you. I wanted you desperately but I didn't think you wanted me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Oh, Rhett, Rhett, please don't say that. I'm so sorry, I'm so sorry for everything.",
+    "clean": "Oh, Rhett, Rhett, please don't say that. I'm so sorry, I'm so sorry for everything."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: My darling, you're such a child. You think that by saying \"I'm sorry,\" all the past can be corrected. Here, take my handkerchief. Never, at any crisis of your life, have I known you to have a handkerchief.",
+    "clean": "My darling, you're such a child. You think that by saying \"I'm sorry,\" all the past can be corrected. Here, take my handkerchief. Never, at any crisis of your life, have I known you to have a handkerchief."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Rhett! Rhett, where are you going?",
+    "clean": "Rhett! Rhett, where are you going?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: I'm going to Charleston, back where I belong.",
+    "clean": "I'm going to Charleston, back where I belong."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Please, please take me with you!",
+    "clean": "Please, please take me with you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: No, I'm through with everything here. I want peace. I want to see if somewhere there isn't something left in life of charm and grace. Do you know what I'm talking about?",
+    "clean": "No, I'm through with everything here. I want peace. I want to see if somewhere there isn't something left in life of charm and grace. Do you know what I'm talking about?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: No! I only know that I love you.",
+    "clean": "No! I only know that I love you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: That's your misfortune. [turns to walk down the stairs]",
+    "clean": "That's your misfortune."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Scarlett: Oh, Rhett! [watches Rhett walk to the door] Rhett! [runs down the stairs after him] Rhett, Rhett! Rhett, if you go, where shall I go? What shall I do?",
+    "clean": "Oh, Rhett! Rhett! Rhett, Rhett! Rhett, if you go, where shall I go? What shall I do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rhett: Frankly, my dear, I don't give a damn. [walks off in the fog] The bolded portion ranked #1 in the American Film Institute's list of the top 100 movie quotations in American cinema.",
+    "clean": "Frankly, my dear, I don't give a damn. The bolded portion ranked #1 in the American Film Institute's list of the top 100 movie quotations in American cinema."
+  },
+  {
+    "heading": "Quotes about Gone with the Wind",
+    "raw": "Can we get like Gone with the Wind back please? Sunset Boulevard, so many great movies. Donald Trump (February 2020)",
+    "clean": "Can we get like Gone with the Wind back please? Sunset Boulevard, so many great movies. Donald Trump (February 2020)"
+  }
+]

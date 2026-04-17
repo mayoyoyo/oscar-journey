@@ -1,0 +1,782 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Mike Nichols. Written Ernest Lehman.",
+    "clean": "Directed by Mike Nichols. Written Ernest Lehman."
+  },
+  {
+    "heading": "George",
+    "raw": "[Honey abruptly stands, looking ill.] Martha, will you show her where we keep the, uh, euphemism?",
+    "clean": "Martha, will you show her where we keep the, uh, euphemism?"
+  },
+  {
+    "heading": "George",
+    "raw": "Vanish!",
+    "clean": "Vanish!"
+  },
+  {
+    "heading": "George",
+    "raw": "[talking to Nick about weight and fitness] Martha is 108… years old. She weighs somewhat more than that.",
+    "clean": "Martha is 108... years old. She weighs somewhat more than that."
+  },
+  {
+    "heading": "George",
+    "raw": "Martha, in my mind, you are buried in cement right up to the neck. No, up to the nose — it's much quieter.",
+    "clean": "Martha, in my mind, you are buried in cement right up to the neck. No, up to the nose - it's much quieter."
+  },
+  {
+    "heading": "George",
+    "raw": "Good. Better. Best. Bested.",
+    "clean": "Good. Better. Best. Bested."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: What a dump. [pauses] Hey, w-what's that from? \"What a dump!\"",
+    "clean": "What a dump. Hey, w-what's that from? \"What a dump!\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: How would I know?",
+    "clean": "How would I know?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Oh, come on, what's it from? You know!",
+    "clean": "Oh, come on, what's it from? You know!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Martha…",
+    "clean": "Martha..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: What's it from, for chrissake?!",
+    "clean": "What's it from, for chrissake?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: What's what from?",
+    "clean": "What's what from?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: I just told you. I just did it. \"What a dump!\" Huh? What's that from?",
+    "clean": "I just told you. I just did it. \"What a dump!\" Huh? What's that from?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I haven't the faintest idea.",
+    "clean": "I haven't the faintest idea."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Dumbbell.",
+    "clean": "Dumbbell."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: [To \"Who's Afraid of the Big Bad Wolf\"] Who's afraid of Virginia Woolf / Virginia Woolf, Virginia Woolf / Who's afraid of Virginia Woolf…",
+    "clean": "Who's afraid of Virginia Woolf / Virginia Woolf, Virginia Woolf / Who's afraid of Virginia Woolf..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: What's the matter? Didn't ya think that was funny? I thought it was a scream.",
+    "clean": "What's the matter? Didn't ya think that was funny? I thought it was a scream."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You laughed your head off when you heard it at the party.",
+    "clean": "You laughed your head off when you heard it at the party."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I smiled. I didn't laugh my head off.",
+    "clean": "I smiled. I didn't laugh my head off."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You laughed your goddamn head off.",
+    "clean": "You laughed your goddamn head off."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You make me puke!",
+    "clean": "You make me puke!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: [That] wasn't a very nice thing to say, Martha.",
+    "clean": "wasn't a very nice thing to say, Martha."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: That wasn't what?!",
+    "clean": "That wasn't what?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: A very nice thing to say.",
+    "clean": "A very nice thing to say."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Oh, I like your anger. I think that's what I like about you most. Your anger.",
+    "clean": "Oh, I like your anger. I think that's what I like about you most. Your anger."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Oh-ho, you pig.",
+    "clean": "Oh-ho, you pig."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oink, oink.",
+    "clean": "Oink, oink."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Fix me another drink… lover.",
+    "clean": "Fix me another drink... lover."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: My God, you can swill it down, can't you?",
+    "clean": "My God, you can swill it down, can't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Well, I'm thirsty.",
+    "clean": "Well, I'm thirsty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oh, Jesus.",
+    "clean": "Oh, Jesus."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Look, sweetheart, I can drink you under any goddamn table you want, so don't worry about me.",
+    "clean": "Look, sweetheart, I can drink you under any goddamn table you want, so don't worry about me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I gave you the prize years ago, Martha. There isn't an abomination award going that you haven't won.",
+    "clean": "I gave you the prize years ago, Martha. There isn't an abomination award going that you haven't won."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: I swear to God George, if you even existed I'd divorce you.",
+    "clean": "I swear to God George, if you even existed I'd divorce you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Ah, who, ah… who did the painting?",
+    "clean": "Ah, who, ah... who did the painting?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: That? Oh, that's by…",
+    "clean": "That? Oh, that's by..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: … some Greek with a moustache Martha attacked one night in a, in a… [laughs stiffly]",
+    "clean": "... some Greek with a moustache Martha attacked one night in a, in a..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Fix the kids a drink, George. What would you like to drink, kid– kid.",
+    "clean": "Fix the kids a drink, George. What would you like to drink, kid- kid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Honey? what would you like?",
+    "clean": "Honey? what would you like?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: Ohhhh, I don't know, dear, a little brandy maybe. \"Never mix, never worry!\"",
+    "clean": "Ohhhh, I don't know, dear, a little brandy maybe. \"Never mix, never worry!\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Brandy? Just brandy? Simple, simple…",
+    "clean": "Brandy? Just brandy? Simple, simple..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: What about you, em… em… em…",
+    "clean": "What about you, em... em... em..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Bourbon on the rocks, if you don't mind.",
+    "clean": "Bourbon on the rocks, if you don't mind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Mind? I don't mind. I don't think I mind. Martha? Rubbing alcohol for you?",
+    "clean": "Mind? I don't mind. I don't think I mind. Martha? Rubbing alcohol for you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Sure! \"Never mix, never worry!\"",
+    "clean": "Sure! \"Never mix, never worry!\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: I bust a gut! [laughs uproariously, then settles] George didn't think it was funny at all.",
+    "clean": "I bust a gut! George didn't think it was funny at all."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Martha thinks that unless you, as she demurely puts it, \"bust a gut\", you're not amused, you know. Unless you're… carrying on like a hyena, you're not having any fun.",
+    "clean": "Martha thinks that unless you, as she demurely puts it, \"bust a gut\", you're not amused, you know. Unless you're... carrying on like a hyena, you're not having any fun."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Let me tell you a secret, baby — there are easier things in this world, if you, uh… happen to be teaching at a university, there are easier things than being married to the daughter of the president of that university. There are easier things in this world.",
+    "clean": "Let me tell you a secret, baby - there are easier things in this world, if you, uh... happen to be teaching at a university, there are easier things than being married to the daughter of the president of that university. There are easier things in this world."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: It should be an extraordinary opportunity. For some men, it would be the chance of a lifetime.",
+    "clean": "It should be an extraordinary opportunity. For some men, it would be the chance of a lifetime."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: There are, believe me, easier things in this world.",
+    "clean": "There are, believe me, easier things in this world."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Some men would give their right arm for the chance!",
+    "clean": "Some men would give their right arm for the chance!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Alas, Martha, in reality, it works out that the sacrifice is of a somewhat more private portion of the anatomy.",
+    "clean": "Alas, Martha, in reality, it works out that the sacrifice is of a somewhat more private portion of the anatomy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: What made you decide to be a teacher?",
+    "clean": "What made you decide to be a teacher?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Well, the same things that motivated you, I imagine.",
+    "clean": "Well, the same things that motivated you, I imagine."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oh? What were they?",
+    "clean": "Oh? What were they?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Pardon?",
+    "clean": "Pardon?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I said, what were they? What were the things that motivated me?",
+    "clean": "I said, what were they? What were the things that motivated me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Well, I'm sure I don't know.",
+    "clean": "Well, I'm sure I don't know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: You just finished saying that the things that motivated you were the same things that motivated me.",
+    "clean": "You just finished saying that the things that motivated you were the same things that motivated me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: I said I imagined they were.",
+    "clean": "I said I imagined they were."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oh, did you?",
+    "clean": "Oh, did you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: [to Honey] We'll go in a little while.",
+    "clean": "We'll go in a little while."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: What sort of talk?",
+    "clean": "What sort of talk?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Well, now.",
+    "clean": "Well, now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Why, Martha! Your Sunday chapel dress!",
+    "clean": "Why, Martha! Your Sunday chapel dress!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I'm very impressed.",
+    "clean": "I'm very impressed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You're damn right!",
+    "clean": "You're damn right!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I said I was impressed. I'm beside myself with jealousy. What do you want me to do, throw up?",
+    "clean": "I said I was impressed. I'm beside myself with jealousy. What do you want me to do, throw up?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: George is bogged down in the history department. [chuckles] He's an old bog in the history department. That's what George is. A bog. A fen. A GD swamp!",
+    "clean": "George is bogged down in the history department. He's an old bog in the history department. That's what George is. A bog. A fen. A GD swamp!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: A swamp! [to George] Hey, swamp! Hey swampy!",
+    "clean": "A swamp! Hey, swamp! Hey swampy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Yes, Martha? Can I get you something?",
+    "clean": "Yes, Martha? Can I get you something?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Ah… well, sure! You can, um, light my cigarette, if you're of a mind to.",
+    "clean": "Ah... well, sure! You can, um, light my cigarette, if you're of a mind to."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Jesus!",
+    "clean": "Jesus!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: All I said was that our son, the apple of our three eyes — Martha being a cyclops — our son is a beanbag, and you get testy!",
+    "clean": "All I said was that our son, the apple of our three eyes - Martha being a cyclops - our son is a beanbag, and you get testy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: I'm sorry, it's late! I'm tired. I've been drinking since nine o'clock, my wife is vomiting… there's been a lot of screaming going on around here!",
+    "clean": "I'm sorry, it's late! I'm tired. I've been drinking since nine o'clock, my wife is vomiting... there's been a lot of screaming going on around here!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: So you get testy, naturally! Don't worry about it! Anybody who comes here ends up getting testy; it's expected! Don't be upset!",
+    "clean": "So you get testy, naturally! Don't worry about it! Anybody who comes here ends up getting testy; it's expected! Don't be upset!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: I'm not upset.",
+    "clean": "I'm not upset."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: You're testy.",
+    "clean": "You're testy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Hark! Forest sounds.",
+    "clean": "Hark! Forest sounds."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Animal noises.",
+    "clean": "Animal noises."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Heyyyy!",
+    "clean": "Heyyyy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Take the trouble to construct a civilization, to build a society based on the principles of, uh… of principle.",
+    "clean": "Take the trouble to construct a civilization, to build a society based on the principles of, uh... of principle."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Honey!",
+    "clean": "Honey!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Well, aren't you going to apologize?",
+    "clean": "Well, aren't you going to apologize?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Wasn't my fault — the road should've been straight.",
+    "clean": "Wasn't my fault - the road should've been straight."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Not that! For making her throw up.",
+    "clean": "Not that! For making her throw up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I did not make her throw up.",
+    "clean": "I did not make her throw up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You most certainly did.",
+    "clean": "You most certainly did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: I did not.",
+    "clean": "I did not."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: [still drunk] No, now, no…",
+    "clean": "No, now, no..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Well, who do you think did? Sexy, back there? You think he made his own wife sick?",
+    "clean": "Well, who do you think did? Sexy, back there? You think he made his own wife sick?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Well, you make me sick.",
+    "clean": "Well, you make me sick."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: That's different.",
+    "clean": "That's different."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: [drunkenly] I want some! I want some dancing!",
+    "clean": "I want some! I want some dancing!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: That's not such a bad idea.",
+    "clean": "That's not such a bad idea."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: I love dancing, don't you.",
+    "clean": "I love dancing, don't you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: With the right man.",
+    "clean": "With the right man."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: I dance like the wind.",
+    "clean": "I dance like the wind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: They're dancing like they danced before.",
+    "clean": "They're dancing like they danced before."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: It's a familiar dance, Monkey Nipples. They both know it.",
+    "clean": "It's a familiar dance, Monkey Nipples. They both know it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: [drunkenly] I don't know what you mean.",
+    "clean": "I don't know what you mean."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: [sighs] I like the way you move.",
+    "clean": "I like the way you move."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: I like the way you move, too.",
+    "clean": "I like the way you move, too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: [to Honey] They like the way they move.",
+    "clean": "They like the way they move."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: [drunkenly] That's nice.",
+    "clean": "That's nice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: All right! The dancing's over!",
+    "clean": "All right! The dancing's over!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: [applauding] Violence! Violence! Oo-hoo!",
+    "clean": "Violence! Violence! Oo-hoo!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: That was cruel and vicious…",
+    "clean": "That was cruel and vicious..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Hmm, she'll get over it.",
+    "clean": "Hmm, she'll get over it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: … and damaging…",
+    "clean": "... and damaging..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: She'll recover.",
+    "clean": "She'll recover."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: … damaging to me!",
+    "clean": "... damaging to me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: To you?",
+    "clean": "To you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: To me!",
+    "clean": "To me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: To you?",
+    "clean": "To you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Oh-ho-ho-ho, beautiful! My god, you gotta have a swine to show you where the truffles are!",
+    "clean": "Oh-ho-ho-ho, beautiful! My god, you gotta have a swine to show you where the truffles are!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: You're a monster. You are.",
+    "clean": "You're a monster. You are."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: I'm loud, and I'm vulgar, and I wear the pants in the house because somebody's got to… but I am not a monster! I'm NOT!",
+    "clean": "I'm loud, and I'm vulgar, and I wear the pants in the house because somebody's got to... but I am not a monster! I'm NOT!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: You're a spoiled, self-indulgent, willful, dirty-minded, liquor-ridden…",
+    "clean": "You're a spoiled, self-indulgent, willful, dirty-minded, liquor-ridden..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: [Crap!] It went SNAP! I-I-I'm not gonna try to get through to you anymore. There was a second back there — yeah, there was a second, just a second — when I could have gotten through to you, when maybe we could have cut through all this, this CRAP! But it's past, and I'm not gonna try.",
+    "clean": "It went SNAP! I-I-I'm not gonna try to get through to you anymore. There was a second back there - yeah, there was a second, just a second - when I could have gotten through to you, when maybe we could have cut through all this, this CRAP! But it's past, and I'm not gonna try."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: I looked at you tonight and you weren't there! Finally snapped! And– and I'm gonna howl it out! And I'm not gonna give a damn what I do, and I'm gonna make the biggest goddamn explosion you've ever heard!",
+    "clean": "I looked at you tonight and you weren't there! Finally snapped! And- and I'm gonna howl it out! And I'm not gonna give a damn what I do, and I'm gonna make the biggest goddamn explosion you've ever heard!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: You try and I'll beat you at your own game.",
+    "clean": "You try and I'll beat you at your own game."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Is that a threat, George, huh?",
+    "clean": "Is that a threat, George, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: That's a threat, Martha.",
+    "clean": "That's a threat, Martha."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You're gonna get it, baby.",
+    "clean": "You're gonna get it, baby."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Be careful, Martha. I'll rip you to pieces.",
+    "clean": "Be careful, Martha. I'll rip you to pieces."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You're not man enough. You haven't the guts!",
+    "clean": "You're not man enough. You haven't the guts!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Total war?",
+    "clean": "Total war?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Total!",
+    "clean": "Total!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: To you, everybody's a flop! Your husband's a flop, I'm a flop…",
+    "clean": "To you, everybody's a flop! Your husband's a flop, I'm a flop..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You're all flops. I am the Earth Mother, and you are all flops.",
+    "clean": "You're all flops. I am the Earth Mother, and you are all flops."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: I disgust me. You know, there's only been one man in my whole life who's ever made me happy. You know that? One.",
+    "clean": "I disgust me. You know, there's only been one man in my whole life who's ever made me happy. You know that? One."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: What, the gym instructor or something?",
+    "clean": "What, the gym instructor or something?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: No, no, no, no. George. [pause] My husband?",
+    "clean": "No, no, no, no. George. My husband?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: You're kidding.",
+    "clean": "You're kidding."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Am I?",
+    "clean": "Am I?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: You must be! Him?",
+    "clean": "You must be! Him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: George, sure!",
+    "clean": "George, sure!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You don't believe it.",
+    "clean": "You don't believe it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Well, of course I do!",
+    "clean": "Well, of course I do!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: You always deal in appearances?",
+    "clean": "You always deal in appearances?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Oh, for God's sake.",
+    "clean": "Oh, for God's sake."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: George, who is out somewhere there in the dark. Who is good to me. Whom I revile. Who can keep learning the games we play as quickly as I can change them. Who can make me happy and I do not wish to be happy. Yes, I do wish to be happy. George and Martha — sad, sad, sad.",
+    "clean": "George, who is out somewhere there in the dark. Who is good to me. Whom I revile. Who can keep learning the games we play as quickly as I can change them. Who can make me happy and I do not wish to be happy. Yes, I do wish to be happy. George and Martha - sad, sad, sad."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Whom I will not forgive for having come to rest, for having seen me and having said, \"Yes, this will do\". Who has made the hideous, the hurting, the insulting mistake of loving… me. And must be punished for it. George and Martha — sad, sad, sad.",
+    "clean": "Whom I will not forgive for having come to rest, for having seen me and having said, \"Yes, this will do\". Who has made the hideous, the hurting, the insulting mistake of loving... me. And must be punished for it. George and Martha - sad, sad, sad."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Truth and illusion, George; you don't know the difference.",
+    "clean": "Truth and illusion, George; you don't know the difference."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: No, but we must carry on as though we did.",
+    "clean": "No, but we must carry on as though we did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Amen.",
+    "clean": "Amen."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Here we are.",
+    "clean": "Here we are."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: Hip, hop! Hip, hop! Hip, hop! Hip, hop!",
+    "clean": "Hip, hop! Hip, hop! Hip, hop! Hip, hop!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Nick: Are you a bunny, Honey?",
+    "clean": "Are you a bunny, Honey?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: [giggles] Bunny Honey!",
+    "clean": "Bunny Honey!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Well, now, how's the bunny?",
+    "clean": "Well, now, how's the bunny?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Honey: Bunny funny! [giggles]",
+    "clean": "Bunny funny!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Bunny funny. Good for bunny!",
+    "clean": "Bunny funny. Good for bunny!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Martha: Come on, George!",
+    "clean": "Come on, George!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "George: Honey, funny bunny.",
+    "clean": "Honey, funny bunny."
+  }
+]

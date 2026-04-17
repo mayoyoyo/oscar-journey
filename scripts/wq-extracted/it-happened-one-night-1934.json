@@ -1,0 +1,1117 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Frank Capra. Written by Robert Riskin, based on a story by Samuel Hopkins Adams.",
+    "clean": "Directed by Frank Capra. Written by Robert Riskin, based on a story by Samuel Hopkins Adams."
+  },
+  {
+    "heading": "Peter Warne",
+    "raw": "[to his boss, on the phone] In a pig's eye, you will!...Hey listen monkey face, when you fired me, you fired the best newshound your filthy scandal sheet ever had...That was free verse, you gashouse palooka!",
+    "clean": "In a pig's eye, you will!...Hey listen monkey face, when you fired me, you fired the best newshound your filthy scandal sheet ever had...That was free verse, you gashouse palooka!"
+  },
+  {
+    "heading": "Peter Warne",
+    "raw": "[to his boss, who has already hung up] Oh, so you're changing your tune, eh? You're a little late with your apologies. I wouldn't go back to work for you if you begged me on your hands and knees. And I hope this will be a lesson to you.",
+    "clean": "Oh, so you're changing your tune, eh? You're a little late with your apologies. I wouldn't go back to work for you if you begged me on your hands and knees. And I hope this will be a lesson to you."
+  },
+  {
+    "heading": "Peter Warne",
+    "raw": "I never did like the idea of sitting on newspaper. I did it once, and all the headlines came off on my white pants. On the level! It actually happened. Nobody bought a paper that day. They just followed me around over town and read the news on the seat of my pants.",
+    "clean": "I never did like the idea of sitting on newspaper. I did it once, and all the headlines came off on my white pants. On the level! It actually happened. Nobody bought a paper that day. They just followed me around over town and read the news on the seat of my pants."
+  },
+  {
+    "heading": "Peter Warne",
+    "raw": "[to Ellie] Now listen, I put up a stiff fight for that seat. So if it's just the same to you - scram!",
+    "clean": "Now listen, I put up a stiff fight for that seat. So if it's just the same to you - scram!"
+  },
+  {
+    "heading": "Peter Warne",
+    "raw": "[in a telegram] Am I laughing? The biggest scoop of the year just dropped in my lap. I know where Ellen Andrews is...How would you like to have the story, you big tub of mush...Will try and get it. What I said about never writing another line for you still goes. Are you burning? PETER WARNE",
+    "clean": "Am I laughing? The biggest scoop of the year just dropped in my lap. I know where Ellen Andrews is...How would you like to have the story, you big tub of mush...Will try and get it. What I said about never writing another line for you still goes. Are you burning? PETER WARNE"
+  },
+  {
+    "heading": "Peter Warne",
+    "raw": "[to Ellie] Now that's my whole plot in a nutshell. A simple story for simple people. If you behave yourself, I'll see that you get to King Westley. If not, I'll just have to spill the beans to Papa.",
+    "clean": "Now that's my whole plot in a nutshell. A simple story for simple people. If you behave yourself, I'll see that you get to King Westley. If not, I'll just have to spill the beans to Papa."
+  },
+  {
+    "heading": "Ellie Andrews",
+    "raw": "[to Peter] There is a brain behind that face of yours, isn't there? You've got everything nicely figured out for yourself.",
+    "clean": "There is a brain behind that face of yours, isn't there? You've got everything nicely figured out for yourself."
+  },
+  {
+    "heading": "Mr. Andrews",
+    "raw": "[to King Westley] I admit I'm licked. But it's only because I'm worried. If I don't find her soon, I'll go crazy...if she returns, I won't interfere with your marriage.",
+    "clean": "I admit I'm licked. But it's only because I'm worried. If I don't find her soon, I'll go crazy...if she returns, I won't interfere with your marriage."
+  },
+  {
+    "heading": "Others",
+    "raw": "Detective: We're wasting our time. Can you imagine Ellie Andrews riding on a bus?",
+    "clean": "We're wasting our time. Can you imagine Ellie Andrews riding on a bus?"
+  },
+  {
+    "heading": "Others",
+    "raw": "Shapeley: Shapeley's the name - and that's the way I like 'em!",
+    "clean": "Shapeley's the name - and that's the way I like 'em!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: You've been telling me what not to do ever since I can remember.",
+    "clean": "You've been telling me what not to do ever since I can remember."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: That's because you've always been a stubborn idiot.",
+    "clean": "That's because you've always been a stubborn idiot."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I come from a long line of stubborn idiots.",
+    "clean": "I come from a long line of stubborn idiots."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I don't want it reported!...Can you understand English? Would you please keep out of my affairs. I want to be left alone.",
+    "clean": "I don't want it reported!...Can you understand English? Would you please keep out of my affairs. I want to be left alone."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Why, you ungrateful brat!",
+    "clean": "Why, you ungrateful brat!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Remember me? I'm the fellow you slept on last night.",
+    "clean": "Remember me? I'm the fellow you slept on last night."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: You needn't concern yourself about me. I can take care of myself.",
+    "clean": "You needn't concern yourself about me. I can take care of myself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You'll never get away with it, Miss Andrews.",
+    "clean": "You'll never get away with it, Miss Andrews."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Listen, if you promise not to do it, I'll pay you. I'll pay you as much as he will. You won't gain anything by giving me away, as long I'm willing to make it worth your while. I've got to get to New York without being stopped. It's terribly important to me.",
+    "clean": "Listen, if you promise not to do it, I'll pay you. I'll pay you as much as he will. You won't gain anything by giving me away, as long I'm willing to make it worth your while. I've got to get to New York without being stopped. It's terribly important to me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I just had the unpleasant sensation of hearing you referred to as my husband.",
+    "clean": "I just had the unpleasant sensation of hearing you referred to as my husband."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Oh yeah, I forgot to tell ya about that. I registered as Mr. and Mrs.",
+    "clean": "Oh yeah, I forgot to tell ya about that. I registered as Mr. and Mrs."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh, you did...Well, what am I expected to do? Leap for joy?",
+    "clean": "Oh, you did...Well, what am I expected to do? Leap for joy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: I kinda half expected you to thank me.",
+    "clean": "I kinda half expected you to thank me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Your ego is absolutely colossal.",
+    "clean": "Your ego is absolutely colossal."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yeah, yep. Not bad. How's yours?",
+    "clean": "Yeah, yep. Not bad. How's yours?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: You know, compared to you, my friend Shapeley is an amateur. Just whatever gave you any idea I'd stand for this?",
+    "clean": "You know, compared to you, my friend Shapeley is an amateur. Just whatever gave you any idea I'd stand for this?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Hey now, wait a minute. Let's get this straightened out right now. If you're nursing any silly notion that I'm interested in you, forget it. You're just a headline to me.",
+    "clean": "Hey now, wait a minute. Let's get this straightened out right now. If you're nursing any silly notion that I'm interested in you, forget it. You're just a headline to me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: A headline? You're not a newspaper man are you?",
+    "clean": "A headline? You're not a newspaper man are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Chalk up one for your side.",
+    "clean": "Chalk up one for your side."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: That, I suppose, makes everything quite all right?",
+    "clean": "That, I suppose, makes everything quite all right?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Uh, do you mind joining the Israelites?",
+    "clean": "Uh, do you mind joining the Israelites?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You don't want to join the Israelites? Alright.",
+    "clean": "You don't want to join the Israelites? Alright."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Aw, don't be a sucker. A good night's rest'll do you a lot of good. Besides, you got nothing to worry about: the walls of Jericho will protect you from the big bad wolf.",
+    "clean": "Aw, don't be a sucker. A good night's rest'll do you a lot of good. Besides, you got nothing to worry about: the walls of Jericho will protect you from the big bad wolf."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: By the way, what's your name?",
+    "clean": "By the way, what's your name?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: What's that?",
+    "clean": "What's that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Who are you?",
+    "clean": "Who are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Who me? [smiling] I'm the whippoorwill that cries in the night. I'm the soft morning breeze that caresses your lovely face.",
+    "clean": "Who me? I'm the whippoorwill that cries in the night. I'm the soft morning breeze that caresses your lovely face."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: You've got a name, haven't you?",
+    "clean": "You've got a name, haven't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yeah, I got a name. Peter Warne.",
+    "clean": "Yeah, I got a name. Peter Warne."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Peter Warne. I don't like it.",
+    "clean": "Peter Warne. I don't like it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Don't let it bother you. You're giving it back to me in the morning.",
+    "clean": "Don't let it bother you. You're giving it back to me in the morning."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Pleased to meet you, Mr. Warne.",
+    "clean": "Pleased to meet you, Mr. Warne."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: The pleasure is all mine, Mrs. Warne.",
+    "clean": "The pleasure is all mine, Mrs. Warne."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Hey, where'd you learn to dunk? In finishing school?",
+    "clean": "Hey, where'd you learn to dunk? In finishing school?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Aw, now don't you start telling me I shouldn't dunk.",
+    "clean": "Aw, now don't you start telling me I shouldn't dunk."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Of course you shouldn't - you don't know how to do it. Dunking's an art. Don't let it soak so long. A dip and [he stuffs the donut in his mouth] plop, in your mouth. Let it hang there too long, it'll get soft and fall off. It's all a matter of timing. Aw, I oughta write a book about it.",
+    "clean": "Of course you shouldn't - you don't know how to do it. Dunking's an art. Don't let it soak so long. A dip and plop, in your mouth. Let it hang there too long, it'll get soft and fall off. It's all a matter of timing. Aw, I oughta write a book about it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: [Laughing] Thanks, professor.",
+    "clean": "Thanks, professor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Just goes to show you - twenty millions, and you don't know how to dunk.",
+    "clean": "Just goes to show you - twenty millions, and you don't know how to dunk."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh, I'd change places with a plumber's daughter any day.",
+    "clean": "Oh, I'd change places with a plumber's daughter any day."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: A man here to see you, sweetheart.",
+    "clean": "A man here to see you, sweetheart."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Who, me? You wanna see me?",
+    "clean": "Who, me? You wanna see me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Detective: What's your name?",
+    "clean": "What's your name?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Are you addressin' me?",
+    "clean": "Are you addressin' me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Detective: Yeah, what's your name?",
+    "clean": "Yeah, what's your name?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Hey, wait a minute! That's my wife you're talkin' to. What do you mean comin' in here? What do you want anyway?",
+    "clean": "Hey, wait a minute! That's my wife you're talkin' to. What do you mean comin' in here? What do you want anyway?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Detective: We're lookin' for somebody.",
+    "clean": "We're lookin' for somebody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yeah. Well, look your head off and don't come bustin' in here. This isn't the public park...",
+    "clean": "Yeah. Well, look your head off and don't come bustin' in here. This isn't the public park..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Now, don't get so excited Peter. The man just asked you a simple question.",
+    "clean": "Now, don't get so excited Peter. The man just asked you a simple question."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Ohh. Is that so? Say, how many times have I told you to stop buttin' in when I'm having an argument?",
+    "clean": "Ohh. Is that so? Say, how many times have I told you to stop buttin' in when I'm having an argument?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Well, you don't have to lose your temper.",
+    "clean": "Well, you don't have to lose your temper."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: [mocking her] 'You don't have to lose your temper.' That's what you said the other time too, every time I try to protect ya. The other night at the Elks Dance when that big Swede made a pass at ya.",
+    "clean": "'You don't have to lose your temper.' That's what you said the other time too, every time I try to protect ya. The other night at the Elks Dance when that big Swede made a pass at ya."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: He didn't make a pass at me. I told you a million times.",
+    "clean": "He didn't make a pass at me. I told you a million times."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Oh no. I saw him. Kept pawin' you all over the dance floor.",
+    "clean": "Oh no. I saw him. Kept pawin' you all over the dance floor."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: He didn't. You were drunk.",
+    "clean": "He didn't. You were drunk."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Aw nuts. You're just like your old man. Once a plumber's daughter, always a plumber's daughter. There's not an ounce of brains in your whole family.",
+    "clean": "Aw nuts. You're just like your old man. Once a plumber's daughter, always a plumber's daughter. There's not an ounce of brains in your whole family."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh Peter Warne, you've gone far enough. I won't sit here and...",
+    "clean": "Oh Peter Warne, you've gone far enough. I won't sit here and..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Aw, shut up!...Quit bawlin'! Quit bawlin'!",
+    "clean": "Aw, shut up!...Quit bawlin'! Quit bawlin'!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Detective: [leaving] I told you they were a perfectly nice married couple.",
+    "clean": "I told you they were a perfectly nice married couple."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Hey you know, you weren't bad jumping in like that. You've got a brain, haven't you!",
+    "clean": "Hey you know, you weren't bad jumping in like that. You've got a brain, haven't you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Well, you're not so bad yourself.",
+    "clean": "Well, you're not so bad yourself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You know, we could start a two-people stock company. If things get tough, we'll play the small-town auditoriums...",
+    "clean": "You know, we could start a two-people stock company. If things get tough, we'll play the small-town auditoriums..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: What about Cinderella or a real hot love story?",
+    "clean": "What about Cinderella or a real hot love story?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Oh no, no, no. That's too mushy.",
+    "clean": "Oh no, no, no. That's too mushy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh I like mushy stuff.",
+    "clean": "Oh I like mushy stuff."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: You know this is the first time in years I've ridden piggy-back.",
+    "clean": "You know this is the first time in years I've ridden piggy-back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: This isn't piggy-back.",
+    "clean": "This isn't piggy-back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Course it is.",
+    "clean": "Course it is."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You're crazy.",
+    "clean": "You're crazy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I remember distinctly my father taking me for a piggy-back ride.",
+    "clean": "I remember distinctly my father taking me for a piggy-back ride."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: And he carried you like this I suppose.",
+    "clean": "And he carried you like this I suppose."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Your father didn't know beans about piggy-back riding.",
+    "clean": "Your father didn't know beans about piggy-back riding."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: My uncle, mother's brother, has four children and I've seen them ride piggy-back.",
+    "clean": "My uncle, mother's brother, has four children and I've seen them ride piggy-back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: I'll bet there isn't a good piggy-back rider in your whole family. I never knew a rich man yet who could piggy-back ride.",
+    "clean": "I'll bet there isn't a good piggy-back rider in your whole family. I never knew a rich man yet who could piggy-back ride."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: You're prejudiced.",
+    "clean": "You're prejudiced."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You show me a good piggy-backer and I'll show you a real human. Now you take Abraham Lincoln for instance. A natural born piggy-backer. Where do you get all of that stuffed-shirts family of yours?",
+    "clean": "You show me a good piggy-backer and I'll show you a real human. Now you take Abraham Lincoln for instance. A natural born piggy-backer. Where do you get all of that stuffed-shirts family of yours?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: My father was a great piggy-backer.",
+    "clean": "My father was a great piggy-backer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I'm hungry and - scared.",
+    "clean": "I'm hungry and - scared."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You can't be hungry and scared both at the same time.",
+    "clean": "You can't be hungry and scared both at the same time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Well, I am.",
+    "clean": "Well, I am."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: If you're scared, it scares the hunger out of ya.",
+    "clean": "If you're scared, it scares the hunger out of ya."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Not if you're more hungry than scared.",
+    "clean": "Not if you're more hungry than scared."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: All right, you win. Let's forget about it.",
+    "clean": "All right, you win. Let's forget about it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I can't forget it. I'm still hungry.",
+    "clean": "I can't forget it. I'm still hungry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Holy Smoke! Why did I ever get mixed up with you? If I had any sense, I'd be in New York by this time.",
+    "clean": "Holy Smoke! Why did I ever get mixed up with you? If I had any sense, I'd be in New York by this time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: What about your story?",
+    "clean": "What about your story?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Taking a married woman back to her husband. Hmm, mmm. I turned out to be the prize sucker. All right, come on. Your bed's all ready.",
+    "clean": "Taking a married woman back to her husband. Hmm, mmm. I turned out to be the prize sucker. All right, come on. Your bed's all ready."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I'll get my clothes all wrinkled.",
+    "clean": "I'll get my clothes all wrinkled."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Then take 'em off.",
+    "clean": "Then take 'em off."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: What!?",
+    "clean": "What!?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: All right, don't take 'em off. Do whatever you please, but shut up about it. [He walks off]",
+    "clean": "All right, don't take 'em off. Do whatever you please, but shut up about it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: You're becoming awful disagreeable lately. You just snap my head off every time I open my mouth. If being with me is so distasteful to you, you can leave. You can leave anytime you see fit. Nobody's holding you here. I can get along.",
+    "clean": "You're becoming awful disagreeable lately. You just snap my head off every time I open my mouth. If being with me is so distasteful to you, you can leave. You can leave anytime you see fit. Nobody's holding you here. I can get along."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: What are you thinking about?",
+    "clean": "What are you thinking about?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: By a strange coincidence, I was thinking of you.",
+    "clean": "By a strange coincidence, I was thinking of you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Really?",
+    "clean": "Really?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yeah. I was just wondering what makes dames like you so dizzy.",
+    "clean": "Yeah. I was just wondering what makes dames like you so dizzy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: What do you say we're supposed to be doing?",
+    "clean": "What do you say we're supposed to be doing?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Hitchhiking.",
+    "clean": "Hitchhiking."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh. Well, you've given me a very good example of the hiking. Where does the hitching come in?",
+    "clean": "Oh. Well, you've given me a very good example of the hiking. Where does the hitching come in?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: A little early yet. No cars out.",
+    "clean": "A little early yet. No cars out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: If it's just the same to you, I'm going to sit right here and wait til they come.",
+    "clean": "If it's just the same to you, I'm going to sit right here and wait til they come."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: [on Peter's hitchiking skills] There's no end to your accomplishments, is there?",
+    "clean": "There's no end to your accomplishments, is there?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: It's all in that ol' thumb, see?...that ol' thumb never fails. It's all a matter of how you do it, though. Now, you take number one, for instance. That's a short, jerky movement like this - that shows independence, you don't care whether they stop or not. You've got money in your pocket, see...",
+    "clean": "It's all in that ol' thumb, see?...that ol' thumb never fails. It's all a matter of how you do it, though. Now, you take number one, for instance. That's a short, jerky movement like this - that shows independence, you don't care whether they stop or not. You've got money in your pocket, see..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Clever!",
+    "clean": "Clever!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: But number two, that's a little wider movement - a smile goes with this one, like this, that means you've got a brand new story about the farmer's daughter...",
+    "clean": "But number two, that's a little wider movement - a smile goes with this one, like this, that means you've got a brand new story about the farmer's daughter..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Hmm, mmm. You figured that out all by yourself!",
+    "clean": "Hmm, mmm. You figured that out all by yourself!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Number three, that's the pits. Yeah, that's a pitiful one you know. When you're broke and hungry and everything looks black. It's a long sweeping movement like this, but you've got to follow through though...",
+    "clean": "Number three, that's the pits. Yeah, that's a pitiful one you know. When you're broke and hungry and everything looks black. It's a long sweeping movement like this, but you've got to follow through though..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh, that's amazing.",
+    "clean": "Oh, that's amazing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: It's no good though, if you haven't got a long face to go with it. Keep your eye on that thumb, baby, and see what happens. [a car drives by without stopping]",
+    "clean": "It's no good though, if you haven't got a long face to go with it. Keep your eye on that thumb, baby, and see what happens."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I still got my eye on the thumb.",
+    "clean": "I still got my eye on the thumb."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Something must have gone wrong. I'll try method number two.",
+    "clean": "Something must have gone wrong. I'll try method number two."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: When you get to 100, wake me up.",
+    "clean": "When you get to 100, wake me up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: [after failing to get over a dozen cars to stop] I don't think I'll write that book after all.",
+    "clean": "I don't think I'll write that book after all."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Let me try.",
+    "clean": "Let me try."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You? Don't make me laugh.",
+    "clean": "You? Don't make me laugh."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh, you're such a smart alec. Nobody knows anything but you. I'll stop a car and I won't use my thumb.",
+    "clean": "Oh, you're such a smart alec. Nobody knows anything but you. I'll stop a car and I won't use my thumb."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: What're you going to do?",
+    "clean": "What're you going to do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: It's a system all my own.",
+    "clean": "It's a system all my own."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Aren't you going to give me a little credit?",
+    "clean": "Aren't you going to give me a little credit?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: What for?",
+    "clean": "What for?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Well, I proved once and for all that the limb is mightier than the thumb.",
+    "clean": "Well, I proved once and for all that the limb is mightier than the thumb."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Why didn't you take off all your clothes? You could have stopped forty cars.",
+    "clean": "Why didn't you take off all your clothes? You could have stopped forty cars."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh, I'll remember that when we need forty cars.",
+    "clean": "Oh, I'll remember that when we need forty cars."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Well, we're on the last lap. Tomorrow morning, you'll be in the arms of your husband.",
+    "clean": "Well, we're on the last lap. Tomorrow morning, you'll be in the arms of your husband."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Yeah. You'll have a great story won't you?",
+    "clean": "Yeah. You'll have a great story won't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Well, you certainly outsmarted your father. I guess you ought to be happy.",
+    "clean": "Well, you certainly outsmarted your father. I guess you ought to be happy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Am I going to see you in New York?",
+    "clean": "Am I going to see you in New York?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Nope.",
+    "clean": "Nope."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Why not?",
+    "clean": "Why not?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: I don't make it a policy to run around with married women.",
+    "clean": "I don't make it a policy to run around with married women."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: No harm in your coming to see it.",
+    "clean": "No harm in your coming to see it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Not interested.",
+    "clean": "Not interested."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Will I ever see you again?",
+    "clean": "Will I ever see you again?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: What do you want to see me for? I've served my purpose. I brought you back to King Westley didn't I? That's what you wanted, wasn't it?",
+    "clean": "What do you want to see me for? I've served my purpose. I brought you back to King Westley didn't I? That's what you wanted, wasn't it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Have you ever been in love, Peter?",
+    "clean": "Have you ever been in love, Peter?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Yeah. Haven't you ever thought about it at all? Seems to me you, you could make some girl wonderfully happy.",
+    "clean": "Yeah. Haven't you ever thought about it at all? Seems to me you, you could make some girl wonderfully happy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Take me with you, Peter. Take me to your island. I want to do all those things you talked about.",
+    "clean": "Take me with you, Peter. Take me to your island. I want to do all those things you talked about."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You'd better go back to your bed.",
+    "clean": "You'd better go back to your bed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I love you. Nothing else matters. We can run away. Everything will take care of itself. Please Peter, I can't let you out of my life now. I couldn't live without you. [She cries in his arms]",
+    "clean": "I love you. Nothing else matters. We can run away. Everything will take care of itself. Please Peter, I can't let you out of my life now. I couldn't live without you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You'd better go back to your bed.",
+    "clean": "You'd better go back to your bed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Sorry. [Returning to her own bed, she cries herself to sleep on her pillow]",
+    "clean": "Sorry."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Hey, brat. Did you mean that? Would you really go? [He looks over the blanket and sees she is asleep]",
+    "clean": "Hey, brat. Did you mean that? Would you really go?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Supposin' I was to tell you that Ellen Andrews was going to have her marriage annulled...She's going to marry somebody else...Would a story like that would be worth a thousand bucks to you...I got it, Joe.",
+    "clean": "Supposin' I was to tell you that Ellen Andrews was going to have her marriage annulled...She's going to marry somebody else...Would a story like that would be worth a thousand bucks to you...I got it, Joe."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joe: Who's the guy she's gonna marry?",
+    "clean": "Who's the guy she's gonna marry?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Now don't tell me you've fallen in love with a bus driver...Who is he?",
+    "clean": "Now don't tell me you've fallen in love with a bus driver...Who is he?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I don't know very much about him. Just that I love him.",
+    "clean": "I don't know very much about him. Just that I love him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Well, if it's as serious as all that, we'll move heaven and earth to...",
+    "clean": "Well, if it's as serious as all that, we'll move heaven and earth to..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: No, it's no use. He despises me.",
+    "clean": "No, it's no use. He despises me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Oh, come now.",
+    "clean": "Oh, come now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Yes he does. He despises everything about me. He says that I'm spoiled and selfish and pampered, and-and thoroughly insincere.",
+    "clean": "Yes he does. He despises everything about me. He says that I'm spoiled and selfish and pampered, and-and thoroughly insincere."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Oh, ridiculous.",
+    "clean": "Oh, ridiculous."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: He doesn't think so much of you either...He blames you for everything that's wrong with me. He says you raised me stupidly.",
+    "clean": "He doesn't think so much of you either...He blames you for everything that's wrong with me. He says you raised me stupidly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Now that's a fine man to fall in love with.",
+    "clean": "Now that's a fine man to fall in love with."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Oh, he's marvelous! I practically threw myself at him. I don't want to stir up any more trouble. I've done it all my life. I've made your life miserable and mine too. I'm tired Father. I'm tired of running around in circles...I've got to settle down. It doesn't matter how or where or with whom.",
+    "clean": "Oh, he's marvelous! I practically threw myself at him. I don't want to stir up any more trouble. I've done it all my life. I've made your life miserable and mine too. I'm tired Father. I'm tired of running around in circles...I've got to settle down. It doesn't matter how or where or with whom."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Mr. Warne?",
+    "clean": "Mr. Warne?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Please sit down.",
+    "clean": "Please sit down."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Thanks.",
+    "clean": "Thanks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: I was surprised to get your note. My daughter hadn't told me anything about you, about your helping her.",
+    "clean": "I was surprised to get your note. My daughter hadn't told me anything about you, about your helping her."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: That's typical of your daughter. Take those things for granted. Why did you think I lugged her all the way from Miami - for the love of it?",
+    "clean": "That's typical of your daughter. Take those things for granted. Why did you think I lugged her all the way from Miami - for the love of it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: She thinks you're entitled to anything you can get.",
+    "clean": "She thinks you're entitled to anything you can get."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Oh she does, eh? Now isn't that sweet of her. You don't, I suppose.",
+    "clean": "Oh she does, eh? Now isn't that sweet of her. You don't, I suppose."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: I don't know. I'll have to see on what you base your claim. I presume you feel justified -",
+    "clean": "I don't know. I'll have to see on what you base your claim. I presume you feel justified -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: If I didn't, I wouldn't be here. [He pulls a list from his pocket] I've got it all itemized.",
+    "clean": "If I didn't, I wouldn't be here. I've got it all itemized."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: [Reading the list] 'Cash outlay, $8.60; topcoat, $15; suitcase, $7.50; hat, $4; three shirts, $4.50. Total, $39.60. All the above items had to be sold to buy gasoline.'",
+    "clean": "Cash outlay, $8.60; topcoat, $15; suitcase, $7.50; hat, $4; three shirts, $4.50. Total, $39.60. All the above items had to be sold to buy gasoline."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: And I sold some shorts and socks too. I'm throwing those in.",
+    "clean": "And I sold some shorts and socks too. I'm throwing those in."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Yes, I know -",
+    "clean": "Yes, I know -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: What's the matter? Isn't it cheap enough? A trip like that would cost you a thousand dollars. Maybe more!",
+    "clean": "What's the matter? Isn't it cheap enough? A trip like that would cost you a thousand dollars. Maybe more!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Now let me get this straight. You want $39.60 in addition to the $10,000?",
+    "clean": "Now let me get this straight. You want $39.60 in addition to the $10,000?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: What $10,000?",
+    "clean": "What $10,000?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: The reward.",
+    "clean": "The reward."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Who said anything about a reward?",
+    "clean": "Who said anything about a reward?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: I'm afraid I'm a little bit confused. I assumed that you -",
+    "clean": "I'm afraid I'm a little bit confused. I assumed that you -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Look, look, look, all I want is $39.60. And if you give me a check for it, I'll get outta this joint. It gives me the jitters.",
+    "clean": "Look, look, look, all I want is $39.60. And if you give me a check for it, I'll get outta this joint. It gives me the jitters."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: You're a peculiar chap.",
+    "clean": "You're a peculiar chap."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yeah, we'll go into that some other time.",
+    "clean": "Yeah, we'll go into that some other time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: The average man would go after the reward. All you seem to -",
+    "clean": "The average man would go after the reward. All you seem to -"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Listen, did anybody ever make a sucker out of you? This is a matter of principle. Something you probably wouldn't understand. But when anybody takes me for a buggy ride, I don't like the idea of having to pay for the privilege.",
+    "clean": "Listen, did anybody ever make a sucker out of you? This is a matter of principle. Something you probably wouldn't understand. But when anybody takes me for a buggy ride, I don't like the idea of having to pay for the privilege."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Were you taken for a buggy ride?",
+    "clean": "Were you taken for a buggy ride?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Yes. With all the trimming. So how about the check? Do I get it?",
+    "clean": "Yes. With all the trimming. So how about the check? Do I get it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Certainly.",
+    "clean": "Certainly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Thanks.",
+    "clean": "Thanks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: [Smiling, he writes a check] Here you are.",
+    "clean": "Here you are."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Thank you.",
+    "clean": "Thank you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Oh, ah, do you mind if I ask you a question frankly? Do you love my daughter?",
+    "clean": "Oh, ah, do you mind if I ask you a question frankly? Do you love my daughter?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Any guy that'd fall in love with your daughter ought to have his head examined.",
+    "clean": "Any guy that'd fall in love with your daughter ought to have his head examined."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: That's an evasion.",
+    "clean": "That's an evasion."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: She picked herself a perfect running mate: King Westley! The pill of the century! What she needs is a guy that'd take a sock at her once a day - whether it is coming to her or not. If you had half the brains you're supposed to have, you'd have done it yourself long ago.",
+    "clean": "She picked herself a perfect running mate: King Westley! The pill of the century! What she needs is a guy that'd take a sock at her once a day - whether it is coming to her or not. If you had half the brains you're supposed to have, you'd have done it yourself long ago."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Do you love her?",
+    "clean": "Do you love her?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: A normal human being couldn't live under the same roof with her without going nutty. She's my idea of nothing!",
+    "clean": "A normal human being couldn't live under the same roof with her without going nutty. She's my idea of nothing!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: I asked you a simple question! Do you love her?",
+    "clean": "I asked you a simple question! Do you love her?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: [As he departs and slams the office door] Yes! But don't hold that against me. I'm a little screwy myself.",
+    "clean": "Yes! But don't hold that against me. I'm a little screwy myself."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Well, here's to the merry go round.",
+    "clean": "Well, here's to the merry go round."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Perfect. Now you look natural.",
+    "clean": "Perfect. Now you look natural."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: I hope you got your money.",
+    "clean": "I hope you got your money."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: You bet I did.",
+    "clean": "You bet I did."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Congratulations.",
+    "clean": "Congratulations."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: Thanks, same to you.",
+    "clean": "Thanks, same to you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Ellie: Stay around and watch the fun. You'll enjoy it immensely.",
+    "clean": "Stay around and watch the fun. You'll enjoy it immensely."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: I would, but I've got a weak stomach.",
+    "clean": "I would, but I've got a weak stomach."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Peter: [in a telegram] What's holding up the annulment, you slowpoke? The walls of Jericho are a-toppling.",
+    "clean": "What's holding up the annulment, you slowpoke? The walls of Jericho are a-toppling."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Andrews: Send them a telegram right away. Just say, 'Let 'em topple.'",
+    "clean": "Send them a telegram right away. Just say, 'Let 'em topple.'"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke's Wife: Funny couple, ain't they?",
+    "clean": "Funny couple, ain't they?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke's Wife: If you ask me, I don't believe they're married.",
+    "clean": "If you ask me, I don't believe they're married."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke: They're married all right. I just seen the license.",
+    "clean": "They're married all right. I just seen the license."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke's Wife: They made me get them a rope and a blanket on a night like this. What do you reckon that's for?",
+    "clean": "They made me get them a rope and a blanket on a night like this. What do you reckon that's for?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke: Blamed if I know. I just brung 'em a trumpet.",
+    "clean": "Blamed if I know. I just brung 'em a trumpet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke's Wife: A trumpet?",
+    "clean": "A trumpet?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke: Yeah, one of them toy things. They sent me to the store to get it.",
+    "clean": "Yeah, one of them toy things. They sent me to the store to get it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke's Wife: But what in the world do they want a trumpet for?",
+    "clean": "But what in the world do they want a trumpet for?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Zeke: Dunno.",
+    "clean": "Dunno."
+  }
+]

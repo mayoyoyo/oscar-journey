@@ -1,0 +1,182 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Hal Ashby. Written by Colin Higgins.",
+    "clean": "Directed by Hal Ashby. Written by Colin Higgins."
+  },
+  {
+    "heading": "Maude",
+    "raw": "Dreyfus once wrote from Devil's Island that he would see the most glorious birds. Many years later in Brittany, he realized they had only been sea gulls... For me, they will always be... glorious birds.",
+    "clean": "Dreyfus once wrote from Devil's Island that he would see the most glorious birds. Many years later in Brittany, he realized they had only been sea gulls... For me, they will always be... glorious birds."
+  },
+  {
+    "heading": "Harold",
+    "raw": "I haven't lived... I've died a few times.",
+    "clean": "I haven't lived... I've died a few times."
+  },
+  {
+    "heading": "Priest",
+    "raw": "I would be remiss in my duty, if I did not tell you, that the idea of...... intercourse... and the fact of your firm, young... body..... commingling, with the... withered flesh... sagging... breasts... and flabby b-... buttocks... makes me want... to vomit.",
+    "clean": "I would be remiss in my duty, if I did not tell you, that the idea of...... intercourse... and the fact of your firm, young... body..... commingling, with the... withered flesh... sagging... breasts... and flabby b-... buttocks... makes me want... to vomit."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: You hop in any car you want and just drive off?",
+    "clean": "You hop in any car you want and just drive off?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: Well, not any car. I like to keep a variety. I'm always looking for the new experience.",
+    "clean": "Well, not any car. I like to keep a variety. I'm always looking for the new experience."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: Maybe. Nevertheless, I think you're upsetting people. I don't know if that's right.",
+    "clean": "Maybe. Nevertheless, I think you're upsetting people. I don't know if that's right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: Well, if some people get upset because they feel they have a hold on some things, I'm merely acting as a gentle reminder: here today, gone tomorrow, so don't get attached to things. Now, with that in mind, I'm not against collecting stuff...",
+    "clean": "Well, if some people get upset because they feel they have a hold on some things, I'm merely acting as a gentle reminder: here today, gone tomorrow, so don't get attached to things. Now, with that in mind, I'm not against collecting stuff..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: That little tree — it's in trouble. Come on. [Harold and Maude walk over to a tree growing through the sidewalk in front of a building.] Look at it. Oh, it's suffocating. Well, it's the smog. You know, people can live with it, but trees — it gives them asthma. They can't breathe. The leaves, look, they’re turning all brown. Harold, we have got to do something about this life.",
+    "clean": "That little tree - it's in trouble. Come on. Look at it. Oh, it's suffocating. Well, it's the smog. You know, people can live with it, but trees - it gives them asthma. They can't breathe. The leaves, look, they're turning all brown. Harold, we have got to do something about this life."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: We'll transplant it. To the forest.",
+    "clean": "We'll transplant it. To the forest."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: You can't do that",
+    "clean": "You can't do that"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: Why not?",
+    "clean": "Why not?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: This is public property.",
+    "clean": "This is public property."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: Well, exactly.",
+    "clean": "Well, exactly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: Maude?",
+    "clean": "Maude?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: Do you pray?",
+    "clean": "Do you pray?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: Pray? No. I communicate.",
+    "clean": "Pray? No. I communicate."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: With God?",
+    "clean": "With God?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: With Life.",
+    "clean": "With Life."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Psychiatrist: Tell me, Harold, how many of these, uh, suicides have you performed?",
+    "clean": "Tell me, Harold, how many of these, uh, suicides have you performed?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: An accurate number would be difficult to gauge.",
+    "clean": "An accurate number would be difficult to gauge."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Psychiatrist: Well, just give me a rough estimate.",
+    "clean": "Well, just give me a rough estimate."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: A rough estimate? I'd say... fifteen.",
+    "clean": "A rough estimate? I'd say... fifteen."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Psychiatrist: Fifteen?",
+    "clean": "Fifteen?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: That’s a rough estimate.",
+    "clean": "That's a rough estimate."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Psychiatrist: Were they all done for your mother's benefit?",
+    "clean": "Were they all done for your mother's benefit?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: No. No, I would not say \"benefit.\"",
+    "clean": "No. No, I would not say \"benefit.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Motorcycle Officer: License, lady?",
+    "clean": "License, lady?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: I don't have one. I don't believe in them.",
+    "clean": "I don't have one. I don't believe in them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Motorcycle Officer: How long you been driving, lady?",
+    "clean": "How long you been driving, lady?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: About 45 minutes, wouldn't you say, Harold? We were hoping to start sooner; but, you see, it's rather hard to find a truck.",
+    "clean": "About 45 minutes, wouldn't you say, Harold? We were hoping to start sooner; but, you see, it's rather hard to find a truck."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Motorcycle Officer: This your truck?",
+    "clean": "This your truck?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: Oh, no, I just took it.",
+    "clean": "Oh, no, I just took it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Harold: You sure have a way with people.",
+    "clean": "You sure have a way with people."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Maude: Well, they're my species!",
+    "clean": "Well, they're my species!"
+  }
+]

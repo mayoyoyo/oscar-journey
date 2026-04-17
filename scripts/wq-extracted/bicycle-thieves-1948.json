@@ -1,0 +1,137 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Vittorio De Sica. Written by Vittorio De Sica, Cesare Zavattini, Suso Cecchi d'Amico, Gerardo Guerrieri, Oreste Biancoli, and Adolfo Franci, based on a novel by Luigi Bartolini.",
+    "clean": "Directed by Vittorio De Sica. Written by Vittorio De Sica, Cesare Zavattini, Suso Cecchi d'Amico, Gerardo Guerrieri, Oreste Biancoli, and Adolfo Franci, based on a novel by Luigi Bartolini."
+  },
+  {
+    "heading": "Antonio Ricci",
+    "raw": "Why should I kill myself worrying when I'll end up just as dead?",
+    "clean": "Why should I kill myself worrying when I'll end up just as dead?"
+  },
+  {
+    "heading": "Antonio Ricci",
+    "raw": "There's a cure for everything except death.",
+    "clean": "There's a cure for everything except death."
+  },
+  {
+    "heading": "Antonio Ricci",
+    "raw": "You live and you suffer.",
+    "clean": "You live and you suffer."
+  },
+  {
+    "heading": "Antonio Ricci",
+    "raw": "I've been cursed since the day I was born.",
+    "clean": "I've been cursed since the day I was born."
+  },
+  {
+    "heading": "Antonio Ricci",
+    "raw": "Your mother and her prayers can't help us.",
+    "clean": "Your mother and her prayers can't help us."
+  },
+  {
+    "heading": "Antonio Ricci",
+    "raw": "[to Bruno] Do you fancy a pizza? Come on, then! Come on, let's go! What the hell. We might as well go out in style. What's the point in worrying about it all?",
+    "clean": "Do you fancy a pizza? Come on, then! Come on, let's go! What the hell. We might as well go out in style. What's the point in worrying about it all?"
+  },
+  {
+    "heading": "Other",
+    "raw": "The Beggar: I mind my own business, I bother nobody, and what do I get? Trouble.",
+    "clean": "I mind my own business, I bother nobody, and what do I get? Trouble."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "La Santona: [Addressing a young man seated before her, apparently seeking advice on his love life] You must plant your seeds in another field. Do you understand what I mean?",
+    "clean": "You must plant your seeds in another field. Do you understand what I mean?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Young man: No, I don't understand.",
+    "clean": "No, I don't understand."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "La Santona: It's simple, my boy. What good is planting seeds if the soil rejects them? You plant, but don't gather. Understand?",
+    "clean": "It's simple, my boy. What good is planting seeds if the soil rejects them? You plant, but don't gather. Understand?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Young man: I haven't understood a word.",
+    "clean": "I haven't understood a word."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "La Santona: [Becoming impatient] She doesn't love you! Forget her! [Pausing for effect] Dear boy, you're very ugly. Yes, ugly. There are so many other women... Go and plow another field!",
+    "clean": "She doesn't love you! Forget her! Dear boy, you're very ugly. Yes, ugly. There are so many other women... Go and plow another field!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Employment Officer: Hey, Ricci, remember your bike! You have to have a bike.",
+    "clean": "Hey, Ricci, remember your bike! You have to have a bike."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antonio Ricci: A bike? I have and I haven't. I can't get my hands on it right now. Perhaps in a few days time.",
+    "clean": "A bike? I have and I haven't. I can't get my hands on it right now. Perhaps in a few days time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Employment Officer: You need one straight away or they won't take you on.",
+    "clean": "You need one straight away or they won't take you on."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antonio Ricci: I can do it on foot for the first few days.",
+    "clean": "I can do it on foot for the first few days."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Employment Officer: If you haven't got a bike, you'll have to let someone else take it.",
+    "clean": "If you haven't got a bike, you'll have to let someone else take it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Employment Officer: Have you got a bike or haven't you?",
+    "clean": "Have you got a bike or haven't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antonio Ricci: I've got one. I've got one.",
+    "clean": "I've got one. I've got one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Employment Officer: Remember if you haven't got a bike, there's nothing doing, right?",
+    "clean": "Remember if you haven't got a bike, there's nothing doing, right?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antonio Ricci: Think I'm going to wait another two years? I'll be there with a bike.",
+    "clean": "Think I'm going to wait another two years? I'll be there with a bike."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "La Santona: What have they stolen?",
+    "clean": "What have they stolen?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antonio Ricci: My bike.",
+    "clean": "My bike."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "La Santona: What can I say? I can only tell you what I see. Listen: you'll find it straight away or not at all. Understand? You'll find it straight away or not at all. Keep your eyes open.",
+    "clean": "What can I say? I can only tell you what I see. Listen: you'll find it straight away or not at all. Understand? You'll find it straight away or not at all. Keep your eyes open."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Antonio Ricci: Where, straight away?",
+    "clean": "Where, straight away?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "La Santona: How should I know? Go and try to understand what I said. You'll find it straight away or not at all.",
+    "clean": "How should I know? Go and try to understand what I said. You'll find it straight away or not at all."
+  }
+]

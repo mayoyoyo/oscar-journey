@@ -1,0 +1,12 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "To Kill a Mockingbird (novel), the Pulitzer Prize-winning novel by Harper Lee.",
+    "clean": "To Kill a Mockingbird (novel), the Pulitzer Prize-winning novel by Harper Lee."
+  },
+  {
+    "heading": "(intro)",
+    "raw": "To Kill a Mockingbird (film), the film, based on the novel, starring Gregory Peck, Mary Badham, Phillip Alford, and Robert Duvall.",
+    "clean": "To Kill a Mockingbird (film), the film, based on the novel, starring Gregory Peck, Mary Badham, Phillip Alford, and Robert Duvall."
+  }
+]

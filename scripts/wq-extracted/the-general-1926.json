@@ -1,0 +1,77 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Clyde Bruckman. Written by Al Boasberg.",
+    "clean": "Directed by Clyde Bruckman. Written by Al Boasberg."
+  },
+  {
+    "heading": "Johnnie Gray",
+    "raw": "[to the recruiter who rejects him] If you lose this war don't blame me.",
+    "clean": "If you lose this war don't blame me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Annabelle's brother: Fort Sumter has been fired upon.",
+    "clean": "Fort Sumter has been fired upon."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Lee: Then the war is here.",
+    "clean": "Then the war is here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Annabelle's brother: Yes, dad, and I'm going to be one of the first to enlist.",
+    "clean": "Yes, dad, and I'm going to be one of the first to enlist."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Annabelle Lee: Did Johnnie enlist?",
+    "clean": "Did Johnnie enlist?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Annabelle's brother: He didn't even get in line.",
+    "clean": "He didn't even get in line."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Lee: He's a disgrace to the South.",
+    "clean": "He's a disgrace to the South."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Annabelle Lee: Why didn't you enlist?",
+    "clean": "Why didn't you enlist?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Johnnie Gray: They wouldn't take me.",
+    "clean": "They wouldn't take me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Annabelle Lee Please don't lie I don't want you to speak to me again until you are in uniform.",
+    "clean": "Annabelle Lee Please don't lie I don't want you to speak to me again until you are in uniform."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Johnnie Gray: We had better stay here until daybreak to see where we are.",
+    "clean": "We had better stay here until daybreak to see where we are."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Annabelle Lee: It was so brave of you to risk your life, coming into the enemy's country, just to save me.",
+    "clean": "It was so brave of you to risk your life, coming into the enemy's country, just to save me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Recruiter: [after Johnnie has brought back The General] Occupation?",
+    "clean": "Occupation?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Johnnie Gray: Soldier!",
+    "clean": "Soldier!"
+  }
+]

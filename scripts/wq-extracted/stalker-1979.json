@@ -1,0 +1,72 @@
+[
+  {
+    "heading": "The Stalker",
+    "raw": "Here the shortest path isn’t the simplest. The more indirect, the less risk there is.",
+    "clean": "Here the shortest path isn't the simplest. The more indirect, the less risk there is."
+  },
+  {
+    "heading": "The Stalker",
+    "raw": "I’ve never met a single happy person in my life.",
+    "clean": "I've never met a single happy person in my life."
+  },
+  {
+    "heading": "The Stalker",
+    "raw": "This is the most important moment of your life. Your sincerest desire will come true here. The desire that has made you suffer most.",
+    "clean": "This is the most important moment of your life. Your sincerest desire will come true here. The desire that has made you suffer most."
+  },
+  {
+    "heading": "The Stalker",
+    "raw": "He wants to destroy your hope. There is nothing left on Earth. This is the only place to come when all hope is lost! Why destroy hope!",
+    "clean": "He wants to destroy your hope. There is nothing left on Earth. This is the only place to come when all hope is lost! Why destroy hope!"
+  },
+  {
+    "heading": "The Writer",
+    "raw": "A man writes because he is tormented, because he doubts. He needs to constantly prove to himself and the others that he's worth something. And if I know for sure that I'm a genius? Why write then? What the hell for?",
+    "clean": "A man writes because he is tormented, because he doubts. He needs to constantly prove to himself and the others that he's worth something. And if I know for sure that I'm a genius? Why write then? What the hell for?"
+  },
+  {
+    "heading": "The Writer",
+    "raw": "My conscience wants vegetarianism to win over the world. And my subconscious is yearning for a piece of juicy meat. But what do I want?",
+    "clean": "My conscience wants vegetarianism to win over the world. And my subconscious is yearning for a piece of juicy meat. But what do I want?"
+  },
+  {
+    "heading": "The Writer",
+    "raw": "While I am digging for the truth, so much happens to it that instead of discovering the truth I dig up a heap of, pardon... I'd better not name it.",
+    "clean": "While I am digging for the truth, so much happens to it that instead of discovering the truth I dig up a heap of, pardon... I'd better not name it."
+  },
+  {
+    "heading": "The Writer",
+    "raw": "You're a bad judge of human nature if you bring people like me into the Zone.",
+    "clean": "You're a bad judge of human nature if you bring people like me into the Zone."
+  },
+  {
+    "heading": "The Writer",
+    "raw": "What comes true here is that which reflects your true nature. The most secret desire. It is within you. It governs you. Yet you are ignorant of it.",
+    "clean": "What comes true here is that which reflects your true nature. The most secret desire. It is within you. It governs you. Yet you are ignorant of it."
+  },
+  {
+    "heading": "The Writer",
+    "raw": "Porcupine was given the essence of his true nature. Conscience and soul-searching were all invented by the mind. When he realized all that, he hanged himself.",
+    "clean": "Porcupine was given the essence of his true nature. Conscience and soul-searching were all invented by the mind. When he realized all that, he hanged himself."
+  },
+  {
+    "heading": "The Writer",
+    "raw": "I won’t go into your room. I won’t pour the filth of my soul on to anyone’s head.",
+    "clean": "I won't go into your room. I won't pour the filth of my soul on to anyone's head."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Stalker. Well, here is the Dry Tunnel.",
+    "clean": "Stalker. Well, here is the Dry Tunnel."
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Writer. [knee-deep in water] Not bad, \"dry\"!",
+    "clean": "Writer. Not bad, \"dry\"!"
+  },
+  {
+    "heading": "Dialogues",
+    "raw": "Stalker. This is a local joke. Usually you need to swim here.",
+    "clean": "Stalker. This is a local joke. Usually you need to swim here."
+  }
+]

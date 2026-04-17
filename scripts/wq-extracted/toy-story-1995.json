@@ -1,0 +1,4292 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by John Lasseter.",
+    "clean": "Directed by John Lasseter."
+  },
+  {
+    "heading": "(intro)",
+    "raw": "Music by Randy Newman and includes \"You've Got a Friend in Me\". Written and produced by Newman and Lyle Lovett.",
+    "clean": "Music by Randy Newman and includes \"You've Got a Friend in Me\". Written and produced by Newman and Lyle Lovett."
+  },
+  {
+    "heading": "Buzz Lightyear",
+    "raw": "There's a secret mission in uncharted space. Let's go.",
+    "clean": "There's a secret mission in uncharted space. Let's go."
+  },
+  {
+    "heading": "Buzz Lightyear",
+    "raw": "To infinity and beyond!",
+    "clean": "To infinity and beyond!"
+  },
+  {
+    "heading": "Buzz Lightyear",
+    "raw": "Buzz Lightyear to the recsue!",
+    "clean": "Buzz Lightyear to the recsue!"
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "Reach for the sky!",
+    "clean": "Reach for the sky!"
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "Pull my string! The birthday party's today?",
+    "clean": "Pull my string! The birthday party's today?"
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "You're my favorite deputy!",
+    "clean": "You're my favorite deputy!"
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "There's a snake in my boots.",
+    "clean": "There's a snake in my boots."
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "Yee-Haw! Giddy-up partner! We gotta get this wagon train a-movin’!",
+    "clean": "Yee-Haw! Giddy-up partner! We gotta get this wagon train a-movin'!"
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "Sergeant, establish a recon post downstairs. Code Red! You know what to do.",
+    "clean": "Sergeant, establish a recon post downstairs. Code Red! You know what to do."
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "Howdy, my name is Woody.",
+    "clean": "Howdy, my name is Woody."
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "I'd like to join your posse boys, but first I’m gonna sing a little song.",
+    "clean": "I'd like to join your posse boys, but first I'm gonna sing a little song."
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "Somebody's poisoned the waterhole!",
+    "clean": "Somebody's poisoned the waterhole!"
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "This town ain’t big enough for the two of us.",
+    "clean": "This town ain't big enough for the two of us."
+  },
+  {
+    "heading": "Sheriff Woody Pride",
+    "raw": "[while Sid is surrounded by his own toys, through voice box] From now on, you must take good care of your toys! Because if you don't, we'll find out, Sid. We toys can see... [his head spins itself] everything! [comes to life] So play nice.",
+    "clean": "From now on, you must take good care of your toys! Because if you don't, we'll find out, Sid. We toys can see... everything! So play nice."
+  },
+  {
+    "heading": "Mr. Potato Head",
+    "raw": "Ages three and up. It's on my box \"Ages three and up.\" I'm not supposed to be baby-sitting Princess Drool.",
+    "clean": "Ages three and up. It's on my box \"Ages three and up.\" I'm not supposed to be baby-sitting Princess Drool."
+  },
+  {
+    "heading": "Mr. Potato Head",
+    "raw": "Mrs. Potato Head! Mrs. Potato Head! Mrs. Potato Head! [to Rex] Hey, I can dream, can't I?",
+    "clean": "Mrs. Potato Head! Mrs. Potato Head! Mrs. Potato Head! Hey, I can dream, can't I?"
+  },
+  {
+    "heading": "Mr. Potato Head",
+    "raw": "Where's my ear? Who's seen my ear? Did you see my ear?",
+    "clean": "Where's my ear? Who's seen my ear? Did you see my ear?"
+  },
+  {
+    "heading": "Mr. Potato Head",
+    "raw": "That's Mr. Potato Head to you, you back-stabbin' murderer!",
+    "clean": "That's Mr. Potato Head to you, you back-stabbin' murderer!"
+  },
+  {
+    "heading": "Mr. Potato Head",
+    "raw": "Toss him overboard!",
+    "clean": "Toss him overboard!"
+  },
+  {
+    "heading": "Mr. Potato Head",
+    "raw": "Gee, I'd better shave.",
+    "clean": "Gee, I'd better shave."
+  },
+  {
+    "heading": "Slinky Dog",
+    "raw": "I knew you were right all along, Woody. Never doubted you for a second.",
+    "clean": "I knew you were right all along, Woody. Never doubted you for a second."
+  },
+  {
+    "heading": "Slinky Dog",
+    "raw": "Golly bob howdy!",
+    "clean": "Golly bob howdy!"
+  },
+  {
+    "heading": "Rex",
+    "raw": "Oh, ya big lizard!",
+    "clean": "Oh, ya big lizard!"
+  },
+  {
+    "heading": "Rex",
+    "raw": "I don't like confrontations.",
+    "clean": "I don't like confrontations."
+  },
+  {
+    "heading": "Rex",
+    "raw": "Whiskers, will you get out of here! You're interfering with a search and rescue!",
+    "clean": "Whiskers, will you get out of here! You're interfering with a search and rescue!"
+  },
+  {
+    "heading": "Rex",
+    "raw": "He's at it again!",
+    "clean": "He's at it again!"
+  },
+  {
+    "heading": "Rex",
+    "raw": "Maybe Andy'll get another dinosaur, like a leaf eater. That way I could play the, uh, dominant predator!",
+    "clean": "Maybe Andy'll get another dinosaur, like a leaf eater. That way I could play the, uh, dominant predator!"
+  },
+  {
+    "heading": "Hamm",
+    "raw": "What's going on down there? Is his mom losing her marbles?",
+    "clean": "What's going on down there? Is his mom losing her marbles?"
+  },
+  {
+    "heading": "Hamm",
+    "raw": "Pardon me. I hate to break up the staff meeting, but they're here! Birthday guests at three o'clock!",
+    "clean": "Pardon me. I hate to break up the staff meeting, but they're here! Birthday guests at three o'clock!"
+  },
+  {
+    "heading": "Hamm",
+    "raw": "Pig pile!",
+    "clean": "Pig pile!"
+  },
+  {
+    "heading": "Sarge",
+    "raw": "Yes, sir! [jumps down from the table and onto one of the drawers] All right, men. You heard him. Code Red! Repeat, we are at Code Red. Recon plan Charlie. Execute! Let's move! Move, move, move, move!",
+    "clean": "Yes, sir! All right, men. You heard him. Code Red! Repeat, we are at Code Red. Recon plan Charlie. Execute! Let's move! Move, move, move, move!"
+  },
+  {
+    "heading": "Sidney \"Sid\" Phillips",
+    "raw": "It came! It finally came! \"The Big One.\"",
+    "clean": "It came! It finally came! \"The Big One.\""
+  },
+  {
+    "heading": "Hannah Phillips",
+    "raw": "What's wrong, Sid? Don't you want to play with Sally?",
+    "clean": "What's wrong, Sid? Don't you want to play with Sally?"
+  },
+  {
+    "heading": "Others",
+    "raw": "Shark: Look, I'm Woody. Howdy, howdy, howdy.",
+    "clean": "Look, I'm Woody. Howdy, howdy, howdy."
+  },
+  {
+    "heading": "Others",
+    "raw": "Pizza Planet Guard: You are cleared to enter. Welcome to Pizza Planet.",
+    "clean": "You are cleared to enter. Welcome to Pizza Planet."
+  },
+  {
+    "heading": "Others",
+    "raw": "Grace Phillips: What, dear? What was that?",
+    "clean": "What, dear? What was that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as One-Eyed Bart): Alright, everyone! This is a stick-up! Don't anybody move! Now empty that safe!",
+    "clean": "Andy Davis (as One-Eyed Bart): Alright, everyone! This is a stick-up! Don't anybody move! Now empty that safe!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as One-Eyed Bart): [chuckles] Money, money, money!",
+    "clean": "Andy Davis (as One-Eyed Bart): Money, money, money!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Bo Peep): Stop it! Stop it, you mean old potato!",
+    "clean": "Andy Davis (as Bo Peep): Stop it! Stop it, you mean old potato!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as One-Eyed Bart): Quiet, Bo Peep! Or your sheep get run over! [The sheep are on a toy car track Andy has set up in his room]",
+    "clean": "Andy Davis (as One-Eyed Bart): Quiet, Bo Peep! Or your sheep get run over!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Sheep): Help! Baa! Help us!",
+    "clean": "Andy Davis (as Sheep): Help! Baa! Help us!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Bo Peep): Oh, no, not my sheep! Somebody do something!",
+    "clean": "Andy Davis (as Bo Peep): Oh, no, not my sheep! Somebody do something!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] Reach for the sky.",
+    "clean": "Reach for the sky."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as One-Eyed Bart): Oh, no! Sheriff Woody!",
+    "clean": "Andy Davis (as One-Eyed Bart): Oh, no! Sheriff Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Woody): I'm here to stop you, One-Eyed Bart!",
+    "clean": "Andy Davis (as Woody): I'm here to stop you, One-Eyed Bart!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as One-Eyed Bart): [Andy pulls out his right eye] D'oh! How’d you know it was me?",
+    "clean": "Andy Davis (as One-Eyed Bart): D'oh! How'd you know it was me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Woody): Are you gonna come quietly?",
+    "clean": "Andy Davis (as Woody): Are you gonna come quietly?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as One-Eyed Bart): You can't touch me, sheriff! I've brought my attack dog, [puts Slinky Dog in front of Mr. Potato Head (One-Eyed Bart)] with a built in forcefield!\"",
+    "clean": "Andy Davis (as One-Eyed Bart): You can't touch me, sheriff! I've brought my attack dog, with a built in forcefield!\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Woody): Well, I brought my dinosaur who eats forcefield dogs!",
+    "clean": "Andy Davis (as Woody): Well, I brought my dinosaur who eats forcefield dogs!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Dinosaur): Arr rawr rawr! Yipe, yipe-yipe-yipe!",
+    "clean": "Andy Davis (as Dinosaur): Arr rawr rawr! Yipe, yipe-yipe-yipe!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis (as Woody): [off-screen] You're going to jail, Bart. Say goodbye to the wife and tater tots.",
+    "clean": "Andy Davis (as Woody): You're going to jail, Bart. Say goodbye to the wife and tater tots."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: You saved the day again, Woody.",
+    "clean": "You saved the day again, Woody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] You're my favorite deputy.",
+    "clean": "You're my favorite deputy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] You've got a friend in me / You've got a friend in me.",
+    "clean": "You've got a friend in me / You've got a friend in me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Come on, let's wrangle up the cattle.",
+    "clean": "Come on, let's wrangle up the cattle."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] When the road looks rough ahead / And you're miles and miles from your nice warm bed.",
+    "clean": "When the road looks rough ahead / And you're miles and miles from your nice warm bed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Round 'em up, Cowboy.",
+    "clean": "Round 'em up, Cowboy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] You just remember what your old pal said / Boy, you've got a friend in me.",
+    "clean": "You just remember what your old pal said / Boy, you've got a friend in me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Yee-haw!",
+    "clean": "Yee-haw!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] Yeah, you've got a friend in me.",
+    "clean": "Yeah, you've got a friend in me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Hey, cowboy.",
+    "clean": "Hey, cowboy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Come on, Woody!",
+    "clean": "Come on, Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] Maybe / But none of them will ever love you the way I do / It's me and you, boy...| And as the years go by.",
+    "clean": "Maybe / But none of them will ever love you the way I do / It's me and you, boy...| And as the years go by."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Whoa!",
+    "clean": "Whoa!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] Our friendship will never die / You're gonna see it's our destiny / You've got a friend in me.",
+    "clean": "Our friendship will never die / You're gonna see it's our destiny / You've got a friend in me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Alright!",
+    "clean": "Alright!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] Yeah, you've got a friend in me.",
+    "clean": "Yeah, you've got a friend in me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Score!",
+    "clean": "Score!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] You've got a friend in me...| [song fades]",
+    "clean": "You've got a friend in me...|"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Wow! Cool!",
+    "clean": "Wow! Cool!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [Hanging up a birthday banner] What do you think?",
+    "clean": "What do you think?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Oh, this looks great, Mom!",
+    "clean": "Oh, this looks great, Mom!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [laughs] Okay, birthday boy.",
+    "clean": "Okay, birthday boy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: We saw it at the store, I asked you for it! Wow, look at that! That's so- Oh, my gosh, you got-",
+    "clean": "We saw it at the store, I asked you for it! Wow, look at that! That's so- Oh, my gosh, you got-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: I hope I have enough places. One, two- Four. Yeah, I think that's gonna be enough.",
+    "clean": "I hope I have enough places. One, two- Four. Yeah, I think that's gonna be enough."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Can we leave this up until we move?",
+    "clean": "Can we leave this up until we move?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Well, sure. We can leave it up.",
+    "clean": "Well, sure. We can leave it up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Yeah!",
+    "clean": "Yeah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Now go get Molly. Your friends are gonna be here any minute.",
+    "clean": "Now go get Molly. Your friends are gonna be here any minute."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Okay. [grabs Woody] It's party time, Woody. Yee-haw!",
+    "clean": "Okay. It's party time, Woody. Yee-haw!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Howdy, little lady.",
+    "clean": "Howdy, little lady."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] Somebody's poisoned the waterhole.",
+    "clean": "Somebody's poisoned the waterhole."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [picks her up out of her crib] Come on, Molly. Oh, you're getting heavy. See you later, Woody. [slams the door]",
+    "clean": "Come on, Molly. Oh, you're getting heavy. See you later, Woody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Pull my string! The birthday party's today? Okay, everybody! Coast is clear.",
+    "clean": "Pull my string! The birthday party's today? Okay, everybody! Coast is clear."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: [puts his hat and nose back in their respective places] Ages 3 and up. It's on my box. Ages 3 and up. I'm not supposed to be babysitting Princess Drool.",
+    "clean": "Ages 3 and up. It's on my box. Ages 3 and up. I'm not supposed to be babysitting Princess Drool."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Hey, Hamm. Look, I'm Picasso!",
+    "clean": "Hey, Hamm. Look, I'm Picasso!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: I don't get it. [walks away]",
+    "clean": "I don't get it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: You uncultured swine! What're you looking at, ya hockey puck?",
+    "clean": "You uncultured swine! What're you looking at, ya hockey puck?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, Sarge, have you seen Slinky?",
+    "clean": "Hey, Sarge, have you seen Slinky?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Sir! No, sir!",
+    "clean": "Sir! No, sir!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Okay. Hey, thank you. At ease. [jumps down from the bed and looks around] Hey, uh, Slinky?",
+    "clean": "Okay. Hey, thank you. At ease. Hey, uh, Slinky?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Right here, Woody. I'm red this time.",
+    "clean": "Right here, Woody. I'm red this time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No. Slink...",
+    "clean": "No. Slink..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Oh, well, all right. You can be red if you want.",
+    "clean": "Oh, well, all right. You can be red if you want."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: N-Not now, Slink. I got some bad news.",
+    "clean": "N-Not now, Slink. I got some bad news."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Bad news?!",
+    "clean": "Bad news?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [holds Slinky's mouth shut] Shhh! [The toys stop and look at Woody, and Slinky] Just gather everyone up for a staff meeting and be happy.",
+    "clean": "Shhh! Just gather everyone up for a staff meeting and be happy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Got it.",
+    "clean": "Got it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Be happy.",
+    "clean": "Be happy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Ha, ha, ha, ha, ha.",
+    "clean": "Ha, ha, ha, ha, ha."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Staff meeting, everybody! Snake, Robot, podium duty.",
+    "clean": "Staff meeting, everybody! Snake, Robot, podium duty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, Etch. Draw!",
+    "clean": "Hey, Etch. Draw!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh! Got me again. Etch, you've been working on that draw. Fastest knobs in the West.",
+    "clean": "Oh! Got me again. Etch, you've been working on that draw. Fastest knobs in the West."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Got a staff meeting, you guys. Come on, let's go.",
+    "clean": "Got a staff meeting, you guys. Come on, let's go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Now, where is that... Oh. Hey, who moved my doodle pad way over here?",
+    "clean": "Now, where is that... Oh. Hey, who moved my doodle pad way over here?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Roaaaaar!",
+    "clean": "Roaaaaar!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [unimpressed] How're you doin', Rex?",
+    "clean": "How're you doin', Rex?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [stops roaring, calmly] Were ya scared? Tell me honestly.",
+    "clean": "Were ya scared? Tell me honestly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: I was close to being scared that time.",
+    "clean": "I was close to being scared that time."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: I'm going for fearsome here, but I just don't feel it. I think I'm just coming across off as annoying.",
+    "clean": "I'm going for fearsome here, but I just don't feel it. I think I'm just coming across off as annoying."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [coughs] Ow! Oh, hi, Bo. Hi.",
+    "clean": "Ow! Oh, hi, Bo. Hi."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: [sweetly yet flirtatiously] I wanted to thank you, Woody, for saving my flock.",
+    "clean": "I wanted to thank you, Woody, for saving my flock."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, hey, it was, uh, nothing.",
+    "clean": "Oh, hey, it was, uh, nothing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: What do you say I get someone else to watch the sheep tonight?",
+    "clean": "What do you say I get someone else to watch the sheep tonight?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [giggling sheepishly] Oh, yeah! [mutters]",
+    "clean": "Oh, yeah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Remember, I'm just a couple of blocks away.",
+    "clean": "Remember, I'm just a couple of blocks away."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Come on, come on. Smaller toys up front. [A bull dog egg toy lets four other egg toys out] Hey, Woody, come on.",
+    "clean": "Come on, come on. Smaller toys up front. Hey, Woody, come on."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, thanks, Mike.",
+    "clean": "Oh, thanks, Mike."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Okay, whoa. Step back.",
+    "clean": "Okay, whoa. Step back."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: [Off-screen] For crying out loud.",
+    "clean": "For crying out loud."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Okay. Thank you. [blows into the microphone] Hello. Check. That better? Great. Everybody hear me? Up on the shelf, can you hear me? Great. Okay, first item today: uh, oh, yeah... has everyone picked a moving buddy?",
+    "clean": "Okay. Thank you. Hello. Check. That better? Great. Everybody hear me? Up on the shelf, can you hear me? Great. Okay, first item today: uh, oh, yeah... has everyone picked a moving buddy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Toys: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Moving buddy? You can't be serious.",
+    "clean": "Moving buddy? You can't be serious."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Well, I didn't know we were supposed to have one already.",
+    "clean": "Well, I didn't know we were supposed to have one already."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: [holding one of his arms] Do we have to hold hands?",
+    "clean": "Do we have to hold hands?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Spell: You're welcome.",
+    "clean": "You're welcome."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Okay. Uh, oh, yes. One, uh, minor note here. [reads quietly] Andy's birthday party has been moved to today. Uh, next we have...",
+    "clean": "Okay. Uh, oh, yes. One, uh, minor note here. Andy's birthday party has been moved to today. Uh, next we have..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: What do you mean the party's today? His birthday's not 'til next week!",
+    "clean": "What do you mean the party's today? His birthday's not 'til next week!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: What's goin' on down there? Is his mom losin' her marbles?",
+    "clean": "What's goin' on down there? Is his mom losin' her marbles?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Well, obviously, she wanted to have the party before the move. [to the other toys] I'm not worried. You shouldn't be worried.",
+    "clean": "Well, obviously, she wanted to have the party before the move. I'm not worried. You shouldn't be worried."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Of course Woody ain't worried. He's been Andy's favorite since kindergarten.",
+    "clean": "Of course Woody ain't worried. He's been Andy's favorite since kindergarten."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Hey, hey. Come on, Potato Head. If Woody says it's all right, then, well, darn it, it's good enough for me. Woody has never steered us wrong before.",
+    "clean": "Hey, hey. Come on, Potato Head. If Woody says it's all right, then, well, darn it, it's good enough for me. Woody has never steered us wrong before."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Come on, guys. Every Christmas and birthday we go through this.",
+    "clean": "Come on, guys. Every Christmas and birthday we go through this."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: But what if Andy gets another dinosaur, a mean one? I just don't think I could take that kind of rejection!",
+    "clean": "But what if Andy gets another dinosaur, a mean one? I just don't think I could take that kind of rejection!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, listen. No one's getting replaced. This is Andy we're talking about. It doesn't matter how much we're played with.",
+    "clean": "Hey, listen. No one's getting replaced. This is Andy we're talking about. It doesn't matter how much we're played with."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: What matters is that we're here for Andy when he needs us. That's what we're made for, right?",
+    "clean": "What matters is that we're here for Andy when he needs us. That's what we're made for, right?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Pardon me. I hate to break up the staff meeting, but... THEY'RE HERE!! BIRTHDAY GUESTS AT THREE O'CLOCK!!",
+    "clean": "Pardon me. I hate to break up the staff meeting, but... THEY'RE HERE!! BIRTHDAY GUESTS AT THREE O'CLOCK!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Stay calm, everyone!",
+    "clean": "Stay calm, everyone!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Uh, meeting adjourned.",
+    "clean": "Uh, meeting adjourned."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Ho, boy, will you take a look at all those presents?",
+    "clean": "Ho, boy, will you take a look at all those presents?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: I can't see a thing.",
+    "clean": "I can't see a thing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Yes, sir. We're next month's garage sale fodder for sure.",
+    "clean": "Yes, sir. We're next month's garage sale fodder for sure."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Any dinosaur shaped ones?",
+    "clean": "Any dinosaur shaped ones?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Oh, for crying out loud. They're all in boxes, you idiot.",
+    "clean": "Oh, for crying out loud. They're all in boxes, you idiot."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: They're getting bigger!",
+    "clean": "They're getting bigger!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Wait, there's a nice little one over there.",
+    "clean": "Wait, there's a nice little one over there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Spell: Spell: trash can.",
+    "clean": "Spell: trash can."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: We're doomed!",
+    "clean": "We're doomed!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: All right. All right! If I send out the troops, will you all calm down?",
+    "clean": "All right. All right! If I send out the troops, will you all calm down?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Yes! Yes! We promise!",
+    "clean": "Yes! Yes! We promise!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Okay! Save your batteries.",
+    "clean": "Okay! Save your batteries."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Eh, very good, Woody. That's using the old noodle.",
+    "clean": "Eh, very good, Woody. That's using the old noodle."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Sergeant, establish a recon post downstairs. Code Red! You know what to do.",
+    "clean": "Sergeant, establish a recon post downstairs. Code Red! You know what to do."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Yes, sir! [jumps down from the table and onto one of the drawers] All right, men. You heard him. Code Red! Repeat, we are at Code Red. Recon plan Charlie. Execute! Let's move! Move, move, move, move!",
+    "clean": "Yes, sir! All right, men. You heard him. Code Red! Repeat, we are at Code Red. Recon plan Charlie. Execute! Let's move! Move, move, move, move!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Okay, come on, kids. Everyone in the living room. It's almost time for the presents.",
+    "clean": "Okay, come on, kids. Everyone in the living room. It's almost time for the presents."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: All right, gangway, gangway.",
+    "clean": "All right, gangway, gangway."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [turns on the monitor] And this is how we find out what is in those presents.",
+    "clean": "And this is how we find out what is in those presents."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Okay, who's hungry? [Sarge and his men all freeze into their plastic army men positions] Here come the chips. I've got Cool Ranch and Barbecue! [comes out of the kitchen and steps on one of the Green Army Men crushing him with her foot] Ow! What in the world... Oh! I thought I told him to pick these up.",
+    "clean": "Okay, who's hungry? Here come the chips. I've got Cool Ranch and Barbecue! Ow! What in the world... Oh! I thought I told him to pick these up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Shouldn't they be there by now? What's taking them so long?",
+    "clean": "Shouldn't they be there by now? What's taking them so long?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, these guys are professionals. They're the best. Come on! They're not lyin’ down on the job.",
+    "clean": "Hey, these guys are professionals. They're the best. Come on! They're not lyin' down on the job."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Wounded Soldier: G-G-Go on without me! J-Just go!",
+    "clean": "G-G-Go on without me! J-Just go!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: A good soldier never leaves a man behind.",
+    "clean": "A good soldier never leaves a man behind."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [Off-screen] Okay, everybody, come on. [The soldiers set the baby monitor up while a medic tends to the wounded solider and gives a thumb's up to Sarge who peers under the leaves and looks through his binoculars to see the presents] Everybody settle down. Now, kids. Everybody..... You sit in a circle. No, Andy. Andy, you sit in the middle there. Good. And..... Which present are you gonna open first?",
+    "clean": "Okay, everybody, come on. Everybody settle down. Now, kids. Everybody..... You sit in a circle. No, Andy. Andy, you sit in the middle there. Good. And..... Which present are you gonna open first?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Child: Mine!",
+    "clean": "Mine!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: There they are.",
+    "clean": "There they are."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Come in, Mother Bird. This is Alpha Bravo.",
+    "clean": "Come in, Mother Bird. This is Alpha Bravo."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: This is it! This is it! Quiet, quiet!",
+    "clean": "This is it! This is it! Quiet, quiet!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Come in, Mother Bird. All right, Andy's opening the first present now.",
+    "clean": "Come in, Mother Bird. All right, Andy's opening the first present now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Mrs. Potato Head! Mrs. Potato Head! Mrs. Potato Head! [Rex and Hamm look at him, confused] Hey, I can dream, can't I?",
+    "clean": "Mrs. Potato Head! Mrs. Potato Head! Mrs. Potato Head! Hey, I can dream, can't I?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: The bow's coming off. He's ripping the wrapping paper. It's a... It's... It's a... a lunch box. We've got a lunch box here.",
+    "clean": "The bow's coming off. He's ripping the wrapping paper. It's a... It's... It's a... a lunch box. We've got a lunch box here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: A lunch box?",
+    "clean": "A lunch box?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Lunch box?",
+    "clean": "Lunch box?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: For lunch. [laughs]",
+    "clean": "For lunch."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Okay, second present. It appears to be... Okay, it's bed sheets.",
+    "clean": "Okay, second present. It appears to be... Okay, it's bed sheets."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Who invited that kid?",
+    "clean": "Who invited that kid?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Oh, only one left.",
+    "clean": "Oh, only one left."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Okay, we're on the last present now.",
+    "clean": "Okay, we're on the last present now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Last present!",
+    "clean": "Last present!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: It's a big one. It's a.... It's a board game! Repeat, Battleship!",
+    "clean": "It's a big one. It's a.... It's a board game! Repeat, Battleship!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Whew!",
+    "clean": "Whew!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Hallelujah! Yeah! All right!",
+    "clean": "Hallelujah! Yeah! All right!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Hey, watch it!",
+    "clean": "Hey, watch it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Sorry, old spud head.",
+    "clean": "Sorry, old spud head."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Mission accomplished. Well done, men. Pack it up. We're goin' home.",
+    "clean": "Mission accomplished. Well done, men. Pack it up. We're goin' home."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: So did I tell ya? Huh? Nothing to worry about.",
+    "clean": "So did I tell ya? Huh? Nothing to worry about."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: I knew you were right all along, Woody. Never doubted ya for a second.",
+    "clean": "I knew you were right all along, Woody. Never doubted ya for a second."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Wait a minute. Oh! What do we have here? Oooh!",
+    "clean": "Wait a minute. Oh! What do we have here? Oooh!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Wait! Turn that thing back on! [The baby monitor turns back and Sarge's voice is heard on it] Come in, Mother Bird! Come in, Mother Bird! Mom has pulled a surprise present from the closet. Andy's opening it. He's really excited about this one.",
+    "clean": "Wait! Turn that thing back on! Come in, Mother Bird! Come in, Mother Bird! Mom has pulled a surprise present from the closet. Andy's opening it. He's really excited about this one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Mom, what is it?",
+    "clean": "Mom, what is it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: It's a huge package. [A boy gets in the way of Sarge's view] Oh, get outta the.... One of the kids is in the way. I can't see. [Mr. Potato Head puts his hand to his head and to his sides while Woody looks, anxiously] It's a...",
+    "clean": "It's a huge package. Oh, get outta the.... One of the kids is in the way. I can't see. It's a..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: It's a what? What is it? [shakes the lamp table and the baby monitor falls to the floor as the batteries pop out] Oh, no!",
+    "clean": "It's a what? What is it? Oh, no!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Oh, ya big lizard! Now we'll never know what it is!",
+    "clean": "Oh, ya big lizard! Now we'll never know what it is!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Way to go, Rex! [Potato Head is putting the batteries in backwards]",
+    "clean": "Way to go, Rex!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, turn him around! Turn him around!",
+    "clean": "No, turn him around! Turn him around!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: He's putting him in backwa... Here, you're putting him in backwards!",
+    "clean": "He's putting him in backwa... Here, you're putting him in backwards!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Plus is positive, minus is negative! Oh, let me!",
+    "clean": "Plus is positive, minus is negative! Oh, let me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Let's go to my room, guys!",
+    "clean": "Let's go to my room, guys!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Red alert! Red alert! Andy is coming upstairs!",
+    "clean": "Red alert! Red alert! Andy is coming upstairs!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [grunts] There!",
+    "clean": "There!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Juvenile intrusion! Repeat, resume your positions now!",
+    "clean": "Juvenile intrusion! Repeat, resume your positions now!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Andy's coming, everybody! Back to your places! Hurry!",
+    "clean": "Andy's coming, everybody! Back to your places! Hurry!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Get to your places! Get to your places!",
+    "clean": "Get to your places! Get to your places!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Where's my ear? Who's seen my ear? Did you see my ear?",
+    "clean": "Where's my ear? Who's seen my ear? Did you see my ear?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Out of my way! Here I come! Here I come!",
+    "clean": "Out of my way! Here I come! Here I come!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Friend 1: Hey, look, its lasers light up.",
+    "clean": "Friend 1: Hey, look, its lasers light up."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Take that, Zurg!",
+    "clean": "Take that, Zurg!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Friend 2: Quick, make a space. This is where the spaceship lands.",
+    "clean": "Friend 2: Quick, make a space. This is where the spaceship lands."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: And you press his back and he does a karate-chop action!",
+    "clean": "And you press his back and he does a karate-chop action!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [Off-screen] Come on down, guys! It's time for games! We've got prizes!",
+    "clean": "Come on down, guys! It's time for games! We've got prizes!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Oh, yeah!",
+    "clean": "Oh, yeah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: What is it?",
+    "clean": "What is it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Can you see it?",
+    "clean": "Can you see it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: What the heck is up there?",
+    "clean": "What the heck is up there?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Woody, who's up there with ya?",
+    "clean": "Woody, who's up there with ya?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Woody, what are you doing under the bed?",
+    "clean": "Woody, what are you doing under the bed?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Uh, nothing. Uh, nothing. I'm sure Andy was just a little excited, that's all. Too much cake and ice cream, I suppose. It's just a mistake.",
+    "clean": "Uh, nothing. Uh, nothing. I'm sure Andy was just a little excited, that's all. Too much cake and ice cream, I suppose. It's just a mistake."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Well, that mistake is sitting in your spot, Woody. [chuckles]",
+    "clean": "Well, that mistake is sitting in your spot, Woody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [gasps] Have you been replaced?!",
+    "clean": "Have you been replaced?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, what did I tell you earlier? No one is getting replaced. Now, let's all be polite and give whatever it is up there a nice, big Andy's-room welcome.",
+    "clean": "Hey, what did I tell you earlier? No one is getting replaced. Now, let's all be polite and give whatever it is up there a nice, big Andy's-room welcome."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hello! [Buzz karate yells; screams] Whoa! H-hey! Whoa, whoa, whoa, whoa, whoa! Did I frighten you? Didn't mean to. [Buzz aim his \"laser\" at him] Sorry. Howdy, my name is Woody, and this is Andy's room. That's all I wanted to say. And also, there has been a bit of a mix up. This is my spot, see, the bed here.",
+    "clean": "Hello! Whoa! H-hey! Whoa, whoa, whoa, whoa, whoa! Did I frighten you? Didn't mean to. Sorry. Howdy, my name is Woody, and this is Andy's room. That's all I wanted to say. And also, there has been a bit of a mix up. This is my spot, see, the bed here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Local law enforcement. It's about time you got here. I'm Buzz Lightyear, Space Ranger, Universe Protection Unit. My ship has crash-landed here by mistake.",
+    "clean": "Local law enforcement. It's about time you got here. I'm Buzz Lightyear, Space Ranger, Universe Protection Unit. My ship has crash-landed here by mistake."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Yes, it is a mistake because, you see, the bed here is my spot.",
+    "clean": "Yes, it is a mistake because, you see, the bed here is my spot."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [not listening] I need to repair my turbo boosters. Do you people still use fossil fuel or have you discovered crystallic fusion?",
+    "clean": "I need to repair my turbo boosters. Do you people still use fossil fuel or have you discovered crystallic fusion?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Well, let's see. We've got double-A's.",
+    "clean": "Well, let's see. We've got double-A's."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [seeing something and gasps] Watch yourself! [pins Woody down and aims his \"laser\"] Halt! Who goes there?!",
+    "clean": "Watch yourself! Halt! Who goes there?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Don't shoot! It's okay. Friends.",
+    "clean": "Don't shoot! It's okay. Friends."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Do you know these lifeforms?",
+    "clean": "Do you know these lifeforms?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Yes! [spits] They're Andy's toys.",
+    "clean": "Yes! They're Andy's toys."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: All right, everyone, you're clear to come up. [The toys climb onto the bed and Buzz walks over to them] I am Buzz Lightyear. I come in peace.",
+    "clean": "All right, everyone, you're clear to come up. I am Buzz Lightyear. I come in peace."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [shaking Buzz's hand] Oh, I'm so glad you're not a dinosaur.",
+    "clean": "Oh, I'm so glad you're not a dinosaur."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Why, thank you! Now, thank you all for your kind welcome.",
+    "clean": "Why, thank you! Now, thank you all for your kind welcome."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Say, what's that button do?",
+    "clean": "Say, what's that button do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I'll show you. [presses the button; voice-box] Buzz Lightyear to the rescue!",
+    "clean": "I'll show you. Buzz Lightyear to the rescue!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Hey, Woody's got something like that. His is a pull string. Only it's...",
+    "clean": "Hey, Woody's got something like that. His is a pull string. Only it's..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Only it sounds like a car ran over it.",
+    "clean": "Only it sounds like a car ran over it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Oh, yeah, but not like this one. This is a quality sound system. Probably all copper wiring, huh? So, uh, where you from? Singapore? Hong Kong?",
+    "clean": "Oh, yeah, but not like this one. This is a quality sound system. Probably all copper wiring, huh? So, uh, where you from? Singapore? Hong Kong?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Well, no. Actually, I-I'm-- I'm stationed at the Gamma Quadrant, Sector Four. As a member of the elite Universe Protection Unit of the Space Ranger Corps, I protect the Galaxy from the threat of invasion from the evil Emperor Zurg, sworn enemy of the Galactic Alliance!",
+    "clean": "Well, no. Actually, I-I'm-- I'm stationed at the Gamma Quadrant, Sector Four. As a member of the elite Universe Protection Unit of the Space Ranger Corps, I protect the Galaxy from the threat of invasion from the evil Emperor Zurg, sworn enemy of the Galactic Alliance!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Oh, really? I'm from Playskool.",
+    "clean": "Oh, really? I'm from Playskool."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: And I'm from Mattel. Well, I'm not really from Mattel. I'm actually from a smaller company that was purchased in a leverage buyout.",
+    "clean": "And I'm from Mattel. Well, I'm not really from Mattel. I'm actually from a smaller company that was purchased in a leverage buyout."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: You'd think they'd never seen a new toy before.",
+    "clean": "You'd think they'd never seen a new toy before."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Well, sure. Look at him. He's got more gadgets on him than a Swiss Army Knife.",
+    "clean": "Well, sure. Look at him. He's got more gadgets on him than a Swiss Army Knife."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Ah, ah, ah, ah! Please be careful. You don't want to be in the way when my laser goes off.",
+    "clean": "Ah, ah, ah, ah! Please be careful. You don't want to be in the way when my laser goes off."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Hey, a laser! How come you don't have a laser, Woody?",
+    "clean": "Hey, a laser! How come you don't have a laser, Woody?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: It's not a laser! It's a... It's a little lightbulb that blinks.",
+    "clean": "It's not a laser! It's a... It's a little lightbulb that blinks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: What's with him?",
+    "clean": "What's with him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Laser envy.",
+    "clean": "Laser envy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: All right. That's enough! Look, we're all very impressed with Andy's new toy.",
+    "clean": "All right. That's enough! Look, we're all very impressed with Andy's new toy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: T-O-Y. Toy!",
+    "clean": "T-O-Y. Toy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Excuse me. I think the word you're searching for is \"Space Ranger.\"",
+    "clean": "Excuse me. I think the word you're searching for is \"Space Ranger.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: The word I'm searching for; I can't say, because there's preschool toys present.",
+    "clean": "The word I'm searching for; I can't say, because there's preschool toys present."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Gettin' kinda tense, aren't ya?",
+    "clean": "Gettin' kinda tense, aren't ya?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Uh, Mr. Lightyear, uh, now, I'm curious. What does a space ranger actually do?",
+    "clean": "Uh, Mr. Lightyear, uh, now, I'm curious. What does a space ranger actually do?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: He's not a Space Ranger! He doesn't fight evil or, or shoot lasers or fly!",
+    "clean": "He's not a Space Ranger! He doesn't fight evil or, or shoot lasers or fly!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Excuse me. [pushes button that reveals wings]",
+    "clean": "Excuse me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Oh, impressive wingspan! Very good!",
+    "clean": "Oh, impressive wingspan! Very good!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, what? What? These are plastic. He can't fly!",
+    "clean": "Oh, what? What? These are plastic. He can't fly!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: They are a terillium-carbonic alloy, and I can fly.",
+    "clean": "They are a terillium-carbonic alloy, and I can fly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, you can't.",
+    "clean": "No, you can't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [sighs] Yes, I can.",
+    "clean": "Yes, I can."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: You can't.",
+    "clean": "You can't."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Can't. Can't. Can't!",
+    "clean": "Can't. Can't. Can't!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I tell you, I could fly around this room with my eyes closed!",
+    "clean": "I tell you, I could fly around this room with my eyes closed!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Okay, then, Mr. Light Beer, prove it.",
+    "clean": "Okay, then, Mr. Light Beer, prove it."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: All right, then, I will. Stand back, everyone! [goes to edge of bed and closes eyes] To infinity and beyond! [jumps; \"flies\" around Andy's room using bouncy ball, race-car track, and motorized airplane, then lands on bed] Can!",
+    "clean": "All right, then, I will. Stand back, everyone! To infinity and beyond! Can!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Whoa! Oh, wow, you flew magnificently!",
+    "clean": "Whoa! Oh, wow, you flew magnificently!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: I found my movin' buddy.",
+    "clean": "I found my movin' buddy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Thank you. Th-Thank you all. Thank you.",
+    "clean": "Thank you. Th-Thank you all. Thank you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: That wasn't flying! That was... falling with style.",
+    "clean": "That wasn't flying! That was... falling with style."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Man, the dolls must really go for you. Can you teach me that?",
+    "clean": "Man, the dolls must really go for you. Can you teach me that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: [laughs] Golly bob howdy!",
+    "clean": "Golly bob howdy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, shut up! You know, in a couple of days, everything will be just the way it was. They'll see. They'll see. I'm still Andy's favorite toy.",
+    "clean": "Oh, shut up! You know, in a couple of days, everything will be just the way it was. They'll see. They'll see. I'm still Andy's favorite toy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] I was on top of the world living high / It was right in my pocket.",
+    "clean": "I was on top of the world living high / It was right in my pocket."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [laughs] Whoa!",
+    "clean": "Whoa!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] I was livin' the life / Things were just the way they should be / When from out of the sky like a bomb comes some little punk in a rocket / Now all of a sudden some strange things are happening to me.",
+    "clean": "I was livin' the life / Things were just the way they should be / When from out of the sky like a bomb comes some little punk in a rocket / Now all of a sudden some strange things are happening to me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Buzz Lightyear to the rescue!",
+    "clean": "Buzz Lightyear to the rescue!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] I had friends / I had lots of friends / Now all my friends are gone / And I'm doing the best I can to carry on...| I had power.",
+    "clean": "I had friends / I had lots of friends / Now all my friends are gone / And I'm doing the best I can to carry on...| I had power."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chorus: Power.",
+    "clean": "Power."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] I was respected.",
+    "clean": "I was respected."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Chorus: Respect.",
+    "clean": "Respect."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [grunts] Finally! [sighs while feeling his head to find his hat missing] Hey, who's got my hat?",
+    "clean": "Finally! Hey, who's got my hat?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Shark: [pops up with Woody's hat on his head] Look, I'm Woody. Howdy, howdy, howdy.",
+    "clean": "Look, I'm Woody. Howdy, howdy, howdy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [laughing sarcastically] Give me that!",
+    "clean": "Give me that!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Say there, Lizard and Stretchy Dog, let me show you something. It looks as though I've been accepted into your culture. Your chief, Andy inscribed his name on me.",
+    "clean": "Say there, Lizard and Stretchy Dog, let me show you something. It looks as though I've been accepted into your culture. Your chief, Andy inscribed his name on me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: With permanent ink too!",
+    "clean": "With permanent ink too!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Well, I must get back to repairing my ship.",
+    "clean": "Well, I must get back to repairing my ship."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Don't let it get to you, Woody.",
+    "clean": "Don't let it get to you, Woody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Uh... let what? I don't, uh...... What do you mean? Who?",
+    "clean": "Uh... let what? I don't, uh...... What do you mean? Who?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: I know Andy's excited about Buzz. But you know he'll always have a special place for you.",
+    "clean": "I know Andy's excited about Buzz. But you know he'll always have a special place for you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Yeah, like the attic. [chuckling]",
+    "clean": "Yeah, like the attic."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: All right, that's it!",
+    "clean": "All right, that's it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Hmm. Unidirectional bonding strip.",
+    "clean": "Hmm. Unidirectional bonding strip."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Robot: Mr. Lightyear wants more tape.",
+    "clean": "Mr. Lightyear wants more tape."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Listen, Light Snack, you stay away from Andy. He's mine, and no one is taking him away from me.",
+    "clean": "Listen, Light Snack, you stay away from Andy. He's mine, and no one is taking him away from me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: What are you talking about? [to Robot] Where's that bonding strip?",
+    "clean": "What are you talking about? Where's that bonding strip?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: And another thing, stop with this spaceman thing! It's getting on my nerves.",
+    "clean": "And another thing, stop with this spaceman thing! It's getting on my nerves."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Are you saying you wanna lodge a complaint with Star Command?",
+    "clean": "Are you saying you wanna lodge a complaint with Star Command?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh-ho, okay! Ooh, well, so you wanna do it the hard way, huh?",
+    "clean": "Oh-ho, okay! Ooh, well, so you wanna do it the hard way, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Don't even think about it, cowboy.",
+    "clean": "Don't even think about it, cowboy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, yeah, tough guy?",
+    "clean": "Oh, yeah, tough guy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: The air isn't.... toxic. [to Woody] How dare you open a spaceman's helmet on an uncharted planet! My eyeballs could've been sucked from their sockets! [puts his helmet back on]",
+    "clean": "The air isn't.... toxic. How dare you open a spaceman's helmet on an uncharted planet! My eyeballs could've been sucked from their sockets!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: You actually think you're the Buzz Lightyear? [laughs] Oh, all this time I thought it was an act! Hey, guys, look! It's the real Buzz Lightyear!",
+    "clean": "You actually think you're the Buzz Lightyear? Oh, all this time I thought it was an act! Hey, guys, look! It's the real Buzz Lightyear!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: You're mocking me, aren't you?",
+    "clean": "You're mocking me, aren't you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, no, no. No, no, no, no, no. Buzz, look, an alien!",
+    "clean": "Oh, no, no. No, no, no, no, no. Buzz, look, an alien!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Where?!",
+    "clean": "Where?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Whoa!",
+    "clean": "Whoa!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Uh-oh.",
+    "clean": "Uh-oh."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: It's Sid!",
+    "clean": "It's Sid!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Don't move!",
+    "clean": "Don't move!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: I thought he was at summer camp.",
+    "clean": "I thought he was at summer camp."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: They must've kicked him out early this year.",
+    "clean": "They must've kicked him out early this year."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Oh, no, not Sid!",
+    "clean": "Oh, no, not Sid!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Incoming! [throw stuff while the dog barks]",
+    "clean": "Incoming!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Who is it this time?",
+    "clean": "Who is it this time?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: I... I can't... I can't tell. Hey, where's Lenny?",
+    "clean": "I... I can't... I can't tell. Hey, where's Lenny?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lenny: Right here, Woody.",
+    "clean": "Right here, Woody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Oh, no, I can't bear to watch one of these again.",
+    "clean": "Oh, no, I can't bear to watch one of these again."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, no, it's a Combat Carl.",
+    "clean": "Oh, no, it's a Combat Carl."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: What's going on?",
+    "clean": "What's going on?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Nothing that concerns you spacemen, just us toys.",
+    "clean": "Nothing that concerns you spacemen, just us toys."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I'd better take a look anyway. [uses Lenny to look at Combat Carl] Why is that soldier strapped to an explosive device?",
+    "clean": "I'd better take a look anyway. Why is that soldier strapped to an explosive device?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: That's why, Sid.",
+    "clean": "That's why, Sid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Hmm, sure is a hairy fella.",
+    "clean": "Hmm, sure is a hairy fella."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [realizing his mistake of identifying Scud as Sid to Buzz] No, no, that's Scud, you idiot! [moves Lenny up to Sid so that Buzz can see him properly] That is Sid.",
+    "clean": "No, no, that's Scud, you idiot! That is Sid."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: You mean that happy child?",
+    "clean": "You mean that happy child?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: That ain't no happy child.",
+    "clean": "That ain't no happy child."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: He tortures toys, just for fun!",
+    "clean": "He tortures toys, just for fun!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Well, then, we've got to do something.",
+    "clean": "Well, then, we've got to do something."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: [gasps, putting her cane hook on Buzz's arm] What are you doing? Get down from there!",
+    "clean": "What are you doing? Get down from there!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I'm gonna teach that boy a lesson.",
+    "clean": "I'm gonna teach that boy a lesson."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Yeah, sure. You go ahead. Melt him with your scary laser.",
+    "clean": "Yeah, sure. You go ahead. Melt him with your scary laser."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Be careful with that, it's extremely dangerous.",
+    "clean": "Be careful with that, it's extremely dangerous."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lenny: He's lighting it! He's lighting it! HIT THE DIRT!!",
+    "clean": "He's lighting it! He's lighting it! HIT THE DIRT!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Look out!",
+    "clean": "Look out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Yes! He's gone! He's history! [laughs with triumph]",
+    "clean": "Yes! He's gone! He's history!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I could've stopped him.",
+    "clean": "I could've stopped him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Buzz, I would love to see you try. [gesturing to Sid's yard] Of course I'd love to see you as a crater.",
+    "clean": "Buzz, I would love to see you try. Of course I'd love to see you as a crater."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: The sooner we move, the better.",
+    "clean": "The sooner we move, the better."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [Off-screen] To infinity and beyond! [making flying and exploding noises]",
+    "clean": "To infinity and beyond!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [smiling, cleverly, knowingly and seductively] Oh, all this packing makes me hungry. What would you say to dinner at, uh, oh, Pizza Planet?",
+    "clean": "Oh, all this packing makes me hungry. What would you say to dinner at, uh, oh, Pizza Planet?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Pizza Planet?! Oh, cool!",
+    "clean": "Pizza Planet?! Oh, cool!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [Off-screen] Go wash your hands and I'll get Molly ready.",
+    "clean": "Go wash your hands and I'll get Molly ready."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [Off-screen] Can I bring some toys?",
+    "clean": "Can I bring some toys?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [Off-screen] You can bring one toy.",
+    "clean": "You can bring one toy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [Off-screen] Just one?!",
+    "clean": "Just one?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Trouble? Where?",
+    "clean": "Trouble? Where?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [pointing to the place where the ball fell] Down there. Just down there. A helpless toy...it's...it's trapped, Buzz!",
+    "clean": "Down there. Just down there. A helpless toy...it's...it's trapped, Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Then we have no time to lose! [As Buzz runs to the spot, Woody tiptoed over to RC and grabs his remote whilst starting him up, opening his eyes in the progress] I don't see anything.",
+    "clean": "Then we have no time to lose! I don't see anything."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, he's there. Just, just keep looking!",
+    "clean": "Oh, he's there. Just, just keep looking!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: What kind of a toy...?",
+    "clean": "What kind of a toy...?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm, Mr. Potato Head and Slinky Dog: BUZZ!",
+    "clean": "Hamm, Mr. Potato Head and Slinky Dog: BUZZ!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Buzz!",
+    "clean": "Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: I don't see him in the driveway! I think he bounced into Sid's yard.",
+    "clean": "I don't see him in the driveway! I think he bounced into Sid's yard."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Oh, Buzz! [RC revs his engine to talk to the toys] Hey, everyone! RC's trying to say something! What is it, boy?",
+    "clean": "Oh, Buzz! Hey, everyone! RC's trying to say something! What is it, boy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: He's saying that this was no accident.",
+    "clean": "He's saying that this was no accident."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: What do you mean?",
+    "clean": "What do you mean?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: I mean Humpty Dumpty was pushed...",
+    "clean": "I mean Humpty Dumpty was pushed..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: By Woody! [points in Woody's direction]",
+    "clean": "By Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Toys: What?!",
+    "clean": "What?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Wait a minute. You, you don't think I meant to knock Buzz out the window, do you Potato Head?",
+    "clean": "Wait a minute. You, you don't think I meant to knock Buzz out the window, do you Potato Head?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: That's Mr. Potato Head to you, you back-stabbing murderer!",
+    "clean": "That's Mr. Potato Head to you, you back-stabbing murderer!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Now, it was an accident! Guys, come on now, you...you gotta believe me.",
+    "clean": "Now, it was an accident! Guys, come on now, you...you gotta believe me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: We believe you, Woody. [looking at Rex for support] Right, Rex?",
+    "clean": "We believe you, Woody. Right, Rex?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Well, ye-- n-- I don't like confrontations!",
+    "clean": "Well, ye-- n-- I don't like confrontations!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: [pops out of the bucket] WHERE'S YOUR HONOR, DIRTBAG?! YOU'RE AN ABSOLUTE DISGRACE!! YOU DON'T DESERVE TO -- HEY!!!!",
+    "clean": "WHERE'S YOUR HONOR, DIRTBAG?! YOU'RE AN ABSOLUTE DISGRACE!! YOU DON'T DESERVE TO -- HEY!!!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: You couldn't handle Buzz cutting in on your playtime, could you, Woody? Didn't wanna face the fact that Buzz just might be Andy's new favorite toy. So you got rid of him. Well, what if Andy starts playing with me more, Woody, huh? You're gonna knock me out of the window too?",
+    "clean": "You couldn't handle Buzz cutting in on your playtime, could you, Woody? Didn't wanna face the fact that Buzz just might be Andy's new favorite toy. So you got rid of him. Well, what if Andy starts playing with me more, Woody, huh? You're gonna knock me out of the window too?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: I don't think we should give him the chance.",
+    "clean": "I don't think we should give him the chance."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: There he is, men! Frag him! [Soldiers yelling]",
+    "clean": "There he is, men! Frag him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Let's string him up by his pull string!",
+    "clean": "Let's string him up by his pull string!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: I've got dibs on his hat!",
+    "clean": "I've got dibs on his hat!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Would you boys stop it?",
+    "clean": "Would you boys stop it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Tackle him!",
+    "clean": "Tackle him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, no, no! W-W-Wait! I can explain everything.",
+    "clean": "No, no, no! W-W-Wait! I can explain everything."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Okay, Mom, be right down. I've gotta get Buzz.",
+    "clean": "Okay, Mom, be right down. I've gotta get Buzz."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Retreat!",
+    "clean": "Retreat!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Mom, do you know where Buzz is?",
+    "clean": "Mom, do you know where Buzz is?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: No, I haven't seen him.",
+    "clean": "No, I haven't seen him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Psst!",
+    "clean": "Psst!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Andy, I'm heading out the door.",
+    "clean": "Andy, I'm heading out the door."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: But, Mom, I can't find him!",
+    "clean": "But, Mom, I can't find him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Well, honey, just grab some other toy. Now come on!",
+    "clean": "Well, honey, just grab some other toy. Now come on!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [sighs] Okay.",
+    "clean": "Okay."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody! [Woody gasps; extends a handshake of sportsmanship] I'd just like to wish you luck. I-I-I know you’d do the same for me.",
+    "clean": "Woody! I'd just like to wish you luck. I-I-I know you'd do the same for me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [in Black Friday Reel; first words] Oh, yeah. Yeah, yeah, yeah. There you go.",
+    "clean": "Oh, yeah. Yeah, yeah, yeah. There you go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Whoa!",
+    "clean": "Whoa!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: What? What, what what? What? What are you- What's everyone looking at? What?! Hey, he slipped. I tried to- He- I couldn't hold on- It was an a- He slipped!",
+    "clean": "What? What, what what? What? What are you- What's everyone looking at? What?! Hey, he slipped. I tried to- He- I couldn't hold on- It was an a- He slipped!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: I don't see him. I think he fell onto the street.",
+    "clean": "I don't see him. I think he fell onto the street."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Yeah, he's as good as roadkill.",
+    "clean": "Yeah, he's as good as roadkill."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: He ain't going to pizza now.",
+    "clean": "He ain't going to pizza now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Woody! You deliberately threw Buzz out of the window!",
+    "clean": "Woody! You deliberately threw Buzz out of the window!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [shrugs] Hey, it's a toy-eat-toy world.",
+    "clean": "Hey, it's a toy-eat-toy world."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Cowboy! Where is your honor, dirtbag?! You are an absolute disgrace! You don't deserve to wear a 10-gallon hat on your pint-sized head! [turns to the bucket of soldiers] Men, search and rescue! I want a Medevac team on the devil!",
+    "clean": "Cowboy! Where is your honor, dirtbag?! You are an absolute disgrace! You don't deserve to wear a 10-gallon hat on your pint-sized head! Men, search and rescue! I want a Medevac team on the devil!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [suddenly grabs Sarge] At ease, sergeant. [then puts him back in the container]",
+    "clean": "At ease, sergeant."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: Hustle up! Move it! Move it! Move it! Hey!",
+    "clean": "Hustle up! Move it! Move it! Move it! Hey!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, spuds-for-brains! Heh, what do you think you're doing? Off the bed. [As they congregate, they glare at Woody, with Rex also, after some confusion, preparing to snarl at Woody] Hey! Off the bed!",
+    "clean": "Hey, spuds-for-brains! Heh, what do you think you're doing? Off the bed. Hey! Off the bed!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: You gonna make us, Woody?!",
+    "clean": "You gonna make us, Woody?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, he is. Slinky! Slink. [looks around then sees Slinky is still on the floor] Slink- Slinky! Get up here and do your job! [Slinky comes up and hesitates] Are you deaf?! I said take care of them!",
+    "clean": "No, he is. Slinky! Slink. Slink- Slinky! Get up here and do your job! Are you deaf?! I said take care of them!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Uh, I'm sorry, Woody, but I, uh... I have to agree with them. I don’t think what you did was right.",
+    "clean": "Uh, I'm sorry, Woody, but I, uh... I have to agree with them. I don't think what you did was right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [hysterically laughs] What?! Am I hearing correctly? You don't think I was right? Who said your job was to think, spring wiener?!",
+    "clean": "What?! Am I hearing correctly? You don't think I was right? Who said your job was to think, spring wiener?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Well, I-I just thought-",
+    "clean": "Well, I-I just thought-"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: [rushes to Slinky's defense] You're gonna have to throw the two of us off!",
+    "clean": "You're gonna have to throw the two of us off!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: [rushes to Slinky's defense] Make that three.",
+    "clean": "Make that three."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [rushes to Slinky's defense] Count me in.",
+    "clean": "Count me in."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: [pointing at Woody] No, Woody, you get your butt off the bed.",
+    "clean": "No, Woody, you get your butt off the bed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [bored laugh] Guys, I don't believe this. Heh! [beat] Are... Are you- Are you threatening me?!",
+    "clean": "Guys, I don't believe this. Heh! Are... Are you- Are you threatening me?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Yeah, get off the bed, ranch hand or we're throwing you off!",
+    "clean": "Yeah, get off the bed, ranch hand or we're throwing you off!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [carefully scowls at them] Ha! You and what army?",
+    "clean": "Ha! You and what army?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: There he is, that dirtbag! Frag him! Move, move, move! Take no prisoners! Go for him! Go for the throat! Kill, kill, kill!",
+    "clean": "There he is, that dirtbag! Frag him! Move, move, move! Take no prisoners! Go for him! Go for the throat! Kill, kill, kill!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Toys: One! Two!",
+    "clean": "One! Two!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Stop! Don't throw him off the bed!",
+    "clean": "Stop! Don't throw him off the bed!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Yeah!",
+    "clean": "Yeah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: [pulls up the blinds] Throw him out the window, like he did to Buzz!!",
+    "clean": "Throw him out the window, like he did to Buzz!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Toys: Yeah!!",
+    "clean": "Yeah!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [in Black Friday Reel; last words] No! Wait! No! Come on! Hey, man!",
+    "clean": "No! Wait! No! Come on! Hey, man!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: I couldn't find my Buzz. I know I left him right there.",
+    "clean": "I couldn't find my Buzz. I know I left him right there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Honey, I'm sure he's around. You'll find him.",
+    "clean": "Honey, I'm sure he's around. You'll find him."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: It's too short! We need more monkeys!",
+    "clean": "It's too short! We need more monkeys!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: There aren't any more! That's the whole barrel. [drops the barrel and walks to the edge of the window to look out] Buzz! The monkeys aren't working! We're formulating another plan! Stay calm! Oh, where could he be?",
+    "clean": "There aren't any more! That's the whole barrel. Buzz! The monkeys aren't working! We're formulating another plan! Stay calm! Oh, where could he be?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Can I pump the gas?",
+    "clean": "Can I pump the gas?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Sure! I'll even let you drive.",
+    "clean": "Sure! I'll even let you drive."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Yeah?",
+    "clean": "Yeah?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Yeah, when you're 16.",
+    "clean": "Yeah, when you're 16."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [sarcastic] Yuk, yuk, yuk. Funny, mom.",
+    "clean": "Yuk, yuk, yuk. Funny, mom."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I just want you to know that even though you tried to terminate me, revenge is not an idea we promote on my planet.",
+    "clean": "I just want you to know that even though you tried to terminate me, revenge is not an idea we promote on my planet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh. Well, that's good.",
+    "clean": "Oh. Well, that's good."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [puts his head against Woody’s] But we're not on my planet. Are we?",
+    "clean": "But we're not on my planet. Are we?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Okay. Come on! You want a piece of me? [Buzz punches Woody, making his face spin until he stops it. Woody lunges at Buzz, pinning him down, open his helmet and punches his face, making a squeaky noise with each punch. Buzz then closes his helmet on Woody's hand, making him cry out in pain] Owww!",
+    "clean": "Okay. Come on! You want a piece of me? Owww!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [voice-box] Buzz-Buzz-Buzz Lightyear to the Rescue!",
+    "clean": "Buzz-Buzz-Buzz Lightyear to the Rescue!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Aah-ouch!",
+    "clean": "Aah-ouch!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Next stop...",
+    "clean": "Next stop..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Pizza Planet! Yeah!!!",
+    "clean": "Pizza Planet! Yeah!!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [gasps] Andy! [he and Buzz were left behind at a Dinoco gas station] Doesn't he realize that I'm not there? [gasps loudly and knees on ground, sobbing] I'm lost! I'm a lost toy!",
+    "clean": "Andy! Doesn't he realize that I'm not there? I'm lost! I'm a lost toy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [to his \"intercom\"] Buzz Lightyear mission log. The local sheriff and I seem to be at a huge refueling station of some sort.",
+    "clean": "Buzz Lightyear mission log. The local sheriff and I seem to be at a huge refueling station of some sort."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: According to my navi-computer, the...",
+    "clean": "According to my navi-computer, the..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [quietly] Shut up! Just shut up, you idiot!",
+    "clean": "Shut up! Just shut up, you idiot!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Sheriff, this is no time to panic! [closes his \"intercom\"]",
+    "clean": "Sheriff, this is no time to panic!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: This is the perfect time to panic! I'm lost, Andy is gone, they're gonna move from their house in two days, and it's all your fault!",
+    "clean": "This is the perfect time to panic! I'm lost, Andy is gone, they're gonna move from their house in two days, and it's all your fault!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: My fault?! If you hadn't pushed me out of the window in the first place...",
+    "clean": "My fault?! If you hadn't pushed me out of the window in the first place..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, yeah?! Well, if you hadn't shown up in your stupid little cardboard spaceship and taken away everything that was important to me...",
+    "clean": "Oh, yeah?! Well, if you hadn't shown up in your stupid little cardboard spaceship and taken away everything that was important to me..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Don't talk to me about importance! Because of you, the security of this entire universe is in jeopardy!",
+    "clean": "Don't talk to me about importance! Because of you, the security of this entire universe is in jeopardy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: WHAT?! What are you talkin’ about?!",
+    "clean": "WHAT?! What are you talkin' about?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: YOU... ARE... A... TOY!!! You aren't the real Buzz Lightyear! You're an action figure! You are a child's plaything!",
+    "clean": "YOU... ARE... A... TOY!!! You aren't the real Buzz Lightyear! You're an action figure! You are a child's plaything!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: You are a sad, strange little man. And you have my pity. [gives Woody the Vulcan salute] Farewell!",
+    "clean": "You are a sad, strange little man. And you have my pity. Farewell!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh yeah?! Well, good riddance, ya loony!",
+    "clean": "Oh yeah?! Well, good riddance, ya loony!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Delivery Guy: Hey, gas dude!",
+    "clean": "Hey, gas dude!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gas Station Attendant: You talking to me?",
+    "clean": "You talking to me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Pizza Planet? [realizing it's a way to reunite with Andy] Andy!",
+    "clean": "Pizza Planet? Andy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Delivery Guy: Yeah, man, can you help me? Do you know where Cutting Boulevard is?",
+    "clean": "Yeah, man, can you help me? Do you know where Cutting Boulevard is?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gas Station Attendant: Just a moment...",
+    "clean": "Just a moment..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, no. I can't show my face in that room without Buzz. Buzz! Buzz, come back!",
+    "clean": "Oh, no. I can't show my face in that room without Buzz. Buzz! Buzz, come back!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Go away!",
+    "clean": "Go away!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, Buzz, you've gotta come back! I... [sees that the truck has a rocket on the roof which gives him an idea] I found a spaceship! [Buzz stops and turns around] It's a spaceship, Buzz!",
+    "clean": "No, Buzz, you've gotta come back! I... I found a spaceship! It's a spaceship, Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Delivery Guy: Come on, man, hurry up! Um, like, the pizzas are getting cold here!",
+    "clean": "Come on, man, hurry up! Um, like, the pizzas are getting cold here!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Now, you're sure this space freighter will return to its port of origin once it jettisons its food supply?",
+    "clean": "Now, you're sure this space freighter will return to its port of origin once it jettisons its food supply?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Uh-huh. And when we get there, we'll be able to find a way to transport you home.",
+    "clean": "Uh-huh. And when we get there, we'll be able to find a way to transport you home."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Well then, let's climb aboard. [runs towards the truck]",
+    "clean": "Well then, let's climb aboard."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, no, no, wait, Buzz, Buzz, let's get in the back. No one will see us there.",
+    "clean": "No, no, no, wait, Buzz, Buzz, let's get in the back. No one will see us there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Negative. There are no restraining harnesses in the cargo area. We'll be much safer in the cockpit.",
+    "clean": "Negative. There are no restraining harnesses in the cargo area. We'll be much safer in the cockpit."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Yeah, but... Buzz! Buzz!",
+    "clean": "Yeah, but... Buzz! Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Delivery Guy: So that's two lefts, and then a right, huh?",
+    "clean": "So that's two lefts, and then a right, huh?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Gas Station Attendant: Yeah.",
+    "clean": "Yeah."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Delivery Guy: Okay, thanks for the directions.",
+    "clean": "Okay, thanks for the directions."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Buzz!",
+    "clean": "Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: It's much safer in the cockpit than the cargo bay. What an idiot!",
+    "clean": "It's much safer in the cockpit than the cargo bay. What an idiot!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Planet Announcer: Next shuttle lift-off scheduled for T-minus 30 minutes and counting.",
+    "clean": "Next shuttle lift-off scheduled for T-minus 30 minutes and counting."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Planet Guard: You are clear to enter. Welcome to Pizza Planet.",
+    "clean": "You are clear to enter. Welcome to Pizza Planet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Planet Announcer: The white zone is for eating pizza only. The white zone is for...",
+    "clean": "The white zone is for eating pizza only. The white zone is for..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Sheriff. Sheriff? [The trash falls down to reveal Woody all flattened] There you are. [Woody falls over on the trash] Now the entrance is heavily guarded. We need a way to get inside. [Woody gets up with a cup over his head, coughing] Great idea, Woody. I like your thinking.",
+    "clean": "Sheriff. Sheriff? There you are. Now the entrance is heavily guarded. We need a way to get inside. Great idea, Woody. I like your thinking."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Planet Guard: You are clear to enter. Welcome to Pizza Planet.",
+    "clean": "You are clear to enter. Welcome to Pizza Planet."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Okay, now! Quickly, Sheriff, the airlock is closing!",
+    "clean": "Okay, now! Quickly, Sheriff, the airlock is closing!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Planet Announcer: Jones, party of five: Your shuttle is now boarding at counter 12.",
+    "clean": "Jones, party of five: Your shuttle is now boarding at counter 12."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Kids: [as Buzz and Woody drops down] Hey, Mom! Can we have some tokens?",
+    "clean": "Hey, Mom! Can we have some tokens?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Ow! Watch where you're going!",
+    "clean": "Ow! Watch where you're going!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Sorry. [Woody and Buzz run between video games and took off their disguises. They look in awe at the arcade games around them with kids playing on them] What a spaceport! Good work, Woody!",
+    "clean": "Sorry. What a spaceport! Good work, Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Mom, can I play Black Hole? Please, please, please?",
+    "clean": "Mom, can I play Black Hole? Please, please, please?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Andy!",
+    "clean": "Andy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: What's Black Hole?",
+    "clean": "What's Black Hole?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Oh, it's so cool...",
+    "clean": "Oh, it's so cool..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Now we need to find a ship that's headed for Sector 12.",
+    "clean": "Now we need to find a ship that's headed for Sector 12."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Wait a minute! No, no, no! Buzz! This way! There's a special ship. I just saw it!",
+    "clean": "Wait a minute! No, no, no! Buzz! This way! There's a special ship. I just saw it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: You mean it has hyperdrive?",
+    "clean": "You mean it has hyperdrive?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hyperactive hyperdrive, and astro... uh, turf. [watches Andy and his family as they move closer to them; tracking Andy and family] Come on, come on, that's it...",
+    "clean": "Hyperactive hyperdrive, and astro... uh, turf. Come on, come on, that's it..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Where is it? I don't see the -- [then saw a claw game that looks like a rocket] Spaceship!",
+    "clean": "Where is it? I don't see the -- Spaceship!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: All right, Buzz, get ready, and... [Buzz runs off, unnoticed by Woody who has his eyes on Andy] Okay, Buzz, when I say \"go,\" we're gonna jump in the basket. [notices that Buzz is not beside him and saw him running towards the claw game] Buzz! [Buzz jumps through the prize door] Don't! No!",
+    "clean": "All right, Buzz, get ready, and... Okay, Buzz, when I say \"go,\" we're gonna jump in the basket. Buzz! Don't! No!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Hey, Mom, if I eat all of my pizza, can I have some alien slime?",
+    "clean": "Hey, Mom, if I eat all of my pizza, can I have some alien slime?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: This cannot be happening to me!",
+    "clean": "This cannot be happening to me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #1: The stranger!",
+    "clean": "Alien #1: The stranger!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #2: From the outside!",
+    "clean": "Alien #2: From the outside!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Aliens: Oooooooh...",
+    "clean": "Oooooooh..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Greetings! I am Buzz Lightyear. I come in peace.",
+    "clean": "Greetings! I am Buzz Lightyear. I come in peace."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Aliens: Tell us! What is it like outside?",
+    "clean": "Tell us! What is it like outside?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Pizza Planet Announcer: Before your space journey, re-energize yourself with a slice of pepperoni, now boarding at counter three.",
+    "clean": "Before your space journey, re-energize yourself with a slice of pepperoni, now boarding at counter three."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: This is an intergalactic emergency! I need to commandeer your vessel to Sector 12! Who's in charge here?",
+    "clean": "This is an intergalactic emergency! I need to commandeer your vessel to Sector 12! Who's in charge here?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Aliens: The claaaaaaaaaw! [They point to the claw above them]",
+    "clean": "The claaaaaaaaaw!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #1: The claw is our master.",
+    "clean": "Alien #1: The claw is our master."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #2: The claw chooses who will go and who will stay.",
+    "clean": "Alien #2: The claw chooses who will go and who will stay."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: This is ludicrous.",
+    "clean": "This is ludicrous."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: [Off-screen] Hey, bozo, you got a brain in there? Ha-ha, take that!",
+    "clean": "Hey, bozo, you got a brain in there? Ha-ha, take that!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, no! Sid! [jumps on Buzz] Get down!",
+    "clean": "Oh, no! Sid! Get down!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: What's gotten into you, Sheriff? I was--",
+    "clean": "What's gotten into you, Sheriff? I was--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: YOU are the one that decided to climb into this--",
+    "clean": "YOU are the one that decided to climb into this--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #4: Shhhhhh! The claw. It moves.",
+    "clean": "Alien #4: Shhhhhh! The claw. It moves."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #3: I have been chosen! Farewell, my friends! I go on to a better place.",
+    "clean": "Alien #3: I have been chosen! Farewell, my friends! I go on to a better place."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Gotcha! [As he watched the alien drop, he saw Buzz amongst the other aliens] A Buzz Lightyear?! No way! [Woody spots a repair door and moves towards it and strains to open it. By the time he manages to open it, Sid lowers the claw towards Buzz and grabs him] Yes!",
+    "clean": "Gotcha! A Buzz Lightyear?! No way! Yes!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [gasps] Buzz! No!",
+    "clean": "Buzz! No!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #4: He has been chosen!",
+    "clean": "Alien #4: He has been chosen!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien #5: He must go!",
+    "clean": "Alien #5: He must go!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey! What are you doing? Stop it! Stop it, you zealots!",
+    "clean": "Hey! What are you doing? Stop it! Stop it, you zealots!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Aliens: He must go! Do not fight the claw! Do not anger the claw! He has been chosen!",
+    "clean": "He must go! Do not fight the claw! Do not anger the claw! He has been chosen!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Alright! Double prizes! [takes them out of the prize section and look at his new prizes with evil delight] Let's go home and... play. [laughs]",
+    "clean": "Alright! Double prizes! Let's go home and... play."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Sheriff, I can see your dwelling from here! You're almost home.",
+    "clean": "Sheriff, I can see your dwelling from here! You're almost home."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Alien: Nirvana is coming! The mystic portal awaits!",
+    "clean": "Nirvana is coming! The mystic portal awaits!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Will you be quiet? You guys don't get it, do you? Once we go into Sid's house, we won't be coming out.",
+    "clean": "Will you be quiet? You guys don't get it, do you? Once we go into Sid's house, we won't be coming out."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Whoa, Scud! Hey, boy. Sit! Good boy! [Scud sits down and growls] Hey, I got something for you, boy.",
+    "clean": "Whoa, Scud! Hey, boy. Sit! Good boy! Hey, I got something for you, boy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [gasps] Freeze!",
+    "clean": "Freeze!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Ready, set, now! [Scud grabs the alien and starts to shake it back and forth in a blur. While growling at the same time Woody, and Buzz watch this with utter distraught and horror] Hannah! Hey, Hannah!",
+    "clean": "Ready, set, now! Hannah! Hey, Hannah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Did I get my package in the mail?",
+    "clean": "Did I get my package in the mail?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: I don't know.",
+    "clean": "I don't know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: What do you mean you don't know?",
+    "clean": "What do you mean you don't know?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: I don't know.",
+    "clean": "I don't know."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Oh, no, Hannah!",
+    "clean": "Oh, no, Hannah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Look! Janie!",
+    "clean": "Look! Janie!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: She's sick!",
+    "clean": "She's sick!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: No she's not!",
+    "clean": "No she's not!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: I'll have to perform one of my... operations!",
+    "clean": "I'll have to perform one of my... operations!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: No! Don't touch her! NO!",
+    "clean": "No! Don't touch her! NO!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Not Sid's room! Not there...",
+    "clean": "Not Sid's room! Not there..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: Sid! Give her back! Sid! [as Sid slams the door on her] Sid!",
+    "clean": "Sid! Give her back! Sid! Sid!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Oh, no! We have a sick patient here, nurse! Prepare the OR, stat!",
+    "clean": "Oh, no! We have a sick patient here, nurse! Prepare the OR, stat!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: [Off-screen] Sid, give her back! Give her back now! I'm telling!",
+    "clean": "Sid, give her back! Give her back now! I'm telling!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Patient is prepped. No one's ever attempted a double bypass brain transplant before. [puts on a mask and pulls out a toy pterodactyl from a crate] Now for the tricky part. Pliers!",
+    "clean": "Patient is prepped. No one's ever attempted a double bypass brain transplant before. Now for the tricky part. Pliers!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I don't believe that man's ever been to medical school.",
+    "clean": "I don't believe that man's ever been to medical school."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: [doing a nurse's voice] Doctor, you've done it! Hannah? [opens the door where Hannah is standing] Janie's all better now.",
+    "clean": "Doctor, you've done it! Hannah? Janie's all better now."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: [screaming] Mom! Mom!",
+    "clean": "Mom! Mom!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: She's lying! Whatever she says, it's not true!",
+    "clean": "She's lying! Whatever she says, it's not true!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: They're cannibals. [Woody and Buzz dive back into the bag and Buzz presses a button on his chest] Mayday! Mayday! Come in, Star Command! Send reinforcements! Star Command, do you copy? [adjusts his laser and points it out of the bag] I've set my laser from stun to kill.",
+    "clean": "They're cannibals. Mayday! Mayday! Come in, Star Command! Send reinforcements! Star Command, do you copy? I've set my laser from stun to kill."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [sarcastically] Oh, great, great! Yeah, and if anyone attacks us, we can blink 'em to death.",
+    "clean": "Oh, great, great! Yeah, and if anyone attacks us, we can blink 'em to death."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Hey, you guys! I think I've found him. Buzz! Is that you?! [Whiskers yowls] Whiskers! Will you get out of here?! You're interfering with the search and rescue. [We heard the Davis's car pull up to the house, and Rex turns off the torch to prevent them seeing the light; whispering] Look! They're home!",
+    "clean": "Hey, you guys! I think I've found him. Buzz! Is that you?! Whiskers! Will you get out of here?! You're interfering with the search and rescue. Look! They're home!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Mom, have you seen Woody?",
+    "clean": "Mom, have you seen Woody?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Where was the last place you left him?",
+    "clean": "Where was the last place you left him?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Right here in the van.",
+    "clean": "Right here in the van."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: I'm sure he's there. You're just not looking hard enough.",
+    "clean": "I'm sure he's there. You're just not looking hard enough."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: He's not here, Mom. Woody's gone.",
+    "clean": "He's not here, Mom. Woody's gone."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: [gasps] Woody's gone?",
+    "clean": "Woody's gone?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Yeah, boy, the weasel ran away.",
+    "clean": "Yeah, boy, the weasel ran away."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Huh? Huh? I told you he was guilty.",
+    "clean": "Huh? Huh? I told you he was guilty."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Who would've thought he was capable of such atrocities?",
+    "clean": "Who would've thought he was capable of such atrocities?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Oh, Slink, I hope he's okay.",
+    "clean": "Oh, Slink, I hope he's okay."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Oh, a survivor. Where's the rebel base? Talk! [slaps Woody to the ground and walks over to the window] I can see your will is strong. [opens the blinds blocking the sun] Well, we have ways of making you talk. [took out a magnifying glass and uses it to aim the sunlight on Woody's forehead, making it smolder; as Interrogator] Where are your rebel friends NOW? [sinister chuckle]",
+    "clean": "Oh, a survivor. Where's the rebel base? Talk! I can see your will is strong. Well, we have ways of making you talk. Where are your rebel friends NOW?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Grace Phillips: Sid, your Pop Tarts are ready.",
+    "clean": "Sid, your Pop Tarts are ready."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Alright!",
+    "clean": "Alright!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Are you all right? I'm proud of you, Sheriff. A lesser man would've talked under such torture.",
+    "clean": "Are you all right? I'm proud of you, Sheriff. A lesser man would've talked under such torture."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: I sure hope this isn't permanent.",
+    "clean": "I sure hope this isn't permanent."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [checking his wrist communicator] Still no word from Star Command. We're not that far from the spaceport.",
+    "clean": "Still no word from Star Command. We're not that far from the spaceport."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: The door! It's open! We're free!!",
+    "clean": "The door! It's open! We're free!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody, we don't know what's out there!",
+    "clean": "Woody, we don't know what's out there!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: I'll tell you wha... [screams; The mutant toys block the way and Woody ducks behind Buzz] They're gonna eat us, Buzz!! Do something! Quick!",
+    "clean": "I'll tell you wha... They're gonna eat us, Buzz!! Do something! Quick!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Shield your eyes! [fires his laser at Babyface but it just flickers on his forehead which surprises and shocks Buzz, when the mutant toys are blocking the way] It's not working! I recharged it before I left. It should be good for hours--",
+    "clean": "Shield your eyes! It's not working! I recharged it before I left. It should be good for hours--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, you idiot! You're a toy! Use your karate chop action! [presses a button on Buzz's back which makes his right arm move up and down as they advance around the mutant toys toward the door; to mutants] Get away! Hoo-cha! Hoo-cha!",
+    "clean": "Oh, you idiot! You're a toy! Use your karate chop action! Get away! Hoo-cha! Hoo-cha!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Hey! Hey!! How are you doing that? Stop that!",
+    "clean": "Hey! Hey!! How are you doing that? Stop that!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Back! Back, you savages! Back!",
+    "clean": "Back! Back, you savages! Back!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody, stop it!",
+    "clean": "Woody, stop it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Sorry guys, but dinner's canceled! [drops Buzz and ran out into the hallway upstairs] There's no place like home. There's no place like home. There's no place like home...",
+    "clean": "Sorry guys, but dinner's canceled! There's no place like home. There's no place like home. There's no place like home..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Another stunt like that, cowboy, you're going to get us killed.",
+    "clean": "Another stunt like that, cowboy, you're going to get us killed."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Don't tell me what to do!",
+    "clean": "Don't tell me what to do!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Shhh!",
+    "clean": "Shhh!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] Yeeeehaaaw!! Giddy-up partner!... We got to get this wagon train a moving!",
+    "clean": "Yeeeehaaaw!! Giddy-up partner!... We got to get this wagon train a moving!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Split up!",
+    "clean": "Split up!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mission Control: Calling Buzz Lightyear. Come in Buzz Lightyear. This is Star Command. Buzz Lightyear, do you read me?",
+    "clean": "Calling Buzz Lightyear. Come in Buzz Lightyear. This is Star Command. Buzz Lightyear, do you read me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Star Command!",
+    "clean": "Star Command!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Boy Voice: Buzz Lightyear responding! Read you loud and clear!",
+    "clean": "Buzz Lightyear responding! Read you loud and clear!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mission Control: Buzz Lightyear, planet Earth needs your help!",
+    "clean": "Buzz Lightyear, planet Earth needs your help!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Boy Voice: On the way!",
+    "clean": "On the way!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Commercial Chorus: Buzz Lightyear!",
+    "clean": "Buzz Lightyear!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "TV Announcer: The world's greatest superhero! Now the world's greatest toy! Buzz has it all! Locking wrist communicator!",
+    "clean": "The world's greatest superhero! Now the world's greatest toy! Buzz has it all! Locking wrist communicator!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Boy Voice: Calling Buzz Lightyear!",
+    "clean": "Calling Buzz Lightyear!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "TV Announcer: Karate chop action!",
+    "clean": "Karate chop action!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "TV Announcer: Pulsating laserlight!",
+    "clean": "Pulsating laserlight!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Boy Voice: Total annihilation!",
+    "clean": "Total annihilation!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "TV Announcer: Multi-phrase voice simulator!",
+    "clean": "Multi-phrase voice simulator!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [On TV; voice-box] There's a secret mission in uncharted space.",
+    "clean": "There's a secret mission in uncharted space."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [voice-box] There's a secret mission in uncharted space.",
+    "clean": "There's a secret mission in uncharted space."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "TV Announcer: And best of all, [big \"monster truck\" voice] HIGH-PRESSURE-SPACE-WINGS!!",
+    "clean": "And best of all, HIGH-PRESSURE-SPACE-WINGS!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [On TV] To infinity and beyond!",
+    "clean": "To infinity and beyond!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Monotone Announcer: [The words NOT A FLYING TOY appear at the bottom of the screen] Not a flying toy.",
+    "clean": "Not a flying toy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "TV Announcer: Get your Buzz Lightyear action figure and save a galaxy near you!",
+    "clean": "Get your Buzz Lightyear action figure and save a galaxy near you!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Commercial Chorus: Buzz Lightyear!",
+    "clean": "Buzz Lightyear!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Local Announcer: Available at all Al's Toy Barn outlets in the Tri-County area.",
+    "clean": "Available at all Al's Toy Barn outlets in the Tri-County area."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bowling Announcer: [after the commercials ends] And welcome back to the Point Richmond Bowling Championship.",
+    "clean": "And welcome back to the Point Richmond Bowling Championship."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] Out among the stars I sail / Way beyond the moon / In my silver ship I sail / A dream that ended too soon / Now I know exactly who I am / And what I'm here for.",
+    "clean": "Out among the stars I sail / Way beyond the moon / In my silver ship I sail / A dream that ended too soon / Now I know exactly who I am / And what I'm here for."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-over] You are a toy! You can't fly!",
+    "clean": "You are a toy! You can't fly!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: To infinity and beyond!",
+    "clean": "To infinity and beyond!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Randy Newman: [singing] Clearly, I will go sailing, no more...| [song fades]",
+    "clean": "Clearly, I will go sailing, no more...|"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: Mom? Mom, have you seen my Sally doll?",
+    "clean": "Mom? Mom, have you seen my Sally doll?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Grace Phillips: What, dear? What was that?",
+    "clean": "What, dear? What was that?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: Never mind!",
+    "clean": "Never mind!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [a bit woozy from the ball hit him] Buzz, the coast is clear. [shakes his head to get the wooziness off and look around for Buzz] Buzz, where are you?",
+    "clean": "Buzz, the coast is clear. Buzz, where are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [voice-box] There's a secret mission in uncharted space. Let's go.",
+    "clean": "There's a secret mission in uncharted space. Let's go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: Really? That is so interesting. [Woody peep into the room and see Hannah playing a tea party with Buzz and her dolls who are headless] Would you like some tea, Mrs. Nesbit?",
+    "clean": "Really? That is so interesting. Would you like some tea, Mrs. Nesbit?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [gasps; under his breath] Buzz?",
+    "clean": "Buzz?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: It's so nice you could join us on such late notice.",
+    "clean": "It's so nice you could join us on such late notice."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, no.",
+    "clean": "Oh, no."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: What a lovely hat, Mrs. Nesbit. It goes quite well with your head.",
+    "clean": "What a lovely hat, Mrs. Nesbit. It goes quite well with your head."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [in Sid's mother's voice] Hannah! Oh, Hannah!",
+    "clean": "Hannah! Oh, Hannah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: Mom? [to her dolls] Please excuse me, ladies. I'll be right back. [walks out of her room] What is it, Mom? Mom, where are you?",
+    "clean": "Mom? Please excuse me, ladies. I'll be right back. What is it, Mom? Mom, where are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Buzz! Hey, Buzz, are you okay?",
+    "clean": "Buzz! Hey, Buzz, are you okay?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [imitating Jean Shepherd from A Christmas Story] GONE!! It's all go-o-one! All of it's gone. Bye-bye! Whoo-hoo! See ya!",
+    "clean": "GONE!! It's all go-o-one! All of it's gone. Bye-bye! Whoo-hoo! See ya!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: What happened to you?",
+    "clean": "What happened to you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: One minute you're defending the whole galaxy, [pointing at other dolls] and SUDDENLY you find yourself sucking down Darjeeling with...",
+    "clean": "One minute you're defending the whole galaxy, and SUDDENLY you find yourself sucking down Darjeeling with..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Headless Dolls: ...Marie Antoinette and her little sister.",
+    "clean": "...Marie Antoinette and her little sister."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: I think you've had enough tea for today. [helps Buzz up] Let's get you out of here, Buzz.",
+    "clean": "I think you've had enough tea for today. Let's get you out of here, Buzz."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Don't you get it?! You see the hat? I am Mrs. Nesbit!! [hysterical laughter]",
+    "clean": "Don't you get it?! You see the hat? I am Mrs. Nesbit!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [imitating Cher from Moonstruck] Snap out of it, Buzz!",
+    "clean": "Snap out of it, Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [sober] I'm sorry. You're right. I'm just a little depressed that's all. I can get through this. [They walk out to the hallway. Then Buzz drops to his knees in despair] OH, I'M A SHAM!!",
+    "clean": "I'm sorry. You're right. I'm just a little depressed that's all. I can get through this. OH, I'M A SHAM!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Shhhh! Quiet, Buzz!",
+    "clean": "Shhhh! Quiet, Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Look at me! I can't even fly out of a window! But -- the hat looked good. Tell me the hat looked good! The apron is a bit much, it's not my color...",
+    "clean": "Look at me! I can't even fly out of a window! But -- the hat looked good. Tell me the hat looked good! The apron is a bit much, it's not my color..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: \"Out the window\"! Buzz, you're a genius! [pick up the Christmas lights and drag Buzz down the hallway to Sid's room] Come on, this way!",
+    "clean": "\"Out the window\"! Buzz, you're a genius! Come on, this way!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: YEARS OF ACADEMY TRAINING, WASTED!!",
+    "clean": "YEARS OF ACADEMY TRAINING, WASTED!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Miss! G-6.",
+    "clean": "Miss! G-6."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Ohh! You sunk it! Are you peeking?",
+    "clean": "Ohh! You sunk it! Are you peeking?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Oh, quit your whining and pay up. [Potato Head reaches for his ear] No, no, not the ear. Give me the nose. Come on.",
+    "clean": "Oh, quit your whining and pay up. No, no, not the ear. Give me the nose. Come on."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: How about three out of five?",
+    "clean": "How about three out of five?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, guys! Guys! Hey!",
+    "clean": "Hey, guys! Guys! Hey!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Son of a building block! It's Woody.",
+    "clean": "Son of a building block! It's Woody."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: He's in the psycho's bedroom!",
+    "clean": "He's in the psycho's bedroom!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: [into Andy's bedroom] Everyone, it's Woody!",
+    "clean": "Everyone, it's Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Woody?",
+    "clean": "Woody?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: You're kidding?",
+    "clean": "You're kidding?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Woody!",
+    "clean": "Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: We're gonna get outta here, Buzz. Buzz?",
+    "clean": "We're gonna get outta here, Buzz. Buzz?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Hey, look!",
+    "clean": "Hey, look!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Woody!",
+    "clean": "Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Boy, am I glad to see you guys!",
+    "clean": "Boy, am I glad to see you guys!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: I knew you'd come back, Woody!",
+    "clean": "I knew you'd come back, Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: What are you doing over there?",
+    "clean": "What are you doing over there?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: It's a long story, Bo. I'll explain later. Here, catch this!",
+    "clean": "It's a long story, Bo. I'll explain later. Here, catch this!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: I got it, Woody!",
+    "clean": "I got it, Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [overly excited] He got it, Woody!",
+    "clean": "He got it, Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Good going, Slink! Now, just, just tie it on to something.",
+    "clean": "Good going, Slink! Now, just, just tie it on to something."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Wait! Wait! I got a better idea! How about we DON'T?!",
+    "clean": "Wait! Wait! I got a better idea! How about we DON'T?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Potato Head.",
+    "clean": "Potato Head."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Did you all take stupid pills this morning?! Have you forgotten what he did to Buzz? And now you want to let him back over here?",
+    "clean": "Did you all take stupid pills this morning?! Have you forgotten what he did to Buzz? And now you want to let him back over here?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, no, no! You got it all wrong, Potato Head. Yeah. Besides, Buzz is fine. Buzz is right here. He's with me.",
+    "clean": "No, no, no! You got it all wrong, Potato Head. Yeah. Besides, Buzz is fine. Buzz is right here. He's with me."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: You are a liar!",
+    "clean": "You are a liar!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, I'm not. [to Buzz] Buzz, come over here and you just tell the nice toys that you're not dead. [Buzz isn't listening. He's too busy peeling off the sticker off his wrist communicator, crumples it up and growls] Just a sec. Buzz, Will you get up here and give us a hand? [Buzz throws his broken arm up to Woody; insincerely] Ha ha. That's very funny, Buzz. [exploding] This is serious!!",
+    "clean": "No, I'm not. Buzz, come over here and you just tell the nice toys that you're not dead. Just a sec. Buzz, Will you get up here and give us a hand? Ha ha. That's very funny, Buzz. This is serious!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Hey, Woody. Where'd ya go?",
+    "clean": "Hey, Woody. Where'd ya go?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: He's lying! Buzz ain't there.",
+    "clean": "He's lying! Buzz ain't there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [forced casualness] Oh, hi Buzz! Why don't you say \"hello\" to the guys over there? [make Buzz's arm move while hiding the end of it from the toys' sight; imitating Buzz's voice] Hiya, fellas. To infinity and beyond!",
+    "clean": "Oh, hi Buzz! Why don't you say \"hello\" to the guys over there? Hiya, fellas. To infinity and beyond!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Hey look! It's Buzz!",
+    "clean": "Hey look! It's Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [shaking the arm's hand] Yeah, hey Buzz. Let's show the guys our new secret best-friends hand shake. Gimme five, man!",
+    "clean": "Yeah, hey Buzz. Let's show the guys our new secret best-friends hand shake. Gimme five, man!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: [irritated] Something's screwy here.",
+    "clean": "Something's screwy here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: So, you see? We're friends now, guys. Aren't we, Buzz? [as Buzz] You bet. Give me a hug. [makes Buzz's arm grasp him for a hug] Ha, ha, oh, I love you, too.",
+    "clean": "So, you see? We're friends now, guys. Aren't we, Buzz? You bet. Give me a hug. Ha, ha, oh, I love you, too."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: See? It is Buzz. Now give back the lights, Potato Head.",
+    "clean": "See? It is Buzz. Now give back the lights, Potato Head."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Wait just a minute. What are you trying to pull?",
+    "clean": "Wait just a minute. What are you trying to pull?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Nothing.",
+    "clean": "Nothing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Oh, that is disgusting!",
+    "clean": "Oh, that is disgusting!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: [raging furious] MURDERER!!!",
+    "clean": "MURDERER!!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No! No, no, no, no!",
+    "clean": "No! No, no, no, no!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: YOU MURDERING DOG!",
+    "clean": "YOU MURDERING DOG!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, it's not what you think, I swear!",
+    "clean": "No, it's not what you think, I swear!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Save it for the jury. I hope Sid pulls your voice-box out, ya creep!",
+    "clean": "Save it for the jury. I hope Sid pulls your voice-box out, ya creep!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: NO, NO! NO, NO, DON'T LEAVE, DON'T LEAVE! YOU'VE GOTTA HELP US, PLEASE! YOU DON'T KNOW WHAT IT'S LIKE OVER HERE!!",
+    "clean": "NO, NO! NO, NO, DON'T LEAVE, DON'T LEAVE! YOU'VE GOTTA HELP US, PLEASE! YOU DON'T KNOW WHAT IT'S LIKE OVER HERE!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Come on, let's get out of here.",
+    "clean": "Come on, let's get out of here."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Go back to your lives, citizens. Show's over.",
+    "clean": "Go back to your lives, citizens. Show's over."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Come back! Slink! Slink, please! Please! Listen to me! [Slinky just looks sad and pulls the blinds down to shut the blinds] No! NO, COME BACK! [crying] Slinky!",
+    "clean": "Come back! Slink! Slink, please! Please! Listen to me! No! NO, COME BACK! Slinky!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Not now, Mom, I'm BUSY!",
+    "clean": "Not now, Mom, I'm BUSY!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Sid!!! [tries to pick up the still depressed Buzz, but he just went limp] Buzz! Come on, get up! Use your legs! [tried dragging Buzz to the table but the progress is very slow] Fine! Let Sid trash you! But don't blame me!",
+    "clean": "Sid!!! Buzz! Come on, get up! Use your legs! Fine! Let Sid trash you! But don't blame me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: I looked everywhere, honey, but all I could find was your hat.",
+    "clean": "I looked everywhere, honey, but all I could find was your hat."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [groggy] But what if we leave them behind?",
+    "clean": "But what if we leave them behind?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Oh, don't worry, honey, I'm sure we'll find Woody and Buzz before we leave tomorrow.",
+    "clean": "Oh, don't worry, honey, I'm sure we'll find Woody and Buzz before we leave tomorrow."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [muffled] Aaaah! I need air! [pops out and spits out packing styrofoam peanuts, relieved and coughs]",
+    "clean": "Aaaah! I need air!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Will you quit moving around?!",
+    "clean": "Will you quit moving around?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: I'm sorry. It's just that I get so nervous before I travel.",
+    "clean": "I'm sorry. It's just that I get so nervous before I travel."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: [irritated] How did I get stuck with YOU as a moving buddy?",
+    "clean": "How did I get stuck with YOU as a moving buddy?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [following Potato Head] Everyone else was picked.",
+    "clean": "Everyone else was picked."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Oh, Woody, if only you could see how much Andy misses you.",
+    "clean": "Oh, Woody, if only you could see how much Andy misses you."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: I can't help. I can't help anyone.",
+    "clean": "I can't help. I can't help anyone."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Why, sure you can, Buzz. You can get us out of here and then I'll get that rocket off you, and we'll make a break for Andy's house.",
+    "clean": "Why, sure you can, Buzz. You can get us out of here and then I'll get that rocket off you, and we'll make a break for Andy's house."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Andy's house. Sid's house. What's the difference?",
+    "clean": "Andy's house. Sid's house. What's the difference?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Oh, Buzz, you've had a big fall. You must not be thinking clearly.",
+    "clean": "Oh, Buzz, you've had a big fall. You must not be thinking clearly."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: No, Woody, for the first time I am thinking clearly. [looking at himself] You were right all along. I'm not a Space Ranger. I'm just a toy. [opens up wrist communicator] A stupid little insignificant toy.",
+    "clean": "No, Woody, for the first time I am thinking clearly. You were right all along. I'm not a Space Ranger. I'm just a toy. A stupid little insignificant toy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Woah hey. Being a toy is a lot better than being a, a Space Ranger.",
+    "clean": "Woah hey. Being a toy is a lot better than being a, a Space Ranger."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Yeah, right.",
+    "clean": "Yeah, right."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, it is. Look, over in that house is a kid who thinks you are the greatest, and it's not because you're a Space Ranger, pal, it's because you're a toy. You are his toy.",
+    "clean": "No, it is. Look, over in that house is a kid who thinks you are the greatest, and it's not because you're a Space Ranger, pal, it's because you're a toy. You are his toy."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: But why would Andy want me?",
+    "clean": "But why would Andy want me?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Come on, Sheriff. There's a kid over in that house who needs us. Now let's get you out of this thing. [strains]",
+    "clean": "Come on, Sheriff. There's a kid over in that house who needs us. Now let's get you out of this thing."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Yes, sir! [They, Woody and Buzz began to push the toolbox and the milk crate but it's slow prove; strained] Come on, Buzz! We can do it!",
+    "clean": "Yes, sir! Come on, Buzz! We can do it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody! It's the moving van.",
+    "clean": "Woody! It's the moving van."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: We've got to get out of here... NOW. [Buzz braces himself between the toolbox and the wall. Using his legs, Buzz pushes the toolbox and it starts to move. Woody saw that with every shove Buzz gives to the tool chest, the milk crate begins to edge out on the lip of the desk] Come on, Buzz. [Finally there's a gap wide enough for Woody to jump through] All right! [drops down to the floor below] Buzz! Hey! I'm out!",
+    "clean": "We've got to get out of here... NOW. Come on, Buzz. All right! Buzz! Hey! I'm out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [grunts] Almost there!",
+    "clean": "Almost there!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: [in his sleep] I wanna ride the pony...",
+    "clean": "I wanna ride the pony..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody? Are you alright?!",
+    "clean": "Woody? Are you alright?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [punch-drunk] No, I'm fine. I'm okay.",
+    "clean": "No, I'm fine. I'm okay."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Oh, yeah! Time for lift-off! [jumps out of bed, grabs Buzz and bolts out of his room] To infinity and beyond! Whoo-hoo!",
+    "clean": "Oh, yeah! Time for lift-off! To infinity and beyond! Whoo-hoo!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Aaah! Back! Back! Down! Down! [out of breath; to himself] Okay, what do I do? Come on Woody, think!",
+    "clean": "Aaah! Back! Back! Down! Down! Okay, what do I do? Come on Woody, think!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: [as astronaut] Houston to Mission Control. Come in, Control. Launch pad is being constructed! Heh-heh.",
+    "clean": "Houston to Mission Control. Come in, Control. Launch pad is being constructed! Heh-heh."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: I'm coming. I'm coming.",
+    "clean": "I'm coming. I'm coming."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: Scud!",
+    "clean": "Scud!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: Stupid dog!",
+    "clean": "Stupid dog!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Lean back!",
+    "clean": "Lean back!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: [as astronaut] Uh, Mission Control, is the launchpad construction complete? [simulated static] Uh, Roger, rocket is now secured to guide wire. We are currently obtaining the...ignition sticks. Countdown will commence momentarily. Stand by-- [simulated static]",
+    "clean": "Uh, Mission Control, is the launchpad construction complete? Uh, Roger, rocket is now secured to guide wire. We are currently obtaining the...ignition sticks. Countdown will commence momentarily. Stand by--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Let's go.",
+    "clean": "Let's go."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: Hey, Mom?! Where are the matches? Oh, oh, wait, here they are. Never mind...",
+    "clean": "Hey, Mom?! Where are the matches? Oh, oh, wait, here they are. Never mind..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [whispers] Woody?! Great! Help me out of this thing!",
+    "clean": "Woody?! Great! Help me out of this thing!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Shhh!",
+    "clean": "Shhh!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [confused] What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [whispers] It's okay, everything's under control.",
+    "clean": "It's okay, everything's under control."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody?! What are you doing?!",
+    "clean": "Woody?! What are you doing?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] Reach for the sky.",
+    "clean": "Reach for the sky."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] This town ain't big enough for the two of us!",
+    "clean": "This town ain't big enough for the two of us!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] Somebody's poisoned the water hole...",
+    "clean": "Somebody's poisoned the water hole..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: It's busted.",
+    "clean": "It's busted."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] Who are you calling busted, Buster?! [Sid stops short and looks at Woody confused] That's right. [As Woody's voice box continues to talk, Sid look at his pull string. It's not moving] I'm talking to YOU, Sid Phillips!",
+    "clean": "Who are you calling busted, Buster?! That's right. I'm talking to YOU, Sid Phillips!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] We don't like being blown up, Sid, or smashed, or ripped apart...",
+    "clean": "We don't like being blown up, Sid, or smashed, or ripped apart..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: W-w-w-we?",
+    "clean": "W-w-w-we?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] That's right! Your toys!",
+    "clean": "That's right! Your toys!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [voice-box] From now on, you must take good care of your toys! Because if you don't, we'll find out, Sid. We toys can see everything. [Woody's inanimate head rotates around 360 degrees then came to life much to Sid's horror; regular voice] So play nice. [Sid screams in horror and runs away, dropping Woody. Woody, and the mutant toys cheer; delighted] Ha-ha! We did it! We did it! YES!!!",
+    "clean": "From now on, you must take good care of your toys! Because if you don't, we'll find out, Sid. We toys can see everything. So play nice. Ha-ha! We did it! We did it! YES!!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sid Phillips: [last words; whimpering] The toys! The toys are alive! [sees Hannah's doll and recoils a bit] Nice toy...",
+    "clean": "The toys! The toys are alive! Nice toy..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hannah Phillips: What's wrong, Sid?! Don't you want to play with Sally?!",
+    "clean": "What's wrong, Sid?! Don't you want to play with Sally?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Nice work, fellas. Good job. Coming out of the ground -- what a touch! That was a stroke of genius.",
+    "clean": "Nice work, fellas. Good job. Coming out of the ground -- what a touch! That was a stroke of genius."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody. [Woody turns around and sees Buzz who's still affixed to Sid's launchpad. Buzz extends his hand to Woody] Thanks.",
+    "clean": "Woody. Thanks."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: [Off-screen] Everybody say, \"Bye, house.\"",
+    "clean": "Everybody say, \"Bye, house.\""
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody! The van!",
+    "clean": "Woody! The van!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [depressed] Bye, house.",
+    "clean": "Bye, house."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [to mutant toys] We gotta run! Thanks, guys. [With the rocket still taped to Buzz, the two toys sprint to the fence. Woody peeks out to see Andy's van's engine roaring, starting up] Quick!",
+    "clean": "We gotta run! Thanks, guys. Quick!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Whew, I made it! [laughs; Buzz gasps. Woody look back to see Scud running towards them. Woody screams. Scud bite on Woody's foot; kicking Scud with his other foot] Get away, you stupid dog! Down! Down! Aah! Aah!",
+    "clean": "Whew, I made it! Get away, you stupid dog! Down! Down! Aah! Aah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Hold on, Woody!",
+    "clean": "Hold on, Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: I can't do it! Take care of Andy for me!",
+    "clean": "I can't do it! Take care of Andy for me!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Buzz!",
+    "clean": "Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Toys: What?",
+    "clean": "What?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Are we there already? Woody!",
+    "clean": "Are we there already? Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Woody?! How'd you--",
+    "clean": "Woody?! How'd you--"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: How did you-- [Woody push the box to the side and begin rummaging through the next box. Slinky, Potato Head, Rex and the other toys poke their heads out] What's going on? What's he taking?",
+    "clean": "How did you-- What's going on? What's he taking?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Aha, there you are!",
+    "clean": "Aha, there you are!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Hey! What's he doing?",
+    "clean": "Hey! What's he doing?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: He's at it again!",
+    "clean": "He's at it again!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Get him!",
+    "clean": "Get him!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Ah-h!! Ah-h! No, no! [Scud continues chasing Buzz and RC down the street, nearly close to chomp on him. In the truck, Rocky lifts Woody and spin him around in circles] No, no, no! Wait! [as Rocky spins him] Whoa-Whoa-Whoa...!",
+    "clean": "Ah-h!! Ah-h! No, no! No, no, no! Wait! Whoa-Whoa-Whoa...!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [spinning] Whoa-Whoa-Whoa...!",
+    "clean": "Whoa-Whoa-Whoa...!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Pig pile!",
+    "clean": "Pig pile!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Driver #1: Get out of that car!",
+    "clean": "Driver #1: Get out of that car!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Driver #2: Move it!",
+    "clean": "Driver #2: Move it!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, wait, you don't understand! Buzz is out there! We've gotta help him!!",
+    "clean": "No, wait, you don't understand! Buzz is out there! We've gotta help him!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Toss him overboard!",
+    "clean": "Toss him overboard!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: No, no, no, wait! Ah!",
+    "clean": "No, no, no, wait! Ah!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Hooray!",
+    "clean": "Hooray!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: So long, Woody!",
+    "clean": "So long, Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Whoa! Woody!",
+    "clean": "Whoa! Woody!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Well, thanks for the ride.",
+    "clean": "Well, thanks for the ride."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [pointing ahead] Look out!",
+    "clean": "Look out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Now let's catch up to that truck!",
+    "clean": "Now let's catch up to that truck!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lenny: Guys, guys, Woody riding RC, and Buzz is with them!",
+    "clean": "Guys, guys, Woody riding RC, and Buzz is with them!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Toys: WHAT?!!",
+    "clean": "WHAT?!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: It is Buzz! Woody was telling the truth!",
+    "clean": "It is Buzz! Woody was telling the truth!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: What have we done?!",
+    "clean": "What have we done?!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Great. Now I have guilt.",
+    "clean": "Great. Now I have guilt."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: We're almost there.",
+    "clean": "We're almost there."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Rocky, the ramp!",
+    "clean": "Rocky, the ramp!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Look out!",
+    "clean": "Look out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: [to other toys] Quick, hold on to my tail!",
+    "clean": "Quick, hold on to my tail!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Attaboy, Slink!",
+    "clean": "Attaboy, Slink!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Woody! Woody! Speed up!",
+    "clean": "Woody! Woody! Speed up!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [to Buzz] Speed up!",
+    "clean": "Speed up!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: The batteries, they're running out!",
+    "clean": "The batteries, they're running out!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: Whoa! Whoa! Whoa!",
+    "clean": "Whoa! Whoa! Whoa!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: I can't hold on much longer!",
+    "clean": "I can't hold on much longer!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Slink, hang on!",
+    "clean": "Slink, hang on!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: [screams] Ouch!",
+    "clean": "Ouch!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [disappointed] Great!",
+    "clean": "Great!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody! The rocket!",
+    "clean": "Woody! The rocket!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: The match! [pull out the match from his holster that Sid had put there earlier] Yes! Thank you, Sid! [runs around behind Buzz, strikes the match against RC's back tire and is about to light the fuse when a car whizzes over them, blowing out the match. Woody looks stunned at this, clenched the match in his hands and falls prostrate to the ground] No! No, no, no! No! Oh, no, no, no, no, no, no, no! No...",
+    "clean": "The match! Yes! Thank you, Sid! No! No, no, no! No! Oh, no, no, no, no, no, no, no! No..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Woody, what are you doing?",
+    "clean": "Woody, what are you doing?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hold still, Buzz! [The fuse lights and laughs]",
+    "clean": "Hold still, Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: You did it! Next stop: Andy!",
+    "clean": "You did it! Next stop: Andy!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Wait a minute... I just lit a rocket. Rockets explode!",
+    "clean": "Wait a minute... I just lit a rocket. Rockets explode!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Slinky Dog: I should a held on longer.",
+    "clean": "I should a held on longer."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lenny: Look! Look! It's Woody and Buzz! Coming up fast!",
+    "clean": "Look! Look! It's Woody and Buzz! Coming up fast!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Woody! [The rocket is so strong that it began to lift Woody and Buzz into the air. Woody manages to hold on to RC but not for long as he forces to lose his grip, sending RC towards the moving van] Take cover!",
+    "clean": "Woody! Take cover!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Aaah! This is the part where we blow up!",
+    "clean": "Aaah! This is the part where we blow up!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Not today!",
+    "clean": "Not today!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Hey, Buzz!! You're flying!!",
+    "clean": "Hey, Buzz!! You're flying!!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: This isn't flying. This is falling -- with style!",
+    "clean": "This isn't flying. This is falling -- with style!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Ha-ha! To infinity, and beyond! [They soar towards the moving truck but then they flew over it, much to Woody's confusion] Uh, Buzz, we missed the truck!",
+    "clean": "Ha-ha! To infinity, and beyond! Uh, Buzz, we missed the truck!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: We're not aiming for the truck!",
+    "clean": "We're not aiming for the truck!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Hey! Wow!",
+    "clean": "Hey! Wow!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: What? What is it?",
+    "clean": "What? What is it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: [picking up the toys] Woody! Buzz!",
+    "clean": "Woody! Buzz!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Oh, great, you found them. Where were they?",
+    "clean": "Oh, great, you found them. Where were they?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Here, in the car!",
+    "clean": "Here, in the car!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: See? Now, what did I tell you? Right where you left them.",
+    "clean": "See? Now, what did I tell you? Right where you left them."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Which one can I open first?",
+    "clean": "Which one can I open first?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Jennifer Davis: Let's let Molly open one.",
+    "clean": "Let's let Molly open one."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: [over the monitor] Frankincense, this is Myrrh. Come in, Frankincense.",
+    "clean": "Frankincense, this is Myrrh. Come in, Frankincense."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: [to the room] Hey, heads up everybody! It's showtime.",
+    "clean": "Hey, heads up everybody! It's showtime."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: Oh, it's time!",
+    "clean": "Oh, it's time!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Whoooooah! Oh! Bo! [rubbing his neck] There's gotta be a less painful way to get my attention.",
+    "clean": "Whoooooah! Oh! Bo! There's gotta be a less painful way to get my attention."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Merry Christmas, Sheriff.",
+    "clean": "Merry Christmas, Sheriff."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Say, isn't that mistletoe?",
+    "clean": "Say, isn't that mistletoe?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Bo Peep: Mm-hmmmmm.",
+    "clean": "Mm-hmmmmm."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Rex: [to Slinky] Maybe Andy'll get another dinosaur, like a leaf-eater. That way, I could play the, uh, dominant predator. [laughs]",
+    "clean": "Maybe Andy'll get another dinosaur, like a leaf-eater. That way, I could play the, uh, dominant predator."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: Quiet, everyone, quiet!",
+    "clean": "Quiet, everyone, quiet!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: [over monitor] Molly's first present is... Mrs. Potato Head. Repeat. A Mrs. Potato Head.",
+    "clean": "Molly's first present is... Mrs. Potato Head. Repeat. A Mrs. Potato Head."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Hamm: Way to go, Idaho!",
+    "clean": "Way to go, Idaho!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Mr. Potato Head: Gee, I better shave.",
+    "clean": "Gee, I better shave."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: [over monitor] Come in, Frankincense. Andy is now opening his first present it's a... [static]",
+    "clean": "Come in, Frankincense. Andy is now opening his first present it's a..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: Buzz, Buzz Lightyear. You are not worried, are you?",
+    "clean": "Buzz, Buzz Lightyear. You are not worried, are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Sarge: [over monitor] I can't quite make out -- [static]",
+    "clean": "I can't quite make out --"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Buzz Lightyear: [defensively] Me? No, no, no, no... Mm-mmm. Are you?",
+    "clean": "Me? No, no, no, no... Mm-mmm. Are you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Woody: [laughing] Now, Buzz, what could Andy possibly get that is worse than you?",
+    "clean": "Now, Buzz, what could Andy possibly get that is worse than you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Oh, what is it? What is it?",
+    "clean": "Oh, what is it? What is it?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Andy Davis: Wow, a puppy!",
+    "clean": "Wow, a puppy!"
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: You've got a friend in me.",
+    "clean": "You've got a friend in me."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: You've got a friend in me / When the road looks rough ahead / And you're miles and miles from your nice warm bed.",
+    "clean": "You've got a friend in me / When the road looks rough ahead / And you're miles and miles from your nice warm bed."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: Just remember what your old pal said / Boy, you've got a friend in me.",
+    "clean": "Just remember what your old pal said / Boy, you've got a friend in me."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: Yeah, you've got a friend in me...| You've got a friend in me.",
+    "clean": "Yeah, you've got a friend in me...| You've got a friend in me."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: You've got a friend in me.",
+    "clean": "You've got a friend in me."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: You've got troubles.",
+    "clean": "You've got troubles."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: I've got 'em too / There isn't anything I wouldn't do for you.",
+    "clean": "I've got 'em too / There isn't anything I wouldn't do for you."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: We stick together, we can see it through / 'Cause you've got a friend in me.",
+    "clean": "We stick together, we can see it through / 'Cause you've got a friend in me."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: Yeah, you've got a friend in me...| Some other folks might be a little bit smarter than I am.",
+    "clean": "Yeah, you've got a friend in me...| Some other folks might be a little bit smarter than I am."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: Bigger and stronger too.",
+    "clean": "Bigger and stronger too."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: Maybe.",
+    "clean": "Maybe."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: But none of them will ever love you the way I do / It's me and you, boy.",
+    "clean": "But none of them will ever love you the way I do / It's me and you, boy."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: And as the years go by.",
+    "clean": "And as the years go by."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: Our friendship will never die.",
+    "clean": "Our friendship will never die."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman and Lyle Lovett: You're gonna see, it's our destiny.",
+    "clean": "You're gonna see, it's our destiny."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman: You've got a friend in me.",
+    "clean": "You've got a friend in me."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Lyle Lovett: You've got a friend in me.",
+    "clean": "You've got a friend in me."
+  },
+  {
+    "heading": "RANDY NEWMAN & LYLE LOVETT lyrics (You've Got a Friend in Me)",
+    "raw": "Randy Newman and Lyle Lovett: You've got a friend in me...| [song fades]",
+    "clean": "You've got a friend in me...|"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Tom Hanks – Sheriff Woody Pride",
+    "clean": "Tom Hanks - Sheriff Woody Pride"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Tim Allen – Buzz Lightyear",
+    "clean": "Tim Allen - Buzz Lightyear"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Don Rickles – Mr. Potato Head",
+    "clean": "Don Rickles - Mr. Potato Head"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Jim Varney – Slinky Dog",
+    "clean": "Jim Varney - Slinky Dog"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Wallace Shawn – Rex",
+    "clean": "Wallace Shawn - Rex"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "John Ratzenberger – Hamm",
+    "clean": "John Ratzenberger - Hamm"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Annie Potts – Bo Peep",
+    "clean": "Annie Potts - Bo Peep"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "John Morris – Andrew \"Andy\" Davis",
+    "clean": "John Morris - Andrew \"Andy\" Davis"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Erik von Detten – Sidney \"Sid\" Phillips",
+    "clean": "Erik von Detten - Sidney \"Sid\" Phillips"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Laurie Metcalf – Jennifer Davis (Andy's mother)",
+    "clean": "Laurie Metcalf - Jennifer Davis (Andy's mother)"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "R. Lee Ermey – Sarge",
+    "clean": "R. Lee Ermey - Sarge"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Sarah Freeman – Hannah Phillips",
+    "clean": "Sarah Freeman - Hannah Phillips"
+  },
+  {
+    "heading": "Main Cast",
+    "raw": "Penn Jillette – TV Announcer",
+    "clean": "Penn Jillette - TV Announcer"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Joe Ranft – Lenny",
+    "clean": "Joe Ranft - Lenny"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Jeff Pidgeon – Squeeze Toy Aliens/Mr. Spell/Robot",
+    "clean": "Jeff Pidgeon - Squeeze Toy Aliens/Mr. Spell/Robot"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Jack Angel – Shark/Rocky Gibraltar",
+    "clean": "Jack Angel - Shark/Rocky Gibraltar"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Debi Derryberry – Squeeze Toy Aliens/Pizza Planet Announcer",
+    "clean": "Debi Derryberry - Squeeze Toy Aliens/Pizza Planet Announcer"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Craig Good – Mission Control",
+    "clean": "Craig Good - Mission Control"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "John LasseterAndrew Stanton – Commercial Chorus",
+    "clean": "John LasseterAndrew Stanton - Commercial Chorus"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Bill Farmer – Monotone Announcer",
+    "clean": "Bill Farmer - Monotone Announcer"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Greg Berg – Local Announcer",
+    "clean": "Greg Berg - Local Announcer"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Ryan O'Donohue – Boy Voice",
+    "clean": "Ryan O'Donohue - Boy Voice"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Mickie McGowan – Grace Phillips (Sid's mother)",
+    "clean": "Mickie McGowan - Grace Phillips (Sid's mother)"
+  },
+  {
+    "heading": "Additional Voices",
+    "raw": "Phil Proctor – Bowling Announcer/Pizza Planet Guard/Pizza Planet Announcer",
+    "clean": "Phil Proctor - Bowling Announcer/Pizza Planet Guard/Pizza Planet Announcer"
+  }
+]

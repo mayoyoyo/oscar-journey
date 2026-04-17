@@ -63,7 +63,8 @@
         "AFI",
         "IMDB",
         "SS",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -126,7 +127,8 @@
         "AFI",
         "IMDB",
         "SS",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -137,7 +139,8 @@
         "AFI",
         "IMDB",
         "SS",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -156,7 +159,8 @@
       "lists": [
         "AFI",
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -164,7 +168,8 @@
       "title": "Barry Lyndon",
       "year": 1975,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -172,7 +177,8 @@
       "title": "Dog Day Afternoon",
       "year": 1975,
       "lists": [
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -222,7 +228,8 @@
       "lists": [
         "AFI",
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -283,7 +290,8 @@
       "year": 1979,
       "lists": [
         "FEST",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -294,7 +302,8 @@
         "AFI",
         "IMDB",
         "FEST",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -318,7 +327,8 @@
       "title": "The Elephant Man",
       "year": 1980,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -330,7 +340,8 @@
         "IMDB",
         "SS",
         "NFR",
-        "CRIT"
+        "CRIT",
+        "LBXD"
       ]
     },
     {
@@ -417,7 +428,8 @@
       "year": 1984,
       "lists": [
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -475,7 +487,8 @@
       "title": "Dead Poets Society",
       "year": 1989,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -503,7 +516,8 @@
         "AFI",
         "IMDB",
         "SS",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -513,7 +527,8 @@
       "lists": [
         "AFI",
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -550,7 +565,8 @@
       "lists": [
         "AFI",
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -591,7 +607,8 @@
         "IMDB",
         "SS",
         "FEST",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -601,7 +618,8 @@
       "lists": [
         "AFI",
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -650,7 +668,8 @@
       "title": "Secrets & Lies",
       "year": 1996,
       "lists": [
-        "FEST"
+        "FEST",
+        "LBXD"
       ]
     },
     {
@@ -667,7 +686,8 @@
       "title": "Good Will Hunting",
       "year": 1997,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -684,7 +704,8 @@
       "title": "Life Is Beautiful",
       "year": 1998,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -694,7 +715,8 @@
       "lists": [
         "AFI",
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -718,7 +740,8 @@
       "title": "The Green Mile",
       "year": 1999,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -753,7 +776,8 @@
       "lists": [
         "AFI",
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -761,7 +785,8 @@
       "title": "The Lord of the Rings: The Two Towers",
       "year": 2002,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -770,7 +795,8 @@
       "year": 2002,
       "lists": [
         "IMDB",
-        "FEST"
+        "FEST",
+        "LBXD"
       ]
     },
     {
@@ -778,7 +804,8 @@
       "title": "The Lord of the Rings: The Return of the King",
       "year": 2003,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -803,7 +830,8 @@
       "title": "The Departed",
       "year": 2006,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -811,7 +839,8 @@
       "title": "No Country for Old Men",
       "year": 2007,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -820,7 +849,8 @@
       "year": 2007,
       "lists": [
         "IMDB",
-        "SS"
+        "SS",
+        "LBXD"
       ]
     },
     {
@@ -836,7 +866,8 @@
       "title": "Inglourious Basterds",
       "year": 2009,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -887,7 +918,8 @@
       "title": "Django Unchained",
       "year": 2012,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -913,7 +945,8 @@
       "year": 2014,
       "lists": [
         "IMDB",
-        "NFR"
+        "NFR",
+        "LBXD"
       ]
     },
     {
@@ -921,7 +954,8 @@
       "title": "Whiplash",
       "year": 2014,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -997,7 +1031,8 @@
       "lists": [
         "IMDB",
         "SS",
-        "FEST"
+        "FEST",
+        "LBXD"
       ]
     },
     {
@@ -1054,7 +1089,16 @@
       "title": "The Father",
       "year": 2020,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
+      ]
+    },
+    {
+      "id": "everything-everywhere-all-at-once-2022",
+      "title": "Everything Everywhere All at Once",
+      "year": 2022,
+      "lists": [
+        "LBXD"
       ]
     },
     {
@@ -1082,6 +1126,14 @@
       ]
     },
     {
+      "id": "the-holdovers-2023",
+      "title": "The Holdovers",
+      "year": 2023,
+      "lists": [
+        "LBXD"
+      ]
+    },
+    {
       "id": "poor-things-2023",
       "title": "Poor Things",
       "year": 2023,
@@ -1098,6 +1150,22 @@
       ]
     },
     {
+      "id": "dune-part-two-2024",
+      "title": "Dune: Part Two",
+      "year": 2024,
+      "lists": [
+        "LBXD"
+      ]
+    },
+    {
+      "id": "im-still-here-2024",
+      "title": "I'm Still Here",
+      "year": 2024,
+      "lists": [
+        "LBXD"
+      ]
+    },
+    {
       "id": "all-about-my-mother-1999",
       "title": "All About My Mother",
       "year": 1999,
@@ -1110,7 +1178,8 @@
       "title": "The Lives of Others",
       "year": 2006,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -1119,7 +1188,8 @@
       "year": 2011,
       "lists": [
         "IMDB",
-        "FEST"
+        "FEST",
+        "LBXD"
       ]
     },
     {
@@ -1137,7 +1207,8 @@
       "lists": [
         "IMDB",
         "SS",
-        "FEST"
+        "FEST",
+        "LBXD"
       ]
     },
     {
@@ -1189,7 +1260,8 @@
       "title": "Spider-Man Into the Spider-Verse",
       "year": 2018,
       "lists": [
-        "IMDB"
+        "IMDB",
+        "LBXD"
       ]
     },
     {
@@ -1201,13 +1273,14 @@
       ]
     }
   ],
-  "totalMatched": 136,
+  "totalMatched": 140,
   "byList": {
     "AFI": 47,
     "IMDB": 76,
     "SS": 23,
     "FEST": 30,
     "NFR": 64,
-    "CRIT": 8
+    "CRIT": 8,
+    "LBXD": 44
   }
 }

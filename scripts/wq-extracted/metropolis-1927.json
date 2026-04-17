@@ -1,0 +1,87 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Fritz Lang. Written by Thea von Harbou and Fritz Lang.",
+    "clean": "Directed by Fritz Lang. Written by Thea von Harbou and Fritz Lang."
+  },
+  {
+    "heading": "Freder",
+    "raw": "I must have a person who is faithful to me, Josaphat - how else will I be able to fulfill my destiny?",
+    "clean": "I must have a person who is faithful to me, Josaphat - how else will I be able to fulfill my destiny?"
+  },
+  {
+    "heading": "Freder",
+    "raw": "To the new Tower of Babel - to my father!",
+    "clean": "To the new Tower of Babel - to my father!"
+  },
+  {
+    "heading": "Maria",
+    "raw": "There can be no understanding between the hand and the head unless the heart acts as mediator.",
+    "clean": "There can be no understanding between the hand and the head unless the heart acts as mediator."
+  },
+  {
+    "heading": "Maria",
+    "raw": "Look! These are your brothers! Look! These are your brothers!",
+    "clean": "Look! These are your brothers! Look! These are your brothers!"
+  },
+  {
+    "heading": "The Machine Man",
+    "raw": "[disguised as Maria] Who is the living food for the machines in Metropolis? Who lubricates the machine joints with their own blood? Who feeds the machines with their own flesh? Let the machines starve, you fools! Let them die! Kill them - the machines!",
+    "clean": "Who is the living food for the machines in Metropolis? Who lubricates the machine joints with their own blood? Who feeds the machines with their own flesh? Let the machines starve, you fools! Let them die! Kill them - the machines!"
+  },
+  {
+    "heading": "The Machine Man",
+    "raw": "[disguised as Maria] Women and men, let no one miss today! Death to the machines!",
+    "clean": "Women and men, let no one miss today! Death to the machines!"
+  },
+  {
+    "heading": "The Machine Man",
+    "raw": "[disguised as Maria] Let's all watch as the world goes to the devil!",
+    "clean": "Let's all watch as the world goes to the devil!"
+  },
+  {
+    "heading": "Other",
+    "raw": "Man at Nightclub: For her, all seven deadly sins!",
+    "clean": "For her, all seven deadly sins!"
+  },
+  {
+    "heading": "Other",
+    "raw": "C.A. Rotwang - the Inventor: She is the most perfect and most obedient tool which mankind ever possessed! Tonight you will see her succeed before the upper ten thousand. You will see her dance...",
+    "clean": "She is the most perfect and most obedient tool which mankind ever possessed! Tonight you will see her succeed before the upper ten thousand. You will see her dance..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joh Frederson: What were you doing in the machine halls, Freder?",
+    "clean": "What were you doing in the machine halls, Freder?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Freder: I wanted to look into the faces of the people whose little children are my brothers, my sisters...",
+    "clean": "I wanted to look into the faces of the people whose little children are my brothers, my sisters..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Freder: Your magnificent city, Father - and you the brain of this city - and all of us in the city's light...And where are the people, Father, whose hands built your city?",
+    "clean": "Your magnificent city, Father - and you the brain of this city - and all of us in the city's light...And where are the people, Father, whose hands built your city?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Joh Fredersen: Where they belong...",
+    "clean": "Where they belong..."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Freder: In the depths...? What if one day, those in the depths rise up against you?",
+    "clean": "In the depths...? What if one day, those in the depths rise up against you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Grot - the Guardian of the Heart Machine: Who told you to attack the machines, you fools? Without them you'll all die!",
+    "clean": "Who told you to attack the machines, you fools? Without them you'll all die!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Working Woman: It's the witch's fault!",
+    "clean": "It's the witch's fault!"
+  }
+]

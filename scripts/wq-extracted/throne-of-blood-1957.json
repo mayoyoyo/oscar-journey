@@ -1,0 +1,177 @@
+[
+  {
+    "heading": "(intro)",
+    "raw": "Directed by Akira Kurosawa. Written by Shinobu Hashimoto, Ryūzō Kikushima, Akira Kurosawa, and Hideo Oguni, based on Macbeth by William Shakespeare.",
+    "clean": "Directed by Akira Kurosawa. Written by Shinobu Hashimoto, Ryūzō Kikushima, Akira Kurosawa, and Hideo Oguni, based on Macbeth by William Shakespeare."
+  },
+  {
+    "heading": "Taketori Washizu",
+    "raw": "Cowards! I see it now! You'll slay me and offer my head when you surrender!",
+    "clean": "Cowards! I see it now! You'll slay me and offer my head when you surrender!"
+  },
+  {
+    "heading": "Taketori Washizu",
+    "raw": "[glances up from his drink and suddenly pales as he sees the ghost of Miki] There he is again! If you hate me, why not draw your sword? [He charges, swiping again and again with his sword]",
+    "clean": "There he is again! If you hate me, why not draw your sword?"
+  },
+  {
+    "heading": "Lady Asaji Washizu",
+    "raw": "Admirable, my Lord. You, who would soon rule the world, allow a ghost to frighten you.",
+    "clean": "Admirable, my Lord. You, who would soon rule the world, allow a ghost to frighten you."
+  },
+  {
+    "heading": "Lady Asaji Washizu",
+    "raw": "Without ambition, man is not man.",
+    "clean": "Without ambition, man is not man."
+  },
+  {
+    "heading": "Lady Asaji Washizu",
+    "raw": "I did not stain my hands with blood to forward Yoshiteru, Miki's son.",
+    "clean": "I did not stain my hands with blood to forward Yoshiteru, Miki's son."
+  },
+  {
+    "heading": "Lady Asaji Washizu",
+    "raw": "Listen, even the crow is saying: The throne is yours.",
+    "clean": "Listen, even the crow is saying: The throne is yours."
+  },
+  {
+    "heading": "Yoshiaki Miki",
+    "raw": "What warrior would not want to be lord of a mighty castle?",
+    "clean": "What warrior would not want to be lord of a mighty castle?"
+  },
+  {
+    "heading": "Old Ghost Woman",
+    "raw": "You humans! Never will I comprehend you. You are afraid of your desires - you try to hide them.",
+    "clean": "You humans! Never will I comprehend you. You are afraid of your desires - you try to hide them."
+  },
+  {
+    "heading": "Old Ghost Woman",
+    "raw": "If you choose ambition, lord, then choose it honestly, with cruelty.",
+    "clean": "If you choose ambition, lord, then choose it honestly, with cruelty."
+  },
+  {
+    "heading": "Old Ghost Woman",
+    "raw": "If you would make a mountain of the dead, pile it so it reaches the sky.",
+    "clean": "If you would make a mountain of the dead, pile it so it reaches the sky."
+  },
+  {
+    "heading": "Old Ghost Woman",
+    "raw": "If you would shed blood, then let it run as a river.",
+    "clean": "If you would shed blood, then let it run as a river."
+  },
+  {
+    "heading": "Other",
+    "raw": "Washizu soldier: A message from Lady Asaji! \"If arrows cannot open the gates, then a corpse will.\"",
+    "clean": "A message from Lady Asaji! \"If arrows cannot open the gates, then a corpse will.\""
+  },
+  {
+    "heading": "Other",
+    "raw": "Washizu samurai: I have fought in many battles and have seen blood, yet this stain horrifies me. Because this is the blood of a dog, the blood of a despised traitor. He was a coward too. Cried for mercy after his revolt was over.",
+    "clean": "I have fought in many battles and have seen blood, yet this stain horrifies me. Because this is the blood of a dog, the blood of a despised traitor. He was a coward too. Cried for mercy after his revolt was over."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Taketori Washizu: Miki would never speak of it. He is my best friend.",
+    "clean": "Miki would never speak of it. He is my best friend."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lady Asaji Washizu: He is ambitious. Children kill their parents for less. This is a wicked world. To save yourself you often first must kill. It is possible that Miki has already betrayed you. I fear this.",
+    "clean": "He is ambitious. Children kill their parents for less. This is a wicked world. To save yourself you often first must kill. It is possible that Miki has already betrayed you. I fear this."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lady Asaji Washizu: Will it never be gone? The blood. I wash and wash, yet the blood remains - and the smell! Will my hands never again be clean?",
+    "clean": "Will it never be gone? The blood. I wash and wash, yet the blood remains - and the smell! Will my hands never again be clean?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Taketori Washizu: Asaji!",
+    "clean": "Asaji!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lady Asaji Washizu: There is still blood. My hands. Why do they not become clean? I wash and wash, still they smell of blood.",
+    "clean": "There is still blood. My hands. Why do they not become clean? I wash and wash, still they smell of blood."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Taketori Washizu: Asaji!",
+    "clean": "Asaji!"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Washizu Guard #1: I cannot believe that this castle is as strong as it was.",
+    "clean": "Washizu Guard #1: I cannot believe that this castle is as strong as it was."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Washizu Guard #2: I heard something, too. The rats have begun to leave.",
+    "clean": "Washizu Guard #2: I heard something, too. The rats have begun to leave."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Washizu Guard #3: It is said that rats leave the house just before it burns.",
+    "clean": "Washizu Guard #3: It is said that rats leave the house just before it burns."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoshiaki Miki: Can you see the future as I see you?",
+    "clean": "Can you see the future as I see you?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Old Ghost Woman: Honorable Captain Miki. You are in command of Fort Two. Today you will take command of Fort One.",
+    "clean": "Honorable Captain Miki. You are in command of Fort Two. Today you will take command of Fort One."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoshiaki Miki: Command of Fort One?",
+    "clean": "Command of Fort One?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoshiaki Miki: And what then?",
+    "clean": "And what then?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Old Ghost Woman: Your luck turns slower... but it lasts longer than that of Captain Washizu.",
+    "clean": "Your luck turns slower... but it lasts longer than that of Captain Washizu."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoshiaki Miki: Slower? How do you mean?",
+    "clean": "Slower? How do you mean?"
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Old Ghost Woman: Your son will eventually become the Lord of Cobweb Castle.",
+    "clean": "Your son will eventually become the Lord of Cobweb Castle."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoshiaki Miki: My only wish would be a long, quiet sleep.",
+    "clean": "My only wish would be a long, quiet sleep."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Taketori Washizu: I feel I am already sleeping and have had a frightening dream. What that witch or spirit said, that is what I dream of.",
+    "clean": "I feel I am already sleeping and have had a frightening dream. What that witch or spirit said, that is what I dream of."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Yoshiaki Miki: We dream of what we wish.",
+    "clean": "We dream of what we wish."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Taketori Washizu: His Lordship trusts me more than anyone else. And that is why he has given me the honor of leading the attack.",
+    "clean": "His Lordship trusts me more than anyone else. And that is why he has given me the honor of leading the attack."
+  },
+  {
+    "heading": "Dialogue",
+    "raw": "Lady Asaji Washizu: Where arrows will find you not only from the front but from the rear.",
+    "clean": "Where arrows will find you not only from the front but from the rear."
+  }
+]

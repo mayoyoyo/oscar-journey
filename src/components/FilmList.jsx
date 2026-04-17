@@ -31,7 +31,9 @@ function isAnimated(m) {
 // Some Oscar categories were renamed/split across years; we group equivalents under one label.
 // `match` is used for awards not present in the m.awards array (Best Picture is encoded as m.won).
 const WIN_CATEGORIES = {
-  bestPicture:    { label: 'Best Picture',              match: (m) => m.category === 'BP' && m.won },
+  bestPicture:    { label: 'Best Picture',              match: (m) => m.category === 'BP' && m.won, accent: 'gold' },
+  bestIntl:       { label: 'Best International Feature',match: (m) => m.category === 'INT' || (m.alsoWon || []).includes('INT'), accent: 'blue' },
+  bestAnim:       { label: 'Best Animated Feature',     match: (m) => m.category === 'ANIM' || (m.alsoWon || []).includes('ANIM'), accent: 'purple' },
   director:       { label: 'Best Director',              cats: ['Director'] },
   actor:          { label: 'Best Actor',                 cats: ['Actor'] },
   actress:        { label: 'Best Actress',               cats: ['Actress'] },
@@ -314,8 +316,12 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         // Hide rows that have zero matching films at the current canon settings.
         if (counts && (counts[key] || 0) === 0) return null;
         const active = filters[section][key];
+        // Color accent for a few special Oscar-Won rows (gold BP, blue Intl,
+        // purple Anim) — comes from the `accent` field in WIN_CATEGORIES.
+        const accent = section === 'wins' ? WIN_CATEGORIES[key]?.accent : null;
+        const accentClass = accent ? `filter-check-item-${accent}` : '';
         return (
-          <div key={key} className={`filter-check-item ${active ? 'active' : ''}`}
+          <div key={key} className={`filter-check-item ${active ? 'active' : ''} ${accentClass}`}
             onClick={() => toggleFilter(section, key)}>
             <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
             <span className="filter-check-label">{label}</span>

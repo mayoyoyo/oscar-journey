@@ -87,18 +87,14 @@ export function MovieBadges({ movie, small = false }) {
   const oscarStatus = getOscarStatus(movie);
 
   if (small) {
-    // Desktop row: genre + INT/ANIM + language + pips + Oscar icon.
-    // Mobile strips the TEXT chips via the @media rule in App.css so rows
-    // stay single-line; the language pill collapses to flag-only. BP /
-    // Winner / Essential chips are intentionally NOT rendered — the Oscar
-    // icon (gold / silver / absent) carries all of that.
+    // Desktop row: genre + language + pips + all applicable Oscar statuettes
+    // (BP gold/bronze, Intl blue, Anim purple — via getOscarBadges). The old
+    // International / Animated text chips are gone — the colored statuette
+    // carries that signal now. Mobile strips the remaining text chips via
+    // the @media rule in App.css.
     return (
       <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'nowrap' }}>
         <BadgeGenreSm genre={movie.genre} />
-        {movie.category === 'INT' && <BadgeIntSm />}
-        {movie.category === 'ANIM' && <BadgeAnimSm />}
-        {alsoWon.includes('INT') && <BadgeIntSm />}
-        {alsoWon.includes('ANIM') && <BadgeAnimSm />}
         <LanguagePill movie={movie} />
         <TierPips movie={movie} variant="compact" />
         {getOscarBadges(movie).map(k => (

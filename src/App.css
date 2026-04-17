@@ -7445,6 +7445,31 @@ main {
   color: var(--cream);
 }
 
+/* Color-accented check-items for the three category-award rows in the
+   Oscars Won filter. Left-border stripe (always visible) + tinted active
+   background so the row reads as gold/blue/purple like its statuette. */
+.filter-check-item-gold {
+  border-left: 3px solid #d4af37;
+}
+.filter-check-item-gold.active {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: #d4af37;
+}
+.filter-check-item-blue {
+  border-left: 3px solid #3b6fc7;
+}
+.filter-check-item-blue.active {
+  background: rgba(59, 111, 199, 0.15);
+  border-color: #3b6fc7;
+}
+.filter-check-item-purple {
+  border-left: 3px solid #9a4ec7;
+}
+.filter-check-item-purple.active {
+  background: rgba(154, 78, 199, 0.15);
+  border-color: #9a4ec7;
+}
+
 .filter-checkbox {
   width: 14px;
   height: 14px;

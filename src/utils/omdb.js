@@ -34,6 +34,9 @@ const OMDB_TITLE_OVERRIDES = {
   'Cries and Whispers': 'Cries & Whispers',
   'Sunrise: A Song of Two Humans': 'Sunrise',
   'Apur Sansar': 'The World of Apu',
+  // OMDb indexes Il Postino (1994) as "The Postman" — querying 'Il Postino' returns
+  // a 31-min behind-the-scenes short instead of the 108-min Michael Radford film.
+  'Il Postino': 'The Postman',
 };
 
 // Year overrides for movies where our year doesn't match OMDB
@@ -51,6 +54,18 @@ const OMDB_YEAR_OVERRIDES = {
   // Our 2005 refers to wide release; OMDb indexes Paul Haggis's Crash as 2004.
   // Without this, OMDb returns a different 2005 "Crash" by Christopher Jarvis.
   'Crash': 2004,
+};
+
+// Full manual data for films OMDb has no correct entry for at all (rare — use
+// sparingly). When present, skips the OMDb fetch entirely and serves this data.
+// POSTER_OVERRIDES still applies to the `poster` field on top.
+const MANUAL_OVERRIDES = {
+  'la-cienaga-2001': {
+    plot: 'Two middle-class women, their families, and their servants spend a sweltering summer at a decaying country estate in northern Argentina. Lucrecia Martel\'s debut depicts a torpor-stricken household where small tensions and accidents hint at larger fractures — class, generation, and a country in slow-motion collapse.',
+    director: 'Lucrecia Martel',
+    rating: '7.0',
+    runtime: '103 min',
+  },
 };
 
 function applyRuntimeOverride(movie, runtime) {
@@ -76,6 +91,19 @@ function getOmdbYear(movie) {
 export function readCachedOmdbData(movie) {
   if (!movie) return null;
   const manualPoster = POSTER_OVERRIDES[movie.id] || null;
+  const manualData = MANUAL_OVERRIDES[movie.id] || null;
+
+  // Films OMDb has no entry for — serve manual data synchronously, skip cache/OMDb.
+  if (manualData) {
+    return {
+      poster:   manualPoster,
+      plot:     manualData.plot     || null,
+      rating:   manualData.rating   || null,
+      director: manualData.director || null,
+      runtime:  manualData.runtime  || null,
+    };
+  }
+
   const posterKey   = omdbCacheKey('poster',   movie);
   const plotKey     = omdbCacheKey('plot',     movie);
   const ratingKey   = omdbCacheKey('rating',   movie);
@@ -98,6 +126,19 @@ export function readCachedOmdbData(movie) {
 
 export async function fetchOmdbData(movie) {
   const manualPoster = POSTER_OVERRIDES[movie.id] || null;
+  const manualData = MANUAL_OVERRIDES[movie.id] || null;
+
+  // Films OMDb has no entry for — serve manual data, skip the API call.
+  if (manualData) {
+    return {
+      poster:   manualPoster,
+      plot:     manualData.plot     || null,
+      rating:   manualData.rating   || null,
+      director: manualData.director || null,
+      runtime:  manualData.runtime  || null,
+    };
+  }
+
   const posterKey   = omdbCacheKey('poster',   movie);
   const plotKey     = omdbCacheKey('plot',     movie);
   const ratingKey   = omdbCacheKey('rating',   movie);

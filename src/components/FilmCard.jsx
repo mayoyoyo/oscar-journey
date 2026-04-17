@@ -252,25 +252,42 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
                   {cat === 'INT' ? 'International Feature' : cat === 'ANIM' ? 'Animated Feature' : cat}
                 </span>
               ))}
-              {(movie.awards || []).filter(a => a.winner || a.detail).slice(0, 4).map((a, i) => {
-                const link = getAwardLink(a, movie);
-                const chipContent = a.winner
-                  ? `${a.category}: ${a.winner}${a.detail ? ` "${a.detail}"` : ''}`
-                  : `${a.category}: "${a.detail}"`;
-                return link ? (
-                  <a key={i} className="film-award-chip film-award-chip-link"
-                    href={link} target="_blank" rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                  >{chipContent} {"\u2197"}</a>
-                ) : (
-                  <span key={i} className="film-award-chip">{chipContent}</span>
+              {(() => {
+                // Render up to 6 award chips. Each chip shows "Category: Winner"
+                // when we have a specific winner/detail, otherwise just the
+                // category name — we DO know every category, the winner field
+                // is just sparse for some technical Oscars. No more "+N
+                // technical" bucket dump; category names are informative on
+                // their own. Film detail modal shows the full list.
+                const awards = movie.awards || [];
+                const visible = awards.slice(0, 6);
+                const hidden = awards.length - visible.length;
+                return (
+                  <>
+                    {visible.map((a, i) => {
+                      const link = getAwardLink(a, movie);
+                      const chipContent = a.winner
+                        ? `${a.category}: ${a.winner}${a.detail ? ` "${a.detail}"` : ''}`
+                        : a.detail
+                        ? `${a.category}: "${a.detail}"`
+                        : a.category;
+                      return link ? (
+                        <a key={i} className="film-award-chip film-award-chip-link"
+                          href={link} target="_blank" rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >{chipContent} {"\u2197"}</a>
+                      ) : (
+                        <span key={i} className="film-award-chip">{chipContent}</span>
+                      );
+                    })}
+                    {hidden > 0 && (
+                      <span className="film-award-chip film-award-technical">
+                        +{hidden} more
+                      </span>
+                    )}
+                  </>
                 );
-              })}
-              {(movie.awards || []).filter(a => !a.winner && !a.detail).length > 0 && (
-                <span className="film-award-chip film-award-technical">
-                  +{(movie.awards || []).filter(a => !a.winner && !a.detail).length} technical
-                </span>
-              )}
+              })()}
             </span>
           </div>
           );

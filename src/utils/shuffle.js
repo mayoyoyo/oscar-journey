@@ -10,6 +10,22 @@ export function mulberry32(seed) {
   };
 }
 
+// Quality weight used for gentle front-loading. Higher = more likely to land early
+// in the journey. Decays to zero bias after ~200 positions so the rest is pure
+// diversity-shuffled random.
+//  - Tier 6 canon (Casablanca, City Lights, Third Man etc.): 6
+//  - Tier 5 canon (Citizen Kane, Vertigo, Do the Right Thing): 5
+//  - Tier 4 canon (Seven Samurai, Blade Runner, The Shining): 4
+//  - Tier 3 canon: 3
+//  - BP winner / INT winner / ANIM winner: 2
+//  - Tier 2 canon: 2
+//  - BP nominee (not winner): 1
+function qualityWeight(movie) {
+  if (movie.lists && Array.isArray(movie.lists)) return movie.tier || 2;
+  if (movie.category === 'BP') return movie.won ? 2 : 1;
+  return 2; // INT / ANIM winners
+}
+
 // Map a release year to a decade bucket label. Granular across all eras so the
 // spacing penalty correctly separates e.g. two 1950s films or two 1920s films
 // (before the catalog expansion the pre-1990s were all lumped together).
@@ -90,6 +106,15 @@ export function diversityShuffle(movies, rng) {
         if      (deficit > 1)    score *= 3;
         else if (deficit > 0.3)  score *= 1.5;
         else if (deficit < -0.5) score *= 0.15;
+      }
+
+      // --- Gentle front-loading — reward higher quality early, decay to none ---
+      // Most users won't finish 837 films, so surface strong canon early without
+      // breaking diversity. Linearly decays to zero across the first 200 positions.
+      if (pos < 200) {
+        const decay = 1 - pos / 200; // 1.0 at pos 0, 0 at pos 200
+        const q = qualityWeight(m); // 1..6
+        score *= 1 + decay * q * 0.18;
       }
 
       scores[k] = Math.max(score, 0.001);

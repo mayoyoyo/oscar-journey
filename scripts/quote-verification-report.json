@@ -1,0 +1,770 @@
+{
+  "results": [
+    {
+      "id": "city-lights-1931",
+      "title": "City Lights",
+      "pageFound": false,
+      "quotes": [
+        {
+          "text": "Tomorrow the birds will sing.",
+          "verified": false,
+          "reason": "page-not-found"
+        },
+        {
+          "text": "Yes, I can see now.",
+          "verified": false,
+          "reason": "page-not-found"
+        },
+        {
+          "text": "You can see now?",
+          "verified": false,
+          "reason": "page-not-found"
+        }
+      ]
+    },
+    {
+      "id": "modern-times-1936",
+      "title": "Modern Times",
+      "pageFound": false,
+      "quotes": [
+        {
+          "text": "Buck up—never say die. We'll get along!",
+          "verified": false,
+          "reason": "page-not-found"
+        },
+        {
+          "text": "Smile, though your heart is aching.",
+          "verified": false,
+          "reason": "page-not-found"
+        },
+        {
+          "text": "Nothing to worry about.",
+          "verified": false,
+          "reason": "page-not-found"
+        }
+      ]
+    },
+    {
+      "id": "the-third-man-1949",
+      "title": "The Third Man",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "In Italy, for thirty years under the Borgias, they had warfare, terror, murder and bloodshed, but they produced Michelangelo, Leonardo da Vinci and the Renaissance. In Switzerland, they had brotherly love, they had five hundred years of democracy and peace, and what did that produce? The cuckoo clock.",
+          "verified": true
+        },
+        {
+          "text": "I'm not a naturally violent man.",
+          "verified": false
+        },
+        {
+          "text": "Don't be so gloomy. After all it's not that awful.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "12-angry-men-1957",
+      "title": "12 Angry Men",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "It's always difficult to keep personal prejudice out of a thing like this.",
+          "verified": false
+        },
+        {
+          "text": "Prejudice always obscures the truth.",
+          "verified": false
+        },
+        {
+          "text": "I just want to talk.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "some-like-it-hot-1959",
+      "title": "Some Like It Hot",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Nobody's perfect.",
+          "verified": true
+        },
+        {
+          "text": "I'm a girl, I'm a girl, I wish I were dead, I'm a girl.",
+          "verified": false
+        },
+        {
+          "text": "Well, nobody's perfect!",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "citizen-kane-1941",
+      "title": "Citizen Kane",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Rosebud.",
+          "verified": true
+        },
+        {
+          "text": "You provide the prose poems. I'll provide the war.",
+          "verified": true
+        },
+        {
+          "text": "I think it would be fun to run a newspaper.",
+          "verified": true
+        },
+        {
+          "text": "I don't think there's one word that can describe a man's life.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "casablanca-1942",
+      "title": "Casablanca",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Here's looking at you, kid.",
+          "verified": true
+        },
+        {
+          "text": "We'll always have Paris.",
+          "verified": true
+        },
+        {
+          "text": "Of all the gin joints in all the towns in all the world, she walks into mine.",
+          "verified": true
+        },
+        {
+          "text": "Round up the usual suspects.",
+          "verified": true
+        },
+        {
+          "text": "Louis, I think this is the beginning of a beautiful friendship.",
+          "verified": true
+        },
+        {
+          "text": "Play it, Sam. Play 'As Time Goes By.'",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "double-indemnity-1944",
+      "title": "Double Indemnity",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I killed him for money—and a woman. I didn't get the money, and I didn't get the woman. Pretty, isn't it?",
+          "verified": false
+        },
+        {
+          "text": "Straight down the line.",
+          "verified": true
+        },
+        {
+          "text": "How could I have known that murder could sometimes smell like honeysuckle?",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "all-about-eve-1950",
+      "title": "All About Eve",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Fasten your seatbelts. It's going to be a bumpy night.",
+          "verified": true
+        },
+        {
+          "text": "Everybody has a heart—except some people.",
+          "verified": true
+        },
+        {
+          "text": "The general atmosphere is very Macbethish.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "rashomon-1950",
+      "title": "Rashomon",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "It's human to lie. Most of the time we can't even be honest with ourselves.",
+          "verified": false
+        },
+        {
+          "text": "In the end, you cannot understand the things men do.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "sunset-boulevard-1950",
+      "title": "Sunset Boulevard",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I am big. It's the pictures that got small.",
+          "verified": true
+        },
+        {
+          "text": "All right, Mr. DeMille, I'm ready for my close-up.",
+          "verified": true
+        },
+        {
+          "text": "We didn't need dialogue. We had faces!",
+          "verified": true
+        },
+        {
+          "text": "Nobody leaves a star.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "singin-in-the-rain-1952",
+      "title": "Singin' in the Rain",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I'm singin' in the rain, just singin' in the rain.",
+          "verified": false
+        },
+        {
+          "text": "Dignity. Always dignity.",
+          "verified": false
+        },
+        {
+          "text": "What a glorious feeling, I'm happy again.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "rear-window-1954",
+      "title": "Rear Window",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "We've become a race of Peeping Toms.",
+          "verified": true
+        },
+        {
+          "text": "He's not an interesting subject, Jeff.",
+          "verified": false
+        },
+        {
+          "text": "Tell me everything you saw—and what you think it means.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "vertigo-1958",
+      "title": "Vertigo",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Only one is a wanderer; two together are always going somewhere.",
+          "verified": true
+        },
+        {
+          "text": "Here I was born, and there I died. It was only a moment for you; you took no notice.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "psycho-1960",
+      "title": "Psycho",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "A boy's best friend is his mother.",
+          "verified": false
+        },
+        {
+          "text": "We all go a little mad sometimes.",
+          "verified": false
+        },
+        {
+          "text": "Mother—what's the phrase?—isn't quite herself today.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "the-apartment-1960",
+      "title": "The Apartment",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Shut up and deal.",
+          "verified": true
+        },
+        {
+          "text": "That's the way it crumbles, cookie-wise.",
+          "verified": true
+        },
+        {
+          "text": "Why do people have to love people, anyway?",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "lawrence-of-arabia-1962",
+      "title": "Lawrence of Arabia",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "The trick, William Potter, is not minding that it hurts.",
+          "verified": false
+        },
+        {
+          "text": "Nothing is written.",
+          "verified": false
+        },
+        {
+          "text": "Big things have small beginnings.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "2001-a-space-odyssey-1968",
+      "title": "2001: A Space Odyssey",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Open the pod bay doors, HAL.",
+          "verified": true
+        },
+        {
+          "text": "I'm sorry, Dave. I'm afraid I can't do that.",
+          "verified": true
+        },
+        {
+          "text": "My God—it's full of stars.",
+          "verified": true
+        },
+        {
+          "text": "Daisy, Daisy, give me your answer do.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "do-the-right-thing-1989",
+      "title": "Do the Right Thing",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Fight the power.",
+          "verified": false
+        },
+        {
+          "text": "Always do the right thing.",
+          "verified": true
+        },
+        {
+          "text": "Wake up!",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "the-great-dictator-1940",
+      "title": "The Great Dictator",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "You, the people, have the power to make this life free and beautiful.",
+          "verified": true
+        },
+        {
+          "text": "We think too much and feel too little.",
+          "verified": true
+        },
+        {
+          "text": "Look up, Hannah! Look up!",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "its-a-wonderful-life-1946",
+      "title": "It's a Wonderful Life",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "No man is a failure who has friends.",
+          "verified": true
+        },
+        {
+          "text": "Every time a bell rings, an angel gets his wings.",
+          "verified": true
+        },
+        {
+          "text": "Atta boy, Clarence.",
+          "verified": false
+        },
+        {
+          "text": "I want to live again. Please, God, let me live again.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "the-best-years-of-our-lives-1946",
+      "title": "The Best Years of Our Lives",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "You know what it'll be, don't you, Fred? It may take us years to get anywhere.",
+          "verified": true
+        },
+        {
+          "text": "I know. I know just how you feel.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "the-treasure-of-the-sierra-madre-1948",
+      "title": "The Treasure of the Sierra Madre",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Badges? We ain't got no badges! We don't need no badges! I don't have to show you any stinking badges!",
+          "verified": true
+        },
+        {
+          "text": "Gold is a devilish sort of thing.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "ikiru-1952",
+      "title": "Ikiru",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Life is so short. Fall in love, dear maiden, while your lips are still red.",
+          "verified": false
+        },
+        {
+          "text": "To live is to suffer; to survive is to find some meaning in the suffering.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "tokyo-story-1953",
+      "title": "Tokyo Story",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Isn't life disappointing?",
+          "verified": true
+        },
+        {
+          "text": "Yes, it is.",
+          "verified": true
+        },
+        {
+          "text": "Children don't live up to their parents' expectations.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "on-the-waterfront-1954",
+      "title": "On the Waterfront",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am.",
+          "verified": true
+        },
+        {
+          "text": "You don't understand! I coulda had class!",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "seven-samurai-1954",
+      "title": "Seven Samurai",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "In the end, we lost this battle too. The victory belongs to those peasants—not to us.",
+          "verified": false
+        },
+        {
+          "text": "This is the nature of war: by protecting others, you save yourselves.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "the-night-of-the-hunter-1955",
+      "title": "The Night of the Hunter",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "It's a hard world for little things.",
+          "verified": true
+        },
+        {
+          "text": "LOVE... HATE... the tale of Left Hand/Right Hand, the story of good and evil.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "paths-of-glory-1957",
+      "title": "Paths of Glory",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "There is no such thing as shell shock.",
+          "verified": true
+        },
+        {
+          "text": "The one thing that always impressed me about a soldier is that he fights for his country.",
+          "verified": false
+        },
+        {
+          "text": "Show me a patriot and I'll show you a hypocrite.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "the-bridge-on-the-river-kwai-1957",
+      "title": "The Bridge on the River Kwai",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Madness! Madness!",
+          "verified": false
+        },
+        {
+          "text": "Do not speak to me of rules. This is war. This is not a game of cricket.",
+          "verified": false
+        },
+        {
+          "text": "Be happy in your work.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "the-seventh-seal-1957",
+      "title": "The Seventh Seal",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I want knowledge, not faith.",
+          "verified": false
+        },
+        {
+          "text": "Who are you?",
+          "verified": true
+        },
+        {
+          "text": "I am Death.",
+          "verified": true
+        },
+        {
+          "text": "Life is a senseless terror.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "north-by-northwest-1959",
+      "title": "North by Northwest",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I've got a job, a secretary, a mother, two ex-wives and several bartenders that depend on me.",
+          "verified": true
+        },
+        {
+          "text": "In the world of advertising, there's no such thing as a lie. There's only the expedient exaggeration.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "dr-strangelove-1964",
+      "title": "Dr. Strangelove",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Gentlemen, you can't fight in here! This is the War Room!",
+          "verified": true
+        },
+        {
+          "text": "Mein Führer! I can walk!",
+          "verified": true
+        },
+        {
+          "text": "I'm not saying we wouldn't get our hair mussed.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "once-upon-a-time-in-the-west-1968",
+      "title": "Once Upon a Time in the West",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "When you have to shoot, shoot. Don't talk.",
+          "verified": false
+        },
+        {
+          "text": "People scare better when they're dying.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "alien-1979",
+      "title": "Alien",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "In space, no one can hear you scream.",
+          "verified": false
+        },
+        {
+          "text": "I can't lie to you about your chances, but... you have my sympathies.",
+          "verified": false
+        },
+        {
+          "text": "Kane? What do you mean you can't see his face?",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "the-shining-1980",
+      "title": "The Shining",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Here's Johnny!",
+          "verified": true
+        },
+        {
+          "text": "All work and no play makes Jack a dull boy.",
+          "verified": true
+        },
+        {
+          "text": "Redrum.",
+          "verified": true
+        },
+        {
+          "text": "Come play with us, Danny. Forever and ever and ever.",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "blade-runner-1982",
+      "title": "Blade Runner",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die.",
+          "verified": true
+        },
+        {
+          "text": "It's too bad she won't live—but then again, who does?",
+          "verified": true
+        },
+        {
+          "text": "Wake up! Time to die!",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "terminator-2-judgment-day-1991",
+      "title": "Terminator 2: Judgment Day",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "I'll be back.",
+          "verified": true
+        },
+        {
+          "text": "Hasta la vista, baby.",
+          "verified": true
+        },
+        {
+          "text": "Come with me if you want to live.",
+          "verified": true
+        },
+        {
+          "text": "It's in your nature to destroy yourselves.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "the-lion-king-1994",
+      "title": "The Lion King",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "Hakuna matata—it means no worries.",
+          "verified": true
+        },
+        {
+          "text": "Remember who you are.",
+          "verified": true
+        },
+        {
+          "text": "The past can hurt. But the way I see it, you can either run from it, or learn from it.",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "before-sunrise-1995",
+      "title": "Before Sunrise",
+      "pageFound": true,
+      "quotes": [
+        {
+          "text": "If there's any kind of magic in this world, it must be in the attempt of understanding someone sharing something.",
+          "verified": true
+        },
+        {
+          "text": "I always feel this pressure of being a strong and independent icon of womanhood.",
+          "verified": true
+        },
+        {
+          "text": "Isn't everything we do in life a way to be loved a little more?",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

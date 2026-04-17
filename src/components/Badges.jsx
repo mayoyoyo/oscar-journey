@@ -110,7 +110,10 @@ export function MovieBadges({ movie, small = false }) {
   // — when a film WON one of those categories, we show a colored winner
   // pill linking to the acceptance speech search instead of a plain label.
   // Parasite (BP winner + INT winner) therefore gets both gold + blue pills.
-  const wonBP   = oscarStatus === 'winner' && movie.category === 'BP';
+  // NOTE: use movie.won directly for BP — oscarStatus returns 'winner' for
+  // any Oscar win (including alsoWon INT/ANIM), so relying on it here would
+  // give Amour a gold BP pill even though it lost BP to Argo.
+  const wonBP   = movie.won === true && movie.category === 'BP';
   const wonINT  = movie.category === 'INT' || alsoWon.includes('INT');
   const wonANIM = movie.category === 'ANIM' || alsoWon.includes('ANIM');
   return (

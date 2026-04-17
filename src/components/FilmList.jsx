@@ -8,6 +8,7 @@ import { getTier } from '../utils/tierInfo';
 import LANGUAGES from '../data/languages.json';
 import DIRECTORS from '../data/directors.json';
 import ACTORS from '../data/actors.json';
+import CAST from '../data/cast.json';
 
 // A film is "International" if its primary language isn't English — sourced
 // from the baked-in languages.json. Also matches legacy category tags so
@@ -210,6 +211,10 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       if (m.title.toLowerCase().includes(q)) return true;
       const director = DIRECTORS[m.id];
       if (director && director.toLowerCase().includes(q)) return true;
+      // Prefer Wikidata's full cast (up to ~100 names per film) when we
+      // have it; fall back to OMDb's top-billed actors string otherwise.
+      const fullCast = CAST[m.id];
+      if (fullCast && fullCast.some(name => name.toLowerCase().includes(q))) return true;
       const actors = ACTORS[m.id];
       if (actors && actors.toLowerCase().includes(q)) return true;
       return false;

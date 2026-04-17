@@ -244,22 +244,9 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     return c;
   }, [eligiblePool]);
 
-  const renderChecklist = (section, labels, suffixes, counts) => {
-    // When counts are provided, sort rows by count descending so tiny buckets
-    // (e.g. 1910s (1)) fall to the bottom. Keeps the original label order as tie-breaker.
-    const entries = Object.entries(labels);
-    if (counts) {
-      const indexed = entries.map(([k, v], i) => ({ k, v, i }));
-      indexed.sort((a, b) => {
-        const diff = (counts[b.k] || 0) - (counts[a.k] || 0);
-        return diff !== 0 ? diff : a.i - b.i;
-      });
-      entries.length = 0;
-      for (const { k, v } of indexed) entries.push([k, v]);
-    }
-    return (
+  const renderChecklist = (section, labels, suffixes, counts) => (
     <div className="filter-checklist">
-      {entries.map(([key, label]) => {
+      {Object.entries(labels).map(([key, label]) => {
         // Hide rows that have zero matching films at the current canon settings.
         if (counts && (counts[key] || 0) === 0) return null;
         const active = filters[section][key];
@@ -285,8 +272,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         );
       })}
     </div>
-    );
-  };
+  );
 
   const renderSection = (label, section, labels, suffixes, counts) => {
     const count = sectionCount(section);
@@ -461,7 +447,14 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         {filtered.length === 0 ? (
           <p style={{ color: 'var(--cream-dim)', padding: '20px 0' }}>No films match your search.</p>
         ) : (
-          Object.keys(groups).sort().map(letter => (
+          Object.keys(groups).sort((a, b) => {
+            // Put letter groups (A-Z) before digit groups (0-9) so films like
+            // "12 Angry Men" and "2001: A Space Odyssey" land at the bottom of the list.
+            const aIsDigit = /^[0-9]/.test(a);
+            const bIsDigit = /^[0-9]/.test(b);
+            if (aIsDigit !== bIsDigit) return aIsDigit ? 1 : -1;
+            return a.localeCompare(b);
+          }).map(letter => (
             <div className="letter-group" key={letter}>
               <div className="letter-header">{letter}</div>
               {groups[letter].map(m => {

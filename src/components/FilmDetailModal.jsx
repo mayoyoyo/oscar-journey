@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
 import { MovieBadges } from './Badges';
+import OscarIcon from './OscarIcon';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
@@ -194,7 +195,10 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             </div>
           )}
           <div className="film-detail-body">
-            <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
+            <div className="film-detail-ceremony-row">
+              <OscarIcon movie={movie} size="sm" />
+              <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
+            </div>
             <div className="film-title">{movie.title}</div>
             <div className="film-year">{movie.year}</div>
             <MovieBadges movie={movie} />

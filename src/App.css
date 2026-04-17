@@ -583,6 +583,23 @@ main {
 .oscar-icon-sm { width: 16px; height: 26px; }
 .oscar-icon-md { width: 22px; height: 36px; }
 
+/* Ceremony-header row: pairs "Nth Academy Awards · YYYY" with the
+   statuette on its left. Both only ever render for Oscar films, so
+   co-locating them keeps the modal pill row clean. Constrain the
+   statuette height to the header line so the row doesn't grow. */
+.film-detail-ceremony-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.film-detail-ceremony-row .ceremony-line {
+  margin: 0;
+}
+.film-detail-ceremony-row .oscar-icon-sm {
+  width: 11px;
+  height: 18px;
+}
+
 /* ---- LIGHT mode (default) ----
    Glow on a light background is counter-intuitive: a "brighter" halo
    disappears into the cream bg. The trick is a *warm-toned dark* shadow

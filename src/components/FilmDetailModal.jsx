@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData, parseOscarWins } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import OscarIcon from './OscarIcon';
+import TierPips from './TierPips';
 import ACTORS from '../data/actors.json';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
@@ -202,7 +203,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             </div>
             <div className="film-title">{movie.title}</div>
             <div className="film-year">
-              {movie.year}
+              <span>{movie.year}</span>
               {omdbData?.runtime && (() => {
                 // OMDb returns runtime as "138 min". Reformat to "2h 18m"
                 // (or just "18m" for sub-hour shorts) and show inline with year.
@@ -213,6 +214,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                 const pretty = h > 0 ? `${h}h${mm ? ` ${mm}m` : ''}` : `${mm}m`;
                 return <span className="film-year-runtime"> · {pretty}</span>;
               })()}
+              <TierPips movie={movie} variant="compact" />
             </div>
             <MovieBadges movie={movie} />
 

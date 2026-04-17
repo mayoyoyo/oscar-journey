@@ -471,6 +471,14 @@ main {
   color: var(--cream-dim);
   font-weight: 500;
   margin-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/* Tier pips sit inline with the year + runtime line in the detail modal */
+.film-year .tier-pips {
+  vertical-align: middle;
 }
 .film-year-runtime {
   color: var(--cream-dim);
@@ -517,6 +525,28 @@ main {
   filter: brightness(1.15);
   box-shadow: 0 2px 10px rgba(139, 105, 20, 0.35);
   transform: translateY(-1px);
+}
+
+/* Color variants for the winner pill — gold is the default BP treatment,
+   int uses a blue scheme for the Best International Feature award, and
+   anim uses purple for Best Animated Feature. Same shape + typography;
+   just swap the gradient + shadow tone. */
+.badge-winner-int {
+  background: linear-gradient(135deg, #1a3a7a 0%, #3b6fc7 50%, #74a6ee 100%);
+  color: #0a0a0f;
+  box-shadow: 0 1px 4px rgba(59, 111, 199, 0.28);
+}
+.badge-winner-int.badge-winner-link:hover {
+  box-shadow: 0 2px 10px rgba(59, 111, 199, 0.45);
+}
+
+.badge-winner-anim {
+  background: linear-gradient(135deg, #5a2d7a 0%, #9a4ec7 50%, #c78aee 100%);
+  color: #0a0a0f;
+  box-shadow: 0 1px 4px rgba(154, 78, 199, 0.28);
+}
+.badge-winner-anim.badge-winner-link:hover {
+  box-shadow: 0 2px 10px rgba(154, 78, 199, 0.45);
 }
 
 .badge-genre {

@@ -4,21 +4,31 @@ import TierPips from './TierPips';
 import OscarIcon, { getOscarStatus } from './OscarIcon';
 import LanguagePill from './LanguagePill';
 
-function speechUrl(title, year) {
-  return `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ' + year + ' oscar acceptance speech best picture')}`;
+function speechUrl(title, year, kind = 'best picture') {
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ' + year + ' oscar acceptance speech ' + kind)}`;
 }
 
-// Full-size badges for film cards and detail modal
-export function BadgeWinner({ movie }) {
+// Full-size winner pill. `kind` drives both the label and the color scheme:
+//   'bp'   (default) → gold  "Winner · Speech"
+//   'int'            → blue  "Intl Winner · Speech"
+//   'anim'           → purple "Anim Winner · Speech"
+// Replaces the old standalone BadgeInt / BadgeAnim chips — the winner pill
+// carries both the category and the speech link, cleaner than two pills.
+export function BadgeWinner({ movie, kind = 'bp' }) {
+  const meta = {
+    bp:   { label: 'Winner · Speech',      query: 'best picture',              cls: 'badge-winner-bp' },
+    int:  { label: 'Intl Winner · Speech', query: 'best international feature',cls: 'badge-winner-int' },
+    anim: { label: 'Anim Winner · Speech', query: 'best animated feature',     cls: 'badge-winner-anim' },
+  }[kind] || { label: 'Winner · Speech', query: 'best picture', cls: 'badge-winner-bp' };
   if (movie) {
     return (
-      <a className="badge-winner badge-winner-link"
-        href={speechUrl(movie.title, movie.year)}
+      <a className={`badge-winner badge-winner-link ${meta.cls}`}
+        href={speechUrl(movie.title, movie.year, meta.query)}
         target="_blank" rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
         title="Watch acceptance speech"
       >
-        🏆 Winner · Speech ↗
+        🏆 {meta.label} ↗
       </a>
     );
   }
@@ -96,16 +106,20 @@ export function MovieBadges({ movie, small = false }) {
     );
   }
 
+  // Winner pills replace the old International / Animated decorative chips
+  // — when a film WON one of those categories, we show a colored winner
+  // pill linking to the acceptance speech search instead of a plain label.
+  // Parasite (BP winner + INT winner) therefore gets both gold + blue pills.
+  const wonBP   = oscarStatus === 'winner' && movie.category === 'BP';
+  const wonINT  = movie.category === 'INT' || alsoWon.includes('INT');
+  const wonANIM = movie.category === 'ANIM' || alsoWon.includes('ANIM');
   return (
     <div className="badges">
-      {oscarStatus === 'winner' && movie.category === 'BP' && <BadgeWinner movie={movie} />}
+      {wonBP   && <BadgeWinner movie={movie} kind="bp"   />}
+      {wonINT  && <BadgeWinner movie={movie} kind="int"  />}
+      {wonANIM && <BadgeWinner movie={movie} kind="anim" />}
       <LanguagePill movie={movie} />
       <BadgeGenre genre={movie.genre} />
-      {movie.category === 'INT' && <BadgeInt />}
-      {movie.category === 'ANIM' && <BadgeAnim />}
-      {alsoWon.includes('INT') && <BadgeInt />}
-      {alsoWon.includes('ANIM') && <BadgeAnim />}
-      <TierPips movie={movie} variant="full" />
     </div>
   );
 }

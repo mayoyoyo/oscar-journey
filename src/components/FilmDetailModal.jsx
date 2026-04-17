@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
+import { fetchOmdbData, readCachedOmdbData, parseOscarWins } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import OscarIcon from './OscarIcon';
 import StarPicker from './StarPicker';
@@ -261,7 +261,13 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             )}
 
             {(() => {
-              const totalOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+              const codedOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
+              // Fallback for essentials / canon films with no hand-coded awards
+              // data: parse OMDb's "Awards" string, which tells us the Oscar
+              // win count even if we don't know which categories. Only used when
+              // codedOscars is 0 so we never double-count.
+              const omdbOscars = codedOscars === 0 ? parseOscarWins(omdbData?.awards) : 0;
+              const totalOscars = codedOscars + omdbOscars;
               if (totalOscars === 0) return null;
               return (
               <div className="film-detail-awards">

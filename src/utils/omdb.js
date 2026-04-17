@@ -121,6 +121,7 @@ export function readCachedOmdbData(movie) {
     rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
     director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
     runtime:  applyRuntimeOverride(movie, cachedRuntime),
+    awards:   readCachedAwards(movie),
   };
 }
 
@@ -158,6 +159,7 @@ export async function fetchOmdbData(movie) {
         rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
         runtime:  applyRuntimeOverride(movie, cachedRuntime),
+        awards:   readCachedAwards(movie),
       };
     }
   }
@@ -229,13 +231,33 @@ function storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey,
   const rating   = data.imdbRating && data.imdbRating !== 'N/A' ? data.imdbRating : null;
   const director = data.Director && data.Director !== 'N/A' ? data.Director : null;
   const runtime  = data.Runtime && data.Runtime !== 'N/A' ? data.Runtime : null;
+  const awards   = data.Awards && data.Awards !== 'N/A' ? data.Awards : null;
   localStorage.setItem(posterKey,   poster   || NOT_FOUND);
   localStorage.setItem(plotKey,     plot     || NOT_FOUND);
   localStorage.setItem(ratingKey,   rating   || NOT_FOUND);
   localStorage.setItem(directorKey, director || NOT_FOUND);
   localStorage.setItem(runtimeKey,  runtime  || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('awards', movie), awards || NOT_FOUND);
 
-  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime) };
+  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime), awards };
+}
+
+// Parse "Won 2 Oscars. Another 159 wins & 164 nominations." → 2
+// "Nominated for 5 Oscars. ..." → 0 (only nominated)
+// null / NOT_FOUND / non-Oscar strings → 0
+export function parseOscarWins(awardsText) {
+  if (!awardsText || awardsText === NOT_FOUND) return 0;
+  const m = awardsText.match(/Won\s+(\d+)\s+Oscar/i);
+  return m ? parseInt(m[1], 10) : 0;
+}
+
+// Small accessor so FilmDetailModal can use cached awards-string as a fallback
+// for films that don't have hand-coded `awards` data (most of the 438 essentials).
+export function readCachedAwards(movie) {
+  if (!movie) return null;
+  const v = localStorage.getItem(omdbCacheKey('awards', movie));
+  if (!v || v === NOT_FOUND || v === 'RATE_LIMITED') return null;
+  return v;
 }
 
 function storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey) {

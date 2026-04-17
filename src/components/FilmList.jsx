@@ -46,7 +46,7 @@ const DEFAULT_FILM_FILTERS = {
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),
-  minEssentialTier: 3,
+  minEssentialTier: 2,
   essentialsOnly: false,
 };
 
@@ -152,7 +152,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => filters.categories[m.category] || (m.alsoWon || []).some(c => filters.categories[c]))
       // Canon depth + essentials-only are bypassed when there's an active search — if you know
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
-      .filter(m => !!q || m.category !== 'ESSENTIAL' || (m.tier || 0) >= (filters.minEssentialTier ?? 3))
+      .filter(m => !!q || m.category !== 'ESSENTIAL' || (m.tier || 0) >= (filters.minEssentialTier ?? 2))
       .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
@@ -200,7 +200,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   // Used to (a) show counts as suffixes and (b) hide rows where 0 films would qualify
   // — e.g. the 1910s era when the canon depth is set to ≥3.
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (m.category === 'ESSENTIAL' && (m.tier || 0) < (filters.minEssentialTier ?? 3)) return false;
+    if (m.category === 'ESSENTIAL' && (m.tier || 0) < (filters.minEssentialTier ?? 2)) return false;
     if (filters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
   }), [filters.minEssentialTier, filters.essentialsOnly]);

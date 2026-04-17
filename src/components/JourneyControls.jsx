@@ -76,7 +76,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   // Per-option counts based on canon depth + essentialsOnly. Used to hide rows that would
   // match zero films (e.g. 1910s when canon depth is set to ≥3).
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (m.category === 'ESSENTIAL' && (m.tier || 0) < (currentFilters.minEssentialTier ?? 3)) return false;
+    if (m.category === 'ESSENTIAL' && (m.tier || 0) < (currentFilters.minEssentialTier ?? 2)) return false;
     if (currentFilters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
   }), [currentFilters.minEssentialTier, currentFilters.essentialsOnly]);

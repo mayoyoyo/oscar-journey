@@ -10,9 +10,10 @@ const DEFAULT_FILTERS = {
   categories: { BP: true, INT: true, ANIM: true, ESSENTIAL: true },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
-  // Minimum tier required for ESSENTIAL films. 3 = strong consensus (143 films);
-  // 2 = lenient consensus (438 films). Oscar films (BP/INT/ANIM) ignore this.
-  minEssentialTier: 3,
+  // Minimum tier required for ESSENTIAL films. 2 = all canon (438 films, default);
+  // 3 = strong consensus (143); 4 = iron-clad (57); 99 = Oscars-only.
+  // Oscar films (BP/INT/ANIM) ignore this filter.
+  minEssentialTier: 2,
   // Focus mode: when true, hide everything except ESSENTIAL films at or above
   // minEssentialTier — useful for "show me only the iron-clad canon."
   essentialsOnly: false,
@@ -206,7 +207,7 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
                 <li>New <strong>Essential</strong> category — 438 must-watch films that the Academy overlooked, curated by triangulating 7 independent canon lists (Sight &amp; Sound, Criterion, IMDb Top 250, Letterboxd Top 250, AFI, festival grand prizes, National Film Registry). A film qualifies if it appears on ≥ 2 lists</li>
                 <li>Catalog grows from 399 → <strong>837 films</strong>, covering decades 1910s–2020s (existing era filters expanded back to 1910s)</li>
                 <li><strong>Tier pips</strong> — every film shows gold dots representing how many canon lists it appears on (1–8). Tap pips to see list details. Oscar winners count the Academy as the 8th list, so the scale is unified</li>
-                <li><strong>Canon depth filter</strong> — choose how strict to curate: Oscars only (399), Tier ≥ 4 (iron-clad, 57 essentials), ≥ 3 (143, default), ≥ 2 (all 438). Separate <em>Essentials only</em> toggle hides Oscar films for a focused canon view</li>
+                <li><strong>Canon depth filter</strong> — choose how strict to curate: Oscars only (399), Tier ≥ 4 (iron-clad, 57 essentials), ≥ 3 (strong consensus, 143), ≥ 2 (all 438, default). Separate <em>Essentials only</em> toggle hides Oscar films for a focused canon view</li>
                 <li>Click "Canon film · YYYY" on any essential's detail to see a "Films of YYYY" modal — every film from that year across categories</li>
                 <li>Canon Score in Stats — weighted completion metric (tier × watched) + per-tier breakdown + "Next up" recommendations for highest-signal unwatched films</li>
                 <li>Filter panel now shows counts per option and auto-hides rows that match 0 films at your current canon depth</li>

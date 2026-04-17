@@ -315,41 +315,45 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       />
 
       <div className={`film-list-filters ${filtersOpen ? 'is-open' : 'is-closed'}`}>
-        <button className="film-list-filters-header" onClick={() => setFiltersOpen(o => !o)}>
-          <span className="film-list-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
-          <span className="journey-controls-header">Filters</span>
-          <span className="film-list-filters-match">
-            {filtered.length} film{filtered.length !== 1 ? 's' : ''}
-            {watchedCount > 0 && <span className="film-list-filters-watched"> · {watchedCount} watched</span>}
-          </span>
-          {activeFilterCount > 0 && (
-            <span className="film-list-filters-count">{activeFilterCount} active</span>
-          )}
-          {filtersOpen && activeFilterCount > 0 && (
-            <span
-              className="film-list-filter-reset"
-              role="button"
-              onClick={(e) => { e.stopPropagation(); resetFilters(); }}
-            >Reset</span>
-          )}
-        </button>
+        <div className="film-list-filters-bar">
+          <button className="film-list-filters-header" onClick={() => setFiltersOpen(o => !o)}>
+            <span className="film-list-filters-arrow">{filtersOpen ? '▾' : '▸'}</span>
+            <span className="journey-controls-header">Filters</span>
+            <span className="film-list-filters-match">
+              {filtered.length} film{filtered.length !== 1 ? 's' : ''}
+              {watchedCount > 0 && <span className="film-list-filters-watched"> · {watchedCount} watched</span>}
+            </span>
+            {activeFilterCount > 0 && (
+              <span className="film-list-filters-count">{activeFilterCount} active</span>
+            )}
+            {filtersOpen && activeFilterCount > 0 && (
+              <span
+                className="film-list-filter-reset"
+                role="button"
+                onClick={(e) => { e.stopPropagation(); resetFilters(); }}
+              >Reset</span>
+            )}
+          </button>
+          {/* Mode toggles live on the always-visible filter bar — they're
+              the most common interactions and don't need the dropdown. */}
+          <div className="film-list-mode-toggles film-list-mode-toggles-inline">
+            <button
+              className={`film-list-toggle ${watchedOnly ? 'active' : ''}`}
+              onClick={() => setWatchedOnly(w => !w)}
+            >
+              {watchedOnly ? '✓ Watched only' : 'Watched only'}
+            </button>
+            <button
+              className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
+              onClick={() => setChecklistMode(c => !c)}
+            >
+              {checklistMode ? '✓ Checklist mode' : 'Checklist mode'}
+            </button>
+          </div>
+        </div>
 
         {filtersOpen && (
           <div className="film-list-filters-body">
-            <div className="film-list-mode-toggles">
-              <button
-                className={`film-list-toggle ${watchedOnly ? 'active' : ''}`}
-                onClick={() => setWatchedOnly(w => !w)}
-              >
-                {watchedOnly ? '✓ Watched only' : 'Watched only'}
-              </button>
-              <button
-                className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
-                onClick={() => setChecklistMode(c => !c)}
-              >
-                {checklistMode ? '✓ Checklist mode' : 'Checklist mode'}
-              </button>
-            </div>
 
             {/* Canon depth — two independent controls:
                   (1) Oscars-only toggle: hides non-Oscar films

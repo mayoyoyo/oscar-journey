@@ -11,9 +11,66 @@ function flagEmoji(cc) {
   );
 }
 
+// Language → canonical flag. The pill's job is to signal "this film is in
+// language X" — flag should reflect the language, not where it was shot.
+// Before this was country-based, which meant Incendies (French audio,
+// Canadian crew) rendered 🇨🇦 + "French" — the two signals disagreed.
+const LANG_TO_CC = {
+  'French': 'FR',
+  'Spanish': 'ES',
+  'Italian': 'IT',
+  'German': 'DE',
+  'Portuguese': 'PT',
+  'Swedish': 'SE',
+  'Danish': 'DK',
+  'Norwegian': 'NO',
+  'Finnish': 'FI',
+  'Dutch': 'NL',
+  'Russian': 'RU',
+  'Polish': 'PL',
+  'Czech': 'CZ',
+  'Hungarian': 'HU',
+  'Romanian': 'RO',
+  'Greek': 'GR',
+  'Turkish': 'TR',
+  'Bosnian': 'BA',
+  'Serbian': 'RS',
+  'Macedonian': 'MK',
+  'Armenian': 'AM',
+  'Persian': 'IR',
+  'Arabic': 'SA',
+  'Hebrew': 'IL',
+  'Hindi': 'IN',
+  'Bengali': 'IN',    // Bengali films in the catalog are Indian productions
+  'Tamil':   'IN',
+  'Mandarin': 'CN',
+  'Cantonese': 'HK',
+  'Japanese': 'JP',
+  'Korean':   'KR',
+  'Vietnamese': 'VN',
+  'Thai': 'TH',
+  'Indonesian': 'ID',
+  'Zulu': 'ZA',
+  'Wolof': 'SN',
+  'American Sign': 'US',
+};
+
+// Narrow country-based overrides — cases where the country flag is
+// genuinely the right cultural read, even though the language has a
+// different "homeland":
+//   - Brazilian Portuguese films render 🇧🇷 (not 🇵🇹) — cultural context
+//     is overwhelmingly Brazilian for City of God, Central Station, etc.
+//   - Taiwanese Mandarin films render 🇹🇼 (not 🇨🇳) — Edward Yang /
+//     Hou Hsiao-hsien films are Taiwanese cinema, distinct from PRC.
+const COUNTRY_OVERRIDE = {
+  'Portuguese:Brazil': 'BR',
+  'Mandarin:Taiwan':   'TW',
+};
+
 // OMDb's Country string → ISO 3166 alpha-2.
 // Historical / alternative names (Soviet Union, West Germany, UK) map to
-// the closest living equivalent.
+// the closest living equivalent. Kept around as a defensive fallback when
+// a language isn't in LANG_TO_CC — shouldn't happen for our catalog.
 const COUNTRY_TO_CC = {
   'USA': 'US', 'United States': 'US',
   'UK': 'GB', 'United Kingdom': 'GB', 'England': 'GB', 'Scotland': 'GB',
@@ -98,7 +155,13 @@ export function getLanguageInfo(movie) {
 export default function LanguagePill({ movie }) {
   const info = LANGUAGES[movie.id];
   if (!info) return null;
-  const cc = COUNTRY_TO_CC[info.country];
+  // Resolution order: country override (Brazilian Portuguese, Taiwanese
+  // Mandarin) → language → country → generic globe.
+  const cc =
+    COUNTRY_OVERRIDE[`${info.lang}:${info.country}`] ||
+    LANG_TO_CC[info.lang] ||
+    COUNTRY_TO_CC[info.country] ||
+    null;
   const flag = cc ? flagEmoji(cc) : '🌐';
   return (
     <span

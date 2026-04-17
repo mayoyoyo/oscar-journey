@@ -122,6 +122,7 @@ export function readCachedOmdbData(movie) {
     director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
     runtime:  applyRuntimeOverride(movie, cachedRuntime),
     awards:   readCachedAwards(movie),
+    actors:   readCachedActors(movie),
   };
 }
 
@@ -160,6 +161,7 @@ export async function fetchOmdbData(movie) {
         director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
         runtime:  applyRuntimeOverride(movie, cachedRuntime),
         awards:   readCachedAwards(movie),
+        actors:   readCachedActors(movie),
       };
     }
   }
@@ -234,6 +236,7 @@ function storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey,
   const awards   = data.Awards && data.Awards !== 'N/A' ? data.Awards : null;
   const language = data.Language && data.Language !== 'N/A' ? data.Language : null;
   const country  = data.Country  && data.Country  !== 'N/A' ? data.Country  : null;
+  const actors   = data.Actors   && data.Actors   !== 'N/A' ? data.Actors   : null;
   localStorage.setItem(posterKey,   poster   || NOT_FOUND);
   localStorage.setItem(plotKey,     plot     || NOT_FOUND);
   localStorage.setItem(ratingKey,   rating   || NOT_FOUND);
@@ -242,8 +245,9 @@ function storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey,
   localStorage.setItem(omdbCacheKey('awards', movie), awards || NOT_FOUND);
   localStorage.setItem(omdbCacheKey('language', movie), language || NOT_FOUND);
   localStorage.setItem(omdbCacheKey('country', movie), country || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('actors', movie), actors || NOT_FOUND);
 
-  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime), awards, language, country };
+  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime), awards, language, country, actors };
 }
 
 // Parse "Won 2 Oscars. Another 159 wins & 164 nominations." → 2
@@ -274,6 +278,12 @@ export function readCachedLanguage(movie) {
 export function readCachedCountry(movie) {
   if (!movie) return null;
   const v = localStorage.getItem(omdbCacheKey('country', movie));
+  if (!v || v === NOT_FOUND || v === 'RATE_LIMITED') return null;
+  return v;
+}
+export function readCachedActors(movie) {
+  if (!movie) return null;
+  const v = localStorage.getItem(omdbCacheKey('actors', movie));
   if (!v || v === NOT_FOUND || v === 'RATE_LIMITED') return null;
   return v;
 }

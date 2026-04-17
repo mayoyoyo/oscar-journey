@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData, parseOscarWins } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import OscarIcon from './OscarIcon';
+import ACTORS from '../data/actors.json';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
@@ -265,6 +266,17 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             {omdbData?.director && (
               <div className="film-detail-director">Dir. {omdbData.director}</div>
             )}
+            {(() => {
+              // Static actors.json is the primary source (always hydrated);
+              // OMDb cache field is a fallback for profiles that refreshed
+              // after actors data was added to the live cache.
+              const actors = ACTORS[movie.id] || omdbData?.actors;
+              if (!actors) return null;
+              // OMDb returns "Actor 1, Actor 2, Actor 3" — convert commas to
+              // middle dots so it reads like a credits line.
+              const pretty = actors.split(',').map(s => s.trim()).filter(Boolean).join(' · ');
+              return <div className="film-detail-starring">Starring {pretty}</div>;
+            })()}
             {omdbData?.plot && (
               <div className="film-detail-plot">{omdbData.plot}</div>
             )}

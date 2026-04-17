@@ -19,10 +19,14 @@ function mulberry32(seed) {
   };
 }
 
+// Mirrors qualityWeight in shuffle.js — counts canon lists + OSCAR/OSCAR_NOM for Oscar films.
 function quality(m) {
-  if (m.lists && Array.isArray(m.lists)) return m.tier || 2;
-  if (m.category === 'BP') return m.won ? 2 : 1;
-  return 2;
+  const lists = m.lists ? [...m.lists] : [];
+  if (m.category !== 'ESSENTIAL') {
+    if (m.won && !lists.includes('OSCAR')) lists.push('OSCAR');
+    else if (m.category === 'BP' && !m.won && !lists.includes('OSCAR_NOM')) lists.push('OSCAR_NOM');
+  }
+  return lists.length || 1;
 }
 
 function getDecade(y) {

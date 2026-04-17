@@ -1,0 +1,3944 @@
+[
+  {
+    "id": "snow-white-and-the-seven-dwarfs-1937",
+    "title": "Snow White and the Seven Dwarfs",
+    "year": 1937,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Family",
+    "note": null
+  },
+  {
+    "id": "fantasia-1940",
+    "title": "Fantasia",
+    "year": 1940,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Family, Fantasy",
+    "note": null
+  },
+  {
+    "id": "pinocchio-1940",
+    "title": "Pinocchio",
+    "year": 1940,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Comedy",
+    "note": null
+  },
+  {
+    "id": "bambi-1942",
+    "title": "Bambi",
+    "year": 1942,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Drama",
+    "note": null
+  },
+  {
+    "id": "cinderella-1950",
+    "title": "Cinderella",
+    "year": 1950,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Family, Fantasy",
+    "note": null
+  },
+  {
+    "id": "grave-of-the-fireflies-1988",
+    "title": "Grave of the Fireflies",
+    "year": 1988,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Drama, War",
+    "note": null
+  },
+  {
+    "id": "my-neighbor-totoro-1988",
+    "title": "My Neighbor Totoro",
+    "year": 1988,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Comedy",
+    "note": null
+  },
+  {
+    "id": "the-lion-king-1994",
+    "title": "The Lion King",
+    "year": 1994,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Drama",
+    "note": null
+  },
+  {
+    "id": "toy-story-1995",
+    "title": "Toy Story",
+    "year": 1995,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Comedy",
+    "note": null
+  },
+  {
+    "id": "princess-mononoke-1997",
+    "title": "Princess Mononoke",
+    "year": 1997,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Fantasy",
+    "note": null
+  },
+  {
+    "id": "the-iron-giant-1999",
+    "title": "The Iron Giant",
+    "year": 1999,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Action, Adventure",
+    "note": null
+  },
+  {
+    "id": "howls-moving-castle-2004",
+    "title": "Howl's Moving Castle",
+    "year": 2004,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Family",
+    "note": null
+  },
+  {
+    "id": "fantastic-mr-fox-2009",
+    "title": "Fantastic Mr. Fox",
+    "year": 2009,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Adventure, Comedy",
+    "note": null
+  },
+  {
+    "id": "mary-and-max-2009",
+    "title": "Mary and Max",
+    "year": 2009,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "your-name-2016",
+    "title": "Your Name",
+    "year": 2016,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Drama, Fantasy",
+    "note": null
+  },
+  {
+    "id": "spider-man-across-the-spider-verse-2023",
+    "title": "Spider-Man: Across the Spider-Verse",
+    "year": 2023,
+    "currentCode": "A",
+    "currentLabel": "Animation / Family",
+    "omdbRaw": "Animation, Action, Adventure",
+    "note": null
+  },
+  {
+    "id": "the-passion-of-joan-of-arc-1928",
+    "title": "The Passion of Joan of Arc",
+    "year": 1928,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama, History",
+    "note": null
+  },
+  {
+    "id": "young-mr-lincoln-1939",
+    "title": "Young Mr. Lincoln",
+    "year": 1939,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama",
+    "note": null
+  },
+  {
+    "id": "the-pride-of-the-yankees-1942",
+    "title": "The Pride of the Yankees",
+    "year": 1942,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "spartacus-1960",
+    "title": "Spartacus",
+    "year": 1960,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Adventure, Biography, Drama",
+    "note": null
+  },
+  {
+    "id": "lawrence-of-arabia-1962",
+    "title": "Lawrence of Arabia",
+    "year": 1962,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Adventure, Biography, Drama",
+    "note": null
+  },
+  {
+    "id": "andrei-rublev-1966",
+    "title": "Andrei Rublev",
+    "year": 1966,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama, History",
+    "note": null
+  },
+  {
+    "id": "in-cold-blood-1967",
+    "title": "In Cold Blood",
+    "year": 1967,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "funny-girl-1968",
+    "title": "Funny Girl",
+    "year": 1968,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "the-color-of-pomegranates-1969",
+    "title": "The Color of Pomegranates",
+    "year": 1969,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama, History",
+    "note": null
+  },
+  {
+    "id": "mirror-1975",
+    "title": "Mirror",
+    "year": 1975,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama",
+    "note": null
+  },
+  {
+    "id": "mishima-a-life-in-four-chapters-1985",
+    "title": "Mishima: A Life in Four Chapters",
+    "year": 1985,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama",
+    "note": null
+  },
+  {
+    "id": "la-bamba-1987",
+    "title": "La Bamba",
+    "year": 1987,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama, Music",
+    "note": null
+  },
+  {
+    "id": "close-up-1990",
+    "title": "Close-Up",
+    "year": 1990,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "malcolm-x-1992",
+    "title": "Malcolm X",
+    "year": 1992,
+    "currentCode": "B",
+    "currentLabel": "Biopic",
+    "omdbRaw": "Biography, Drama, History",
+    "note": null
+  },
+  {
+    "id": "the-kid-1921",
+    "title": "The Kid",
+    "year": 1921,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, Family",
+    "note": null
+  },
+  {
+    "id": "safety-last-1923",
+    "title": "Safety Last!",
+    "year": 1923,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Action, Comedy, Thriller",
+    "note": null
+  },
+  {
+    "id": "sherlock-jr-1924",
+    "title": "Sherlock Jr.",
+    "year": 1924,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Action, Comedy, Romance",
+    "note": null
+  },
+  {
+    "id": "the-gold-rush-1925",
+    "title": "The Gold Rush",
+    "year": 1925,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Adventure, Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "the-general-1926",
+    "title": "The General",
+    "year": 1926,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Action, Adventure, Comedy",
+    "note": null
+  },
+  {
+    "id": "the-cameraman-1928",
+    "title": "The Cameraman",
+    "year": 1928,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, Family",
+    "note": null
+  },
+  {
+    "id": "modern-times-1936",
+    "title": "Modern Times",
+    "year": 1936,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "bringing-up-baby-1938",
+    "title": "Bringing Up Baby",
+    "year": 1938,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy",
+    "note": null
+  },
+  {
+    "id": "mr-smith-goes-to-washington-1939",
+    "title": "Mr. Smith Goes to Washington",
+    "year": 1939,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "the-rules-of-the-game-1939",
+    "title": "The Rules of the Game",
+    "year": 1939,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "dance-girl-dance-1940",
+    "title": "Dance, Girl, Dance",
+    "year": 1940,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, Music",
+    "note": null
+  },
+  {
+    "id": "the-bank-dick-1940",
+    "title": "The Bank Dick",
+    "year": 1940,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy",
+    "note": null
+  },
+  {
+    "id": "sullivans-travels-1941",
+    "title": "Sullivan's Travels",
+    "year": 1941,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Adventure, Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "to-be-or-not-to-be-1942",
+    "title": "To Be or Not to Be",
+    "year": 1942,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Romance, War",
+    "note": null
+  },
+  {
+    "id": "miracle-on-34th-street-1947",
+    "title": "Miracle on 34th Street",
+    "year": 1947,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, Family",
+    "note": null
+  },
+  {
+    "id": "late-spring-1949",
+    "title": "Late Spring",
+    "year": 1949,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "some-like-it-hot-1959",
+    "title": "Some Like It Hot",
+    "year": 1959,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Music, Romance",
+    "note": null
+  },
+  {
+    "id": "la-dolce-vita-1960",
+    "title": "La Dolce Vita",
+    "year": 1960,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "cleo-from-5-to-7-1962",
+    "title": "Cléo from 5 to 7",
+    "year": 1962,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": null,
+    "note": null
+  },
+  {
+    "id": "daisies-1966",
+    "title": "Daisies",
+    "year": 1966,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy",
+    "note": null
+  },
+  {
+    "id": "playtime-1967",
+    "title": "Playtime",
+    "year": 1967,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy",
+    "note": null
+  },
+  {
+    "id": "pink-flamingos-1972",
+    "title": "Pink Flamingos",
+    "year": 1972,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Crime",
+    "note": null
+  },
+  {
+    "id": "the-canterbury-tales-1972",
+    "title": "The Canterbury Tales",
+    "year": 1972,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, History",
+    "note": null
+  },
+  {
+    "id": "girlfriends-1978",
+    "title": "Girlfriends",
+    "year": 1978,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "being-there-1979",
+    "title": "Being There",
+    "year": 1979,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "fast-times-at-ridgemont-high-1982",
+    "title": "Fast Times at Ridgemont High",
+    "year": 1982,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "stranger-than-paradise-1984",
+    "title": "Stranger Than Paradise",
+    "year": 1984,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "this-is-spinal-tap-1984",
+    "title": "This Is Spinal Tap",
+    "year": 1984,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Music",
+    "note": null
+  },
+  {
+    "id": "tampopo-1985",
+    "title": "Tampopo",
+    "year": 1985,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy",
+    "note": null
+  },
+  {
+    "id": "the-breakfast-club-1985",
+    "title": "The Breakfast Club",
+    "year": 1985,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "do-the-right-thing-1989",
+    "title": "Do the Right Thing",
+    "year": 1989,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "house-party-1990",
+    "title": "House Party",
+    "year": 1990,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Music",
+    "note": null
+  },
+  {
+    "id": "slacker-1990",
+    "title": "Slacker",
+    "year": 1990,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "short-cuts-1993",
+    "title": "Short Cuts",
+    "year": 1993,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "the-truman-show-1998",
+    "title": "The Truman Show",
+    "year": 1998,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "rushmore-1998",
+    "title": "Rushmore",
+    "year": 1998,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-big-lebowski-1998",
+    "title": "The Big Lebowski",
+    "year": 1998,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Crime",
+    "note": null
+  },
+  {
+    "id": "bamboozled-2000",
+    "title": "Bamboozled",
+    "year": 2000,
+    "currentCode": "C",
+    "currentLabel": "Comedy / Light Drama",
+    "omdbRaw": "Comedy, Drama, Music",
+    "note": null
+  },
+  {
+    "id": "the-emperor-jones-1933",
+    "title": "The Emperor Jones",
+    "year": 1933,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Music",
+    "note": null
+  },
+  {
+    "id": "the-grapes-of-wrath-1940",
+    "title": "The Grapes of Wrath",
+    "year": 1940,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "citizen-kane-1941",
+    "title": "Citizen Kane",
+    "year": 1941,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "national-velvet-1944",
+    "title": "National Velvet",
+    "year": 1944,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Family, Sport",
+    "note": null
+  },
+  {
+    "id": "bicycle-thieves-1948",
+    "title": "Bicycle Thieves",
+    "year": 1948,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "all-about-eve-1950",
+    "title": "All About Eve",
+    "year": 1950,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "a-streetcar-named-desire-1951",
+    "title": "A Streetcar Named Desire",
+    "year": 1951,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "ikiru-1952",
+    "title": "Ikiru",
+    "year": 1952,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "umberto-d-1952",
+    "title": "Umberto D.",
+    "year": 1952,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "tokyo-story-1953",
+    "title": "Tokyo Story",
+    "year": 1953,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "sansho-the-bailiff-1954",
+    "title": "Sansho the Bailiff",
+    "year": 1954,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "la-strada-1954",
+    "title": "La Strada",
+    "year": 1954,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "ordet-1955",
+    "title": "Ordet",
+    "year": 1955,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "pather-panchali-1955",
+    "title": "Pather Panchali",
+    "year": 1955,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "aparajito-1956",
+    "title": "Aparajito",
+    "year": 1956,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "throne-of-blood-1957",
+    "title": "Throne of Blood",
+    "year": 1957,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "a-face-in-the-crowd-1957",
+    "title": "A Face in the Crowd",
+    "year": 1957,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Music",
+    "note": null
+  },
+  {
+    "id": "nights-of-cabiria-1957",
+    "title": "Nights of Cabiria",
+    "year": 1957,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "imitation-of-life-1959",
+    "title": "Imitation of Life",
+    "year": 1959,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "la-notte-1961",
+    "title": "La Notte",
+    "year": 1961,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "viridiana-1961",
+    "title": "Viridiana",
+    "year": 1961,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "a-raisin-in-the-sun-1961",
+    "title": "A Raisin in the Sun",
+    "year": 1961,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "the-hustler-1961",
+    "title": "The Hustler",
+    "year": 1961,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Sport",
+    "note": null
+  },
+  {
+    "id": "8-and-a-half-1963",
+    "title": "8½",
+    "year": 1963,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": null,
+    "note": null
+  },
+  {
+    "id": "hands-over-the-city-1963",
+    "title": "Hands over the City",
+    "year": 1963,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "winter-light-1963",
+    "title": "Winter Light",
+    "year": 1963,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "dry-summer-1964",
+    "title": "Dry Summer",
+    "year": 1964,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "i-am-cuba-1964",
+    "title": "I Am Cuba",
+    "year": 1964,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "red-desert-1964",
+    "title": "Red Desert",
+    "year": 1964,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "black-girl-1965",
+    "title": "Black Girl",
+    "year": 1965,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "red-beard-1965",
+    "title": "Red Beard",
+    "year": 1965,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "whos-afraid-of-virginia-woolf-1966",
+    "title": "Who's Afraid of Virginia Woolf?",
+    "year": 1966,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "au-hasard-balthazar-1966",
+    "title": "Au hasard Balthazar",
+    "year": 1966,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "samurai-rebellion-1967",
+    "title": "Samurai Rebellion",
+    "year": 1967,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "faces-1968",
+    "title": "Faces",
+    "year": 1968,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "kes-1969",
+    "title": "Kes",
+    "year": 1969,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Family",
+    "note": null
+  },
+  {
+    "id": "midnight-cowboy-1969",
+    "title": "Midnight Cowboy",
+    "year": 1969,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "the-learning-tree-1969",
+    "title": "The Learning Tree",
+    "year": 1969,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "two-lane-blacktop-1971",
+    "title": "Two-Lane Blacktop",
+    "year": 1971,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "scenes-from-a-marriage-1973",
+    "title": "Scenes from a Marriage",
+    "year": 1973,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "touki-bouki-1973",
+    "title": "Touki Bouki",
+    "year": 1973,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "jeanne-dielman-23-quai-du-commerce-1080-bruxelles-1975",
+    "title": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+    "year": 1975,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "adoption-1975",
+    "title": "Adoption",
+    "year": 1975,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "salo-or-the-120-days-of-sodom-1975",
+    "title": "Salò, or the 120 Days of Sodom",
+    "year": 1975,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": null,
+    "note": null
+  },
+  {
+    "id": "killer-of-sheep-1977",
+    "title": "Killer of Sheep",
+    "year": 1977,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "a-special-day-1977",
+    "title": "A Special Day",
+    "year": 1977,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "opening-night-1977",
+    "title": "Opening Night",
+    "year": 1977,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "autumn-sonata-1978",
+    "title": "Autumn Sonata",
+    "year": 1978,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Music",
+    "note": null
+  },
+  {
+    "id": "fanny-and-alexander-1982",
+    "title": "Fanny and Alexander",
+    "year": 1982,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "veronika-voss-1982",
+    "title": "Veronika Voss",
+    "year": 1982,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "paris-texas-1984",
+    "title": "Paris, Texas",
+    "year": 1984,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "love-streams-1984",
+    "title": "Love Streams",
+    "year": 1984,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "vagabond-1985",
+    "title": "Vagabond",
+    "year": 1985,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "hoosiers-1986",
+    "title": "Hoosiers",
+    "year": 1986,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama, Sport",
+    "note": null
+  },
+  {
+    "id": "where-is-the-friends-house-1987",
+    "title": "Where Is the Friend's House?",
+    "year": 1987,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Adventure, Drama, Family",
+    "note": null
+  },
+  {
+    "id": "sex-lies-and-videotape-1989",
+    "title": "Sex, Lies, and Videotape",
+    "year": 1989,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "to-sleep-with-anger-1990",
+    "title": "To Sleep with Anger",
+    "year": 1990,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "my-own-private-idaho-1991",
+    "title": "My Own Private Idaho",
+    "year": 1991,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "satantango-1994",
+    "title": "Satantango",
+    "year": 1994,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "taste-of-cherry-1997",
+    "title": "Taste of Cherry",
+    "year": 1997,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "eves-bayou-1997",
+    "title": "Eve's Bayou",
+    "year": 1997,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "central-station-1998",
+    "title": "Central Station",
+    "year": 1998,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "eternity-and-a-day-1998",
+    "title": "Eternity and a Day",
+    "year": 1998,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "the-celebration-1998",
+    "title": "The Celebration",
+    "year": 1998,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "magnolia-1999",
+    "title": "Magnolia",
+    "year": 1999,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "rosetta-1999",
+    "title": "Rosetta",
+    "year": 1999,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "yi-yi-2000",
+    "title": "Yi Yi",
+    "year": 2000,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "4-months-3-weeks-and-2-days-2007",
+    "title": "4 Months, 3 Weeks and 2 Days",
+    "year": 2007,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "still-walking-2008",
+    "title": "Still Walking",
+    "year": 2008,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "pariah-2011",
+    "title": "Pariah",
+    "year": 2011,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "the-hunt-2012",
+    "title": "The Hunt",
+    "year": 2012,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "i-daniel-blake-2016",
+    "title": "I, Daniel Blake",
+    "year": 2016,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "perfect-days-2023",
+    "title": "Perfect Days",
+    "year": 2023,
+    "currentCode": "D",
+    "currentLabel": "Drama",
+    "omdbRaw": "Drama",
+    "note": null
+  },
+  {
+    "id": "intolerance-1916",
+    "title": "Intolerance",
+    "year": 1916,
+    "currentCode": "H",
+    "currentLabel": "Historical / Period",
+    "omdbRaw": "Drama, History",
+    "note": null
+  },
+  {
+    "id": "gate-of-hell-1953",
+    "title": "Gate of Hell",
+    "year": 1953,
+    "currentCode": "H",
+    "currentLabel": "Historical / Period",
+    "omdbRaw": "Drama, History",
+    "note": null
+  },
+  {
+    "id": "the-leopard-1963",
+    "title": "The Leopard",
+    "year": 1963,
+    "currentCode": "H",
+    "currentLabel": "Historical / Period",
+    "omdbRaw": "Drama, History",
+    "note": null
+  },
+  {
+    "id": "the-tree-of-wooden-clogs-1978",
+    "title": "The Tree of Wooden Clogs",
+    "year": 1978,
+    "currentCode": "H",
+    "currentLabel": "Historical / Period",
+    "omdbRaw": "Drama, History",
+    "note": null
+  },
+  {
+    "id": "matewan-1987",
+    "title": "Matewan",
+    "year": 1987,
+    "currentCode": "H",
+    "currentLabel": "Historical / Period",
+    "omdbRaw": "Drama, History",
+    "note": null
+  },
+  {
+    "id": "nanook-of-the-north-1922",
+    "title": "Nanook of the North",
+    "year": 1922,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary",
+    "note": "no mapping"
+  },
+  {
+    "id": "apur-sansar-1959",
+    "title": "Apur Sansar",
+    "year": 1959,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": null,
+    "note": "not found"
+  },
+  {
+    "id": "les-cousins-1959",
+    "title": "Les Cousins",
+    "year": 1959,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary",
+    "note": "no mapping"
+  },
+  {
+    "id": "monterey-pop-1968",
+    "title": "Monterey Pop",
+    "year": 1968,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, History, Music",
+    "note": null
+  },
+  {
+    "id": "salesman-1969",
+    "title": "Salesman",
+    "year": 1969,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Drama",
+    "note": null
+  },
+  {
+    "id": "grey-gardens-1975",
+    "title": "Grey Gardens",
+    "year": 1975,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Comedy, Drama",
+    "note": null
+  },
+  {
+    "id": "harlan-county-usa-1976",
+    "title": "Harlan County, USA",
+    "year": 1976,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary",
+    "note": "no mapping"
+  },
+  {
+    "id": "the-last-waltz-1978",
+    "title": "The Last Waltz",
+    "year": 1978,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Biography, Music",
+    "note": null
+  },
+  {
+    "id": "koyaanisqatsi-1982",
+    "title": "Koyaanisqatsi",
+    "year": 1982,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Music",
+    "note": "no mapping"
+  },
+  {
+    "id": "the-times-of-harvey-milk-1984",
+    "title": "The Times of Harvey Milk",
+    "year": 1984,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Biography, History",
+    "note": null
+  },
+  {
+    "id": "the-thin-blue-line-1988",
+    "title": "The Thin Blue Line",
+    "year": 1988,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Crime",
+    "note": null
+  },
+  {
+    "id": "thelonious-monk-straight-no-chaser-1988",
+    "title": "Thelonious Monk: Straight, No Chaser",
+    "year": 1988,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Biography, Music",
+    "note": null
+  },
+  {
+    "id": "paris-is-burning-1990",
+    "title": "Paris Is Burning",
+    "year": 1990,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary",
+    "note": "no mapping"
+  },
+  {
+    "id": "hoop-dreams-1994",
+    "title": "Hoop Dreams",
+    "year": 1994,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Drama, Sport",
+    "note": null
+  },
+  {
+    "id": "buena-vista-social-club-1999",
+    "title": "Buena Vista Social Club",
+    "year": 1999,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, Music",
+    "note": "no mapping"
+  },
+  {
+    "id": "all-the-beauty-and-the-bloodshed-2022",
+    "title": "All the Beauty and the Bloodshed",
+    "year": 2022,
+    "currentCode": "I",
+    "currentLabel": "Indie / Arthouse",
+    "omdbRaw": "Documentary, History",
+    "note": null
+  },
+  {
+    "id": "king-of-jazz-1930",
+    "title": "King of Jazz",
+    "year": 1930,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Comedy, Musical",
+    "note": null
+  },
+  {
+    "id": "duck-soup-1933",
+    "title": "Duck Soup",
+    "year": 1933,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Comedy, Musical",
+    "note": null
+  },
+  {
+    "id": "a-night-at-the-opera-1935",
+    "title": "A Night at the Opera",
+    "year": 1935,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Comedy, Music, Musical",
+    "note": null
+  },
+  {
+    "id": "swing-time-1936",
+    "title": "Swing Time",
+    "year": 1936,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Comedy, Musical, Romance",
+    "note": null
+  },
+  {
+    "id": "show-boat-1936",
+    "title": "Show Boat",
+    "year": 1936,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Comedy, Drama, Musical",
+    "note": null
+  },
+  {
+    "id": "yankee-doodle-dandy-1942",
+    "title": "Yankee Doodle Dandy",
+    "year": 1942,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Biography, Drama, Family",
+    "note": null
+  },
+  {
+    "id": "singin-in-the-rain-1952",
+    "title": "Singin' in the Rain",
+    "year": 1952,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Comedy, Musical, Romance",
+    "note": null
+  },
+  {
+    "id": "black-orpheus-1959",
+    "title": "Black Orpheus",
+    "year": 1959,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Drama, Musical, Romance",
+    "note": null
+  },
+  {
+    "id": "west-side-story-1961",
+    "title": "West Side Story",
+    "year": 1961,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Crime, Drama, Musical",
+    "note": null
+  },
+  {
+    "id": "the-umbrellas-of-cherbourg-1964",
+    "title": "The Umbrellas of Cherbourg",
+    "year": 1964,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Drama, Musical, Romance",
+    "note": null
+  },
+  {
+    "id": "the-sound-of-music-1965",
+    "title": "The Sound of Music",
+    "year": 1965,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Biography, Drama, Family",
+    "note": null
+  },
+  {
+    "id": "the-young-girls-of-rochefort-1967",
+    "title": "The Young Girls of Rochefort",
+    "year": 1967,
+    "currentCode": "M",
+    "currentLabel": "Musical",
+    "omdbRaw": "Comedy, Drama, Musical",
+    "note": null
+  },
+  {
+    "id": "stagecoach-1939",
+    "title": "Stagecoach",
+    "year": 1939,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama, Western",
+    "note": null
+  },
+  {
+    "id": "destry-rides-again-1939",
+    "title": "Destry Rides Again",
+    "year": 1939,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Comedy, Western",
+    "note": null
+  },
+  {
+    "id": "only-angels-have-wings-1939",
+    "title": "Only Angels Have Wings",
+    "year": 1939,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "my-darling-clementine-1946",
+    "title": "My Darling Clementine",
+    "year": 1946,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Romance, Western",
+    "note": null
+  },
+  {
+    "id": "the-treasure-of-the-sierra-madre-1948",
+    "title": "The Treasure of the Sierra Madre",
+    "year": 1948,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama, Western",
+    "note": null
+  },
+  {
+    "id": "red-river-1948",
+    "title": "Red River",
+    "year": 1948,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Western",
+    "note": null
+  },
+  {
+    "id": "winchester-73-1950",
+    "title": "Winchester '73",
+    "year": 1950,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Action, Drama, Western",
+    "note": null
+  },
+  {
+    "id": "the-african-queen-1951",
+    "title": "The African Queen",
+    "year": 1951,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "high-noon-1952",
+    "title": "High Noon",
+    "year": 1952,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Thriller, Western",
+    "note": null
+  },
+  {
+    "id": "shane-1953",
+    "title": "Shane",
+    "year": 1953,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Western",
+    "note": null
+  },
+  {
+    "id": "seven-samurai-1954",
+    "title": "Seven Samurai",
+    "year": 1954,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Action, Drama",
+    "note": null
+  },
+  {
+    "id": "the-searchers-1956",
+    "title": "The Searchers",
+    "year": 1956,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Western",
+    "note": null
+  },
+  {
+    "id": "the-ten-commandments-1956",
+    "title": "The Ten Commandments",
+    "year": 1956,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama, Family",
+    "note": null
+  },
+  {
+    "id": "310-to-yuma-1957",
+    "title": "3:10 to Yuma",
+    "year": 1957,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "ben-hur-1959",
+    "title": "Ben-Hur",
+    "year": 1959,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama",
+    "note": null
+  },
+  {
+    "id": "one-eyed-jacks-1961",
+    "title": "One-Eyed Jacks",
+    "year": 1961,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Western",
+    "note": null
+  },
+  {
+    "id": "the-man-who-shot-liberty-valance-1962",
+    "title": "The Man Who Shot Liberty Valance",
+    "year": 1962,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Western",
+    "note": null
+  },
+  {
+    "id": "the-good-the-bad-and-the-ugly-1966",
+    "title": "The Good, the Bad and the Ugly",
+    "year": 1966,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama, Western",
+    "note": null
+  },
+  {
+    "id": "once-upon-a-time-in-the-west-1968",
+    "title": "Once Upon a Time in the West",
+    "year": 1968,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Western",
+    "note": null
+  },
+  {
+    "id": "easy-rider-1969",
+    "title": "Easy Rider",
+    "year": 1969,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama",
+    "note": null
+  },
+  {
+    "id": "butch-cassidy-and-the-sundance-kid-1969",
+    "title": "Butch Cassidy and the Sundance Kid",
+    "year": 1969,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Biography, Crime",
+    "note": null
+  },
+  {
+    "id": "the-wild-bunch-1969",
+    "title": "The Wild Bunch",
+    "year": 1969,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Action, Adventure, Drama",
+    "note": null
+  },
+  {
+    "id": "mccabe-mrs-miller-1971",
+    "title": "McCabe & Mrs. Miller",
+    "year": 1971,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Western",
+    "note": null
+  },
+  {
+    "id": "alambrista-1977",
+    "title": "Alambrista!",
+    "year": 1977,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama",
+    "note": null
+  },
+  {
+    "id": "the-black-stallion-1979",
+    "title": "The Black Stallion",
+    "year": 1979,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Family, Sport",
+    "note": null
+  },
+  {
+    "id": "the-ballad-of-gregorio-cortez-1982",
+    "title": "The Ballad of Gregorio Cortez",
+    "year": 1982,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Drama, Western",
+    "note": null
+  },
+  {
+    "id": "el-norte-1983",
+    "title": "El Norte",
+    "year": 1983,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Drama",
+    "note": null
+  },
+  {
+    "id": "the-princess-bride-1987",
+    "title": "The Princess Bride",
+    "year": 1987,
+    "currentCode": "N",
+    "currentLabel": "Action / Adventure",
+    "omdbRaw": "Adventure, Comedy, Family",
+    "note": null
+  },
+  {
+    "id": "the-freshman-1925",
+    "title": "The Freshman",
+    "year": 1925,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Family, Romance",
+    "note": null
+  },
+  {
+    "id": "sunrise-a-song-of-two-humans-1927",
+    "title": "Sunrise: A Song of Two Humans",
+    "year": 1927,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": null,
+    "note": "not found"
+  },
+  {
+    "id": "lonesome-1928",
+    "title": "Lonesome",
+    "year": 1928,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "morocco-1930",
+    "title": "Morocco",
+    "year": 1930,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "city-lights-1931",
+    "title": "City Lights",
+    "year": 1931,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "it-happened-one-night-1934",
+    "title": "It Happened One Night",
+    "year": 1934,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Romance",
+    "note": null
+  },
+  {
+    "id": "imitation-of-life-1934",
+    "title": "Imitation of Life",
+    "year": 1934,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "my-man-godfrey-1936",
+    "title": "My Man Godfrey",
+    "year": 1936,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "make-way-for-tomorrow-1937",
+    "title": "Make Way for Tomorrow",
+    "year": 1937,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-awful-truth-1937",
+    "title": "The Awful Truth",
+    "year": 1937,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Romance",
+    "note": null
+  },
+  {
+    "id": "gone-with-the-wind-1939",
+    "title": "Gone with the Wind",
+    "year": 1939,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "midnight-1939",
+    "title": "Midnight",
+    "year": 1939,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Romance",
+    "note": null
+  },
+  {
+    "id": "the-philadelphia-story-1940",
+    "title": "The Philadelphia Story",
+    "year": 1940,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Romance",
+    "note": null
+  },
+  {
+    "id": "his-girl-friday-1940",
+    "title": "His Girl Friday",
+    "year": 1940,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-lady-eve-1941",
+    "title": "The Lady Eve",
+    "year": 1941,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Romance",
+    "note": null
+  },
+  {
+    "id": "casablanca-1942",
+    "title": "Casablanca",
+    "year": 1942,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "now-voyager-1942",
+    "title": "Now, Voyager",
+    "year": 1942,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-magnificent-ambersons-1942",
+    "title": "The Magnificent Ambersons",
+    "year": 1942,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "woman-of-the-year-1942",
+    "title": "Woman of the Year",
+    "year": 1942,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "brief-encounter-1945",
+    "title": "Brief Encounter",
+    "year": 1945,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "children-of-paradise-1945",
+    "title": "Children of Paradise",
+    "year": 1945,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-red-shoes-1948",
+    "title": "The Red Shoes",
+    "year": 1948,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Music, Romance",
+    "note": null
+  },
+  {
+    "id": "adams-rib-1949",
+    "title": "Adam's Rib",
+    "year": 1949,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Romance",
+    "note": null
+  },
+  {
+    "id": "the-heiress-1949",
+    "title": "The Heiress",
+    "year": 1949,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "miss-julie-1951",
+    "title": "Miss Julie",
+    "year": 1951,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "othello-1951",
+    "title": "Othello",
+    "year": 1951,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "roman-holiday-1953",
+    "title": "Roman Holiday",
+    "year": 1953,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-earrings-of-madame-de-1953",
+    "title": "The Earrings of Madame de…",
+    "year": 1953,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "hobsons-choice-1954",
+    "title": "Hobson's Choice",
+    "year": 1954,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "journey-to-italy-1954",
+    "title": "Journey to Italy",
+    "year": 1954,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "all-that-heaven-allows-1955",
+    "title": "All That Heaven Allows",
+    "year": 1955,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "marty-1955",
+    "title": "Marty",
+    "year": 1955,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "wild-strawberries-1957",
+    "title": "Wild Strawberries",
+    "year": 1957,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "shadows-1959",
+    "title": "Shadows",
+    "year": 1959,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Music, Romance",
+    "note": null
+  },
+  {
+    "id": "the-apartment-1960",
+    "title": "The Apartment",
+    "year": 1960,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "contempt-1963",
+    "title": "Contempt",
+    "year": 1963,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "nothing-but-a-man-1964",
+    "title": "Nothing but a Man",
+    "year": 1964,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "a-man-and-a-woman-1966",
+    "title": "A Man and a Woman",
+    "year": 1966,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-graduate-1967",
+    "title": "The Graduate",
+    "year": 1967,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "belle-de-jour-1967",
+    "title": "Belle de Jour",
+    "year": 1967,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "harold-and-maude-1971",
+    "title": "Harold and Maude",
+    "year": 1971,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-mother-and-the-whore-1973",
+    "title": "The Mother and the Whore",
+    "year": 1973,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "a-woman-under-the-influence-1974",
+    "title": "A Woman Under the Influence",
+    "year": 1974,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "ali-fear-eats-the-soul-1974",
+    "title": "Ali: Fear Eats the Soul",
+    "year": 1974,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "cooley-high-1975",
+    "title": "Cooley High",
+    "year": 1975,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "days-of-heaven-1978",
+    "title": "Days of Heaven",
+    "year": 1978,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "bull-durham-1988",
+    "title": "Bull Durham",
+    "year": 1988,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Romance, Sport",
+    "note": null
+  },
+  {
+    "id": "cinema-paradiso-1988",
+    "title": "Cinema Paradiso",
+    "year": 1988,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "when-harry-met-sally-1989",
+    "title": "When Harry Met Sally...",
+    "year": 1989,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "daughters-of-the-dust-1991",
+    "title": "Daughters of the Dust",
+    "year": 1991,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, History, Romance",
+    "note": null
+  },
+  {
+    "id": "farewell-my-concubine-1993",
+    "title": "Farewell My Concubine",
+    "year": 1993,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Music, Romance",
+    "note": null
+  },
+  {
+    "id": "the-wedding-banquet-1993",
+    "title": "The Wedding Banquet",
+    "year": 1993,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "before-sunrise-1995",
+    "title": "Before Sunrise",
+    "year": 1995,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-watermelon-woman-1996",
+    "title": "The Watermelon Woman",
+    "year": 1996,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "compensation-1999",
+    "title": "Compensation",
+    "year": 1999,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, History, Romance",
+    "note": null
+  },
+  {
+    "id": "in-the-mood-for-love-2000",
+    "title": "In the Mood for Love",
+    "year": 2000,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "love-basketball-2000",
+    "title": "Love & Basketball",
+    "year": 2000,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance, Sport",
+    "note": null
+  },
+  {
+    "id": "monsoon-wedding-2001",
+    "title": "Monsoon Wedding",
+    "year": 2001,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Comedy, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-best-of-youth-2003",
+    "title": "The Best of Youth",
+    "year": 2003,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "before-sunset-2004",
+    "title": "Before Sunset",
+    "year": 2004,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "portrait-of-a-lady-on-fire-2019",
+    "title": "Portrait of a Lady on Fire",
+    "year": 2019,
+    "currentCode": "R",
+    "currentLabel": "Romance",
+    "omdbRaw": "Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "the-thief-of-bagdad-1924",
+    "title": "The Thief of Bagdad",
+    "year": 1924,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Adventure, Family, Fantasy",
+    "note": null
+  },
+  {
+    "id": "metropolis-1927",
+    "title": "Metropolis",
+    "year": 1927,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "the-wizard-of-oz-1939",
+    "title": "The Wizard of Oz",
+    "year": 1939,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Adventure, Family, Fantasy",
+    "note": null
+  },
+  {
+    "id": "cat-people-1942",
+    "title": "Cat People",
+    "year": 1942,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Fantasy, Horror, Thriller",
+    "note": null
+  },
+  {
+    "id": "its-a-wonderful-life-1946",
+    "title": "It's a Wonderful Life",
+    "year": 1946,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Family, Fantasy",
+    "note": null
+  },
+  {
+    "id": "a-matter-of-life-and-death-1946",
+    "title": "A Matter of Life and Death",
+    "year": 1946,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Fantasy, Romance",
+    "note": null
+  },
+  {
+    "id": "miracle-in-milan-1951",
+    "title": "Miracle in Milan",
+    "year": 1951,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Comedy, Drama, Fantasy",
+    "note": null
+  },
+  {
+    "id": "the-day-the-earth-stood-still-1951",
+    "title": "The Day the Earth Stood Still",
+    "year": 1951,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "the-war-of-the-worlds-1953",
+    "title": "The War of the Worlds",
+    "year": 1953,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Sci-Fi, Thriller",
+    "note": null
+  },
+  {
+    "id": "invasion-of-the-body-snatchers-1956",
+    "title": "Invasion of the Body Snatchers",
+    "year": 1956,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Horror, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "the-seventh-seal-1957",
+    "title": "The Seventh Seal",
+    "year": 1957,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Fantasy",
+    "note": null
+  },
+  {
+    "id": "the-incredible-shrinking-man-1957",
+    "title": "The Incredible Shrinking Man",
+    "year": 1957,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Horror, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "kwaidan-1964",
+    "title": "Kwaidan",
+    "year": 1964,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Fantasy, Horror",
+    "note": null
+  },
+  {
+    "id": "seconds-1966",
+    "title": "Seconds",
+    "year": 1966,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Sci-Fi, Thriller",
+    "note": null
+  },
+  {
+    "id": "the-face-of-another-1966",
+    "title": "The Face of Another",
+    "year": 1966,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Sci-Fi, Thriller",
+    "note": null
+  },
+  {
+    "id": "2001-a-space-odyssey-1968",
+    "title": "2001: A Space Odyssey",
+    "year": 1968,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Adventure, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "the-spirit-of-the-beehive-1973",
+    "title": "The Spirit of the Beehive",
+    "year": 1973,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Fantasy",
+    "note": null
+  },
+  {
+    "id": "celine-and-julie-go-boating-1974",
+    "title": "Céline and Julie Go Boating",
+    "year": 1974,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": null,
+    "note": null
+  },
+  {
+    "id": "eraserhead-1977",
+    "title": "Eraserhead",
+    "year": 1977,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Fantasy, Horror",
+    "note": null
+  },
+  {
+    "id": "alien-1979",
+    "title": "Alien",
+    "year": 1979,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Horror, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "stalker-1979",
+    "title": "Stalker",
+    "year": 1979,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "the-empire-strikes-back-1980",
+    "title": "The Empire Strikes Back",
+    "year": 1980,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Adventure, Fantasy",
+    "note": null
+  },
+  {
+    "id": "blade-runner-1982",
+    "title": "Blade Runner",
+    "year": 1982,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Drama, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "the-thing-1982",
+    "title": "The Thing",
+    "year": 1982,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Horror, Mystery, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "return-of-the-jedi-1983",
+    "title": "Return of the Jedi",
+    "year": 1983,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Adventure, Fantasy",
+    "note": null
+  },
+  {
+    "id": "the-terminator-1984",
+    "title": "The Terminator",
+    "year": 1984,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Adventure, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "back-to-the-future-1985",
+    "title": "Back to the Future",
+    "year": 1985,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Adventure, Comedy, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "wings-of-desire-1987",
+    "title": "Wings of Desire",
+    "year": 1987,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Fantasy, Romance",
+    "note": null
+  },
+  {
+    "id": "terminator-2-judgment-day-1991",
+    "title": "Terminator 2: Judgment Day",
+    "year": 1991,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Adventure, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "groundhog-day-1993",
+    "title": "Groundhog Day",
+    "year": 1993,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Comedy, Drama, Fantasy",
+    "note": null
+  },
+  {
+    "id": "jurassic-park-1993",
+    "title": "Jurassic Park",
+    "year": 1993,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Adventure, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "underground-1995",
+    "title": "Underground",
+    "year": 1995,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Comedy, Drama, Fantasy",
+    "note": null
+  },
+  {
+    "id": "the-matrix-1999",
+    "title": "The Matrix",
+    "year": 1999,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Action, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "eternal-sunshine-of-the-spotless-mind-2004",
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "year": 2004,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Romance, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "pans-labyrinth-2006",
+    "title": "Pan's Labyrinth",
+    "year": 2006,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Fantasy, War",
+    "note": null
+  },
+  {
+    "id": "the-prestige-2006",
+    "title": "The Prestige",
+    "year": 2006,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Drama, Mystery, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "interstellar-2014",
+    "title": "Interstellar",
+    "year": 2014,
+    "currentCode": "S",
+    "currentLabel": "Sci-Fi / Fantasy",
+    "omdbRaw": "Adventure, Drama, Sci-Fi",
+    "note": null
+  },
+  {
+    "id": "king-kong-1933",
+    "title": "King Kong",
+    "year": 1933,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Adventure, Horror",
+    "note": null
+  },
+  {
+    "id": "rebecca-1940",
+    "title": "Rebecca",
+    "year": 1940,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Romance",
+    "note": null
+  },
+  {
+    "id": "the-wages-of-fear-1953",
+    "title": "The Wages of Fear",
+    "year": 1953,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Adventure, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "rear-window-1954",
+    "title": "Rear Window",
+    "year": 1954,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Thriller",
+    "note": null
+  },
+  {
+    "id": "vertigo-1958",
+    "title": "Vertigo",
+    "year": 1958,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Mystery, Romance, Thriller",
+    "note": null
+  },
+  {
+    "id": "anatomy-of-a-murder-1959",
+    "title": "Anatomy of a Murder",
+    "year": 1959,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "north-by-northwest-1959",
+    "title": "North by Northwest",
+    "year": 1959,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Adventure, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "psycho-1960",
+    "title": "Psycho",
+    "year": 1960,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Horror, Mystery",
+    "note": null
+  },
+  {
+    "id": "lavventura-1960",
+    "title": "L'Avventura",
+    "year": 1960,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Romance",
+    "note": null
+  },
+  {
+    "id": "yojimbo-1961",
+    "title": "Yojimbo",
+    "year": 1961,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Action, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "last-year-at-marienbad-1961",
+    "title": "Last Year at Marienbad",
+    "year": 1961,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Romance",
+    "note": null
+  },
+  {
+    "id": "harakiri-1962",
+    "title": "Harakiri",
+    "year": 1962,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-manchurian-candidate-1962",
+    "title": "The Manchurian Candidate",
+    "year": 1962,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "charade-1963",
+    "title": "Charade",
+    "year": 1963,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Comedy, Mystery, Romance",
+    "note": null
+  },
+  {
+    "id": "shock-corridor-1963",
+    "title": "Shock Corridor",
+    "year": 1963,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Thriller",
+    "note": null
+  },
+  {
+    "id": "woman-in-the-dunes-1964",
+    "title": "Woman in the Dunes",
+    "year": 1964,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "alphaville-1965",
+    "title": "Alphaville",
+    "year": 1965,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Comedy, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "persona-1966",
+    "title": "Persona",
+    "year": 1966,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "cul-de-sac-1966",
+    "title": "Cul-de-Sac",
+    "year": 1966,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Comedy, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "in-the-heat-of-the-night-1967",
+    "title": "In the Heat of the Night",
+    "year": 1967,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Thriller",
+    "note": null
+  },
+  {
+    "id": "night-of-the-living-dead-1968",
+    "title": "Night of the Living Dead",
+    "year": 1968,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Horror, Thriller",
+    "note": null
+  },
+  {
+    "id": "rosemarys-baby-1968",
+    "title": "Rosemary's Baby",
+    "year": 1968,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Horror",
+    "note": null
+  },
+  {
+    "id": "medium-cool-1969",
+    "title": "Medium Cool",
+    "year": 1969,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "solaris-1972",
+    "title": "Solaris",
+    "year": 1972,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Adventure, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "dont-look-now-1973",
+    "title": "Don't Look Now",
+    "year": 1973,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Horror, Mystery",
+    "note": null
+  },
+  {
+    "id": "sorcerer-1977",
+    "title": "Sorcerer",
+    "year": 1977,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Adventure, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "the-shining-1980",
+    "title": "The Shining",
+    "year": 1980,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Horror",
+    "note": null
+  },
+  {
+    "id": "chan-is-missing-1982",
+    "title": "Chan Is Missing",
+    "year": 1982,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "die-hard-1988",
+    "title": "Die Hard",
+    "year": 1988,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Action, Thriller",
+    "note": null
+  },
+  {
+    "id": "cure-1997",
+    "title": "Cure",
+    "year": 1997,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Crime, Horror, Mystery",
+    "note": null
+  },
+  {
+    "id": "memento-2000",
+    "title": "Memento",
+    "year": 2000,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Thriller",
+    "note": null
+  },
+  {
+    "id": "werckmeister-harmonies-2000",
+    "title": "Werckmeister Harmonies",
+    "year": 2000,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "mulholland-drive-2001",
+    "title": "Mulholland Drive",
+    "year": 2001,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Mystery, Thriller",
+    "note": null
+  },
+  {
+    "id": "la-cienaga-2001",
+    "title": "La Ciénaga",
+    "year": 2001,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": null,
+    "note": null
+  },
+  {
+    "id": "oldboy-2003",
+    "title": "Oldboy",
+    "year": 2003,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Action, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-handmaiden-2016",
+    "title": "The Handmaiden",
+    "year": 2016,
+    "currentCode": "T",
+    "currentLabel": "Thriller / Suspense",
+    "omdbRaw": "Drama, Romance, Thriller",
+    "note": null
+  },
+  {
+    "id": "the-last-command-1928",
+    "title": "The Last Command",
+    "year": 1928,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "all-quiet-on-the-western-front-1930",
+    "title": "All Quiet on the Western Front",
+    "year": 1930,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "the-great-dictator-1940",
+    "title": "The Great Dictator",
+    "year": 1940,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Comedy, Drama, War",
+    "note": null
+  },
+  {
+    "id": "the-life-and-death-of-colonel-blimp-1943",
+    "title": "The Life and Death of Colonel Blimp",
+    "year": 1943,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "rome-open-city-1945",
+    "title": "Rome, Open City",
+    "year": 1945,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Thriller, War",
+    "note": null
+  },
+  {
+    "id": "the-best-years-of-our-lives-1946",
+    "title": "The Best Years of Our Lives",
+    "year": 1946,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "forbidden-games-1952",
+    "title": "Forbidden Games",
+    "year": 1952,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "ugetsu-1953",
+    "title": "Ugetsu",
+    "year": 1953,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Fantasy, War",
+    "note": null
+  },
+  {
+    "id": "a-man-escaped-1956",
+    "title": "A Man Escaped",
+    "year": 1956,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Thriller, War",
+    "note": null
+  },
+  {
+    "id": "paths-of-glory-1957",
+    "title": "Paths of Glory",
+    "year": 1957,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "the-bridge-on-the-river-kwai-1957",
+    "title": "The Bridge on the River Kwai",
+    "year": 1957,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Adventure, Drama, War",
+    "note": null
+  },
+  {
+    "id": "the-cranes-are-flying-1957",
+    "title": "The Cranes Are Flying",
+    "year": 1957,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "judgment-at-nuremberg-1961",
+    "title": "Judgment at Nuremberg",
+    "year": 1961,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, History, War",
+    "note": null
+  },
+  {
+    "id": "ivans-childhood-1962",
+    "title": "Ivan's Childhood",
+    "year": 1962,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "the-great-escape-1963",
+    "title": "The Great Escape",
+    "year": 1963,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Adventure, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "dr-strangelove-1964",
+    "title": "Dr. Strangelove",
+    "year": 1964,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Comedy, War",
+    "note": null
+  },
+  {
+    "id": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb-1964",
+    "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "year": 1964,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Comedy, War",
+    "note": null
+  },
+  {
+    "id": "the-battle-of-algiers-1966",
+    "title": "The Battle of Algiers",
+    "year": 1966,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "war-and-peace-1966",
+    "title": "War and Peace",
+    "year": 1966,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "army-of-shadows-1969",
+    "title": "Army of Shadows",
+    "year": 1969,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "hearts-and-minds-1974",
+    "title": "Hearts and Minds",
+    "year": 1974,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Documentary, History, War",
+    "note": null
+  },
+  {
+    "id": "the-ascent-1977",
+    "title": "The Ascent",
+    "year": 1977,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "the-tin-drum-1979",
+    "title": "The Tin Drum",
+    "year": 1979,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "kagemusha-1980",
+    "title": "Kagemusha",
+    "year": 1980,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, History, War",
+    "note": null
+  },
+  {
+    "id": "das-boot-1981",
+    "title": "Das Boot",
+    "year": 1981,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "come-and-see-1985",
+    "title": "Come and See",
+    "year": 1985,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Thriller, War",
+    "note": null
+  },
+  {
+    "id": "ran-1985",
+    "title": "Ran",
+    "year": 1985,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Action, Drama, War",
+    "note": null
+  },
+  {
+    "id": "shoah-1985",
+    "title": "Shoah",
+    "year": 1985,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Documentary, History, War",
+    "note": null
+  },
+  {
+    "id": "au-revoir-les-enfants-1987",
+    "title": "Au revoir les enfants",
+    "year": 1987,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "before-the-rain-1994",
+    "title": "Before the Rain",
+    "year": 1994,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Romance, War",
+    "note": null
+  },
+  {
+    "id": "beau-travail-1998",
+    "title": "Beau travail",
+    "year": 1998,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, War",
+    "note": null
+  },
+  {
+    "id": "incendies-2010",
+    "title": "Incendies",
+    "year": 2010,
+    "currentCode": "W",
+    "currentLabel": "War",
+    "omdbRaw": "Drama, Mystery, War",
+    "note": null
+  },
+  {
+    "id": "body-and-soul-1925",
+    "title": "Body and Soul",
+    "year": 1925,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "the-docks-of-new-york-1928",
+    "title": "The Docks of New York",
+    "year": 1928,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "m-1931",
+    "title": "M",
+    "year": 1931,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Mystery, Thriller",
+    "note": null
+  },
+  {
+    "id": "little-caesar-1931",
+    "title": "Little Caesar",
+    "year": 1931,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "the-public-enemy-1931",
+    "title": "The Public Enemy",
+    "year": 1931,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "scarface-1932",
+    "title": "Scarface",
+    "year": 1932,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "trouble-in-paradise-1932",
+    "title": "Trouble in Paradise",
+    "year": 1932,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Comedy, Crime, Romance",
+    "note": null
+  },
+  {
+    "id": "the-maltese-falcon-1941",
+    "title": "The Maltese Falcon",
+    "year": 1941,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "double-indemnity-1944",
+    "title": "Double Indemnity",
+    "year": 1944,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "laura-1944",
+    "title": "Laura",
+    "year": 1944,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir, Mystery",
+    "note": null
+  },
+  {
+    "id": "detour-1945",
+    "title": "Detour",
+    "year": 1945,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "leave-her-to-heaven-1945",
+    "title": "Leave Her to Heaven",
+    "year": 1945,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir, Romance",
+    "note": null
+  },
+  {
+    "id": "mildred-pierce-1945",
+    "title": "Mildred Pierce",
+    "year": 1945,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "the-lost-weekend-1945",
+    "title": "The Lost Weekend",
+    "year": 1945,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "gilda-1946",
+    "title": "Gilda",
+    "year": 1946,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir, Romance",
+    "note": null
+  },
+  {
+    "id": "notorious-1946",
+    "title": "Notorious",
+    "year": 1946,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-naked-city-1948",
+    "title": "The Naked City",
+    "year": 1948,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "the-third-man-1949",
+    "title": "The Third Man",
+    "year": 1949,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir, Mystery",
+    "note": null
+  },
+  {
+    "id": "white-heat-1949",
+    "title": "White Heat",
+    "year": 1949,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "rashomon-1950",
+    "title": "Rashomon",
+    "year": 1950,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "sunset-boulevard-1950",
+    "title": "Sunset Boulevard",
+    "year": 1950,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "in-a-lonely-place-1950",
+    "title": "In a Lonely Place",
+    "year": 1950,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-asphalt-jungle-1950",
+    "title": "The Asphalt Jungle",
+    "year": 1950,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "ace-in-the-hole-1951",
+    "title": "Ace in the Hole",
+    "year": 1951,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "pickup-on-south-street-1953",
+    "title": "Pickup on South Street",
+    "year": 1953,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "the-big-heat-1953",
+    "title": "The Big Heat",
+    "year": 1953,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "on-the-waterfront-1954",
+    "title": "On the Waterfront",
+    "year": 1954,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "dial-m-for-murder-1954",
+    "title": "Dial M for Murder",
+    "year": 1954,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-night-of-the-hunter-1955",
+    "title": "The Night of the Hunter",
+    "year": 1955,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "kiss-me-deadly-1955",
+    "title": "Kiss Me Deadly",
+    "year": 1955,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "rififi-1955",
+    "title": "Rififi",
+    "year": 1955,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "12-angry-men-1957",
+    "title": "12 Angry Men",
+    "year": 1957,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "sweet-smell-of-success-1957",
+    "title": "Sweet Smell of Success",
+    "year": 1957,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Drama, Film-Noir",
+    "note": null
+  },
+  {
+    "id": "witness-for-the-prosecution-1957",
+    "title": "Witness for the Prosecution",
+    "year": 1957,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-400-blows-1959",
+    "title": "The 400 Blows",
+    "year": 1959,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "pickpocket-1959",
+    "title": "Pickpocket",
+    "year": 1959,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "breathless-1960",
+    "title": "Breathless",
+    "year": 1960,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "le-trou-1960",
+    "title": "Le Trou",
+    "year": 1960,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "to-kill-a-mockingbird-1962",
+    "title": "To Kill a Mockingbird",
+    "year": 1962,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "high-and-low-1963",
+    "title": "High and Low",
+    "year": 1963,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "pierrot-le-fou-1965",
+    "title": "Pierrot le Fou",
+    "year": 1965,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "bonnie-and-clyde-1967",
+    "title": "Bonnie and Clyde",
+    "year": 1967,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Biography, Crime",
+    "note": null
+  },
+  {
+    "id": "le-samourai-1967",
+    "title": "Le Samouraï",
+    "year": 1967,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": null,
+    "note": null
+  },
+  {
+    "id": "if-1968",
+    "title": "If....",
+    "year": 1968,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "the-cremator-1968",
+    "title": "The Cremator",
+    "year": 1968,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Comedy, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "z-1969",
+    "title": "Z",
+    "year": 1969,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "wanda-1970",
+    "title": "Wanda",
+    "year": 1970,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "shaft-1971",
+    "title": "Shaft",
+    "year": 1971,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Crime, Thriller",
+    "note": null
+  },
+  {
+    "id": "sweet-sweetbacks-baadasssss-song-1971",
+    "title": "Sweet Sweetback's Baadasssss Song",
+    "year": 1971,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "badlands-1973",
+    "title": "Badlands",
+    "year": 1973,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "mean-streets-1973",
+    "title": "Mean Streets",
+    "year": 1973,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "paper-moon-1973",
+    "title": "Paper Moon",
+    "year": 1973,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Comedy, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "largent-1983",
+    "title": "L'Argent",
+    "year": 1983,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "scarface-1983",
+    "title": "Scarface",
+    "year": 1983,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "blue-velvet-1986",
+    "title": "Blue Velvet",
+    "year": 1986,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "a-brighter-summer-day-1991",
+    "title": "A Brighter Summer Day",
+    "year": 1991,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Romance",
+    "note": null
+  },
+  {
+    "id": "thelma-louise-1991",
+    "title": "Thelma & Louise",
+    "year": 1991,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Adventure, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "chungking-express-1994",
+    "title": "Chungking Express",
+    "year": 1994,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Comedy, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "la-haine-1995",
+    "title": "La Haine",
+    "year": 1995,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "heat-1995",
+    "title": "Heat",
+    "year": 1995,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "se7en-1995",
+    "title": "Se7en",
+    "year": 1995,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-usual-suspects-1995",
+    "title": "The Usual Suspects",
+    "year": 1995,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "trainspotting-1996",
+    "title": "Trainspotting",
+    "year": 1996,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "fight-club-1999",
+    "title": "Fight Club",
+    "year": 1999,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  },
+  {
+    "id": "city-of-god-2002",
+    "title": "City of God",
+    "year": 2002,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "memories-of-murder-2003",
+    "title": "Memories of Murder",
+    "year": 2003,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "the-dark-knight-2008",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Action, Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "prisoners-2013",
+    "title": "Prisoners",
+    "year": 2013,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Mystery",
+    "note": null
+  },
+  {
+    "id": "dheepan-2015",
+    "title": "Dheepan",
+    "year": 2015,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama",
+    "note": null
+  },
+  {
+    "id": "shoplifters-2018",
+    "title": "Shoplifters",
+    "year": 2018,
+    "currentCode": "X",
+    "currentLabel": "Crime / Noir",
+    "omdbRaw": "Crime, Drama, Thriller",
+    "note": null
+  }
+]

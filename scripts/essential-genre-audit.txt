@@ -1,0 +1,464 @@
+
+=== A — Animation / Family (16) ===
+  1937  Snow White and the Seven Dwarfs                   OMDb: Animation, Adventure, Family
+  1940  Fantasia                                          OMDb: Animation, Family, Fantasy
+  1940  Pinocchio                                         OMDb: Animation, Adventure, Comedy
+  1942  Bambi                                             OMDb: Animation, Adventure, Drama
+  1950  Cinderella                                        OMDb: Animation, Family, Fantasy
+  1988  Grave of the Fireflies                            OMDb: Animation, Drama, War
+  1988  My Neighbor Totoro                                OMDb: Animation, Adventure, Comedy
+  1994  The Lion King                                     OMDb: Animation, Adventure, Drama
+  1995  Toy Story                                         OMDb: Animation, Adventure, Comedy
+  1997  Princess Mononoke                                 OMDb: Animation, Adventure, Fantasy
+  1999  The Iron Giant                                    OMDb: Animation, Action, Adventure
+  2004  Howl's Moving Castle                              OMDb: Animation, Adventure, Family
+  2009  Fantastic Mr. Fox                                 OMDb: Animation, Adventure, Comedy
+  2009  Mary and Max                                      OMDb: Animation, Comedy, Drama
+  2016  Your Name                                         OMDb: Animation, Drama, Fantasy
+  2023  Spider-Man: Across the Spider-Verse               OMDb: Animation, Action, Adventure
+
+=== B — Biopic (14) ===
+  1928  The Passion of Joan of Arc                        OMDb: Biography, Drama, History
+  1939  Young Mr. Lincoln                                 OMDb: Biography, Drama
+  1942  The Pride of the Yankees                          OMDb: Biography, Drama, Romance
+  1960  Spartacus                                         OMDb: Adventure, Biography, Drama
+  1962  Lawrence of Arabia                                OMDb: Adventure, Biography, Drama
+  1966  Andrei Rublev                                     OMDb: Biography, Drama, History
+  1967  In Cold Blood                                     OMDb: Biography, Crime, Drama
+  1968  Funny Girl                                        OMDb: Biography, Comedy, Drama
+  1969  The Color of Pomegranates                         OMDb: Biography, Drama, History
+  1975  Mirror                                            OMDb: Biography, Drama
+  1985  Mishima: A Life in Four Chapters                  OMDb: Biography, Drama
+  1987  La Bamba                                          OMDb: Biography, Drama, Music
+  1990  Close-Up                                          OMDb: Biography, Crime, Drama
+  1992  Malcolm X                                         OMDb: Biography, Drama, History
+
+=== C — Comedy / Light Drama (38) ===
+  1921  The Kid                                           OMDb: Comedy, Drama, Family
+  1923  Safety Last!                                      OMDb: Action, Comedy, Thriller
+  1924  Sherlock Jr.                                      OMDb: Action, Comedy, Romance
+  1925  The Gold Rush                                     OMDb: Adventure, Comedy, Drama
+  1926  The General                                       OMDb: Action, Adventure, Comedy
+  1928  The Cameraman                                     OMDb: Comedy, Drama, Family
+  1936  Modern Times                                      OMDb: Comedy, Drama, Romance
+  1938  Bringing Up Baby                                  OMDb: Comedy
+  1939  Mr. Smith Goes to Washington                      OMDb: Comedy, Drama
+  1939  The Rules of the Game                             OMDb: Comedy, Drama
+  1940  Dance, Girl, Dance                                OMDb: Comedy, Drama, Music
+  1940  The Bank Dick                                     OMDb: Comedy
+  1941  Sullivan's Travels                                OMDb: Adventure, Comedy, Drama
+  1942  To Be or Not to Be                                OMDb: Comedy, Romance, War
+  1947  Miracle on 34th Street                            OMDb: Comedy, Drama, Family
+  1949  Late Spring                                       OMDb: Comedy, Drama
+  1959  Some Like It Hot                                  OMDb: Comedy, Music, Romance
+  1960  La Dolce Vita                                     OMDb: Comedy, Drama
+  1962  Cléo from 5 to 7                                  OMDb: —
+  1966  Daisies                                           OMDb: Comedy
+  1967  Playtime                                          OMDb: Comedy
+  1972  Pink Flamingos                                    OMDb: Comedy, Crime
+  1972  The Canterbury Tales                              OMDb: Comedy, Drama, History
+  1978  Girlfriends                                       OMDb: Comedy, Drama
+  1979  Being There                                       OMDb: Comedy, Drama
+  1982  Fast Times at Ridgemont High                      OMDb: Comedy, Drama
+  1984  Stranger Than Paradise                            OMDb: Comedy, Drama
+  1984  This Is Spinal Tap                                OMDb: Comedy, Music
+  1985  Tampopo                                           OMDb: Comedy
+  1985  The Breakfast Club                                OMDb: Comedy, Drama
+  1989  Do the Right Thing                                OMDb: Comedy, Drama
+  1990  House Party                                       OMDb: Comedy, Music
+  1990  Slacker                                           OMDb: Comedy, Drama
+  1993  Short Cuts                                        OMDb: Comedy, Drama
+  1998  The Truman Show                                   OMDb: Comedy, Drama
+  1998  Rushmore                                          OMDb: Comedy, Drama, Romance
+  1998  The Big Lebowski                                  OMDb: Comedy, Crime
+  2000  Bamboozled                                        OMDb: Comedy, Drama, Music
+
+=== D — Drama (73) ===
+  1933  The Emperor Jones                                 OMDb: Drama, Music
+  1940  The Grapes of Wrath                               OMDb: Drama
+  1941  Citizen Kane                                      OMDb: Drama, Mystery
+  1944  National Velvet                                   OMDb: Drama, Family, Sport
+  1948  Bicycle Thieves                                   OMDb: Drama
+  1950  All About Eve                                     OMDb: Drama
+  1951  A Streetcar Named Desire                          OMDb: Drama
+  1952  Ikiru                                             OMDb: Drama
+  1952  Umberto D.                                        OMDb: Drama
+  1953  Tokyo Story                                       OMDb: Drama
+  1954  Sansho the Bailiff                                OMDb: Drama
+  1954  La Strada                                         OMDb: Drama
+  1955  Ordet                                             OMDb: Drama
+  1955  Pather Panchali                                   OMDb: Drama
+  1956  Aparajito                                         OMDb: Drama
+  1957  Throne of Blood                                   OMDb: Drama
+  1957  A Face in the Crowd                               OMDb: Drama, Music
+  1957  Nights of Cabiria                                 OMDb: Drama
+  1959  Imitation of Life                                 OMDb: Drama
+  1961  La Notte                                          OMDb: Drama
+  1961  Viridiana                                         OMDb: Drama
+  1961  A Raisin in the Sun                               OMDb: Drama
+  1961  The Hustler                                       OMDb: Drama, Sport
+  1963  8½                                                OMDb: —
+  1963  Hands over the City                               OMDb: Drama
+  1963  Winter Light                                      OMDb: Drama
+  1964  Dry Summer                                        OMDb: Drama
+  1964  I Am Cuba                                         OMDb: Drama
+  1964  Red Desert                                        OMDb: Drama
+  1965  Black Girl                                        OMDb: Drama
+  1965  Red Beard                                         OMDb: Drama
+  1966  Who's Afraid of Virginia Woolf?                   OMDb: Drama
+  1966  Au hasard Balthazar                               OMDb: Drama
+  1967  Samurai Rebellion                                 OMDb: Drama
+  1968  Faces                                             OMDb: Drama
+  1969  Kes                                               OMDb: Drama, Family
+  1969  Midnight Cowboy                                   OMDb: Drama
+  1969  The Learning Tree                                 OMDb: Drama
+  1971  Two-Lane Blacktop                                 OMDb: Drama
+  1973  Scenes from a Marriage                            OMDb: Drama
+  1973  Touki Bouki                                       OMDb: Drama
+  1975  Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles  OMDb: Drama
+  1975  Adoption                                          OMDb: Drama
+  1975  Salò, or the 120 Days of Sodom                    OMDb: —
+  1977  Killer of Sheep                                   OMDb: Drama
+  1977  A Special Day                                     OMDb: Drama
+  1977  Opening Night                                     OMDb: Drama
+  1978  Autumn Sonata                                     OMDb: Drama, Music
+  1982  Fanny and Alexander                               OMDb: Drama
+  1982  Veronika Voss                                     OMDb: Drama
+  1984  Paris, Texas                                      OMDb: Drama
+  1984  Love Streams                                      OMDb: Drama
+  1985  Vagabond                                          OMDb: Drama
+  1986  Hoosiers                                          OMDb: Drama, Sport
+  1987  Where Is the Friend's House?                      OMDb: Adventure, Drama, Family
+  1989  Sex, Lies, and Videotape                          OMDb: Drama
+  1990  To Sleep with Anger                               OMDb: Drama
+  1991  My Own Private Idaho                              OMDb: Drama
+  1994  Satantango                                        OMDb: Drama
+  1997  Taste of Cherry                                   OMDb: Drama
+  1997  Eve's Bayou                                       OMDb: Drama
+  1998  Central Station                                   OMDb: Drama
+  1998  Eternity and a Day                                OMDb: Drama
+  1998  The Celebration                                   OMDb: Drama
+  1999  Magnolia                                          OMDb: Drama
+  1999  Rosetta                                           OMDb: Drama
+  2000  Yi Yi                                             OMDb: Drama
+  2007  4 Months, 3 Weeks and 2 Days                      OMDb: Drama
+  2008  Still Walking                                     OMDb: Drama
+  2011  Pariah                                            OMDb: Drama
+  2012  The Hunt                                          OMDb: Drama
+  2016  I, Daniel Blake                                   OMDb: Drama
+  2023  Perfect Days                                      OMDb: Drama
+
+=== H — Historical / Period (5) ===
+  1916  Intolerance                                       OMDb: Drama, History
+  1953  Gate of Hell                                      OMDb: Drama, History
+  1963  The Leopard                                       OMDb: Drama, History
+  1978  The Tree of Wooden Clogs                          OMDb: Drama, History
+  1987  Matewan                                           OMDb: Drama, History
+
+=== I — Indie / Arthouse (16) ===
+  1922  Nanook of the North                               OMDb: Documentary
+  1959  Apur Sansar                                       OMDb: [not found]
+  1959  Les Cousins                                       OMDb: Documentary
+  1968  Monterey Pop                                      OMDb: Documentary, History, Music
+  1969  Salesman                                          OMDb: Documentary, Drama
+  1975  Grey Gardens                                      OMDb: Documentary, Comedy, Drama
+  1976  Harlan County, USA                                OMDb: Documentary
+  1978  The Last Waltz                                    OMDb: Documentary, Biography, Music
+  1982  Koyaanisqatsi                                     OMDb: Documentary, Music
+  1984  The Times of Harvey Milk                          OMDb: Documentary, Biography, History
+  1988  The Thin Blue Line                                OMDb: Documentary, Crime
+  1988  Thelonious Monk: Straight, No Chaser              OMDb: Documentary, Biography, Music
+  1990  Paris Is Burning                                  OMDb: Documentary
+  1994  Hoop Dreams                                       OMDb: Documentary, Drama, Sport
+  1999  Buena Vista Social Club                           OMDb: Documentary, Music
+  2022  All the Beauty and the Bloodshed                  OMDb: Documentary, History
+
+=== M — Musical (12) ===
+  1930  King of Jazz                                      OMDb: Comedy, Musical
+  1933  Duck Soup                                         OMDb: Comedy, Musical
+  1935  A Night at the Opera                              OMDb: Comedy, Music, Musical
+  1936  Swing Time                                        OMDb: Comedy, Musical, Romance
+  1936  Show Boat                                         OMDb: Comedy, Drama, Musical
+  1942  Yankee Doodle Dandy                               OMDb: Biography, Drama, Family
+  1952  Singin' in the Rain                               OMDb: Comedy, Musical, Romance
+  1959  Black Orpheus                                     OMDb: Drama, Musical, Romance
+  1961  West Side Story                                   OMDb: Crime, Drama, Musical
+  1964  The Umbrellas of Cherbourg                        OMDb: Drama, Musical, Romance
+  1965  The Sound of Music                                OMDb: Biography, Drama, Family
+  1967  The Young Girls of Rochefort                      OMDb: Comedy, Drama, Musical
+
+=== N — Action / Adventure (28) ===
+  1939  Stagecoach                                        OMDb: Adventure, Drama, Western
+  1939  Destry Rides Again                                OMDb: Comedy, Western
+  1939  Only Angels Have Wings                            OMDb: Adventure, Drama, Romance
+  1946  My Darling Clementine                             OMDb: Drama, Romance, Western
+  1948  The Treasure of the Sierra Madre                  OMDb: Adventure, Drama, Western
+  1948  Red River                                         OMDb: Drama, Western
+  1950  Winchester '73                                    OMDb: Action, Drama, Western
+  1951  The African Queen                                 OMDb: Adventure, Drama, Romance
+  1952  High Noon                                         OMDb: Drama, Thriller, Western
+  1953  Shane                                             OMDb: Drama, Western
+  1954  Seven Samurai                                     OMDb: Action, Drama
+  1956  The Searchers                                     OMDb: Adventure, Western
+  1956  The Ten Commandments                              OMDb: Adventure, Drama, Family
+  1957  3:10 to Yuma                                      OMDb: Adventure, Drama, Thriller
+  1959  Ben-Hur                                           OMDb: Adventure, Drama
+  1961  One-Eyed Jacks                                    OMDb: Drama, Western
+  1962  The Man Who Shot Liberty Valance                  OMDb: Drama, Western
+  1966  The Good, the Bad and the Ugly                    OMDb: Adventure, Drama, Western
+  1968  Once Upon a Time in the West                      OMDb: Drama, Western
+  1969  Easy Rider                                        OMDb: Adventure, Drama
+  1969  Butch Cassidy and the Sundance Kid                OMDb: Adventure, Biography, Crime
+  1969  The Wild Bunch                                    OMDb: Action, Adventure, Drama
+  1971  McCabe & Mrs. Miller                              OMDb: Drama, Western
+  1977  Alambrista!                                       OMDb: Adventure, Drama
+  1979  The Black Stallion                                OMDb: Adventure, Family, Sport
+  1982  The Ballad of Gregorio Cortez                     OMDb: Drama, Western
+  1983  El Norte                                          OMDb: Adventure, Drama
+  1987  The Princess Bride                                OMDb: Adventure, Comedy, Family
+
+=== R — Romance (61) ===
+  1925  The Freshman                                      OMDb: Comedy, Family, Romance
+  1927  Sunrise: A Song of Two Humans                     OMDb: [not found]
+  1928  Lonesome                                          OMDb: Comedy, Drama, Romance
+  1930  Morocco                                           OMDb: Drama, Romance
+  1931  City Lights                                       OMDb: Comedy, Drama, Romance
+  1934  It Happened One Night                             OMDb: Comedy, Romance
+  1934  Imitation of Life                                 OMDb: Comedy, Drama, Romance
+  1936  My Man Godfrey                                    OMDb: Comedy, Drama, Romance
+  1937  Make Way for Tomorrow                             OMDb: Drama, Romance
+  1937  The Awful Truth                                   OMDb: Comedy, Romance
+  1939  Gone with the Wind                                OMDb: Drama, Romance, War
+  1939  Midnight                                          OMDb: Comedy, Romance
+  1940  The Philadelphia Story                            OMDb: Comedy, Romance
+  1940  His Girl Friday                                   OMDb: Comedy, Drama, Romance
+  1941  The Lady Eve                                      OMDb: Comedy, Romance
+  1942  Casablanca                                        OMDb: Drama, Romance, War
+  1942  Now, Voyager                                      OMDb: Drama, Romance
+  1942  The Magnificent Ambersons                         OMDb: Drama, Romance
+  1942  Woman of the Year                                 OMDb: Comedy, Drama, Romance
+  1945  Brief Encounter                                   OMDb: Drama, Romance
+  1945  Children of Paradise                              OMDb: Drama, Romance
+  1948  The Red Shoes                                     OMDb: Drama, Music, Romance
+  1949  Adam's Rib                                        OMDb: Comedy, Romance
+  1949  The Heiress                                       OMDb: Drama, Romance
+  1951  Miss Julie                                        OMDb: Drama, Romance
+  1951  Othello                                           OMDb: Drama, Romance
+  1953  Roman Holiday                                     OMDb: Comedy, Drama, Romance
+  1953  The Earrings of Madame de…                        OMDb: Drama, Romance
+  1954  Hobson's Choice                                   OMDb: Comedy, Drama, Romance
+  1954  Journey to Italy                                  OMDb: Drama, Romance
+  1955  All That Heaven Allows                            OMDb: Drama, Romance
+  1955  Marty                                             OMDb: Drama, Romance
+  1957  Wild Strawberries                                 OMDb: Drama, Romance
+  1959  Shadows                                           OMDb: Drama, Music, Romance
+  1960  The Apartment                                     OMDb: Comedy, Drama, Romance
+  1963  Contempt                                          OMDb: Drama, Romance
+  1964  Nothing but a Man                                 OMDb: Drama, Romance
+  1966  A Man and a Woman                                 OMDb: Drama, Romance
+  1967  The Graduate                                      OMDb: Comedy, Drama, Romance
+  1967  Belle de Jour                                     OMDb: Drama, Romance
+  1971  Harold and Maude                                  OMDb: Comedy, Drama, Romance
+  1973  The Mother and the Whore                          OMDb: Drama, Romance
+  1974  A Woman Under the Influence                       OMDb: Drama, Romance
+  1974  Ali: Fear Eats the Soul                           OMDb: Drama, Romance
+  1975  Cooley High                                       OMDb: Comedy, Drama, Romance
+  1978  Days of Heaven                                    OMDb: Drama, Romance
+  1988  Bull Durham                                       OMDb: Comedy, Romance, Sport
+  1988  Cinema Paradiso                                   OMDb: Drama, Romance
+  1989  When Harry Met Sally...                           OMDb: Comedy, Drama, Romance
+  1991  Daughters of the Dust                             OMDb: Drama, History, Romance
+  1993  Farewell My Concubine                             OMDb: Drama, Music, Romance
+  1993  The Wedding Banquet                               OMDb: Comedy, Drama, Romance
+  1995  Before Sunrise                                    OMDb: Comedy, Drama, Romance
+  1996  The Watermelon Woman                              OMDb: Comedy, Drama, Romance
+  1999  Compensation                                      OMDb: Drama, History, Romance
+  2000  In the Mood for Love                              OMDb: Drama, Romance
+  2000  Love & Basketball                                 OMDb: Drama, Romance, Sport
+  2001  Monsoon Wedding                                   OMDb: Comedy, Drama, Romance
+  2003  The Best of Youth                                 OMDb: Drama, Romance
+  2004  Before Sunset                                     OMDb: Drama, Romance
+  2019  Portrait of a Lady on Fire                        OMDb: Drama, Romance
+
+=== S — Sci-Fi / Fantasy (37) ===
+  1924  The Thief of Bagdad                               OMDb: Adventure, Family, Fantasy
+  1927  Metropolis                                        OMDb: Drama, Sci-Fi
+  1939  The Wizard of Oz                                  OMDb: Adventure, Family, Fantasy
+  1942  Cat People                                        OMDb: Fantasy, Horror, Thriller
+  1946  It's a Wonderful Life                             OMDb: Drama, Family, Fantasy
+  1946  A Matter of Life and Death                        OMDb: Drama, Fantasy, Romance
+  1951  Miracle in Milan                                  OMDb: Comedy, Drama, Fantasy
+  1951  The Day the Earth Stood Still                     OMDb: Drama, Sci-Fi
+  1953  The War of the Worlds                             OMDb: Action, Sci-Fi, Thriller
+  1956  Invasion of the Body Snatchers                    OMDb: Drama, Horror, Sci-Fi
+  1957  The Seventh Seal                                  OMDb: Drama, Fantasy
+  1957  The Incredible Shrinking Man                      OMDb: Horror, Sci-Fi
+  1964  Kwaidan                                           OMDb: Drama, Fantasy, Horror
+  1966  Seconds                                           OMDb: Sci-Fi, Thriller
+  1966  The Face of Another                               OMDb: Drama, Sci-Fi, Thriller
+  1968  2001: A Space Odyssey                             OMDb: Adventure, Sci-Fi
+  1973  The Spirit of the Beehive                         OMDb: Drama, Fantasy
+  1974  Céline and Julie Go Boating                       OMDb: —
+  1977  Eraserhead                                        OMDb: Fantasy, Horror
+  1979  Alien                                             OMDb: Horror, Sci-Fi
+  1979  Stalker                                           OMDb: Drama, Sci-Fi
+  1980  The Empire Strikes Back                           OMDb: Action, Adventure, Fantasy
+  1982  Blade Runner                                      OMDb: Action, Drama, Sci-Fi
+  1982  The Thing                                         OMDb: Horror, Mystery, Sci-Fi
+  1983  Return of the Jedi                                OMDb: Action, Adventure, Fantasy
+  1984  The Terminator                                    OMDb: Action, Adventure, Sci-Fi
+  1985  Back to the Future                                OMDb: Adventure, Comedy, Sci-Fi
+  1987  Wings of Desire                                   OMDb: Drama, Fantasy, Romance
+  1991  Terminator 2: Judgment Day                        OMDb: Action, Adventure, Sci-Fi
+  1993  Groundhog Day                                     OMDb: Comedy, Drama, Fantasy
+  1993  Jurassic Park                                     OMDb: Action, Adventure, Sci-Fi
+  1995  Underground                                       OMDb: Comedy, Drama, Fantasy
+  1999  The Matrix                                        OMDb: Action, Sci-Fi
+  2004  Eternal Sunshine of the Spotless Mind             OMDb: Drama, Romance, Sci-Fi
+  2006  Pan's Labyrinth                                   OMDb: Drama, Fantasy, War
+  2006  The Prestige                                      OMDb: Drama, Mystery, Sci-Fi
+  2014  Interstellar                                      OMDb: Adventure, Drama, Sci-Fi
+
+=== T — Thriller / Suspense (36) ===
+  1933  King Kong                                         OMDb: Adventure, Horror
+  1940  Rebecca                                           OMDb: Drama, Mystery, Romance
+  1953  The Wages of Fear                                 OMDb: Adventure, Drama, Thriller
+  1954  Rear Window                                       OMDb: Drama, Mystery, Thriller
+  1958  Vertigo                                           OMDb: Mystery, Romance, Thriller
+  1959  Anatomy of a Murder                               OMDb: Drama, Mystery
+  1959  North by Northwest                                OMDb: Adventure, Drama, Mystery
+  1960  Psycho                                            OMDb: Drama, Horror, Mystery
+  1960  L'Avventura                                       OMDb: Drama, Mystery, Romance
+  1961  Yojimbo                                           OMDb: Action, Drama, Thriller
+  1961  Last Year at Marienbad                            OMDb: Drama, Mystery, Romance
+  1962  Harakiri                                          OMDb: Drama, Mystery
+  1962  The Manchurian Candidate                          OMDb: Drama, Thriller
+  1963  Charade                                           OMDb: Comedy, Mystery, Romance
+  1963  Shock Corridor                                    OMDb: Drama, Mystery, Thriller
+  1964  Woman in the Dunes                                OMDb: Drama, Thriller
+  1965  Alphaville                                        OMDb: Comedy, Drama, Mystery
+  1966  Persona                                           OMDb: Drama, Thriller
+  1966  Cul-de-Sac                                        OMDb: Comedy, Drama, Thriller
+  1967  In the Heat of the Night                          OMDb: Drama, Mystery, Thriller
+  1968  Night of the Living Dead                          OMDb: Horror, Thriller
+  1968  Rosemary's Baby                                   OMDb: Drama, Horror
+  1969  Medium Cool                                       OMDb: Drama, Thriller
+  1972  Solaris                                           OMDb: Adventure, Drama, Mystery
+  1973  Don't Look Now                                    OMDb: Drama, Horror, Mystery
+  1977  Sorcerer                                          OMDb: Adventure, Drama, Thriller
+  1980  The Shining                                       OMDb: Drama, Horror
+  1982  Chan Is Missing                                   OMDb: Drama, Mystery
+  1988  Die Hard                                          OMDb: Action, Thriller
+  1997  Cure                                              OMDb: Crime, Horror, Mystery
+  2000  Memento                                           OMDb: Drama, Mystery, Thriller
+  2000  Werckmeister Harmonies                            OMDb: Drama, Mystery
+  2001  Mulholland Drive                                  OMDb: Drama, Mystery, Thriller
+  2001  La Ciénaga                                        OMDb: —
+  2003  Oldboy                                            OMDb: Action, Drama, Mystery
+  2016  The Handmaiden                                    OMDb: Drama, Romance, Thriller
+
+=== W — War (32) ===
+  1928  The Last Command                                  OMDb: Drama, Romance, War
+  1930  All Quiet on the Western Front                    OMDb: Drama, War
+  1940  The Great Dictator                                OMDb: Comedy, Drama, War
+  1943  The Life and Death of Colonel Blimp               OMDb: Drama, Romance, War
+  1945  Rome, Open City                                   OMDb: Drama, Thriller, War
+  1946  The Best Years of Our Lives                       OMDb: Drama, Romance, War
+  1952  Forbidden Games                                   OMDb: Drama, War
+  1953  Ugetsu                                            OMDb: Drama, Fantasy, War
+  1956  A Man Escaped                                     OMDb: Drama, Thriller, War
+  1957  Paths of Glory                                    OMDb: Drama, War
+  1957  The Bridge on the River Kwai                      OMDb: Adventure, Drama, War
+  1957  The Cranes Are Flying                             OMDb: Drama, Romance, War
+  1961  Judgment at Nuremberg                             OMDb: Drama, History, War
+  1962  Ivan's Childhood                                  OMDb: Drama, War
+  1963  The Great Escape                                  OMDb: Adventure, Drama, Thriller
+  1964  Dr. Strangelove                                   OMDb: Comedy, War
+  1964  Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb  OMDb: Comedy, War
+  1966  The Battle of Algiers                             OMDb: Drama, War
+  1966  War and Peace                                     OMDb: Drama, Romance, War
+  1969  Army of Shadows                                   OMDb: Drama, War
+  1974  Hearts and Minds                                  OMDb: Documentary, History, War
+  1977  The Ascent                                        OMDb: Drama, War
+  1979  The Tin Drum                                      OMDb: Drama, War
+  1980  Kagemusha                                         OMDb: Drama, History, War
+  1981  Das Boot                                          OMDb: Drama, War
+  1985  Come and See                                      OMDb: Drama, Thriller, War
+  1985  Ran                                               OMDb: Action, Drama, War
+  1985  Shoah                                             OMDb: Documentary, History, War
+  1987  Au revoir les enfants                             OMDb: Drama, War
+  1994  Before the Rain                                   OMDb: Drama, Romance, War
+  1998  Beau travail                                      OMDb: Drama, War
+  2010  Incendies                                         OMDb: Drama, Mystery, War
+
+=== X — Crime / Noir (70) ===
+  1925  Body and Soul                                     OMDb: Crime, Drama, Thriller
+  1928  The Docks of New York                             OMDb: Crime, Drama, Film-Noir
+  1931  M                                                 OMDb: Crime, Mystery, Thriller
+  1931  Little Caesar                                     OMDb: Action, Crime, Drama
+  1931  The Public Enemy                                  OMDb: Crime, Drama
+  1932  Scarface                                          OMDb: Action, Crime, Drama
+  1932  Trouble in Paradise                               OMDb: Comedy, Crime, Romance
+  1941  The Maltese Falcon                                OMDb: Crime, Drama, Film-Noir
+  1944  Double Indemnity                                  OMDb: Crime, Drama, Film-Noir
+  1944  Laura                                             OMDb: Drama, Film-Noir, Mystery
+  1945  Detour                                            OMDb: Crime, Drama, Film-Noir
+  1945  Leave Her to Heaven                               OMDb: Drama, Film-Noir, Romance
+  1945  Mildred Pierce                                    OMDb: Crime, Drama, Film-Noir
+  1945  The Lost Weekend                                  OMDb: Drama, Film-Noir
+  1946  Gilda                                             OMDb: Drama, Film-Noir, Romance
+  1946  Notorious                                         OMDb: Drama, Film-Noir, Mystery
+  1948  The Naked City                                    OMDb: Crime, Drama, Film-Noir
+  1949  The Third Man                                     OMDb: Drama, Film-Noir, Mystery
+  1949  White Heat                                        OMDb: Action, Crime, Drama
+  1950  Rashomon                                          OMDb: Crime, Drama, Mystery
+  1950  Sunset Boulevard                                  OMDb: Drama, Film-Noir
+  1950  In a Lonely Place                                 OMDb: Drama, Film-Noir, Mystery
+  1950  The Asphalt Jungle                                OMDb: Crime, Drama, Film-Noir
+  1951  Ace in the Hole                                   OMDb: Drama, Film-Noir
+  1953  Pickup on South Street                            OMDb: Crime, Drama, Film-Noir
+  1953  The Big Heat                                      OMDb: Crime, Drama, Film-Noir
+  1954  On the Waterfront                                 OMDb: Crime, Drama, Thriller
+  1954  Dial M for Murder                                 OMDb: Crime, Drama, Mystery
+  1955  The Night of the Hunter                           OMDb: Crime, Drama, Film-Noir
+  1955  Kiss Me Deadly                                    OMDb: Crime, Drama, Film-Noir
+  1955  Rififi                                            OMDb: Crime, Drama, Thriller
+  1957  12 Angry Men                                      OMDb: Crime, Drama
+  1957  Sweet Smell of Success                            OMDb: Drama, Film-Noir
+  1957  Witness for the Prosecution                       OMDb: Crime, Drama, Mystery
+  1959  The 400 Blows                                     OMDb: Crime, Drama
+  1959  Pickpocket                                        OMDb: Crime, Drama
+  1960  Breathless                                        OMDb: Crime, Drama
+  1960  Le Trou                                           OMDb: Crime, Drama, Thriller
+  1962  To Kill a Mockingbird                             OMDb: Crime, Drama
+  1963  High and Low                                      OMDb: Crime, Drama, Mystery
+  1965  Pierrot le Fou                                    OMDb: Crime, Drama, Romance
+  1967  Bonnie and Clyde                                  OMDb: Action, Biography, Crime
+  1967  Le Samouraï                                       OMDb: —
+  1968  If....                                            OMDb: Crime, Drama
+  1968  The Cremator                                      OMDb: Comedy, Crime, Drama
+  1969  Z                                                 OMDb: Crime, Drama, Thriller
+  1970  Wanda                                             OMDb: Crime, Drama
+  1971  Shaft                                             OMDb: Action, Crime, Thriller
+  1971  Sweet Sweetback's Baadasssss Song                 OMDb: Crime, Drama, Thriller
+  1973  Badlands                                          OMDb: Action, Crime, Drama
+  1973  Mean Streets                                      OMDb: Crime, Drama, Thriller
+  1973  Paper Moon                                        OMDb: Comedy, Crime, Drama
+  1983  L'Argent                                          OMDb: Crime, Drama
+  1983  Scarface                                          OMDb: Crime, Drama
+  1986  Blue Velvet                                       OMDb: Crime, Drama, Mystery
+  1991  A Brighter Summer Day                             OMDb: Crime, Drama, Romance
+  1991  Thelma & Louise                                   OMDb: Adventure, Crime, Drama
+  1994  Chungking Express                                 OMDb: Comedy, Crime, Drama
+  1995  La Haine                                          OMDb: Crime, Drama
+  1995  Heat                                              OMDb: Action, Crime, Drama
+  1995  Se7en                                             OMDb: Crime, Drama, Mystery
+  1995  The Usual Suspects                                OMDb: Crime, Drama, Mystery
+  1996  Trainspotting                                     OMDb: Crime, Drama
+  1999  Fight Club                                        OMDb: Crime, Drama, Thriller
+  2002  City of God                                       OMDb: Crime, Drama
+  2003  Memories of Murder                                OMDb: Crime, Drama, Mystery
+  2008  The Dark Knight                                   OMDb: Action, Crime, Drama
+  2013  Prisoners                                         OMDb: Crime, Drama, Mystery
+  2015  Dheepan                                           OMDb: Crime, Drama
+  2018  Shoplifters                                       OMDb: Crime, Drama, Thriller

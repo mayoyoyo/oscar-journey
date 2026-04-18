@@ -230,11 +230,22 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <div className="settings-version">
             <div className="settings-version-row">
               <span className="settings-version-label">Version</span>
-              <span className="settings-version-num">v3.2.0</span>
+              <span className="settings-version-num">v3.3.0</span>
             </div>
             <details className="settings-changelog">
               <summary>Changelog</summary>
               <div className="settings-changelog-content">
+              <p><strong>v3.3.0</strong> — Series navigation + mobile modal polish</p>
+              <ul>
+                <li><strong>Series navigation.</strong> Every film in a franchise (Star Wars, Godfather, LOTR, Alien, Before trilogy, etc.) now shows its full series as a horizontal poster strip inside the detail modal — current film outlined in gold, watched siblings get a gold ✓, non-canon sequels/prequels dimmed. Tap any sibling to jump; swipe left/right to walk the series chronologically across the canon/non-canon boundary</li>
+                <li><strong>Out-of-canon preview modal.</strong> New full-fidelity modal for TMDB-only films (Phantom Menace, Alien 3, etc.) with poster, runtime, genres, director, cast, overview, IMDb link, trailer, JustWatch. Mark-as-watched and rate works the same as canon films — ratings persist to your profile under a <code>tmdb:&lt;id&gt;</code> key</li>
+                <li><strong>Mobile modal pop-out look.</strong> Modal now reads as a rounded card on a dim backdrop (20px corners, 84dvh max height), matching the Journey card's visual language. Fixes an override that was forcing edge-to-edge on mobile</li>
+                <li><strong>Drag-to-close.</strong> Drag the modal downward and it follows your finger (rubber-bands past 150px), releases past 120px with a synchronized slide-off + backdrop fade. Mid-scroll drags are ignored so long plot summaries still scroll normally</li>
+                <li><strong>Swipe between films.</strong> Horizontal swipe navigates prev/next film with a 40% slide-out / opposite-side slide-in animation. Swipe past the end snap-backs. Keyboard ← → also works on desktop</li>
+                <li><strong>iOS Safari rubber-band fix.</strong> <code>overscroll-behavior-y: none</code> on the modal kills the native bounce that was detaching the poster from the modal's top edge mid-drag</li>
+                <li><strong>"Part of" prefix dropped</strong> from the series heading and non-canon preview tag — the series name speaks for itself in context</li>
+                <li><strong>Phone testing setup.</strong> Dev server now serves HTTPS over the LAN via <code>@vitejs/plugin-basic-ssl</code>; HMR pinned to <code>wss</code> so hot-reload works over the tunnel</li>
+              </ul>
               <p><strong>v3.2.0</strong> — Catalog refresh + 5-tier canon + UI polish</p>
               <ul>
                 <li><strong>Refreshed canon-list data</strong> — all source lists rescraped from scratch (Sight &amp; Sound 2022, AFI 100+10 Top 10, Criterion spine, IMDb Top 250, Letterboxd Top 250, National Film Registry, Cannes/Venice/Berlin grand prizes), plus a new 8th list: <strong>Rotten Tomatoes Top 300</strong>. Title-alias map added for foreign-language / variant titles (La Règle du jeu → Rules of the Game, Tokyo Monogatari → Tokyo Story, Star Wars Episode IV → Star Wars, etc.) so triangulation actually matches across lists. Scrape-gap patches for Vertigo (missing from RT), 2001 (bad year on IMDb scrape), Rashomon (festival year 1951 for 1950 film), and a ±1-year merge for all films so festival years don't fragment the canon lookup</li>

@@ -1,6 +1,6 @@
 # The Oscars Journey
 
-A film tracker for the canon of cinema — every Best Picture nominee (1927+), every International Feature winner (1956+), every Animated Feature winner, plus 286 essential non-Oscar canon films triangulated across 7 major lists (Sight & Sound, AFI, IMDb Top 250, Letterboxd, festival grand prizes, National Film Registry, Criterion). 749 films total.
+A film tracker for the canon of cinema — every Best Picture nominee (1970+), every International Feature winner (1956+), every Animated Feature winner, plus 286 essential non-Oscar canon films triangulated across 7 major lists (Sight & Sound, AFI, IMDb Top 250, Letterboxd, festival grand prizes, National Film Registry, Criterion). 749 films total.
 
 **Live site: [theoscarsjourney.com](https://theoscarsjourney.com)**
 

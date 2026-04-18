@@ -1,6 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { MovieBadges } from './Badges';
+import OscarIcon, { getOscarBadges } from './OscarIcon';
+
+// Prototype flag: Option A layout moves Oscar statuettes to a fixed-width
+// left column before the title. Flip to false to revert to the inline layout.
+const OPTION_A_LAYOUT = true;
 import { ratingKey } from '../utils/storage';
 import { readCachedRuntime, runtimeBucket, prefetchRuntimes, RUNTIME_LABELS } from '../utils/runtime';
 import { ERA_LABELS, CATEGORY_LABELS } from './SettingsModal';
@@ -596,8 +601,19 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                     {!checklistMode && (
                       <span className={`film-row-dot ${isWatched ? 'watched' : ''}`} />
                     )}
-                    <span className="film-row-title">{m.title}</span>
-                    <MovieBadges movie={m} small />
+                    {OPTION_A_LAYOUT ? (
+                      <span className="film-row-title-group">
+                        <span className="film-row-title film-row-title-inline">{m.title}</span>
+                        <span className="film-row-awards">
+                          {getOscarBadges(m).map(k => (
+                            <OscarIcon key={k} movie={m} kind={k} size="sm" />
+                          ))}
+                        </span>
+                      </span>
+                    ) : (
+                      <span className="film-row-title">{m.title}</span>
+                    )}
+                    <MovieBadges movie={m} small excludeOscars={OPTION_A_LAYOUT} />
                     <span className="film-row-year">{m.year}</span>
                   </div>
                 );

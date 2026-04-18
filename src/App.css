@@ -2322,6 +2322,30 @@ main {
   background: #5a9a5a;
 }
 
+/* Option A: title + statuettes form a single left-anchored group. Group
+   expands (flex 1) so right-rail badges stay aligned, but awards hug the
+   title directly — not floating at the other end of the row. */
+.film-row-title-group {
+  flex: 1;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.film-row-title.film-row-title-inline {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.film-row-awards {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
 .film-row-title {
   flex: 1;
   font-size: 0.92rem;

@@ -20,9 +20,12 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
     return () => document.removeEventListener('keydown', handler);
   }, [open]);
 
-  // Tier 1 is "Canonical" (baseline) — the Oscar statuette already signals
-  // Oscar films, so a single pip alongside is noise. Hide pips for tier < 2.
-  if (tier < 2) return null;
+  // Show pips for any film with at least one canon list. Essentials always
+  // qualify (that's why they're in the catalog). Oscar films with no other
+  // canon membership get no pips — their statuette already signals Oscar,
+  // and a single OSCAR pip alongside would be noise.
+  const canonListsOnly = lists.filter(l => l !== 'OSCAR' && l !== 'OSCAR_NOM');
+  if (canonListsOnly.length === 0) return null;
 
   // Render only filled dots — same shape in both variants so the modal
   // and the A-Z row read as the same pill. Variant still drives pill size

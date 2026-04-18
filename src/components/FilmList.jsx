@@ -509,7 +509,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                   </button>
 
                   {/* Minimum tier +/- stepper */}
-                  <div className="tier-stepper">
+                  <div className={`tier-stepper ${filters.minTier === MAX_SLIDER_TIER ? 'tier-stepper-apex' : ''}`}>
                     <div className="tier-stepper-header">
                       <span className="tier-stepper-title">Minimum tier</span>
                       <div className="tier-stepper-controls">
@@ -520,7 +520,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                           disabled={filters.minTier <= 1}
                           aria-label="Lower minimum tier"
                         >−</button>
-                        <span className={`tier-stepper-value ${filters.minTier === MAX_SLIDER_TIER ? 'tier-stepper-value-apex' : ''}`}>
+                        <span className="tier-stepper-value">
                           {filters.minTier === MAX_SLIDER_TIER ? filters.minTier : `≥ ${filters.minTier}`}
                         </span>
                         <button

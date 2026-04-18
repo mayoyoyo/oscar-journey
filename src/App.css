@@ -2010,16 +2010,35 @@ main {
   letter-spacing: 0.04em;
   font-size: 0.95rem;
 }
-/* Apex sheen — matches the high-tier pip glow so "5" at the cap feels like a
-   reward, not just a number. */
-.tier-stepper-value-apex {
+
+/* Apex state — whole stepper gets a gold wash so the Apex floor visibly
+   rewards the user. Mirrors the tier-5 pip background + border styling. */
+.tier-stepper-apex {
+  background: linear-gradient(135deg, rgba(212, 175, 60, 0.18), rgba(139, 105, 20, 0.1));
+  border: 1px solid #c9a84c;
+  box-shadow: 0 0 16px rgba(212, 175, 60, 0.2), inset 0 0 12px rgba(212, 175, 60, 0.08);
+}
+.tier-stepper-apex .tier-stepper-title {
+  color: var(--gold);
+}
+.tier-stepper-apex .tier-stepper-value {
   background: linear-gradient(135deg, #f5d876 0%, #d4af3c 50%, #8b6914 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  text-shadow: 0 0 6px rgba(212, 175, 60, 0.35);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  text-shadow: 0 0 8px rgba(212, 175, 60, 0.4);
+}
+.tier-stepper-apex .tier-stepper-desc strong {
+  color: #f5d876;
+  text-shadow: 0 0 4px rgba(212, 175, 60, 0.3);
+}
+.tier-stepper-apex .tier-stepper-btn {
+  border-color: rgba(212, 175, 60, 0.4);
+}
+.tier-stepper-apex .tier-stepper-btn:not(:disabled) {
+  color: var(--gold);
 }
 .tier-stepper-desc {
   display: flex;

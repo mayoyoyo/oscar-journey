@@ -362,7 +362,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                     </button>
 
                     {/* Minimum tier +/- stepper */}
-                    <div className="tier-stepper">
+                    <div className={`tier-stepper ${currentFilters.minTier === MAX_SLIDER_TIER ? 'tier-stepper-apex' : ''}`}>
                       <div className="tier-stepper-header">
                         <span className="tier-stepper-title">Minimum tier</span>
                         <div className="tier-stepper-controls">
@@ -373,7 +373,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                             disabled={currentFilters.minTier <= 1}
                             aria-label="Lower minimum tier"
                           >−</button>
-                          <span className={`tier-stepper-value ${currentFilters.minTier === MAX_SLIDER_TIER ? 'tier-stepper-value-apex' : ''}`}>
+                          <span className="tier-stepper-value">
                             {currentFilters.minTier === MAX_SLIDER_TIER ? currentFilters.minTier : `≥ ${currentFilters.minTier}`}
                           </span>
                           <button

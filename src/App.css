@@ -2010,6 +2010,17 @@ main {
   letter-spacing: 0.04em;
   font-size: 0.95rem;
 }
+/* Apex sheen — matches the high-tier pip glow so "5" at the cap feels like a
+   reward, not just a number. */
+.tier-stepper-value-apex {
+  background: linear-gradient(135deg, #f5d876 0%, #d4af3c 50%, #8b6914 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 6px rgba(212, 175, 60, 0.35);
+  font-size: 1.1rem;
+}
 .tier-stepper-desc {
   display: flex;
   flex-direction: column;

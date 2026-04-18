@@ -520,7 +520,9 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                           disabled={filters.minTier <= 1}
                           aria-label="Lower minimum tier"
                         >−</button>
-                        <span className="tier-stepper-value">≥ {filters.minTier}</span>
+                        <span className={`tier-stepper-value ${filters.minTier === MAX_SLIDER_TIER ? 'tier-stepper-value-apex' : ''}`}>
+                          {filters.minTier === MAX_SLIDER_TIER ? filters.minTier : `≥ ${filters.minTier}`}
+                        </span>
                         <button
                           type="button"
                           className="tier-stepper-btn"

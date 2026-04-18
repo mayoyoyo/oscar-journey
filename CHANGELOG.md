@@ -1,5 +1,75 @@
 # Changelog
 
+## 3.3.0 — 2026-04-18
+
+### Series navigation — chris-testing
+- **New series collections layer.** TMDB-sourced franchise data maps canon
+  films onto their full series (Star Wars 1–9, Godfather 1–3, Alien 1–6,
+  LOTR/Hobbit, Before trilogy, etc.). `seriesCollections.js` exposes
+  `getSeriesForFilm(id)` + `getSeriesForTmdbId(tmdb)` returning
+  `{ collection, film, siblings }` for callers.
+- **Series strip inside the film modal.** `SeriesSection` renders a
+  horizontal strip of chronological poster thumbnails below the film details.
+  Current film is outlined in gold with a gold order badge; watched siblings
+  get a gold ✓; non-canon siblings are dimmed. Drag-to-scroll on desktop with
+  click suppression so a drag doesn't accidentally navigate.
+- **Sequel/out-of-canon preview modal.** New `SeriesFilmPreview` mirrors the
+  canonical film modal for TMDB-only films — full poster, title, year,
+  runtime, genre pills, director, cast, overview, IMDb link, trailer,
+  JustWatch link. Mark-as-watched + rate works via a `tmdb:<id>` key so
+  out-of-canon films live alongside catalog films in `watchedSet`/`ratings`
+  without collision.
+- **Swipe between films in a series.** Horizontal swipe in either modal
+  navigates to the next/prev sibling chronologically, crossing the
+  canon/non-canon boundary transparently (canonical → `FilmDetailModal`
+  swap, non-canon → `SeriesFilmPreview` swap). Falls back to series siblings
+  automatically when the modal is opened without a useful cohort (Journey
+  tab, Battle, Activity Feed, or a 1-result Films search).
+- **Series-aware series-preview entry from FilmCard.** Clicking a non-canon
+  poster in the Journey-card's own series strip opens the preview directly
+  instead of routing through the detail modal first.
+
+### Mobile modal polish — chris-testing
+- **Pop-out card look.** Modal now reads as a rounded card floating on a
+  dim backdrop (20px corners, 84dvh max height, 28px/14px overlay padding),
+  matching the Journey card's visual language. Previous edge-to-edge
+  override in `.film-detail-modal` was undoing the generic `.modal` mobile
+  polish; now both stay in sync.
+- **Drag-to-close.** Modal follows your finger when scrolled to the top,
+  rubber-bands past 150px, and closes past 120px with a synchronized
+  slide-off-bottom + backdrop-fade animation (200ms). Mid-scroll drags are
+  ignored so you can read long plot summaries without accidentally closing.
+- **Swipe between films.** Horizontal swipe animates a 40% slide-out + a
+  opposite-side slide-in (cubic-bezier 0.16/1/0.3/1). Swiping past the end
+  of the list snap-backs instead of starting a doomed animation.
+- **iOS Safari rubber-band fix.** `overscroll-behavior-y: none` on the
+  scroll container stops iOS from bouncing inner content while the JS drag
+  is translating the modal frame — the poster no longer detaches from the
+  modal's top edge mid-swipe.
+- **Single scroll container.** Flattened the previously-nested
+  `.film-detail-inner` overflow so `.film-detail-modal` is the only
+  scroller; fixes the swipe-to-close gesture (nested scroller was keeping
+  the outer `scrollTop` at 0 regardless of position).
+- **"Part of" prefix dropped** from the series heading and non-canon preview
+  tag — the series name speaks for itself in context.
+
+### Phone testing setup — chris-testing
+- Vite dev server now serves HTTPS via `@vitejs/plugin-basic-ssl` and
+  exposes on the LAN (`server.host: true`); HMR pinned to `wss` so
+  hot-reload works over the LAN tunnel.
+
+### Post-merge polish pass — chris-testing
+- Animation timing bug: `resetTransform`'s trailing 240ms `transition`-clear
+  was firing mid-swipe and snapping the incoming film into place instead of
+  gliding it in. Tracked via a ref so successive swipes cancel the stale
+  timer. Same fix applied to `SeriesFilmPreview`.
+- Dead code removed: `SeriesSection`'s internal `<SeriesFilmPreview>`
+  fallback was unreachable (all callers already pass `onClickOutOfCatalog`);
+  plus a block of legacy `.series-header*` / `.series-film*` /
+  `.series-chevron` / `.series-preview-genres` / `.series-preview-genre-pill`
+  CSS that had been orphaned by the switch from vertical list to horizontal
+  strip.
+
 ## 3.1.0 — 2026-04-17
 
 ### Profiles: Canon Score drill-down + Daily Oscar streak — chris-testing

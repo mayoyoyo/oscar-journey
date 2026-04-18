@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { MOVIES, MOVIES_BY_ID } from './data/movies';
+import { getSeriesForFilm } from './data/seriesCollections';
 import { getTier } from './utils/tierInfo';
 import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffle';
 import {
@@ -16,6 +17,7 @@ import NavButtons from './components/NavButtons';
 import CompletionScreen from './components/CompletionScreen';
 import FilmList from './components/FilmList';
 import FilmDetailModal from './components/FilmDetailModal';
+import SeriesFilmPreview from './components/SeriesFilmPreview';
 import SettingsModal, { DEFAULT_FILTERS } from './components/SettingsModal';
 import LoginScreen from './components/LoginScreen';
 import MovieBattle from './components/MovieBattle';
@@ -263,6 +265,9 @@ export default function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [detailMovie, setDetailMovie] = useState(null);
   const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
+  // Series preview modal lives at the app root so it can replace the detail
+  // modal cleanly when a user clicks an out-of-canon sibling from within it.
+  const [seriesPreview, setSeriesPreview] = useState(null); // { film, collectionName } | null
   const [infoOpen, setInfoOpen] = useState(false);
   const [profileModalId, setProfileModalId] = useState(null);
   const [autoSelectProfileId, setAutoSelectProfileId] = useState(() => {
@@ -1020,6 +1025,12 @@ export default function App() {
     firebaseSave('privateProfile', val);
   }, [firebaseSave]);
 
+  // --- Hide Daily Oscar banner toggle ---
+  const handleHideDailyOscarChange = useCallback((val) => {
+    setProfile(prev => prev ? { ...prev, hideDailyOscar: val } : prev);
+    firebaseSave('hideDailyOscar', val);
+  }, [firebaseSave]);
+
   // --- Skip film ---
   const handleSkip = useCallback(() => {
     if (!currentMovie || playlist.length === 0) return;
@@ -1190,7 +1201,7 @@ export default function App() {
                 </div>
               )}
               {/* Daily Oscar banner */}
-              {(() => {
+              {!profile?.hideDailyOscar && (() => {
                 const status = getDailyStatus();
                 const streak = getDailyStreak();
                 return (
@@ -1232,6 +1243,10 @@ export default function App() {
                 currentProfileId={profile?.id}
                 onOpenDetail={setDetailMovie}
                 onOpenProfile={(id) => setProfileModalId(id)}
+                onOpenSeriesPreview={(film, collectionName) => {
+                  setSeriesPreview({ film, collectionName });
+                }}
+                watchedSet={watchedSet}
               />
               <NavButtons
                 currentIdx={currentIdx}
@@ -1327,20 +1342,70 @@ export default function App() {
       </div>
 
       {/* Film detail modal */}
-      {detailMovie && (
-        <FilmDetailModal
-          movie={detailMovie}
-          isWatched={isDetailWatched}
-          onToggleWatched={() => toggleWatchedForMovie(detailMovie)}
-          onClose={() => { setDetailMovie(null); setDetailMovieList(null); }}
+      {detailMovie && (() => {
+        // When opened without a useful movieList (Journey/Battle/Activity
+        // Feed have none; a Films search that returns a single result gives
+        // a 1-item list that's useless for swiping) and the film belongs to
+        // a series, fall back to swiping through that series's chronological
+        // siblings so Star Wars → Empire → Jedi → etc. just works.
+        const hasUsefulList = detailMovieList && detailMovieList.length > 1;
+        const series = !hasUsefulList ? getSeriesForFilm(detailMovie.id) : null;
+        const seriesSiblings = series ? series.siblings : null;
+        const seriesCollectionName = series ? series.collection.name : null;
+        return (
+          <FilmDetailModal
+            movie={detailMovie}
+            isWatched={isDetailWatched}
+            onToggleWatched={() => toggleWatchedForMovie(detailMovie)}
+            onClose={() => { setDetailMovie(null); setDetailMovieList(null); }}
+            ratings={ratings}
+            personalElo={profile?.personalElo}
+            onRatingChange={handleRatingChange}
+            raters={raters}
+            movieList={hasUsefulList ? detailMovieList : null}
+            onNavigate={(movie) => setDetailMovie(movie)}
+            onOpenProfile={(id) => setProfileModalId(id)}
+            wallet={profile?.wallet}
+            onOpenSeriesPreview={(film, collectionName) => {
+              setDetailMovie(null);
+              setDetailMovieList(null);
+              setSeriesPreview({ film, collectionName });
+            }}
+            watchedSet={watchedSet}
+            seriesSiblings={seriesSiblings}
+            onSeriesNavigate={(sibling) => {
+              if (sibling.inCatalog) {
+                const m = MOVIES_BY_ID[sibling.catalogId] || MOVIES.find((mv) => mv.id === sibling.catalogId);
+                if (m) setDetailMovie(m);
+              } else {
+                setDetailMovie(null);
+                setDetailMovieList(null);
+                setSeriesPreview({ film: sibling, collectionName: seriesCollectionName });
+              }
+            }}
+          />
+        );
+      })()}
+
+      {/* Series-film preview (for out-of-canon siblings). Rendered here so
+          it cleanly replaces the detail modal instead of stacking on top.
+          Watched/rating props are threaded through so out-of-canon films
+          can be marked and rated just like catalog films (stored under
+          `tmdb:<id>` keys in the same watchedSet/ratings stores). */}
+      {seriesPreview && (
+        <SeriesFilmPreview
+          film={seriesPreview.film}
+          collectionName={seriesPreview.collectionName}
+          onClose={() => setSeriesPreview(null)}
+          onNavigate={(movie) => {
+            setSeriesPreview(null);
+            setDetailMovie(movie);
+          }}
+          watchedSet={watchedSet}
+          onToggleWatched={toggleWatchedForMovie}
           ratings={ratings}
-          personalElo={profile?.personalElo}
           onRatingChange={handleRatingChange}
           raters={raters}
-          movieList={detailMovieList}
-          onNavigate={(movie) => setDetailMovie(movie)}
-          onOpenProfile={(id) => setProfileModalId(id)}
-          wallet={profile?.wallet}
         />
       )}
 
@@ -1355,6 +1420,8 @@ export default function App() {
           onAllowSkipChange={handleAllowSkipChange}
           simpleBattle={profile?.simpleBattle || false}
           onSimpleBattleChange={handleSimpleBattleChange}
+          hideDailyOscar={profile?.hideDailyOscar || false}
+          onHideDailyOscarChange={handleHideDailyOscarChange}
           privateProfile={profile?.privateProfile || false}
           onPrivateProfileChange={handlePrivateProfileChange}
           onClose={() => setSettingsOpen(false)}

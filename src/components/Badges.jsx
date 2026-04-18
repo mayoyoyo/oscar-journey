@@ -82,7 +82,10 @@ export function BadgeBpSm() {
 // statuette icon (gold=winner, gray=nominee, none=essential/canon-only) carries
 // the Oscars-vs-Essentials demarcation; absence of an icon implies canon-only.
 // Tier pips sit inline so every A-Z row stays on a single line.
-export function MovieBadges({ movie, small = false, excludeOscars = false }) {
+//
+// excludeGenre=true skips the genre pill — used where the caller renders
+// BadgeGenreSm inline in the year/pips row instead, saving a row.
+export function MovieBadges({ movie, small = false, excludeOscars = false, excludeGenre = false }) {
   const alsoWon = movie.alsoWon || [];
   const oscarStatus = getOscarStatus(movie);
 
@@ -110,12 +113,15 @@ export function MovieBadges({ movie, small = false, excludeOscars = false }) {
   const wonBP   = movie.won === true && movie.category === 'BP';
   const wonINT  = movie.category === 'INT' || alsoWon.includes('INT');
   const wonANIM = movie.category === 'ANIM' || alsoWon.includes('ANIM');
+  const hasWinnerPill = wonBP || wonINT || wonANIM;
+  // Nothing to render if genre is hidden and there are no winner pills.
+  if (excludeGenre && !hasWinnerPill) return null;
   return (
     <div className="badges">
       {wonBP   && <BadgeWinner movie={movie} kind="bp"   />}
       {wonINT  && <BadgeWinner movie={movie} kind="int"  />}
       {wonANIM && <BadgeWinner movie={movie} kind="anim" />}
-      <BadgeGenre genre={movie.genre} />
+      {!excludeGenre && <BadgeGenre genre={movie.genre} />}
     </div>
   );
 }

@@ -33,6 +33,28 @@
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-brand: 'Cinzel', Georgia, serif;
+
+  /* Design-system type scale (see design-system/colors_and_type.css) */
+  --fs-wordmark:  0.82rem;
+  --fs-eyebrow:   0.68rem;
+  --fs-micro:     0.7rem;
+  --fs-small:     0.82rem;
+  --fs-body:      0.9rem;
+  --fs-title-sm:  1.15rem;
+  --fs-title:     1.5rem;
+  --fs-title-lg:  1.7rem;
+  --fs-display:   2.2rem;
+  --fs-hero:      2.4rem;
+
+  --ls-wordmark:  0.22em;
+  --ls-brand-bot: 0.1em;
+  --ls-eyebrow:   0.14em;
+  --ls-allcaps:   0.14em;
+  --ls-label:     0.06em;
+
+  --lh-tight:     1.12;
+  --lh-snug:      1.2;
+  --lh-normal:    1.6;
 }
 
 [data-theme="dark"] {
@@ -479,8 +501,16 @@ main {
   gap: 8px;
   flex-wrap: wrap;
 }
-/* Tier pips sit inline with the year + runtime line in the detail modal */
-.film-year .tier-pips {
+/* Tier pips sit inline with the year + runtime line in the detail modal.
+ * Normalize the pip pill and genre pill to the same height so they sit
+ * flush on the same baseline — prevents the tier pill from looking
+ * "short" next to the bigger genre pill. */
+.film-year .tier-pips,
+.film-year .badge-genre-sm {
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
   vertical-align: middle;
 }
 .film-year-runtime {
@@ -748,11 +778,18 @@ main {
   gap: 3px;
   padding: 4px 9px;
   border-radius: 50px;
-  background: var(--bg3);
-  border: 1px solid var(--border);
+  /* Light-mode default: gold tint reads against the cream page bg where
+   * --bg3 would otherwise be invisible. Dark mode overrides below. */
+  background: rgba(139, 105, 20, 0.08);
+  border: 1px solid rgba(139, 105, 20, 0.32);
   cursor: help;
   line-height: 1;
   transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+[data-theme="dark"] .tier-pips {
+  background: var(--bg3);
+  border-color: var(--border);
 }
 
 .tier-pips-interactive {
@@ -801,20 +838,45 @@ main {
    - tier 4 (Masterwork, 49 films): brighter silver/platinum
    - tier 5 (Apex, 16 films): gold
    Together they elevate the top 136 films of the catalog. */
+/* Light-mode tier-3 (Landmark): medium silver — darker than the dark-mode
+ * palette so it reads against cream, but still visually lighter than
+ * tier-4's steel so the hierarchy holds. Dark mode keeps the original
+ * softer silver via the override below. */
 .tier-pips.tier-3 .tier-pip.filled {
+  background: linear-gradient(135deg, #8c8c9e 0%, #acacbe 100%);
+  box-shadow: 0 0 4px rgba(130, 130, 160, 0.4);
+}
+.tier-pips.tier-3 {
+  background: linear-gradient(135deg, rgba(140, 140, 170, 0.12), rgba(100, 100, 130, 0.06));
+  border-color: rgba(140, 140, 170, 0.5);
+}
+
+[data-theme="dark"] .tier-pips.tier-3 .tier-pip.filled {
   background: linear-gradient(135deg, #a8a8b8 0%, #c8c8d4 100%);
   box-shadow: 0 0 4px rgba(180, 180, 200, 0.45);
 }
-.tier-pips.tier-3 {
+[data-theme="dark"] .tier-pips.tier-3 {
   background: linear-gradient(135deg, rgba(200, 200, 215, 0.1), rgba(120, 120, 140, 0.06));
   border-color: rgba(180, 180, 200, 0.5);
 }
 
+/* Light-mode tier-4 (Masterwork): darker steel reads against cream where
+ * the dark-mode platinum would wash out. Dark mode keeps the bright
+ * platinum via the override below. */
 .tier-pips.tier-4 .tier-pip.filled {
+  background: linear-gradient(135deg, #686880 0%, #8a8aa8 100%);
+  box-shadow: 0 0 5px rgba(100, 100, 140, 0.35);
+}
+.tier-pips.tier-4 {
+  background: linear-gradient(135deg, rgba(110, 110, 150, 0.14), rgba(80, 80, 110, 0.08));
+  border-color: rgba(110, 110, 150, 0.55);
+}
+
+[data-theme="dark"] .tier-pips.tier-4 .tier-pip.filled {
   background: linear-gradient(135deg, #d0d0e0 0%, #ececf4 100%);
   box-shadow: 0 0 5px rgba(220, 220, 240, 0.55);
 }
-.tier-pips.tier-4 {
+[data-theme="dark"] .tier-pips.tier-4 {
   background: linear-gradient(135deg, rgba(220, 220, 240, 0.12), rgba(150, 150, 170, 0.08));
   border-color: rgba(210, 210, 230, 0.6);
 }
@@ -1355,6 +1417,33 @@ main {
   padding: 16px 24px;
   border-bottom: 1px solid var(--border);
 }
+
+/* New grouped layout — four logical clusters (Profile / Preferences /
+ * Data / About) with a small uppercase gold heading each. Replaces the
+ * old flat list of labeled .settings-section blocks. */
+.settings-group {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.settings-group:last-child {
+  border-bottom: none;
+}
+.settings-group-heading {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+.settings-item {
+  margin-bottom: 14px;
+}
+.settings-item:last-child {
+  margin-bottom: 0;
+}
+
 .settings-label {
   display: block;
   font-size: 0.7rem;
@@ -1523,6 +1612,7 @@ main {
   .settings-modal { max-width: 100%; }
   .settings-title { padding: 20px 16px 0; font-size: 1.15rem; }
   .settings-section { padding: 14px 16px; }
+  .settings-group { padding: 14px 16px; }
   .settings-version { padding: 14px 16px 20px; }
 }
 
@@ -1670,6 +1760,13 @@ main {
   animation: modalOverlayIn 0.25s ease;
 }
 
+/* Skip the overlay fade-in when we're replacing one modal with another —
+ * the preview opens in place of the detail modal, so re-fading the black
+ * overlay from 0 would flash the page behind. Inner content still animates. */
+.modal-overlay.modal-overlay-instant.open {
+  animation: none;
+}
+
 @keyframes modalOverlayIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -1698,12 +1795,22 @@ main {
 @media (max-width: 540px) {
   .modal {
     padding: 0;
-    border-radius: 12px;
-    max-height: 90dvh;
+    /* Match the journey card's corner radius exactly so the modal reads
+     * as the same kind of card, just popped out on a dim backdrop. */
+    border-radius: 20px;
+    max-height: 84dvh;
     overflow-y: auto;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px var(--shadow), 0 0 0 1px rgba(255,255,255,0.03);
+    /* `none` (not `contain`) is required to kill iOS Safari's rubber-band
+     * overscroll — otherwise a downward drag at scrollTop:0 bounces the
+     * inner content while our JS translates the modal, visually detaching
+     * the poster from the modal's top edge. */
+    overscroll-behavior-y: none;
+    will-change: transform;
   }
   .modal-overlay {
-    padding: 8px;
+    padding: 28px 14px;
   }
   .film-detail-close {
     top: 8px;
@@ -2461,16 +2568,27 @@ main {
 .film-detail-modal {
   max-width: 520px;
   padding: 0;
-  overflow: hidden;
+  /* Clip horizontal overflow for the rounded-corner look, but allow
+   * vertical scrolling — the modal is the scroll container now that
+   * .film-detail-inner no longer has its own overflow. */
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
+  /* Prevent iOS Safari's rubber-band overscroll from fighting the JS
+   * drag-to-close: without this, at scrollTop:0 a downward drag bounces
+   * the inner content AND translates the modal, so the poster visibly
+   * detaches from the modal's top edge mid-swipe. `none` (not `contain`)
+   * is required — contain only stops chaining, not the bounce itself. */
+  overscroll-behavior-y: none;
 }
 
 .film-detail-inner {
   display: flex;
   flex-direction: column;
-  max-height: 85dvh;
-  overflow-y: auto;
   border-radius: 10px;
+  /* The containing .modal is the single scroll container. Nesting
+   * overflow-y here would create a nested scroller that breaks the
+   * swipe-to-close gesture (scrollTop stays 0 on the outer modal). */
 }
 
 .film-detail-poster {
@@ -2600,6 +2718,197 @@ main {
 .film-detail-runtime {
   font-size: 0.82rem;
   color: var(--cream-dim);
+}
+
+/* ---------- Series / collection section ---------- */
+/* Horizontal poster strip — the collection is visible at a glance rather
+ * than hidden behind an expand/collapse. Current film gets a gold ring;
+ * out-of-canon films are dimmed to lift canon members visually. */
+.series-section {
+  margin: 14px 0 6px;
+}
+
+.series-heading {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+}
+
+.series-name {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.series-meta-inline {
+  color: var(--cream-dim);
+  font-size: 0.82rem;
+}
+
+.series-sep {
+  margin: 0 6px;
+  opacity: 0.45;
+  color: var(--cream-dim);
+}
+
+.series-strip {
+  list-style: none;
+  /* Negative side margins + matching padding reserve room for the current
+   * poster's gold outline (which extends 3px outside each item's box)
+   * without misaligning the first poster from the text above. Equal
+   * padding on all sides so the outline clears top/bottom too. */
+  margin: 0 -6px;
+  padding: 6px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Edge legacy */
+  cursor: grab;
+  user-select: none;
+}
+
+.series-strip.is-dragging {
+  cursor: grabbing;
+}
+
+.series-strip::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+/* Subtle right-edge fade hints at more content when the strip overflows.
+ * Harmless when the strip fits — just blends with the modal background. */
+.series-section {
+  position: relative;
+}
+.series-section::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 66px;
+  width: 24px;
+  background: linear-gradient(to right, transparent, var(--bg2));
+  pointer-events: none;
+}
+
+.series-strip-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 44px;
+  transition: transform 120ms ease;
+}
+
+.series-strip-item.is-clickable {
+  cursor: pointer;
+}
+
+.series-strip-item.is-clickable:hover {
+  transform: translateY(-2px);
+}
+
+.series-strip-item.is-current .series-strip-poster {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+  /* No box-shadow glow — it extends 8+ px outside the box and gets clipped
+   * by the strip's overflow. The crisp outline alone carries the emphasis. */
+}
+
+.series-strip-item.is-out-of-canon .series-strip-poster {
+  opacity: 0.55;
+  filter: grayscale(0.15);
+}
+
+.series-strip-item.is-out-of-canon.is-clickable:hover .series-strip-poster {
+  opacity: 0.85;
+  filter: grayscale(0);
+}
+
+.series-strip-poster {
+  width: 44px;
+  height: 66px;
+  object-fit: cover;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+  /* Block native image drag so the browser doesn't fight our custom
+   * drag-to-scroll by also spawning the "drag an image to your desktop"
+   * ghost preview. */
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.series-strip-poster-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--cream-dim);
+}
+
+.series-strip-order {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--cream);
+  background: rgba(0, 0, 0, 0.65);
+  padding: 1px 4px;
+  border-radius: 3px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.series-strip-item.is-current .series-strip-order {
+  background: var(--gold);
+  color: #2a2000;
+}
+
+/* Watched indicator — small gold disc with a check mark in the top-left
+ * corner of the poster. Sits opposite the bottom-right order badge so the
+ * two never overlap. */
+.series-strip-watched {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #2a2000;
+  font-size: 0.58rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+/* Series film preview modal — reuses .film-detail-* classes for poster,
+ * title, year, director, starring, and plot. These extras style the
+ * "not in canon" banner and the metric-value-label used in place of a
+ * numeric rating on out-of-canon films.
+ */
+.series-preview-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--cream-dim);
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+/* Bold uppercase label used where a metric has no numeric value (e.g. IMDb
+ * link in the series preview modal), so it aligns vertically with the
+ * star-rating metric-items next to it. */
+.metric-value-label {
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .film-detail-awards {
@@ -4293,33 +4602,38 @@ main {
   .card-owner-badge { font-size: 0.7rem; }
 
   .film-detail-modal {
+    /* Keep in sync with the generic .modal mobile styles so this more-
+     * specific selector doesn't undo them. Was previously forcing
+     * edge-to-edge (border-radius: 0, max-height: 100dvh) which defeated
+     * the pop-out-card look. */
     max-width: 100%;
-    border-radius: 0;
-    max-height: 100dvh;
+    border-radius: 20px;
+    max-height: 84dvh;
   }
   .film-detail-inner {
     flex-direction: column;
-    max-height: 100dvh;
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
+  /* Match the Journey card's poster area: chunkier poster, relaxed padding,
+   * same gradient background — so the modal reads as the same kind of
+   * card, just popped out. */
   .film-detail-poster {
     width: 100%;
     min-width: unset;
     height: auto;
     display: flex;
     justify-content: center;
-    padding: 40px 20px 12px;
+    padding: 20px 20px 12px;
     background: linear-gradient(160deg, var(--bg3), var(--bg2));
   }
   .film-detail-poster img {
     width: auto;
-    max-width: 40%;
+    max-width: 50%;
     height: auto;
-    max-height: 180px;
+    max-height: 240px;
     object-fit: contain;
-    border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.05);
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.05);
   }
   .film-detail-poster .poster-placeholder,
   .film-detail-poster .poster-loading { min-height: 120px; height: 120px; }

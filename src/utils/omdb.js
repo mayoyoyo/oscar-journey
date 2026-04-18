@@ -1,4 +1,5 @@
 import { RUNTIME_OVERRIDES } from './runtimeOverrides';
+import IMDB_IDS from '../data/imdbIds.json';
 
 // 'ab8cbc12' removed — returns 401 (key disabled/invalid). 9 keys remain.
 const OMDB_KEYS = ['84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8', 'fbe9d009', '8a3c9a0', 'b76841fa'];
@@ -38,6 +39,10 @@ const OMDB_TITLE_OVERRIDES = {
   // OMDb indexes Il Postino (1994) as "The Postman" — querying 'Il Postino' returns
   // a 31-min behind-the-scenes short instead of the 108-min Michael Radford film.
   'Il Postino': 'The Postman',
+  // OMDb uses American spellings for these films; catalog keeps the British
+  // titles from the original prints.
+  'Three Colours: Red': 'Three Colors: Red',
+  'Blue Is the Warmest Colour': 'Blue Is the Warmest Color',
 };
 
 // Year overrides for movies where our year doesn't match OMDB
@@ -89,6 +94,26 @@ function getOmdbYear(movie) {
 // Synchronous cache read — returns the same shape as fetchOmdbData if all fields are
 // cached and valid, or null otherwise. Used to skip the loading flash when navigating
 // between films whose data is already cached in localStorage.
+// OMDb's short plot is hard-truncated at ~200 chars and ends in "..." mid-
+// sentence (e.g. "...Adèle grows, seeks herself, loses herself, and..."). This
+// trims back to the last complete sentence so the plot reads cleanly. If no
+// sentence break is recoverable, strips the ellipsis and closes with a period.
+export function tidyPlot(plot) {
+  if (!plot) return plot;
+  const trimmed = plot.trimEnd();
+  if (!/(\.{3}|…)$/.test(trimmed)) return plot;
+  const base = trimmed.replace(/[\s,;:\-–—]*(\.{3}|…)\s*$/, '');
+  const lastTerminator = Math.max(
+    base.lastIndexOf('.'),
+    base.lastIndexOf('!'),
+    base.lastIndexOf('?'),
+  );
+  if (lastTerminator >= Math.max(30, Math.floor(base.length * 0.25))) {
+    return base.slice(0, lastTerminator + 1);
+  }
+  return base.replace(/[,;:\-–—]+$/, '') + '.';
+}
+
 export function readCachedOmdbData(movie) {
   if (!movie) return null;
   const manualPoster = POSTER_OVERRIDES[movie.id] || null;
@@ -147,10 +172,16 @@ export async function fetchOmdbData(movie) {
   const ratingKey   = omdbCacheKey('rating',   movie);
   const directorKey = omdbCacheKey('director', movie);
   const runtimeKey  = omdbCacheKey('runtime',  movie);
-  // Return cached data if we have real results (not rate-limit failures or missing posters)
+  // Return cached data if we have real results (not rate-limit failures or missing posters).
+  // When we have a known imdb_id for this film, an all-NOT_FOUND cache entry
+  // is almost certainly stale — it was written before the imdb_id backfill
+  // landed, when OMDb's title-based search couldn't find the film. Force a
+  // re-fetch in that case so the imdb_id lookup below actually runs.
+  const imdbId = IMDB_IDS[movie.id] || null;
   const allKeys = [posterKey, plotKey, ratingKey, directorKey, runtimeKey];
   const allCached = allKeys.every(k => localStorage.getItem(k) !== null);
-  if (allCached) {
+  const cacheIsStaleNotFound = imdbId && allKeys.every(k => localStorage.getItem(k) === NOT_FOUND);
+  if (allCached && !cacheIsStaleNotFound) {
     const anyRateLimited = allKeys.some(k => localStorage.getItem(k) === 'RATE_LIMITED');
     const posterMissing = localStorage.getItem(posterKey) === NOT_FOUND;
     if (!anyRateLimited && !posterMissing) {
@@ -171,11 +202,19 @@ export async function fetchOmdbData(movie) {
     const titleEnc = encodeURIComponent(cleanTitle(movie.title));
 
     // Try with current key, rotate on rate limit OR 401 (invalid/expired key).
+    // Prefer imdb_id lookups when available — OMDb's title-based search
+    // fails on punctuation-heavy and foreign-language titles ("Je, Tu, Il,
+    // Elle", "La Ciénaga") where the imdb_id query always resolves.
     const tryWithKey = async (titleEnc, year) => {
       for (let attempt = 0; attempt < OMDB_KEYS.length; attempt++) {
         const key = OMDB_KEYS[currentKeyIndex];
-        let url = `https://www.omdbapi.com/?t=${titleEnc}&type=movie&apikey=${key}`;
-        if (year) url += `&y=${year}`;
+        let url;
+        if (imdbId) {
+          url = `https://www.omdbapi.com/?i=${imdbId}&apikey=${key}`;
+        } else {
+          url = `https://www.omdbapi.com/?t=${titleEnc}&type=movie&apikey=${key}`;
+          if (year) url += `&y=${year}`;
+        }
         let resp;
         try {
           resp = await fetch(url);

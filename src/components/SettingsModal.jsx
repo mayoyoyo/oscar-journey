@@ -64,7 +64,7 @@ const CATEGORY_LABELS = {
 
 export { DEFAULT_FILTERS, ERA_LABELS, GENRE_LABELS, CATEGORY_LABELS, SMART_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, privateProfile, onPrivateProfileChange, onClose, onClearCache, profile, onLogout }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, hideDailyOscar, onHideDailyOscarChange, privateProfile, onPrivateProfileChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
@@ -109,6 +109,19 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
     onRatersChange(updated);
   };
 
+  // Toggle rows are all the same shape — label text + active flag + handler +
+  // hint. Rendering them inline keeps the JSX compact and signals visually
+  // that they're a set (rather than unrelated one-offs with their own headers).
+  const Toggle = ({ active, onChange, label, hint }) => (
+    <div className="settings-item">
+      <div className={`settings-toggle-row ${active ? 'active' : ''}`} onClick={() => onChange(!active)}>
+        <span className="settings-toggle-switch"><span className="settings-toggle-knob" /></span>
+        <span className="settings-toggle-label">{label}</span>
+      </div>
+      {hint && <p className="settings-hint">{hint}</p>}
+    </div>
+  );
+
   return (
     <div className="modal-overlay open" onClick={(e) => {
       if (e.target === e.currentTarget) onClose();
@@ -117,103 +130,111 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <button className="settings-close" onClick={onClose}>✕</button>
         <h2 className="settings-title">Settings</h2>
 
-        {/* Avatar */}
-        <div className="settings-section">
-          <label className="settings-label">Avatar</label>
-          <div className="login-avatar-selected" onClick={() => setShowAvatarPicker(p => !p)}>
-            <span className="login-avatar-emoji">{avatar}</span>
-            <span className="login-avatar-change">{showAvatarPicker ? 'Close' : 'Tap to change'}</span>
-          </div>
-          {showAvatarPicker && (
-            <div className="login-avatar-grid" style={{ marginTop: '8px' }}>
-              {AVATAR_EMOJIS.map((emoji, i) => (
-                <button key={i} className={`login-avatar-option ${avatar === emoji ? 'selected' : ''}`}
-                  onClick={() => { onAvatarChange(emoji); setShowAvatarPicker(false); }} type="button"
-                >{emoji}</button>
-              ))}
-            </div>
-          )}
-        </div>
+        {/* ── Profile ── */}
+        <div className="settings-group">
+          <div className="settings-group-heading">Profile</div>
 
-        {/* Raters */}
-        <div className="settings-section">
-          <label className="settings-label">Raters</label>
-          <p className="settings-hint">Add people who rate films with you. Each gets their own star rating.</p>
-          <div className="settings-raters">
-            {editRaters.map((name, i) => (
-              <div key={i} className="settings-rater">
-                <span className="settings-rater-name">{name}</span>
-                <button className="settings-rater-remove" onClick={() => removeRater(i)}
-                  disabled={editRaters.length <= 1}>✕</button>
+          <div className="settings-item">
+            <label className="settings-label">Avatar</label>
+            <div className="login-avatar-selected" onClick={() => setShowAvatarPicker(p => !p)}>
+              <span className="login-avatar-emoji">{avatar}</span>
+              <span className="login-avatar-change">{showAvatarPicker ? 'Close' : 'Tap to change'}</span>
+            </div>
+            {showAvatarPicker && (
+              <div className="login-avatar-grid" style={{ marginTop: '8px' }}>
+                {AVATAR_EMOJIS.map((emoji, i) => (
+                  <button key={i} className={`login-avatar-option ${avatar === emoji ? 'selected' : ''}`}
+                    onClick={() => { onAvatarChange(emoji); setShowAvatarPicker(false); }} type="button"
+                  >{emoji}</button>
+                ))}
               </div>
-            ))}
-            <div className="settings-rater-add">
-              <input type="text" value={newName} onChange={(e) => setNewName(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && addRater()} placeholder="Add a name..."
-                className="settings-rater-input" />
-              <button className="settings-rater-btn" onClick={addRater} disabled={!newName.trim()}>Add</button>
+            )}
+          </div>
+
+          <div className="settings-item">
+            <label className="settings-label">Raters</label>
+            <p className="settings-hint">Add people who rate films with you. Each gets their own star rating.</p>
+            <div className="settings-raters">
+              {editRaters.map((name, i) => (
+                <div key={i} className="settings-rater">
+                  <span className="settings-rater-name">{name}</span>
+                  <button className="settings-rater-remove" onClick={() => removeRater(i)}
+                    disabled={editRaters.length <= 1}>✕</button>
+                </div>
+              ))}
+              <div className="settings-rater-add">
+                <input type="text" value={newName} onChange={(e) => setNewName(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && addRater()} placeholder="Add a name..."
+                  className="settings-rater-input" />
+                <button className="settings-rater-btn" onClick={addRater} disabled={!newName.trim()}>Add</button>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Journey toggle */}
-        <div className="settings-section">
-          <label className="settings-label">Journey</label>
-          <div className={`settings-toggle-row ${allowSkip ? 'active' : ''}`} onClick={() => onAllowSkipChange(!allowSkip)}>
-            <span className="settings-toggle-switch"><span className="settings-toggle-knob" /></span>
-            <span className="settings-toggle-label">Allow skipping films</span>
-          </div>
-          <p className="settings-hint">Shows a skip button on the journey card. We don't recommend it. 😤</p>
+        {/* ── Preferences ── */}
+        <div className="settings-group">
+          <div className="settings-group-heading">Preferences</div>
+
+          <Toggle
+            active={allowSkip}
+            onChange={onAllowSkipChange}
+            label="Allow skipping films"
+            hint="Shows a skip button on the journey card. We don't recommend it. 😤"
+          />
+          <Toggle
+            active={hideDailyOscar}
+            onChange={onHideDailyOscarChange}
+            label="Hide Daily Oscar banner"
+            hint="Removes the Daily Oscar quote-quiz banner from the journey page. You can still play it from elsewhere."
+          />
+          <Toggle
+            active={simpleBattle}
+            onChange={onSimpleBattleChange}
+            label="Simple battle graphics"
+            hint="Removes animations for faster battles. Visual feedback still shown."
+          />
+          <Toggle
+            active={privateProfile}
+            onChange={onPrivateProfileChange}
+            label="Private profile"
+            hint="Hide your profile from the Profiles page. Others won't see your stats, watched films, or cards."
+          />
         </div>
 
-        {/* Battle toggle */}
-        <div className="settings-section">
-          <label className="settings-label">Battle</label>
-          <div className={`settings-toggle-row ${simpleBattle ? 'active' : ''}`} onClick={() => onSimpleBattleChange(!simpleBattle)}>
-            <span className="settings-toggle-switch"><span className="settings-toggle-knob" /></span>
-            <span className="settings-toggle-label">Simple battle graphics</span>
-          </div>
-          <p className="settings-hint">Removes animations for faster battles. Visual feedback still shown.</p>
-        </div>
-
-        {/* Privacy */}
-        <div className="settings-section">
-          <label className="settings-label">Privacy</label>
-          <div className={`settings-toggle-row ${privateProfile ? 'active' : ''}`} onClick={() => onPrivateProfileChange(!privateProfile)}>
-            <span className="settings-toggle-switch"><span className="settings-toggle-knob" /></span>
-            <span className="settings-toggle-label">Private profile</span>
-          </div>
-          <p className="settings-hint">Hide your profile from the Profiles page. Others won't see your stats, watched films, or cards.</p>
-        </div>
-
-        {/* Actions */}
-        <div className="settings-section settings-actions">
-          {profile && (
-            <button className="settings-action-btn" onClick={handleExportData}>
-              <span>📥</span> Download My Data
+        {/* ── Data ── */}
+        <div className="settings-group">
+          <div className="settings-group-heading">Data</div>
+          <div className="settings-actions">
+            {profile && (
+              <button className="settings-action-btn" onClick={handleExportData}>
+                <span>📥</span> Download My Data
+              </button>
+            )}
+            <button className="settings-action-btn" onClick={onClearCache}>
+              <span>🔄</span> Clear Poster Cache
             </button>
-          )}
-          <button className="settings-action-btn" onClick={onClearCache}>
-            <span>🔄</span> Clear Poster Cache
-          </button>
-          {profile && onLogout && (
-            <button className="settings-action-btn settings-logout" onClick={() => {
-              if (window.confirm('Log out? Your data is saved.')) onLogout();
-            }}>
-              Log Out
-            </button>
-          )}
+            {profile && onLogout && (
+              <button className="settings-action-btn settings-logout" onClick={() => {
+                if (window.confirm('Log out? Your data is saved.')) onLogout();
+              }}>
+                Log Out
+              </button>
+            )}
+          </div>
         </div>
 
-        {/* Version */}
-        <div className="settings-version">
-          <div className="settings-version-row">
-            <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v3.2.0</span>
-          </div>
-          <details className="settings-changelog">
-            <summary>Changelog</summary>
-            <div className="settings-changelog-content">
+        {/* ── About ── */}
+        <div className="settings-group">
+          <div className="settings-group-heading">About</div>
+          <div className="settings-version">
+            <div className="settings-version-row">
+              <span className="settings-version-label">Version</span>
+              <span className="settings-version-num">v3.2.0</span>
+            </div>
+            <details className="settings-changelog">
+              <summary>Changelog</summary>
+              <div className="settings-changelog-content">
               <p><strong>v3.2.0</strong> — Catalog refresh + 5-tier canon + UI polish</p>
               <ul>
                 <li><strong>Refreshed canon-list data</strong> — all source lists rescraped from scratch (Sight &amp; Sound 2022, AFI 100+10 Top 10, Criterion spine, IMDb Top 250, Letterboxd Top 250, National Film Registry, Cannes/Venice/Berlin grand prizes), plus a new 8th list: <strong>Rotten Tomatoes Top 300</strong>. Title-alias map added for foreign-language / variant titles (La Règle du jeu → Rules of the Game, Tokyo Monogatari → Tokyo Story, Star Wars Episode IV → Star Wars, etc.) so triangulation actually matches across lists. Scrape-gap patches for Vertigo (missing from RT), 2001 (bad year on IMDb scrape), Rashomon (festival year 1951 for 1950 film), and a ±1-year merge for all films so festival years don't fragment the canon lookup</li>
@@ -373,8 +394,9 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
                 <li>Battle mode with ELO rankings</li>
                 <li>Profiles with stats and leaderboard</li>
               </ul>
-            </div>
-          </details>
+              </div>
+            </details>
+          </div>
         </div>
       </div>
     </div>

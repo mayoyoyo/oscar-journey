@@ -9,6 +9,11 @@ backups/
 scripts/wq-cache/
 scripts/wq-extracted/
 
+# TMDB backfill cache (local-only, regenerated on demand)
+scripts/tmdb-cache.json
+scripts/series-report.json
+scripts/imdb-id-cache.json
+
 # Editor / agent artifacts
 .claude/
 .playwright-mcp/

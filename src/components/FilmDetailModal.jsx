@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { fetchOmdbData, readCachedOmdbData, parseOscarWins } from '../utils/omdb';
-import { MovieBadges } from './Badges';
+import { fetchOmdbData, readCachedOmdbData, parseOscarWins, tidyPlot } from '../utils/omdb';
+import { MovieBadges, BadgeGenreSm } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
 import LanguagePill from './LanguagePill';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
+import IMDB_IDS from '../data/imdbIds.json';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
@@ -13,11 +14,12 @@ import { doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import { db } from '../utils/firebase';
 import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
+import SeriesSection from './SeriesSection';
 
 import { RARITIES } from '../utils/cards';
 import { getCardOwner } from '../utils/cardRegistry';
 
-export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet }) {
+export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet, onOpenSeriesPreview, watchedSet, seriesSiblings, onSeriesNavigate }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [globalElo, setGlobalElo] = useState(null);
@@ -108,50 +110,221 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     return () => { cancelled = true; };
   }, [movie?.title, movie?.year, movie?.id]);
 
-  // Navigation within movie list
+  // Navigation within movie list. If no explicit movieList is provided but
+  // the film is part of a series, we fall back to sibling navigation —
+  // siblings can include out-of-canon films, which the parent swaps over
+  // to SeriesFilmPreview via onSeriesNavigate.
   const currentListIdx = movie && movieList ? movieList.findIndex(m => m.id === movie.id) : -1;
-  const hasPrev = movieList && currentListIdx > 0;
-  const hasNext = movieList && currentListIdx >= 0 && currentListIdx < movieList.length - 1;
+  const currentSeriesIdx = !movieList && movie && seriesSiblings
+    ? seriesSiblings.findIndex((s) => s.catalogId === movie.id)
+    : -1;
+  const hasPrev = movieList
+    ? currentListIdx > 0
+    : currentSeriesIdx > 0;
+  const hasNext = movieList
+    ? currentListIdx >= 0 && currentListIdx < movieList.length - 1
+    : currentSeriesIdx >= 0 && currentSeriesIdx < (seriesSiblings?.length ?? 0) - 1;
 
   const goPrev = useCallback(() => {
-    if (!movieList || !onNavigate) return;
-    const idx = movieList.findIndex(m => m.id === movie?.id);
-    if (idx > 0) onNavigate(movieList[idx - 1]);
-  }, [movie?.id, movieList, onNavigate]);
+    if (movieList && onNavigate) {
+      const idx = movieList.findIndex(m => m.id === movie?.id);
+      if (idx > 0) onNavigate(movieList[idx - 1]);
+      return;
+    }
+    if (seriesSiblings && onSeriesNavigate) {
+      const idx = seriesSiblings.findIndex((s) => s.catalogId === movie?.id);
+      if (idx > 0) onSeriesNavigate(seriesSiblings[idx - 1]);
+    }
+  }, [movie?.id, movieList, onNavigate, seriesSiblings, onSeriesNavigate]);
 
   const goNext = useCallback(() => {
-    if (!movieList || !onNavigate) return;
-    const idx = movieList.findIndex(m => m.id === movie?.id);
-    if (idx >= 0 && idx < movieList.length - 1) onNavigate(movieList[idx + 1]);
-  }, [movie?.id, movieList, onNavigate]);
+    if (movieList && onNavigate) {
+      const idx = movieList.findIndex(m => m.id === movie?.id);
+      if (idx >= 0 && idx < movieList.length - 1) onNavigate(movieList[idx + 1]);
+      return;
+    }
+    if (seriesSiblings && onSeriesNavigate) {
+      const idx = seriesSiblings.findIndex((s) => s.catalogId === movie?.id);
+      if (idx >= 0 && idx < seriesSiblings.length - 1) onSeriesNavigate(seriesSiblings[idx + 1]);
+    }
+  }, [movie?.id, movieList, onNavigate, seriesSiblings, onSeriesNavigate]);
 
-  // Keyboard navigation
+  // Animated variants — slide the current content out, call the navigate
+  // handler (which swaps the movie prop), slide the new content in from
+  // the opposite side. Keeps the eye tracking from film → film.
+  const animatedGo = useCallback((direction) => {
+    const el = modalRef.current;
+    const go = direction > 0 ? goNext : goPrev;
+    if (!el) { go(); return; }
+    // If a resetTransform is pending (horizontal swipe path calls it right
+    // before us), cancel its stale clear-transition timer or it will fire
+    // mid-animation and snap the modal instead of gliding it.
+    if (transitionClearTimer.current != null) {
+      clearTimeout(transitionClearTimer.current);
+      transitionClearTimer.current = null;
+    }
+    const offset = direction > 0 ? '-40%' : '40%';
+    const opposite = direction > 0 ? '40%' : '-40%';
+    el.style.transition = 'transform 170ms ease-out, opacity 170ms ease-out';
+    el.style.transform = `translateX(${offset})`;
+    el.style.opacity = '0';
+    setTimeout(() => {
+      go();
+      // Pre-position the new content on the opposite side with no
+      // transition, then animate it back to center on the next frame.
+      if (!modalRef.current) return;
+      modalRef.current.style.transition = 'none';
+      modalRef.current.style.transform = `translateX(${opposite})`;
+      modalRef.current.style.opacity = '0';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (!modalRef.current) return;
+          modalRef.current.style.transition = 'transform 220ms cubic-bezier(0.16, 1, 0.3, 1), opacity 220ms ease-out';
+          modalRef.current.style.transform = 'translateX(0)';
+          modalRef.current.style.opacity = '1';
+          // Route this trailing transition-clear through the same ref so a
+          // rapid subsequent swipe can cancel it before it kills the next
+          // animation's transition.
+          transitionClearTimer.current = setTimeout(() => {
+            transitionClearTimer.current = null;
+            if (modalRef.current) modalRef.current.style.transition = '';
+          }, 240);
+        });
+      });
+    }, 170);
+  }, [goNext, goPrev]);
+
+  // Keyboard navigation (works for both movieList and series-sibling modes)
+  const hasNavList = !!movieList || !!seriesSiblings;
   useEffect(() => {
-    if (!movieList) return;
+    if (!hasNavList) return;
     const handler = (e) => {
       if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
       if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
     };
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
-  }, [movieList, goPrev, goNext]);
+  }, [hasNavList, goPrev, goNext]);
 
-  // Swipe gestures for mobile navigation
+  // Swipe gestures:
+  //  - horizontal swipe → prev/next film navigation (requires movieList)
+  //  - vertical drag DOWN when modal is scrolled to the top → the modal
+  //    visually follows the finger, and releasing past 120px closes it.
+  //    Mid-scroll swipes are ignored so reading long films (Alien) works.
+  //  Imperative transform updates (via ref) avoid re-rendering on every
+  //  touchmove, keeping the drag silky-smooth on mobile.
+  const modalRef = useRef(null);
   const touchStart = useRef(null);
-  const handleTouchStart = useCallback((e) => {
-    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  const currentDragY = useRef(0);
+  // Tracks the pending setTimeout from resetTransform so animatedGo can
+  // cancel it. Without this, a horizontal swipe at touchend triggers
+  // resetTransform (schedules clear at T=240ms) and then animatedGo
+  // (starts its return-slide at ~T=186ms with a 220ms transition) — the
+  // stale timeout wipes the transition mid-animation and the incoming
+  // film snaps into place instead of sliding in.
+  const transitionClearTimer = useRef(null);
+
+  const cancelTransitionClear = useCallback(() => {
+    if (transitionClearTimer.current != null) {
+      clearTimeout(transitionClearTimer.current);
+      transitionClearTimer.current = null;
+    }
   }, []);
+
+  const resetTransform = useCallback(() => {
+    const el = modalRef.current;
+    if (!el) return;
+    cancelTransitionClear();
+    el.style.transition = 'transform 220ms cubic-bezier(0.16, 1, 0.3, 1)';
+    el.style.transform = '';
+    transitionClearTimer.current = setTimeout(() => {
+      transitionClearTimer.current = null;
+      if (modalRef.current) modalRef.current.style.transition = '';
+    }, 240);
+    currentDragY.current = 0;
+  }, [cancelTransitionClear]);
+
+  // Clear any pending transition-clear timer on unmount so it can't fire
+  // against a stale DOM reference.
+  useEffect(() => () => cancelTransitionClear(), [cancelTransitionClear]);
+
+  const handleTouchStart = useCallback((e) => {
+    const el = modalRef.current;
+    touchStart.current = {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY,
+      scrollTop: el ? el.scrollTop : 0,
+    };
+    // Cancel any in-flight snap-back transition so the new drag starts
+    // from the current position, not a stale one.
+    if (el) el.style.transition = '';
+    currentDragY.current = 0;
+  }, []);
+
+  const handleTouchMove = useCallback((e) => {
+    if (!touchStart.current) return;
+    const dy = e.touches[0].clientY - touchStart.current.y;
+    const dx = e.touches[0].clientX - touchStart.current.x;
+    const atTop = touchStart.current.scrollTop <= 1;
+    // Only engage vertical drag when at top AND pulling down AND vertical
+    // is clearly dominant over horizontal (so diagonal swipes don't get
+    // half a card-drag and half a navigation).
+    if (atTop && dy > 6 && dy > Math.abs(dx)) {
+      // Rubber-band past 150px so it feels grippy, not infinite.
+      const resisted = dy > 150 ? 150 + (dy - 150) * 0.5 : dy;
+      currentDragY.current = resisted;
+      if (modalRef.current) {
+        modalRef.current.style.transform = `translateY(${resisted}px)`;
+      }
+    }
+  }, []);
+
   const handleTouchEnd = useCallback((e) => {
-    if (!touchStart.current || !movieList) return;
+    if (!touchStart.current) return;
     const dx = e.changedTouches[0].clientX - touchStart.current.x;
     const dy = e.changedTouches[0].clientY - touchStart.current.y;
-    // Only trigger if horizontal swipe is dominant and > 60px
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-      if (dx < 0) goNext();
-      else goPrev();
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(dy);
+
+    // Horizontal — animate prev/next navigation (works for both an explicit
+    // movieList and series-sibling fallback)
+    if (hasNavList && absDx > 60 && absDx > absDy * 1.5) {
+      const dir = dx < 0 ? 1 : -1;
+      // Don't start an animation if we're at the end of the list — just
+      // snap back so the user gets tactile "nothing past here" feedback.
+      if ((dir > 0 && !hasNext) || (dir < 0 && !hasPrev)) {
+        resetTransform();
+        touchStart.current = null;
+        return;
+      }
+      resetTransform();
+      animatedGo(dir);
+      touchStart.current = null;
+      return;
+    }
+
+    // Vertical — close with a smooth slide-off-bottom if user dragged far
+    // enough; otherwise snap back. Fade the overlay backdrop out alongside
+    // the card so the card doesn't visually detach from a static dark
+    // rectangle as it leaves the screen.
+    if (currentDragY.current > 120) {
+      const el = modalRef.current;
+      const overlay = el?.parentElement;
+      if (el) {
+        el.style.transition = 'transform 220ms cubic-bezier(0.4, 0, 1, 1), opacity 200ms ease-out';
+        el.style.transform = 'translateY(100vh)';
+        el.style.opacity = '0';
+      }
+      if (overlay) {
+        overlay.style.transition = 'background-color 200ms ease-out, opacity 200ms ease-out';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+      }
+      setTimeout(() => onClose(), 200);
+    } else {
+      resetTransform();
     }
     touchStart.current = null;
-  }, [goNext, goPrev, movieList]);
+  }, [animatedGo, hasNavList, hasNext, hasPrev, onClose, resetTransform]);
 
   if (!movie) return null;
 
@@ -165,9 +338,15 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     <div className="modal-overlay open" onClick={(e) => {
       if (e.target === e.currentTarget) onClose();
     }}>
-      {movieList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
-      {movieList && hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
-      <div className="modal film-detail-modal" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+      {hasNavList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
+      {hasNavList && hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
+      <div
+        ref={modalRef}
+        className="modal film-detail-modal"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <button className="film-detail-close" onClick={onClose}>✕</button>
         <div className="film-detail-inner">
           <div className="film-detail-poster">
@@ -220,17 +399,24 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               })()}
               <TierPips movie={movie} variant="compact" />
               <LanguagePill movie={movie} />
+              <BadgeGenreSm genre={movie.genre} />
             </div>
-            <MovieBadges movie={movie} />
+            <MovieBadges movie={movie} excludeGenre />
 
             {/* Ratings summary row */}
             <div className="film-detail-metrics">
-              {omdbData?.rating && (
-                <a className="metric-item metric-imdb-link" href={`https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                  <span className="metric-value">★ {omdbData.rating}</span>
-                  <span className="metric-label">IMDb</span>
-                </a>
-              )}
+              {omdbData?.rating && (() => {
+                const imdbId = IMDB_IDS[movie.id];
+                const imdbUrl = imdbId
+                  ? `https://www.imdb.com/title/${imdbId}/`
+                  : `https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`;
+                return (
+                  <a className="metric-item metric-imdb-link" href={imdbUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <span className="metric-value">★ {omdbData.rating}</span>
+                    <span className="metric-label">IMDb</span>
+                  </a>
+                );
+              })()}
               {aggregateRating && (
                 <div className="metric-item">
                   <span className="metric-value">★ {aggregateRating.avg}</span>
@@ -290,8 +476,17 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               return <div className="film-detail-starring"><strong>Starring</strong> {pretty}</div>;
             })()}
             {omdbData?.plot && (
-              <div className="film-detail-plot">{omdbData.plot}</div>
+              <div className="film-detail-plot">{tidyPlot(omdbData.plot)}</div>
             )}
+
+            <SeriesSection
+              filmId={movie.id}
+              onNavigate={onNavigate}
+              onClickOutOfCatalog={onOpenSeriesPreview
+                ? (sibling, collectionName) => onOpenSeriesPreview(sibling, collectionName)
+                : undefined}
+              watchedSet={watchedSet}
+            />
 
             {(() => {
               const codedOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);

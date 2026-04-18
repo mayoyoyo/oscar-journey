@@ -15,6 +15,40 @@ import DIRECTORS from '../data/directors.json';
 import ACTORS from '../data/actors.json';
 import CAST from '../data/cast.json';
 
+// Normalize a string for search: lowercase, strip accents (é→e, ñ→n), and
+// collapse all punctuation/whitespace to single spaces. Applied to both the
+// query and each indexed field, so "je tu il elle" matches "Je, Tu, Il, Elle"
+// and "la cienaga" matches "La Ciénaga".
+function normalizeForSearch(s) {
+  return (s || '')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+// Build the normalized search index once at module load. Each entry holds
+// pre-normalized title / director / people strings so the per-keystroke
+// search reduces to three `String.includes` checks per film. Cast.json
+// (full Wikidata cast) and actors.json (OMDb top-billed fallback) are
+// flattened into the `people` field — an average of ~50 names per film
+// across 787 films is ~40K names, which would be too expensive to normalize
+// on every keystroke without this.
+const SEARCH_INDEX = (() => {
+  const idx = new Map();
+  for (const m of MOVIES) {
+    const fullCast = CAST[m.id] || [];
+    const actorsStr = ACTORS[m.id] || '';
+    const people = [...fullCast, actorsStr].filter(Boolean).map(normalizeForSearch).join(' ');
+    idx.set(m.id, {
+      title: normalizeForSearch(m.title),
+      director: normalizeForSearch(DIRECTORS[m.id]),
+      people,
+    });
+  }
+  return idx;
+})();
+
 // A film is "International" if its primary language isn't English — sourced
 // from the baked-in languages.json. Also matches legacy category tags so
 // Oscar INT winners stay in the set.
@@ -235,24 +269,16 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   );
 
   const { filtered, groups, watchedCount } = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = normalizeForSearch(query);
     // Search matches across title, director, and cast (baked into
-    // directors.json / actors.json). Director gets the whole string; cast
-    // is comma-separated top-billed, checked as a substring of the whole
-    // string. Case-insensitive. Once cast.json (full Wikidata cast) ships,
-    // the actors lookup upgrades automatically.
+    // directors.json / actors.json / cast.json) against a pre-normalized
+    // index so punctuation, accents, and whitespace all collapse away —
+    // "je tu il elle" finds "Je, Tu, Il, Elle".
     const matchesQuery = (m) => {
       if (!q) return true;
-      if (m.title.toLowerCase().includes(q)) return true;
-      const director = DIRECTORS[m.id];
-      if (director && director.toLowerCase().includes(q)) return true;
-      // Prefer Wikidata's full cast (up to ~100 names per film) when we
-      // have it; fall back to OMDb's top-billed actors string otherwise.
-      const fullCast = CAST[m.id];
-      if (fullCast && fullCast.some(name => name.toLowerCase().includes(q))) return true;
-      const actors = ACTORS[m.id];
-      if (actors && actors.toLowerCase().includes(q)) return true;
-      return false;
+      const entry = SEARCH_INDEX.get(m.id);
+      if (!entry) return false;
+      return entry.title.includes(q) || entry.director.includes(q) || entry.people.includes(q);
     };
     const filtered = MOVIES
       .filter(matchesQuery)

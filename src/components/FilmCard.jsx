@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { fetchOmdbData, readCachedOmdbData } from '../utils/omdb';
+import { fetchOmdbData, readCachedOmdbData, tidyPlot } from '../utils/omdb';
 import { extractDominantColor } from '../utils/colorExtract';
-import { MovieBadges } from './Badges';
+import { MovieBadges, BadgeGenreSm } from './Badges';
 import LanguagePill from './LanguagePill';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
@@ -12,6 +12,8 @@ import CeremonyTooltip from './CeremonyTooltip';
 import { getAwardLink } from '../utils/awardLinks';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
+import IMDB_IDS from '../data/imdbIds.json';
+import SeriesSection from './SeriesSection';
 
 // Universal skip messages — safe for any film (Oscar or canon).
 const SKIP_MESSAGES_UNIVERSAL = [
@@ -81,7 +83,7 @@ function pickSkipMessage(movie) {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile }) {
+export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile, onOpenSeriesPreview, watchedSet }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -191,13 +193,20 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           })()}
           <TierPips movie={movie} variant="compact" />
           <LanguagePill movie={movie} />
+          <BadgeGenreSm genre={movie.genre} />
         </div>
-        <MovieBadges movie={movie} />
+        <MovieBadges movie={movie} excludeGenre />
 
         <div className="film-pills-row">
-          {omdbData?.rating && (
-            <a className="film-imdb-rating" href={`https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`} target="_blank" rel="noopener noreferrer">★ {omdbData.rating} <span className="rating-source">IMDb</span></a>
-          )}
+          {omdbData?.rating && (() => {
+            const imdbId = IMDB_IDS[movie.id];
+            const imdbUrl = imdbId
+              ? `https://www.imdb.com/title/${imdbId}/`
+              : `https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`;
+            return (
+              <a className="film-imdb-rating" href={imdbUrl} target="_blank" rel="noopener noreferrer">★ {omdbData.rating} <span className="rating-source">IMDb</span></a>
+            );
+          })()}
           <a className="film-trailer-btn"
             href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
             target="_blank" rel="noopener noreferrer"
@@ -234,8 +243,17 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           return <div className="film-starring"><strong>Starring</strong> {pretty}</div>;
         })()}
         {omdbData?.plot && (
-          <div className="film-plot">{omdbData.plot}</div>
+          <div className="film-plot">{tidyPlot(omdbData.plot)}</div>
         )}
+
+        <SeriesSection
+          filmId={movie.id}
+          onNavigate={onOpenDetail}
+          onClickOutOfCatalog={onOpenSeriesPreview
+            ? (sibling, collectionName) => onOpenSeriesPreview(sibling, collectionName)
+            : undefined}
+          watchedSet={watchedSet}
+        />
 
         {(() => {
           const awardsCount = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);

@@ -42,6 +42,7 @@ export const LIST_SHORT_LABELS = {
 export const MAX_TIER = 5;
 
 export const TIER_LABELS = {
+  0: 'All films',
   1: 'Canonical',
   2: 'Acclaimed',
   3: 'Landmark',
@@ -50,6 +51,7 @@ export const TIER_LABELS = {
 };
 
 export const TIER_DESCRIPTIONS = {
+  0: 'No canon endorsement — films in the catalog via Academy recognition alone (BP nominees that didn\'t hit any canon list).',
   1: 'Present in the canon: recognized on at least one curated list.',
   2: 'Acclaimed: meets our multi-list entry threshold for the essentials canon.',
   3: 'Landmark: broadly recognized across critics, institutions, and audience lists.',
@@ -114,20 +116,25 @@ const DEMOTE_FROM_LANDMARK = new Set([
   'the-lord-of-the-rings-the-two-towers-2002','finding-nemo-2003','whiplash-2014',
 ]);
 
-// R2 raw score from list codes + Oscar pip.
+// R2 raw score broken into canon-list points + Oscar pip.
+// Returns { canonRaw, totalRaw } so we can distinguish "no canon endorsement"
+// from "has canon endorsement" at the tier-0 boundary.
 function r2Raw(lists, oscarPip) {
   const set = new Set(lists);
-  let count = oscarPip;
-  if (set.has('NFR') || set.has('AFI')) count += 1;
-  for (const c of set) if (c !== 'NFR' && c !== 'AFI') count += 1;
-  return count;
+  let canonRaw = 0;
+  if (set.has('NFR') || set.has('AFI')) canonRaw += 1;
+  for (const c of set) if (c !== 'NFR' && c !== 'AFI') canonRaw += 1;
+  return { canonRaw, totalRaw: canonRaw + oscarPip };
 }
 
-function bucket(raw) {
-  if (raw <= 2) return 1;
-  if (raw === 3) return 2;
-  if (raw === 4) return 3;
-  if (raw === 5) return 4;
+function bucket(canonRaw, totalRaw) {
+  // Tier 0: no canon-list endorsement. Oscar-only films (e.g. a BP nominee
+  // that never made a canon list) land here.
+  if (canonRaw === 0) return 0;
+  if (totalRaw <= 2) return 1;
+  if (totalRaw === 3) return 2;
+  if (totalRaw === 4) return 3;
+  if (totalRaw === 5) return 4;
   return 5;
 }
 
@@ -167,8 +174,9 @@ export function getTierInfo(movie) {
   if (movie.category === 'ESSENTIAL' && movie.tier != null) {
     tier = movie.tier;
   } else {
-    const raw = r2Raw(lists.filter(c => c !== 'OSCAR' && c !== 'OSCAR_NOM'), oscarPip);
-    tier = applyOverrides(movie.id, bucket(raw));
+    const canonLists = lists.filter(c => c !== 'OSCAR' && c !== 'OSCAR_NOM');
+    const { canonRaw, totalRaw } = r2Raw(canonLists, oscarPip);
+    tier = applyOverrides(movie.id, bucket(canonRaw, totalRaw));
   }
   return { tier, lists };
 }

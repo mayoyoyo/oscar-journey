@@ -854,5 +854,180 @@
   "pelle-the-conqueror-1987": {
     "lang": "Danish",
     "country": "Denmark"
+  },
+  "birdman-2014": {
+    "lang": {
+      "name": "N/A",
+      "code": "n/"
+    },
+    "country": "UK"
+  },
+  "l-atalante-1934": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "the-conformist-1970": {
+    "lang": {
+      "name": "Italian",
+      "code": "it"
+    },
+    "country": "Italy"
+  },
+  "the-red-circle-1970": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "a-city-of-sadness-1989": {
+    "lang": {
+      "name": "Mandarin",
+      "code": "zh"
+    },
+    "country": "Taiwan"
+  },
+  "three-colours-red-1994": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "happy-together-1997": {
+    "lang": {
+      "name": "Cantonese",
+      "code": "zh"
+    },
+    "country": "Hong Kong"
+  },
+  "flowers-of-shanghai-1998": {
+    "lang": {
+      "name": "Cantonese",
+      "code": "zh"
+    },
+    "country": "Taiwan"
+  },
+  "the-gleaners-and-i-2000": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "in-vanda-s-room-2000": {
+    "lang": {
+      "name": "Portuguese",
+      "code": "pt"
+    },
+    "country": "Portugal"
+  },
+  "uncle-boonmee-who-can-recall-his-past-lives-2010": {
+    "lang": {
+      "name": "Thai",
+      "code": "th"
+    },
+    "country": "Thailand"
+  },
+  "faces-places-2017": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "petite-maman-2021": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "monster-2023": {
+    "lang": {
+      "name": "Japanese",
+      "code": "ja"
+    },
+    "country": "Japan"
+  },
+  "flow-2024": {
+    "lang": {
+      "name": "None",
+      "code": "no"
+    },
+    "country": "Latvia"
+  },
+  "city-lights-1931": {
+    "lang": {
+      "name": "None",
+      "code": "no"
+    },
+    "country": "United States"
+  },
+  "sherlock-jr-1924": {
+    "lang": {
+      "name": "None",
+      "code": "no"
+    },
+    "country": "United States"
+  },
+  "the-general-1926": {
+    "lang": {
+      "name": "None",
+      "code": "no"
+    },
+    "country": "United States"
+  },
+  "the-gold-rush-1925": {
+    "lang": {
+      "name": "None",
+      "code": "no"
+    },
+    "country": "United States"
+  },
+  "koyaanisqatsi-1982": {
+    "lang": {
+      "name": "None",
+      "code": "no"
+    },
+    "country": "United States"
+  },
+  "grand-illusion-1937": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "je-tu-il-elle-1974": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "Belgium"
+  },
+  "sans-soleil-1982": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "the-green-ray-1986": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
+  },
+  "blue-is-the-warmest-colour-2013": {
+    "lang": {
+      "name": "French",
+      "code": "fr"
+    },
+    "country": "France"
   }
 }

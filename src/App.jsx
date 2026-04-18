@@ -1185,7 +1185,7 @@ export default function App() {
                   <button className="journey-welcome-close" onClick={() => { setBannerDismissed(true); localStorage.setItem('oscars_banner_dismissed', 'true'); }}>✕</button>
                   <div className="journey-welcome-title">🏆 The Oscars Journey</div>
                   <div className="journey-welcome-text">
-                    {MOVIES.length} films — every Best Picture nominee (1939+), every International Feature winner (1956+), every Animated Feature winner, plus 304 essential non-Oscar must-watches curated across 7 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, festival grand prizes, National Film Registry). Shuffled so you never watch two similar films back-to-back. Watch each one, rate it, and move on.
+                    {MOVIES.length} films — every Best Picture nominee (1927+), every International Feature winner (1956+), every Animated Feature winner, plus 286 essential non-Oscar must-watches curated across 7 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, festival grand prizes, National Film Registry). Shuffled so you never watch two similar films back-to-back. Watch each one, rate it, and move on.
                   </div>
                 </div>
               )}

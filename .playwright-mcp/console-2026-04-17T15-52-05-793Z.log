@@ -1,0 +1,6 @@
+[     126ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5175/node_modules/.vite/deps/chunk-KVMAXHTM.js?v=34c48cd6:21608
+[     143ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ http://localhost:5175/films:0
+[  992194ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.omdbapi.com/?t=Spirited%20Away&type=movie&apikey=ab8cbc12&y=2001:0
+[  992269ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.omdbapi.com/?t=Spirited%20Away&type=movie&apikey=ab8cbc12&y=2001:0
+[  992270ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.omdbapi.com/?t=Spirited%20Away&type=movie&apikey=84fee249&y=2001:0
+[  992350ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.omdbapi.com/?t=Spirited%20Away&type=movie&apikey=398cefbb&y=2001:0

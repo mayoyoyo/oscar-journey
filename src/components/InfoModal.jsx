@@ -27,7 +27,7 @@ export default function InfoModal({ onClose }) {
           <div className="info-section-icon">✨</div>
           <div>
             <h3>The Solution</h3>
-            <p>We took every <strong>Best Picture nominee (1970+)</strong>, every <strong>International Feature winner (1956+)</strong> and <strong>Animated Feature winner</strong>, and <strong>286 essential non-Oscar films</strong> curated across 7 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, festival grand prizes, National Film Registry) — <strong>{MOVIES.length} films</strong> total — and shuffled them into a randomized journey. No more choosing, just press play.</p>
+            <p>We took every <strong>Best Picture nominee (1970+)</strong>, every <strong>International Feature winner (1956+)</strong> and <strong>Animated Feature winner</strong>, and essential non-Oscar films curated across 8 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, Rotten Tomatoes, festival grand prizes, National Film Registry) — <strong>{MOVIES.length} films</strong> total — and shuffled them into a randomized journey. No more choosing, just press play.</p>
           </div>
         </div>
 

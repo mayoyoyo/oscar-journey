@@ -7,15 +7,13 @@ import { getTier } from '../utils/tierInfo';
 // Per-tier copy shown in the Canon depth stepper. Mirrors the Film tab's
 // TIER_LEVELS so both surfaces describe the canon threshold identically.
 const TIER_LEVELS = {
-  1: { label: 'Everything',            sub: 'The whole catalog — no canon floor applied.' },
-  2: { label: 'Canon threshold',       sub: 'On 2+ canonical lists. The working bar for "belongs in the canon."' },
-  3: { label: 'Strong consensus',      sub: 'On 3+ lists. Backed by multiple disjoint cultural authorities.' },
-  4: { label: 'Iron-clad',             sub: 'On 4+ lists. No serious critic argues against these.' },
-  5: { label: 'Near-universal',        sub: 'On 5+ lists. Staples of every major canon.' },
-  6: { label: 'Universal canon',       sub: 'On 6+ lists. Essentially undisputed across worldviews.' },
-  7: { label: 'All-time masterpieces', sub: 'On 7 of 8 lists. In the conversation for greatest ever made.' },
+  1: { label: 'Canonical',  sub: 'All films — present in the canon with at least one curated endorsement.' },
+  2: { label: 'Acclaimed',  sub: 'Meets our multi-list entry threshold — validated by 2+ sources.' },
+  3: { label: 'Landmark',   sub: 'Broad recognition across critics, institutions, and audience lists.' },
+  4: { label: 'Masterwork', sub: 'Near-universal consensus across critical, institutional, and popular canon.' },
+  5: { label: 'Apex',       sub: 'Summit canon — curated top tier whose inclusion on any serious must-watch list is essentially unavoidable.' },
 };
-const MAX_SLIDER_TIER = 7;
+const MAX_SLIDER_TIER = 5;
 
 function eraBucketJourney(year) {
   if (year < 1920) return '1910s';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { getTierInfo, LIST_LABELS, LIST_SHORT_LABELS, MAX_TIER } from '../utils/tierInfo';
+import { getTierInfo, LIST_LABELS, LIST_SHORT_LABELS, MAX_TIER, TIER_LABELS, TIER_DESCRIPTIONS } from '../utils/tierInfo';
 
 // Visual signal of how many canon lists a film appears on.
 //  - `full`  (default): all MAX_TIER dots shown, filled up to tier
@@ -20,9 +20,8 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
     return () => document.removeEventListener('keydown', handler);
   }, [open]);
 
-  // Tier 1 is always Oscar-only (essentials start at tier 2). The Oscar
-  // statuette icon already signals "this is an Oscar film" — a lone pip next
-  // to it is noise, not signal. Hide pips for tier < 2.
+  // Tier 1 is "Canonical" (baseline) — the Oscar statuette already signals
+  // Oscar films, so a single pip alongside is noise. Hide pips for tier < 2.
   if (tier < 2) return null;
 
   // Render only filled dots — same shape in both variants so the modal
@@ -30,8 +29,9 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
   // via the .tier-pips-full / .tier-pips-compact classes.
   const dots = Array.from({ length: tier }, () => true);
 
-  const titleForHover = lists.map(l => LIST_SHORT_LABELS[l] || l).join(' · ');
-  const ariaLabel = `Tier ${tier} of ${MAX_TIER}. On ${lists.length} canon ${lists.length === 1 ? 'list' : 'lists'}: ${titleForHover}`;
+  const tierLabel = TIER_LABELS[tier] || '';
+  const titleForHover = `${tierLabel} — ${lists.map(l => LIST_SHORT_LABELS[l] || l).join(' · ')}`;
+  const ariaLabel = `${tierLabel} tier (${tier} of ${MAX_TIER}). On ${lists.length} canon ${lists.length === 1 ? 'list' : 'lists'}: ${lists.map(l => LIST_SHORT_LABELS[l] || l).join(' · ')}`;
 
   const handleClick = (e) => {
     if (!interactive) return;
@@ -88,12 +88,13 @@ export default function TierPips({ movie, variant = 'full', showLabel = false, i
                 <span className="tier-pip-label">{tier}</span>
               </span>
               <h2 id="tier-pip-modal-title" className="tier-pip-modal-title">
-                Tier {tier} of {MAX_TIER}
+                {tierLabel} <span className="tier-pip-modal-tier-num">· Tier {tier} of {MAX_TIER}</span>
               </h2>
             </div>
             <p className="tier-pip-modal-sub">
               <strong>{movie.title}</strong> appears on {lists.length} canon {lists.length === 1 ? 'list' : 'lists'}
             </p>
+            <p className="tier-pip-modal-desc">{TIER_DESCRIPTIONS[tier]}</p>
 
             <ul className="tier-pip-modal-lists">
               {lists.map(l => (

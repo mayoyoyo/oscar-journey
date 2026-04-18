@@ -83,20 +83,16 @@ const DEFAULT_FILM_FILTERS = {
   essentialsOnly: false,
 };
 
-// Per-tier copy shown in the Canon depth section. Keys are the minimum
-// tier value for the slider; the description previews what that floor
-// means editorially. Matches the methodology's "2-of-N triangulation".
+// Per-tier copy shown in the Canon depth section. Keys map to the 5-tier
+// bucketed score (R2: NFR+AFI merged, OSCAR pip included, + curated overrides).
 const TIER_LEVELS = {
-  1: { label: 'Everything',        sub: 'The whole catalog — no canon floor applied.' },
-  2: { label: 'Canon threshold',   sub: 'On 2+ canonical lists. The working bar for "belongs in the canon."' },
-  3: { label: 'Strong consensus',  sub: 'On 3+ lists. Backed by multiple disjoint cultural authorities.' },
-  4: { label: 'Iron-clad',         sub: 'On 4+ lists. No serious critic argues against these.' },
-  5: { label: 'Near-universal',    sub: 'On 5+ lists. Staples of every major canon.' },
-  6: { label: 'Universal canon',   sub: 'On 6+ lists. Essentially undisputed across worldviews.' },
-  7: { label: 'All-time masterpieces', sub: 'On 7 of 8 lists. In the conversation for greatest ever made.' },
-  8: { label: 'Legendary',         sub: 'On every canonical list. Vanishingly rare — the GOATs.' },
+  1: { label: 'Canonical',  sub: 'All films — present in the canon with at least one curated endorsement.' },
+  2: { label: 'Acclaimed',  sub: 'Meets our multi-list entry threshold — validated by 2+ sources.' },
+  3: { label: 'Landmark',   sub: 'Broad recognition across critics, institutions, and audience lists.' },
+  4: { label: 'Masterwork', sub: 'Near-universal consensus across critical, institutional, and popular canon.' },
+  5: { label: 'Apex',       sub: 'Summit canon — curated top tier whose inclusion on any serious must-watch list is essentially unavoidable.' },
 };
-const MAX_SLIDER_TIER = 7;
+const MAX_SLIDER_TIER = 5;
 
 function sortKeyFn(title) {
   return title.replace(/^(The|A|An)\s+/i, '').toLowerCase();
@@ -399,7 +395,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       <p className="film-list-hint">
         {checklistMode
           ? 'Tap any film to mark it as watched. Great for first-timers catching up on what they\'ve already seen.'
-          : `Browse all ${MOVIES.length} films — every Best Picture nominee (1970+), every International Feature winner (1956+), every Animated Feature winner, plus 286 essential non-Oscar canon films. Use the filters to narrow down.`}
+          : `Browse all ${MOVIES.length} films — every Best Picture nominee (1970+), every International Feature winner (1956+), every Animated Feature winner, plus 330 essential non-Oscar canon films. Use the filters to narrow down.`}
       </p>
 
       <input

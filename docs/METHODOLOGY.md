@@ -63,20 +63,19 @@ Running the 2-of-N rule across all 7 lists and deduplicating against the existin
 
 | Tier | # Films | Description |
 |---|---|---|
-| **6 of 7 lists** | 4 | Iron-clad universal canon. City Lights, Modern Times, The Third Man, Some Like It Hot. |
-| **5 of 7 lists** | 9 | Near-universal canon. Rashomon, Vertigo, 2001: A Space Odyssey, Do the Right Thing. |
-| **4 of 7 lists** | 27 | Strong consensus. Seven Samurai, Tokyo Story, Alien, Blade Runner, The Shining, Come and See, Terminator 2. |
-| **3 of 7 lists** | 64 | Clear must-watches. Metropolis, Stalker, 8½, Harakiri, Jeanne Dielman, Ran, Eraserhead, The Empire Strikes Back. |
-| **2 of 7 lists** | 182 | Passes the bar. Fight Club, The Matrix, Mulholland Drive, Portrait of a Lady on Fire. |
-| **Total** | **286** | Essentials in catalog |
+| **Apex (tier 5)** | 16 total (4 essentials) | Summit canon — unavoidable in any must-watch list. Third Man, Citizen Kane, Seven Samurai, Vertigo, 2001, Godfather I/II, Pulp Fiction, Parasite. |
+| **Masterwork (tier 4)** | ~50 films | Near-universal consensus. Casablanca, Modern Times, Raging Bull, Apocalypse Now. |
+| **Landmark (tier 3)** | ~70 films | Broad recognition across critics, institutions, audience. Persona, Blade Runner, The Shining, Mulholland Drive. |
+| **Acclaimed (tier 2)** | ~150 films | Meets our multi-list entry threshold. Alien, Ran, Come and See, Before Sunrise. |
+| **Canonical (tier 1)** | ~500 films | Present in the canon with baseline endorsement. |
 
-The 2-of-7 rule originally produced ~438 essentials. A later curation pass
-removed pre-1970 tier-2/3 bloat (redundant directors, faded mid-century
-melodrama, niche festival artifacts) and promoted BP winners + nominees from
-ESSENTIAL into the BP section — so tier counts above reflect the final
-catalog, not the raw rule output.
+**Final catalog size: 457 Oscar films + 330 Essentials = 787 films.**
 
-**Final catalog size: 463 Oscar films + 286 Essentials = 749 films.** Well short of "thousands."
+Tier is computed from an R2 score: 1 point per canon list (AFI+NFR merged to a single
+"US institutional" point), plus 1 for Oscar winner / BP nominee / Intl. Feature winner /
+Animated Feature winner. A hand-curated override map adjusts specific films up or down
+where raw score doesn't match consensus (e.g. Vertigo promoted to Apex; Modern Times
+kept at Masterwork despite a high raw score).
 
 ### Decade distribution
 
@@ -124,9 +123,9 @@ Films that dominate one audience list without crossing over will be missed. Perf
 
 **Fix:** Manual override tier. This is rare enough that curation is cheaper than loosening the rule.
 
-### 3. The margin of Tier 2 (2-of-7) is noisy
+### 3. The margin of Acclaimed (tier 2, raw 3) is noisy
 
-Tier 2 is 182 films (after the 2026 curation pass). Some are unambiguous (Fight Club, The Matrix). Some are borderline — bottom-of-Criterion + bottom-of-NFR entries. If 749 feels too big, cut at Tier 3 for 567 total films. That's the cleanest break.
+Acclaimed has ~150 films. Some are unambiguous (Fight Club, The Matrix — both promoted to Landmark by override). Some are borderline — bottom-of-Criterion + bottom-of-NFR entries. If 787 feels too big, cut at Landmark (tier 3) for ~140 total films. That's the cleanest break.
 
 ### 4. Genre representation
 
@@ -161,4 +160,4 @@ Three files accompany this methodology:
 
 ## One-line summary
 
-**Require any new film to appear on ≥2 of 7 independent canonical lists. After a 2026 curation pass (cut pre-1970 bloat, promote BP winners + nominees, add pre-1991 International Feature winners), final catalog is 463 Oscar films + 286 Essentials = 749 total. Fight Club in, White Chicks out.**
+**Require any new film to appear on ≥2 of 8 independent canonical lists (≥3 for pre-1970). After a 2026 curation pass (cut pre-1970 bloat, promote BP winners + nominees, add International Feature winners 1956–1987, add Rotten Tomatoes Top 300), final catalog is 457 Oscar films + 330 Essentials = 787 total. Fight Club in, White Chicks out.**

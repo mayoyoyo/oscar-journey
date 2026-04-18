@@ -214,6 +214,14 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <details className="settings-changelog">
             <summary>Changelog</summary>
             <div className="settings-changelog-content">
+              <p><strong>v3.2.0</strong> — Catalog refresh + 5-tier system</p>
+              <ul>
+                <li><strong>Refreshed canon-list data</strong> — all 8 source lists rescraped (Sight &amp; Sound 2022, AFI 100+10 Top 10, Criterion spine, IMDb Top 250, Letterboxd Top 250, National Film Registry, Cannes/Venice/Berlin grand prizes, and a new 8th list: Rotten Tomatoes Top 300). Aliases added for foreign-titled films (La Règle du jeu → Rules of the Game, etc.) so matching actually works</li>
+                <li><strong>Curation pass</strong> — cut 94 weak-signal essentials (pre-1970 AFI+NFR-only films, user skip-list), promoted 13 more International Feature winners (1956–1987 backfill), added 58 new essentials passing the refreshed rule, reclassified 27 promoted essentials to proper BP category. Catalog lands at <strong>787 films</strong> (457 Oscar + 330 Essentials)</li>
+                <li><strong>Rule C</strong> — stricter threshold for older films: pre-1970 needs 3+ lists, 1970+ needs 2+. Addresses over-representation of old Hollywood classics that coasted in on AFI+NFR alone</li>
+                <li><strong>New 5-tier system</strong> — replaces the old 1–7 scale. Tiers are <strong>Canonical · Acclaimed · Landmark · Masterwork · Apex</strong>. Scoring uses R2: 1 point per canon list with AFI+NFR merged to a single "US institutional" point, plus 1 for Oscar recognition. A 16-film curated Apex tier represents summit canon whose inclusion feels unavoidable</li>
+                <li><strong>Tier popup</strong> now shows the tier label (Landmark, Masterwork, etc.) and a description explaining what the tier means. Pip-click behavior unchanged — still lists which canon lists the film appears on</li>
+              </ul>
               <p><strong>v3.1.0</strong> — Oscar statuette redesign + unified filters (thanks mayo)</p>
               <ul>
                 <li><strong>Profiles get a Canon Score drill-down</strong> — click any tier row in the Canon Score table ("14 films at tier 6") to jump to the Films tab pre-filtered to that tier. Pairs with a <strong>Daily Oscar streak pill</strong> on every profile card (replaces the old Collector score pill; streak now persists across devices)</li>

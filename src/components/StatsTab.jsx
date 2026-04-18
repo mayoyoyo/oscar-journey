@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
-import { getTierInfo, MAX_TIER } from '../utils/tierInfo';
+import { getTierInfo, MAX_TIER, TIER_LABELS } from '../utils/tierInfo';
 import TierPips from './TierPips';
 
 export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, profileName, onNavigateToTier }) {
@@ -198,7 +198,7 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
             />
           </div>
           <div className="canon-score-caption">
-            Each film scores points equal to the number of canon lists it appears on (1–{MAX_TIER}). Watch the hardest-to-ignore films to climb fastest.
+            Films bucket into {MAX_TIER} tiers (Canonical → Apex) based on canon-list coverage and Academy recognition. Watch the higher-tier films to climb fastest.
           </div>
         </div>
 
@@ -232,7 +232,7 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
                       ))}
                     </span>
                     <span style={{ marginLeft: 8, color: 'var(--cream-dim)', fontSize: '0.85rem' }}>
-                      {t === MAX_TIER ? 'all lists' : `${t} of ${MAX_TIER}`}
+                      {TIER_LABELS[t]}
                     </span>
                   </td>
                   <td>{row.watched}</td>

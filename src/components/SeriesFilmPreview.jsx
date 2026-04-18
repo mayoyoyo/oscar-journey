@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { getSeriesForTmdbId, tmdbPoster } from '../data/seriesCollections';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
@@ -30,6 +30,7 @@ function tmdbWatchId(tmdbId) {
 export default function SeriesFilmPreview({
   film: initialFilm,
   collectionName,
+  initialScrollTop,
   onClose,
   onNavigate,
   watchedSet,
@@ -45,7 +46,12 @@ export default function SeriesFilmPreview({
 
   useEffect(() => {
     if (!currentFilm) return undefined;
-    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+      // ArrowLeft/Right handled below — they need access to animatedGo, so
+      // the sibling nav listener is attached in its own effect after refs
+      // + callbacks are declared.
+    };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, [currentFilm, onClose]);
@@ -64,11 +70,14 @@ export default function SeriesFilmPreview({
   const navigateToSibling = useCallback((sibling) => {
     if (!sibling) return;
     if (sibling.inCatalog) {
-      // In-canon → delegate to parent (closes preview, opens FilmDetailModal)
+      // In-canon → delegate to parent (closes preview, opens FilmDetailModal).
+      // Hand scrollTop over so the destination modal mounts at the same
+      // position and the open animation is skipped (parent sets instant).
       const movie = MOVIES_BY_ID[sibling.catalogId] || MOVIES.find((m) => m.id === sibling.catalogId);
       if (movie) {
+        const scrollTop = modalRef.current?.scrollTop ?? 0;
         onClose();
-        if (onNavigate) onNavigate(movie);
+        if (onNavigate) onNavigate(movie, scrollTop);
       }
     } else {
       // Out-of-canon → swap internal state, preview re-renders
@@ -76,10 +85,36 @@ export default function SeriesFilmPreview({
     }
   }, [onClose, onNavigate]);
 
+  // Desktop-style navigation — instant swap, no slide animation. Used by
+  // the overlay arrow buttons and ArrowLeft/ArrowRight keys. Mirrors
+  // FilmDetailModal's goPrev/goNext behavior (also non-animated on desktop).
+  const goPrevSibling = useCallback(() => {
+    if (hasPrevSibling) navigateToSibling(siblings[siblingIdx - 1]);
+  }, [hasPrevSibling, siblings, siblingIdx, navigateToSibling]);
+
+  const goNextSibling = useCallback(() => {
+    if (hasNextSibling) navigateToSibling(siblings[siblingIdx + 1]);
+  }, [hasNextSibling, siblings, siblingIdx, navigateToSibling]);
+
   // Drag-to-close + horizontal swipe. Mirrors FilmDetailModal's gesture set.
   const modalRef = useRef(null);
   const touchStart = useRef(null);
   const currentDragY = useRef(0);
+
+  // When opening as a replacement for FilmDetailModal (sibling click on a
+  // non-canon poster), the parent hands us the outgoing modal's scrollTop
+  // so we can mount already-scrolled to the same position. Without this,
+  // clicking a non-canon sibling resets the scroll to 0 while the in-canon
+  // click path preserves it — an inconsistency the user feels as a "jump
+  // to top" on non-canon clicks.
+  useLayoutEffect(() => {
+    if (initialScrollTop && modalRef.current) {
+      modalRef.current.scrollTop = initialScrollTop;
+    }
+    // Intentionally run only on mount — subsequent swaps inside the preview
+    // (out-of-canon → out-of-canon via swipe) should scroll-to-top naturally.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   // See FilmDetailModal for the full story — without tracking this timer,
   // resetTransform's 240ms clear fires mid-animation and the incoming film
   // snaps instead of sliding in on horizontal swipes.
@@ -163,12 +198,28 @@ export default function SeriesFilmPreview({
     }, 170);
   }, [hasNextSibling, hasPrevSibling, siblings, siblingIdx, navigateToSibling, resetTransform]);
 
+  // Desktop keyboard nav — instant swap (no slide), matches FilmDetailModal.
+  // The slide animation is reserved for touch swipes via animatedGo.
+  useEffect(() => {
+    if (!siblings) return undefined;
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goPrevSibling(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goNextSibling(); }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [siblings, goPrevSibling, goNextSibling]);
+
   const handleTouchStart = useCallback((e) => {
     const el = modalRef.current;
+    // Let the series strip own horizontal swipes so scrolling through
+    // sequel posters doesn't also swap the current film.
+    const startedInStrip = !!e.target.closest?.('.series-strip');
     touchStart.current = {
       x: e.touches[0].clientX,
       y: e.touches[0].clientY,
       scrollTop: el ? el.scrollTop : 0,
+      startedInStrip,
     };
     if (el) el.style.transition = '';
     currentDragY.current = 0;
@@ -197,8 +248,10 @@ export default function SeriesFilmPreview({
     const absDx = Math.abs(dx);
     const absDy = Math.abs(dy);
 
-    // Horizontal swipe → sibling nav (left-swipe = next, right-swipe = prev)
-    if (siblings && absDx > 60 && absDx > absDy * 1.5) {
+    // Horizontal swipe → sibling nav (left-swipe = next, right-swipe = prev).
+    // Skip if the touch started in the series strip — that's the strip's own
+    // horizontal scroll, not a modal-level swipe.
+    if (!touchStart.current.startedInStrip && siblings && absDx > 60 && absDx > absDy * 1.5) {
       const dir = dx < 0 ? 1 : -1;
       if ((dir > 0 && !hasNextSibling) || (dir < 0 && !hasPrevSibling)) {
         resetTransform();
@@ -250,8 +303,12 @@ export default function SeriesFilmPreview({
     : [];
 
   const handleInCatalogClick = (movie) => {
+    // Hand scrollTop to the parent so the incoming FilmDetailModal mounts
+    // at the same position with no open-animation flash (same treatment
+    // as the swipe path via navigateToSibling).
+    const scrollTop = modalRef.current?.scrollTop ?? 0;
     onClose();
-    if (onNavigate) onNavigate(movie);
+    if (onNavigate) onNavigate(movie, scrollTop);
   };
 
   return createPortal(
@@ -259,6 +316,12 @@ export default function SeriesFilmPreview({
       className="modal-overlay modal-overlay-instant open"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
+      {hasPrevSibling && (
+        <button className="modal-nav-btn modal-nav-prev" onClick={goPrevSibling} aria-label="Previous in series">‹</button>
+      )}
+      {hasNextSibling && (
+        <button className="modal-nav-btn modal-nav-next" onClick={goNextSibling} aria-label="Next in series">›</button>
+      )}
       <div
         ref={modalRef}
         className="modal film-detail-modal"

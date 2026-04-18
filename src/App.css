@@ -1760,10 +1760,15 @@ main {
   animation: modalOverlayIn 0.25s ease;
 }
 
-/* Skip the overlay fade-in when we're replacing one modal with another —
- * the preview opens in place of the detail modal, so re-fading the black
- * overlay from 0 would flash the page behind. Inner content still animates. */
+/* Skip the overlay fade-in AND the inner modal scale-in when replacing
+ * one modal with another (preview ↔ detail across the canon boundary) —
+ * both default animations are jarring as a transition cue when they fire
+ * after a sibling click. The preview lives at the same overlay color, so
+ * skipping the inner scale keeps the swap feeling continuous. */
 .modal-overlay.modal-overlay-instant.open {
+  animation: none;
+}
+.modal-overlay.modal-overlay-instant.open .modal {
   animation: none;
 }
 

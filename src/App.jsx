@@ -267,7 +267,19 @@ export default function App() {
   const [detailMovieList, setDetailMovieList] = useState(null); // ordered list for prev/next navigation
   // Series preview modal lives at the app root so it can replace the detail
   // modal cleanly when a user clicks an out-of-canon sibling from within it.
-  const [seriesPreview, setSeriesPreview] = useState(null); // { film, collectionName } | null
+  const [seriesPreview, setSeriesPreview] = useState(null); // { film, collectionName, initialScrollTop? } | null
+  // When FilmDetailModal is opened as a replacement for SeriesFilmPreview
+  // (out-of-canon → in-canon click/swipe), these skip the open-animation
+  // flash and preserve the outgoing scrollTop. Reset via effect when the
+  // modal closes so next fresh open animates normally.
+  const [detailMovieOpenInstant, setDetailMovieOpenInstant] = useState(false);
+  const [detailMovieInitialScrollTop, setDetailMovieInitialScrollTop] = useState(0);
+  useEffect(() => {
+    if (!detailMovie) {
+      setDetailMovieOpenInstant(false);
+      setDetailMovieInitialScrollTop(0);
+    }
+  }, [detailMovie]);
   const [infoOpen, setInfoOpen] = useState(false);
   const [profileModalId, setProfileModalId] = useState(null);
   const [autoSelectProfileId, setAutoSelectProfileId] = useState(() => {
@@ -1363,24 +1375,31 @@ export default function App() {
             onRatingChange={handleRatingChange}
             raters={raters}
             movieList={hasUsefulList ? detailMovieList : null}
+            openInstant={detailMovieOpenInstant}
+            initialScrollTop={detailMovieInitialScrollTop}
             onNavigate={(movie) => setDetailMovie(movie)}
             onOpenProfile={(id) => setProfileModalId(id)}
             wallet={profile?.wallet}
-            onOpenSeriesPreview={(film, collectionName) => {
+            onOpenSeriesPreview={(film, collectionName, initialScrollTop) => {
               setDetailMovie(null);
               setDetailMovieList(null);
-              setSeriesPreview({ film, collectionName });
+              setSeriesPreview({ film, collectionName, initialScrollTop });
             }}
             watchedSet={watchedSet}
             seriesSiblings={seriesSiblings}
-            onSeriesNavigate={(sibling) => {
+            onSeriesNavigate={(sibling, scrollTop) => {
               if (sibling.inCatalog) {
+                // Same FilmDetailModal instance — scrollTop is preserved
+                // naturally by React keeping the scroll container mounted.
                 const m = MOVIES_BY_ID[sibling.catalogId] || MOVIES.find((mv) => mv.id === sibling.catalogId);
                 if (m) setDetailMovie(m);
               } else {
+                // Unmount FilmDetailModal, mount SeriesFilmPreview — hand
+                // the outgoing scrollTop across so the preview mounts
+                // already at the same position (no visible jump to top).
                 setDetailMovie(null);
                 setDetailMovieList(null);
-                setSeriesPreview({ film: sibling, collectionName: seriesCollectionName });
+                setSeriesPreview({ film: sibling, collectionName: seriesCollectionName, initialScrollTop: scrollTop });
               }
             }}
           />
@@ -1396,9 +1415,15 @@ export default function App() {
         <SeriesFilmPreview
           film={seriesPreview.film}
           collectionName={seriesPreview.collectionName}
+          initialScrollTop={seriesPreview.initialScrollTop}
           onClose={() => setSeriesPreview(null)}
-          onNavigate={(movie) => {
+          onNavigate={(movie, scrollTop) => {
+            // Crossing out-of-canon → in-canon: skip the FilmDetailModal
+            // open animation and mount it at the same scrollTop so the
+            // swap matches the in-canon ↔ in-canon click path's feel.
             setSeriesPreview(null);
+            setDetailMovieOpenInstant(true);
+            setDetailMovieInitialScrollTop(scrollTop ?? 0);
             setDetailMovie(movie);
           }}
           watchedSet={watchedSet}

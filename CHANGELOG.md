@@ -1,5 +1,33 @@
 # Changelog
 
+## 3.3.1 — 2026-04-18
+
+### Series navigation polish — chris-testing
+- **Seamless canon-boundary crossings.** Walking a series from a canonical
+  film into a sequel/prequel (or back) no longer flashes the modal or jumps
+  the scroll to the top. The incoming modal mounts with no open-animation
+  (overlay + inner scale both suppressed via `modal-overlay-instant`) and
+  at the outgoing modal's `scrollTop`, so the swap feels like a content
+  swap in a single modal — same as the in-canon ↔ in-canon click path.
+  Applies to both click (series strip poster) and swipe paths.
+- **Desktop arrow-key and `‹ ›` button nav inside sequel modals.** The
+  sequel/out-of-canon preview now renders the same prev/next overlay
+  arrows as the canonical modal, and `ArrowLeft` / `ArrowRight` walk the
+  series. Previously the arrows disappeared the moment you landed on a
+  non-canon film, leaving desktop users stuck.
+- **Desktop keyboard/click nav is instant, not sliding.** The 40% slide
+  animation is now reserved for touch swipes where it provides gesture
+  feedback — on desktop, arrows and clicks just swap content like every
+  other modal on the site.
+- **Series strip scroll no longer hijacks sibling nav.** Horizontal
+  swiping the poster strip inside a modal was also being interpreted as a
+  sibling swipe, triggering a film swap mid-scroll. Touches that start
+  inside `.series-strip` are now ignored by the modal-level swipe handler.
+- **Animation-timing race fixed** on rapid-succession swipes: a trailing
+  `setTimeout` from the prior gesture could clear the next animation's
+  `transition` mid-flight and snap the incoming film into place. Tracked
+  via a ref so new gestures cancel the stale timer.
+
 ## 3.3.0 — 2026-04-18
 
 ### Series navigation — chris-testing

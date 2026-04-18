@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useState, useCallback, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData, parseOscarWins, tidyPlot } from '../utils/omdb';
 import { MovieBadges, BadgeGenreSm } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
@@ -19,7 +19,7 @@ import SeriesSection from './SeriesSection';
 import { RARITIES } from '../utils/cards';
 import { getCardOwner } from '../utils/cardRegistry';
 
-export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet, onOpenSeriesPreview, watchedSet, seriesSiblings, onSeriesNavigate }) {
+export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet, onOpenSeriesPreview, watchedSet, seriesSiblings, onSeriesNavigate, openInstant, initialScrollTop }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [globalElo, setGlobalElo] = useState(null);
@@ -133,7 +133,14 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     }
     if (seriesSiblings && onSeriesNavigate) {
       const idx = seriesSiblings.findIndex((s) => s.catalogId === movie?.id);
-      if (idx > 0) onSeriesNavigate(seriesSiblings[idx - 1]);
+      if (idx > 0) {
+        // Hand current scrollTop up so if the sibling is out-of-canon and
+        // swaps FilmDetailModal → SeriesFilmPreview, the new modal mounts
+        // scrolled to the same position. In-canon siblings ignore it
+        // (same modal instance, scroll is preserved naturally).
+        const scrollTop = modalRef.current?.scrollTop ?? 0;
+        onSeriesNavigate(seriesSiblings[idx - 1], scrollTop);
+      }
     }
   }, [movie?.id, movieList, onNavigate, seriesSiblings, onSeriesNavigate]);
 
@@ -145,7 +152,10 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     }
     if (seriesSiblings && onSeriesNavigate) {
       const idx = seriesSiblings.findIndex((s) => s.catalogId === movie?.id);
-      if (idx >= 0 && idx < seriesSiblings.length - 1) onSeriesNavigate(seriesSiblings[idx + 1]);
+      if (idx >= 0 && idx < seriesSiblings.length - 1) {
+        const scrollTop = modalRef.current?.scrollTop ?? 0;
+        onSeriesNavigate(seriesSiblings[idx + 1], scrollTop);
+      }
     }
   }, [movie?.id, movieList, onNavigate, seriesSiblings, onSeriesNavigate]);
 
@@ -248,12 +258,28 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   // against a stale DOM reference.
   useEffect(() => () => cancelTransitionClear(), [cancelTransitionClear]);
 
+  // When opening as a replacement for SeriesFilmPreview (in-canon sibling
+  // click/swipe from a sequel preview), mount already-scrolled to the
+  // outgoing modal's position so the swap feels continuous.
+  useLayoutEffect(() => {
+    if (initialScrollTop && modalRef.current) {
+      modalRef.current.scrollTop = initialScrollTop;
+    }
+    // Mount-only — subsequent swaps within the same modal instance
+    // preserve scroll naturally via React keeping the scroll container.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleTouchStart = useCallback((e) => {
     const el = modalRef.current;
+    // Let inner horizontal scrollers (series strip) own horizontal swipes
+    // so scrolling through sequel posters doesn't also navigate films.
+    const startedInStrip = !!e.target.closest?.('.series-strip');
     touchStart.current = {
       x: e.touches[0].clientX,
       y: e.touches[0].clientY,
       scrollTop: el ? el.scrollTop : 0,
+      startedInStrip,
     };
     // Cancel any in-flight snap-back transition so the new drag starts
     // from the current position, not a stale one.
@@ -287,8 +313,10 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     const absDy = Math.abs(dy);
 
     // Horizontal — animate prev/next navigation (works for both an explicit
-    // movieList and series-sibling fallback)
-    if (hasNavList && absDx > 60 && absDx > absDy * 1.5) {
+    // movieList and series-sibling fallback). Skip if the touch started
+    // inside the series strip — that's a native-scroll gesture, not a
+    // modal-level swipe.
+    if (!touchStart.current.startedInStrip && hasNavList && absDx > 60 && absDx > absDy * 1.5) {
       const dir = dx < 0 ? 1 : -1;
       // Don't start an animation if we're at the end of the list — just
       // snap back so the user gets tactile "nothing past here" feedback.
@@ -335,7 +363,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const cardRarity = walletCard ? RARITIES[walletCard.rarity] : null;
 
   return (
-    <div className="modal-overlay open" onClick={(e) => {
+    <div className={`modal-overlay open${openInstant ? ' modal-overlay-instant' : ''}`} onClick={(e) => {
       if (e.target === e.currentTarget) onClose();
     }}>
       {hasNavList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
@@ -483,7 +511,14 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               filmId={movie.id}
               onNavigate={onNavigate}
               onClickOutOfCatalog={onOpenSeriesPreview
-                ? (sibling, collectionName) => onOpenSeriesPreview(sibling, collectionName)
+                ? (sibling, collectionName) => {
+                    // Hand the current scrollTop to the parent so the
+                    // incoming SeriesFilmPreview can mount already scrolled
+                    // to the same position — same "stays where I was"
+                    // behavior the in-canon click path gets for free.
+                    const scrollTop = modalRef.current?.scrollTop ?? 0;
+                    onOpenSeriesPreview(sibling, collectionName, scrollTop);
+                  }
                 : undefined}
               watchedSet={watchedSet}
             />

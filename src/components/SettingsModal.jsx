@@ -230,11 +230,19 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <div className="settings-version">
             <div className="settings-version-row">
               <span className="settings-version-label">Version</span>
-              <span className="settings-version-num">v3.3.0</span>
+              <span className="settings-version-num">v3.3.1</span>
             </div>
             <details className="settings-changelog">
               <summary>Changelog</summary>
               <div className="settings-changelog-content">
+              <p><strong>v3.3.1</strong> — Series navigation polish</p>
+              <ul>
+                <li><strong>Seamless canon-boundary crossings.</strong> Walking a series from a canonical film into a sequel/prequel (or back) no longer flashes the modal or jumps the scroll to the top — the new modal mounts at the outgoing modal's scroll position with the open animation suppressed, so the swap feels like a content swap in one modal</li>
+                <li><strong>Desktop keyboard + <code>‹ ›</code> buttons now work inside sequel modals.</strong> Previously the arrows disappeared the moment you landed on a non-canon film, leaving desktop users unable to continue walking the series with ← →</li>
+                <li><strong>Desktop nav is instant, not sliding.</strong> The 40% slide animation is reserved for touch swipes where it provides gesture feedback; arrow-key and click nav on desktop just swap content like every other modal</li>
+                <li><strong>Series strip scrolling no longer hijacks sibling nav.</strong> Horizontal-scrolling the poster strip inside a modal was also being read as a sibling swipe, triggering a film swap mid-scroll. Touches that start in the strip are now ignored by the modal-level swipe handler</li>
+                <li><strong>Animation-timing race fixed</strong> on rapid-succession swipes — a trailing <code>setTimeout</code> from the prior gesture could clear the next animation's transition mid-flight and snap the incoming film into place</li>
+              </ul>
               <p><strong>v3.3.0</strong> — Series navigation + mobile modal polish</p>
               <ul>
                 <li><strong>Series navigation.</strong> Every film in a franchise (Star Wars, Godfather, LOTR, Alien, Before trilogy, etc.) now shows its full series as a horizontal poster strip inside the detail modal — current film outlined in gold, watched siblings get a gold ✓, non-canon sequels/prequels dimmed. Tap any sibling to jump; swipe left/right to walk the series chronologically across the canon/non-canon boundary</li>

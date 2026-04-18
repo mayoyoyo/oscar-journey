@@ -63,14 +63,20 @@ Running the 2-of-N rule across all 7 lists and deduplicating against the existin
 
 | Tier | # Films | Description |
 |---|---|---|
-| **6 of 7 lists** | 5 | Iron-clad universal canon. City Lights, Modern Times, The Third Man, 12 Angry Men, Some Like It Hot. |
-| **5 of 7 lists** | 16 | Near-universal canon. Citizen Kane, Casablanca, Rashomon, Vertigo, 2001: A Space Odyssey, Do the Right Thing. |
-| **4 of 7 lists** | 36 | Strong consensus. Seven Samurai, Tokyo Story, Alien, Blade Runner, The Shining, Come and See, Terminator 2. |
-| **3 of 7 lists** | 86 | Clear must-watches. Metropolis, Stalker, 8½, Harakiri, Jeanne Dielman, Ran, Eraserhead, The Empire Strikes Back. |
-| **2 of 7 lists** | 295 | Passes the bar. Fight Club, The Matrix, Mulholland Drive, Portrait of a Lady on Fire. |
-| **Total** | **438** | New additions |
+| **6 of 7 lists** | 4 | Iron-clad universal canon. City Lights, Modern Times, The Third Man, Some Like It Hot. |
+| **5 of 7 lists** | 13 | Near-universal canon. Casablanca, Rashomon, Vertigo, 2001: A Space Odyssey, Do the Right Thing. |
+| **4 of 7 lists** | 30 | Strong consensus. Seven Samurai, Tokyo Story, Alien, Blade Runner, The Shining, Come and See, Terminator 2. |
+| **3 of 7 lists** | 70 | Clear must-watches. Metropolis, Stalker, 8½, Harakiri, Jeanne Dielman, Ran, Eraserhead, The Empire Strikes Back. |
+| **2 of 7 lists** | 187 | Passes the bar. Fight Club, The Matrix, Mulholland Drive, Portrait of a Lady on Fire. |
+| **Total** | **304** | Essentials in catalog |
 
-**Final catalog size: 399 + 438 = 837 films.** Well short of "thousands."
+The 2-of-7 rule originally produced ~438 essentials. A later curation pass
+removed pre-1970 tier-2/3 bloat (redundant directors, faded mid-century
+melodrama, niche festival artifacts) and promoted BP nominees from ESSENTIAL
+into the BP section — so tier counts above reflect the final catalog, not
+the raw rule output.
+
+**Final catalog size: 445 Oscar films + 304 Essentials = 749 films.** Well short of "thousands."
 
 ### Decade distribution
 
@@ -120,7 +126,7 @@ Films that dominate one audience list without crossing over will be missed. Perf
 
 ### 3. The margin of Tier 2 (2-of-7) is noisy
 
-Tier 2 is 295 films. Some are unambiguous (Fight Club, The Matrix). Some are borderline — bottom-of-Criterion + bottom-of-NFR entries. If 837 feels too big, cut at Tier 3 for 542 total films. That's the cleanest break.
+Tier 2 is 187 films (after the 2026 curation pass). Some are unambiguous (Fight Club, The Matrix). Some are borderline — bottom-of-Criterion + bottom-of-NFR entries. If 749 feels too big, cut at Tier 3 for 562 total films. That's the cleanest break.
 
 ### 4. Genre representation
 
@@ -155,4 +161,4 @@ Three files accompany this methodology:
 
 ## One-line summary
 
-**Require any new film to appear on ≥2 of 7 independent canonical lists. Produces 438 additions to the existing 399-film Oscar catalog. Total 837. Fight Club in, White Chicks out.**
+**Require any new film to appear on ≥2 of 7 independent canonical lists. After a 2026 curation pass (cut pre-1970 bloat, promote BP nominees, add pre-1991 International Feature winners), final catalog is 445 Oscar films + 304 Essentials = 749 total. Fight Club in, White Chicks out.**

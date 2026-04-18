@@ -18,7 +18,7 @@ const DEFAULT_FILTERS = {
   runtimes: { short: true, medium: true, long: true },
   // Unified canon-tier floor applied to ALL films via getTier() — OSCAR /
   // OSCAR_NOM counts as a canon list for BP / INT / ANIM, so one knob gates
-  // the whole 837-film catalog. 1 = everything, 2 = canon threshold, up to
+  // the whole catalog. 1 = everything, 2 = canon threshold, up to
   // 7 = all-time masterpieces. Matches the Film tab's stepper exactly.
   minTier: 1,
   // Focus mode: when true, hide ESSENTIAL (non-Oscar) films — leaving just
@@ -219,7 +219,7 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
                 <li><strong>Profiles get a Canon Score drill-down</strong> — click any tier row in the Canon Score table ("14 films at tier 6") to jump to the Films tab pre-filtered to that tier. Pairs with a <strong>Daily Oscar streak pill</strong> on every profile card (replaces the old Collector score pill; streak now persists across devices)</li>
                 <li><strong>Oscar statuette icons</strong> replace the "✦ Essential" text badge everywhere — gold (BP winner), bronze (BP nominee), blue (Intl winner), purple (Anim winner). Multi-statuette films like Parasite and Amour render all their medals in a consistent left→right order. BP winner is full-size; other statuettes scale to 0.85× so the winner stays dominant</li>
                 <li><strong>Unified canon depth</strong> — one 1–7 tier stepper that applies to ALL films (Oscar + essential). OSCAR / OSCAR_NOM now counts as a canon list, so BP winners tier to 8 and nominees to 1+. Per-level descriptions: Everything → Canon threshold → Strong consensus → Iron-clad → Near-universal → Universal → All-time masterpieces</li>
-                <li><strong>Oscars only / Essentials only</strong> — two mutually-exclusive toggles in Canon depth. "Oscars only" hides the 438 non-Oscar canon; "Essentials only" hides BP/Intl/Anim to show just the canon. Replaces the old 4-button radio</li>
+                <li><strong>Oscars only / Essentials only</strong> — two mutually-exclusive toggles in Canon depth. "Oscars only" hides the non-Oscar canon; "Essentials only" hides BP/Intl/Anim to show just the canon. Replaces the old 4-button radio</li>
                 <li><strong>Categories cleanup</strong> — ESSENTIAL row removed (duplicated Canon depth). Categories now only governs Oscar-eligible films: Best Picture · International · Animated. International and Animated use <em>broad</em> predicates (any non-English / any animated), catching ~20% of the catalog including essentials like Seven Samurai and Toy Story</li>
                 <li><strong>Oscars Won filter</strong> — filter films by the specific category they won: Best Picture, Best Director, Best Actor/Actress, Supporting, Screenplay (Orig/Adapt), Cinematography, Score, Song, Editing, VFX, Costume, Production Design, Makeup, Sound. 96 essentials had their per-category wins backfilled (Wikipedia Accolades + Wikidata SPARQL + 17 hand-patched); The Dark Knight now renders "Sound Editing + Supporting Actor — Heath Ledger"</li>
                 <li><strong>Full-catalog search</strong> across title + director + full Wikidata cast (OMDb top-billed fallback). Type any actor's name and find every film they're in on the list</li>

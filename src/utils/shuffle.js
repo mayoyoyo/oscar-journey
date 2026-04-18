@@ -110,7 +110,7 @@ export function diversityShuffle(movies, rng) {
       }
 
       // --- Front-loading — surface the best films hard in the first 100 slots ---
-      // Most users won't finish 837 films, so the first ~50 films have to hook
+      // Most users won't finish 700+ films, so the first ~50 films have to hook
       // them. Exponential bias with a 1.5 multiplier: at pos 0 a tier-7 film
       // gets 7^1.5 ≈ 18.5× boost vs tier-1's 1×. Diversity penalties (0.02 for
       // adjacent genre) can still reorder but can't keep a universal-canon

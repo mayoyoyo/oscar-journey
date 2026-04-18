@@ -399,7 +399,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       <p className="film-list-hint">
         {checklistMode
           ? 'Tap any film to mark it as watched. Great for first-timers catching up on what they\'ve already seen.'
-          : `Browse all ${MOVIES.length} films — every Best Picture nominee since 1970, every International and Animated Feature winner, plus 438 essential non-Oscar canon films. Use the filters to narrow down.`}
+          : `Browse all ${MOVIES.length} films — every Best Picture nominee (1939+), every International Feature winner (1956+), every Animated Feature winner, plus 304 essential non-Oscar canon films. Use the filters to narrow down.`}
       </p>
 
       <input

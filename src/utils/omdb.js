@@ -260,7 +260,7 @@ export function parseOscarWins(awardsText) {
 }
 
 // Small accessor so FilmDetailModal can use cached awards-string as a fallback
-// for films that don't have hand-coded `awards` data (most of the 438 essentials).
+// for films that don't have hand-coded `awards` data (most of the essentials).
 export function readCachedAwards(movie) {
   if (!movie) return null;
   const v = localStorage.getItem(omdbCacheKey('awards', movie));

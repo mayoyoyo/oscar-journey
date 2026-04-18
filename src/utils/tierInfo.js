@@ -5,7 +5,7 @@
 //   - BP winner / INT winner / ANIM winner → contributes to OSCAR list
 //   - BP nominee (won: false) → no contribution
 //
-// This lets the whole 837-film catalog share one tier scale.
+// This lets the whole catalog share one tier scale.
 
 export const LIST_LABELS = {
   OSCAR: 'Academy Award (Best Picture / Intl. / Animated)',

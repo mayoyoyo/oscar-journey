@@ -6356,6 +6356,24 @@ export function getSeriesForTmdbId(tmdbId) {
   return null;
 }
 
+// Resolve a "tmdb:<n>" watched-id back to a film + its collection.
+// Out-of-canon films are stored in profile.watched / profile.ratings under
+// this key; this helper lets profile-scope views (watched list, ratings
+// list) render them alongside catalog films without special-casing every
+// lookup site.
+// Returns null for non-tmdb ids so callers can fall through to
+// MOVIES_BY_ID. Format: { film, collectionName }.
+export function resolveTmdbWatchedId(id) {
+  if (typeof id !== 'string' || !id.startsWith('tmdb:')) return null;
+  const tmdbId = Number(id.slice(5));
+  if (!Number.isFinite(tmdbId)) return null;
+  for (const col of Object.values(SERIES_COLLECTIONS)) {
+    const film = col.films.find((f) => f.tmdbId === tmdbId);
+    if (film) return { film, collectionName: col.name };
+  }
+  return null;
+}
+
 // TMDB poster path -> full URL at a given size (w92, w154, w185, w342, w500, w780, original).
 export function tmdbPoster(path, size = 'w185') {
   if (!path) return null;

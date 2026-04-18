@@ -230,11 +230,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <div className="settings-version">
             <div className="settings-version-row">
               <span className="settings-version-label">Version</span>
-              <span className="settings-version-num">v3.3.1</span>
+              <span className="settings-version-num">v3.3.2</span>
             </div>
             <details className="settings-changelog">
               <summary>Changelog</summary>
               <div className="settings-changelog-content">
+              <p><strong>v3.3.2</strong> — Watched list fix + instant theme toggle</p>
+              <ul>
+                <li><strong>Sequel/prequel films marked as watched now show up in your profile's Watched list.</strong> Previously the count would increment but the film never appeared below — now they render as dimmed tiles with a "Not in canon" tag. Your Avg Rating stat also includes these ratings</li>
+                <li><strong>Light/dark mode swap is instant</strong> instead of fading through the old theme over ~200ms. Suppresses all CSS transitions for a single frame during the theme flip, then lifts — hover and interaction animations still work as normal</li>
+              </ul>
               <p><strong>v3.3.1</strong> — Series navigation polish</p>
               <ul>
                 <li><strong>Seamless canon-boundary crossings.</strong> Walking a series from a canonical film into a sequel/prequel (or back) no longer flashes the modal or jumps the scroll to the top — the new modal mounts at the outgoing modal's scroll position with the open animation suppressed, so the swap feels like a content swap in one modal</li>

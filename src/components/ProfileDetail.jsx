@@ -3,7 +3,23 @@ import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import { fetchOmdbData } from '../utils/omdb';
 import { RARITIES, getCollectorScore, getMaxWallet } from '../utils/cards';
+import { resolveTmdbWatchedId, tmdbPoster } from '../data/seriesCollections';
 import StatsTab from './StatsTab';
+
+// Out-of-canon (tmdb:<id>) films don't live in MOVIES so they need their
+// own lightweight "movie-like" shape for the watched/ratings list. Flagged
+// with isTmdb so renderers can branch on it.
+function tmdbFilmToMovieLike(id, film, collectionName) {
+  return {
+    id,                          // "tmdb:12345" (the same key used in ratings)
+    tmdbId: film.tmdbId,
+    title: film.title,
+    year: film.year,
+    posterPath: film.poster,     // TMDB /t/p/<size>/<path>
+    collectionName,
+    isTmdb: true,
+  };
+}
 
 // Small component to lazily load a poster for a movie tile
 function FilmTilePoster({ movie }) {
@@ -30,7 +46,7 @@ function FilmTilePoster({ movie }) {
 }
 
 // Renders the full detail view for a single profile
-export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail, onSaveProfile, onNavigateToTier }) {
+export default function ProfileDetail({ profileData, onBack, currentProfile, currentRatings, onOpenDetail, onOpenTmdbPreview, onSaveProfile, onNavigateToTier }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showUnwatched, setShowUnwatched] = useState(false);
   const [showSkipped, setShowSkipped] = useState(false);
@@ -39,7 +55,11 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
   // If focusRater is set, we only show that single rater's data
   const focusRater = profileData.focusRater || null;
 
-  // Resolve watched movies from the profile's watched array (movie IDs)
+  // Resolve watched movies from the profile's watched array (movie IDs).
+  // New format also supports `tmdb:<id>` entries for out-of-canon sequels
+  // marked as watched from SeriesFilmPreview — resolved via seriesCollections
+  // to a lightweight movie-like shape (isTmdb: true) that the renderer below
+  // handles with a simplified tile.
   const watchedMovies = useMemo(() => {
     if (!profileData || !Array.isArray(profileData.watched)) return [];
     const watched = profileData.watched;
@@ -57,7 +77,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
           return MOVIES[moviesIdx];
         })
         .filter(Boolean);
-    } else if (typeof first === 'string' && first.includes('|')) {
+    } else if (typeof first === 'string' && first.includes('|') && !first.startsWith('tmdb:')) {
       // INTERMEDIATE FORMAT: "Title|year" strings
       return watched.map(key => {
         const sepIdx = key.lastIndexOf('|');
@@ -66,8 +86,15 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
         return MOVIES.find(m => m.title === title && String(m.year) === yearStr);
       }).filter(Boolean);
     } else {
-      // NEW FORMAT: movie IDs
-      return watched.map(id => MOVIES_BY_ID[id]).filter(Boolean);
+      // NEW FORMAT: movie IDs — catalog ids resolve via MOVIES_BY_ID;
+      // `tmdb:<n>` ids resolve via resolveTmdbWatchedId.
+      return watched.map(id => {
+        const catalog = MOVIES_BY_ID[id];
+        if (catalog) return catalog;
+        const tmdb = resolveTmdbWatchedId(id);
+        if (tmdb) return tmdbFilmToMovieLike(id, tmdb.film, tmdb.collectionName);
+        return null;
+      }).filter(Boolean);
     }
   }, [profileData]);
 
@@ -155,6 +182,23 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             genreRatings[m.genre].total += val;
             genreRatings[m.genre].count++;
           }
+        }
+      }
+    }
+
+    // Out-of-canon (tmdb:<id>) ratings: include in avg + count so "7.6 AVG"
+    // reflects every rating the user has given, not just canon. Skip the
+    // genre bucket — these films don't have catalog genre codes, and the
+    // Fav Genre stat is a canon-curated feature by design.
+    for (const [key, r] of Object.entries(ratings)) {
+      if (typeof key !== 'string' || !key.startsWith('tmdb:')) continue;
+      if (!r || typeof r !== 'object') continue;
+      if (focusRater) {
+        const val = r[focusRater];
+        if (val != null) { totalRating += val; ratingCount++; }
+      } else {
+        for (const val of Object.values(r)) {
+          if (val != null) { totalRating += val; ratingCount++; }
         }
       }
     }
@@ -427,6 +471,52 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
           {filteredWatched.map(movie => {
             const movieRatings = getProfileRatings(movie);
             const viewerRating = !isOwnProfile ? getViewerRating(movie) : null;
+
+            // Simplified tile for out-of-canon (tmdb) films: TMDB poster
+            // instead of OMDb, dimmed border, "Not in canon" tag, opens
+            // SeriesFilmPreview. No Winner/tier flourishes since tmdb
+            // films don't carry that metadata.
+            if (movie.isTmdb) {
+              const handleClick = () => {
+                if (onOpenTmdbPreview) {
+                  onOpenTmdbPreview({ tmdbId: movie.tmdbId, title: movie.title, year: movie.year, poster: movie.posterPath }, movie.collectionName);
+                }
+              };
+              return (
+                <div className="film-tile film-tile-tmdb" key={movie.id}
+                  style={{ cursor: onOpenTmdbPreview ? 'pointer' : 'default' }}
+                  onClick={handleClick}>
+                  <div className="film-tile-poster-wrap">
+                    {movie.posterPath ? (
+                      <img className="film-tile-poster" src={tmdbPoster(movie.posterPath, 'w342')} alt={movie.title} onError={(e) => { e.target.style.display = 'none'; }} />
+                    ) : (
+                      <div className="film-tile-poster-placeholder">🎬</div>
+                    )}
+                  </div>
+                  <div className="film-tile-info">
+                    <div className="film-tile-title">{movie.title}</div>
+                    <div className="film-tile-year">{movie.year}</div>
+                    <div className="film-tile-tmdb-tag">Not in canon</div>
+                    <div className="film-tile-ratings">
+                      {profileRaters.map(rater => {
+                        const val = movieRatings[rater];
+                        if (val == null) return null;
+                        return (
+                          <span className="film-tile-rating" key={rater}>
+                            {rater}: <span className="rating-value">{val.toFixed(1)}{'\u2605'}</span>
+                          </span>
+                        );
+                      })}
+                      {viewerRating && (
+                        <span className="film-tile-rating viewer-rating">
+                          You: <span className="rating-value">{viewerRating.value.toFixed(1)}{'\u2605'}</span>
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
 
             return (
               <div className="film-tile" key={movie.id}

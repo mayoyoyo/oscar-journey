@@ -34,7 +34,7 @@ async function getAllProfiles() {
   return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, watchedTitleSet, ratings, raters, onSaveProfile, autoSelectProfileId, onClearAutoSelect, onNavigateToTier }) {
+export default function Leaderboard({ currentProfile, currentRatings, onOpenDetail, onOpenTmdbPreview, watchedTitleSet, ratings, raters, onSaveProfile, autoSelectProfileId, onClearAutoSelect, onNavigateToTier }) {
   const [profiles, setProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProfile, setSelectedProfile] = useState(null);
@@ -251,6 +251,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         currentProfile={currentProfile}
         currentRatings={currentRatings}
         onOpenDetail={onOpenDetail}
+        onOpenTmdbPreview={onOpenTmdbPreview}
         onSaveProfile={onSaveProfile}
         onNavigateToTier={onNavigateToTier}
       />

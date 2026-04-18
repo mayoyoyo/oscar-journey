@@ -223,10 +223,24 @@ export default function App() {
     return saved === 'dark';
   });
 
-  // Apply theme to <html> element whenever isDark changes
+  // Apply theme to <html> element whenever isDark changes. Temporarily
+  // add `theme-switching` so CSS can suppress transitions during the
+  // swap — otherwise every element with `transition: all` or `transition:
+  // background-color` animates from the old theme's color to the new,
+  // making buttons visibly lag the toggle by 150-200ms.
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    const root = document.documentElement;
+    root.classList.add('theme-switching');
+    root.setAttribute('data-theme', isDark ? 'dark' : 'light');
     localStorage.setItem(LS_THEME_KEY, isDark ? 'dark' : 'light');
+    // Double-rAF: first rAF lets the browser paint the new colors with
+    // transitions suppressed; second rAF removes the class so regular
+    // hover/interaction transitions work again.
+    const h1 = requestAnimationFrame(() => {
+      const h2 = requestAnimationFrame(() => root.classList.remove('theme-switching'));
+      return () => cancelAnimationFrame(h2);
+    });
+    return () => cancelAnimationFrame(h1);
   }, [isDark]);
 
   // toggleTheme is defined further down, AFTER firebaseSave, so it can route
@@ -1328,6 +1342,7 @@ export default function App() {
           currentProfile={profile}
           currentRatings={ratings}
           onOpenDetail={setDetailMovie}
+          onOpenTmdbPreview={(film, collectionName) => setSeriesPreview({ film, collectionName })}
           watchedTitleSet={watchedTitleSet}
           ratings={ratings}
           raters={raters}

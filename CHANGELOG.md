@@ -1,5 +1,31 @@
 # Changelog
 
+## 3.3.2 — 2026-04-18
+
+### Watched list now includes out-of-canon films — chris-testing
+- **Sequel/prequel films marked as watched now appear in your profile's
+  Watched Films list** — previously the Watched count would increment but
+  the film never showed in the list below, creating a "where did it go?"
+  mismatch. Out-of-canon films render as a simplified tile (TMDB poster,
+  dimmed border, "NOT IN CANON" tag) and open the `SeriesFilmPreview`
+  modal on click instead of the canonical detail modal.
+- **Avg Rating stat includes out-of-canon ratings** so your profile's
+  overall rating average reflects every rating you've left, not just
+  canonical films. Favorite Genre stays canon-only by design — it's a
+  curated-catalog metric and out-of-canon films don't carry genre codes.
+- **New helper `resolveTmdbWatchedId(id)`** in `seriesCollections.js` that
+  resolves `tmdb:<n>` watched-ids back to TMDB film metadata so any
+  profile-scope view can render them without special-casing.
+
+### Instant theme toggle — chris-testing
+- **Light/dark mode swap is now instant** instead of fading through the
+  old theme over 150-200ms. Previously every button / card / pill with a
+  generic `transition: all` was interpolating its background-color from
+  the old theme's value to the new one. A one-frame `theme-switching`
+  class now suppresses all transitions during the actual color swap, then
+  lifts — so hover/interaction transitions keep working but the theme
+  flip itself is snappy.
+
 ## 3.3.1 — 2026-04-18
 
 ### Series navigation polish — chris-testing

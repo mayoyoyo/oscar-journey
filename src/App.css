@@ -57,6 +57,17 @@
   --lh-normal:    1.6;
 }
 
+/* Suppress every CSS transition for exactly one frame during theme toggle
+ * so colors swap instantly instead of fading through the old theme. Set
+ * imperatively in App.jsx via classList.add/remove around the data-theme
+ * attribute change. */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition: none !important;
+}
+
 [data-theme="dark"] {
   --bg:        #0a0a0f;
   --bg2:       #12121a;
@@ -4924,6 +4935,32 @@ main {
 .film-tile:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px var(--shadow);
+}
+
+/* Out-of-canon (tmdb) tile — dimmed poster + muted border so it reads as
+ * "watched, but not part of the curated canon". Matches the series strip's
+ * treatment of non-canon sibling posters. */
+.film-tile-tmdb {
+  border-color: var(--border);
+  opacity: 0.85;
+}
+.film-tile-tmdb .film-tile-poster {
+  filter: grayscale(0.15);
+}
+.film-tile-tmdb:hover {
+  opacity: 1;
+}
+.film-tile-tmdb:hover .film-tile-poster {
+  filter: grayscale(0);
+}
+.film-tile-tmdb-tag {
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cream-dim);
+  padding: 3px 0 4px;
+  opacity: 0.75;
 }
 
 .film-tile-poster {

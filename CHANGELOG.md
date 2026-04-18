@@ -1,5 +1,20 @@
 # Changelog
 
+## 3.3.3 — 2026-04-18
+
+### Shared modal-gesture hook — chris-testing
+- **Refactored the ~200 lines of drag-to-close / horizontal swipe /
+  arrow-key / scroll-preserve logic that were duplicated across
+  `FilmDetailModal` (canonical films) and `SeriesFilmPreview` (out-of-canon
+  sequels) into a single `useFilmModalGestures` hook.** Behavior is
+  unchanged end-user-side; the win is that future gesture work — a new
+  keyboard shortcut, different swipe threshold, haptic feedback — now
+  lives in one file instead of needing to be implemented twice.
+- **Free feature parity:** `FilmDetailModal` picked up Escape-to-close
+  while we were there (SeriesFilmPreview already had it).
+- Net: **-130 lines** across the codebase (-376 from the two modal files,
+  +246 in the new shared hook).
+
 ## 3.3.2 — 2026-04-18
 
 ### Watched list now includes out-of-canon films — chris-testing

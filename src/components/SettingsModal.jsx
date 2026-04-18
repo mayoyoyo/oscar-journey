@@ -230,11 +230,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <div className="settings-version">
             <div className="settings-version-row">
               <span className="settings-version-label">Version</span>
-              <span className="settings-version-num">v3.3.2</span>
+              <span className="settings-version-num">v3.3.3</span>
             </div>
             <details className="settings-changelog">
               <summary>Changelog</summary>
               <div className="settings-changelog-content">
+              <p><strong>v3.3.3</strong> — Internal refactor (no user-visible change)</p>
+              <ul>
+                <li>Shared modal-gesture logic (drag-to-close, swipe, arrow keys, scroll preservation) is now factored into one <code>useFilmModalGestures</code> hook so the canonical and out-of-canon modal components no longer duplicate ~200 lines of plumbing. Future gesture work happens once, in one file.</li>
+                <li>Minor parity win: Escape-to-close now works on the canonical detail modal (it already worked on the sequel preview)</li>
+              </ul>
               <p><strong>v3.3.2</strong> — Watched list fix + instant theme toggle</p>
               <ul>
                 <li><strong>Sequel/prequel films marked as watched now show up in your profile's Watched list.</strong> Previously the count would increment but the film never appeared below — now they render as dimmed tiles with a "Not in canon" tag. Your Avg Rating stat also includes these ratings</li>

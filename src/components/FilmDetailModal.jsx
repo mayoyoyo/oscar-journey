@@ -1,4 +1,5 @@
-import React, { useEffect, useLayoutEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { useFilmModalGestures } from './useFilmModalGestures';
 import { fetchOmdbData, readCachedOmdbData, parseOscarWins, tidyPlot } from '../utils/omdb';
 import { MovieBadges, BadgeGenreSm } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
@@ -124,235 +125,43 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const hasNext = movieList
     ? currentListIdx >= 0 && currentListIdx < movieList.length - 1
     : currentSeriesIdx >= 0 && currentSeriesIdx < (seriesSiblings?.length ?? 0) - 1;
-
-  const goPrev = useCallback(() => {
-    if (movieList && onNavigate) {
-      const idx = movieList.findIndex(m => m.id === movie?.id);
-      if (idx > 0) onNavigate(movieList[idx - 1]);
-      return;
-    }
-    if (seriesSiblings && onSeriesNavigate) {
-      const idx = seriesSiblings.findIndex((s) => s.catalogId === movie?.id);
-      if (idx > 0) {
-        // Hand current scrollTop up so if the sibling is out-of-canon and
-        // swaps FilmDetailModal → SeriesFilmPreview, the new modal mounts
-        // scrolled to the same position. In-canon siblings ignore it
-        // (same modal instance, scroll is preserved naturally).
-        const scrollTop = modalRef.current?.scrollTop ?? 0;
-        onSeriesNavigate(seriesSiblings[idx - 1], scrollTop);
-      }
-    }
-  }, [movie?.id, movieList, onNavigate, seriesSiblings, onSeriesNavigate]);
-
-  const goNext = useCallback(() => {
-    if (movieList && onNavigate) {
-      const idx = movieList.findIndex(m => m.id === movie?.id);
-      if (idx >= 0 && idx < movieList.length - 1) onNavigate(movieList[idx + 1]);
-      return;
-    }
-    if (seriesSiblings && onSeriesNavigate) {
-      const idx = seriesSiblings.findIndex((s) => s.catalogId === movie?.id);
-      if (idx >= 0 && idx < seriesSiblings.length - 1) {
-        const scrollTop = modalRef.current?.scrollTop ?? 0;
-        onSeriesNavigate(seriesSiblings[idx + 1], scrollTop);
-      }
-    }
-  }, [movie?.id, movieList, onNavigate, seriesSiblings, onSeriesNavigate]);
-
-  // Animated variants — slide the current content out, call the navigate
-  // handler (which swaps the movie prop), slide the new content in from
-  // the opposite side. Keeps the eye tracking from film → film.
-  const animatedGo = useCallback((direction) => {
-    const el = modalRef.current;
-    const go = direction > 0 ? goNext : goPrev;
-    if (!el) { go(); return; }
-    // If a resetTransform is pending (horizontal swipe path calls it right
-    // before us), cancel its stale clear-transition timer or it will fire
-    // mid-animation and snap the modal instead of gliding it.
-    if (transitionClearTimer.current != null) {
-      clearTimeout(transitionClearTimer.current);
-      transitionClearTimer.current = null;
-    }
-    const offset = direction > 0 ? '-40%' : '40%';
-    const opposite = direction > 0 ? '40%' : '-40%';
-    el.style.transition = 'transform 170ms ease-out, opacity 170ms ease-out';
-    el.style.transform = `translateX(${offset})`;
-    el.style.opacity = '0';
-    setTimeout(() => {
-      go();
-      // Pre-position the new content on the opposite side with no
-      // transition, then animate it back to center on the next frame.
-      if (!modalRef.current) return;
-      modalRef.current.style.transition = 'none';
-      modalRef.current.style.transform = `translateX(${opposite})`;
-      modalRef.current.style.opacity = '0';
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          if (!modalRef.current) return;
-          modalRef.current.style.transition = 'transform 220ms cubic-bezier(0.16, 1, 0.3, 1), opacity 220ms ease-out';
-          modalRef.current.style.transform = 'translateX(0)';
-          modalRef.current.style.opacity = '1';
-          // Route this trailing transition-clear through the same ref so a
-          // rapid subsequent swipe can cancel it before it kills the next
-          // animation's transition.
-          transitionClearTimer.current = setTimeout(() => {
-            transitionClearTimer.current = null;
-            if (modalRef.current) modalRef.current.style.transition = '';
-          }, 240);
-        });
-      });
-    }, 170);
-  }, [goNext, goPrev]);
-
-  // Keyboard navigation (works for both movieList and series-sibling modes)
   const hasNavList = !!movieList || !!seriesSiblings;
-  useEffect(() => {
-    if (!hasNavList) return;
-    const handler = (e) => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); }
-    };
-    document.addEventListener('keydown', handler);
-    return () => document.removeEventListener('keydown', handler);
-  }, [hasNavList, goPrev, goNext]);
 
-  // Swipe gestures:
-  //  - horizontal swipe → prev/next film navigation (requires movieList)
-  //  - vertical drag DOWN when modal is scrolled to the top → the modal
-  //    visually follows the finger, and releasing past 120px closes it.
-  //    Mid-scroll swipes are ignored so reading long films (Alien) works.
-  //  Imperative transform updates (via ref) avoid re-rendering on every
-  //  touchmove, keeping the drag silky-smooth on mobile.
-  const modalRef = useRef(null);
-  const touchStart = useRef(null);
-  const currentDragY = useRef(0);
-  // Tracks the pending setTimeout from resetTransform so animatedGo can
-  // cancel it. Without this, a horizontal swipe at touchend triggers
-  // resetTransform (schedules clear at T=240ms) and then animatedGo
-  // (starts its return-slide at ~T=186ms with a 220ms transition) — the
-  // stale timeout wipes the transition mid-animation and the incoming
-  // film snaps into place instead of sliding in.
-  const transitionClearTimer = useRef(null);
-
-  const cancelTransitionClear = useCallback(() => {
-    if (transitionClearTimer.current != null) {
-      clearTimeout(transitionClearTimer.current);
-      transitionClearTimer.current = null;
-    }
-  }, []);
-
-  const resetTransform = useCallback(() => {
-    const el = modalRef.current;
-    if (!el) return;
-    cancelTransitionClear();
-    el.style.transition = 'transform 220ms cubic-bezier(0.16, 1, 0.3, 1)';
-    el.style.transform = '';
-    transitionClearTimer.current = setTimeout(() => {
-      transitionClearTimer.current = null;
-      if (modalRef.current) modalRef.current.style.transition = '';
-    }, 240);
-    currentDragY.current = 0;
-  }, [cancelTransitionClear]);
-
-  // Clear any pending transition-clear timer on unmount so it can't fire
-  // against a stale DOM reference.
-  useEffect(() => () => cancelTransitionClear(), [cancelTransitionClear]);
-
-  // When opening as a replacement for SeriesFilmPreview (in-canon sibling
-  // click/swipe from a sequel preview), mount already-scrolled to the
-  // outgoing modal's position so the swap feels continuous.
-  useLayoutEffect(() => {
-    if (initialScrollTop && modalRef.current) {
-      modalRef.current.scrollTop = initialScrollTop;
-    }
-    // Mount-only — subsequent swaps within the same modal instance
-    // preserve scroll naturally via React keeping the scroll container.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const handleTouchStart = useCallback((e) => {
-    const el = modalRef.current;
-    // Let inner horizontal scrollers (series strip) own horizontal swipes
-    // so scrolling through sequel posters doesn't also navigate films.
-    const startedInStrip = !!e.target.closest?.('.series-strip');
-    touchStart.current = {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY,
-      scrollTop: el ? el.scrollTop : 0,
-      startedInStrip,
-    };
-    // Cancel any in-flight snap-back transition so the new drag starts
-    // from the current position, not a stale one.
-    if (el) el.style.transition = '';
-    currentDragY.current = 0;
-  }, []);
-
-  const handleTouchMove = useCallback((e) => {
-    if (!touchStart.current) return;
-    const dy = e.touches[0].clientY - touchStart.current.y;
-    const dx = e.touches[0].clientX - touchStart.current.x;
-    const atTop = touchStart.current.scrollTop <= 1;
-    // Only engage vertical drag when at top AND pulling down AND vertical
-    // is clearly dominant over horizontal (so diagonal swipes don't get
-    // half a card-drag and half a navigation).
-    if (atTop && dy > 6 && dy > Math.abs(dx)) {
-      // Rubber-band past 150px so it feels grippy, not infinite.
-      const resisted = dy > 150 ? 150 + (dy - 150) * 0.5 : dy;
-      currentDragY.current = resisted;
-      if (modalRef.current) {
-        modalRef.current.style.transform = `translateY(${resisted}px)`;
-      }
-    }
-  }, []);
-
-  const handleTouchEnd = useCallback((e) => {
-    if (!touchStart.current) return;
-    const dx = e.changedTouches[0].clientX - touchStart.current.x;
-    const dy = e.changedTouches[0].clientY - touchStart.current.y;
-    const absDx = Math.abs(dx);
-    const absDy = Math.abs(dy);
-
-    // Horizontal — animate prev/next navigation (works for both an explicit
-    // movieList and series-sibling fallback). Skip if the touch started
-    // inside the series strip — that's a native-scroll gesture, not a
-    // modal-level swipe.
-    if (!touchStart.current.startedInStrip && hasNavList && absDx > 60 && absDx > absDy * 1.5) {
-      const dir = dx < 0 ? 1 : -1;
-      // Don't start an animation if we're at the end of the list — just
-      // snap back so the user gets tactile "nothing past here" feedback.
-      if ((dir > 0 && !hasNext) || (dir < 0 && !hasPrev)) {
-        resetTransform();
-        touchStart.current = null;
-        return;
-      }
-      resetTransform();
-      animatedGo(dir);
-      touchStart.current = null;
+  // Single nav handler used by the shared gestures hook (touch swipe + ← →
+  // arrow keys) AND the on-screen ‹ › buttons. Reads scrollTop imperatively
+  // so cross-boundary swaps (in-canon → out-of-canon) hand it to the parent
+  // for restoration in the incoming SeriesFilmPreview.
+  const handleHorizontalNav = useCallback((direction) => {
+    if (movieList && onNavigate) {
+      const idx = movieList.findIndex(m => m.id === movie?.id);
+      const nextIdx = idx + direction;
+      if (nextIdx >= 0 && nextIdx < movieList.length) onNavigate(movieList[nextIdx]);
       return;
     }
-
-    // Vertical — close with a smooth slide-off-bottom if user dragged far
-    // enough; otherwise snap back. Fade the overlay backdrop out alongside
-    // the card so the card doesn't visually detach from a static dark
-    // rectangle as it leaves the screen.
-    if (currentDragY.current > 120) {
-      const el = modalRef.current;
-      const overlay = el?.parentElement;
-      if (el) {
-        el.style.transition = 'transform 220ms cubic-bezier(0.4, 0, 1, 1), opacity 200ms ease-out';
-        el.style.transform = 'translateY(100vh)';
-        el.style.opacity = '0';
+    if (seriesSiblings && onSeriesNavigate) {
+      const idx = seriesSiblings.findIndex((s) => s.catalogId === movie?.id);
+      const nextIdx = idx + direction;
+      if (nextIdx >= 0 && nextIdx < seriesSiblings.length) {
+        const scrollTop = modalRef.current?.scrollTop ?? 0;
+        onSeriesNavigate(seriesSiblings[nextIdx], scrollTop);
       }
-      if (overlay) {
-        overlay.style.transition = 'background-color 200ms ease-out, opacity 200ms ease-out';
-        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-      }
-      setTimeout(() => onClose(), 200);
-    } else {
-      resetTransform();
     }
-    touchStart.current = null;
-  }, [animatedGo, hasNavList, hasNext, hasPrev, onClose, resetTransform]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [movie?.id, movieList, onNavigate, seriesSiblings, onSeriesNavigate]);
+
+  const {
+    modalRef,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+  } = useFilmModalGestures({
+    onClose,
+    onHorizontalNav: handleHorizontalNav,
+    hasNav: hasNavList,
+    hasPrev,
+    hasNext,
+    initialScrollTop,
+  });
 
   if (!movie) return null;
 
@@ -366,8 +175,8 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
     <div className={`modal-overlay open${openInstant ? ' modal-overlay-instant' : ''}`} onClick={(e) => {
       if (e.target === e.currentTarget) onClose();
     }}>
-      {hasNavList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={goPrev}>‹</button>}
-      {hasNavList && hasNext && <button className="modal-nav-btn modal-nav-next" onClick={goNext}>›</button>}
+      {hasNavList && hasPrev && <button className="modal-nav-btn modal-nav-prev" onClick={() => handleHorizontalNav(-1)}>‹</button>}
+      {hasNavList && hasNext && <button className="modal-nav-btn modal-nav-next" onClick={() => handleHorizontalNav(1)}>›</button>}
       <div
         ref={modalRef}
         className="modal film-detail-modal"

@@ -154,7 +154,7 @@ const JOURNEY_TAGLINES = [
   "You're not watching a movie. You're having a cultural experience.",
   "The remote control has a play button. It does not have a 'scroll endlessly' button.",
   "Commitment issues? In this economy? Just watch the film.",
-  "This site has 837 films. You have one job.",
+  "This site has 749 films. You have one job.",
   "Think of this as a gym membership for your brain. Except you'll actually use it.",
   "Your watchlist on Netflix has 200 films. You've watched 3. We're fixing that.",
   "Award-winning cinema > doomscrolling. This is not up for debate.",
@@ -171,7 +171,7 @@ const JOURNEY_TAGLINES = [
   "You're not watching movies. You're collecting opinions. Very important opinions.",
   "The skip button exists, but so does regret. Choose wisely.",
   "Remember when you said you wanted to watch more 'good' movies? This is that.",
-  "A journey of 837 films begins with a single play button.",
+  "A journey of 749 films begins with a single play button.",
   "This film has been waiting on a list somewhere for you specifically.",
   "You can't spell 'cinema' without... actually you can. Just watch it.",
   "Your film taste is about to get an upgrade. You're welcome in advance.",
@@ -194,7 +194,7 @@ const JOURNEY_TAGLINES = [
   "Your watch history is your autobiography. Make it a good one.",
   "The best films are the ones you almost didn't watch.",
   "Skip now, FOMO later. It's a tale as old as cinema.",
-  "If you finish all 837 films, absolutely nothing happens. But you'll feel incredible.",
+  "If you finish all 749 films, absolutely nothing happens. But you'll feel incredible.",
   "Rome wasn't built in a day. Your film taste won't be either.",
   "The only bad movie night is the one where you didn't press play.",
   "Grab a snack. Dim the lights. Pretend you're at a film festival. You basically are.",
@@ -550,8 +550,19 @@ export default function App() {
     // Set raters
     const ratersList = data.raters || ['Chris', 'Yvonne'];
 
-    // Set current index
-    const idx = data.currentIdx || 0;
+    // Preserve the current film's identity across catalog changes. If films
+    // before the user's position were removed from the catalog (cleanup runs,
+    // tier cuts, etc.), the raw numeric index would silently shift them onto
+    // a different movie. Look up the current film by its ID in the original
+    // saved playlistOrder, then find its new index in the filtered playlist.
+    let idx = data.currentIdx || 0;
+    if (Array.isArray(data.playlistOrder) && typeof data.playlistOrder[0] === 'string') {
+      const savedCurrentId = data.playlistOrder[idx];
+      if (savedCurrentId) {
+        const newIdx = pl.findIndex(m => m.id === savedCurrentId);
+        if (newIdx >= 0) idx = newIdx;
+      }
+    }
 
     // Publish fully-mutated profile to React state now that every field
     // matches what's persisted in Firestore.
@@ -1174,7 +1185,7 @@ export default function App() {
                   <button className="journey-welcome-close" onClick={() => { setBannerDismissed(true); localStorage.setItem('oscars_banner_dismissed', 'true'); }}>✕</button>
                   <div className="journey-welcome-title">🏆 The Oscars Journey</div>
                   <div className="journey-welcome-text">
-                    {MOVIES.length} films — every Best Picture nominee since 1970, every International and Animated Feature winner, plus 438 essential non-Oscar must-watches curated across 7 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, festival grand prizes, National Film Registry). Shuffled so you never watch two similar films back-to-back. Watch each one, rate it, and move on.
+                    {MOVIES.length} films — every Best Picture nominee (1939+), every International Feature winner (1956+), every Animated Feature winner, plus 304 essential non-Oscar must-watches curated across 7 canon lists (Sight &amp; Sound, Criterion, IMDb, Letterboxd, AFI, festival grand prizes, National Film Registry). Shuffled so you never watch two similar films back-to-back. Watch each one, rate it, and move on.
                   </div>
                 </div>
               )}

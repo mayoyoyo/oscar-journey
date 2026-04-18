@@ -209,7 +209,7 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
         <div className="settings-version">
           <div className="settings-version-row">
             <span className="settings-version-label">Version</span>
-            <span className="settings-version-num">v3.1.0</span>
+            <span className="settings-version-num">v3.2.0</span>
           </div>
           <details className="settings-changelog">
             <summary>Changelog</summary>

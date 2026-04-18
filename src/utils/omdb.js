@@ -169,20 +169,37 @@ export async function fetchOmdbData(movie) {
   try {
     const titleEnc = encodeURIComponent(cleanTitle(movie.title));
 
-    // Try with current key, rotate on rate limit
+    // Try with current key, rotate on rate limit OR 401 (invalid/expired key).
     const tryWithKey = async (titleEnc, year) => {
       for (let attempt = 0; attempt < OMDB_KEYS.length; attempt++) {
         const key = OMDB_KEYS[currentKeyIndex];
         let url = `https://www.omdbapi.com/?t=${titleEnc}&type=movie&apikey=${key}`;
         if (year) url += `&y=${year}`;
-        const resp = await fetch(url);
-        const data = await resp.json();
+        let resp;
+        try {
+          resp = await fetch(url);
+        } catch (e) {
+          return { rateLimited: true };
+        }
+
+        // 401 = invalid/expired key. Rotate and retry with next key.
+        if (resp.status === 401 || resp.status === 403) {
+          currentKeyIndex = (currentKeyIndex + 1) % OMDB_KEYS.length;
+          if (attempt < OMDB_KEYS.length - 1) continue;
+          return { rateLimited: true };
+        }
+
+        let data;
+        try {
+          data = await resp.json();
+        } catch (e) {
+          return { rateLimited: true };
+        }
 
         if (data.Error && data.Error.includes('limit')) {
-          // This key is exhausted — rotate to next
           currentKeyIndex = (currentKeyIndex + 1) % OMDB_KEYS.length;
-          if (attempt < OMDB_KEYS.length - 1) continue; // try next key
-          return { rateLimited: true }; // all keys exhausted
+          if (attempt < OMDB_KEYS.length - 1) continue;
+          return { rateLimited: true };
         }
         return data;
       }

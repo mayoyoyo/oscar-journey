@@ -89,11 +89,13 @@ async function main() {
     const line = src.slice(idx, eol);
     // Remove any existing `lists: [...]` to make re-runs idempotent
     let cleaned = line.replace(/,\s*lists:\s*\[[^\]]*\]/, '');
-    // Insert `lists: [...]` just before the closing `}`
+    // Insert `, lists: [...]` just before the closing `}` (leading comma since
+    // every entry has at least id/title/year before this point, so we always
+    // need the separator)
     const closeBrace = cleaned.lastIndexOf('}');
     if (closeBrace === -1) continue;
     const listsStr = lists.sort().map(l => `'${l}'`).join(', ');
-    const newLine = cleaned.slice(0, closeBrace) + ` lists: [${listsStr}] ` + cleaned.slice(closeBrace);
+    const newLine = cleaned.slice(0, closeBrace).trimEnd() + `, lists: [${listsStr}] ` + cleaned.slice(closeBrace);
     src = src.slice(0, idx) + newLine + src.slice(eol);
     applied++;
   }

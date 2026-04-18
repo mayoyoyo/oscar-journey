@@ -8,3 +8,7 @@ backups/
 # Wikiquote fetcher cache (local-only, regenerated on demand)
 scripts/wq-cache/
 scripts/wq-extracted/
+
+# Editor / agent artifacts
+.claude/
+.playwright-mcp/

@@ -856,178 +856,103 @@
     "country": "Denmark"
   },
   "birdman-2014": {
-    "lang": {
-      "name": "N/A",
-      "code": "n/"
-    },
+    "lang": "N/A",
     "country": "UK"
   },
   "l-atalante-1934": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "the-conformist-1970": {
-    "lang": {
-      "name": "Italian",
-      "code": "it"
-    },
+    "lang": "Italian",
     "country": "Italy"
   },
   "the-red-circle-1970": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "a-city-of-sadness-1989": {
-    "lang": {
-      "name": "Mandarin",
-      "code": "zh"
-    },
+    "lang": "Mandarin",
     "country": "Taiwan"
   },
   "three-colours-red-1994": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "happy-together-1997": {
-    "lang": {
-      "name": "Cantonese",
-      "code": "zh"
-    },
+    "lang": "Cantonese",
     "country": "Hong Kong"
   },
   "flowers-of-shanghai-1998": {
-    "lang": {
-      "name": "Cantonese",
-      "code": "zh"
-    },
+    "lang": "Cantonese",
     "country": "Taiwan"
   },
   "the-gleaners-and-i-2000": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "in-vanda-s-room-2000": {
-    "lang": {
-      "name": "Portuguese",
-      "code": "pt"
-    },
+    "lang": "Portuguese",
     "country": "Portugal"
   },
   "uncle-boonmee-who-can-recall-his-past-lives-2010": {
-    "lang": {
-      "name": "Thai",
-      "code": "th"
-    },
+    "lang": "Thai",
     "country": "Thailand"
   },
   "faces-places-2017": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "petite-maman-2021": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "monster-2023": {
-    "lang": {
-      "name": "Japanese",
-      "code": "ja"
-    },
+    "lang": "Japanese",
     "country": "Japan"
   },
   "flow-2024": {
-    "lang": {
-      "name": "None",
-      "code": "no"
-    },
+    "lang": "None",
     "country": "Latvia"
   },
   "city-lights-1931": {
-    "lang": {
-      "name": "None",
-      "code": "no"
-    },
+    "lang": "None",
     "country": "United States"
   },
   "sherlock-jr-1924": {
-    "lang": {
-      "name": "None",
-      "code": "no"
-    },
+    "lang": "None",
     "country": "United States"
   },
   "the-general-1926": {
-    "lang": {
-      "name": "None",
-      "code": "no"
-    },
+    "lang": "None",
     "country": "United States"
   },
   "the-gold-rush-1925": {
-    "lang": {
-      "name": "None",
-      "code": "no"
-    },
+    "lang": "None",
     "country": "United States"
   },
   "koyaanisqatsi-1982": {
-    "lang": {
-      "name": "None",
-      "code": "no"
-    },
+    "lang": "None",
     "country": "United States"
   },
   "grand-illusion-1937": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "je-tu-il-elle-1974": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "Belgium"
   },
   "sans-soleil-1982": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "the-green-ray-1986": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   },
   "blue-is-the-warmest-colour-2013": {
-    "lang": {
-      "name": "French",
-      "code": "fr"
-    },
+    "lang": "French",
     "country": "France"
   }
 }

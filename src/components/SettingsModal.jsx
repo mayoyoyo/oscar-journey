@@ -20,7 +20,7 @@ const DEFAULT_FILTERS = {
   // OSCAR_NOM counts as a canon list for BP / INT / ANIM, so one knob gates
   // the whole catalog. 1 = everything, 2 = canon threshold, up to
   // 7 = all-time masterpieces. Matches the Film tab's stepper exactly.
-  minTier: 1,
+  minTier: 0,
   // Focus mode: when true, hide ESSENTIAL (non-Oscar) films — leaving just
   // BP nominees + Int/Anim winners. Mirrors the Film tab's "Oscars only".
   oscarsOnly: false,

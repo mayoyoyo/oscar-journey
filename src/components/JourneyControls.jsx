@@ -7,12 +7,14 @@ import { getTier } from '../utils/tierInfo';
 // Per-tier copy shown in the Canon depth stepper. Mirrors the Film tab's
 // TIER_LEVELS so both surfaces describe the canon threshold identically.
 const TIER_LEVELS = {
-  1: { label: 'Canonical',  sub: 'All films — present in the canon with at least one curated endorsement.' },
+  0: { label: 'All films',  sub: 'No canon floor — every film in the catalog, including Oscar nominees with no canon-list endorsement.' },
+  1: { label: 'Canonical',  sub: 'Present in the canon — at least one curated endorsement.' },
   2: { label: 'Acclaimed',  sub: 'Meets our multi-list entry threshold — validated by 2+ sources.' },
   3: { label: 'Landmark',   sub: 'Broad recognition across critics, institutions, and audience lists.' },
   4: { label: 'Masterwork', sub: 'Near-universal consensus across critical, institutional, and popular canon.' },
   5: { label: 'Apex',       sub: 'Summit canon — curated top tier whose inclusion on any serious must-watch list is essentially unavoidable.' },
 };
+const MIN_SLIDER_TIER = 0;
 const MAX_SLIDER_TIER = 5;
 
 function eraBucketJourney(year) {
@@ -131,7 +133,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   // Per-option eligibility pool based on unified tier + focus mode. Used to hide
   // rows that would match zero films (e.g. 1910s when tier ≥ 5).
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (getTier(m) < (currentFilters.minTier ?? 1)) return false;
+    if (getTier(m) < (currentFilters.minTier ?? 0)) return false;
     if (currentFilters.oscarsOnly && m.category === 'ESSENTIAL') return false;
     if (currentFilters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
@@ -240,7 +242,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
 
     if (currentFilters.oscarsOnly) chips.push('Oscars only');
     if (currentFilters.essentialsOnly) chips.push('Essentials only');
-    if (currentFilters.minTier > 1) chips.push(`Tier ≥${currentFilters.minTier}`);
+    if (currentFilters.minTier > 0) chips.push(`Tier ≥${currentFilters.minTier}`);
 
     return chips;
   }, [currentFilters]);
@@ -314,7 +316,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                     const parts = [];
                     if (currentFilters.oscarsOnly) parts.push('Oscars only');
                     if (currentFilters.essentialsOnly) parts.push('Essentials only');
-                    if (currentFilters.minTier > 1) parts.push(`tier ≥${currentFilters.minTier}`);
+                    if (currentFilters.minTier > 0) parts.push(`tier ≥${currentFilters.minTier}`);
                     if (parts.length === 0) return null;
                     return <span className="filter-section-count">{parts.join(' · ')}</span>;
                   })()}
@@ -369,17 +371,17 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                           <button
                             type="button"
                             className="tier-stepper-btn"
-                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.max(1, (currentFilters.minTier ?? 1) - 1) })}
-                            disabled={currentFilters.minTier <= 1}
+                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.max(MIN_SLIDER_TIER, (currentFilters.minTier ?? 0) - 1) })}
+                            disabled={currentFilters.minTier <= MIN_SLIDER_TIER}
                             aria-label="Lower minimum tier"
                           >−</button>
                           <span className="tier-stepper-value">
-                            {currentFilters.minTier === MAX_SLIDER_TIER ? currentFilters.minTier : `≥ ${currentFilters.minTier}`}
+                            {currentFilters.minTier === MAX_SLIDER_TIER ? currentFilters.minTier : currentFilters.minTier === 0 ? '—' : `≥ ${currentFilters.minTier}`}
                           </span>
                           <button
                             type="button"
                             className="tier-stepper-btn"
-                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.min(MAX_SLIDER_TIER, (currentFilters.minTier ?? 1) + 1) })}
+                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.min(MAX_SLIDER_TIER, (currentFilters.minTier ?? 0) + 1) })}
                             disabled={currentFilters.minTier >= MAX_SLIDER_TIER}
                             aria-label="Raise minimum tier"
                           >+</button>

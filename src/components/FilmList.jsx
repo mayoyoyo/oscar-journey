@@ -75,7 +75,7 @@ const DEFAULT_FILM_FILTERS = {
   // Unified tier floor — applies to ALL films (not just essentials).
   // Tier uses the getTierInfo count, which folds OSCAR/OSCAR_NOM into the
   // canon-list count so Oscar films are part of the same ranking.
-  minTier: 1,
+  minTier: 0,
   // Canon focus — mutually exclusive in the UI:
   //   oscarsOnly      → hide ESSENTIAL canon, leave BP / INT / ANIM
   //   essentialsOnly  → hide Oscar-eligible films, leave just non-Oscar canon
@@ -85,13 +85,16 @@ const DEFAULT_FILM_FILTERS = {
 
 // Per-tier copy shown in the Canon depth section. Keys map to the 5-tier
 // bucketed score (R2: NFR+AFI merged, OSCAR pip included, + curated overrides).
+// Tier 0 is the "no canon floor" position — shows every film in the catalog.
 const TIER_LEVELS = {
-  1: { label: 'Canonical',  sub: 'All films — present in the canon with at least one curated endorsement.' },
+  0: { label: 'All films',  sub: 'No canon floor — every film in the catalog, including Oscar nominees with no canon-list endorsement.' },
+  1: { label: 'Canonical',  sub: 'Present in the canon — at least one curated endorsement.' },
   2: { label: 'Acclaimed',  sub: 'Meets our multi-list entry threshold — validated by 2+ sources.' },
   3: { label: 'Landmark',   sub: 'Broad recognition across critics, institutions, and audience lists.' },
   4: { label: 'Masterwork', sub: 'Near-universal consensus across critical, institutional, and popular canon.' },
   5: { label: 'Apex',       sub: 'Summit canon — curated top tier whose inclusion on any serious must-watch list is essentially unavoidable.' },
 };
+const MIN_SLIDER_TIER = 0;
 const MAX_SLIDER_TIER = 5;
 
 function sortKeyFn(title) {
@@ -271,7 +274,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
       // Tier applies UNIFORMLY to all films via the unified getTier helper, which counts
       // OSCAR / OSCAR_NOM as a canon-list entry for BP / INT / ANIM films.
-      .filter(m => !!q || getTier(m) >= (filters.minTier ?? 1))
+      .filter(m => !!q || getTier(m) >= (filters.minTier ?? 0))
       .filter(m => !!q || !filters.oscarsOnly || m.category !== 'ESSENTIAL')
       .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
@@ -309,7 +312,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   // (e.g. the 1910s era when canon depth is set to ≥3). Counts are no longer
   // shown as suffixes per mayo's request; we only use this to drop empty rows.
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (getTier(m) < (filters.minTier ?? 1)) return false;
+    if (getTier(m) < (filters.minTier ?? 0)) return false;
     if (filters.oscarsOnly && m.category === 'ESSENTIAL') return false;
     if (filters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
@@ -469,7 +472,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                   const parts = [];
                   if (filters.oscarsOnly) parts.push('Oscars only');
                   if (filters.essentialsOnly) parts.push('Essentials only');
-                  if (filters.minTier > 1) parts.push(`tier ≥${filters.minTier}`);
+                  if (filters.minTier > 0) parts.push(`tier ≥${filters.minTier}`);
                   if (parts.length === 0) return null;
                   return <span className="filter-section-count">{parts.join(' · ')}</span>;
                 })()}
@@ -516,17 +519,17 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                         <button
                           type="button"
                           className="tier-stepper-btn"
-                          onClick={() => setFilters(f => ({ ...f, minTier: Math.max(1, (f.minTier ?? 1) - 1) }))}
-                          disabled={filters.minTier <= 1}
+                          onClick={() => setFilters(f => ({ ...f, minTier: Math.max(MIN_SLIDER_TIER, (f.minTier ?? 0) - 1) }))}
+                          disabled={filters.minTier <= MIN_SLIDER_TIER}
                           aria-label="Lower minimum tier"
                         >−</button>
                         <span className="tier-stepper-value">
-                          {filters.minTier === MAX_SLIDER_TIER ? filters.minTier : `≥ ${filters.minTier}`}
+                          {filters.minTier === MAX_SLIDER_TIER ? filters.minTier : filters.minTier === 0 ? '—' : `≥ ${filters.minTier}`}
                         </span>
                         <button
                           type="button"
                           className="tier-stepper-btn"
-                          onClick={() => setFilters(f => ({ ...f, minTier: Math.min(MAX_SLIDER_TIER, (f.minTier ?? 1) + 1) }))}
+                          onClick={() => setFilters(f => ({ ...f, minTier: Math.min(MAX_SLIDER_TIER, (f.minTier ?? 0) + 1) }))}
                           disabled={filters.minTier >= MAX_SLIDER_TIER}
                           aria-label="Raise minimum tier"
                         >+</button>

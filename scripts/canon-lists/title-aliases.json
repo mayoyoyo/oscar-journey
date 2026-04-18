@@ -1,0 +1,222 @@
+{
+  "_note": "Alias map: foreign-language / alternate-form titles → canonical English title used in our catalog. Applied during normalization so a film on SS as 'La Règle du jeu' matches our entry 'Rules of the Game'. Keys and values are BOTH run through normalize() at match time, so case/accents don't matter here — but exact word choice does. Add new entries when a list-source hit fails to match a catalog entry.",
+
+  "la regle du jeu": "rules of the game",
+  "a bout de souffle": "breathless",
+  "jules et jim": "jules and jim",
+
+  "otto e mezzo": "8½",
+  "8 1 2": "8½",
+  "la strada": "la strada",
+  "nuovo cinema paradiso": "cinema paradiso",
+
+  "tokyo monogatari": "tokyo story",
+  "seven samurai shichinin no samurai": "seven samurai",
+  "banshun": "late spring",
+  "ugetsu monogatari": "ugetsu",
+
+  "det sjunde inseglet": "the seventh seal",
+  "smultronstallet": "wild strawberries",
+  "sasom i en spegel": "through a glass darkly",
+  "jungfrukallan": "the virgin spring",
+  "fanny och alexander": "fanny and alexander",
+
+  "les quatre cents coups": "the 400 blows",
+  "la nuit americaine": "day for night",
+  "le charme discret de la bourgeoisie": "the discreet charm of the bourgeoisie",
+  "le mepris": "contempt",
+  "pierrot le fou": "pierrot le fou",
+  "au hasard balthazar": "au hasard balthazar",
+  "celine et julie vont en bateau": "celine and julie go boating",
+  "beau travail": "beau travail",
+  "la grande illusion": "grand illusion",
+  "l atalante": "l'atalante",
+  "belle de jour": "belle de jour",
+
+  "jeanne dielman 23 quai du commerce 1080 bruxelles": "jeanne dielman",
+  "trois couleurs rouge": "three colours red",
+  "three colors red": "three colours red",
+
+  "le salaire de la peur": "the wages of fear",
+  "les diaboliques": "diabolique",
+  "playtime": "playtime",
+  "mon oncle": "mon oncle",
+  "les vacances de monsieur hulot": "mr hulot's holiday",
+
+  "los olvidados": "the young and the damned",
+  "viridiana": "viridiana",
+  "el angel exterminador": "the exterminating angel",
+  "atame": "tie me up tie me down",
+
+  "andrey rublev": "andrei rublev",
+  "zerkalo": "the mirror",
+  "solyaris": "solaris",
+  "tayny dvora": "the mirror",
+
+  "mulholland dr": "mulholland drive",
+  "dr strangelove": "dr strangelove or how i learned to stop worrying and love the bomb",
+  "dr strangelove or how i learned to stop worrying and love bomb": "dr strangelove or how i learned to stop worrying and love the bomb",
+
+  "the umbrellas of cherbourg": "the umbrellas of cherbourg",
+  "les parapluies de cherbourg": "the umbrellas of cherbourg",
+  "les demoiselles de rochefort": "the young girls of rochefort",
+  "le samourai": "le samourai",
+
+  "persona": "persona",
+  "cries and whispers": "cries and whispers",
+
+  "la dolce vita": "la dolce vita",
+  "la notte": "la notte",
+  "l avventura": "l'avventura",
+  "il gattopardo": "the leopard",
+  "suspiria": "suspiria",
+  "c era una volta il west": "once upon a time in the west",
+  "il buono il brutto il cattivo": "the good the bad and the ugly",
+
+  "harakiri": "harakiri",
+  "seppuku": "harakiri",
+  "kwaidan": "kwaidan",
+  "kaidan": "kwaidan",
+  "ran": "ran",
+  "yojimbo": "yojimbo",
+  "throne of blood": "throne of blood",
+  "kumonosu jo": "throne of blood",
+
+  "wings of desire": "wings of desire",
+  "der himmel uber berlin": "wings of desire",
+  "das boot": "das boot",
+  "die blechtrommel": "the tin drum",
+  "m": "m",
+
+  "come and see": "come and see",
+  "idi i smotri": "come and see",
+  "the passion of joan of arc": "the passion of joan of arc",
+  "la passion de jeanne d arc": "the passion of joan of arc",
+
+  "in the mood for love": "in the mood for love",
+  "fa yeung nin wa": "in the mood for love",
+  "chungking express": "chungking express",
+  "chung hing sam lam": "chungking express",
+  "happy together": "happy together",
+  "chun gwong cha sit": "happy together",
+  "2046": "2046",
+  "a city of sadness": "a city of sadness",
+  "bei qing cheng shi": "a city of sadness",
+  "a brighter summer day": "a brighter summer day",
+  "gu ling jie shao nian sha ren shi jian": "a brighter summer day",
+
+  "the shop on main street": "the shop on main street",
+  "obchod na korze": "the shop on main street",
+  "closely watched trains": "closely watched trains",
+  "ostre sledovane vlaky": "closely watched trains",
+
+  "mephisto": "mephisto",
+  "babettes gaestebud": "babette's feast",
+  "pelle erobreren": "pelle the conqueror",
+  "dersu uzala": "dersu uzala",
+
+  "spirited away": "spirited away",
+  "sen to chihiro no kamikakushi": "spirited away",
+  "my neighbor totoro": "my neighbor totoro",
+  "tonari no totoro": "my neighbor totoro",
+  "grave of the fireflies": "grave of the fireflies",
+  "hotaru no haka": "grave of the fireflies",
+  "princess mononoke": "princess mononoke",
+  "mononoke hime": "princess mononoke",
+
+  "the discreet charm of bourgeoisie": "the discreet charm of the bourgeoisie",
+  "un chien andalou": "un chien andalou",
+  "l age d or": "l'age d'or",
+
+  "parasite": "parasite",
+  "gisaengchung": "parasite",
+  "memories of murder": "memories of murder",
+  "salinui chueok": "memories of murder",
+  "oldboy": "oldboy",
+  "oldeuboi": "oldboy",
+
+  "the handmaiden": "the handmaiden",
+  "ah ga ssi": "the handmaiden",
+  "drive my car": "drive my car",
+  "doraibu mai ka": "drive my car",
+
+  "city of god": "city of god",
+  "cidade de deus": "city of god",
+  "central station": "central station",
+  "central do brasil": "central station",
+
+  "all about my mother": "all about my mother",
+  "todo sobre mi madre": "all about my mother",
+  "talk to her": "talk to her",
+  "hable con ella": "talk to her",
+  "pan s labyrinth": "pan's labyrinth",
+  "el laberinto del fauno": "pan's labyrinth",
+
+  "amour": "amour",
+  "the white ribbon": "the white ribbon",
+  "das weisse band": "the white ribbon",
+  "cache": "cache",
+  "funny games": "funny games",
+
+  "ali fear eats the soul": "ali fear eats the soul",
+  "angst essen seele auf": "ali fear eats the soul",
+  "the marriage of maria braun": "the marriage of maria braun",
+  "die ehe der maria braun": "the marriage of maria braun",
+
+  "bicycle thieves": "bicycle thieves",
+  "ladri di biciclette": "bicycle thieves",
+  "the bicycle thief": "bicycle thieves",
+  "umberto d": "umberto d",
+  "roma citta aperta": "rome open city",
+  "rome open city": "rome open city",
+
+  "investigation of a citizen above suspicion": "investigation of a citizen above suspicion",
+  "indagine su un cittadino al di sopra di ogni sospetto": "investigation of a citizen above suspicion",
+  "the garden of the finzi continis": "the garden of the finzi-continis",
+  "il giardino dei finzi contini": "the garden of the finzi-continis",
+  "amarcord": "amarcord",
+
+  "the young and the damned": "los olvidados",
+
+  "the red shoes": "the red shoes",
+  "a matter of life and death": "a matter of life and death",
+  "stairway to heaven": "a matter of life and death",
+  "black narcissus": "black narcissus",
+  "the life and death of colonel blimp": "the life and death of colonel blimp",
+  "peeping tom": "peeping tom",
+
+  "army of shadows": "army of shadows",
+  "l armee des ombres": "army of shadows",
+  "le trou": "le trou",
+  "le cercle rouge": "the red circle",
+  "the red circle": "the red circle",
+
+  "yi yi": "yi yi",
+  "yi yi a one and a two": "yi yi",
+
+  "an autumn afternoon": "an autumn afternoon",
+  "sanma no aji": "an autumn afternoon",
+  "i vitelloni": "i vitelloni",
+
+  "the battle of algiers": "the battle of algiers",
+  "la battaglia di algeri": "the battle of algiers",
+
+  "z": "z",
+
+  "last year at marienbad": "last year at marienbad",
+  "l annee derniere a marienbad": "last year at marienbad",
+
+  "rashomon": "rashomon",
+  "rashomon ": "rashomon",
+  "yume": "dreams",
+
+  "pather panchali": "pather panchali",
+  "aparajito": "aparajito",
+  "apu sansar": "the world of apu",
+  "the world of apu": "the world of apu",
+
+  "star wars episode iv a new hope": "star wars",
+  "star wars episode v the empire strikes back": "the empire strikes back",
+  "sunrise": "sunrise a song of two humans",
+  "sunrise a song of two humans": "sunrise a song of two humans"
+}

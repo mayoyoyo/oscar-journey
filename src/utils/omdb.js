@@ -1,6 +1,7 @@
 import { RUNTIME_OVERRIDES } from './runtimeOverrides';
 
-const OMDB_KEYS = ['ab8cbc12', '84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8', 'fbe9d009', '8a3c9a0', 'b76841fa'];
+// 'ab8cbc12' removed — returns 401 (key disabled/invalid). 9 keys remain.
+const OMDB_KEYS = ['84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8', 'fbe9d009', '8a3c9a0', 'b76841fa'];
 let currentKeyIndex = 0;
 const CACHE_PREFIX = 'oscars_';
 const NOT_FOUND = 'NOT_FOUND';
@@ -169,20 +170,37 @@ export async function fetchOmdbData(movie) {
   try {
     const titleEnc = encodeURIComponent(cleanTitle(movie.title));
 
-    // Try with current key, rotate on rate limit
+    // Try with current key, rotate on rate limit OR 401 (invalid/expired key).
     const tryWithKey = async (titleEnc, year) => {
       for (let attempt = 0; attempt < OMDB_KEYS.length; attempt++) {
         const key = OMDB_KEYS[currentKeyIndex];
         let url = `https://www.omdbapi.com/?t=${titleEnc}&type=movie&apikey=${key}`;
         if (year) url += `&y=${year}`;
-        const resp = await fetch(url);
-        const data = await resp.json();
+        let resp;
+        try {
+          resp = await fetch(url);
+        } catch (e) {
+          return { rateLimited: true };
+        }
+
+        // 401 = invalid/expired key. Rotate and retry with next key.
+        if (resp.status === 401 || resp.status === 403) {
+          currentKeyIndex = (currentKeyIndex + 1) % OMDB_KEYS.length;
+          if (attempt < OMDB_KEYS.length - 1) continue;
+          return { rateLimited: true };
+        }
+
+        let data;
+        try {
+          data = await resp.json();
+        } catch (e) {
+          return { rateLimited: true };
+        }
 
         if (data.Error && data.Error.includes('limit')) {
-          // This key is exhausted — rotate to next
           currentKeyIndex = (currentKeyIndex + 1) % OMDB_KEYS.length;
-          if (attempt < OMDB_KEYS.length - 1) continue; // try next key
-          return { rateLimited: true }; // all keys exhausted
+          if (attempt < OMDB_KEYS.length - 1) continue;
+          return { rateLimited: true };
         }
         return data;
       }
@@ -260,7 +278,7 @@ export function parseOscarWins(awardsText) {
 }
 
 // Small accessor so FilmDetailModal can use cached awards-string as a fallback
-// for films that don't have hand-coded `awards` data (most of the 438 essentials).
+// for films that don't have hand-coded `awards` data (most of the essentials).
 export function readCachedAwards(movie) {
   if (!movie) return null;
   const v = localStorage.getItem(omdbCacheKey('awards', movie));

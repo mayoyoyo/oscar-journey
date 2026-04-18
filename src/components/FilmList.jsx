@@ -1,6 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { MovieBadges } from './Badges';
+import OscarIcon, { getOscarBadges } from './OscarIcon';
+
+// Prototype flag: Option A layout moves Oscar statuettes to a fixed-width
+// left column before the title. Flip to false to revert to the inline layout.
+const OPTION_A_LAYOUT = true;
 import { ratingKey } from '../utils/storage';
 import { readCachedRuntime, runtimeBucket, prefetchRuntimes, RUNTIME_LABELS } from '../utils/runtime';
 import { ERA_LABELS, CATEGORY_LABELS } from './SettingsModal';
@@ -75,7 +80,7 @@ const DEFAULT_FILM_FILTERS = {
   // Unified tier floor — applies to ALL films (not just essentials).
   // Tier uses the getTierInfo count, which folds OSCAR/OSCAR_NOM into the
   // canon-list count so Oscar films are part of the same ranking.
-  minTier: 1,
+  minTier: 0,
   // Canon focus — mutually exclusive in the UI:
   //   oscarsOnly      → hide ESSENTIAL canon, leave BP / INT / ANIM
   //   essentialsOnly  → hide Oscar-eligible films, leave just non-Oscar canon
@@ -83,20 +88,19 @@ const DEFAULT_FILM_FILTERS = {
   essentialsOnly: false,
 };
 
-// Per-tier copy shown in the Canon depth section. Keys are the minimum
-// tier value for the slider; the description previews what that floor
-// means editorially. Matches the methodology's "2-of-N triangulation".
+// Per-tier copy shown in the Canon depth section. Keys map to the 5-tier
+// bucketed score (R2: NFR+AFI merged, OSCAR pip included, + curated overrides).
+// Tier 0 is the "no canon floor" position — shows every film in the catalog.
 const TIER_LEVELS = {
-  1: { label: 'Everything',        sub: 'The whole catalog — no canon floor applied.' },
-  2: { label: 'Canon threshold',   sub: 'On 2+ canonical lists. The working bar for "belongs in the canon."' },
-  3: { label: 'Strong consensus',  sub: 'On 3+ lists. Backed by multiple disjoint cultural authorities.' },
-  4: { label: 'Iron-clad',         sub: 'On 4+ lists. No serious critic argues against these.' },
-  5: { label: 'Near-universal',    sub: 'On 5+ lists. Staples of every major canon.' },
-  6: { label: 'Universal canon',   sub: 'On 6+ lists. Essentially undisputed across worldviews.' },
-  7: { label: 'All-time masterpieces', sub: 'On 7 of 8 lists. In the conversation for greatest ever made.' },
-  8: { label: 'Legendary',         sub: 'On every canonical list. Vanishingly rare — the GOATs.' },
+  0: { label: 'All films',  sub: 'No canon floor — every film in the catalog, including Oscar nominees with no canon-list endorsement.' },
+  1: { label: 'Canonical',  sub: 'Present in the canon — at least one curated endorsement.' },
+  2: { label: 'Acclaimed',  sub: 'Meets our multi-list entry threshold — validated by 2+ sources.' },
+  3: { label: 'Landmark',   sub: 'Broad recognition across critics, institutions, and audience lists.' },
+  4: { label: 'Masterwork', sub: 'Near-universal consensus across critical, institutional, and popular canon.' },
+  5: { label: 'Apex',       sub: 'Summit canon — curated top tier whose inclusion on any serious must-watch list is essentially unavoidable.' },
 };
-const MAX_SLIDER_TIER = 7;
+const MIN_SLIDER_TIER = 0;
+const MAX_SLIDER_TIER = 5;
 
 function sortKeyFn(title) {
   return title.replace(/^(The|A|An)\s+/i, '').toLowerCase();
@@ -275,7 +279,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
       // Tier applies UNIFORMLY to all films via the unified getTier helper, which counts
       // OSCAR / OSCAR_NOM as a canon-list entry for BP / INT / ANIM films.
-      .filter(m => !!q || getTier(m) >= (filters.minTier ?? 1))
+      .filter(m => !!q || getTier(m) >= (filters.minTier ?? 0))
       .filter(m => !!q || !filters.oscarsOnly || m.category !== 'ESSENTIAL')
       .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
@@ -313,7 +317,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   // (e.g. the 1910s era when canon depth is set to ≥3). Counts are no longer
   // shown as suffixes per mayo's request; we only use this to drop empty rows.
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (getTier(m) < (filters.minTier ?? 1)) return false;
+    if (getTier(m) < (filters.minTier ?? 0)) return false;
     if (filters.oscarsOnly && m.category === 'ESSENTIAL') return false;
     if (filters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
@@ -399,7 +403,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       <p className="film-list-hint">
         {checklistMode
           ? 'Tap any film to mark it as watched. Great for first-timers catching up on what they\'ve already seen.'
-          : `Browse all ${MOVIES.length} films — every Best Picture nominee since 1970, every International and Animated Feature winner, plus 438 essential non-Oscar canon films. Use the filters to narrow down.`}
+          : `Browse all ${MOVIES.length} films — every Best Picture nominee (1970+), every International Feature winner (1956+), every Animated Feature winner, plus 330 essential non-Oscar canon films. Use the filters to narrow down.`}
       </p>
 
       <input
@@ -473,7 +477,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                   const parts = [];
                   if (filters.oscarsOnly) parts.push('Oscars only');
                   if (filters.essentialsOnly) parts.push('Essentials only');
-                  if (filters.minTier > 1) parts.push(`tier ≥${filters.minTier}`);
+                  if (filters.minTier > 0) parts.push(`tier ≥${filters.minTier}`);
                   if (parts.length === 0) return null;
                   return <span className="filter-section-count">{parts.join(' · ')}</span>;
                 })()}
@@ -513,22 +517,29 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                   </button>
 
                   {/* Minimum tier +/- stepper */}
-                  <div className="tier-stepper">
+                  <div className={`tier-stepper ${
+                    filters.minTier === 5 ? 'tier-stepper-apex'
+                    : filters.minTier === 4 ? 'tier-stepper-masterwork'
+                    : filters.minTier === 3 ? 'tier-stepper-landmark'
+                    : ''
+                  }`}>
                     <div className="tier-stepper-header">
                       <span className="tier-stepper-title">Minimum tier</span>
                       <div className="tier-stepper-controls">
                         <button
                           type="button"
                           className="tier-stepper-btn"
-                          onClick={() => setFilters(f => ({ ...f, minTier: Math.max(1, (f.minTier ?? 1) - 1) }))}
-                          disabled={filters.minTier <= 1}
+                          onClick={() => setFilters(f => ({ ...f, minTier: Math.max(MIN_SLIDER_TIER, (f.minTier ?? 0) - 1) }))}
+                          disabled={filters.minTier <= MIN_SLIDER_TIER}
                           aria-label="Lower minimum tier"
                         >−</button>
-                        <span className="tier-stepper-value">≥ {filters.minTier}</span>
+                        <span className="tier-stepper-value">
+                          {filters.minTier === MAX_SLIDER_TIER ? filters.minTier : filters.minTier === 0 ? '—' : `≥ ${filters.minTier}`}
+                        </span>
                         <button
                           type="button"
                           className="tier-stepper-btn"
-                          onClick={() => setFilters(f => ({ ...f, minTier: Math.min(MAX_SLIDER_TIER, (f.minTier ?? 1) + 1) }))}
+                          onClick={() => setFilters(f => ({ ...f, minTier: Math.min(MAX_SLIDER_TIER, (f.minTier ?? 0) + 1) }))}
                           disabled={filters.minTier >= MAX_SLIDER_TIER}
                           aria-label="Raise minimum tier"
                         >+</button>
@@ -590,8 +601,19 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                     {!checklistMode && (
                       <span className={`film-row-dot ${isWatched ? 'watched' : ''}`} />
                     )}
-                    <span className="film-row-title">{m.title}</span>
-                    <MovieBadges movie={m} small />
+                    {OPTION_A_LAYOUT ? (
+                      <span className="film-row-title-group">
+                        <span className="film-row-title film-row-title-inline">{m.title}</span>
+                        <span className="film-row-awards">
+                          {getOscarBadges(m).map(k => (
+                            <OscarIcon key={k} movie={m} kind={k} size="sm" />
+                          ))}
+                        </span>
+                      </span>
+                    ) : (
+                      <span className="film-row-title">{m.title}</span>
+                    )}
+                    <MovieBadges movie={m} small excludeOscars={OPTION_A_LAYOUT} />
                     <span className="film-row-year">{m.year}</span>
                   </div>
                 );

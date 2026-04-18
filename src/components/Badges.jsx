@@ -82,22 +82,20 @@ export function BadgeBpSm() {
 // statuette icon (gold=winner, gray=nominee, none=essential/canon-only) carries
 // the Oscars-vs-Essentials demarcation; absence of an icon implies canon-only.
 // Tier pips sit inline so every A-Z row stays on a single line.
-export function MovieBadges({ movie, small = false }) {
+export function MovieBadges({ movie, small = false, excludeOscars = false }) {
   const alsoWon = movie.alsoWon || [];
   const oscarStatus = getOscarStatus(movie);
 
   if (small) {
-    // Desktop row: genre + language + pips + all applicable Oscar statuettes
-    // (BP gold/bronze, Intl blue, Anim purple — via getOscarBadges). The old
-    // International / Animated text chips are gone — the colored statuette
-    // carries that signal now. Mobile strips the remaining text chips via
-    // the @media rule in App.css.
+    // Desktop row: genre + language + pips (+ Oscar statuettes unless
+    // excludeOscars — used by Option A layout where statuettes live in a
+    // dedicated left column).
     return (
       <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'nowrap' }}>
         <BadgeGenreSm genre={movie.genre} />
         <LanguagePill movie={movie} />
         <TierPips movie={movie} variant="compact" />
-        {getOscarBadges(movie).map(k => (
+        {!excludeOscars && getOscarBadges(movie).map(k => (
           <OscarIcon key={k} movie={movie} kind={k} size="sm" />
         ))}
       </span>

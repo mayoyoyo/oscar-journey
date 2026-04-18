@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RARITIES } from '../utils/cards';
 
-const LS_KEY = 'oscars_whats_new_v2_seen';
+const LS_KEY = 'oscars_whats_new_v3_seen';
 
 export default function WhatsNewAnnouncement({ onGoToBattle, onPlayDaily }) {
   const [visible, setVisible] = useState(() => !localStorage.getItem(LS_KEY));
@@ -25,30 +25,30 @@ export default function WhatsNewAnnouncement({ onGoToBattle, onPlayDaily }) {
         <div className="wn-badge">NEW FEATURES</div>
         <h2 className="wn-title">What's New</h2>
 
-        {/* Essential Canon Section */}
+        {/* Canon Refresh + 5-tier System */}
         <div className="wn-section">
           <div className="wn-section-header">
             <span className="wn-section-icon">✦</span>
             <div>
-              <div className="wn-section-title">438 Essential Films Added</div>
-              <div className="wn-section-sub">Beyond the Oscars — the films the Academy missed</div>
+              <div className="wn-section-title">Catalog refresh + 5-tier Canon</div>
+              <div className="wn-section-sub">787 films, scored across 8 canon lists, bucketed Canonical → Apex</div>
             </div>
           </div>
           <div className="wn-card-row" style={{ justifyContent: 'center', gap: 14 }}>
-            <span className="tier-pips tier-8" style={{ padding: '5px 10px' }}>
-              {Array.from({ length: 8 }, (_, i) => <span key={i} className="tier-pip filled" />)}
-              <span className="tier-pip-label">8</span>
+            <span className="tier-pips tier-5" style={{ padding: '5px 10px' }}>
+              {Array.from({ length: 5 }, (_, i) => <span key={i} className="tier-pip filled" />)}
+              <span className="tier-pip-label">Apex</span>
             </span>
-            <span className="tier-pips tier-4" style={{ padding: '5px 10px' }}>
-              {Array.from({ length: 4 }, (_, i) => <span key={i} className="tier-pip filled" />)}
-              <span className="tier-pip-label">4</span>
+            <span className="tier-pips tier-3" style={{ padding: '5px 10px' }}>
+              {Array.from({ length: 3 }, (_, i) => <span key={i} className="tier-pip filled" />)}
+              <span className="tier-pip-label">Landmark</span>
             </span>
             <span className="tier-pips tier-2" style={{ padding: '5px 10px' }}>
               {Array.from({ length: 2 }, (_, i) => <span key={i} className="tier-pip filled" />)}
-              <span className="tier-pip-label">2</span>
+              <span className="tier-pip-label">Acclaimed</span>
             </span>
           </div>
-          <p className="wn-section-desc">Fight Club, The Matrix, Mulholland Drive, Do the Right Thing — films every great list agrees on but the Academy overlooked. Each film scored against 7 independent canon lists (Sight & Sound, AFI, Criterion, IMDb, Letterboxd, festival grand prizes, National Film Registry). Gold pips show how many lists a film appears on. Track your Canon Score in the Stats tab.</p>
+          <p className="wn-section-desc">Fresh scrapes of all canon lists (Sight &amp; Sound, AFI, Criterion, IMDb, Letterboxd, Rotten Tomatoes, festival grand prizes, National Film Registry). A curated 16-film <strong>Apex</strong> tier — Godfather, Pulp Fiction, Parasite, Seven Samurai, Vertigo, 2001, Citizen Kane, The Third Man and the rest of the summit canon. Tap any film's pips to see its canon lists and tier.</p>
         </div>
 
         <div className="wn-divider" />

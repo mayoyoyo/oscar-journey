@@ -17,16 +17,19 @@ export function getOscarStatus(movie) {
 //   2. 'int'     (blue)   — won INT                 [middle]
 //   3. 'anim'    (purple) — won ANIM                [middle — INT and ANIM
 //                                                     don't overlap in practice]
-//   4. 'winner'  (gold)   — BP win                  [always rightmost]
-// Parasite: ['int', 'winner']. Amour: ['nominee', 'int'].
+//   1. 'winner'  (gold)   — BP win                  [always leftmost]
+//   2. 'anim'    (purple) — Animated Feature win
+//   3. 'int'     (blue)   — International Feature win
+//   4. 'nominee' (bronze) — BP nominee, no win       [always rightmost]
+// Parasite: ['winner', 'int']. Amour: ['int', 'nominee'].
 // Drive My Car: ['int']. Spirited Away: ['anim'].
 export function getOscarBadges(movie) {
   const out = [];
   const alsoWon = movie.alsoWon || [];
-  if (movie.category === 'BP' && !movie.won) out.push('nominee');
-  if (movie.category === 'INT' || alsoWon.includes('INT')) out.push('int');
-  if (movie.category === 'ANIM' || alsoWon.includes('ANIM')) out.push('anim');
   if (movie.category === 'BP' && movie.won) out.push('winner');
+  if (movie.category === 'ANIM' || alsoWon.includes('ANIM')) out.push('anim');
+  if (movie.category === 'INT' || alsoWon.includes('INT')) out.push('int');
+  if (movie.category === 'BP' && !movie.won) out.push('nominee');
   return out;
 }
 

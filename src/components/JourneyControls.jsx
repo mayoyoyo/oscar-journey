@@ -7,15 +7,15 @@ import { getTier } from '../utils/tierInfo';
 // Per-tier copy shown in the Canon depth stepper. Mirrors the Film tab's
 // TIER_LEVELS so both surfaces describe the canon threshold identically.
 const TIER_LEVELS = {
-  1: { label: 'Everything',            sub: 'The whole catalog — no canon floor applied.' },
-  2: { label: 'Canon threshold',       sub: 'On 2+ canonical lists. The working bar for "belongs in the canon."' },
-  3: { label: 'Strong consensus',      sub: 'On 3+ lists. Backed by multiple disjoint cultural authorities.' },
-  4: { label: 'Iron-clad',             sub: 'On 4+ lists. No serious critic argues against these.' },
-  5: { label: 'Near-universal',        sub: 'On 5+ lists. Staples of every major canon.' },
-  6: { label: 'Universal canon',       sub: 'On 6+ lists. Essentially undisputed across worldviews.' },
-  7: { label: 'All-time masterpieces', sub: 'On 7 of 8 lists. In the conversation for greatest ever made.' },
+  0: { label: 'All films',  sub: 'No canon floor — every film in the catalog, including Oscar nominees with no canon-list endorsement.' },
+  1: { label: 'Canonical',  sub: 'Present in the canon — at least one curated endorsement.' },
+  2: { label: 'Acclaimed',  sub: 'Meets our multi-list entry threshold — validated by 2+ sources.' },
+  3: { label: 'Landmark',   sub: 'Broad recognition across critics, institutions, and audience lists.' },
+  4: { label: 'Masterwork', sub: 'Near-universal consensus across critical, institutional, and popular canon.' },
+  5: { label: 'Apex',       sub: 'Summit canon — curated top tier whose inclusion on any serious must-watch list is essentially unavoidable.' },
 };
-const MAX_SLIDER_TIER = 7;
+const MIN_SLIDER_TIER = 0;
+const MAX_SLIDER_TIER = 5;
 
 function eraBucketJourney(year) {
   if (year < 1920) return '1910s';
@@ -133,7 +133,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   // Per-option eligibility pool based on unified tier + focus mode. Used to hide
   // rows that would match zero films (e.g. 1910s when tier ≥ 5).
   const eligiblePool = useMemo(() => MOVIES.filter(m => {
-    if (getTier(m) < (currentFilters.minTier ?? 1)) return false;
+    if (getTier(m) < (currentFilters.minTier ?? 0)) return false;
     if (currentFilters.oscarsOnly && m.category === 'ESSENTIAL') return false;
     if (currentFilters.essentialsOnly && m.category !== 'ESSENTIAL') return false;
     return true;
@@ -242,7 +242,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
 
     if (currentFilters.oscarsOnly) chips.push('Oscars only');
     if (currentFilters.essentialsOnly) chips.push('Essentials only');
-    if (currentFilters.minTier > 1) chips.push(`Tier ≥${currentFilters.minTier}`);
+    if (currentFilters.minTier > 0) chips.push(`Tier ≥${currentFilters.minTier}`);
 
     return chips;
   }, [currentFilters]);
@@ -316,7 +316,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                     const parts = [];
                     if (currentFilters.oscarsOnly) parts.push('Oscars only');
                     if (currentFilters.essentialsOnly) parts.push('Essentials only');
-                    if (currentFilters.minTier > 1) parts.push(`tier ≥${currentFilters.minTier}`);
+                    if (currentFilters.minTier > 0) parts.push(`tier ≥${currentFilters.minTier}`);
                     if (parts.length === 0) return null;
                     return <span className="filter-section-count">{parts.join(' · ')}</span>;
                   })()}
@@ -364,22 +364,29 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
                     </button>
 
                     {/* Minimum tier +/- stepper */}
-                    <div className="tier-stepper">
+                    <div className={`tier-stepper ${
+                      currentFilters.minTier === 5 ? 'tier-stepper-apex'
+                      : currentFilters.minTier === 4 ? 'tier-stepper-masterwork'
+                      : currentFilters.minTier === 3 ? 'tier-stepper-landmark'
+                      : ''
+                    }`}>
                       <div className="tier-stepper-header">
                         <span className="tier-stepper-title">Minimum tier</span>
                         <div className="tier-stepper-controls">
                           <button
                             type="button"
                             className="tier-stepper-btn"
-                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.max(1, (currentFilters.minTier ?? 1) - 1) })}
-                            disabled={currentFilters.minTier <= 1}
+                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.max(MIN_SLIDER_TIER, (currentFilters.minTier ?? 0) - 1) })}
+                            disabled={currentFilters.minTier <= MIN_SLIDER_TIER}
                             aria-label="Lower minimum tier"
                           >−</button>
-                          <span className="tier-stepper-value">≥ {currentFilters.minTier}</span>
+                          <span className="tier-stepper-value">
+                            {currentFilters.minTier === MAX_SLIDER_TIER ? currentFilters.minTier : currentFilters.minTier === 0 ? '—' : `≥ ${currentFilters.minTier}`}
+                          </span>
                           <button
                             type="button"
                             className="tier-stepper-btn"
-                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.min(MAX_SLIDER_TIER, (currentFilters.minTier ?? 1) + 1) })}
+                            onClick={() => onFiltersChange({ ...currentFilters, minTier: Math.min(MAX_SLIDER_TIER, (currentFilters.minTier ?? 0) + 1) })}
                             disabled={currentFilters.minTier >= MAX_SLIDER_TIER}
                             aria-label="Raise minimum tier"
                           >+</button>

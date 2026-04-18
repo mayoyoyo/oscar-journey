@@ -796,20 +796,34 @@ main {
   transform: scale(1.15);
 }
 
-/* Higher-tier glow to reward discovery. Kicks in at tier 5 (near-universal
-   canon) and gets richer from there. */
-.tier-pips.tier-5 .tier-pip.filled,
-.tier-pips.tier-6 .tier-pip.filled,
-.tier-pips.tier-7 .tier-pip.filled,
-.tier-pips.tier-8 .tier-pip.filled {
+/* Top-3-tier glow. Under the 5-tier system:
+   - tier 3 (Landmark, 71 films): muted silver
+   - tier 4 (Masterwork, 49 films): brighter silver/platinum
+   - tier 5 (Apex, 16 films): gold
+   Together they elevate the top 136 films of the catalog. */
+.tier-pips.tier-3 .tier-pip.filled {
+  background: linear-gradient(135deg, #a8a8b8 0%, #c8c8d4 100%);
+  box-shadow: 0 0 4px rgba(180, 180, 200, 0.45);
+}
+.tier-pips.tier-3 {
+  background: linear-gradient(135deg, rgba(200, 200, 215, 0.1), rgba(120, 120, 140, 0.06));
+  border-color: rgba(180, 180, 200, 0.5);
+}
+
+.tier-pips.tier-4 .tier-pip.filled {
+  background: linear-gradient(135deg, #d0d0e0 0%, #ececf4 100%);
+  box-shadow: 0 0 5px rgba(220, 220, 240, 0.55);
+}
+.tier-pips.tier-4 {
+  background: linear-gradient(135deg, rgba(220, 220, 240, 0.12), rgba(150, 150, 170, 0.08));
+  border-color: rgba(210, 210, 230, 0.6);
+}
+
+.tier-pips.tier-5 .tier-pip.filled {
   background: linear-gradient(135deg, #d4af3c 0%, var(--gold) 100%);
   box-shadow: 0 0 5px rgba(212, 175, 60, 0.6);
 }
-
-.tier-pips.tier-5,
-.tier-pips.tier-6,
-.tier-pips.tier-7,
-.tier-pips.tier-8 {
+.tier-pips.tier-5 {
   background: linear-gradient(135deg, rgba(212, 175, 60, 0.15), rgba(139, 105, 20, 0.1));
   border-color: #c9a84c;
 }
@@ -2010,6 +2024,64 @@ main {
   letter-spacing: 0.04em;
   font-size: 0.95rem;
 }
+
+/* Top-3-tier stepper washes — mirror the pip tier-3/4/5 treatments so the
+   filter itself feels like it's in a rewarded state when set to Landmark+. */
+.tier-stepper-landmark {
+  background: linear-gradient(135deg, rgba(200, 200, 215, 0.08), rgba(120, 120, 140, 0.04));
+  border: 1px solid rgba(180, 180, 200, 0.35);
+  box-shadow: 0 0 12px rgba(180, 180, 200, 0.1), inset 0 0 8px rgba(180, 180, 200, 0.04);
+}
+.tier-stepper-landmark .tier-stepper-value {
+  background: linear-gradient(135deg, #d0d0e0 0%, #a8a8b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.tier-stepper-landmark .tier-stepper-desc strong { color: #d0d0e0; }
+
+.tier-stepper-masterwork {
+  background: linear-gradient(135deg, rgba(220, 220, 240, 0.12), rgba(150, 150, 170, 0.07));
+  border: 1px solid rgba(210, 210, 230, 0.5);
+  box-shadow: 0 0 14px rgba(210, 210, 230, 0.15), inset 0 0 10px rgba(210, 210, 230, 0.06);
+}
+.tier-stepper-masterwork .tier-stepper-title { color: #d0d0e0; }
+.tier-stepper-masterwork .tier-stepper-value {
+  background: linear-gradient(135deg, #ececf4 0%, #d0d0e0 50%, #a8a8b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 1.05rem;
+  text-shadow: 0 0 6px rgba(220, 220, 240, 0.3);
+}
+.tier-stepper-masterwork .tier-stepper-desc strong {
+  color: #ececf4;
+  text-shadow: 0 0 4px rgba(220, 220, 240, 0.25);
+}
+
+.tier-stepper-apex {
+  background: linear-gradient(135deg, rgba(212, 175, 60, 0.18), rgba(139, 105, 20, 0.1));
+  border: 1px solid #c9a84c;
+  box-shadow: 0 0 16px rgba(212, 175, 60, 0.2), inset 0 0 12px rgba(212, 175, 60, 0.08);
+}
+.tier-stepper-apex .tier-stepper-title { color: var(--gold); }
+.tier-stepper-apex .tier-stepper-value {
+  background: linear-gradient(135deg, #f5d876 0%, #d4af3c 50%, #8b6914 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 1.15rem;
+  text-shadow: 0 0 8px rgba(212, 175, 60, 0.4);
+}
+.tier-stepper-apex .tier-stepper-desc strong {
+  color: #f5d876;
+  text-shadow: 0 0 4px rgba(212, 175, 60, 0.3);
+}
+.tier-stepper-apex .tier-stepper-btn { border-color: rgba(212, 175, 60, 0.4); }
+.tier-stepper-apex .tier-stepper-btn:not(:disabled) { color: var(--gold); }
 .tier-stepper-desc {
   display: flex;
   flex-direction: column;
@@ -2248,6 +2320,30 @@ main {
 }
 .film-row-dot.watched {
   background: #5a9a5a;
+}
+
+/* Option A: title + statuettes form a single left-anchored group. Group
+   expands (flex 1) so right-rail badges stay aligned, but awards hug the
+   title directly — not floating at the other end of the row. */
+.film-row-title-group {
+  flex: 1;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.film-row-title.film-row-title-inline {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.film-row-awards {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .film-row-title {

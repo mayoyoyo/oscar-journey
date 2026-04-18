@@ -53,11 +53,6 @@
 - **"Part of" prefix dropped** from the series heading and non-canon preview
   tag — the series name speaks for itself in context.
 
-### Phone testing setup — chris-testing
-- Vite dev server now serves HTTPS via `@vitejs/plugin-basic-ssl` and
-  exposes on the LAN (`server.host: true`); HMR pinned to `wss` so
-  hot-reload works over the LAN tunnel.
-
 ### Post-merge polish pass — chris-testing
 - Animation timing bug: `resetTransform`'s trailing 240ms `transition`-clear
   was firing mid-swipe and snapping the incoming film into place instead of

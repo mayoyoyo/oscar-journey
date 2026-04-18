@@ -244,7 +244,6 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
                 <li><strong>Swipe between films.</strong> Horizontal swipe navigates prev/next film with a 40% slide-out / opposite-side slide-in animation. Swipe past the end snap-backs. Keyboard ← → also works on desktop</li>
                 <li><strong>iOS Safari rubber-band fix.</strong> <code>overscroll-behavior-y: none</code> on the modal kills the native bounce that was detaching the poster from the modal's top edge mid-drag</li>
                 <li><strong>"Part of" prefix dropped</strong> from the series heading and non-canon preview tag — the series name speaks for itself in context</li>
-                <li><strong>Phone testing setup.</strong> Dev server now serves HTTPS over the LAN via <code>@vitejs/plugin-basic-ssl</code>; HMR pinned to <code>wss</code> so hot-reload works over the tunnel</li>
               </ul>
               <p><strong>v3.2.0</strong> — Catalog refresh + 5-tier canon + UI polish</p>
               <ul>

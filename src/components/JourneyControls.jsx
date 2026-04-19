@@ -4,6 +4,7 @@ import { DEFAULT_FILTERS, CATEGORY_LABELS, GENRE_LABELS, SMART_LABELS,
          JOURNEY_YEAR_MIN, JOURNEY_YEAR_MAX, JOURNEY_RUNTIME_MIN, JOURNEY_RUNTIME_MAX } from './SettingsModal';
 import { readCachedRuntime } from '../utils/runtime';
 import { getTier } from '../utils/tierInfo';
+import { isInternational, isAnimated, isDocumentary, isSilent, isBlackAndWhite } from '../utils/filmAttributes';
 
 const YEAR_STEP = 1;
 const RUNTIME_STEP = 5;
@@ -49,7 +50,9 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       delete merged.ESSENTIAL;
       return merged;
     })(),
+    categoriesExcluded: { ...DEFAULT_FILTERS.categoriesExcluded, ...(filters?.categoriesExcluded || {}) },
     genres: { ...DEFAULT_FILTERS.genres, ...(filters?.genres || {}) },
+    genresExcluded: { ...DEFAULT_FILTERS.genresExcluded, ...(filters?.genresExcluded || {}) },
     runtimeRange: { ...DEFAULT_FILTERS.runtimeRange, ...(filters?.runtimeRange || {}) },
     minTier: migratedMinTier,
     oscarsOnly: migratedOscarsOnly,
@@ -66,10 +69,11 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     currentFilters.runtimeRange.max !== DEFAULT_FILTERS.runtimeRange.max;
 
   // Total count of "non-default" filter selections — shown in the collapsed header.
-  // Only count deviations from DEFAULT_FILTERS.
+  // Only count deviations from DEFAULT_FILTERS. Includes both the include and
+  // exclude maps so excluded rows count toward the active-filter badge.
   const activeFilterCount = (() => {
     let n = 0;
-    for (const section of ['categories', 'genres']) {
+    for (const section of ['categories', 'genres', 'categoriesExcluded', 'genresExcluded']) {
       const def = DEFAULT_FILTERS[section] || {};
       for (const [k, v] of Object.entries(currentFilters[section])) {
         if (v !== def[k]) n++;
@@ -86,22 +90,51 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     return n;
   })();
 
+  // Section name -> its paired exclude-map key. Toggling an exclude on a row
+  // also clears that row's include entry, so a row is always in exactly one
+  // of {included, neutral, excluded}. The two maps are mutually exclusive
+  // per row by construction.
+  const EXCLUDE_KEY = { categories: 'categoriesExcluded', genres: 'genresExcluded' };
+
   const toggleFilter = (section, key) => {
     const nextSection = { ...currentFilters[section], [key]: !currentFilters[section][key] };
     // "smart" filters default all OFF (each is an opt-in flag), so empty is valid there.
-    // For eras / categories / genres / runtimes, empty means nothing matches — auto-restore
-    // all keys to true when the user unchecks the last active one.
-    if (section !== 'smart' && !Object.values(nextSection).some(Boolean)) {
+    // For categories: empty = "no restriction" (pass-all), so do NOT auto-restore.
+    // For genres: empty = nothing matches — auto-restore all keys to true when
+    // the user unchecks the last active one.
+    if (section === 'genres' && !Object.values(nextSection).some(Boolean)) {
       for (const k of Object.keys(nextSection)) nextSection[k] = true;
     }
-    // Write the migrated canon keys back on every save so legacy keys retire over time.
-    onFiltersChange({ ...currentFilters, [section]: nextSection });
+    // Toggling include also clears any exclusion on the same row — the two
+    // maps are mutually exclusive per row.
+    const excludeSection = EXCLUDE_KEY[section];
+    const patch = { ...currentFilters, [section]: nextSection };
+    if (excludeSection && currentFilters[excludeSection][key]) {
+      patch[excludeSection] = { ...currentFilters[excludeSection], [key]: false };
+    }
+    onFiltersChange(patch);
   };
 
-  const setOnlyKey = (section, labels, onlyKey) => {
-    const next = {};
-    for (const k of Object.keys(labels)) next[k] = (k === onlyKey);
-    onFiltersChange({ ...currentFilters, [section]: next });
+  const toggleExclude = (section, key) => {
+    const excludeSection = EXCLUDE_KEY[section];
+    if (!excludeSection) return;
+    const wasExcluded = !!currentFilters[excludeSection][key];
+    const nextExcluded = { ...currentFilters[excludeSection], [key]: !wasExcluded };
+    const nextInclude = { ...currentFilters[section] };
+    if (!wasExcluded) {
+      // Flipping ON exclude — drop any include on the same row.
+      // For Genres (default = all true), unchecking the include row is the
+      // natural pair. For Categories (default = all false), it's a no-op.
+      nextInclude[key] = false;
+      // Categories empty-restore safety: do nothing here (empty = pass-all).
+      // Genres empty-restore safety: if user excludes everything, leave the
+      // include map alone so any non-excluded film still passes through.
+    }
+    onFiltersChange({
+      ...currentFilters,
+      [section]: nextInclude,
+      [excludeSection]: nextExcluded,
+    });
   };
 
   const toggleSection = (section) => {
@@ -127,12 +160,18 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       // For smart filters, show count of enabled ones (they're off by default)
       return active > 0 ? `${active} on` : null;
     }
-    // Hide the badge when current state matches defaults — otherwise a
-    // partially-default filter (e.g. pre-1970s off by default) would show a
-    // misleading ratio even though the user hasn't customized anything.
+    // Append `· N excl` when any rows in this section are excluded so a
+    // collapsed section telegraphs the exclusion state.
+    const excludeSection = EXCLUDE_KEY[section];
+    const excludedCount = excludeSection
+      ? Object.values(currentFilters[excludeSection] || {}).filter(Boolean).length
+      : 0;
     const matchesDefault = entries.every(([k, v]) => v === def[k]);
-    if (matchesDefault) return null;
-    return `${active}/${entries.length}`;
+    if (matchesDefault && excludedCount === 0) return null;
+    const main = matchesDefault ? null : `${active}/${entries.length}`;
+    if (excludedCount === 0) return main;
+    const excl = `${excludedCount} excl`;
+    return main ? `${main} · ${excl}` : excl;
   };
 
   // Per-option eligibility pool based on unified tier + focus mode. Used to hide
@@ -144,11 +183,18 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     return true;
   }), [currentFilters.minTier, currentFilters.oscarsOnly, currentFilters.essentialsOnly]);
 
+  // Use the predicate functions (same as FilmList) so DOC/SILENT/BW rows show
+  // counts > 0 — those keys never appear in m.category or m.alsoWon, so a
+  // raw category-field count would render them as 0 and `renderChecklist`
+  // would hide the rows entirely.
   const categoryCounts = useMemo(() => {
-    const c = {};
+    const c = { INT: 0, ANIM: 0, DOC: 0, SILENT: 0, BW: 0 };
     for (const m of eligiblePool) {
-      c[m.category] = (c[m.category] || 0) + 1;
-      for (const cat of m.alsoWon || []) c[cat] = (c[cat] || 0) + 1;
+      if (isInternational(m)) c.INT++;
+      if (isAnimated(m)) c.ANIM++;
+      if (isDocumentary(m)) c.DOC++;
+      if (isSilent(m)) c.SILENT++;
+      if (isBlackAndWhite(m)) c.BW++;
     }
     return c;
   }, [eligiblePool]);
@@ -164,33 +210,40 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     return c;
   }, [eligiblePool]);
 
-  const renderChecklist = (section, labels, counts) => (
-    <div className="filter-checklist">
-      {Object.entries(labels).map(([key, label]) => {
-        // Hide rows that have zero matching films at the current canon settings.
-        if (counts && (counts[key] || 0) === 0) return null;
-        const active = currentFilters[section][key];
-        return (
-          <div key={key} className={`filter-check-item ${active ? 'active' : ''}`}
-            onClick={() => toggleFilter(section, key)}>
-            <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
-            <span className="filter-check-label">{label}</span>
-            {/* "only" shortcut — skip for smart filters (each is independent opt-in). */}
-            {section !== 'smart' && (
-              <button
-                type="button"
-                className="filter-only-btn"
-                onClick={(e) => { e.stopPropagation(); setOnlyKey(section, labels, key); }}
-                title={`Show only ${label}`}
-              >
-                only
-              </button>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
+  const renderChecklist = (section, labels, counts) => {
+    const excludeSection = EXCLUDE_KEY[section];
+    return (
+      <div className="filter-checklist">
+        {Object.entries(labels).map(([key, label]) => {
+          // Hide rows that have zero matching films at the current canon settings.
+          if (counts && (counts[key] || 0) === 0) return null;
+          const active = currentFilters[section][key];
+          const excluded = excludeSection ? !!currentFilters[excludeSection][key] : false;
+          return (
+            <div key={key}
+              className={`filter-check-item ${active ? 'active' : ''} ${excluded ? 'excluded' : ''}`}
+              onClick={() => toggleFilter(section, key)}>
+              <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
+              <span className="filter-check-label">{label}</span>
+              {/* "excl" toggle — only on sections that support exclusion (categories, genres).
+                  Smart filters are independent opt-in flags so exclusion is meaningless there. */}
+              {excludeSection && (
+                <button
+                  type="button"
+                  className={`filter-excl-btn ${excluded ? 'active' : ''}`}
+                  onClick={(e) => { e.stopPropagation(); toggleExclude(section, key); }}
+                  title={excluded ? `Stop excluding ${label}` : `Exclude ${label}`}
+                  aria-pressed={excluded}
+                >
+                  excl
+                </button>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
   const renderSection = (key, label, section, labels, counts) => {
     const count = sectionCount(section);
@@ -241,6 +294,18 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     }
     summarize('categories', CATEGORY_LABELS, 'Categories');
     summarize('genres', GENRE_LABELS, 'Genres');
+
+    // Exclusion chips — one per section that has any excluded rows.
+    const summarizeExcluded = (excludeKey, labelMap, sectionLabel) => {
+      const excluded = Object.entries(currentFilters[excludeKey] || {})
+        .filter(([, v]) => v)
+        .map(([k]) => labelMap[k] || k);
+      if (excluded.length === 0) return;
+      chips.push(`${sectionLabel} excl: ${excluded.join(', ')}`);
+    };
+    summarizeExcluded('categoriesExcluded', CATEGORY_LABELS, 'Categories');
+    summarizeExcluded('genresExcluded', GENRE_LABELS, 'Genres');
+
     if (runtimeRangeActive) {
       const lo = formatRuntimeLabel(currentFilters.runtimeRange.min);
       const hi = currentFilters.runtimeRange.max >= JOURNEY_RUNTIME_MAX

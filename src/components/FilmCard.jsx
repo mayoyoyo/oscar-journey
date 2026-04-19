@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData, tidyPlot } from '../utils/omdb';
+import { getConsensusScore, CONSENSUS_TOOLTIP_TEXT } from '../utils/ratings';
+import InfoTooltip from './InfoTooltip';
 import { extractDominantColor } from '../utils/colorExtract';
 import { MovieBadges } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
@@ -10,7 +12,6 @@ import { justWatchUrl } from '../utils/justwatch';
 import CeremonyTooltip from './CeremonyTooltip';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
-import IMDB_IDS from '../data/imdbIds.json';
 import SeriesSection from './SeriesSection';
 
 // Universal skip messages — safe for any film (Oscar or canon).
@@ -94,10 +95,14 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
     if (cached) {
       setOmdbData(cached);
       setLoading(false);
-      return;
+    } else {
+      setOmdbData(null);
+      setLoading(true);
     }
-    setOmdbData(null);
-    setLoading(true);
+    // Always fire fetchOmdbData — it decides internally whether to hit the
+    // network (stale / incomplete cache) or just return the cached shape.
+    // This lets fields added in later revisions (e.g. Metacritic) backfill
+    // naturally on the next visit without forcing a cache wipe.
     fetchOmdbData(movie).then(data => {
       if (cancelled) return;
       setOmdbData(data);
@@ -194,22 +199,36 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
         <MovieBadges movie={movie} />
 
         {/* Metrics row — same tile style as FilmDetailModal so the Journey
-            card and the modal read identically. Clash rank is intentionally
-            omitted here (same reason user-avg is omitted — kept for the
-            modal's deeper view). */}
+            card and the modal read identically. User-Avg and Clash Rank are
+            kept on the modal only (both need extra data the card doesn't
+            already have). The `metric-divider` visually separates rating
+            tiles from the action tiles (Trailer / Watch). */}
         <div className="film-detail-metrics">
-          {omdbData?.rating && (() => {
-            const imdbId = IMDB_IDS[movie.id];
-            const imdbUrl = imdbId
-              ? `https://www.imdb.com/title/${imdbId}/`
-              : `https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`;
+          {omdbData?.metacritic && (
+            <a
+              className="metric-item metric-metacritic"
+              href={`https://www.metacritic.com/search/${encodeURIComponent(movie.title)}/?category=13`}
+              target="_blank" rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className="metric-value">{omdbData.metacritic}<span className="metric-value-sub">/100</span></span>
+              <span className="metric-label">Metacritic</span>
+            </a>
+          )}
+          {(() => {
+            const consensus = getConsensusScore(movie, omdbData);
+            if (consensus == null) return null;
             return (
-              <a className="metric-item metric-imdb-link" href={imdbUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                <span className="metric-value">★ {omdbData.rating}</span>
-                <span className="metric-label">IMDb</span>
-              </a>
+              <div className="metric-item metric-consensus">
+                <span className="metric-value">
+                  {consensus.toFixed(1)}<span className="metric-value-sub">/10</span>
+                  <InfoTooltip text={CONSENSUS_TOOLTIP_TEXT} label="How Consensus is calculated" />
+                </span>
+                <span className="metric-label">Consensus</span>
+              </div>
             );
           })()}
+          <span className="metric-divider" aria-hidden="true" />
           <a className="metric-item metric-trailer"
             href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
             target="_blank" rel="noopener noreferrer"

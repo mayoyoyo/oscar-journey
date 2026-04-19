@@ -19,7 +19,14 @@ const DEFAULT_FILTERS = {
   // by Canon depth (tier + oscarsOnly / essentialsOnly).
   // Additive attribute filter — any combination. Unchecked = no restriction.
   categories: { INT: false, ANIM: false, DOC: false, SILENT: false, BW: false },
+  // Exclude map for categories — exclude-wins semantics. Default all-false.
+  // A row is in exactly one of: included (categories=true), excluded
+  // (categoriesExcluded=true), or neutral (both false).
+  categoriesExcluded: { INT: false, ANIM: false, DOC: false, SILENT: false, BW: false },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
+  // Exclude map for genres — same shape, all-false default. A film with any
+  // excluded genre is hidden regardless of which include rows are checked.
+  genresExcluded: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, false])),
   // Runtime in minutes. min 30 / max 300 matches the Film tab. At the upper
   // bound the slider means "and up" (open-ended).
   runtimeRange: { min: JOURNEY_RUNTIME_MIN, max: JOURNEY_RUNTIME_MAX },

@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useFilmModalGestures } from './useFilmModalGestures';
 import { fetchOmdbData, readCachedOmdbData, tidyPlot } from '../utils/omdb';
+import { getLetterboxdRating } from '../utils/letterboxd';
+import { getConsensusScore, CONSENSUS_TOOLTIP_TEXT } from '../utils/ratings';
+import InfoTooltip from './InfoTooltip';
 import { MovieBadges } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
-import IMDB_IDS from '../data/imdbIds.json';
 import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
@@ -246,35 +248,45 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
             </div>
             <MovieBadges movie={movie} />
 
-            {/* Ratings summary row */}
+            {/* Ratings summary row.
+                Layout: [User Avg (if available)] [Metacritic] [Consensus]
+                        │ [My Rank] │ [Trailer] [Watch]
+                The two vertical dividers (rendered by CSS on elements with
+                class `metric-divider`) separate the three conceptually
+                distinct groups: external critical/audience ratings, this
+                user's own ranking, and off-site action buttons. */}
             <div className="film-detail-metrics">
-              {omdbData?.rating && (() => {
-                const imdbId = IMDB_IDS[movie.id];
-                const imdbUrl = imdbId
-                  ? `https://www.imdb.com/title/${imdbId}/`
-                  : `https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`;
-                return (
-                  <a className="metric-item metric-imdb-link" href={imdbUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                    <span className="metric-value">★ {omdbData.rating}</span>
-                    <span className="metric-label">IMDb</span>
-                  </a>
-                );
-              })()}
               {aggregateRating && (
-                <div className="metric-item">
+                <div className="metric-item metric-user-avg">
                   <span className="metric-value">★ {aggregateRating.avg}<span className="metric-value-sub"> ({aggregateRating.count})</span></span>
                   <span className="metric-label">User Avg</span>
                 </div>
               )}
-              {hasAnyRank && (
-                <div className="metric-item">
-                  <span className="metric-value">
-                    ⚔️ {personalRank != null ? `#${personalRank}` : '—'}
-                    <span className="metric-value-sub"> ({globalRank != null ? `#${globalRank}` : '—'})</span>
-                  </span>
-                  <span className="metric-label">My Rank <span className="metric-label-sub">(Global)</span></span>
-                </div>
+              {omdbData?.metacritic && (
+                <a
+                  className="metric-item metric-metacritic"
+                  href={`https://www.metacritic.com/search/${encodeURIComponent(movie.title)}/?category=13`}
+                  target="_blank" rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span className="metric-value">{omdbData.metacritic}<span className="metric-value-sub">/100</span></span>
+                  <span className="metric-label">Metacritic</span>
+                </a>
               )}
+              {(() => {
+                const consensus = getConsensusScore(movie, omdbData);
+                if (consensus == null) return null;
+                return (
+                  <div className="metric-item metric-consensus">
+                    <span className="metric-value">
+                      {consensus.toFixed(1)}<span className="metric-value-sub">/10</span>
+                      <InfoTooltip text={CONSENSUS_TOOLTIP_TEXT} label="How Consensus is calculated" />
+                    </span>
+                    <span className="metric-label">Consensus</span>
+                  </div>
+                );
+              })()}
+              <span className="metric-divider" aria-hidden="true" />
               <a className="metric-item metric-trailer"
                 href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
                 target="_blank" rel="noopener noreferrer"

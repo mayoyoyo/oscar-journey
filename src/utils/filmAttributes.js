@@ -206,17 +206,59 @@ export function isBlackAndWhite(movie) {
   return movie.year < 1955;
 }
 
-// Category filter (additive): returns true if the film matches the current
-// attribute selection. If nothing is checked, the filter is a no-op (passes
-// everything). Otherwise a film passes if it matches ANY checked attribute.
-export function matchesCategoryFilter(movie, categories) {
-  const c = categories || {};
-  const anyChecked = c.INT || c.ANIM || c.DOC || c.SILENT || c.BW;
+// Test which attributes a film has — used by both the include and exclude
+// checks below to avoid running the predicates twice.
+function attributesOf(movie) {
+  return {
+    INT:    isInternational(movie),
+    ANIM:   isAnimated(movie),
+    DOC:    isDocumentary(movie),
+    SILENT: isSilent(movie),
+    BW:     isBlackAndWhite(movie),
+  };
+}
+
+// Category filter with exclude-wins semantics.
+//   includes — { INT, ANIM, DOC, SILENT, BW } booleans (true means "must match")
+//   excludes — same shape (true means "must NOT match")
+// A film is hidden if it matches any excluded attribute. Otherwise:
+//   - if no includes are checked, the filter is a no-op (everything passes)
+//   - otherwise a film passes if it matches ANY checked include
+export function matchesCategoryFilter(movie, includes, excludes) {
+  const inc = includes || {};
+  const exc = excludes || {};
+  const attrs = attributesOf(movie);
+  // Exclude wins: any excluded attribute on the film hides it.
+  if (exc.INT && attrs.INT) return false;
+  if (exc.ANIM && attrs.ANIM) return false;
+  if (exc.DOC && attrs.DOC) return false;
+  if (exc.SILENT && attrs.SILENT) return false;
+  if (exc.BW && attrs.BW) return false;
+  // Include side: empty = pass-through.
+  const anyChecked = inc.INT || inc.ANIM || inc.DOC || inc.SILENT || inc.BW;
   if (!anyChecked) return true;
-  if (c.INT && isInternational(movie)) return true;
-  if (c.ANIM && isAnimated(movie)) return true;
-  if (c.DOC && isDocumentary(movie)) return true;
-  if (c.SILENT && isSilent(movie)) return true;
-  if (c.BW && isBlackAndWhite(movie)) return true;
+  if (inc.INT && attrs.INT) return true;
+  if (inc.ANIM && attrs.ANIM) return true;
+  if (inc.DOC && attrs.DOC) return true;
+  if (inc.SILENT && attrs.SILENT) return true;
+  if (inc.BW && attrs.BW) return true;
   return false;
+}
+
+// Genre filter with exclude-wins semantics. A film carries [genre, ...altGenres].
+//   includes — map of genre code → boolean (true means included). Default state
+//              is all-true (every genre is "in"); unchecking removes from include set.
+//   excludes — map of genre code → boolean (true means excluded). Default state
+//              is all-false (no exclusions).
+// Pass if (any of the film's genres is included) AND (none is excluded).
+export function matchesGenreFilter(movie, includes, excludes) {
+  const inc = includes || {};
+  const exc = excludes || {};
+  const filmGenres = [movie.genre, ...(movie.altGenres || [])];
+  // Exclude wins: any of the film's genres in the exclude set hides it.
+  for (const g of filmGenres) {
+    if (exc[g] === true) return false;
+  }
+  // Include side: pass if any of the film's genres is checked.
+  return filmGenres.some(g => inc[g] !== false);
 }

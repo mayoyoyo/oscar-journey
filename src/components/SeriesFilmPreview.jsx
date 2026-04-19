@@ -3,6 +3,8 @@ import { createPortal } from 'react-dom';
 import { getSeriesForTmdbId, tmdbPoster } from '../data/seriesCollections';
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
 import { justWatchUrl } from '../utils/justwatch';
+import { blendConsensus, CONSENSUS_TOOLTIP_TEXT } from '../utils/ratings';
+import InfoTooltip from './InfoTooltip';
 import SeriesSection from './SeriesSection';
 import StarPicker from './StarPicker';
 import { useFilmModalGestures } from './useFilmModalGestures';
@@ -105,9 +107,6 @@ export default function SeriesFilmPreview({
   const poster = tmdbPoster(film.poster, 'w500');
   const runtime = film.runtime ? formatRuntime(film.runtime) : null;
   const seriesName = collectionName ? collectionName.replace(/\s+Collection$/, '') : null;
-  const imdbUrl = film.imdbId
-    ? `https://www.imdb.com/title/${film.imdbId}/`
-    : `https://www.imdb.com/find/?q=${encodeURIComponent(film.title + ' ' + film.year)}`;
   const trailerUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(film.title + ' ' + film.year + ' official trailer')}`;
 
   // Dedupe mapped genres — TMDB may return both "Action" and "Adventure",
@@ -174,19 +173,37 @@ export default function SeriesFilmPreview({
               ))}
             </div>
 
+            {/* Matches the catalog rating row (Metacritic + Consensus │
+                Trailer + Watch). All three rating fields — imdbRating,
+                metacritic, letterboxdRating — are baked into
+                seriesCollections.js for out-of-catalog films, so no runtime
+                fetch is needed here. */}
             <div className="film-detail-metrics">
-              {film.imdbRating != null && (
-                <a className="metric-item metric-imdb-link" href={imdbUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                  <span className="metric-value">★ {film.imdbRating}</span>
-                  <span className="metric-label">IMDb</span>
+              {film.metacritic && (
+                <a
+                  className="metric-item metric-metacritic"
+                  href={`https://www.metacritic.com/search/${encodeURIComponent(film.title)}/?category=13`}
+                  target="_blank" rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span className="metric-value">{film.metacritic}<span className="metric-value-sub">/100</span></span>
+                  <span className="metric-label">Metacritic</span>
                 </a>
               )}
-              {film.imdbRating == null && (
-                <a className="metric-item metric-imdb-link" href={imdbUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                  <span className="metric-value metric-value-label">IMDb</span>
-                  <span className="metric-label">Open page</span>
-                </a>
-              )}
+              {(() => {
+                const consensus = blendConsensus(film.letterboxdRating, film.imdbRating);
+                if (consensus == null) return null;
+                return (
+                  <div className="metric-item metric-consensus">
+                    <span className="metric-value">
+                      {consensus.toFixed(1)}<span className="metric-value-sub">/10</span>
+                      <InfoTooltip text={CONSENSUS_TOOLTIP_TEXT} label="How Consensus is calculated" />
+                    </span>
+                    <span className="metric-label">Consensus</span>
+                  </div>
+                );
+              })()}
+              <span className="metric-divider" aria-hidden="true" />
               <a className="metric-item metric-trailer"
                 href={trailerUrl}
                 target="_blank" rel="noopener noreferrer"

@@ -199,26 +199,86 @@ async function fetchMovieCredits(tmdbId) {
   return result;
 }
 
-// Fetch the real IMDb rating from OMDb using an imdb_id (tt0120915 etc.).
-// Reuses one of the keys already shipped to the frontend — OMDb's free tier
-// gives 1000 requests/day per key, and we're processing ~350 films once with
-// persistent caching, so we stay well inside the limit.
-const OMDB_KEY_FOR_BACKFILL = '84fee249';
+// Fetch IMDb rating + Metacritic score from OMDb using an imdb_id.
+// Rotates across the 9 public keys on rate-limit (OMDb's free tier is
+// 1000 req/day per key). Any single run of this script touches at most
+// ~200 out-of-catalog films, so with persistent caching we comfortably
+// fit under the shared daily ceiling.
+const OMDB_KEYS = ['84fee249', '398cefbb', '2bcfc5d9', '4c4c2593', 'fcfc8238', '5f47a8f8', 'fbe9d009', '8a3c9a0', 'b76841fa'];
+let omdbKeyIdx = 0;
 async function fetchImdbRating(imdbId) {
   const cacheKey = `__omdb_${imdbId}`;
+  // Treat all-null cache entries as "failed last time" and refetch — they
+  // usually mean the key was rate-limited mid-run. Real N/A responses
+  // have at least one field populated (OMDb returns the title even when
+  // ratings are absent, but we only care about rating/metacritic here).
+  if (cache[cacheKey] && (cache[cacheKey].rating != null || cache[cacheKey].metacritic != null)) {
+    return cache[cacheKey];
+  }
+  let rating = null;
+  let metacritic = null;
+  for (let attempt = 0; attempt < OMDB_KEYS.length; attempt++) {
+    const key = OMDB_KEYS[omdbKeyIdx];
+    try {
+      const res = await fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=${key}`);
+      if (res.status === 401 || res.status === 403) {
+        omdbKeyIdx = (omdbKeyIdx + 1) % OMDB_KEYS.length;
+        continue;
+      }
+      if (res.ok) {
+        const data = await res.json();
+        if (data.Error && data.Error.includes('limit')) {
+          omdbKeyIdx = (omdbKeyIdx + 1) % OMDB_KEYS.length;
+          continue;
+        }
+        if (data.imdbRating && data.imdbRating !== 'N/A') {
+          rating = parseFloat(data.imdbRating);
+        }
+        if (data.Metascore && data.Metascore !== 'N/A') {
+          metacritic = data.Metascore; // string like "72" — matches main catalog shape.
+        }
+        break;
+      }
+    } catch {}
+  }
+  await sleep(50);
+  cache[cacheKey] = { rating, metacritic };
+  return cache[cacheKey];
+}
+
+// Letterboxd rating for a TMDb id. Letterboxd's `/tmdb/<id>/` endpoint
+// redirects to the film's page; we parse the JSON-LD block for
+// aggregateRating. Same scrape pattern as scripts/fetch-letterboxd.mjs —
+// kept inline here so a single `backfill-series` pass produces a fully
+// populated series file (no second script to remember to run).
+const LB_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36';
+async function fetchLetterboxdRating(tmdbId) {
+  const cacheKey = `__lb_${tmdbId}`;
   if (cache[cacheKey]) return cache[cacheKey];
   let rating = null;
+  let votes = null;
+  let slug = null;
   try {
-    const res = await fetch(`https://www.omdbapi.com/?i=${imdbId}&apikey=${OMDB_KEY_FOR_BACKFILL}`);
+    const res = await fetch(`https://letterboxd.com/tmdb/${tmdbId}/`, {
+      headers: { 'User-Agent': LB_UA, Accept: 'text/html' },
+      redirect: 'follow',
+    });
     if (res.ok) {
-      const data = await res.json();
-      if (data.imdbRating && data.imdbRating !== 'N/A') {
-        rating = parseFloat(data.imdbRating);
+      const html = await res.text();
+      slug = res.url.match(/\/film\/([^/]+)/)?.[1] || null;
+      const ldMatch = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+      if (ldMatch) {
+        try {
+          const raw = ldMatch[1].replace(/^\s*\/\*\s*<!\[CDATA\[\s*\*\//, '').replace(/\/\*\s*\]\]>\s*\*\/\s*$/, '').trim();
+          const ld = JSON.parse(raw);
+          rating = ld?.aggregateRating?.ratingValue ?? null;
+          votes = ld?.aggregateRating?.ratingCount ?? null;
+        } catch {}
       }
     }
   } catch {}
-  await sleep(50);
-  cache[cacheKey] = { rating };
+  await sleep(1000); // polite: letterboxd doesn't advertise a rate-limit, don't hammer.
+  cache[cacheKey] = { rating, votes, slug };
   return cache[cacheKey];
 }
 
@@ -252,13 +312,25 @@ for (const col of collections.values()) {
       // richer detail modal sourced from OMDb + the local catalog.
       let credits = null;
       let imdbRating = null;
+      let metacritic = null;
+      let letterboxdRating = null;
+      let letterboxdVotes = null;
+      let letterboxdSlug = null;
       if (!catalogMatch) {
         try {
           credits = await fetchMovieCredits(p.id);
           if (credits.imdbId) {
             const omdb = await fetchImdbRating(credits.imdbId);
             imdbRating = omdb.rating;
+            metacritic = omdb.metacritic;
           }
+          // TMDb id is enough for Letterboxd's redirect endpoint — no IMDb
+          // resolution needed here, unlike the main catalog where we had to
+          // go IMDb → TMDb first.
+          const lb = await fetchLetterboxdRating(p.id);
+          letterboxdRating = lb.rating;
+          letterboxdVotes = lb.votes;
+          letterboxdSlug = lb.slug;
         } catch (err) {
           console.error(`  credits error for tmdb ${p.id} (${p.title}): ${err.message}`);
         }
@@ -280,6 +352,10 @@ for (const col of collections.values()) {
         genres: credits?.genres || null,
         imdbId: credits?.imdbId || null,
         imdbRating,
+        metacritic,
+        letterboxdRating,
+        letterboxdVotes,
+        letterboxdSlug,
       });
     }
 
@@ -352,6 +428,10 @@ for (const c of interesting) {
       ...(f.genres?.length ? { genres: f.genres } : {}),
       ...(f.imdbId ? { imdbId: f.imdbId } : {}),
       ...(f.imdbRating != null ? { imdbRating: f.imdbRating } : {}),
+      ...(f.metacritic != null ? { metacritic: f.metacritic } : {}),
+      ...(f.letterboxdRating != null ? { letterboxdRating: f.letterboxdRating } : {}),
+      ...(f.letterboxdVotes != null ? { letterboxdVotes: f.letterboxdVotes } : {}),
+      ...(f.letterboxdSlug ? { letterboxdSlug: f.letterboxdSlug } : {}),
     })),
   };
 }
@@ -373,6 +453,33 @@ export function getSeriesForFilm(filmId) {
   for (const col of Object.values(SERIES_COLLECTIONS)) {
     const film = col.films.find((f) => f.catalogId === filmId);
     if (film) return { collection: col, film, siblings: col.films };
+  }
+  return null;
+}
+
+// Same lookup but keyed by tmdbId — used by out-of-catalog preview modals
+// where the film only has a tmdbId, not a catalogId.
+export function getSeriesForTmdbId(tmdbId) {
+  if (!tmdbId) return null;
+  for (const col of Object.values(SERIES_COLLECTIONS)) {
+    const film = col.films.find((f) => f.tmdbId === tmdbId);
+    if (film) return { collection: col, film, siblings: col.films };
+  }
+  return null;
+}
+
+// Resolve a "tmdb:<n>" watched-id back to a film + its collection.
+// Out-of-canon films are stored in profile.watched / profile.ratings under
+// this key; this helper lets profile-scope views render them alongside
+// catalog films without special-casing every lookup site.
+// Returns null for non-tmdb ids so callers can fall through to MOVIES_BY_ID.
+export function resolveTmdbWatchedId(id) {
+  if (typeof id !== 'string' || !id.startsWith('tmdb:')) return null;
+  const tmdbId = Number(id.slice(5));
+  if (!Number.isFinite(tmdbId)) return null;
+  for (const col of Object.values(SERIES_COLLECTIONS)) {
+    const film = col.films.find((f) => f.tmdbId === tmdbId);
+    if (film) return { film, collectionName: col.name };
   }
   return null;
 }

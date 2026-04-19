@@ -13,6 +13,14 @@ scripts/wq-extracted/
 scripts/tmdb-cache.json
 scripts/series-report.json
 scripts/imdb-id-cache.json
+scripts/tmdb-ids-cache.json
+scripts/letterboxd-cache.json
+scripts/metacritic-audit.json
+
+# Letterboxd / RT probe scripts (throwaway, keep out of history)
+scripts/probe-letterboxd.mjs
+scripts/probe-rt.mjs
+scripts/probe-rt-scrape.mjs
 
 # Editor / agent artifacts
 .claude/

@@ -212,23 +212,27 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
   //   - Full nominations data   → "4 won / 12 nom" or "3 nom"
   //   - Legacy-derived only     → "4 won" (no total — we don't know it)
   //   - No Oscar content at all → no suffix
+  // Units ("won", "nom") are wrapped in spans so CSS can de-emphasize the
+  // label relative to the number — the counts carry the weight.
   const hasFullData = hasAuthoritativeNominations(movie);
-  let summary = '';
+  const unit = (text) => <span className="ceremony-line-unit">{text}</span>;
+  let summaryNode = null;
   if (nomCount > 0) {
     if (hasFullData) {
-      summary = winsCount > 0 ? ` · ${winsCount} won / ${nomCount} nom` : ` · ${nomCount} nom`;
+      summaryNode = winsCount > 0
+        ? <> · {winsCount} {unit('won')} / {nomCount} {unit('nom')}</>
+        : <> · {nomCount} {unit('nom')}</>;
     } else if (winsCount > 0) {
-      summary = ` · ${winsCount} won`;
+      summaryNode = <> · {winsCount} {unit('won')}</>;
     }
   }
-  const lineText = `${ordinal(effectiveCeremony)} Academy Awards${summary}`;
 
   return (
     <>
       <div className={`ceremony-line ceremony-line-clickable${winsCount > 0 ? ' ceremony-line-winner' : ''}`}
         onClick={() => setShowModal(true)}
       >
-        {lineText}
+        {ordinal(effectiveCeremony)} Academy Awards{summaryNode}
       </div>
 
       {showModal && createPortal(

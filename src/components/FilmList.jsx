@@ -11,7 +11,7 @@ import { ratingKey } from '../utils/storage';
 import { readCachedRuntime, prefetchRuntimes } from '../utils/runtime';
 import { CATEGORY_LABELS } from './SettingsModal';
 import { getTier } from '../utils/tierInfo';
-import { isInternational, isAnimated, isDocumentary, isSilent, isBlackAndWhite, matchesCategoryFilter } from '../utils/filmAttributes';
+import { isInternational, isAnimated, isDocumentary, isSilent, isBlackAndWhite, matchesCategoryFilter, matchesGenreFilter } from '../utils/filmAttributes';
 import DIRECTORS from '../data/directors.json';
 import ACTORS from '../data/actors.json';
 import CAST from '../data/cast.json';
@@ -108,7 +108,13 @@ const DEFAULT_FILM_FILTERS = {
   yearRange: { min: YEAR_MIN, max: YEAR_MAX },
   // Additive attribute filter — any combination. Unchecked = no restriction.
   categories: { INT: false, ANIM: false, DOC: false, SILENT: false, BW: false },
+  // Exclude map for categories — exclude-wins semantics (any matching exclude
+  // hides the film). Default all-false. A row is in exactly one of:
+  // included (categories=true), excluded (categoriesExcluded=true), neutral.
+  categoriesExcluded: { INT: false, ANIM: false, DOC: false, SILENT: false, BW: false },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
+  // Exclude map for genres — same shape, all-false default.
+  genresExcluded: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, false])),
   runtimeRange: { min: RUNTIME_MIN, max: RUNTIME_MAX },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),
   // Unified tier floor — applies to ALL films (not just essentials).
@@ -215,17 +221,41 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     [runtimeMap]
   );
 
+  // Section name -> its paired exclude-map key. Toggling exclude on a row
+  // also clears that row's include entry, so a row is always in exactly one
+  // of {included, neutral, excluded}.
+  const EXCLUDE_KEY = { categories: 'categoriesExcluded', genres: 'genresExcluded' };
+
   const toggleFilter = (section, key) => {
     setFilters(prev => {
       const nextSection = { ...prev[section], [key]: !prev[section][key] };
-      // "Wins" has inverted semantics (default all OFF = show all), so empty is valid.
-      // For every other section, empty means "nothing matches" which is never what the
-      // user wants. If toggling would leave it empty, auto-restore all keys to true so
-      // unchecking the lone active item cleanly reverts the filter.
-      if (section !== 'wins' && !Object.values(nextSection).some(Boolean)) {
+      // Categories: empty = "no restriction" (pass-all), so do NOT auto-restore.
+      // Wins: default all-off, also no restore needed.
+      // Genres: empty = nothing matches — auto-restore to all-true.
+      if (section === 'genres' && !Object.values(nextSection).some(Boolean)) {
         for (const k of Object.keys(nextSection)) nextSection[k] = true;
       }
-      return { ...prev, [section]: nextSection };
+      const patch = { ...prev, [section]: nextSection };
+      // Toggling include also clears any exclusion on the same row.
+      const excludeSection = EXCLUDE_KEY[section];
+      if (excludeSection && prev[excludeSection]?.[key]) {
+        patch[excludeSection] = { ...prev[excludeSection], [key]: false };
+      }
+      return patch;
+    });
+  };
+
+  const toggleExclude = (section, key) => {
+    const excludeSection = EXCLUDE_KEY[section];
+    if (!excludeSection) return;
+    setFilters(prev => {
+      const wasExcluded = !!prev[excludeSection][key];
+      const nextExcluded = { ...prev[excludeSection], [key]: !wasExcluded };
+      const nextInclude = { ...prev[section] };
+      if (!wasExcluded) {
+        nextInclude[key] = false;
+      }
+      return { ...prev, [section]: nextInclude, [excludeSection]: nextExcluded };
     });
   };
 
@@ -244,14 +274,19 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     const entries = Object.entries(cur);
     const active = entries.filter(([, v]) => v).length;
     if (section === 'wins') {
-      // Inverted: default all-off = no filter. Show count of ON.
       return active > 0 ? `${active} on` : null;
     }
-    // Hide the badge at the default state so partial-default filters (eras default
-    // to 1970s+, pre-1970 off) don't read as "filter applied" when user hasn't changed anything.
+    // Append `· N excl` so a collapsed section telegraphs the exclusion state.
+    const excludeSection = EXCLUDE_KEY[section];
+    const excludedCount = excludeSection
+      ? Object.values(filters[excludeSection] || {}).filter(Boolean).length
+      : 0;
     const matchesDefault = entries.every(([k, v]) => v === def[k]);
-    if (matchesDefault) return null;
-    return `${active}/${entries.length}`;
+    if (matchesDefault && excludedCount === 0) return null;
+    const main = matchesDefault ? null : `${active}/${entries.length}`;
+    if (excludedCount === 0) return main;
+    const excl = `${excludedCount} excl`;
+    return main ? `${main} · ${excl}` : excl;
   };
 
   const runtimeRangeActive = (
@@ -265,9 +300,10 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
 
   const activeFilterCount = (() => {
     let n = 0;
-    for (const section of ['categories', 'genres']) {
+    // Both include and exclude maps count toward the active-filter badge.
+    for (const section of ['categories', 'genres', 'categoriesExcluded', 'genresExcluded']) {
       const def = DEFAULT_FILM_FILTERS[section] || {};
-      for (const [k, v] of Object.entries(filters[section])) {
+      for (const [k, v] of Object.entries(filters[section] || {})) {
         if (v !== def[k]) n++;
       }
     }
@@ -308,7 +344,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         return true;
       })
       .filter(m => m.year >= filters.yearRange.min && m.year <= filters.yearRange.max)
-      .filter(m => matchesCategoryFilter(m, filters.categories))
+      .filter(m => matchesCategoryFilter(m, filters.categories, filters.categoriesExcluded))
       // Canon depth + focus mode are bypassed when there's an active search — if you know
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
       // Tier applies UNIFORMLY to all films via the unified getTier helper, which counts
@@ -316,13 +352,10 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !!q || getTier(m) >= (filters.minTier ?? 0))
       .filter(m => !!q || !filters.oscarsOnly || m.category !== 'ESSENTIAL')
       .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
-      // OR-semantics over primary + altGenres: a film passes if ANY of its
-      // genres is checked. Matches the multi-label reality — ticking "Comedy"
-      // should surface The Great Dictator even when War stays unchecked.
-      .filter(m => {
-        const allGenres = [m.genre, ...(m.altGenres || [])];
-        return allGenres.some(g => filters.genres[g] !== false);
-      })
+      // Exclude-wins genre filter: a film is hidden if any of its genres is
+      // in the exclude set. Otherwise OR-include semantics — ticking "Comedy"
+      // surfaces The Great Dictator even when War stays unchecked.
+      .filter(m => matchesGenreFilter(m, filters.genres, filters.genresExcluded))
       .filter(m => {
         const mins = runtimeMap.get(m.id);
         // Films with no fetched runtime always pass — avoids hiding the long
@@ -377,12 +410,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   }, [query, watchedTitleSet, watchMode, filters, runtimeMap, activeWinKeys, sortPrimary, sortDir, sortByTier]);
 
 
-  const setOnlyKey = (section, labels, onlyKey) => {
-    const next = {};
-    for (const k of Object.keys(labels)) next[k] = (k === onlyKey);
-    setFilters(f => ({ ...f, [section]: next }));
-  };
-
   // Per-option eligibility pool — used to hide rows where 0 films qualify
   // (e.g. the 1910s era when canon depth is set to ≥3). Counts are no longer
   // shown as suffixes per mayo's request; we only use this to drop empty rows.
@@ -418,34 +445,44 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     return c;
   }, [eligiblePool]);
 
-  const renderChecklist = (section, labels, counts) => (
-    <div className="filter-checklist">
-      {Object.entries(labels).map(([key, label]) => {
-        // Hide rows that have zero matching films at the current canon settings.
-        if (counts && (counts[key] || 0) === 0) return null;
-        const active = filters[section][key];
-        // Color accent for a few special Oscar-Won rows (gold BP, blue Intl,
-        // purple Anim) — comes from the `accent` field in WIN_CATEGORIES.
-        const accent = section === 'wins' ? WIN_CATEGORIES[key]?.accent : null;
-        const accentClass = accent ? `filter-check-item-${accent}` : '';
-        return (
-          <div key={key} className={`filter-check-item ${active ? 'active' : ''} ${accentClass}`}
-            onClick={() => toggleFilter(section, key)}>
-            <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
-            <span className="filter-check-label">{label}</span>
-            <button
-              type="button"
-              className="filter-only-btn"
-              onClick={(e) => { e.stopPropagation(); setOnlyKey(section, labels, key); }}
-              title={`Show only ${label}`}
-            >
-              only
-            </button>
-          </div>
-        );
-      })}
-    </div>
-  );
+  const renderChecklist = (section, labels, counts) => {
+    const excludeSection = EXCLUDE_KEY[section];
+    return (
+      <div className="filter-checklist">
+        {Object.entries(labels).map(([key, label]) => {
+          // Hide rows that have zero matching films at the current canon settings.
+          if (counts && (counts[key] || 0) === 0) return null;
+          const active = filters[section][key];
+          const excluded = excludeSection ? !!filters[excludeSection]?.[key] : false;
+          // Color accent for a few special Oscar-Won rows (gold BP, blue Intl,
+          // purple Anim) — comes from the `accent` field in WIN_CATEGORIES.
+          const accent = section === 'wins' ? WIN_CATEGORIES[key]?.accent : null;
+          const accentClass = accent ? `filter-check-item-${accent}` : '';
+          return (
+            <div key={key}
+              className={`filter-check-item ${active ? 'active' : ''} ${excluded ? 'excluded' : ''} ${accentClass}`}
+              onClick={() => toggleFilter(section, key)}>
+              <span className="filter-checkbox">{active ? '\u2713' : ''}</span>
+              <span className="filter-check-label">{label}</span>
+              {/* "excl" toggle — only on sections that support exclusion. Wins
+                  is binary opt-in (no exclude needed). */}
+              {excludeSection && (
+                <button
+                  type="button"
+                  className={`filter-excl-btn ${excluded ? 'active' : ''}`}
+                  onClick={(e) => { e.stopPropagation(); toggleExclude(section, key); }}
+                  title={excluded ? `Stop excluding ${label}` : `Exclude ${label}`}
+                  aria-pressed={excluded}
+                >
+                  excl
+                </button>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
   const renderSection = (label, section, labels, counts) => {
     const count = sectionCount(section);

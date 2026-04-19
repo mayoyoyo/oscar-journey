@@ -122,33 +122,40 @@ export function readCachedOmdbData(movie) {
   // Films OMDb has no entry for — serve manual data synchronously, skip cache/OMDb.
   if (manualData) {
     return {
-      poster:   manualPoster,
-      plot:     manualData.plot     || null,
-      rating:   manualData.rating   || null,
-      director: manualData.director || null,
-      runtime:  manualData.runtime  || null,
+      poster:     manualPoster,
+      plot:       manualData.plot     || null,
+      rating:     manualData.rating   || null,
+      director:   manualData.director || null,
+      runtime:    manualData.runtime  || null,
+      metacritic: manualData.metacritic || null,
     };
   }
 
-  const posterKey   = omdbCacheKey('poster',   movie);
-  const plotKey     = omdbCacheKey('plot',     movie);
-  const ratingKey   = omdbCacheKey('rating',   movie);
-  const directorKey = omdbCacheKey('director', movie);
-  const runtimeKey  = omdbCacheKey('runtime',  movie);
+  const posterKey     = omdbCacheKey('poster',   movie);
+  const plotKey       = omdbCacheKey('plot',     movie);
+  const ratingKey     = omdbCacheKey('rating',   movie);
+  const directorKey   = omdbCacheKey('director', movie);
+  const runtimeKey    = omdbCacheKey('runtime',  movie);
+  const metacriticKey = omdbCacheKey('metacritic', movie);
   const allKeys = [posterKey, plotKey, ratingKey, directorKey, runtimeKey];
   if (!allKeys.every(k => localStorage.getItem(k) !== null)) return null;
   if (allKeys.some(k => localStorage.getItem(k) === 'RATE_LIMITED')) return null;
   const posterCached = localStorage.getItem(posterKey);
   if (!manualPoster && posterCached === NOT_FOUND) return null;
   const cachedRuntime = localStorage.getItem(runtimeKey) === NOT_FOUND ? null : localStorage.getItem(runtimeKey);
+  const cachedMeta    = localStorage.getItem(metacriticKey);
   return {
-    poster:   manualPoster || posterCached,
-    plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
-    rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
-    director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
-    runtime:  applyRuntimeOverride(movie, cachedRuntime),
-    awards:   readCachedAwards(movie),
-    actors:   readCachedActors(movie),
+    poster:     manualPoster || posterCached,
+    plot:       localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
+    rating:     localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
+    director:   localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
+    runtime:    applyRuntimeOverride(movie, cachedRuntime),
+    // Metacritic was added after OMDb's original cache shape. Older cache
+    // entries predate this key, so missing (null) reads as "not yet fetched"
+    // while NOT_FOUND marks an OMDb response that had no Metascore.
+    metacritic: cachedMeta && cachedMeta !== NOT_FOUND ? cachedMeta : null,
+    awards:     readCachedAwards(movie),
+    actors:     readCachedActors(movie),
   };
 }
 
@@ -159,19 +166,21 @@ export async function fetchOmdbData(movie) {
   // Films OMDb has no entry for — serve manual data, skip the API call.
   if (manualData) {
     return {
-      poster:   manualPoster,
-      plot:     manualData.plot     || null,
-      rating:   manualData.rating   || null,
-      director: manualData.director || null,
-      runtime:  manualData.runtime  || null,
+      poster:     manualPoster,
+      plot:       manualData.plot     || null,
+      rating:     manualData.rating   || null,
+      director:   manualData.director || null,
+      runtime:    manualData.runtime  || null,
+      metacritic: manualData.metacritic || null,
     };
   }
 
-  const posterKey   = omdbCacheKey('poster',   movie);
-  const plotKey     = omdbCacheKey('plot',     movie);
-  const ratingKey   = omdbCacheKey('rating',   movie);
-  const directorKey = omdbCacheKey('director', movie);
-  const runtimeKey  = omdbCacheKey('runtime',  movie);
+  const posterKey     = omdbCacheKey('poster',   movie);
+  const plotKey       = omdbCacheKey('plot',     movie);
+  const ratingKey     = omdbCacheKey('rating',   movie);
+  const directorKey   = omdbCacheKey('director', movie);
+  const runtimeKey    = omdbCacheKey('runtime',  movie);
+  const metacriticKey = omdbCacheKey('metacritic', movie);
   // Return cached data if we have real results (not rate-limit failures or missing posters).
   // When we have a known imdb_id for this film, an all-NOT_FOUND cache entry
   // is almost certainly stale — it was written before the imdb_id backfill
@@ -186,15 +195,23 @@ export async function fetchOmdbData(movie) {
     const posterMissing = localStorage.getItem(posterKey) === NOT_FOUND;
     if (!anyRateLimited && !posterMissing) {
       const cachedRuntime = localStorage.getItem(runtimeKey) === NOT_FOUND ? null : localStorage.getItem(runtimeKey);
-      return {
-        poster:   manualPoster || localStorage.getItem(posterKey),
-        plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
-        rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
-        director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
-        runtime:  applyRuntimeOverride(movie, cachedRuntime),
-        awards:   readCachedAwards(movie),
-        actors:   readCachedActors(movie),
-      };
+      const cachedMeta    = localStorage.getItem(metacriticKey);
+      // Metacritic key is newer than the other OMDb fields. For cache entries
+      // written before this key existed, fall through to the network path so
+      // we backfill metascore without invalidating everything else.
+      const metaNotCached = cachedMeta === null;
+      if (!metaNotCached) {
+        return {
+          poster:     manualPoster || localStorage.getItem(posterKey),
+          plot:       localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
+          rating:     localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
+          director:   localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
+          runtime:    applyRuntimeOverride(movie, cachedRuntime),
+          metacritic: cachedMeta !== NOT_FOUND ? cachedMeta : null,
+          awards:     readCachedAwards(movie),
+          actors:     readCachedActors(movie),
+        };
+      }
     }
   }
 
@@ -251,12 +268,14 @@ export async function fetchOmdbData(movie) {
     // All keys rate limited — return existing cache without saving failures
     if (data.rateLimited) {
       const cachedRuntime = localStorage.getItem(runtimeKey) === NOT_FOUND ? null : localStorage.getItem(runtimeKey);
+      const cachedMeta    = localStorage.getItem(metacriticKey);
       return {
-        poster:   manualPoster || (localStorage.getItem(posterKey) === NOT_FOUND ? null : localStorage.getItem(posterKey)),
-        plot:     localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
-        rating:   localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
-        director: localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
-        runtime:  applyRuntimeOverride(movie, cachedRuntime),
+        poster:     manualPoster || (localStorage.getItem(posterKey) === NOT_FOUND ? null : localStorage.getItem(posterKey)),
+        plot:       localStorage.getItem(plotKey)     === NOT_FOUND ? null : localStorage.getItem(plotKey),
+        rating:     localStorage.getItem(ratingKey)   === NOT_FOUND ? null : localStorage.getItem(ratingKey),
+        director:   localStorage.getItem(directorKey) === NOT_FOUND ? null : localStorage.getItem(directorKey),
+        runtime:    applyRuntimeOverride(movie, cachedRuntime),
+        metacritic: cachedMeta && cachedMeta !== NOT_FOUND ? cachedMeta : null,
       };
     }
 
@@ -273,14 +292,14 @@ export async function fetchOmdbData(movie) {
         return storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey, runtimeKey, manualPoster);
       }
 
-      storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey);
-      return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: applyRuntimeOverride(movie, null) };
+      storeNotFound(movie, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
+      return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: applyRuntimeOverride(movie, null), metacritic: null };
     }
 
     return storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey, runtimeKey);
   } catch (e) {
     // Network error — don't cache, will retry next time
-    return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: applyRuntimeOverride(movie, null) };
+    return { poster: manualPoster || null, plot: null, rating: null, director: null, runtime: applyRuntimeOverride(movie, null), metacritic: null };
   }
 }
 
@@ -294,17 +313,26 @@ function storeAndReturn(movie, data, posterKey, plotKey, ratingKey, directorKey,
   const language = data.Language && data.Language !== 'N/A' ? data.Language : null;
   const country  = data.Country  && data.Country  !== 'N/A' ? data.Country  : null;
   const actors   = data.Actors   && data.Actors   !== 'N/A' ? data.Actors   : null;
-  localStorage.setItem(posterKey,   poster   || NOT_FOUND);
-  localStorage.setItem(plotKey,     plot     || NOT_FOUND);
-  localStorage.setItem(ratingKey,   rating   || NOT_FOUND);
-  localStorage.setItem(directorKey, director || NOT_FOUND);
-  localStorage.setItem(runtimeKey,  runtime  || NOT_FOUND);
-  localStorage.setItem(omdbCacheKey('awards', movie), awards || NOT_FOUND);
+  // Metacritic: OMDb returns both a top-level `Metascore` string and a
+  // `Ratings` array entry for "Metacritic". Prefer Metascore (simpler integer
+  // like "90"). Fall through to the array parse for resilience.
+  let metacritic = data.Metascore && data.Metascore !== 'N/A' ? data.Metascore : null;
+  if (!metacritic && Array.isArray(data.Ratings)) {
+    const mc = data.Ratings.find(r => r?.Source === 'Metacritic');
+    if (mc?.Value) metacritic = String(mc.Value).split('/')[0]; // "90/100" → "90"
+  }
+  localStorage.setItem(posterKey,     poster     || NOT_FOUND);
+  localStorage.setItem(plotKey,       plot       || NOT_FOUND);
+  localStorage.setItem(ratingKey,     rating     || NOT_FOUND);
+  localStorage.setItem(directorKey,   director   || NOT_FOUND);
+  localStorage.setItem(runtimeKey,    runtime    || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('metacritic', movie), metacritic || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('awards', movie),   awards   || NOT_FOUND);
   localStorage.setItem(omdbCacheKey('language', movie), language || NOT_FOUND);
-  localStorage.setItem(omdbCacheKey('country', movie), country || NOT_FOUND);
-  localStorage.setItem(omdbCacheKey('actors', movie), actors || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('country', movie),  country  || NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('actors', movie),   actors   || NOT_FOUND);
 
-  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime), awards, language, country, actors };
+  return { poster, plot, rating, director, runtime: applyRuntimeOverride(movie, runtime), metacritic, awards, language, country, actors };
 }
 
 // Parse "Won 2 Oscars. Another 159 wins & 164 nominations." → 2
@@ -345,10 +373,11 @@ export function readCachedActors(movie) {
   return v;
 }
 
-function storeNotFound(posterKey, plotKey, ratingKey, directorKey, runtimeKey) {
+function storeNotFound(movie, posterKey, plotKey, ratingKey, directorKey, runtimeKey) {
   localStorage.setItem(posterKey,   NOT_FOUND);
   localStorage.setItem(plotKey,     NOT_FOUND);
   localStorage.setItem(ratingKey,   NOT_FOUND);
   localStorage.setItem(directorKey, NOT_FOUND);
   localStorage.setItem(runtimeKey,  NOT_FOUND);
+  localStorage.setItem(omdbCacheKey('metacritic', movie), NOT_FOUND);
 }

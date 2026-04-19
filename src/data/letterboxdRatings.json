@@ -1,0 +1,4724 @@
+{
+  "patton-1970": {
+    "rating": 3.9,
+    "votes": 53051,
+    "slug": "patton",
+    "fetchedAt": "2026-04-19T20:01:54.733Z"
+  },
+  "airport-1970": {
+    "rating": 3.21,
+    "votes": 14375,
+    "slug": "airport",
+    "fetchedAt": "2026-04-19T20:01:56.536Z"
+  },
+  "five-easy-pieces-1970": {
+    "rating": 3.88,
+    "votes": 64424,
+    "slug": "five-easy-pieces",
+    "fetchedAt": "2026-04-19T20:01:58.250Z"
+  },
+  "love-story-1970": {
+    "rating": 3.39,
+    "votes": 37083,
+    "slug": "love-story-1970",
+    "fetchedAt": "2026-04-19T20:02:08.883Z"
+  },
+  "m-a-s-h-1970": {
+    "rating": 3.51,
+    "votes": 71514,
+    "slug": "mash",
+    "fetchedAt": "2026-04-19T20:02:11.233Z"
+  },
+  "the-french-connection-1971": {
+    "rating": 3.99,
+    "votes": 199625,
+    "slug": "the-french-connection",
+    "fetchedAt": "2026-04-19T20:02:13.009Z"
+  },
+  "a-clockwork-orange-1971": {
+    "rating": 4.1,
+    "votes": 1410376,
+    "slug": "a-clockwork-orange",
+    "fetchedAt": "2026-04-19T20:02:14.686Z"
+  },
+  "fiddler-on-the-roof-1971": {
+    "rating": 4.13,
+    "votes": 58767,
+    "slug": "fiddler-on-the-roof",
+    "fetchedAt": "2026-04-19T20:02:16.333Z"
+  },
+  "the-last-picture-show-1971": {
+    "rating": 4.21,
+    "votes": 89260,
+    "slug": "the-last-picture-show",
+    "fetchedAt": "2026-04-19T20:02:17.965Z"
+  },
+  "nicholas-and-alexandra-1971": {
+    "rating": 3.39,
+    "votes": 3277,
+    "slug": "nicholas-and-alexandra",
+    "fetchedAt": "2026-04-19T20:02:19.975Z"
+  },
+  "the-godfather-1972": {
+    "rating": 4.52,
+    "votes": 2622633,
+    "slug": "the-godfather",
+    "fetchedAt": "2026-04-19T20:02:21.598Z"
+  },
+  "cabaret-1972": {
+    "rating": 4.17,
+    "votes": 171542,
+    "slug": "cabaret",
+    "fetchedAt": "2026-04-19T20:02:23.541Z"
+  },
+  "deliverance-1972": {
+    "rating": 3.86,
+    "votes": 125915,
+    "slug": "deliverance",
+    "fetchedAt": "2026-04-19T20:02:25.384Z"
+  },
+  "the-emigrants-1972": {
+    "rating": 4.21,
+    "votes": 7920,
+    "slug": "the-emigrants",
+    "fetchedAt": "2026-04-19T20:02:27.104Z"
+  },
+  "sounder-1972": {
+    "rating": 3.73,
+    "votes": 4017,
+    "slug": "sounder",
+    "fetchedAt": "2026-04-19T20:02:28.865Z"
+  },
+  "the-sting-1973": {
+    "rating": 4.21,
+    "votes": 194516,
+    "slug": "the-sting",
+    "fetchedAt": "2026-04-19T20:02:30.588Z"
+  },
+  "american-graffiti-1973": {
+    "rating": 3.73,
+    "votes": 141818,
+    "slug": "american-graffiti",
+    "fetchedAt": "2026-04-19T20:02:32.205Z"
+  },
+  "cries-and-whispers-1973": {
+    "rating": 4.21,
+    "votes": 81229,
+    "slug": "cries-and-whispers",
+    "fetchedAt": "2026-04-19T20:02:33.937Z"
+  },
+  "the-exorcist-1973": {
+    "rating": 3.95,
+    "votes": 985638,
+    "slug": "the-exorcist",
+    "fetchedAt": "2026-04-19T20:02:35.958Z"
+  },
+  "a-touch-of-class-1973": {
+    "rating": 3.26,
+    "votes": 2613,
+    "slug": "a-touch-of-class",
+    "fetchedAt": "2026-04-19T20:02:37.683Z"
+  },
+  "the-godfather-part-ii-1974": {
+    "rating": 4.58,
+    "votes": 1370019,
+    "slug": "the-godfather-part-ii",
+    "fetchedAt": "2026-04-19T20:02:39.481Z"
+  },
+  "chinatown-1974": {
+    "rating": 4.3,
+    "votes": 476911,
+    "slug": "chinatown",
+    "fetchedAt": "2026-04-19T20:02:41.359Z"
+  },
+  "the-conversation-1974": {
+    "rating": 4.15,
+    "votes": 263867,
+    "slug": "the-conversation",
+    "fetchedAt": "2026-04-19T20:02:42.986Z"
+  },
+  "lenny-1974": {
+    "rating": 3.89,
+    "votes": 21238,
+    "slug": "lenny",
+    "fetchedAt": "2026-04-19T20:02:45.078Z"
+  },
+  "the-towering-inferno-1974": {
+    "rating": 3.5,
+    "votes": 32897,
+    "slug": "the-towering-inferno",
+    "fetchedAt": "2026-04-19T20:02:47.483Z"
+  },
+  "one-flew-over-the-cuckoos-nest-1975": {
+    "rating": 4.37,
+    "votes": 946566,
+    "slug": "one-flew-over-the-cuckoos-nest",
+    "fetchedAt": "2026-04-19T20:02:49.102Z"
+  },
+  "barry-lyndon-1975": {
+    "rating": 4.4,
+    "votes": 408927,
+    "slug": "barry-lyndon",
+    "fetchedAt": "2026-04-19T20:02:50.731Z"
+  },
+  "dog-day-afternoon-1975": {
+    "rating": 4.31,
+    "votes": 510681,
+    "slug": "dog-day-afternoon",
+    "fetchedAt": "2026-04-19T20:02:52.707Z"
+  },
+  "jaws-1975": {
+    "rating": 3.92,
+    "votes": 1653605,
+    "slug": "jaws",
+    "fetchedAt": "2026-04-19T20:02:54.337Z"
+  },
+  "nashville-1975": {
+    "rating": 4.17,
+    "votes": 75374,
+    "slug": "nashville",
+    "fetchedAt": "2026-04-19T20:02:56.079Z"
+  },
+  "rocky-1976": {
+    "rating": 4.1,
+    "votes": 927300,
+    "slug": "rocky",
+    "fetchedAt": "2026-04-19T20:02:57.843Z"
+  },
+  "all-the-presidents-men-1976": {
+    "rating": 4.18,
+    "votes": 229047,
+    "slug": "all-the-presidents-men",
+    "fetchedAt": "2026-04-19T20:02:59.669Z"
+  },
+  "bound-for-glory-1976": {
+    "rating": 3.62,
+    "votes": 4338,
+    "slug": "bound-for-glory",
+    "fetchedAt": "2026-04-19T20:03:02.061Z"
+  },
+  "network-1976": {
+    "rating": 4.26,
+    "votes": 220122,
+    "slug": "network",
+    "fetchedAt": "2026-04-19T20:03:03.683Z"
+  },
+  "taxi-driver-1976": {
+    "rating": 4.11,
+    "votes": 2296442,
+    "slug": "taxi-driver",
+    "fetchedAt": "2026-04-19T20:03:05.323Z"
+  },
+  "annie-hall-1977": {
+    "rating": 4.02,
+    "votes": 353747,
+    "slug": "annie-hall",
+    "fetchedAt": "2026-04-19T20:03:07.166Z"
+  },
+  "the-goodbye-girl-1977": {
+    "rating": 3.71,
+    "votes": 12103,
+    "slug": "the-goodbye-girl",
+    "fetchedAt": "2026-04-19T20:03:08.962Z"
+  },
+  "julia-1977": {
+    "rating": 3.44,
+    "votes": 6116,
+    "slug": "julia",
+    "fetchedAt": "2026-04-19T20:03:10.676Z"
+  },
+  "star-wars-1977": {
+    "rating": 4.16,
+    "votes": 2511866,
+    "slug": "star-wars",
+    "fetchedAt": "2026-04-19T20:03:12.528Z"
+  },
+  "the-turning-point-1977": {
+    "rating": 3.34,
+    "votes": 3148,
+    "slug": "the-turning-point-1977",
+    "fetchedAt": "2026-04-19T20:03:14.412Z"
+  },
+  "the-deer-hunter-1978": {
+    "rating": 4.21,
+    "votes": 291414,
+    "slug": "the-deer-hunter",
+    "fetchedAt": "2026-04-19T20:03:16.100Z"
+  },
+  "coming-home-1978": {
+    "rating": 3.77,
+    "votes": 10957,
+    "slug": "coming-home",
+    "fetchedAt": "2026-04-19T20:03:17.828Z"
+  },
+  "heaven-can-wait-1978": {
+    "rating": 3.43,
+    "votes": 21208,
+    "slug": "heaven-can-wait-1978",
+    "fetchedAt": "2026-04-19T20:03:19.627Z"
+  },
+  "midnight-express-1978": {
+    "rating": 3.72,
+    "votes": 79281,
+    "slug": "midnight-express",
+    "fetchedAt": "2026-04-19T20:03:21.329Z"
+  },
+  "an-unmarried-woman-1978": {
+    "rating": 3.92,
+    "votes": 11084,
+    "slug": "an-unmarried-woman",
+    "fetchedAt": "2026-04-19T20:03:23.019Z"
+  },
+  "kramer-vs-kramer-1979": {
+    "rating": 4.09,
+    "votes": 189444,
+    "slug": "kramer-vs-kramer",
+    "fetchedAt": "2026-04-19T20:03:24.858Z"
+  },
+  "all-that-jazz-1979": {
+    "rating": 4.34,
+    "votes": 136146,
+    "slug": "all-that-jazz",
+    "fetchedAt": "2026-04-19T20:03:26.724Z"
+  },
+  "apocalypse-now-1979": {
+    "rating": 4.44,
+    "votes": 965232,
+    "slug": "apocalypse-now",
+    "fetchedAt": "2026-04-19T20:03:28.362Z"
+  },
+  "breaking-away-1979": {
+    "rating": 3.97,
+    "votes": 27355,
+    "slug": "breaking-away",
+    "fetchedAt": "2026-04-19T20:03:30.489Z"
+  },
+  "norma-rae-1979": {
+    "rating": 3.78,
+    "votes": 13702,
+    "slug": "norma-rae",
+    "fetchedAt": "2026-04-19T20:03:32.380Z"
+  },
+  "ordinary-people-1980": {
+    "rating": 4.05,
+    "votes": 64432,
+    "slug": "ordinary-people",
+    "fetchedAt": "2026-04-19T20:03:34.003Z"
+  },
+  "coal-miners-daughter-1980": {
+    "rating": 3.71,
+    "votes": 15447,
+    "slug": "coal-miners-daughter",
+    "fetchedAt": "2026-04-19T20:03:35.857Z"
+  },
+  "the-elephant-man-1980": {
+    "rating": 4.3,
+    "votes": 422057,
+    "slug": "the-elephant-man",
+    "fetchedAt": "2026-04-19T20:03:37.485Z"
+  },
+  "raging-bull-1980": {
+    "rating": 4.21,
+    "votes": 582579,
+    "slug": "raging-bull",
+    "fetchedAt": "2026-04-19T20:03:39.109Z"
+  },
+  "tess-1980": {
+    "rating": 3.84,
+    "votes": 17974,
+    "slug": "tess",
+    "fetchedAt": "2026-04-19T20:03:41.043Z"
+  },
+  "chariots-of-fire-1981": {
+    "rating": 3.38,
+    "votes": 46787,
+    "slug": "chariots-of-fire",
+    "fetchedAt": "2026-04-19T20:03:42.804Z"
+  },
+  "on-golden-pond-1981": {
+    "rating": 3.72,
+    "votes": 23007,
+    "slug": "on-golden-pond",
+    "fetchedAt": "2026-04-19T20:03:44.826Z"
+  },
+  "raiders-of-the-lost-ark-1981": {
+    "rating": 4.15,
+    "votes": 1241868,
+    "slug": "raiders-of-the-lost-ark",
+    "fetchedAt": "2026-04-19T20:03:46.566Z"
+  },
+  "reds-1981": {
+    "rating": 3.93,
+    "votes": 26114,
+    "slug": "reds",
+    "fetchedAt": "2026-04-19T20:03:48.373Z"
+  },
+  "gandhi-1982": {
+    "rating": 3.74,
+    "votes": 80383,
+    "slug": "gandhi",
+    "fetchedAt": "2026-04-19T20:03:50.767Z"
+  },
+  "e-t-the-extra-terrestrial-1982": {
+    "rating": 3.84,
+    "votes": 1253414,
+    "slug": "et-the-extra-terrestrial",
+    "fetchedAt": "2026-04-19T20:03:52.710Z"
+  },
+  "missing-1982": {
+    "rating": 3.94,
+    "votes": 22248,
+    "slug": "missing",
+    "fetchedAt": "2026-04-19T20:03:54.658Z"
+  },
+  "tootsie-1982": {
+    "rating": 3.75,
+    "votes": 120883,
+    "slug": "tootsie",
+    "fetchedAt": "2026-04-19T20:03:56.380Z"
+  },
+  "the-verdict-1982": {
+    "rating": 4.03,
+    "votes": 60426,
+    "slug": "the-verdict-1982",
+    "fetchedAt": "2026-04-19T20:03:58.295Z"
+  },
+  "terms-of-endearment-1983": {
+    "rating": 3.82,
+    "votes": 55345,
+    "slug": "terms-of-endearment",
+    "fetchedAt": "2026-04-19T20:04:00.234Z"
+  },
+  "the-big-chill-1983": {
+    "rating": 3.51,
+    "votes": 53889,
+    "slug": "the-big-chill",
+    "fetchedAt": "2026-04-19T20:04:02.074Z"
+  },
+  "the-dresser-1983": {
+    "rating": 3.64,
+    "votes": 3501,
+    "slug": "the-dresser",
+    "fetchedAt": "2026-04-19T20:04:03.870Z"
+  },
+  "the-right-stuff-1983": {
+    "rating": 4.02,
+    "votes": 39151,
+    "slug": "the-right-stuff",
+    "fetchedAt": "2026-04-19T20:04:05.820Z"
+  },
+  "tender-mercies-1983": {
+    "rating": 3.74,
+    "votes": 12484,
+    "slug": "tender-mercies",
+    "fetchedAt": "2026-04-19T20:04:07.453Z"
+  },
+  "amadeus-1984": {
+    "rating": 4.36,
+    "votes": 519618,
+    "slug": "amadeus",
+    "fetchedAt": "2026-04-19T20:04:09.087Z"
+  },
+  "the-killing-fields-1984": {
+    "rating": 3.95,
+    "votes": 36527,
+    "slug": "the-killing-fields",
+    "fetchedAt": "2026-04-19T20:04:11.247Z"
+  },
+  "a-passage-to-india-1984": {
+    "rating": 3.61,
+    "votes": 13788,
+    "slug": "a-passage-to-india",
+    "fetchedAt": "2026-04-19T20:04:13.097Z"
+  },
+  "places-in-the-heart-1984": {
+    "rating": 3.52,
+    "votes": 7959,
+    "slug": "places-in-the-heart",
+    "fetchedAt": "2026-04-19T20:04:14.789Z"
+  },
+  "a-soldiers-story-1984": {
+    "rating": 3.61,
+    "votes": 6329,
+    "slug": "a-soldiers-story",
+    "fetchedAt": "2026-04-19T20:04:16.519Z"
+  },
+  "out-of-africa-1985": {
+    "rating": 3.44,
+    "votes": 62979,
+    "slug": "out-of-africa",
+    "fetchedAt": "2026-04-19T20:04:18.231Z"
+  },
+  "the-color-purple-1985": {
+    "rating": 3.93,
+    "votes": 140585,
+    "slug": "the-color-purple",
+    "fetchedAt": "2026-04-19T20:04:20.140Z"
+  },
+  "kiss-of-the-spider-woman-1985": {
+    "rating": 3.73,
+    "votes": 24979,
+    "slug": "kiss-of-the-spider-woman",
+    "fetchedAt": "2026-04-19T20:04:22.100Z"
+  },
+  "prizzis-honor-1985": {
+    "rating": 3.26,
+    "votes": 14932,
+    "slug": "prizzis-honor",
+    "fetchedAt": "2026-04-19T20:04:23.824Z"
+  },
+  "witness-1985": {
+    "rating": 3.7,
+    "votes": 102564,
+    "slug": "witness",
+    "fetchedAt": "2026-04-19T20:04:25.683Z"
+  },
+  "platoon-1986": {
+    "rating": 3.98,
+    "votes": 353765,
+    "slug": "platoon",
+    "fetchedAt": "2026-04-19T20:04:27.465Z"
+  },
+  "children-of-a-lesser-god-1986": {
+    "rating": 3.54,
+    "votes": 12907,
+    "slug": "children-of-a-lesser-god",
+    "fetchedAt": "2026-04-19T20:04:29.165Z"
+  },
+  "hannah-and-her-sisters-1986": {
+    "rating": 4.01,
+    "votes": 90212,
+    "slug": "hannah-and-her-sisters",
+    "fetchedAt": "2026-04-19T20:04:30.788Z"
+  },
+  "the-mission-1986": {
+    "rating": 3.69,
+    "votes": 52443,
+    "slug": "the-mission",
+    "fetchedAt": "2026-04-19T20:04:32.833Z"
+  },
+  "a-room-with-a-view-1986": {
+    "rating": 3.71,
+    "votes": 77337,
+    "slug": "a-room-with-a-view",
+    "fetchedAt": "2026-04-19T20:04:34.550Z"
+  },
+  "the-last-emperor-1987": {
+    "rating": 3.94,
+    "votes": 90182,
+    "slug": "the-last-emperor",
+    "fetchedAt": "2026-04-19T20:04:36.166Z"
+  },
+  "broadcast-news-1987": {
+    "rating": 4.04,
+    "votes": 70537,
+    "slug": "broadcast-news",
+    "fetchedAt": "2026-04-19T20:04:38.053Z"
+  },
+  "fatal-attraction-1987": {
+    "rating": 3.46,
+    "votes": 129136,
+    "slug": "fatal-attraction",
+    "fetchedAt": "2026-04-19T20:04:40.001Z"
+  },
+  "hope-and-glory-1987": {
+    "rating": 3.68,
+    "votes": 8516,
+    "slug": "hope-and-glory",
+    "fetchedAt": "2026-04-19T20:04:41.718Z"
+  },
+  "moonstruck-1987": {
+    "rating": 3.79,
+    "votes": 253119,
+    "slug": "moonstruck",
+    "fetchedAt": "2026-04-19T20:04:43.486Z"
+  },
+  "rain-man-1988": {
+    "rating": 3.89,
+    "votes": 541228,
+    "slug": "rain-man",
+    "fetchedAt": "2026-04-19T20:04:45.345Z"
+  },
+  "the-accidental-tourist-1988": {
+    "rating": 3.32,
+    "votes": 9851,
+    "slug": "the-accidental-tourist",
+    "fetchedAt": "2026-04-19T20:04:47.079Z"
+  },
+  "dangerous-liaisons-1988": {
+    "rating": 3.78,
+    "votes": 63987,
+    "slug": "dangerous-liaisons",
+    "fetchedAt": "2026-04-19T20:04:49.029Z"
+  },
+  "mississippi-burning-1988": {
+    "rating": 3.91,
+    "votes": 144343,
+    "slug": "mississippi-burning",
+    "fetchedAt": "2026-04-19T20:04:51.081Z"
+  },
+  "working-girl-1988": {
+    "rating": 3.45,
+    "votes": 65307,
+    "slug": "working-girl",
+    "fetchedAt": "2026-04-19T20:04:52.862Z"
+  },
+  "driving-miss-daisy-1989": {
+    "rating": 3.33,
+    "votes": 66633,
+    "slug": "driving-miss-daisy",
+    "fetchedAt": "2026-04-19T20:04:54.767Z"
+  },
+  "born-on-the-fourth-of-july-1989": {
+    "rating": 3.74,
+    "votes": 85400,
+    "slug": "born-on-the-fourth-of-july",
+    "fetchedAt": "2026-04-19T20:04:56.812Z"
+  },
+  "dead-poets-society-1989": {
+    "rating": 4.35,
+    "votes": 3491495,
+    "slug": "dead-poets-society",
+    "fetchedAt": "2026-04-19T20:04:58.426Z"
+  },
+  "field-of-dreams-1989": {
+    "rating": 3.63,
+    "votes": 137644,
+    "slug": "field-of-dreams",
+    "fetchedAt": "2026-04-19T20:05:00.267Z"
+  },
+  "my-left-foot-1989": {
+    "rating": 3.94,
+    "votes": 67925,
+    "slug": "my-left-foot-the-story-of-christy-brown",
+    "fetchedAt": "2026-04-19T20:05:02.043Z"
+  },
+  "dances-with-wolves-1990": {
+    "rating": 3.92,
+    "votes": 160891,
+    "slug": "dances-with-wolves",
+    "fetchedAt": "2026-04-19T20:05:04.006Z"
+  },
+  "awakenings-1990": {
+    "rating": 3.97,
+    "votes": 189954,
+    "slug": "awakenings",
+    "fetchedAt": "2026-04-19T20:05:05.767Z"
+  },
+  "ghost-1990": {
+    "rating": 3.6,
+    "votes": 319005,
+    "slug": "ghost",
+    "fetchedAt": "2026-04-19T20:05:07.648Z"
+  },
+  "the-godfather-part-iii-1990": {
+    "rating": 3.5,
+    "votes": 465720,
+    "slug": "the-godfather-part-iii",
+    "fetchedAt": "2026-04-19T20:05:09.432Z"
+  },
+  "goodfellas-1990": {
+    "rating": 4.46,
+    "votes": 2088025,
+    "slug": "goodfellas",
+    "fetchedAt": "2026-04-19T20:05:11.306Z"
+  },
+  "the-silence-of-the-lambs-1991": {
+    "rating": 4.34,
+    "votes": 2978508,
+    "slug": "the-silence-of-the-lambs",
+    "fetchedAt": "2026-04-19T20:05:13.035Z"
+  },
+  "beauty-and-the-beast-1991": {
+    "rating": 3.91,
+    "votes": 912075,
+    "slug": "beauty-and-the-beast-1991",
+    "fetchedAt": "2026-04-19T20:05:14.819Z"
+  },
+  "bugsy-1991": {
+    "rating": 3.34,
+    "votes": 16492,
+    "slug": "bugsy",
+    "fetchedAt": "2026-04-19T20:05:16.886Z"
+  },
+  "jfk-1991": {
+    "rating": 4.07,
+    "votes": 141240,
+    "slug": "jfk",
+    "fetchedAt": "2026-04-19T20:05:18.828Z"
+  },
+  "the-fisher-king-1991": {
+    "rating": 3.9,
+    "votes": 75497,
+    "slug": "the-fisher-king",
+    "fetchedAt": "2026-04-19T20:05:20.879Z"
+  },
+  "unforgiven-1992": {
+    "rating": 4.2,
+    "votes": 308804,
+    "slug": "unforgiven",
+    "fetchedAt": "2026-04-19T20:05:22.663Z"
+  },
+  "the-crying-game-1992": {
+    "rating": 3.62,
+    "votes": 40272,
+    "slug": "the-crying-game",
+    "fetchedAt": "2026-04-19T20:05:24.400Z"
+  },
+  "a-few-good-men-1992": {
+    "rating": 4.05,
+    "votes": 316929,
+    "slug": "a-few-good-men",
+    "fetchedAt": "2026-04-19T20:05:26.123Z"
+  },
+  "howards-end-1992": {
+    "rating": 3.72,
+    "votes": 30179,
+    "slug": "howards-end",
+    "fetchedAt": "2026-04-19T20:05:27.962Z"
+  },
+  "scent-of-a-woman-1992": {
+    "rating": 3.96,
+    "votes": 468861,
+    "slug": "scent-of-a-woman",
+    "fetchedAt": "2026-04-19T20:05:29.716Z"
+  },
+  "schindlers-list-1993": {
+    "rating": 4.54,
+    "votes": 1364049,
+    "slug": "schindlers-list",
+    "fetchedAt": "2026-04-19T20:05:31.474Z"
+  },
+  "the-fugitive-1993": {
+    "rating": 3.92,
+    "votes": 294518,
+    "slug": "the-fugitive-1993",
+    "fetchedAt": "2026-04-19T20:05:33.102Z"
+  },
+  "in-the-name-of-the-father-1993": {
+    "rating": 4.2,
+    "votes": 114750,
+    "slug": "in-the-name-of-the-father-1993",
+    "fetchedAt": "2026-04-19T20:05:35.011Z"
+  },
+  "the-piano-1993": {
+    "rating": 3.85,
+    "votes": 127790,
+    "slug": "the-piano",
+    "fetchedAt": "2026-04-19T20:05:36.769Z"
+  },
+  "the-remains-of-the-day-1993": {
+    "rating": 3.96,
+    "votes": 77451,
+    "slug": "the-remains-of-the-day",
+    "fetchedAt": "2026-04-19T20:05:38.392Z"
+  },
+  "forrest-gump-1994": {
+    "rating": 4.17,
+    "votes": 3791290,
+    "slug": "forrest-gump",
+    "fetchedAt": "2026-04-19T20:05:40.019Z"
+  },
+  "four-weddings-and-a-funeral-1994": {
+    "rating": 3.33,
+    "votes": 326600,
+    "slug": "four-weddings-and-a-funeral",
+    "fetchedAt": "2026-04-19T20:05:41.870Z"
+  },
+  "pulp-fiction-1994": {
+    "rating": 4.24,
+    "votes": 4123564,
+    "slug": "pulp-fiction",
+    "fetchedAt": "2026-04-19T20:05:43.714Z"
+  },
+  "quiz-show-1994": {
+    "rating": 3.83,
+    "votes": 61600,
+    "slug": "quiz-show",
+    "fetchedAt": "2026-04-19T20:05:45.457Z"
+  },
+  "the-shawshank-redemption-1994": {
+    "rating": 4.59,
+    "votes": 2718856,
+    "slug": "the-shawshank-redemption",
+    "fetchedAt": "2026-04-19T20:05:47.089Z"
+  },
+  "braveheart-1995": {
+    "rating": 3.92,
+    "votes": 500552,
+    "slug": "braveheart",
+    "fetchedAt": "2026-04-19T20:05:48.937Z"
+  },
+  "apollo-13-1995": {
+    "rating": 3.82,
+    "votes": 281343,
+    "slug": "apollo-13",
+    "fetchedAt": "2026-04-19T20:05:50.578Z"
+  },
+  "babe-1995": {
+    "rating": 3.44,
+    "votes": 185705,
+    "slug": "babe",
+    "fetchedAt": "2026-04-19T20:05:52.201Z"
+  },
+  "il-postino-1995": {
+    "rating": 4.01,
+    "votes": 33999,
+    "slug": "the-postman-1994",
+    "fetchedAt": "2026-04-19T20:05:54.216Z"
+  },
+  "sense-and-sensibility-1995": {
+    "rating": 3.86,
+    "votes": 215696,
+    "slug": "sense-and-sensibility",
+    "fetchedAt": "2026-04-19T20:05:55.940Z"
+  },
+  "the-english-patient-1996": {
+    "rating": 3.62,
+    "votes": 110816,
+    "slug": "the-english-patient",
+    "fetchedAt": "2026-04-19T20:05:57.659Z"
+  },
+  "fargo-1996": {
+    "rating": 4.15,
+    "votes": 1339506,
+    "slug": "fargo",
+    "fetchedAt": "2026-04-19T20:05:59.292Z"
+  },
+  "jerry-maguire-1996": {
+    "rating": 3.6,
+    "votes": 349753,
+    "slug": "jerry-maguire",
+    "fetchedAt": "2026-04-19T20:06:01.329Z"
+  },
+  "secrets-lies-1996": {
+    "rating": 4.29,
+    "votes": 63484,
+    "slug": "secrets-lies",
+    "fetchedAt": "2026-04-19T20:06:02.958Z"
+  },
+  "shine-1996": {
+    "rating": 3.72,
+    "votes": 24374,
+    "slug": "shine",
+    "fetchedAt": "2026-04-19T20:06:05.018Z"
+  },
+  "titanic-1997": {
+    "rating": 3.83,
+    "votes": 3072308,
+    "slug": "titanic-1997",
+    "fetchedAt": "2026-04-19T20:06:06.666Z"
+  },
+  "as-good-as-it-gets-1997": {
+    "rating": 3.62,
+    "votes": 224376,
+    "slug": "as-good-as-it-gets",
+    "fetchedAt": "2026-04-19T20:06:08.464Z"
+  },
+  "the-full-monty-1997": {
+    "rating": 3.73,
+    "votes": 91206,
+    "slug": "the-full-monty",
+    "fetchedAt": "2026-04-19T20:06:10.081Z"
+  },
+  "good-will-hunting-1997": {
+    "rating": 4.38,
+    "votes": 3134628,
+    "slug": "good-will-hunting",
+    "fetchedAt": "2026-04-19T20:06:11.829Z"
+  },
+  "l-a-confidential-1997": {
+    "rating": 4.09,
+    "votes": 404925,
+    "slug": "la-confidential",
+    "fetchedAt": "2026-04-19T20:06:13.460Z"
+  },
+  "shakespeare-in-love-1998": {
+    "rating": 3.31,
+    "votes": 146141,
+    "slug": "shakespeare-in-love",
+    "fetchedAt": "2026-04-19T20:06:15.312Z"
+  },
+  "elizabeth-1998": {
+    "rating": 3.61,
+    "votes": 68710,
+    "slug": "elizabeth",
+    "fetchedAt": "2026-04-19T20:06:17.430Z"
+  },
+  "life-is-beautiful-1998": {
+    "rating": 4.41,
+    "votes": 746510,
+    "slug": "life-is-beautiful",
+    "fetchedAt": "2026-04-19T20:06:19.059Z"
+  },
+  "saving-private-ryan-1998": {
+    "rating": 4.25,
+    "votes": 1425820,
+    "slug": "saving-private-ryan",
+    "fetchedAt": "2026-04-19T20:06:20.685Z"
+  },
+  "the-thin-red-line-1998": {
+    "rating": 4.09,
+    "votes": 202356,
+    "slug": "the-thin-red-line",
+    "fetchedAt": "2026-04-19T20:06:22.626Z"
+  },
+  "american-beauty-1999": {
+    "rating": 3.95,
+    "votes": 1168394,
+    "slug": "american-beauty",
+    "fetchedAt": "2026-04-19T20:06:24.379Z"
+  },
+  "the-cider-house-rules-1999": {
+    "rating": 3.44,
+    "votes": 39692,
+    "slug": "the-cider-house-rules",
+    "fetchedAt": "2026-04-19T20:06:26.447Z"
+  },
+  "the-green-mile-1999": {
+    "rating": 4.28,
+    "votes": 1283396,
+    "slug": "the-green-mile",
+    "fetchedAt": "2026-04-19T20:06:28.083Z"
+  },
+  "the-insider-1999": {
+    "rating": 4.09,
+    "votes": 136292,
+    "slug": "the-insider",
+    "fetchedAt": "2026-04-19T20:06:30.029Z"
+  },
+  "the-sixth-sense-1999": {
+    "rating": 4.09,
+    "votes": 1330331,
+    "slug": "the-sixth-sense",
+    "fetchedAt": "2026-04-19T20:06:31.941Z"
+  },
+  "gladiator-2000": {
+    "rating": 4.18,
+    "votes": 2056022,
+    "slug": "gladiator-2000",
+    "fetchedAt": "2026-04-19T20:06:33.575Z"
+  },
+  "chocolat-2000": {
+    "rating": 3.45,
+    "votes": 111826,
+    "slug": "chocolat",
+    "fetchedAt": "2026-04-19T20:06:35.309Z"
+  },
+  "crouching-tiger-hidden-dragon-2000": {
+    "rating": 4.08,
+    "votes": 261683,
+    "slug": "crouching-tiger-hidden-dragon",
+    "fetchedAt": "2026-04-19T20:06:37.174Z"
+  },
+  "erin-brockovich-2000": {
+    "rating": 3.9,
+    "votes": 396440,
+    "slug": "erin-brockovich",
+    "fetchedAt": "2026-04-19T20:06:38.805Z"
+  },
+  "traffic-2000": {
+    "rating": 3.7,
+    "votes": 101534,
+    "slug": "traffic",
+    "fetchedAt": "2026-04-19T20:06:40.851Z"
+  },
+  "a-beautiful-mind-2001": {
+    "rating": 3.87,
+    "votes": 611524,
+    "slug": "a-beautiful-mind",
+    "fetchedAt": "2026-04-19T20:06:42.489Z"
+  },
+  "gosford-park-2001": {
+    "rating": 3.66,
+    "votes": 96957,
+    "slug": "gosford-park",
+    "fetchedAt": "2026-04-19T20:06:44.333Z"
+  },
+  "in-the-bedroom-2001": {
+    "rating": 3.86,
+    "votes": 28980,
+    "slug": "in-the-bedroom",
+    "fetchedAt": "2026-04-19T20:06:46.100Z"
+  },
+  "the-lord-of-the-rings-the-fellowship-of-the-ring-2001": {
+    "rating": 4.39,
+    "votes": 2850999,
+    "slug": "the-lord-of-the-rings-the-fellowship-of-the-ring",
+    "fetchedAt": "2026-04-19T20:06:47.919Z"
+  },
+  "moulin-rouge-2001": {
+    "rating": 3.8,
+    "votes": 523468,
+    "slug": "moulin-rouge-2001",
+    "fetchedAt": "2026-04-19T20:06:49.725Z"
+  },
+  "chicago-2002": {
+    "rating": 4.02,
+    "votes": 476776,
+    "slug": "chicago",
+    "fetchedAt": "2026-04-19T20:06:51.470Z"
+  },
+  "gangs-of-new-york-2002": {
+    "rating": 3.72,
+    "votes": 464804,
+    "slug": "gangs-of-new-york-2002",
+    "fetchedAt": "2026-04-19T20:06:53.208Z"
+  },
+  "the-hours-2002": {
+    "rating": 3.86,
+    "votes": 130574,
+    "slug": "the-hours",
+    "fetchedAt": "2026-04-19T20:06:54.923Z"
+  },
+  "the-lord-of-the-rings-the-two-towers-2002": {
+    "rating": 4.43,
+    "votes": 2126718,
+    "slug": "the-lord-of-the-rings-the-two-towers",
+    "fetchedAt": "2026-04-19T20:06:56.551Z"
+  },
+  "the-pianist-2002": {
+    "rating": 4.4,
+    "votes": 1220939,
+    "slug": "the-pianist",
+    "fetchedAt": "2026-04-19T20:06:58.181Z"
+  },
+  "the-lord-of-the-rings-the-return-of-the-king-2003": {
+    "rating": 4.55,
+    "votes": 2174547,
+    "slug": "the-lord-of-the-rings-the-return-of-the-king",
+    "fetchedAt": "2026-04-19T20:06:59.812Z"
+  },
+  "lost-in-translation-2003": {
+    "rating": 3.76,
+    "votes": 1459040,
+    "slug": "lost-in-translation",
+    "fetchedAt": "2026-04-19T20:07:01.440Z"
+  },
+  "master-and-commander-the-far-side-of-the-world-2003": {
+    "rating": 4,
+    "votes": 188839,
+    "slug": "master-and-commander-the-far-side-of-the-world",
+    "fetchedAt": "2026-04-19T20:07:03.073Z"
+  },
+  "mystic-river-2003": {
+    "rating": 3.87,
+    "votes": 501031,
+    "slug": "mystic-river",
+    "fetchedAt": "2026-04-19T20:07:04.797Z"
+  },
+  "seabiscuit-2003": {
+    "rating": 3.36,
+    "votes": 34405,
+    "slug": "seabiscuit",
+    "fetchedAt": "2026-04-19T20:07:06.707Z"
+  },
+  "million-dollar-baby-2004": {
+    "rating": 4.04,
+    "votes": 463812,
+    "slug": "million-dollar-baby",
+    "fetchedAt": "2026-04-19T20:07:08.558Z"
+  },
+  "the-aviator-2004": {
+    "rating": 3.75,
+    "votes": 348625,
+    "slug": "the-aviator",
+    "fetchedAt": "2026-04-19T20:07:10.753Z"
+  },
+  "finding-neverland-2004": {
+    "rating": 3.52,
+    "votes": 88439,
+    "slug": "finding-neverland",
+    "fetchedAt": "2026-04-19T20:07:12.479Z"
+  },
+  "ray-2004": {
+    "rating": 3.78,
+    "votes": 100174,
+    "slug": "ray-2004",
+    "fetchedAt": "2026-04-19T20:07:14.316Z"
+  },
+  "sideways-2004": {
+    "rating": 3.81,
+    "votes": 182286,
+    "slug": "sideways",
+    "fetchedAt": "2026-04-19T20:07:16.081Z"
+  },
+  "crash-2005": {
+    "rating": 2.97,
+    "votes": 154835,
+    "slug": "crash-2004",
+    "fetchedAt": "2026-04-19T20:07:17.760Z"
+  },
+  "brokeback-mountain-2005": {
+    "rating": 4.15,
+    "votes": 1504409,
+    "slug": "brokeback-mountain",
+    "fetchedAt": "2026-04-19T20:07:19.397Z"
+  },
+  "capote-2005": {
+    "rating": 3.7,
+    "votes": 109357,
+    "slug": "capote",
+    "fetchedAt": "2026-04-19T20:07:21.140Z"
+  },
+  "good-night-and-good-luck-2005": {
+    "rating": 3.69,
+    "votes": 50310,
+    "slug": "good-night-and-good-luck",
+    "fetchedAt": "2026-04-19T20:07:22.910Z"
+  },
+  "munich-2005": {
+    "rating": 3.81,
+    "votes": 141296,
+    "slug": "munich",
+    "fetchedAt": "2026-04-19T20:07:25.110Z"
+  },
+  "the-departed-2006": {
+    "rating": 4.34,
+    "votes": 1527239,
+    "slug": "the-departed",
+    "fetchedAt": "2026-04-19T20:07:26.994Z"
+  },
+  "babel-2006": {
+    "rating": 3.7,
+    "votes": 211232,
+    "slug": "babel-2006",
+    "fetchedAt": "2026-04-19T20:07:28.613Z"
+  },
+  "letters-from-iwo-jima-2006": {
+    "rating": 3.94,
+    "votes": 69687,
+    "slug": "letters-from-iwo-jima",
+    "fetchedAt": "2026-04-19T20:07:30.326Z"
+  },
+  "little-miss-sunshine-2006": {
+    "rating": 4.21,
+    "votes": 2174744,
+    "slug": "little-miss-sunshine",
+    "fetchedAt": "2026-04-19T20:07:31.948Z"
+  },
+  "the-queen-2006": {
+    "rating": 3.49,
+    "votes": 49984,
+    "slug": "the-queen-2006",
+    "fetchedAt": "2026-04-19T20:07:34.003Z"
+  },
+  "no-country-for-old-men-2007": {
+    "rating": 4.31,
+    "votes": 2104245,
+    "slug": "no-country-for-old-men",
+    "fetchedAt": "2026-04-19T20:07:35.766Z"
+  },
+  "atonement-2007": {
+    "rating": 4.01,
+    "votes": 726794,
+    "slug": "atonement",
+    "fetchedAt": "2026-04-19T20:07:37.398Z"
+  },
+  "juno-2007": {
+    "rating": 3.75,
+    "votes": 1538255,
+    "slug": "juno",
+    "fetchedAt": "2026-04-19T20:07:39.030Z"
+  },
+  "michael-clayton-2007": {
+    "rating": 3.84,
+    "votes": 143114,
+    "slug": "michael-clayton",
+    "fetchedAt": "2026-04-19T20:07:40.765Z"
+  },
+  "there-will-be-blood-2007": {
+    "rating": 4.46,
+    "votes": 1271410,
+    "slug": "there-will-be-blood",
+    "fetchedAt": "2026-04-19T20:07:42.410Z"
+  },
+  "slumdog-millionaire-2008": {
+    "rating": 3.95,
+    "votes": 669298,
+    "slug": "slumdog-millionaire",
+    "fetchedAt": "2026-04-19T20:07:44.343Z"
+  },
+  "the-curious-case-of-benjamin-button-2008": {
+    "rating": 3.69,
+    "votes": 974689,
+    "slug": "the-curious-case-of-benjamin-button",
+    "fetchedAt": "2026-04-19T20:07:46.125Z"
+  },
+  "frost-nixon-2008": {
+    "rating": 3.74,
+    "votes": 56678,
+    "slug": "frost-nixon",
+    "fetchedAt": "2026-04-19T20:07:48.229Z"
+  },
+  "milk-2008": {
+    "rating": 3.78,
+    "votes": 114247,
+    "slug": "milk-2008",
+    "fetchedAt": "2026-04-19T20:07:50.015Z"
+  },
+  "the-reader-2008": {
+    "rating": 3.6,
+    "votes": 138725,
+    "slug": "the-reader",
+    "fetchedAt": "2026-04-19T20:07:51.750Z"
+  },
+  "the-hurt-locker-2009": {
+    "rating": 3.75,
+    "votes": 321588,
+    "slug": "the-hurt-locker",
+    "fetchedAt": "2026-04-19T20:07:53.820Z"
+  },
+  "avatar-2009": {
+    "rating": 3.74,
+    "votes": 2915015,
+    "slug": "avatar",
+    "fetchedAt": "2026-04-19T20:07:55.818Z"
+  },
+  "the-blind-side-2009": {
+    "rating": 3.38,
+    "votes": 469809,
+    "slug": "the-blind-side",
+    "fetchedAt": "2026-04-19T20:07:57.789Z"
+  },
+  "district-9-2009": {
+    "rating": 3.81,
+    "votes": 536732,
+    "slug": "district-9",
+    "fetchedAt": "2026-04-19T20:08:03.913Z"
+  },
+  "an-education-2009": {
+    "rating": 3.55,
+    "votes": 86371,
+    "slug": "an-education",
+    "fetchedAt": "2026-04-19T20:08:05.776Z"
+  },
+  "inglourious-basterds-2009": {
+    "rating": 4.36,
+    "votes": 3509487,
+    "slug": "inglourious-basterds",
+    "fetchedAt": "2026-04-19T20:08:07.419Z"
+  },
+  "precious-2009": {
+    "rating": 3.77,
+    "votes": 164738,
+    "slug": "precious-based-on-the-novel-push-by-sapphire",
+    "fetchedAt": "2026-04-19T20:08:11.477Z"
+  },
+  "a-serious-man-2009": {
+    "rating": 3.86,
+    "votes": 217690,
+    "slug": "a-serious-man",
+    "fetchedAt": "2026-04-19T20:08:13.405Z"
+  },
+  "up-2009": {
+    "rating": 4.1,
+    "votes": 2942175,
+    "slug": "up",
+    "fetchedAt": "2026-04-19T20:08:15.041Z"
+  },
+  "up-in-the-air-2009": {
+    "rating": 3.57,
+    "votes": 184922,
+    "slug": "up-in-the-air",
+    "fetchedAt": "2026-04-19T20:08:16.801Z"
+  },
+  "the-kings-speech-2010": {
+    "rating": 3.8,
+    "votes": 472784,
+    "slug": "the-kings-speech",
+    "fetchedAt": "2026-04-19T20:08:18.749Z"
+  },
+  "127-hours-2010": {
+    "rating": 3.48,
+    "votes": 465792,
+    "slug": "127-hours",
+    "fetchedAt": "2026-04-19T20:08:20.399Z"
+  },
+  "black-swan-2010": {
+    "rating": 4.17,
+    "votes": 3022165,
+    "slug": "black-swan",
+    "fetchedAt": "2026-04-19T20:08:22.211Z"
+  },
+  "the-fighter-2010": {
+    "rating": 3.84,
+    "votes": 268786,
+    "slug": "the-fighter-2010",
+    "fetchedAt": "2026-04-19T20:08:24.068Z"
+  },
+  "inception-2010": {
+    "rating": 4.23,
+    "votes": 3918430,
+    "slug": "inception",
+    "fetchedAt": "2026-04-19T20:08:25.949Z"
+  },
+  "the-kids-are-all-right-2010": {
+    "rating": 3.32,
+    "votes": 76477,
+    "slug": "the-kids-are-all-right",
+    "fetchedAt": "2026-04-19T20:08:27.657Z"
+  },
+  "the-social-network-2010": {
+    "rating": 3.93,
+    "votes": 2608999,
+    "slug": "the-social-network",
+    "fetchedAt": "2026-04-19T20:08:29.508Z"
+  },
+  "toy-story-3-2010": {
+    "rating": 4.01,
+    "votes": 1598636,
+    "slug": "toy-story-3",
+    "fetchedAt": "2026-04-19T20:08:31.153Z"
+  },
+  "true-grit-2010": {
+    "rating": 3.84,
+    "votes": 360868,
+    "slug": "true-grit-2010",
+    "fetchedAt": "2026-04-19T20:08:32.999Z"
+  },
+  "winters-bone-2010": {
+    "rating": 3.5,
+    "votes": 108809,
+    "slug": "winters-bone",
+    "fetchedAt": "2026-04-19T20:08:34.966Z"
+  },
+  "the-artist-2011": {
+    "rating": 3.77,
+    "votes": 173381,
+    "slug": "the-artist",
+    "fetchedAt": "2026-04-19T20:08:36.901Z"
+  },
+  "the-descendants-2011": {
+    "rating": 3.61,
+    "votes": 137556,
+    "slug": "the-descendants",
+    "fetchedAt": "2026-04-19T20:08:38.547Z"
+  },
+  "extremely-loud-incredibly-close-2011": {
+    "rating": 3.13,
+    "votes": 55180,
+    "slug": "extremely-loud-incredibly-close",
+    "fetchedAt": "2026-04-19T20:08:40.309Z"
+  },
+  "the-help-2011": {
+    "rating": 3.94,
+    "votes": 696782,
+    "slug": "the-help",
+    "fetchedAt": "2026-04-19T20:08:42.148Z"
+  },
+  "hugo-2011": {
+    "rating": 3.51,
+    "votes": 455740,
+    "slug": "hugo",
+    "fetchedAt": "2026-04-19T20:08:43.862Z"
+  },
+  "midnight-in-paris-2011": {
+    "rating": 3.71,
+    "votes": 829041,
+    "slug": "midnight-in-paris",
+    "fetchedAt": "2026-04-19T20:08:45.506Z"
+  },
+  "moneyball-2011": {
+    "rating": 3.92,
+    "votes": 797501,
+    "slug": "moneyball",
+    "fetchedAt": "2026-04-19T20:08:47.346Z"
+  },
+  "the-tree-of-life-2011": {
+    "rating": 3.84,
+    "votes": 282216,
+    "slug": "the-tree-of-life-2011",
+    "fetchedAt": "2026-04-19T20:08:49.145Z"
+  },
+  "war-horse-2011": {
+    "rating": 3.39,
+    "votes": 143849,
+    "slug": "war-horse",
+    "fetchedAt": "2026-04-19T20:08:50.781Z"
+  },
+  "argo-2012": {
+    "rating": 3.73,
+    "votes": 483093,
+    "slug": "argo",
+    "fetchedAt": "2026-04-19T20:08:52.560Z"
+  },
+  "amour-2012": {
+    "rating": 4.23,
+    "votes": 144102,
+    "slug": "amour",
+    "fetchedAt": "2026-04-19T20:08:54.246Z"
+  },
+  "beasts-of-the-southern-wild-2012": {
+    "rating": 3.78,
+    "votes": 72208,
+    "slug": "beasts-of-the-southern-wild",
+    "fetchedAt": "2026-04-19T20:08:55.980Z"
+  },
+  "django-unchained-2012": {
+    "rating": 4.33,
+    "votes": 3152583,
+    "slug": "django-unchained",
+    "fetchedAt": "2026-04-19T20:08:57.854Z"
+  },
+  "les-mis-rables-2012": {
+    "rating": 3.62,
+    "votes": 478108,
+    "slug": "les-miserables-2012",
+    "fetchedAt": "2026-04-19T20:08:59.486Z"
+  },
+  "life-of-pi-2012": {
+    "rating": 3.75,
+    "votes": 952862,
+    "slug": "life-of-pi",
+    "fetchedAt": "2026-04-19T20:09:01.142Z"
+  },
+  "lincoln-2012": {
+    "rating": 3.59,
+    "votes": 218548,
+    "slug": "lincoln",
+    "fetchedAt": "2026-04-19T20:09:02.909Z"
+  },
+  "silver-linings-playbook-2012": {
+    "rating": 3.72,
+    "votes": 976965,
+    "slug": "silver-linings-playbook",
+    "fetchedAt": "2026-04-19T20:09:04.828Z"
+  },
+  "zero-dark-thirty-2012": {
+    "rating": 3.69,
+    "votes": 278050,
+    "slug": "zero-dark-thirty",
+    "fetchedAt": "2026-04-19T20:09:06.577Z"
+  },
+  "12-years-a-slave-2013": {
+    "rating": 4.17,
+    "votes": 707328,
+    "slug": "12-years-a-slave",
+    "fetchedAt": "2026-04-19T20:09:08.404Z"
+  },
+  "american-hustle-2013": {
+    "rating": 3.35,
+    "votes": 405046,
+    "slug": "american-hustle",
+    "fetchedAt": "2026-04-19T20:09:10.161Z"
+  },
+  "captain-phillips-2013": {
+    "rating": 3.78,
+    "votes": 380025,
+    "slug": "captain-phillips",
+    "fetchedAt": "2026-04-19T20:09:12.112Z"
+  },
+  "dallas-buyers-club-2013": {
+    "rating": 4.02,
+    "votes": 634863,
+    "slug": "dallas-buyers-club",
+    "fetchedAt": "2026-04-19T20:09:13.747Z"
+  },
+  "gravity-2013": {
+    "rating": 3.51,
+    "votes": 867823,
+    "slug": "gravity-2013",
+    "fetchedAt": "2026-04-19T20:09:15.390Z"
+  },
+  "her-2013": {
+    "rating": 3.97,
+    "votes": 2149581,
+    "slug": "her",
+    "fetchedAt": "2026-04-19T20:09:17.251Z"
+  },
+  "nebraska-2013": {
+    "rating": 3.98,
+    "votes": 107581,
+    "slug": "nebraska",
+    "fetchedAt": "2026-04-19T20:09:19.269Z"
+  },
+  "philomena-2013": {
+    "rating": 3.71,
+    "votes": 59340,
+    "slug": "philomena",
+    "fetchedAt": "2026-04-19T20:09:21.108Z"
+  },
+  "the-wolf-of-wall-street-2013": {
+    "rating": 4,
+    "votes": 3891172,
+    "slug": "the-wolf-of-wall-street",
+    "fetchedAt": "2026-04-19T20:09:22.749Z"
+  },
+  "birdman-2014": {
+    "rating": 4,
+    "votes": 1185291,
+    "slug": "birdman-or-the-unexpected-virtue-of-ignorance",
+    "fetchedAt": "2026-04-19T20:09:24.391Z"
+  },
+  "american-sniper-2014": {
+    "rating": 3.41,
+    "votes": 564690,
+    "slug": "american-sniper",
+    "fetchedAt": "2026-04-19T20:09:26.215Z"
+  },
+  "boyhood-2014": {
+    "rating": 3.83,
+    "votes": 628145,
+    "slug": "boyhood",
+    "fetchedAt": "2026-04-19T20:09:28.102Z"
+  },
+  "the-grand-budapest-hotel-2014": {
+    "rating": 4.24,
+    "votes": 3065985,
+    "slug": "the-grand-budapest-hotel",
+    "fetchedAt": "2026-04-19T20:09:29.750Z"
+  },
+  "the-imitation-game-2014": {
+    "rating": 3.84,
+    "votes": 1103757,
+    "slug": "the-imitation-game",
+    "fetchedAt": "2026-04-19T20:09:31.659Z"
+  },
+  "selma-2014": {
+    "rating": 3.79,
+    "votes": 110466,
+    "slug": "selma",
+    "fetchedAt": "2026-04-19T20:09:33.412Z"
+  },
+  "the-theory-of-everything-2014": {
+    "rating": 3.63,
+    "votes": 647882,
+    "slug": "the-theory-of-everything-2014",
+    "fetchedAt": "2026-04-19T20:09:35.347Z"
+  },
+  "whiplash-2014": {
+    "rating": 4.42,
+    "votes": 4265168,
+    "slug": "whiplash-2014",
+    "fetchedAt": "2026-04-19T20:09:36.982Z"
+  },
+  "spotlight-2015": {
+    "rating": 4.12,
+    "votes": 604960,
+    "slug": "spotlight",
+    "fetchedAt": "2026-04-19T20:09:38.828Z"
+  },
+  "the-big-short-2015": {
+    "rating": 3.85,
+    "votes": 1076467,
+    "slug": "the-big-short",
+    "fetchedAt": "2026-04-19T20:09:40.670Z"
+  },
+  "bridge-of-spies-2015": {
+    "rating": 3.61,
+    "votes": 225440,
+    "slug": "bridge-of-spies",
+    "fetchedAt": "2026-04-19T20:09:42.826Z"
+  },
+  "brooklyn-2015": {
+    "rating": 3.78,
+    "votes": 236285,
+    "slug": "brooklyn",
+    "fetchedAt": "2026-04-19T20:09:44.461Z"
+  },
+  "mad-max-fury-road-2015": {
+    "rating": 4.17,
+    "votes": 2101992,
+    "slug": "mad-max-fury-road",
+    "fetchedAt": "2026-04-19T20:09:46.305Z"
+  },
+  "the-martian-2015": {
+    "rating": 3.8,
+    "votes": 1713307,
+    "slug": "the-martian",
+    "fetchedAt": "2026-04-19T20:09:47.942Z"
+  },
+  "the-revenant-2015": {
+    "rating": 3.91,
+    "votes": 1382021,
+    "slug": "the-revenant-2015",
+    "fetchedAt": "2026-04-19T20:09:49.752Z"
+  },
+  "room-2015": {
+    "rating": 3.96,
+    "votes": 790135,
+    "slug": "room-2015",
+    "fetchedAt": "2026-04-19T20:09:51.527Z"
+  },
+  "moonlight-2016": {
+    "rating": 4.2,
+    "votes": 1427205,
+    "slug": "moonlight-2016",
+    "fetchedAt": "2026-04-19T20:09:53.170Z"
+  },
+  "arrival-2016": {
+    "rating": 4.14,
+    "votes": 2443735,
+    "slug": "arrival-2016",
+    "fetchedAt": "2026-04-19T20:09:55.024Z"
+  },
+  "fences-2016": {
+    "rating": 3.64,
+    "votes": 129624,
+    "slug": "fences-2016",
+    "fetchedAt": "2026-04-19T20:09:56.747Z"
+  },
+  "hacksaw-ridge-2016": {
+    "rating": 4.03,
+    "votes": 1080781,
+    "slug": "hacksaw-ridge",
+    "fetchedAt": "2026-04-19T20:09:58.589Z"
+  },
+  "hell-or-high-water-2016": {
+    "rating": 3.93,
+    "votes": 351384,
+    "slug": "hell-or-high-water",
+    "fetchedAt": "2026-04-19T20:10:00.232Z"
+  },
+  "hidden-figures-2016": {
+    "rating": 3.9,
+    "votes": 666209,
+    "slug": "hidden-figures",
+    "fetchedAt": "2026-04-19T20:10:02.172Z"
+  },
+  "la-la-land-2016": {
+    "rating": 4.12,
+    "votes": 4577202,
+    "slug": "la-la-land",
+    "fetchedAt": "2026-04-19T20:10:03.810Z"
+  },
+  "lion-2016": {
+    "rating": 3.93,
+    "votes": 375075,
+    "slug": "lion",
+    "fetchedAt": "2026-04-19T20:10:05.860Z"
+  },
+  "manchester-by-the-sea-2016": {
+    "rating": 4.13,
+    "votes": 1055297,
+    "slug": "manchester-by-the-sea",
+    "fetchedAt": "2026-04-19T20:10:07.913Z"
+  },
+  "the-shape-of-water-2017": {
+    "rating": 3.67,
+    "votes": 1038868,
+    "slug": "the-shape-of-water",
+    "fetchedAt": "2026-04-19T20:10:09.706Z"
+  },
+  "call-me-by-your-name-2017": {
+    "rating": 3.85,
+    "votes": 2928755,
+    "slug": "call-me-by-your-name",
+    "fetchedAt": "2026-04-19T20:10:11.343Z"
+  },
+  "darkest-hour-2017": {
+    "rating": 3.55,
+    "votes": 265966,
+    "slug": "darkest-hour",
+    "fetchedAt": "2026-04-19T20:10:13.282Z"
+  },
+  "dunkirk-2017": {
+    "rating": 3.77,
+    "votes": 1810157,
+    "slug": "dunkirk-2017",
+    "fetchedAt": "2026-04-19T20:10:15.041Z"
+  },
+  "get-out-2017": {
+    "rating": 4.14,
+    "votes": 4309893,
+    "slug": "get-out-2017",
+    "fetchedAt": "2026-04-19T20:10:17.000Z"
+  },
+  "lady-bird-2017": {
+    "rating": 3.82,
+    "votes": 2964646,
+    "slug": "lady-bird",
+    "fetchedAt": "2026-04-19T20:10:18.628Z"
+  },
+  "phantom-thread-2017": {
+    "rating": 4.17,
+    "votes": 636874,
+    "slug": "phantom-thread",
+    "fetchedAt": "2026-04-19T20:10:20.454Z"
+  },
+  "the-post-2017": {
+    "rating": 3.49,
+    "votes": 229199,
+    "slug": "the-post-2017",
+    "fetchedAt": "2026-04-19T20:10:22.346Z"
+  },
+  "three-billboards-outside-ebbing-missouri-2017": {
+    "rating": 4.06,
+    "votes": 825969,
+    "slug": "three-billboards-outside-ebbing-missouri",
+    "fetchedAt": "2026-04-19T20:10:24.294Z"
+  },
+  "green-book-2018": {
+    "rating": 3.86,
+    "votes": 1126959,
+    "slug": "green-book",
+    "fetchedAt": "2026-04-19T20:10:26.120Z"
+  },
+  "black-panther-2018": {
+    "rating": 3.7,
+    "votes": 2748304,
+    "slug": "black-panther",
+    "fetchedAt": "2026-04-19T20:10:28.012Z"
+  },
+  "blackkklansman-2018": {
+    "rating": 3.94,
+    "votes": 1153375,
+    "slug": "blackkklansman",
+    "fetchedAt": "2026-04-19T20:10:29.643Z"
+  },
+  "bohemian-rhapsody-2018": {
+    "rating": 3.51,
+    "votes": 1784395,
+    "slug": "bohemian-rhapsody",
+    "fetchedAt": "2026-04-19T20:10:31.459Z"
+  },
+  "the-favourite-2018": {
+    "rating": 4.01,
+    "votes": 917273,
+    "slug": "the-favourite",
+    "fetchedAt": "2026-04-19T20:10:33.101Z"
+  },
+  "roma-2018": {
+    "rating": 4.09,
+    "votes": 467363,
+    "slug": "roma-2018",
+    "fetchedAt": "2026-04-19T20:10:34.738Z"
+  },
+  "a-star-is-born-2018": {
+    "rating": 3.63,
+    "votes": 1097431,
+    "slug": "a-star-is-born-2018",
+    "fetchedAt": "2026-04-19T20:10:36.515Z"
+  },
+  "vice-2018": {
+    "rating": 3.48,
+    "votes": 288525,
+    "slug": "vice-2018",
+    "fetchedAt": "2026-04-19T20:10:38.265Z"
+  },
+  "parasite-2019": {
+    "rating": 4.53,
+    "votes": 5270107,
+    "slug": "parasite-2019",
+    "fetchedAt": "2026-04-19T20:10:39.909Z"
+  },
+  "ford-v-ferrari-2019": {
+    "rating": 4.03,
+    "votes": 1024334,
+    "slug": "ford-v-ferrari",
+    "fetchedAt": "2026-04-19T20:10:42.107Z"
+  },
+  "the-irishman-2019": {
+    "rating": 3.91,
+    "votes": 916319,
+    "slug": "the-irishman-2019",
+    "fetchedAt": "2026-04-19T20:10:44.082Z"
+  },
+  "jojo-rabbit-2019": {
+    "rating": 4.04,
+    "votes": 2190699,
+    "slug": "jojo-rabbit",
+    "fetchedAt": "2026-04-19T20:10:45.829Z"
+  },
+  "joker-2019": {
+    "rating": 3.84,
+    "votes": 4500906,
+    "slug": "joker-2019",
+    "fetchedAt": "2026-04-19T20:10:47.844Z"
+  },
+  "little-women-2019": {
+    "rating": 4.18,
+    "votes": 2760168,
+    "slug": "little-women-2019",
+    "fetchedAt": "2026-04-19T20:10:49.474Z"
+  },
+  "marriage-story-2019": {
+    "rating": 4.01,
+    "votes": 1377522,
+    "slug": "marriage-story-2019",
+    "fetchedAt": "2026-04-19T20:10:51.130Z"
+  },
+  "1917-2019": {
+    "rating": 4.12,
+    "votes": 1855709,
+    "slug": "1917",
+    "fetchedAt": "2026-04-19T20:10:52.873Z"
+  },
+  "once-upon-a-time-in-hollywood-2019": {
+    "rating": 3.77,
+    "votes": 3037355,
+    "slug": "once-upon-a-time-in-hollywood",
+    "fetchedAt": "2026-04-19T20:10:54.808Z"
+  },
+  "nomadland-2020": {
+    "rating": 3.81,
+    "votes": 532107,
+    "slug": "nomadland",
+    "fetchedAt": "2026-04-19T20:10:56.433Z"
+  },
+  "the-father-2020": {
+    "rating": 4.29,
+    "votes": 422036,
+    "slug": "the-father-2020",
+    "fetchedAt": "2026-04-19T20:10:58.164Z"
+  },
+  "judas-and-the-black-messiah-2020": {
+    "rating": 4.04,
+    "votes": 333844,
+    "slug": "judas-and-the-black-messiah",
+    "fetchedAt": "2026-04-19T20:10:59.978Z"
+  },
+  "mank-2020": {
+    "rating": 3.3,
+    "votes": 217666,
+    "slug": "mank",
+    "fetchedAt": "2026-04-19T20:11:01.955Z"
+  },
+  "minari-2020": {
+    "rating": 4.08,
+    "votes": 516498,
+    "slug": "minari",
+    "fetchedAt": "2026-04-19T20:11:03.641Z"
+  },
+  "promising-young-woman-2020": {
+    "rating": 3.66,
+    "votes": 780286,
+    "slug": "promising-young-woman",
+    "fetchedAt": "2026-04-19T20:11:05.558Z"
+  },
+  "sound-of-metal-2020": {
+    "rating": 4.21,
+    "votes": 841412,
+    "slug": "sound-of-metal",
+    "fetchedAt": "2026-04-19T20:11:07.187Z"
+  },
+  "the-trial-of-the-chicago-7-2020": {
+    "rating": 3.77,
+    "votes": 415694,
+    "slug": "the-trial-of-the-chicago-7",
+    "fetchedAt": "2026-04-19T20:11:09.366Z"
+  },
+  "coda-2021": {
+    "rating": 3.87,
+    "votes": 426073,
+    "slug": "coda-2021",
+    "fetchedAt": "2026-04-19T20:11:11.004Z"
+  },
+  "belfast-2021": {
+    "rating": 3.51,
+    "votes": 238024,
+    "slug": "belfast",
+    "fetchedAt": "2026-04-19T20:11:12.810Z"
+  },
+  "dont-look-up-2021": {
+    "rating": 3.03,
+    "votes": 2392312,
+    "slug": "dont-look-up-2021",
+    "fetchedAt": "2026-04-19T20:11:14.900Z"
+  },
+  "drive-my-car-2021": {
+    "rating": 4.2,
+    "votes": 377211,
+    "slug": "drive-my-car",
+    "fetchedAt": "2026-04-19T20:11:16.542Z"
+  },
+  "dune-2021": {
+    "rating": 3.89,
+    "votes": 3995900,
+    "slug": "dune-2021",
+    "fetchedAt": "2026-04-19T20:11:18.397Z"
+  },
+  "king-richard-2021": {
+    "rating": 3.71,
+    "votes": 334944,
+    "slug": "king-richard",
+    "fetchedAt": "2026-04-19T20:11:20.508Z"
+  },
+  "licorice-pizza-2021": {
+    "rating": 3.53,
+    "votes": 796934,
+    "slug": "licorice-pizza",
+    "fetchedAt": "2026-04-19T20:11:22.452Z"
+  },
+  "nightmare-alley-2021": {
+    "rating": 3.45,
+    "votes": 395815,
+    "slug": "nightmare-alley-2021",
+    "fetchedAt": "2026-04-19T20:11:24.301Z"
+  },
+  "the-power-of-the-dog-2021": {
+    "rating": 3.66,
+    "votes": 508418,
+    "slug": "the-power-of-the-dog",
+    "fetchedAt": "2026-04-19T20:11:26.141Z"
+  },
+  "west-side-story-2021": {
+    "rating": 3.62,
+    "votes": 469903,
+    "slug": "west-side-story-2021",
+    "fetchedAt": "2026-04-19T20:11:27.784Z"
+  },
+  "everything-everywhere-all-at-once-2022": {
+    "rating": 4.25,
+    "votes": 3829150,
+    "slug": "everything-everywhere-all-at-once",
+    "fetchedAt": "2026-04-19T20:11:29.726Z"
+  },
+  "all-quiet-on-the-western-front-2022": {
+    "rating": 4.08,
+    "votes": 1116491,
+    "slug": "all-quiet-on-the-western-front-2022",
+    "fetchedAt": "2026-04-19T20:11:31.371Z"
+  },
+  "the-banshees-of-inisherin-2022": {
+    "rating": 4.11,
+    "votes": 1182723,
+    "slug": "the-banshees-of-inisherin",
+    "fetchedAt": "2026-04-19T20:11:33.011Z"
+  },
+  "elvis-2022": {
+    "rating": 3.36,
+    "votes": 1088036,
+    "slug": "elvis-2022",
+    "fetchedAt": "2026-04-19T20:11:35.251Z"
+  },
+  "the-fabelmans-2022": {
+    "rating": 4,
+    "votes": 584339,
+    "slug": "the-fabelmans",
+    "fetchedAt": "2026-04-19T20:11:36.900Z"
+  },
+  "t-r-2022": {
+    "rating": 3.93,
+    "votes": 620242,
+    "slug": "tar-2022",
+    "fetchedAt": "2026-04-19T20:11:38.547Z"
+  },
+  "top-gun-maverick-2022": {
+    "rating": 3.97,
+    "votes": 2149492,
+    "slug": "top-gun-maverick",
+    "fetchedAt": "2026-04-19T20:11:40.202Z"
+  },
+  "triangle-of-sadness-2022": {
+    "rating": 3.69,
+    "votes": 891093,
+    "slug": "triangle-of-sadness",
+    "fetchedAt": "2026-04-19T20:11:41.865Z"
+  },
+  "women-talking-2022": {
+    "rating": 3.8,
+    "votes": 200400,
+    "slug": "women-talking",
+    "fetchedAt": "2026-04-19T20:11:43.487Z"
+  },
+  "avatar-the-way-of-water-2022": {
+    "rating": 3.63,
+    "votes": 2521671,
+    "slug": "avatar-the-way-of-water",
+    "fetchedAt": "2026-04-19T20:11:45.154Z"
+  },
+  "oppenheimer-2023": {
+    "rating": 4.16,
+    "votes": 4139728,
+    "slug": "oppenheimer-2023",
+    "fetchedAt": "2026-04-19T20:11:46.929Z"
+  },
+  "american-fiction-2023": {
+    "rating": 3.74,
+    "votes": 539183,
+    "slug": "american-fiction",
+    "fetchedAt": "2026-04-19T20:11:48.564Z"
+  },
+  "anatomy-of-a-fall-2023": {
+    "rating": 4.12,
+    "votes": 1455350,
+    "slug": "anatomy-of-a-fall",
+    "fetchedAt": "2026-04-19T20:11:50.217Z"
+  },
+  "barbie-2023": {
+    "rating": 3.7,
+    "votes": 5536209,
+    "slug": "barbie",
+    "fetchedAt": "2026-04-19T20:11:51.851Z"
+  },
+  "the-holdovers-2023": {
+    "rating": 4.25,
+    "votes": 1559404,
+    "slug": "the-holdovers",
+    "fetchedAt": "2026-04-19T20:11:53.480Z"
+  },
+  "maestro-2023": {
+    "rating": 3.14,
+    "votes": 328825,
+    "slug": "maestro-2023",
+    "fetchedAt": "2026-04-19T20:11:55.257Z"
+  },
+  "past-lives-2023": {
+    "rating": 4.16,
+    "votes": 1725738,
+    "slug": "past-lives",
+    "fetchedAt": "2026-04-19T20:11:56.981Z"
+  },
+  "poor-things-2023": {
+    "rating": 3.93,
+    "votes": 2517846,
+    "slug": "poor-things-2023",
+    "fetchedAt": "2026-04-19T20:11:58.809Z"
+  },
+  "the-zone-of-interest-2023": {
+    "rating": 3.86,
+    "votes": 943967,
+    "slug": "the-zone-of-interest",
+    "fetchedAt": "2026-04-19T20:12:00.609Z"
+  },
+  "killers-of-the-flower-moon-2023": {
+    "rating": 4.02,
+    "votes": 1192550,
+    "slug": "killers-of-the-flower-moon",
+    "fetchedAt": "2026-04-19T20:12:02.502Z"
+  },
+  "anora-2024": {
+    "rating": 3.79,
+    "votes": 2401721,
+    "slug": "anora",
+    "fetchedAt": "2026-04-19T20:12:04.143Z"
+  },
+  "the-brutalist-2024": {
+    "rating": 3.89,
+    "votes": 759894,
+    "slug": "the-brutalist",
+    "fetchedAt": "2026-04-19T20:12:05.791Z"
+  },
+  "a-complete-unknown-2024": {
+    "rating": 3.55,
+    "votes": 1039912,
+    "slug": "a-complete-unknown",
+    "fetchedAt": "2026-04-19T20:12:07.464Z"
+  },
+  "conclave-2024": {
+    "rating": 3.92,
+    "votes": 1893836,
+    "slug": "conclave",
+    "fetchedAt": "2026-04-19T20:12:09.910Z"
+  },
+  "dune-part-two-2024": {
+    "rating": 4.38,
+    "votes": 3254475,
+    "slug": "dune-part-two",
+    "fetchedAt": "2026-04-19T20:12:11.610Z"
+  },
+  "emilia-p-rez-2024": {
+    "rating": 2.02,
+    "votes": 606630,
+    "slug": "emilia-perez",
+    "fetchedAt": "2026-04-19T20:12:13.251Z"
+  },
+  "im-still-here-2024": {
+    "rating": 4.34,
+    "votes": 769904,
+    "slug": "im-still-here-2024",
+    "fetchedAt": "2026-04-19T20:12:14.910Z"
+  },
+  "nickel-boys-2024": {
+    "rating": 4,
+    "votes": 223313,
+    "slug": "nickel-boys",
+    "fetchedAt": "2026-04-19T20:12:16.546Z"
+  },
+  "the-substance-2024": {
+    "rating": 3.73,
+    "votes": 3447118,
+    "slug": "the-substance",
+    "fetchedAt": "2026-04-19T20:12:18.191Z"
+  },
+  "wicked-2024": {
+    "rating": 3.78,
+    "votes": 2657191,
+    "slug": "wicked-2024",
+    "fetchedAt": "2026-04-19T20:12:20.081Z"
+  },
+  "one-battle-after-another-2025": {
+    "rating": 4.15,
+    "votes": 2569845,
+    "slug": "one-battle-after-another",
+    "fetchedAt": "2026-04-19T20:12:21.726Z"
+  },
+  "bugonia-2025": {
+    "rating": 3.85,
+    "votes": 1705981,
+    "slug": "bugonia",
+    "fetchedAt": "2026-04-19T20:12:23.364Z"
+  },
+  "f1-2025": {
+    "rating": 3.65,
+    "votes": 1821457,
+    "slug": "f1",
+    "fetchedAt": "2026-04-19T20:12:25.227Z"
+  },
+  "frankenstein-2025": {
+    "rating": 3.82,
+    "votes": 2475570,
+    "slug": "frankenstein-2025",
+    "fetchedAt": "2026-04-19T20:12:26.880Z"
+  },
+  "hamnet-2025": {
+    "rating": 4.19,
+    "votes": 1462828,
+    "slug": "hamnet",
+    "fetchedAt": "2026-04-19T20:12:28.688Z"
+  },
+  "marty-supreme-2025": {
+    "rating": 4.09,
+    "votes": 2517251,
+    "slug": "marty-supreme",
+    "fetchedAt": "2026-04-19T20:12:30.615Z"
+  },
+  "the-secret-agent-2025": {
+    "rating": 3.81,
+    "votes": 595580,
+    "slug": "the-secret-agent-2025",
+    "fetchedAt": "2026-04-19T20:12:32.289Z"
+  },
+  "sentimental-value-2025": {
+    "rating": 4.15,
+    "votes": 897454,
+    "slug": "sentimental-value-2025",
+    "fetchedAt": "2026-04-19T20:12:34.173Z"
+  },
+  "sinners-2025": {
+    "rating": 4.1,
+    "votes": 4266232,
+    "slug": "sinners-2025",
+    "fetchedAt": "2026-04-19T20:12:36.013Z"
+  },
+  "train-dreams-2025": {
+    "rating": 4.06,
+    "votes": 676374,
+    "slug": "train-dreams",
+    "fetchedAt": "2026-04-19T20:12:37.692Z"
+  },
+  "mediterraneo-1991": {
+    "rating": 3.83,
+    "votes": 17887,
+    "slug": "mediterraneo",
+    "fetchedAt": "2026-04-19T20:12:39.767Z"
+  },
+  "indochine-1992": {
+    "rating": 3.41,
+    "votes": 7258,
+    "slug": "indochine",
+    "fetchedAt": "2026-04-19T20:12:41.492Z"
+  },
+  "belle-epoque-1992": {
+    "rating": 3.6,
+    "votes": 10350,
+    "slug": "belle-epoque",
+    "fetchedAt": "2026-04-19T20:12:43.658Z"
+  },
+  "burnt-by-the-sun-1994": {
+    "rating": 3.9,
+    "votes": 9254,
+    "slug": "burnt-by-the-sun",
+    "fetchedAt": "2026-04-19T20:12:45.503Z"
+  },
+  "antonias-line-1995": {
+    "rating": 3.88,
+    "votes": 6565,
+    "slug": "antonias-line",
+    "fetchedAt": "2026-04-19T20:12:47.241Z"
+  },
+  "kolya-1996": {
+    "rating": 3.8,
+    "votes": 6751,
+    "slug": "kolya",
+    "fetchedAt": "2026-04-19T20:12:49.208Z"
+  },
+  "character-1997": {
+    "rating": 3.73,
+    "votes": 2981,
+    "slug": "character",
+    "fetchedAt": "2026-04-19T20:12:51.236Z"
+  },
+  "all-about-my-mother-1999": {
+    "rating": 4.19,
+    "votes": 275724,
+    "slug": "all-about-my-mother",
+    "fetchedAt": "2026-04-19T20:12:52.965Z"
+  },
+  "no-mans-land-2001": {
+    "rating": 3.91,
+    "votes": 15717,
+    "slug": "no-mans-land-2001",
+    "fetchedAt": "2026-04-19T20:12:54.922Z"
+  },
+  "nowhere-in-africa-2001": {
+    "rating": 3.61,
+    "votes": 4020,
+    "slug": "nowhere-in-africa",
+    "fetchedAt": "2026-04-19T20:12:56.859Z"
+  },
+  "the-barbarian-invasions-2003": {
+    "rating": 3.66,
+    "votes": 12068,
+    "slug": "the-barbarian-invasions",
+    "fetchedAt": "2026-04-19T20:12:58.917Z"
+  },
+  "the-sea-inside-2004": {
+    "rating": 3.85,
+    "votes": 38701,
+    "slug": "the-sea-inside",
+    "fetchedAt": "2026-04-19T20:13:00.965Z"
+  },
+  "tsotsi-2005": {
+    "rating": 3.55,
+    "votes": 11963,
+    "slug": "tsotsi",
+    "fetchedAt": "2026-04-19T20:13:02.677Z"
+  },
+  "the-lives-of-others-2006": {
+    "rating": 4.29,
+    "votes": 197787,
+    "slug": "the-lives-of-others",
+    "fetchedAt": "2026-04-19T20:13:04.446Z"
+  },
+  "the-counterfeiters-2007": {
+    "rating": 3.75,
+    "votes": 12027,
+    "slug": "the-counterfeiters",
+    "fetchedAt": "2026-04-19T20:13:06.383Z"
+  },
+  "departures-2008": {
+    "rating": 4.08,
+    "votes": 33094,
+    "slug": "departures",
+    "fetchedAt": "2026-04-19T20:13:08.126Z"
+  },
+  "the-secret-in-their-eyes-2009": {
+    "rating": 4.24,
+    "votes": 192150,
+    "slug": "the-secret-in-their-eyes",
+    "fetchedAt": "2026-04-19T20:13:09.924Z"
+  },
+  "in-a-better-world-2010": {
+    "rating": 3.69,
+    "votes": 11786,
+    "slug": "in-a-better-world",
+    "fetchedAt": "2026-04-19T20:13:13.276Z"
+  },
+  "a-separation-2011": {
+    "rating": 4.37,
+    "votes": 190968,
+    "slug": "a-separation",
+    "fetchedAt": "2026-04-19T20:13:15.004Z"
+  },
+  "the-great-beauty-2013": {
+    "rating": 4.1,
+    "votes": 159334,
+    "slug": "the-great-beauty",
+    "fetchedAt": "2026-04-19T20:13:16.636Z"
+  },
+  "ida-2013": {
+    "rating": 4.05,
+    "votes": 93948,
+    "slug": "ida",
+    "fetchedAt": "2026-04-19T20:13:18.372Z"
+  },
+  "son-of-saul-2015": {
+    "rating": 4.08,
+    "votes": 62145,
+    "slug": "son-of-saul",
+    "fetchedAt": "2026-04-19T20:13:20.215Z"
+  },
+  "the-salesman-2016": {
+    "rating": 3.84,
+    "votes": 59507,
+    "slug": "the-salesman-2016",
+    "fetchedAt": "2026-04-19T20:13:22.164Z"
+  },
+  "a-fantastic-woman-2017": {
+    "rating": 3.7,
+    "votes": 50919,
+    "slug": "a-fantastic-woman",
+    "fetchedAt": "2026-04-19T20:13:24.110Z"
+  },
+  "another-round-2020": {
+    "rating": 4.1,
+    "votes": 665328,
+    "slug": "another-round",
+    "fetchedAt": "2026-04-19T20:13:25.760Z"
+  },
+  "the-virgin-spring-1960": {
+    "rating": 4.16,
+    "votes": 50200,
+    "slug": "the-virgin-spring",
+    "fetchedAt": "2026-04-19T20:13:27.385Z"
+  },
+  "through-a-glass-darkly-1961": {
+    "rating": 4.16,
+    "votes": 54565,
+    "slug": "through-a-glass-darkly",
+    "fetchedAt": "2026-04-19T20:13:29.043Z"
+  },
+  "the-shop-on-main-street-1965": {
+    "rating": 4.22,
+    "votes": 9710,
+    "slug": "the-shop-on-main-street",
+    "fetchedAt": "2026-04-19T20:13:30.966Z"
+  },
+  "closely-watched-trains-1966": {
+    "rating": 3.94,
+    "votes": 22457,
+    "slug": "closely-watched-trains",
+    "fetchedAt": "2026-04-19T20:13:32.912Z"
+  },
+  "investigation-of-a-citizen-above-suspicion-1970": {
+    "rating": 4.21,
+    "votes": 38660,
+    "slug": "investigation-of-a-citizen-above-suspicion",
+    "fetchedAt": "2026-04-19T20:13:34.756Z"
+  },
+  "the-garden-of-the-finzi-continis-1970": {
+    "rating": 3.63,
+    "votes": 8915,
+    "slug": "the-garden-of-the-finzi-continis",
+    "fetchedAt": "2026-04-19T20:13:36.498Z"
+  },
+  "the-discreet-charm-of-the-bourgeoisie-1972": {
+    "rating": 3.99,
+    "votes": 104057,
+    "slug": "the-discreet-charm-of-the-bourgeoisie",
+    "fetchedAt": "2026-04-19T20:13:38.174Z"
+  },
+  "day-for-night-1973": {
+    "rating": 4.19,
+    "votes": 50031,
+    "slug": "day-for-night",
+    "fetchedAt": "2026-04-19T20:13:39.798Z"
+  },
+  "amarcord-1973": {
+    "rating": 4.12,
+    "votes": 70927,
+    "slug": "amarcord",
+    "fetchedAt": "2026-04-19T20:13:41.719Z"
+  },
+  "dersu-uzala-1975": {
+    "rating": 4.3,
+    "votes": 41018,
+    "slug": "dersu-uzala",
+    "fetchedAt": "2026-04-19T20:13:43.665Z"
+  },
+  "mephisto-1981": {
+    "rating": 3.91,
+    "votes": 10859,
+    "slug": "mephisto",
+    "fetchedAt": "2026-04-19T20:13:45.368Z"
+  },
+  "babettes-feast-1987": {
+    "rating": 4.05,
+    "votes": 35928,
+    "slug": "babettes-feast",
+    "fetchedAt": "2026-04-19T20:13:47.252Z"
+  },
+  "pelle-the-conqueror-1987": {
+    "rating": 3.87,
+    "votes": 5942,
+    "slug": "pelle-the-conqueror",
+    "fetchedAt": "2026-04-19T20:13:49.091Z"
+  },
+  "shrek-2001": {
+    "rating": 4.12,
+    "votes": 2628817,
+    "slug": "shrek",
+    "fetchedAt": "2026-04-19T20:13:50.854Z"
+  },
+  "spirited-away-2002": {
+    "rating": 4.44,
+    "votes": 3565774,
+    "slug": "spirited-away",
+    "fetchedAt": "2026-04-19T20:13:52.597Z"
+  },
+  "finding-nemo-2003": {
+    "rating": 4.03,
+    "votes": 2318872,
+    "slug": "finding-nemo",
+    "fetchedAt": "2026-04-19T20:13:54.223Z"
+  },
+  "the-incredibles-2004": {
+    "rating": 4.07,
+    "votes": 2280195,
+    "slug": "the-incredibles",
+    "fetchedAt": "2026-04-19T20:13:55.862Z"
+  },
+  "happy-feet-2006": {
+    "rating": 3.05,
+    "votes": 455256,
+    "slug": "happy-feet",
+    "fetchedAt": "2026-04-19T20:13:57.799Z"
+  },
+  "ratatouille-2007": {
+    "rating": 4.23,
+    "votes": 3549486,
+    "slug": "ratatouille",
+    "fetchedAt": "2026-04-19T20:13:59.468Z"
+  },
+  "wall-e-2008": {
+    "rating": 4.24,
+    "votes": 2601933,
+    "slug": "walle",
+    "fetchedAt": "2026-04-19T20:14:01.111Z"
+  },
+  "rango-2011": {
+    "rating": 3.74,
+    "votes": 848198,
+    "slug": "rango",
+    "fetchedAt": "2026-04-19T20:14:03.019Z"
+  },
+  "brave-2012": {
+    "rating": 3.48,
+    "votes": 1228081,
+    "slug": "brave-2012",
+    "fetchedAt": "2026-04-19T20:14:04.720Z"
+  },
+  "frozen-2013": {
+    "rating": 3.5,
+    "votes": 1726976,
+    "slug": "frozen-2013",
+    "fetchedAt": "2026-04-19T20:14:06.500Z"
+  },
+  "big-hero-6-2014": {
+    "rating": 3.84,
+    "votes": 1625369,
+    "slug": "big-hero-6",
+    "fetchedAt": "2026-04-19T20:14:08.351Z"
+  },
+  "inside-out-2015": {
+    "rating": 3.83,
+    "votes": 3099761,
+    "slug": "inside-out-2015",
+    "fetchedAt": "2026-04-19T20:14:10.219Z"
+  },
+  "zootopia-2016": {
+    "rating": 3.77,
+    "votes": 1997772,
+    "slug": "zootopia",
+    "fetchedAt": "2026-04-19T20:14:12.069Z"
+  },
+  "coco-2017": {
+    "rating": 4.13,
+    "votes": 2915071,
+    "slug": "coco-2017",
+    "fetchedAt": "2026-04-19T20:14:13.700Z"
+  },
+  "spider-man-into-the-spider-verse-2018": {
+    "rating": 4.39,
+    "votes": 4365672,
+    "slug": "spider-man-into-the-spider-verse",
+    "fetchedAt": "2026-04-19T20:14:15.613Z"
+  },
+  "toy-story-4-2019": {
+    "rating": 3.31,
+    "votes": 1194606,
+    "slug": "toy-story-4",
+    "fetchedAt": "2026-04-19T20:14:17.363Z"
+  },
+  "soul-2020": {
+    "rating": 3.94,
+    "votes": 2346042,
+    "slug": "soul-2020",
+    "fetchedAt": "2026-04-19T20:14:19.179Z"
+  },
+  "encanto-2021": {
+    "rating": 3.48,
+    "votes": 1533061,
+    "slug": "encanto",
+    "fetchedAt": "2026-04-19T20:14:20.921Z"
+  },
+  "guillermo-del-toros-pinocchio-2022": {
+    "rating": 3.99,
+    "votes": 680511,
+    "slug": "guillermo-del-toros-pinocchio",
+    "fetchedAt": "2026-04-19T20:14:22.783Z"
+  },
+  "the-boy-and-the-heron-2023": {
+    "rating": 3.91,
+    "votes": 1219924,
+    "slug": "the-boy-and-the-heron",
+    "fetchedAt": "2026-04-19T20:14:24.425Z"
+  },
+  "flow-2024": {
+    "rating": 4.09,
+    "votes": 1025987,
+    "slug": "flow-2024",
+    "fetchedAt": "2026-04-19T20:14:26.074Z"
+  },
+  "kpop-demon-hunters-2025": {
+    "rating": 3.55,
+    "votes": 1750755,
+    "slug": "kpop-demon-hunters",
+    "fetchedAt": "2026-04-19T20:14:27.959Z"
+  },
+  "city-lights-1931": {
+    "rating": 4.33,
+    "votes": 182735,
+    "slug": "city-lights",
+    "fetchedAt": "2026-04-19T20:14:29.584Z"
+  },
+  "modern-times-1936": {
+    "rating": 4.26,
+    "votes": 269666,
+    "slug": "modern-times",
+    "fetchedAt": "2026-04-19T20:14:31.488Z"
+  },
+  "the-third-man-1949": {
+    "rating": 4.24,
+    "votes": 189580,
+    "slug": "the-third-man",
+    "fetchedAt": "2026-04-19T20:14:33.289Z"
+  },
+  "12-angry-men-1957": {
+    "rating": 4.63,
+    "votes": 1453700,
+    "slug": "12-angry-men",
+    "fetchedAt": "2026-04-19T20:14:34.960Z"
+  },
+  "some-like-it-hot-1959": {
+    "rating": 4.27,
+    "votes": 372358,
+    "slug": "some-like-it-hot",
+    "fetchedAt": "2026-04-19T20:14:36.668Z"
+  },
+  "citizen-kane-1941": {
+    "rating": 4.19,
+    "votes": 627676,
+    "slug": "citizen-kane",
+    "fetchedAt": "2026-04-19T20:14:38.656Z"
+  },
+  "casablanca-1942": {
+    "rating": 4.28,
+    "votes": 796968,
+    "slug": "casablanca",
+    "fetchedAt": "2026-04-19T20:14:40.500Z"
+  },
+  "double-indemnity-1944": {
+    "rating": 4.25,
+    "votes": 217344,
+    "slug": "double-indemnity",
+    "fetchedAt": "2026-04-19T20:14:42.147Z"
+  },
+  "all-about-eve-1950": {
+    "rating": 4.36,
+    "votes": 142372,
+    "slug": "all-about-eve",
+    "fetchedAt": "2026-04-19T20:14:43.862Z"
+  },
+  "rashomon-1950": {
+    "rating": 4.2,
+    "votes": 285489,
+    "slug": "rashomon",
+    "fetchedAt": "2026-04-19T20:14:45.490Z"
+  },
+  "sunset-boulevard-1950": {
+    "rating": 4.43,
+    "votes": 353113,
+    "slug": "sunset-boulevard",
+    "fetchedAt": "2026-04-19T20:14:47.359Z"
+  },
+  "singin-in-the-rain-1952": {
+    "rating": 4.34,
+    "votes": 618973,
+    "slug": "singin-in-the-rain",
+    "fetchedAt": "2026-04-19T20:14:49.170Z"
+  },
+  "rear-window-1954": {
+    "rating": 4.36,
+    "votes": 811363,
+    "slug": "rear-window",
+    "fetchedAt": "2026-04-19T20:14:50.790Z"
+  },
+  "wild-strawberries-1957": {
+    "rating": 4.33,
+    "votes": 173365,
+    "slug": "wild-strawberries",
+    "fetchedAt": "2026-04-19T20:14:52.411Z"
+  },
+  "vertigo-1958": {
+    "rating": 4.22,
+    "votes": 792609,
+    "slug": "vertigo",
+    "fetchedAt": "2026-04-19T20:14:54.087Z"
+  },
+  "psycho-1960": {
+    "rating": 4.31,
+    "votes": 1333843,
+    "slug": "psycho",
+    "fetchedAt": "2026-04-19T20:14:55.960Z"
+  },
+  "the-apartment-1960": {
+    "rating": 4.43,
+    "votes": 361374,
+    "slug": "the-apartment",
+    "fetchedAt": "2026-04-19T20:14:57.590Z"
+  },
+  "lawrence-of-arabia-1962": {
+    "rating": 4.4,
+    "votes": 345775,
+    "slug": "lawrence-of-arabia",
+    "fetchedAt": "2026-04-19T20:14:59.310Z"
+  },
+  "the-battle-of-algiers-1966": {
+    "rating": 4.46,
+    "votes": 128966,
+    "slug": "the-battle-of-algiers",
+    "fetchedAt": "2026-04-19T20:15:00.976Z"
+  },
+  "2001-a-space-odyssey-1968": {
+    "rating": 4.25,
+    "votes": 1440110,
+    "slug": "2001-a-space-odyssey",
+    "fetchedAt": "2026-04-19T20:15:02.791Z"
+  },
+  "do-the-right-thing-1989": {
+    "rating": 4.4,
+    "votes": 509991,
+    "slug": "do-the-right-thing",
+    "fetchedAt": "2026-04-19T20:15:04.431Z"
+  },
+  "sherlock-jr-1924": {
+    "rating": 4.37,
+    "votes": 129433,
+    "slug": "sherlock-jr",
+    "fetchedAt": "2026-04-19T20:15:06.183Z"
+  },
+  "the-general-1926": {
+    "rating": 4.19,
+    "votes": 107617,
+    "slug": "the-general",
+    "fetchedAt": "2026-04-19T20:15:07.932Z"
+  },
+  "m-1931": {
+    "rating": 4.29,
+    "votes": 211912,
+    "slug": "m",
+    "fetchedAt": "2026-04-19T20:15:09.570Z"
+  },
+  "the-great-dictator-1940": {
+    "rating": 4.33,
+    "votes": 188138,
+    "slug": "the-great-dictator",
+    "fetchedAt": "2026-04-19T20:15:11.382Z"
+  },
+  "its-a-wonderful-life-1946": {
+    "rating": 4.44,
+    "votes": 741203,
+    "slug": "its-a-wonderful-life",
+    "fetchedAt": "2026-04-19T20:15:13.012Z"
+  },
+  "the-best-years-of-our-lives-1946": {
+    "rating": 4.25,
+    "votes": 47972,
+    "slug": "the-best-years-of-our-lives",
+    "fetchedAt": "2026-04-19T20:15:14.753Z"
+  },
+  "bicycle-thieves-1948": {
+    "rating": 4.29,
+    "votes": 268770,
+    "slug": "bicycle-thieves",
+    "fetchedAt": "2026-04-19T20:15:16.379Z"
+  },
+  "the-treasure-of-the-sierra-madre-1948": {
+    "rating": 4.29,
+    "votes": 87407,
+    "slug": "the-treasure-of-the-sierra-madre",
+    "fetchedAt": "2026-04-19T20:15:18.274Z"
+  },
+  "ikiru-1952": {
+    "rating": 4.51,
+    "votes": 189404,
+    "slug": "ikiru",
+    "fetchedAt": "2026-04-19T20:15:20.063Z"
+  },
+  "the-wages-of-fear-1953": {
+    "rating": 4.36,
+    "votes": 65371,
+    "slug": "the-wages-of-fear",
+    "fetchedAt": "2026-04-19T20:15:21.968Z"
+  },
+  "tokyo-story-1953": {
+    "rating": 4.43,
+    "votes": 144133,
+    "slug": "tokyo-story",
+    "fetchedAt": "2026-04-19T20:15:23.606Z"
+  },
+  "on-the-waterfront-1954": {
+    "rating": 4.17,
+    "votes": 142742,
+    "slug": "on-the-waterfront",
+    "fetchedAt": "2026-04-19T20:15:25.451Z"
+  },
+  "seven-samurai-1954": {
+    "rating": 4.6,
+    "votes": 425300,
+    "slug": "seven-samurai",
+    "fetchedAt": "2026-04-19T20:15:27.076Z"
+  },
+  "ordet-1955": {
+    "rating": 4.35,
+    "votes": 36777,
+    "slug": "ordet",
+    "fetchedAt": "2026-04-19T20:15:28.992Z"
+  },
+  "the-night-of-the-hunter-1955": {
+    "rating": 4.26,
+    "votes": 235144,
+    "slug": "the-night-of-the-hunter",
+    "fetchedAt": "2026-04-19T20:15:30.642Z"
+  },
+  "paths-of-glory-1957": {
+    "rating": 4.45,
+    "votes": 297488,
+    "slug": "paths-of-glory",
+    "fetchedAt": "2026-04-19T20:15:32.266Z"
+  },
+  "the-bridge-on-the-river-kwai-1957": {
+    "rating": 4.24,
+    "votes": 115863,
+    "slug": "the-bridge-on-the-river-kwai",
+    "fetchedAt": "2026-04-19T20:15:34.156Z"
+  },
+  "the-seventh-seal-1957": {
+    "rating": 4.33,
+    "votes": 396007,
+    "slug": "the-seventh-seal",
+    "fetchedAt": "2026-04-19T20:15:35.781Z"
+  },
+  "anatomy-of-a-murder-1959": {
+    "rating": 4.24,
+    "votes": 89892,
+    "slug": "anatomy-of-a-murder",
+    "fetchedAt": "2026-04-19T20:15:37.427Z"
+  },
+  "north-by-northwest-1959": {
+    "rating": 4.19,
+    "votes": 331103,
+    "slug": "north-by-northwest",
+    "fetchedAt": "2026-04-19T20:15:39.433Z"
+  },
+  "la-dolce-vita-1960": {
+    "rating": 4.27,
+    "votes": 150271,
+    "slug": "la-dolce-vita",
+    "fetchedAt": "2026-04-19T20:15:41.048Z"
+  },
+  "judgment-at-nuremberg-1961": {
+    "rating": 4.36,
+    "votes": 48344,
+    "slug": "judgment-at-nuremberg",
+    "fetchedAt": "2026-04-19T20:15:42.891Z"
+  },
+  "la-notte-1961": {
+    "rating": 4.29,
+    "votes": 76050,
+    "slug": "la-notte",
+    "fetchedAt": "2026-04-19T20:15:44.581Z"
+  },
+  "once-upon-a-time-in-the-west-1968": {
+    "rating": 4.39,
+    "votes": 278782,
+    "slug": "once-upon-a-time-in-the-west",
+    "fetchedAt": "2026-04-19T20:15:46.448Z"
+  },
+  "a-woman-under-the-influence-1974": {
+    "rating": 4.4,
+    "votes": 141903,
+    "slug": "a-woman-under-the-influence",
+    "fetchedAt": "2026-04-19T20:15:48.085Z"
+  },
+  "the-ascent-1977": {
+    "rating": 4.43,
+    "votes": 48981,
+    "slug": "the-ascent",
+    "fetchedAt": "2026-04-19T20:15:49.772Z"
+  },
+  "alien-1979": {
+    "rating": 4.25,
+    "votes": 1828102,
+    "slug": "alien",
+    "fetchedAt": "2026-04-19T20:15:51.398Z"
+  },
+  "the-shining-1980": {
+    "rating": 4.22,
+    "votes": 3085615,
+    "slug": "the-shining",
+    "fetchedAt": "2026-04-19T20:15:53.230Z"
+  },
+  "blade-runner-1982": {
+    "rating": 4.1,
+    "votes": 1402230,
+    "slug": "blade-runner",
+    "fetchedAt": "2026-04-19T20:15:54.864Z"
+  },
+  "come-and-see-1985": {
+    "rating": 4.61,
+    "votes": 443797,
+    "slug": "come-and-see",
+    "fetchedAt": "2026-04-19T20:15:56.545Z"
+  },
+  "terminator-2-judgment-day-1991": {
+    "rating": 4.29,
+    "votes": 961709,
+    "slug": "terminator-2-judgment-day",
+    "fetchedAt": "2026-04-19T20:15:58.179Z"
+  },
+  "the-lion-king-1994": {
+    "rating": 4.23,
+    "votes": 2027941,
+    "slug": "the-lion-king",
+    "fetchedAt": "2026-04-19T20:16:00.066Z"
+  },
+  "before-sunrise-1995": {
+    "rating": 4.3,
+    "votes": 1412951,
+    "slug": "before-sunrise",
+    "fetchedAt": "2026-04-19T20:16:01.695Z"
+  },
+  "taste-of-cherry-1997": {
+    "rating": 4.32,
+    "votes": 201627,
+    "slug": "taste-of-cherry",
+    "fetchedAt": "2026-04-19T20:16:03.647Z"
+  },
+  "the-gold-rush-1925": {
+    "rating": 4.15,
+    "votes": 100886,
+    "slug": "the-gold-rush",
+    "fetchedAt": "2026-04-19T20:16:05.278Z"
+  },
+  "metropolis-1927": {
+    "rating": 4.24,
+    "votes": 260123,
+    "slug": "metropolis",
+    "fetchedAt": "2026-04-19T20:16:06.906Z"
+  },
+  "sunrise-a-song-of-two-humans-1927": {
+    "rating": 4.18,
+    "votes": 74306,
+    "slug": "sunrise-a-song-of-two-humans",
+    "fetchedAt": "2026-04-19T20:16:08.605Z"
+  },
+  "it-happened-one-night-1934": {
+    "rating": 4.17,
+    "votes": 135756,
+    "slug": "it-happened-one-night",
+    "fetchedAt": "2026-04-19T20:16:10.714Z"
+  },
+  "swing-time-1936": {
+    "rating": 3.6,
+    "votes": 18407,
+    "slug": "swing-time",
+    "fetchedAt": "2026-04-19T20:16:12.852Z"
+  },
+  "bringing-up-baby-1938": {
+    "rating": 4,
+    "votes": 111945,
+    "slug": "bringing-up-baby",
+    "fetchedAt": "2026-04-19T20:16:14.808Z"
+  },
+  "gone-with-the-wind-1939": {
+    "rating": 3.86,
+    "votes": 254860,
+    "slug": "gone-with-the-wind",
+    "fetchedAt": "2026-04-19T20:16:16.459Z"
+  },
+  "mr-smith-goes-to-washington-1939": {
+    "rating": 4.14,
+    "votes": 74532,
+    "slug": "mr-smith-goes-to-washington",
+    "fetchedAt": "2026-04-19T20:16:18.274Z"
+  },
+  "stagecoach-1939": {
+    "rating": 3.98,
+    "votes": 94811,
+    "slug": "stagecoach",
+    "fetchedAt": "2026-04-19T20:16:20.338Z"
+  },
+  "the-wizard-of-oz-1939": {
+    "rating": 3.92,
+    "votes": 916767,
+    "slug": "the-wizard-of-oz-1939",
+    "fetchedAt": "2026-04-19T20:16:22.083Z"
+  },
+  "the-philadelphia-story-1940": {
+    "rating": 4,
+    "votes": 99719,
+    "slug": "the-philadelphia-story",
+    "fetchedAt": "2026-04-19T20:16:23.921Z"
+  },
+  "sullivans-travels-1941": {
+    "rating": 4,
+    "votes": 41624,
+    "slug": "sullivans-travels",
+    "fetchedAt": "2026-04-19T20:16:25.794Z"
+  },
+  "to-be-or-not-to-be-1942": {
+    "rating": 4.34,
+    "votes": 68328,
+    "slug": "to-be-or-not-to-be",
+    "fetchedAt": "2026-04-19T20:16:27.813Z"
+  },
+  "brief-encounter-1945": {
+    "rating": 4.32,
+    "votes": 107691,
+    "slug": "brief-encounter",
+    "fetchedAt": "2026-04-19T20:16:29.439Z"
+  },
+  "a-matter-of-life-and-death-1946": {
+    "rating": 4.26,
+    "votes": 55147,
+    "slug": "a-matter-of-life-and-death",
+    "fetchedAt": "2026-04-19T20:16:31.399Z"
+  },
+  "red-river-1948": {
+    "rating": 4.01,
+    "votes": 38726,
+    "slug": "red-river",
+    "fetchedAt": "2026-04-19T20:16:33.192Z"
+  },
+  "the-red-shoes-1948": {
+    "rating": 4.41,
+    "votes": 161953,
+    "slug": "the-red-shoes",
+    "fetchedAt": "2026-04-19T20:16:34.816Z"
+  },
+  "late-spring-1949": {
+    "rating": 4.33,
+    "votes": 64631,
+    "slug": "late-spring",
+    "fetchedAt": "2026-04-19T20:16:36.522Z"
+  },
+  "ace-in-the-hole-1951": {
+    "rating": 4.28,
+    "votes": 59946,
+    "slug": "ace-in-the-hole",
+    "fetchedAt": "2026-04-19T20:16:38.293Z"
+  },
+  "ugetsu-1953": {
+    "rating": 4.26,
+    "votes": 62806,
+    "slug": "ugetsu",
+    "fetchedAt": "2026-04-19T20:16:40.033Z"
+  },
+  "sansho-the-bailiff-1954": {
+    "rating": 4.43,
+    "votes": 38676,
+    "slug": "sansho-the-bailiff",
+    "fetchedAt": "2026-04-19T20:16:41.858Z"
+  },
+  "pather-panchali-1955": {
+    "rating": 4.32,
+    "votes": 67048,
+    "slug": "pather-panchali",
+    "fetchedAt": "2026-04-19T20:16:43.478Z"
+  },
+  "a-man-escaped-1956": {
+    "rating": 4.35,
+    "votes": 70105,
+    "slug": "a-man-escaped",
+    "fetchedAt": "2026-04-19T20:16:45.191Z"
+  },
+  "the-searchers-1956": {
+    "rating": 3.94,
+    "votes": 133425,
+    "slug": "the-searchers",
+    "fetchedAt": "2026-04-19T20:16:46.817Z"
+  },
+  "sweet-smell-of-success-1957": {
+    "rating": 4.24,
+    "votes": 66574,
+    "slug": "sweet-smell-of-success",
+    "fetchedAt": "2026-04-19T20:16:48.545Z"
+  },
+  "the-cranes-are-flying-1957": {
+    "rating": 4.46,
+    "votes": 62604,
+    "slug": "the-cranes-are-flying",
+    "fetchedAt": "2026-04-19T20:16:50.188Z"
+  },
+  "ben-hur-1959": {
+    "rating": 4.1,
+    "votes": 134444,
+    "slug": "ben-hur-1959",
+    "fetchedAt": "2026-04-19T20:16:51.804Z"
+  },
+  "the-400-blows-1959": {
+    "rating": 4.3,
+    "votes": 278956,
+    "slug": "the-400-blows",
+    "fetchedAt": "2026-04-19T20:16:53.431Z"
+  },
+  "spartacus-1960": {
+    "rating": 3.87,
+    "votes": 126073,
+    "slug": "spartacus",
+    "fetchedAt": "2026-04-19T20:16:55.566Z"
+  },
+  "yojimbo-1961": {
+    "rating": 4.3,
+    "votes": 179580,
+    "slug": "yojimbo",
+    "fetchedAt": "2026-04-19T20:16:57.321Z"
+  },
+  "harakiri-1962": {
+    "rating": 4.68,
+    "votes": 223340,
+    "slug": "harakiri",
+    "fetchedAt": "2026-04-19T20:16:59.029Z"
+  },
+  "to-kill-a-mockingbird-1962": {
+    "rating": 4.1,
+    "votes": 259428,
+    "slug": "to-kill-a-mockingbird",
+    "fetchedAt": "2026-04-19T20:17:00.671Z"
+  },
+  "8-and-a-half-1963": {
+    "rating": 4.27,
+    "votes": 256974,
+    "slug": "8-half",
+    "fetchedAt": "2026-04-19T20:17:02.409Z"
+  },
+  "high-and-low-1963": {
+    "rating": 4.6,
+    "votes": 203647,
+    "slug": "high-and-low",
+    "fetchedAt": "2026-04-19T20:17:04.268Z"
+  },
+  "the-leopard-1963": {
+    "rating": 4.15,
+    "votes": 53057,
+    "slug": "the-leopard",
+    "fetchedAt": "2026-04-19T20:17:05.895Z"
+  },
+  "the-sound-of-music-1965": {
+    "rating": 4.24,
+    "votes": 649653,
+    "slug": "the-sound-of-music",
+    "fetchedAt": "2026-04-19T20:17:07.607Z"
+  },
+  "andrei-rublev-1966": {
+    "rating": 4.44,
+    "votes": 95427,
+    "slug": "andrei-rublev",
+    "fetchedAt": "2026-04-19T20:17:09.468Z"
+  },
+  "persona-1966": {
+    "rating": 4.39,
+    "votes": 421868,
+    "slug": "persona",
+    "fetchedAt": "2026-04-19T20:17:11.093Z"
+  },
+  "whos-afraid-of-virginia-woolf-1966": {
+    "rating": 4.27,
+    "votes": 89609,
+    "slug": "whos-afraid-of-virginia-woolf",
+    "fetchedAt": "2026-04-19T20:17:12.796Z"
+  },
+  "in-the-heat-of-the-night-1967": {
+    "rating": 4.04,
+    "votes": 90348,
+    "slug": "in-the-heat-of-the-night",
+    "fetchedAt": "2026-04-19T20:17:14.500Z"
+  },
+  "the-graduate-1967": {
+    "rating": 4.1,
+    "votes": 490371,
+    "slug": "the-graduate",
+    "fetchedAt": "2026-04-19T20:17:16.273Z"
+  },
+  "easy-rider-1969": {
+    "rating": 3.77,
+    "votes": 145667,
+    "slug": "easy-rider",
+    "fetchedAt": "2026-04-19T20:17:18.207Z"
+  },
+  "midnight-cowboy-1969": {
+    "rating": 4.15,
+    "votes": 210130,
+    "slug": "midnight-cowboy",
+    "fetchedAt": "2026-04-19T20:17:20.004Z"
+  },
+  "wanda-1970": {
+    "rating": 3.81,
+    "votes": 38249,
+    "slug": "wanda",
+    "fetchedAt": "2026-04-19T20:17:21.771Z"
+  },
+  "harold-and-maude-1971": {
+    "rating": 4.11,
+    "votes": 144283,
+    "slug": "harold-and-maude",
+    "fetchedAt": "2026-04-19T20:17:23.396Z"
+  },
+  "mccabe-mrs-miller-1971": {
+    "rating": 4.14,
+    "votes": 64113,
+    "slug": "mccabe-mrs-miller",
+    "fetchedAt": "2026-04-19T20:17:25.463Z"
+  },
+  "jeanne-dielman-23-quai-du-commerce-1080-bruxelles-1975": {
+    "rating": 4.26,
+    "votes": 93670,
+    "slug": "jeanne-dielman-23-quai-du-commerce-1080-bruxelles",
+    "fetchedAt": "2026-04-19T20:17:27.281Z"
+  },
+  "mirror-1975": {
+    "rating": 4.32,
+    "votes": 181314,
+    "slug": "mirror",
+    "fetchedAt": "2026-04-19T20:17:29.091Z"
+  },
+  "eraserhead-1977": {
+    "rating": 3.82,
+    "votes": 533154,
+    "slug": "eraserhead",
+    "fetchedAt": "2026-04-19T20:17:30.719Z"
+  },
+  "killer-of-sheep-1977": {
+    "rating": 3.98,
+    "votes": 30981,
+    "slug": "killer-of-sheep",
+    "fetchedAt": "2026-04-19T20:17:32.336Z"
+  },
+  "stalker-1979": {
+    "rating": 4.4,
+    "votes": 359806,
+    "slug": "stalker",
+    "fetchedAt": "2026-04-19T20:17:33.970Z"
+  },
+  "the-empire-strikes-back-1980": {
+    "rating": 4.4,
+    "votes": 2150676,
+    "slug": "the-empire-strikes-back",
+    "fetchedAt": "2026-04-19T20:17:35.972Z"
+  },
+  "the-thing-1982": {
+    "rating": 4.35,
+    "votes": 1255316,
+    "slug": "the-thing",
+    "fetchedAt": "2026-04-19T20:17:37.594Z"
+  },
+  "paris-texas-1984": {
+    "rating": 4.37,
+    "votes": 688681,
+    "slug": "paris-texas",
+    "fetchedAt": "2026-04-19T20:17:39.342Z"
+  },
+  "back-to-the-future-1985": {
+    "rating": 4.21,
+    "votes": 2643484,
+    "slug": "back-to-the-future",
+    "fetchedAt": "2026-04-19T20:17:41.069Z"
+  },
+  "ran-1985": {
+    "rating": 4.51,
+    "votes": 249549,
+    "slug": "ran",
+    "fetchedAt": "2026-04-19T20:17:42.695Z"
+  },
+  "vagabond-1985": {
+    "rating": 4.1,
+    "votes": 82652,
+    "slug": "vagabond",
+    "fetchedAt": "2026-04-19T20:17:44.445Z"
+  },
+  "blue-velvet-1986": {
+    "rating": 4.06,
+    "votes": 912506,
+    "slug": "blue-velvet",
+    "fetchedAt": "2026-04-19T20:17:46.068Z"
+  },
+  "where-is-the-friends-house-1987": {
+    "rating": 4.38,
+    "votes": 129510,
+    "slug": "where-is-the-friends-house",
+    "fetchedAt": "2026-04-19T20:17:47.996Z"
+  },
+  "sex-lies-and-videotape-1989": {
+    "rating": 3.88,
+    "votes": 119984,
+    "slug": "sex-lies-and-videotape",
+    "fetchedAt": "2026-04-19T20:17:49.734Z"
+  },
+  "close-up-1990": {
+    "rating": 4.41,
+    "votes": 134520,
+    "slug": "close-up",
+    "fetchedAt": "2026-04-19T20:17:51.362Z"
+  },
+  "a-brighter-summer-day-1991": {
+    "rating": 4.5,
+    "votes": 75442,
+    "slug": "a-brighter-summer-day",
+    "fetchedAt": "2026-04-19T20:17:53.477Z"
+  },
+  "malcolm-x-1992": {
+    "rating": 4.29,
+    "votes": 200774,
+    "slug": "malcolm-x-1992",
+    "fetchedAt": "2026-04-19T20:17:55.097Z"
+  },
+  "farewell-my-concubine-1993": {
+    "rating": 4.4,
+    "votes": 69372,
+    "slug": "farewell-my-concubine",
+    "fetchedAt": "2026-04-19T20:17:56.933Z"
+  },
+  "chungking-express-1994": {
+    "rating": 4.28,
+    "votes": 738590,
+    "slug": "chungking-express",
+    "fetchedAt": "2026-04-19T20:17:58.787Z"
+  },
+  "la-haine-1995": {
+    "rating": 4.5,
+    "votes": 1025774,
+    "slug": "la-haine",
+    "fetchedAt": "2026-04-19T20:18:00.588Z"
+  },
+  "toy-story-1995": {
+    "rating": 4.11,
+    "votes": 2336281,
+    "slug": "toy-story",
+    "fetchedAt": "2026-04-19T20:18:02.211Z"
+  },
+  "the-truman-show-1998": {
+    "rating": 4.22,
+    "votes": 4570838,
+    "slug": "the-truman-show",
+    "fetchedAt": "2026-04-19T20:18:03.841Z"
+  },
+  "in-the-mood-for-love-2000": {
+    "rating": 4.38,
+    "votes": 963694,
+    "slug": "in-the-mood-for-love",
+    "fetchedAt": "2026-04-19T20:18:05.583Z"
+  },
+  "yi-yi-2000": {
+    "rating": 4.53,
+    "votes": 178935,
+    "slug": "yi-yi",
+    "fetchedAt": "2026-04-19T20:18:07.449Z"
+  },
+  "mulholland-drive-2001": {
+    "rating": 4.26,
+    "votes": 1215882,
+    "slug": "mulholland-drive",
+    "fetchedAt": "2026-04-19T20:18:09.111Z"
+  },
+  "memories-of-murder-2003": {
+    "rating": 4.42,
+    "votes": 953926,
+    "slug": "memories-of-murder",
+    "fetchedAt": "2026-04-19T20:18:10.742Z"
+  },
+  "before-sunset-2004": {
+    "rating": 4.31,
+    "votes": 861867,
+    "slug": "before-sunset",
+    "fetchedAt": "2026-04-19T20:18:12.371Z"
+  },
+  "eternal-sunshine-of-the-spotless-mind-2004": {
+    "rating": 4.24,
+    "votes": 3426213,
+    "slug": "eternal-sunshine-of-the-spotless-mind",
+    "fetchedAt": "2026-04-19T20:18:13.993Z"
+  },
+  "4-months-3-weeks-and-2-days-2007": {
+    "rating": 4.25,
+    "votes": 60045,
+    "slug": "4-months-3-weeks-and-2-days",
+    "fetchedAt": "2026-04-19T20:18:15.749Z"
+  },
+  "the-dark-knight-2008": {
+    "rating": 4.49,
+    "votes": 4225856,
+    "slug": "the-dark-knight",
+    "fetchedAt": "2026-04-19T20:18:17.531Z"
+  },
+  "portrait-of-a-lady-on-fire-2019": {
+    "rating": 4.42,
+    "votes": 1073611,
+    "slug": "portrait-of-a-lady-on-fire",
+    "fetchedAt": "2026-04-19T20:18:19.166Z"
+  },
+  "safety-last-1923": {
+    "rating": 4.12,
+    "votes": 48372,
+    "slug": "safety-last",
+    "fetchedAt": "2026-04-19T20:18:21.068Z"
+  },
+  "all-quiet-on-the-western-front-1930": {
+    "rating": 4.18,
+    "votes": 70073,
+    "slug": "all-quiet-on-the-western-front",
+    "fetchedAt": "2026-04-19T20:18:22.702Z"
+  },
+  "trouble-in-paradise-1932": {
+    "rating": 4.12,
+    "votes": 31968,
+    "slug": "trouble-in-paradise",
+    "fetchedAt": "2026-04-19T20:18:24.653Z"
+  },
+  "duck-soup-1933": {
+    "rating": 3.92,
+    "votes": 66291,
+    "slug": "duck-soup-1933",
+    "fetchedAt": "2026-04-19T20:18:26.425Z"
+  },
+  "king-kong-1933": {
+    "rating": 3.82,
+    "votes": 114050,
+    "slug": "king-kong",
+    "fetchedAt": "2026-04-19T20:18:28.139Z"
+  },
+  "my-man-godfrey-1936": {
+    "rating": 3.94,
+    "votes": 33112,
+    "slug": "my-man-godfrey",
+    "fetchedAt": "2026-04-19T20:18:29.895Z"
+  },
+  "snow-white-and-the-seven-dwarfs-1937": {
+    "rating": 3.42,
+    "votes": 580333,
+    "slug": "snow-white-and-the-seven-dwarfs",
+    "fetchedAt": "2026-04-19T20:18:31.652Z"
+  },
+  "only-angels-have-wings-1939": {
+    "rating": 4.1,
+    "votes": 29985,
+    "slug": "only-angels-have-wings",
+    "fetchedAt": "2026-04-19T20:18:33.379Z"
+  },
+  "the-rules-of-the-game-1939": {
+    "rating": 4.06,
+    "votes": 59231,
+    "slug": "the-rules-of-the-game",
+    "fetchedAt": "2026-04-19T20:18:35.202Z"
+  },
+  "fantasia-1940": {
+    "rating": 3.91,
+    "votes": 295069,
+    "slug": "fantasia",
+    "fetchedAt": "2026-04-19T20:18:36.936Z"
+  },
+  "his-girl-friday-1940": {
+    "rating": 4.03,
+    "votes": 121111,
+    "slug": "his-girl-friday",
+    "fetchedAt": "2026-04-19T20:18:38.657Z"
+  },
+  "rebecca-1940": {
+    "rating": 4.13,
+    "votes": 161695,
+    "slug": "rebecca",
+    "fetchedAt": "2026-04-19T20:18:40.382Z"
+  },
+  "the-grapes-of-wrath-1940": {
+    "rating": 4.19,
+    "votes": 61446,
+    "slug": "the-grapes-of-wrath",
+    "fetchedAt": "2026-04-19T20:18:42.369Z"
+  },
+  "the-lady-eve-1941": {
+    "rating": 3.96,
+    "votes": 44871,
+    "slug": "the-lady-eve",
+    "fetchedAt": "2026-04-19T20:18:44.418Z"
+  },
+  "the-maltese-falcon-1941": {
+    "rating": 3.9,
+    "votes": 147675,
+    "slug": "the-maltese-falcon-1941",
+    "fetchedAt": "2026-04-19T20:18:46.301Z"
+  },
+  "the-magnificent-ambersons-1942": {
+    "rating": 3.89,
+    "votes": 40172,
+    "slug": "the-magnificent-ambersons",
+    "fetchedAt": "2026-04-19T20:18:48.333Z"
+  },
+  "the-life-and-death-of-colonel-blimp-1943": {
+    "rating": 4.24,
+    "votes": 27630,
+    "slug": "the-life-and-death-of-colonel-blimp",
+    "fetchedAt": "2026-04-19T20:18:50.072Z"
+  },
+  "laura-1944": {
+    "rating": 4.04,
+    "votes": 81215,
+    "slug": "laura",
+    "fetchedAt": "2026-04-19T20:18:51.837Z"
+  },
+  "children-of-paradise-1945": {
+    "rating": 4.29,
+    "votes": 26185,
+    "slug": "children-of-paradise",
+    "fetchedAt": "2026-04-19T20:18:53.735Z"
+  },
+  "rome-open-city-1945": {
+    "rating": 4.18,
+    "votes": 74486,
+    "slug": "rome-open-city",
+    "fetchedAt": "2026-04-19T20:18:55.452Z"
+  },
+  "the-lost-weekend-1945": {
+    "rating": 3.98,
+    "votes": 41731,
+    "slug": "the-lost-weekend",
+    "fetchedAt": "2026-04-19T20:18:57.206Z"
+  },
+  "my-darling-clementine-1946": {
+    "rating": 4.11,
+    "votes": 42427,
+    "slug": "my-darling-clementine",
+    "fetchedAt": "2026-04-19T20:18:58.931Z"
+  },
+  "notorious-1946": {
+    "rating": 4.09,
+    "votes": 120248,
+    "slug": "notorious",
+    "fetchedAt": "2026-04-19T20:19:00.670Z"
+  },
+  "white-heat-1949": {
+    "rating": 4.13,
+    "votes": 27425,
+    "slug": "white-heat",
+    "fetchedAt": "2026-04-19T20:19:02.393Z"
+  },
+  "in-a-lonely-place-1950": {
+    "rating": 4.2,
+    "votes": 81946,
+    "slug": "in-a-lonely-place",
+    "fetchedAt": "2026-04-19T20:19:04.180Z"
+  },
+  "a-streetcar-named-desire-1951": {
+    "rating": 4.01,
+    "votes": 154111,
+    "slug": "a-streetcar-named-desire",
+    "fetchedAt": "2026-04-19T20:19:05.817Z"
+  },
+  "the-african-queen-1951": {
+    "rating": 3.71,
+    "votes": 57458,
+    "slug": "the-african-queen",
+    "fetchedAt": "2026-04-19T20:19:07.566Z"
+  },
+  "the-day-the-earth-stood-still-1951": {
+    "rating": 3.83,
+    "votes": 50726,
+    "slug": "the-day-the-earth-stood-still",
+    "fetchedAt": "2026-04-19T20:19:09.273Z"
+  },
+  "high-noon-1952": {
+    "rating": 3.99,
+    "votes": 89838,
+    "slug": "high-noon",
+    "fetchedAt": "2026-04-19T20:19:11.423Z"
+  },
+  "umberto-d-1952": {
+    "rating": 4.26,
+    "votes": 48772,
+    "slug": "umberto-d",
+    "fetchedAt": "2026-04-19T20:19:13.257Z"
+  },
+  "roman-holiday-1953": {
+    "rating": 4.19,
+    "votes": 308548,
+    "slug": "roman-holiday",
+    "fetchedAt": "2026-04-19T20:19:14.985Z"
+  },
+  "shane-1953": {
+    "rating": 3.73,
+    "votes": 40204,
+    "slug": "shane",
+    "fetchedAt": "2026-04-19T20:19:16.979Z"
+  },
+  "the-earrings-of-madame-de-1953": {
+    "rating": 4.08,
+    "votes": 23860,
+    "slug": "the-earrings-of-madame-de",
+    "fetchedAt": "2026-04-19T20:19:18.825Z"
+  },
+  "la-strada-1954": {
+    "rating": 4.18,
+    "votes": 88292,
+    "slug": "la-strada",
+    "fetchedAt": "2026-04-19T20:19:20.768Z"
+  },
+  "all-that-heaven-allows-1955": {
+    "rating": 4.07,
+    "votes": 58352,
+    "slug": "all-that-heaven-allows",
+    "fetchedAt": "2026-04-19T20:19:22.716Z"
+  },
+  "marty-1955": {
+    "rating": 3.9,
+    "votes": 38792,
+    "slug": "marty",
+    "fetchedAt": "2026-04-19T20:19:24.481Z"
+  },
+  "invasion-of-the-body-snatchers-1956": {
+    "rating": 3.83,
+    "votes": 82280,
+    "slug": "invasion-of-the-body-snatchers",
+    "fetchedAt": "2026-04-19T20:19:26.297Z"
+  },
+  "nights-of-cabiria-1957": {
+    "rating": 4.4,
+    "votes": 84017,
+    "slug": "nights-of-cabiria",
+    "fetchedAt": "2026-04-19T20:19:28.009Z"
+  },
+  "black-orpheus-1959": {
+    "rating": 3.82,
+    "votes": 36256,
+    "slug": "black-orpheus",
+    "fetchedAt": "2026-04-19T20:19:30.087Z"
+  },
+  "breathless-1960": {
+    "rating": 3.9,
+    "votes": 298048,
+    "slug": "breathless",
+    "fetchedAt": "2026-04-19T20:19:31.748Z"
+  },
+  "lavventura-1960": {
+    "rating": 4.08,
+    "votes": 74612,
+    "slug": "lavventura",
+    "fetchedAt": "2026-04-19T20:19:33.497Z"
+  },
+  "last-year-at-marienbad-1961": {
+    "rating": 4.1,
+    "votes": 61994,
+    "slug": "last-year-at-marienbad",
+    "fetchedAt": "2026-04-19T20:19:35.242Z"
+  },
+  "west-side-story-1961": {
+    "rating": 3.85,
+    "votes": 260908,
+    "slug": "west-side-story",
+    "fetchedAt": "2026-04-19T20:19:37.180Z"
+  },
+  "the-man-who-shot-liberty-valance-1962": {
+    "rating": 4.29,
+    "votes": 92832,
+    "slug": "the-man-who-shot-liberty-valance",
+    "fetchedAt": "2026-04-19T20:19:38.902Z"
+  },
+  "the-manchurian-candidate-1962": {
+    "rating": 4,
+    "votes": 59775,
+    "slug": "the-manchurian-candidate",
+    "fetchedAt": "2026-04-19T20:19:40.655Z"
+  },
+  "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb-1964": {
+    "rating": 4.3,
+    "votes": 604460,
+    "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+    "fetchedAt": "2026-04-19T20:19:42.297Z"
+  },
+  "the-umbrellas-of-cherbourg-1964": {
+    "rating": 4.14,
+    "votes": 188405,
+    "slug": "the-umbrellas-of-cherbourg",
+    "fetchedAt": "2026-04-19T20:19:43.926Z"
+  },
+  "a-man-and-a-woman-1966": {
+    "rating": 4.06,
+    "votes": 27451,
+    "slug": "a-man-and-a-woman",
+    "fetchedAt": "2026-04-19T20:19:45.623Z"
+  },
+  "the-good-the-bad-and-the-ugly-1966": {
+    "rating": 4.51,
+    "votes": 724274,
+    "slug": "the-good-the-bad-and-the-ugly",
+    "fetchedAt": "2026-04-19T20:19:47.256Z"
+  },
+  "bonnie-and-clyde-1967": {
+    "rating": 3.89,
+    "votes": 160085,
+    "slug": "bonnie-and-clyde",
+    "fetchedAt": "2026-04-19T20:19:48.978Z"
+  },
+  "le-samourai-1967": {
+    "rating": 4.22,
+    "votes": 205500,
+    "slug": "le-samourai",
+    "fetchedAt": "2026-04-19T20:19:50.772Z"
+  },
+  "playtime-1967": {
+    "rating": 4.2,
+    "votes": 105728,
+    "slug": "playtime",
+    "fetchedAt": "2026-04-19T20:19:52.415Z"
+  },
+  "night-of-the-living-dead-1968": {
+    "rating": 3.94,
+    "votes": 325445,
+    "slug": "night-of-the-living-dead",
+    "fetchedAt": "2026-04-19T20:19:54.051Z"
+  },
+  "rosemarys-baby-1968": {
+    "rating": 4.21,
+    "votes": 567800,
+    "slug": "rosemarys-baby",
+    "fetchedAt": "2026-04-19T20:19:55.854Z"
+  },
+  "the-wild-bunch-1969": {
+    "rating": 4.1,
+    "votes": 75607,
+    "slug": "the-wild-bunch",
+    "fetchedAt": "2026-04-19T20:19:57.619Z"
+  },
+  "z-1969": {
+    "rating": 4.37,
+    "votes": 52486,
+    "slug": "z",
+    "fetchedAt": "2026-04-19T20:19:59.376Z"
+  },
+  "shaft-1971": {
+    "rating": 3.47,
+    "votes": 38208,
+    "slug": "shaft",
+    "fetchedAt": "2026-04-19T20:20:01.321Z"
+  },
+  "sweet-sweetbacks-baadasssss-song-1971": {
+    "rating": 3.29,
+    "votes": 14270,
+    "slug": "sweet-sweetbacks-baadasssss-song",
+    "fetchedAt": "2026-04-19T20:20:03.076Z"
+  },
+  "two-lane-blacktop-1971": {
+    "rating": 3.85,
+    "votes": 22778,
+    "slug": "two-lane-blacktop",
+    "fetchedAt": "2026-04-19T20:20:05.107Z"
+  },
+  "pink-flamingos-1972": {
+    "rating": 3.52,
+    "votes": 128376,
+    "slug": "pink-flamingos",
+    "fetchedAt": "2026-04-19T20:20:06.856Z"
+  },
+  "solaris-1972": {
+    "rating": 4.23,
+    "votes": 202638,
+    "slug": "solaris",
+    "fetchedAt": "2026-04-19T20:20:08.692Z"
+  },
+  "the-canterbury-tales-1972": {
+    "rating": 3.5,
+    "votes": 14087,
+    "slug": "the-canterbury-tales",
+    "fetchedAt": "2026-04-19T20:20:10.635Z"
+  },
+  "badlands-1973": {
+    "rating": 4,
+    "votes": 180534,
+    "slug": "badlands",
+    "fetchedAt": "2026-04-19T20:20:12.341Z"
+  },
+  "dont-look-now-1973": {
+    "rating": 3.78,
+    "votes": 125223,
+    "slug": "dont-look-now",
+    "fetchedAt": "2026-04-19T20:20:14.054Z"
+  },
+  "mean-streets-1973": {
+    "rating": 3.72,
+    "votes": 219455,
+    "slug": "mean-streets",
+    "fetchedAt": "2026-04-19T20:20:15.962Z"
+  },
+  "paper-moon-1973": {
+    "rating": 4.39,
+    "votes": 110716,
+    "slug": "paper-moon",
+    "fetchedAt": "2026-04-19T20:20:17.807Z"
+  },
+  "scenes-from-a-marriage-1973": {
+    "rating": 4.38,
+    "votes": 56262,
+    "slug": "scenes-from-a-marriage",
+    "fetchedAt": "2026-04-19T20:20:19.497Z"
+  },
+  "the-spirit-of-the-beehive-1973": {
+    "rating": 4.17,
+    "votes": 56073,
+    "slug": "the-spirit-of-the-beehive",
+    "fetchedAt": "2026-04-19T20:20:21.391Z"
+  },
+  "touki-bouki-1973": {
+    "rating": 3.82,
+    "votes": 29210,
+    "slug": "touki-bouki",
+    "fetchedAt": "2026-04-19T20:20:23.090Z"
+  },
+  "ali-fear-eats-the-soul-1974": {
+    "rating": 4.18,
+    "votes": 68018,
+    "slug": "ali-fear-eats-the-soul",
+    "fetchedAt": "2026-04-19T20:20:24.975Z"
+  },
+  "celine-and-julie-go-boating-1974": {
+    "rating": 4.19,
+    "votes": 24820,
+    "slug": "celine-and-julie-go-boating",
+    "fetchedAt": "2026-04-19T20:20:26.609Z"
+  },
+  "hearts-and-minds-1974": {
+    "rating": 4.18,
+    "votes": 7588,
+    "slug": "hearts-and-minds",
+    "fetchedAt": "2026-04-19T20:20:28.661Z"
+  },
+  "adoption-1975": {
+    "rating": 3.8,
+    "votes": 5043,
+    "slug": "adoption",
+    "fetchedAt": "2026-04-19T20:20:30.606Z"
+  },
+  "cooley-high-1975": {
+    "rating": 3.67,
+    "votes": 8778,
+    "slug": "cooley-high",
+    "fetchedAt": "2026-04-19T20:20:32.448Z"
+  },
+  "grey-gardens-1975": {
+    "rating": 4.08,
+    "votes": 62794,
+    "slug": "grey-gardens",
+    "fetchedAt": "2026-04-19T20:20:34.497Z"
+  },
+  "harlan-county-usa-1976": {
+    "rating": 4.35,
+    "votes": 25708,
+    "slug": "harlan-county-usa",
+    "fetchedAt": "2026-04-19T20:20:36.443Z"
+  },
+  "a-special-day-1977": {
+    "rating": 4.34,
+    "votes": 45437,
+    "slug": "a-special-day",
+    "fetchedAt": "2026-04-19T20:20:38.326Z"
+  },
+  "alambrista-1977": {
+    "rating": 3.82,
+    "votes": 1780,
+    "slug": "alambrista",
+    "fetchedAt": "2026-04-19T20:20:40.128Z"
+  },
+  "opening-night-1977": {
+    "rating": 4.3,
+    "votes": 59901,
+    "slug": "opening-night",
+    "fetchedAt": "2026-04-19T20:20:41.970Z"
+  },
+  "sorcerer-1977": {
+    "rating": 4.27,
+    "votes": 148584,
+    "slug": "sorcerer",
+    "fetchedAt": "2026-04-19T20:20:43.815Z"
+  },
+  "autumn-sonata-1978": {
+    "rating": 4.49,
+    "votes": 140232,
+    "slug": "autumn-sonata",
+    "fetchedAt": "2026-04-19T20:20:45.503Z"
+  },
+  "days-of-heaven-1978": {
+    "rating": 4.09,
+    "votes": 165192,
+    "slug": "days-of-heaven",
+    "fetchedAt": "2026-04-19T20:20:47.146Z"
+  },
+  "girlfriends-1978": {
+    "rating": 3.91,
+    "votes": 28669,
+    "slug": "girlfriends-1978",
+    "fetchedAt": "2026-04-19T20:20:49.038Z"
+  },
+  "the-last-waltz-1978": {
+    "rating": 4.27,
+    "votes": 48498,
+    "slug": "the-last-waltz",
+    "fetchedAt": "2026-04-19T20:20:50.762Z"
+  },
+  "the-tree-of-wooden-clogs-1978": {
+    "rating": 4.1,
+    "votes": 8778,
+    "slug": "the-tree-of-wooden-clogs",
+    "fetchedAt": "2026-04-19T20:20:52.813Z"
+  },
+  "being-there-1979": {
+    "rating": 4.08,
+    "votes": 77014,
+    "slug": "being-there",
+    "fetchedAt": "2026-04-19T20:20:54.446Z"
+  },
+  "the-black-stallion-1979": {
+    "rating": 3.68,
+    "votes": 12342,
+    "slug": "the-black-stallion",
+    "fetchedAt": "2026-04-19T20:20:56.234Z"
+  },
+  "the-tin-drum-1979": {
+    "rating": 3.72,
+    "votes": 21171,
+    "slug": "the-tin-drum",
+    "fetchedAt": "2026-04-19T20:20:58.019Z"
+  },
+  "kagemusha-1980": {
+    "rating": 4.23,
+    "votes": 47674,
+    "slug": "kagemusha",
+    "fetchedAt": "2026-04-19T20:20:59.996Z"
+  },
+  "das-boot-1981": {
+    "rating": 4.33,
+    "votes": 109779,
+    "slug": "das-boot",
+    "fetchedAt": "2026-04-19T20:21:01.934Z"
+  },
+  "chan-is-missing-1982": {
+    "rating": 3.82,
+    "votes": 9803,
+    "slug": "chan-is-missing",
+    "fetchedAt": "2026-04-19T20:21:03.649Z"
+  },
+  "fanny-and-alexander-1982": {
+    "rating": 4.42,
+    "votes": 74118,
+    "slug": "fanny-and-alexander",
+    "fetchedAt": "2026-04-19T20:21:05.392Z"
+  },
+  "fast-times-at-ridgemont-high-1982": {
+    "rating": 3.49,
+    "votes": 175744,
+    "slug": "fast-times-at-ridgemont-high",
+    "fetchedAt": "2026-04-19T20:21:07.095Z"
+  },
+  "koyaanisqatsi-1982": {
+    "rating": 4.33,
+    "votes": 89329,
+    "slug": "koyaanisqatsi",
+    "fetchedAt": "2026-04-19T20:21:08.909Z"
+  },
+  "veronika-voss-1982": {
+    "rating": 3.91,
+    "votes": 12268,
+    "slug": "veronika-voss",
+    "fetchedAt": "2026-04-19T20:21:10.866Z"
+  },
+  "el-norte-1983": {
+    "rating": 3.9,
+    "votes": 8700,
+    "slug": "el-norte",
+    "fetchedAt": "2026-04-19T20:21:12.632Z"
+  },
+  "largent-1983": {
+    "rating": 4,
+    "votes": 41775,
+    "slug": "largent-1983",
+    "fetchedAt": "2026-04-19T20:21:14.326Z"
+  },
+  "return-of-the-jedi-1983": {
+    "rating": 4.09,
+    "votes": 1774253,
+    "slug": "return-of-the-jedi",
+    "fetchedAt": "2026-04-19T20:21:16.383Z"
+  },
+  "scarface-1983": {
+    "rating": 4.14,
+    "votes": 1535301,
+    "slug": "scarface-1983",
+    "fetchedAt": "2026-04-19T20:21:18.005Z"
+  },
+  "love-streams-1984": {
+    "rating": 4.2,
+    "votes": 27657,
+    "slug": "love-streams",
+    "fetchedAt": "2026-04-19T20:21:19.648Z"
+  },
+  "stranger-than-paradise-1984": {
+    "rating": 3.88,
+    "votes": 79638,
+    "slug": "stranger-than-paradise",
+    "fetchedAt": "2026-04-19T20:21:21.300Z"
+  },
+  "the-terminator-1984": {
+    "rating": 3.88,
+    "votes": 975228,
+    "slug": "the-terminator",
+    "fetchedAt": "2026-04-19T20:21:23.061Z"
+  },
+  "the-times-of-harvey-milk-1984": {
+    "rating": 4.13,
+    "votes": 12297,
+    "slug": "the-times-of-harvey-milk",
+    "fetchedAt": "2026-04-19T20:21:24.829Z"
+  },
+  "this-is-spinal-tap-1984": {
+    "rating": 3.91,
+    "votes": 231714,
+    "slug": "this-is-spinal-tap",
+    "fetchedAt": "2026-04-19T20:21:26.537Z"
+  },
+  "mishima-a-life-in-four-chapters-1985": {
+    "rating": 4.42,
+    "votes": 109001,
+    "slug": "mishima-a-life-in-four-chapters",
+    "fetchedAt": "2026-04-19T20:21:28.166Z"
+  },
+  "shoah-1985": {
+    "rating": 4.53,
+    "votes": 17655,
+    "slug": "shoah",
+    "fetchedAt": "2026-04-19T20:21:29.998Z"
+  },
+  "tampopo-1985": {
+    "rating": 4.31,
+    "votes": 151729,
+    "slug": "tampopo",
+    "fetchedAt": "2026-04-19T20:21:31.624Z"
+  },
+  "the-breakfast-club-1985": {
+    "rating": 3.76,
+    "votes": 1922638,
+    "slug": "the-breakfast-club",
+    "fetchedAt": "2026-04-19T20:21:33.263Z"
+  },
+  "hoosiers-1986": {
+    "rating": 3.52,
+    "votes": 48607,
+    "slug": "hoosiers",
+    "fetchedAt": "2026-04-19T20:21:35.426Z"
+  },
+  "au-revoir-les-enfants-1987": {
+    "rating": 4.21,
+    "votes": 56040,
+    "slug": "au-revoir-les-enfants",
+    "fetchedAt": "2026-04-19T20:21:37.064Z"
+  },
+  "la-bamba-1987": {
+    "rating": 3.6,
+    "votes": 45589,
+    "slug": "la-bamba",
+    "fetchedAt": "2026-04-19T20:21:39.216Z"
+  },
+  "matewan-1987": {
+    "rating": 4.15,
+    "votes": 15827,
+    "slug": "matewan",
+    "fetchedAt": "2026-04-19T20:21:40.843Z"
+  },
+  "the-princess-bride-1987": {
+    "rating": 4.1,
+    "votes": 1073913,
+    "slug": "the-princess-bride",
+    "fetchedAt": "2026-04-19T20:21:42.799Z"
+  },
+  "wings-of-desire-1987": {
+    "rating": 4.31,
+    "votes": 186121,
+    "slug": "wings-of-desire",
+    "fetchedAt": "2026-04-19T20:21:44.438Z"
+  },
+  "bull-durham-1988": {
+    "rating": 3.53,
+    "votes": 60729,
+    "slug": "bull-durham",
+    "fetchedAt": "2026-04-19T20:21:46.487Z"
+  },
+  "cinema-paradiso-1988": {
+    "rating": 4.51,
+    "votes": 480821,
+    "slug": "cinema-paradiso",
+    "fetchedAt": "2026-04-19T20:21:48.594Z"
+  },
+  "die-hard-1988": {
+    "rating": 4.05,
+    "votes": 1189397,
+    "slug": "die-hard",
+    "fetchedAt": "2026-04-19T20:21:50.350Z"
+  },
+  "grave-of-the-fireflies-1988": {
+    "rating": 4.48,
+    "votes": 1164982,
+    "slug": "grave-of-the-fireflies",
+    "fetchedAt": "2026-04-19T20:21:51.992Z"
+  },
+  "my-neighbor-totoro-1988": {
+    "rating": 4.19,
+    "votes": 1908994,
+    "slug": "my-neighbor-totoro",
+    "fetchedAt": "2026-04-19T20:21:53.629Z"
+  },
+  "the-thin-blue-line-1988": {
+    "rating": 4.06,
+    "votes": 46309,
+    "slug": "the-thin-blue-line",
+    "fetchedAt": "2026-04-19T20:21:55.430Z"
+  },
+  "thelonious-monk-straight-no-chaser-1988": {
+    "rating": 3.81,
+    "votes": 2124,
+    "slug": "thelonious-monk-straight-no-chaser",
+    "fetchedAt": "2026-04-19T20:21:57.241Z"
+  },
+  "when-harry-met-sally-1989": {
+    "rating": 4.07,
+    "votes": 1187664,
+    "slug": "when-harry-met-sally",
+    "fetchedAt": "2026-04-19T20:21:59.132Z"
+  },
+  "paris-is-burning-1990": {
+    "rating": 4.55,
+    "votes": 232212,
+    "slug": "paris-is-burning",
+    "fetchedAt": "2026-04-19T20:22:01.745Z"
+  },
+  "slacker-1990": {
+    "rating": 3.7,
+    "votes": 60253,
+    "slug": "slacker",
+    "fetchedAt": "2026-04-19T20:22:03.398Z"
+  },
+  "to-sleep-with-anger-1990": {
+    "rating": 3.93,
+    "votes": 16549,
+    "slug": "to-sleep-with-anger",
+    "fetchedAt": "2026-04-19T20:22:05.325Z"
+  },
+  "daughters-of-the-dust-1991": {
+    "rating": 3.74,
+    "votes": 19405,
+    "slug": "daughters-of-the-dust",
+    "fetchedAt": "2026-04-19T20:22:07.227Z"
+  },
+  "my-own-private-idaho-1991": {
+    "rating": 3.85,
+    "votes": 255066,
+    "slug": "my-own-private-idaho",
+    "fetchedAt": "2026-04-19T20:22:08.861Z"
+  },
+  "thelma-louise-1991": {
+    "rating": 4.21,
+    "votes": 525190,
+    "slug": "thelma-louise",
+    "fetchedAt": "2026-04-19T20:22:10.496Z"
+  },
+  "groundhog-day-1993": {
+    "rating": 3.81,
+    "votes": 876436,
+    "slug": "groundhog-day",
+    "fetchedAt": "2026-04-19T20:22:12.292Z"
+  },
+  "jurassic-park-1993": {
+    "rating": 4.12,
+    "votes": 2162455,
+    "slug": "jurassic-park",
+    "fetchedAt": "2026-04-19T20:22:14.110Z"
+  },
+  "short-cuts-1993": {
+    "rating": 4.13,
+    "votes": 46372,
+    "slug": "short-cuts",
+    "fetchedAt": "2026-04-19T20:22:15.737Z"
+  },
+  "the-wedding-banquet-1993": {
+    "rating": 3.8,
+    "votes": 25262,
+    "slug": "the-wedding-banquet",
+    "fetchedAt": "2026-04-19T20:22:17.538Z"
+  },
+  "before-the-rain-1994": {
+    "rating": 3.86,
+    "votes": 8278,
+    "slug": "before-the-rain",
+    "fetchedAt": "2026-04-19T20:22:19.871Z"
+  },
+  "hoop-dreams-1994": {
+    "rating": 4.43,
+    "votes": 54518,
+    "slug": "hoop-dreams",
+    "fetchedAt": "2026-04-19T20:22:21.689Z"
+  },
+  "satantango-1994": {
+    "rating": 4.39,
+    "votes": 41077,
+    "slug": "satantango",
+    "fetchedAt": "2026-04-19T20:22:23.313Z"
+  },
+  "heat-1995": {
+    "rating": 4.31,
+    "votes": 1119973,
+    "slug": "heat-1995",
+    "fetchedAt": "2026-04-19T20:22:25.365Z"
+  },
+  "se7en-1995": {
+    "rating": 4.37,
+    "votes": 3462411,
+    "slug": "se7en",
+    "fetchedAt": "2026-04-19T20:22:26.996Z"
+  },
+  "the-usual-suspects-1995": {
+    "rating": 4.08,
+    "votes": 952217,
+    "slug": "the-usual-suspects",
+    "fetchedAt": "2026-04-19T20:22:28.803Z"
+  },
+  "underground-1995": {
+    "rating": 4.32,
+    "votes": 41366,
+    "slug": "underground-1995",
+    "fetchedAt": "2026-04-19T20:22:30.504Z"
+  },
+  "the-watermelon-woman-1996": {
+    "rating": 4.06,
+    "votes": 99544,
+    "slug": "the-watermelon-woman",
+    "fetchedAt": "2026-04-19T20:22:32.142Z"
+  },
+  "trainspotting-1996": {
+    "rating": 4.23,
+    "votes": 1180002,
+    "slug": "trainspotting",
+    "fetchedAt": "2026-04-19T20:22:33.999Z"
+  },
+  "cure-1997": {
+    "rating": 4.28,
+    "votes": 336697,
+    "slug": "cure",
+    "fetchedAt": "2026-04-19T20:22:35.642Z"
+  },
+  "eves-bayou-1997": {
+    "rating": 3.83,
+    "votes": 30790,
+    "slug": "eves-bayou",
+    "fetchedAt": "2026-04-19T20:22:37.687Z"
+  },
+  "princess-mononoke-1997": {
+    "rating": 4.39,
+    "votes": 1612347,
+    "slug": "princess-mononoke",
+    "fetchedAt": "2026-04-19T20:22:39.437Z"
+  },
+  "beau-travail-1998": {
+    "rating": 4.12,
+    "votes": 132528,
+    "slug": "beau-travail",
+    "fetchedAt": "2026-04-19T20:22:41.305Z"
+  },
+  "central-station-1998": {
+    "rating": 4.36,
+    "votes": 214291,
+    "slug": "central-station",
+    "fetchedAt": "2026-04-19T20:22:43.114Z"
+  },
+  "eternity-and-a-day-1998": {
+    "rating": 4.4,
+    "votes": 44831,
+    "slug": "eternity-and-a-day",
+    "fetchedAt": "2026-04-19T20:22:44.954Z"
+  },
+  "rushmore-1998": {
+    "rating": 3.89,
+    "votes": 476474,
+    "slug": "rushmore",
+    "fetchedAt": "2026-04-19T20:22:46.683Z"
+  },
+  "the-big-lebowski-1998": {
+    "rating": 4.11,
+    "votes": 1254158,
+    "slug": "the-big-lebowski",
+    "fetchedAt": "2026-04-19T20:22:48.392Z"
+  },
+  "the-celebration-1998": {
+    "rating": 4.32,
+    "votes": 144089,
+    "slug": "the-celebration",
+    "fetchedAt": "2026-04-19T20:22:50.043Z"
+  },
+  "buena-vista-social-club-1999": {
+    "rating": 3.96,
+    "votes": 36756,
+    "slug": "buena-vista-social-club",
+    "fetchedAt": "2026-04-19T20:22:51.920Z"
+  },
+  "compensation-1999": {
+    "rating": 4.01,
+    "votes": 2694,
+    "slug": "compensation-1999",
+    "fetchedAt": "2026-04-19T20:22:53.764Z"
+  },
+  "fight-club-1999": {
+    "rating": 4.27,
+    "votes": 5221516,
+    "slug": "fight-club",
+    "fetchedAt": "2026-04-19T20:22:55.709Z"
+  },
+  "magnolia-1999": {
+    "rating": 4.23,
+    "votes": 569257,
+    "slug": "magnolia",
+    "fetchedAt": "2026-04-19T20:22:57.341Z"
+  },
+  "rosetta-1999": {
+    "rating": 3.92,
+    "votes": 35581,
+    "slug": "rosetta",
+    "fetchedAt": "2026-04-19T20:22:59.051Z"
+  },
+  "the-iron-giant-1999": {
+    "rating": 4.28,
+    "votes": 660923,
+    "slug": "the-iron-giant",
+    "fetchedAt": "2026-04-19T20:23:00.689Z"
+  },
+  "the-matrix-1999": {
+    "rating": 4.18,
+    "votes": 2742359,
+    "slug": "the-matrix",
+    "fetchedAt": "2026-04-19T20:23:02.332Z"
+  },
+  "bamboozled-2000": {
+    "rating": 3.87,
+    "votes": 26967,
+    "slug": "bamboozled",
+    "fetchedAt": "2026-04-19T20:23:04.210Z"
+  },
+  "love-basketball-2000": {
+    "rating": 3.68,
+    "votes": 61993,
+    "slug": "love-basketball",
+    "fetchedAt": "2026-04-19T20:23:06.050Z"
+  },
+  "memento-2000": {
+    "rating": 4.18,
+    "votes": 1866606,
+    "slug": "memento",
+    "fetchedAt": "2026-04-19T20:23:07.897Z"
+  },
+  "werckmeister-harmonies-2000": {
+    "rating": 4.31,
+    "votes": 44652,
+    "slug": "werckmeister-harmonies",
+    "fetchedAt": "2026-04-19T20:23:09.533Z"
+  },
+  "la-cienaga-2001": {
+    "rating": 3.87,
+    "votes": 70221,
+    "slug": "la-cienaga",
+    "fetchedAt": "2026-04-19T20:23:11.480Z"
+  },
+  "monsoon-wedding-2001": {
+    "rating": 3.81,
+    "votes": 22087,
+    "slug": "monsoon-wedding",
+    "fetchedAt": "2026-04-19T20:23:13.237Z"
+  },
+  "city-of-god-2002": {
+    "rating": 4.57,
+    "votes": 1113701,
+    "slug": "city-of-god",
+    "fetchedAt": "2026-04-19T20:23:14.868Z"
+  },
+  "oldboy-2003": {
+    "rating": 4.37,
+    "votes": 1502684,
+    "slug": "oldboy",
+    "fetchedAt": "2026-04-19T20:23:16.500Z"
+  },
+  "the-best-of-youth-2003": {
+    "rating": 4.32,
+    "votes": 18724,
+    "slug": "the-best-of-youth",
+    "fetchedAt": "2026-04-19T20:23:18.260Z"
+  },
+  "howls-moving-castle-2004": {
+    "rating": 4.36,
+    "votes": 2415496,
+    "slug": "howls-moving-castle",
+    "fetchedAt": "2026-04-19T20:23:20.080Z"
+  },
+  "pans-labyrinth-2006": {
+    "rating": 4.15,
+    "votes": 977007,
+    "slug": "pans-labyrinth",
+    "fetchedAt": "2026-04-19T20:23:21.821Z"
+  },
+  "the-prestige-2006": {
+    "rating": 4.28,
+    "votes": 1789932,
+    "slug": "the-prestige",
+    "fetchedAt": "2026-04-19T20:23:23.462Z"
+  },
+  "still-walking-2008": {
+    "rating": 4.34,
+    "votes": 63705,
+    "slug": "still-walking",
+    "fetchedAt": "2026-04-19T20:23:25.086Z"
+  },
+  "fantastic-mr-fox-2009": {
+    "rating": 4.3,
+    "votes": 2684917,
+    "slug": "fantastic-mr-fox",
+    "fetchedAt": "2026-04-19T20:23:26.718Z"
+  },
+  "mary-and-max-2009": {
+    "rating": 4.27,
+    "votes": 195498,
+    "slug": "mary-and-max",
+    "fetchedAt": "2026-04-19T20:23:28.447Z"
+  },
+  "incendies-2010": {
+    "rating": 4.44,
+    "votes": 560146,
+    "slug": "incendies",
+    "fetchedAt": "2026-04-19T20:23:30.320Z"
+  },
+  "pariah-2011": {
+    "rating": 4.04,
+    "votes": 38550,
+    "slug": "pariah",
+    "fetchedAt": "2026-04-19T20:23:32.038Z"
+  },
+  "the-hunt-2012": {
+    "rating": 4.29,
+    "votes": 577322,
+    "slug": "the-hunt-2012",
+    "fetchedAt": "2026-04-19T20:23:33.744Z"
+  },
+  "prisoners-2013": {
+    "rating": 4.33,
+    "votes": 2162668,
+    "slug": "prisoners",
+    "fetchedAt": "2026-04-19T20:23:35.381Z"
+  },
+  "interstellar-2014": {
+    "rating": 4.44,
+    "votes": 5540373,
+    "slug": "interstellar",
+    "fetchedAt": "2026-04-19T20:23:37.255Z"
+  },
+  "dheepan-2015": {
+    "rating": 3.63,
+    "votes": 21019,
+    "slug": "dheepan",
+    "fetchedAt": "2026-04-19T20:23:39.331Z"
+  },
+  "i-daniel-blake-2016": {
+    "rating": 4.04,
+    "votes": 88949,
+    "slug": "i-daniel-blake",
+    "fetchedAt": "2026-04-19T20:23:41.484Z"
+  },
+  "the-handmaiden-2016": {
+    "rating": 4.39,
+    "votes": 778790,
+    "slug": "the-handmaiden",
+    "fetchedAt": "2026-04-19T20:23:43.366Z"
+  },
+  "your-name-2016": {
+    "rating": 4.23,
+    "votes": 1467189,
+    "slug": "your-name",
+    "fetchedAt": "2026-04-19T20:23:45.000Z"
+  },
+  "shoplifters-2018": {
+    "rating": 4.3,
+    "votes": 294018,
+    "slug": "shoplifters",
+    "fetchedAt": "2026-04-19T20:23:46.628Z"
+  },
+  "perfect-days-2023": {
+    "rating": 4.31,
+    "votes": 798839,
+    "slug": "perfect-days-2023",
+    "fetchedAt": "2026-04-19T20:23:48.265Z"
+  },
+  "spider-man-across-the-spider-verse-2023": {
+    "rating": 4.4,
+    "votes": 3531492,
+    "slug": "spider-man-across-the-spider-verse",
+    "fetchedAt": "2026-04-19T20:23:50.187Z"
+  },
+  "l-atalante-1934": {
+    "rating": 3.98,
+    "votes": 35025,
+    "slug": "latalante",
+    "fetchedAt": "2026-04-19T20:23:52.232Z"
+  },
+  "the-thin-man-1934": {
+    "rating": 3.96,
+    "votes": 40658,
+    "slug": "the-thin-man",
+    "fetchedAt": "2026-04-19T20:23:53.862Z"
+  },
+  "grand-illusion-1937": {
+    "rating": 4.21,
+    "votes": 48765,
+    "slug": "grand-illusion",
+    "fetchedAt": "2026-04-19T20:23:55.745Z"
+  },
+  "the-adventures-of-robin-hood-1938": {
+    "rating": 3.86,
+    "votes": 46740,
+    "slug": "the-adventures-of-robin-hood",
+    "fetchedAt": "2026-04-19T20:23:57.489Z"
+  },
+  "the-shop-around-the-corner-1940": {
+    "rating": 4.19,
+    "votes": 96223,
+    "slug": "the-shop-around-the-corner",
+    "fetchedAt": "2026-04-19T20:23:59.126Z"
+  },
+  "the-killers-1946": {
+    "rating": 3.84,
+    "votes": 32179,
+    "slug": "the-killers",
+    "fetchedAt": "2026-04-19T20:24:00.826Z"
+  },
+  "black-narcissus-1947": {
+    "rating": 3.98,
+    "votes": 86030,
+    "slug": "black-narcissus",
+    "fetchedAt": "2026-04-19T20:24:02.534Z"
+  },
+  "strangers-on-a-train-1951": {
+    "rating": 4.06,
+    "votes": 170913,
+    "slug": "strangers-on-a-train",
+    "fetchedAt": "2026-04-19T20:24:04.622Z"
+  },
+  "touch-of-evil-1958": {
+    "rating": 4.17,
+    "votes": 106729,
+    "slug": "touch-of-evil",
+    "fetchedAt": "2026-04-19T20:24:06.254Z"
+  },
+  "the-birds-1963": {
+    "rating": 3.74,
+    "votes": 415760,
+    "slug": "the-birds",
+    "fetchedAt": "2026-04-19T20:24:07.989Z"
+  },
+  "cool-hand-luke-1967": {
+    "rating": 4.16,
+    "votes": 121411,
+    "slug": "cool-hand-luke",
+    "fetchedAt": "2026-04-19T20:24:09.714Z"
+  },
+  "the-conformist-1970": {
+    "rating": 4.2,
+    "votes": 75170,
+    "slug": "the-conformist",
+    "fetchedAt": "2026-04-19T20:24:11.590Z"
+  },
+  "the-red-circle-1970": {
+    "rating": 4.21,
+    "votes": 64652,
+    "slug": "le-cercle-rouge",
+    "fetchedAt": "2026-04-19T20:24:13.633Z"
+  },
+  "woodstock-1970": {
+    "rating": 4.19,
+    "votes": 18044,
+    "slug": "woodstock",
+    "fetchedAt": "2026-04-19T20:24:15.448Z"
+  },
+  "dirty-harry-1971": {
+    "rating": 3.83,
+    "votes": 174069,
+    "slug": "dirty-harry",
+    "fetchedAt": "2026-04-19T20:24:17.424Z"
+  },
+  "enter-the-dragon-1973": {
+    "rating": 3.83,
+    "votes": 136316,
+    "slug": "enter-the-dragon",
+    "fetchedAt": "2026-04-19T20:24:19.216Z"
+  },
+  "blazing-saddles-1974": {
+    "rating": 3.81,
+    "votes": 205455,
+    "slug": "blazing-saddles",
+    "fetchedAt": "2026-04-19T20:24:21.009Z"
+  },
+  "je-tu-il-elle-1974": {
+    "rating": 3.72,
+    "votes": 34489,
+    "slug": "je-tu-il-elle",
+    "fetchedAt": "2026-04-19T20:24:22.876Z"
+  },
+  "the-texas-chain-saw-massacre-1974": {
+    "rating": 3.78,
+    "votes": 904339,
+    "slug": "the-texas-chain-saw-massacre",
+    "fetchedAt": "2026-04-19T20:24:24.512Z"
+  },
+  "young-frankenstein-1974": {
+    "rating": 4.02,
+    "votes": 217792,
+    "slug": "young-frankenstein",
+    "fetchedAt": "2026-04-19T20:24:26.247Z"
+  },
+  "carrie-1976": {
+    "rating": 3.84,
+    "votes": 870039,
+    "slug": "carrie-1976",
+    "fetchedAt": "2026-04-19T20:24:27.894Z"
+  },
+  "close-encounters-of-the-third-kind-1977": {
+    "rating": 3.82,
+    "votes": 302268,
+    "slug": "close-encounters-of-the-third-kind",
+    "fetchedAt": "2026-04-19T20:24:29.818Z"
+  },
+  "halloween-1978": {
+    "rating": 3.76,
+    "votes": 1075337,
+    "slug": "halloween-1978",
+    "fetchedAt": "2026-04-19T20:24:31.442Z"
+  },
+  "manhattan-1979": {
+    "rating": 3.87,
+    "votes": 177988,
+    "slug": "manhattan",
+    "fetchedAt": "2026-04-19T20:24:33.336Z"
+  },
+  "airplane-1980": {
+    "rating": 3.83,
+    "votes": 569817,
+    "slug": "airplane",
+    "fetchedAt": "2026-04-19T20:24:35.127Z"
+  },
+  "sans-soleil-1982": {
+    "rating": 4.22,
+    "votes": 45973,
+    "slug": "sans-soleil",
+    "fetchedAt": "2026-04-19T20:24:36.857Z"
+  },
+  "local-hero-1983": {
+    "rating": 3.87,
+    "votes": 37317,
+    "slug": "local-hero",
+    "fetchedAt": "2026-04-19T20:24:38.672Z"
+  },
+  "once-upon-a-time-in-america-1983": {
+    "rating": 4.23,
+    "votes": 298913,
+    "slug": "once-upon-a-time-in-america",
+    "fetchedAt": "2026-04-19T20:24:40.315Z"
+  },
+  "videodrome-1983": {
+    "rating": 3.88,
+    "votes": 369403,
+    "slug": "videodrome",
+    "fetchedAt": "2026-04-19T20:24:41.939Z"
+  },
+  "blood-simple-1984": {
+    "rating": 3.89,
+    "votes": 193816,
+    "slug": "blood-simple",
+    "fetchedAt": "2026-04-19T20:24:43.654Z"
+  },
+  "ghostbusters-1984": {
+    "rating": 3.74,
+    "votes": 920279,
+    "slug": "ghostbusters",
+    "fetchedAt": "2026-04-19T20:24:45.586Z"
+  },
+  "stop-making-sense-1984": {
+    "rating": 4.68,
+    "votes": 185157,
+    "slug": "stop-making-sense",
+    "fetchedAt": "2026-04-19T20:24:47.429Z"
+  },
+  "brazil-1985": {
+    "rating": 4.1,
+    "votes": 271548,
+    "slug": "brazil",
+    "fetchedAt": "2026-04-19T20:24:49.191Z"
+  },
+  "aliens-1986": {
+    "rating": 4.11,
+    "votes": 884812,
+    "slug": "aliens",
+    "fetchedAt": "2026-04-19T20:24:51.059Z"
+  },
+  "the-green-ray-1986": {
+    "rating": 4.17,
+    "votes": 70090,
+    "slug": "the-green-ray",
+    "fetchedAt": "2026-04-19T20:24:52.890Z"
+  },
+  "full-metal-jacket-1987": {
+    "rating": 4.2,
+    "votes": 1034890,
+    "slug": "full-metal-jacket",
+    "fetchedAt": "2026-04-19T20:24:54.801Z"
+  },
+  "the-unbearable-lightness-of-being-1988": {
+    "rating": 3.67,
+    "votes": 24872,
+    "slug": "the-unbearable-lightness-of-being",
+    "fetchedAt": "2026-04-19T20:24:56.569Z"
+  },
+  "a-city-of-sadness-1989": {
+    "rating": 4.15,
+    "votes": 16817,
+    "slug": "a-city-of-sadness",
+    "fetchedAt": "2026-04-19T20:24:58.432Z"
+  },
+  "glory-1989": {
+    "rating": 3.78,
+    "votes": 90618,
+    "slug": "glory",
+    "fetchedAt": "2026-04-19T20:25:00.537Z"
+  },
+  "twin-peaks-fire-walk-with-me-1992": {
+    "rating": 4.33,
+    "votes": 443524,
+    "slug": "twin-peaks-fire-walk-with-me",
+    "fetchedAt": "2026-04-19T20:25:02.503Z"
+  },
+  "three-colours-red-1994": {
+    "rating": 4.34,
+    "votes": 186513,
+    "slug": "three-colours-red",
+    "fetchedAt": "2026-04-19T20:25:04.138Z"
+  },
+  "when-we-were-kings-1996": {
+    "rating": 4.13,
+    "votes": 22148,
+    "slug": "when-we-were-kings",
+    "fetchedAt": "2026-04-19T20:25:05.920Z"
+  },
+  "happy-together-1997": {
+    "rating": 4.21,
+    "votes": 238722,
+    "slug": "happy-together-1997",
+    "fetchedAt": "2026-04-19T20:25:07.688Z"
+  },
+  "flowers-of-shanghai-1998": {
+    "rating": 3.91,
+    "votes": 15355,
+    "slug": "flowers-of-shanghai",
+    "fetchedAt": "2026-04-19T20:25:09.522Z"
+  },
+  "the-gleaners-and-i-2000": {
+    "rating": 4.26,
+    "votes": 61181,
+    "slug": "the-gleaners-and-i",
+    "fetchedAt": "2026-04-19T20:25:11.492Z"
+  },
+  "in-vanda-s-room-2000": {
+    "rating": 4.04,
+    "votes": 5568,
+    "slug": "in-vandas-room",
+    "fetchedAt": "2026-04-19T20:25:13.232Z"
+  },
+  "the-fog-of-war-2003": {
+    "rating": 3.98,
+    "votes": 20015,
+    "slug": "the-fog-of-war",
+    "fetchedAt": "2026-04-19T20:25:15.282Z"
+  },
+  "the-wrestler-2008": {
+    "rating": 4.08,
+    "votes": 225602,
+    "slug": "the-wrestler",
+    "fetchedAt": "2026-04-19T20:25:17.432Z"
+  },
+  "how-to-train-your-dragon-2010": {
+    "rating": 4.14,
+    "votes": 1822761,
+    "slug": "how-to-train-your-dragon",
+    "fetchedAt": "2026-04-19T20:25:19.379Z"
+  },
+  "uncle-boonmee-who-can-recall-his-past-lives-2010": {
+    "rating": 3.93,
+    "votes": 67310,
+    "slug": "uncle-boonmee-who-can-recall-his-past-lives",
+    "fetchedAt": "2026-04-19T20:25:21.007Z"
+  },
+  "blue-is-the-warmest-colour-2013": {
+    "rating": 3.2,
+    "votes": 360276,
+    "slug": "blue-is-the-warmest-color",
+    "fetchedAt": "2026-04-19T20:25:22.920Z"
+  },
+  "faces-places-2017": {
+    "rating": 4.15,
+    "votes": 48100,
+    "slug": "faces-places",
+    "fetchedAt": "2026-04-19T20:25:24.696Z"
+  },
+  "minding-the-gap-2018": {
+    "rating": 4.32,
+    "votes": 49369,
+    "slug": "minding-the-gap",
+    "fetchedAt": "2026-04-19T20:25:26.541Z"
+  },
+  "marcel-the-shell-with-shoes-on-2021": {
+    "rating": 4.24,
+    "votes": 366603,
+    "slug": "marcel-the-shell-with-shoes-on-2021",
+    "fetchedAt": "2026-04-19T20:25:28.184Z"
+  },
+  "petite-maman-2021": {
+    "rating": 4.1,
+    "votes": 155151,
+    "slug": "petite-maman",
+    "fetchedAt": "2026-04-19T20:25:29.812Z"
+  },
+  "monster-2023": {
+    "rating": 4.34,
+    "votes": 421160,
+    "slug": "monster-2023",
+    "fetchedAt": "2026-04-19T20:25:31.446Z"
+  },
+  "sing-sing-2023": {
+    "rating": 4.31,
+    "votes": 314735,
+    "slug": "sing-sing-2023",
+    "fetchedAt": "2026-04-19T20:25:33.285Z"
+  },
+  "the-wild-robot-2024": {
+    "rating": 4.21,
+    "votes": 1278702,
+    "slug": "the-wild-robot",
+    "fetchedAt": "2026-04-19T20:25:35.023Z"
+  },
+  "atlantic-city-1981": {
+    "rating": 3.7,
+    "votes": 16603,
+    "slug": "atlantic-city",
+    "fetchedAt": "2026-04-19T20:27:33.664Z"
+  },
+  "wallace-and-gromit-the-curse-of-the-were-rabbit-2005": {
+    "rating": 3.88,
+    "votes": 335500,
+    "slug": "wallace-gromit-the-curse-of-the-were-rabbit",
+    "fetchedAt": "2026-04-19T20:27:35.927Z"
+  },
+  "the-ballad-of-gregorio-cortez-1982": {
+    "rating": 3.76,
+    "votes": 2442,
+    "slug": "the-ballad-of-gregorio-cortez",
+    "fetchedAt": "2026-04-19T20:27:38.018Z"
+  }
+}

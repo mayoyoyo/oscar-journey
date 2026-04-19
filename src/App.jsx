@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { MOVIES, MOVIES_BY_ID } from './data/movies';
 import { getSeriesForFilm } from './data/seriesCollections';
 import { getTier } from './utils/tierInfo';
-import { matchesCategoryFilter } from './utils/filmAttributes';
+import { matchesCategoryFilter, matchesGenreFilter } from './utils/filmAttributes';
 import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffle';
 import {
   ratingKey, clearCache,
@@ -59,7 +59,9 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   const f = {
     yearRange: { ...DEFAULT_FILTERS.yearRange, ...(filters.yearRange || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters.categories || {}) },
+    categoriesExcluded: { ...DEFAULT_FILTERS.categoriesExcluded, ...(filters.categoriesExcluded || {}) },
     genres: { ...DEFAULT_FILTERS.genres, ...(filters.genres || {}) },
+    genresExcluded: { ...DEFAULT_FILTERS.genresExcluded, ...(filters.genresExcluded || {}) },
     runtimeRange: { ...DEFAULT_FILTERS.runtimeRange, ...(filters.runtimeRange || {}) },
     minTier: migratedMinTier,
     oscarsOnly: filters.oscarsOnly ?? (legacyTier === 99) ?? DEFAULT_FILTERS.oscarsOnly,
@@ -75,7 +77,7 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   // combination of attributes; checking INT shows every non-English film,
   // checking ANIM shows every animated film, both checked shows the union.
   // BP and Essential are governed elsewhere (Canon depth + oscarsOnly/essentialsOnly).
-  if (!matchesCategoryFilter(movie, f.categories)) return false;
+  if (!matchesCategoryFilter(movie, f.categories, f.categoriesExcluded)) return false;
 
   // Unified canon tier — applies to ALL films via getTier() (OSCAR / OSCAR_NOM
   // counts as a list for BP / INT / ANIM). Matches the Film tab's minTier.
@@ -87,12 +89,9 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   if (f.oscarsOnly && movie.category === 'ESSENTIAL') return false;
   if (f.essentialsOnly && movie.category !== 'ESSENTIAL') return false;
 
-  // Genre check — OR-semantics over primary + altGenres. A film passes if
-  // ANY of its genres is checked.
-  {
-    const allGenres = [movie.genre, ...(movie.altGenres || [])];
-    if (!allGenres.some(g => f.genres[g] !== false)) return false;
-  }
+  // Genre check — exclude wins. A film is hidden if any of its genres is in
+  // the exclude set; otherwise OR-include over the genres map.
+  if (!matchesGenreFilter(movie, f.genres, f.genresExcluded)) return false;
 
   // Runtime range check — dual-thumb slider. Films with no cached runtime
   // always pass so the filter is non-destructive while OMDB is still

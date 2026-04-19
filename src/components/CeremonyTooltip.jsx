@@ -309,7 +309,7 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
                 reads as an achievement, not a ding. */}
             {losses.length > 0 && (
               <div className="ceremony-modal-section">
-                <h3 className="ceremony-modal-category">Also Nominated For ({losses.length})</h3>
+                <h3 className="ceremony-modal-category">{((bpNominated && bpRows.length > 0) || wins.length > 0) ? 'Also Nominated For' : 'Nominated For'} ({losses.length})</h3>
                 <div className="ceremony-modal-awards-list">
                   {losses.map((n, i) => (
                     <NomChip key={`n-${i}`} nomination={n} />

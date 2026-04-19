@@ -168,15 +168,10 @@ export default function SeriesFilmPreview({
             <div className="film-year">
               <span>{film.year}</span>
               {runtime && <span className="film-year-runtime"> · {runtime}</span>}
+              {genrePills.map((g) => (
+                <span key={g} className="badge-genre-sm">{g}</span>
+              ))}
             </div>
-
-            {genrePills.length > 0 && (
-              <div className="badges">
-                {genrePills.map((g) => (
-                  <span key={g} className="badge-genre">{g}</span>
-                ))}
-              </div>
-            )}
 
             <div className="film-detail-metrics">
               {film.imdbRating != null && (
@@ -218,7 +213,7 @@ export default function SeriesFilmPreview({
 
             {film.cast?.length > 0 && (
               <div className="film-detail-starring">
-                <strong>Starring</strong> {film.cast.join(' · ')}
+                <strong>Starring</strong> {film.cast.map(s => String(s).trim()).filter(Boolean).join(' · ')}
               </div>
             )}
 

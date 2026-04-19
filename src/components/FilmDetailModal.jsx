@@ -184,7 +184,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <button className="film-detail-close" onClick={onClose}>✕</button>
+        <button className="film-detail-close" onClick={onClose} aria-label="Close">✕</button>
         <div className="film-detail-inner">
           <div className="film-detail-poster">
             {loading ? (

@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.3.4 — 2026-04-18
+
+### Modal visual parity — chris-testing
+- **Genre pill in the out-of-canon preview modal was rendering as the large
+  `badge-genre` on its own row — swapped to `badge-genre-sm` inline with the
+  year · runtime row, matching the canonical detail modal's layout exactly.**
+  Multiple TMDB genres still render side-by-side (Sci-Fi / Fantasy + Action
+  / Adventure for, e.g., the Star Wars sequels).
+- Canonical modal's close button picked up an `aria-label="Close"` to match
+  the sequel preview (accessibility).
+- Sequel's Starring row now trims + filters empty strings defensively in
+  case TMDB returns whitespace — same behavior as the canonical modal's
+  OMDb-cast handling.
+
 ## 3.3.3 — 2026-04-18
 
 ### Shared modal-gesture hook — chris-testing

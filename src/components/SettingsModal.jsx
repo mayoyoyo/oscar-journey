@@ -230,11 +230,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <div className="settings-version">
             <div className="settings-version-row">
               <span className="settings-version-label">Version</span>
-              <span className="settings-version-num">v3.3.3</span>
+              <span className="settings-version-num">v3.3.4</span>
             </div>
             <details className="settings-changelog">
               <summary>Changelog</summary>
               <div className="settings-changelog-content">
+              <p><strong>v3.3.4</strong> — Modal visual parity</p>
+              <ul>
+                <li>Genre pill in the sequel/out-of-canon modal is now small + inline with the year · runtime row, matching the canonical detail modal. Multiple TMDB genres still render side-by-side.</li>
+                <li>Minor accessibility + resilience fixes (close-button aria-label on the canonical modal, defensive trim on the sequel's Starring row).</li>
+              </ul>
               <p><strong>v3.3.3</strong> — Internal refactor (no user-visible change)</p>
               <ul>
                 <li>Shared modal-gesture logic (drag-to-close, swipe, arrow keys, scroll preservation) is now factored into one <code>useFilmModalGestures</code> hook so the canonical and out-of-canon modal components no longer duplicate ~200 lines of plumbing. Future gesture work happens once, in one file.</li>

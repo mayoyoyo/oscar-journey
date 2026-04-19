@@ -61,6 +61,7 @@ const SILENT_POST_1928_IDS = new Set([
   'city-lights-1931',         // Chaplin's holdout — score + effects but no dialogue
   'modern-times-1936',        // Chaplin again, partial dialogue but mostly silent
   'the-artist-2011',          // intentional silent-film revival
+  'flow-2024',                // dialogue-less animated feature
 ]);
 export function isSilent(movie) {
   if (movie.year < 1928) return true;

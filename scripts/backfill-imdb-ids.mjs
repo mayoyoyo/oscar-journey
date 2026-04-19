@@ -54,6 +54,14 @@ const OMDB_YEAR_OVERRIDES = {
   'Crash': 2004,
 };
 
+// Hardcoded imdb_ids for films where OMDb's title+year search resolves to the
+// wrong film. Birdman's expanded title matched a 2014 short by Guy Bolongaro
+// (tt20244724) instead of Iñárritu's film (tt2562232) — confirmed 2026-04-19.
+// Keep this list narrow; verify the id at imdb.com/title/{id}/ before adding.
+const MANUAL_IMDB_IDS = {
+  'birdman-2014': 'tt2562232',
+};
+
 const cleanTitle = (t) => (OMDB_TITLE_OVERRIDES[t] || t)
   .replace(/[\u2018\u2019\u02BC]/g, "'")
   .replace(/[\u201C\u201D]/g, '"');
@@ -79,6 +87,7 @@ function saveCache() { writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2))
 // --- per-film lookup -------------------------------------------------------
 
 async function lookupImdbId(movie) {
+  if (MANUAL_IMDB_IDS[movie.id]) return MANUAL_IMDB_IDS[movie.id];
   if (cache[movie.id] !== undefined) return cache[movie.id];
 
   const title = cleanTitle(movie.title);

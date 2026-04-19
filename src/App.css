@@ -606,6 +606,13 @@ main {
   letter-spacing: 0.04em;
 }
 
+/* Secondary genre pills (altGenres). Same shape as .badge-genre but
+   visually de-emphasized so the primary genre still leads the row. */
+.badge-genre-alt {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
 /* Attribute category pills (Doc / Silent / B&W / Animated). Shown
    alongside the genre pill in the modal/card badges row, and in place of
    the genre pill in the A-Z list row (small variant). International is

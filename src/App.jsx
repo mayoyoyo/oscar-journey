@@ -33,7 +33,7 @@ import CardEarnedBanner from './components/CardEarnedBanner';
 import PackOpening from './components/PackOpening';
 import { getTakenCards, registerCard, releaseCard } from './utils/cardRegistry';
 import { generatePack, getMaxWallet } from './utils/cards';
-import { readCachedRuntime, runtimeBucket } from './utils/runtime';
+import { readCachedRuntime } from './utils/runtime';
 import WhatsNewAnnouncement from './components/WhatsNewAnnouncement';
 
 // Helper: generate a stable identity key for a movie (immune to playlist reordering)
@@ -57,30 +57,18 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   // We don't auto-flip — if a user had essentialsOnly on, treat it as a
   // stand-alone flag and keep that behavior.
   const f = {
-    eras: { ...DEFAULT_FILTERS.eras, ...(filters.eras || {}) },
+    yearRange: { ...DEFAULT_FILTERS.yearRange, ...(filters.yearRange || {}) },
     categories: { ...DEFAULT_FILTERS.categories, ...(filters.categories || {}) },
     genres: { ...DEFAULT_FILTERS.genres, ...(filters.genres || {}) },
-    runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters.runtimes || {}) },
+    runtimeRange: { ...DEFAULT_FILTERS.runtimeRange, ...(filters.runtimeRange || {}) },
     minTier: migratedMinTier,
     oscarsOnly: filters.oscarsOnly ?? (legacyTier === 99) ?? DEFAULT_FILTERS.oscarsOnly,
     essentialsOnly: filters.essentialsOnly ?? false,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters.smart || {}) },
   };
 
-  // Era check
-  const year = movie.year;
-  if (year < 1920 && !f.eras['1910s']) return false;
-  else if (year >= 1920 && year < 1930 && !f.eras['1920s']) return false;
-  else if (year >= 1930 && year < 1940 && !f.eras['1930s']) return false;
-  else if (year >= 1940 && year < 1950 && !f.eras['1940s']) return false;
-  else if (year >= 1950 && year < 1960 && !f.eras['1950s']) return false;
-  else if (year >= 1960 && year < 1970 && !f.eras['1960s']) return false;
-  else if (year >= 1970 && year < 1980 && !f.eras['70s']) return false;
-  else if (year >= 1980 && year < 1991 && !f.eras['80s']) return false;
-  else if (year >= 1991 && year < 2000 && !f.eras['90s']) return false;
-  else if (year >= 2000 && year < 2010 && !f.eras['00s']) return false;
-  else if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
-  else if (year >= 2020 && !f.eras['20s']) return false;
+  // Year range check — dual-thumb slider on the Journey filter panel.
+  if (movie.year < f.yearRange.min || movie.year > f.yearRange.max) return false;
 
   // Category check — additive attribute filter (International / Animated).
   // Shared with the Film tab via matchesCategoryFilter. A film can have any
@@ -99,13 +87,25 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   if (f.oscarsOnly && movie.category === 'ESSENTIAL') return false;
   if (f.essentialsOnly && movie.category !== 'ESSENTIAL') return false;
 
-  // Genre check
-  if (f.genres[movie.genre] === false) return false;
+  // Genre check — OR-semantics over primary + altGenres. A film passes if
+  // ANY of its genres is checked.
+  {
+    const allGenres = [movie.genre, ...(movie.altGenres || [])];
+    if (!allGenres.some(g => f.genres[g] !== false)) return false;
+  }
 
-  // Runtime check — only filter when runtime is known. Unknown runtimes always pass so the
-  // filter is non-destructive while OMDB data is still being fetched in the background.
-  const rb = runtimeBucket(readCachedRuntime(movie));
-  if (rb && !f.runtimes[rb]) return false;
+  // Runtime range check — dual-thumb slider. Films with no cached runtime
+  // always pass so the filter is non-destructive while OMDB is still
+  // fetching. At the upper bound (JOURNEY_RUNTIME_MAX) the slider is
+  // open-ended ("and up").
+  {
+    const mins = readCachedRuntime(movie);
+    if (mins != null) {
+      const { min, max } = f.runtimeRange;
+      const passesUpper = max >= 300 ? true : mins <= max;
+      if (mins < min || !passesUpper) return false;
+    }
+  }
 
   // Smart filters
   if (smartContext) {

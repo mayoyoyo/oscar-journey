@@ -143,11 +143,21 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
                       </span>
                       {m.category === 'ESSENTIAL' ? (
                         <TierPips movie={m} variant="compact" />
-                      ) : m.awards ? (
-                        <span className="ceremony-modal-award-count">
-                          🏆{m.awards.length + (m.wonInCategory ? 1 : 0)}
-                        </span>
-                      ) : null}
+                      ) : (() => {
+                        // Total Oscars the film won, independent of which
+                        // section it's listed in — otherwise a BP nominee
+                        // that won in alsoWon (e.g. Life Is Beautiful: BP
+                        // nominee, INT winner, + Actor + Score) undercounts
+                        // in the BP row because wonInCategory is false there.
+                        const total =
+                          (m.awards?.length || 0)
+                          + (m.alsoWon?.length || 0)
+                          + (m.won && m.category === 'BP' ? 1 : 0)
+                          + (m.category === 'ANIM' || m.category === 'INT' ? 1 : 0);
+                        return total > 0 ? (
+                          <span className="ceremony-modal-award-count">🏆{total}</span>
+                        ) : null;
+                      })()}
                       {/* Year removed from each row — every film in this modal is
                           from the same year, so the column was pure visual noise. */}
                     </div>

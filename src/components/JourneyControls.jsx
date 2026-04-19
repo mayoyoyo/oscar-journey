@@ -1,8 +1,19 @@
 import React, { useState, useMemo } from 'react';
 import { MOVIES } from '../data/movies';
-import { DEFAULT_FILTERS, ERA_LABELS, CATEGORY_LABELS, GENRE_LABELS, SMART_LABELS } from './SettingsModal';
-import { RUNTIME_LABELS } from '../utils/runtime';
+import { DEFAULT_FILTERS, CATEGORY_LABELS, GENRE_LABELS, SMART_LABELS,
+         JOURNEY_YEAR_MIN, JOURNEY_YEAR_MAX, JOURNEY_RUNTIME_MIN, JOURNEY_RUNTIME_MAX } from './SettingsModal';
+import { readCachedRuntime } from '../utils/runtime';
 import { getTier } from '../utils/tierInfo';
+
+const YEAR_STEP = 1;
+const RUNTIME_STEP = 5;
+
+function formatRuntimeLabel(minutes) {
+  if (minutes < 60) return `${minutes}m`;
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return m === 0 ? `${h}h` : `${h}h ${m}m`;
+}
 
 // Per-tier copy shown in the Canon depth stepper. Mirrors the Film tab's
 // TIER_LEVELS so both surfaces describe the canon threshold identically.
@@ -17,24 +28,9 @@ const TIER_LEVELS = {
 const MIN_SLIDER_TIER = 0;
 const MAX_SLIDER_TIER = 5;
 
-function eraBucketJourney(year) {
-  if (year < 1920) return '1910s';
-  if (year < 1930) return '1920s';
-  if (year < 1940) return '1930s';
-  if (year < 1950) return '1940s';
-  if (year < 1960) return '1950s';
-  if (year < 1970) return '1960s';
-  if (year < 1980) return '70s';
-  if (year < 1991) return '80s';
-  if (year < 2000) return '90s';
-  if (year < 2010) return '00s';
-  if (year < 2020) return '10s';
-  return '20s';
-}
-
 export default function JourneyControls({ filters, onFiltersChange, onReshuffle, eligibleCount, totalCount, profiles, currentProfileId, onSyncJourney, syncedWith, onUnsync }) {
   const [syncTarget, setSyncTarget] = useState('');
-  const [openSections, setOpenSections] = useState({ smart: false, eras: false, categories: false, canon: false, genres: false, runtimes: false });
+  const [openSections, setOpenSections] = useState({ smart: false, years: false, categories: false, canon: false, genres: false, runtimes: false });
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   // Migrate legacy shape (minEssentialTier / old essentialsOnly-hides-Oscars semantic)
@@ -46,7 +42,7 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   const migratedOscarsOnly = filters?.oscarsOnly ?? (legacyTier === 99) ?? DEFAULT_FILTERS.oscarsOnly;
 
   const currentFilters = {
-    eras: { ...DEFAULT_FILTERS.eras, ...(filters?.eras || {}) },
+    yearRange: { ...DEFAULT_FILTERS.yearRange, ...(filters?.yearRange || {}) },
     // Drop stale ESSENTIAL key from saved profiles — Categories no longer governs it.
     categories: (() => {
       const merged = { ...DEFAULT_FILTERS.categories, ...(filters?.categories || {}) };
@@ -54,24 +50,33 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
       return merged;
     })(),
     genres: { ...DEFAULT_FILTERS.genres, ...(filters?.genres || {}) },
-    runtimes: { ...DEFAULT_FILTERS.runtimes, ...(filters?.runtimes || {}) },
+    runtimeRange: { ...DEFAULT_FILTERS.runtimeRange, ...(filters?.runtimeRange || {}) },
     minTier: migratedMinTier,
     oscarsOnly: migratedOscarsOnly,
     essentialsOnly: filters?.essentialsOnly ?? DEFAULT_FILTERS.essentialsOnly,
     smart: { ...DEFAULT_FILTERS.smart, ...(filters?.smart || {}) },
   };
 
+  // Range helpers — one "active" count per slider when it diverges from default.
+  const yearRangeActive =
+    currentFilters.yearRange.min !== DEFAULT_FILTERS.yearRange.min ||
+    currentFilters.yearRange.max !== DEFAULT_FILTERS.yearRange.max;
+  const runtimeRangeActive =
+    currentFilters.runtimeRange.min !== DEFAULT_FILTERS.runtimeRange.min ||
+    currentFilters.runtimeRange.max !== DEFAULT_FILTERS.runtimeRange.max;
+
   // Total count of "non-default" filter selections — shown in the collapsed header.
-  // Only count deviations from DEFAULT_FILTERS, otherwise partially-default filters
-  // (pre-1970s off by default) would be counted as active.
+  // Only count deviations from DEFAULT_FILTERS.
   const activeFilterCount = (() => {
     let n = 0;
-    for (const section of ['eras', 'categories', 'genres', 'runtimes']) {
+    for (const section of ['categories', 'genres']) {
       const def = DEFAULT_FILTERS[section] || {};
       for (const [k, v] of Object.entries(currentFilters[section])) {
         if (v !== def[k]) n++;
       }
     }
+    if (yearRangeActive) n++;
+    if (runtimeRangeActive) n++;
     for (const [k, v] of Object.entries(currentFilters.smart)) {
       if (v !== (DEFAULT_FILTERS.smart[k] ?? false)) n++;
     }
@@ -139,15 +144,6 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
     return true;
   }), [currentFilters.minTier, currentFilters.oscarsOnly, currentFilters.essentialsOnly]);
 
-  const eraCounts = useMemo(() => {
-    const c = {};
-    for (const m of eligiblePool) {
-      const b = eraBucketJourney(m.year);
-      c[b] = (c[b] || 0) + 1;
-    }
-    return c;
-  }, [eligiblePool]);
-
   const categoryCounts = useMemo(() => {
     const c = {};
     for (const m of eligiblePool) {
@@ -158,8 +154,13 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
   }, [eligiblePool]);
 
   const genreCounts = useMemo(() => {
+    // Count primary + altGenres to stay consistent with the OR-semantics of
+    // the genre filter.
     const c = {};
-    for (const m of eligiblePool) c[m.genre] = (c[m.genre] || 0) + 1;
+    for (const m of eligiblePool) {
+      c[m.genre] = (c[m.genre] || 0) + 1;
+      for (const g of (m.altGenres || [])) c[g] = (c[g] || 0) + 1;
+    }
     return c;
   }, [eligiblePool]);
 
@@ -235,10 +236,18 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
         chips.push(`${sectionLabel}: ${active.length}/${entries.length}`);
       }
     };
-    summarize('eras', ERA_LABELS, 'Eras');
+    if (yearRangeActive) {
+      chips.push(`Years: ${currentFilters.yearRange.min}–${currentFilters.yearRange.max}`);
+    }
     summarize('categories', CATEGORY_LABELS, 'Categories');
     summarize('genres', GENRE_LABELS, 'Genres');
-    summarize('runtimes', RUNTIME_LABELS, 'Runtime');
+    if (runtimeRangeActive) {
+      const lo = formatRuntimeLabel(currentFilters.runtimeRange.min);
+      const hi = currentFilters.runtimeRange.max >= JOURNEY_RUNTIME_MAX
+        ? `${formatRuntimeLabel(JOURNEY_RUNTIME_MAX)}+`
+        : formatRuntimeLabel(currentFilters.runtimeRange.max);
+      chips.push(`Runtime: ${lo}–${hi}`);
+    }
 
     if (currentFilters.oscarsOnly) chips.push('Oscars only');
     if (currentFilters.essentialsOnly) chips.push('Essentials only');
@@ -402,9 +411,139 @@ export default function JourneyControls({ filters, onFiltersChange, onReshuffle,
               </div>
 
               {renderSection('cats', 'Categories', 'categories', CATEGORY_LABELS, categoryCounts)}
-              {renderSection('eras', 'Eras', 'eras', ERA_LABELS, eraCounts)}
+
+              {/* Years — dual-thumb range slider (JOURNEY_YEAR_MIN..current).
+                  Mirrors the Film tab's Years slider for UI parity. */}
+              <div className="filter-section">
+                <button className="filter-section-toggle" onClick={() => toggleSection('years')}>
+                  <span className="filter-section-arrow">{openSections.years ? '▾' : '▸'}</span>
+                  <span className="filter-section-label">Years</span>
+                  {yearRangeActive && (
+                    <span className="filter-section-count">
+                      {currentFilters.yearRange.min}–{currentFilters.yearRange.max}
+                    </span>
+                  )}
+                </button>
+                {openSections.years && (
+                  <div className="runtime-slider">
+                    <div className="runtime-slider-values">
+                      <span className="runtime-slider-value">{currentFilters.yearRange.min}</span>
+                      <span className="runtime-slider-sep">–</span>
+                      <span className="runtime-slider-value">{currentFilters.yearRange.max}</span>
+                    </div>
+                    <div className="runtime-slider-track-wrap">
+                      <div className="runtime-slider-track" />
+                      <div
+                        className="runtime-slider-range"
+                        style={{
+                          left: `${((currentFilters.yearRange.min - JOURNEY_YEAR_MIN) / (JOURNEY_YEAR_MAX - JOURNEY_YEAR_MIN)) * 100}%`,
+                          right: `${((JOURNEY_YEAR_MAX - currentFilters.yearRange.max) / (JOURNEY_YEAR_MAX - JOURNEY_YEAR_MIN)) * 100}%`,
+                        }}
+                      />
+                      <input
+                        type="range"
+                        className="runtime-slider-input runtime-slider-input-min"
+                        min={JOURNEY_YEAR_MIN}
+                        max={JOURNEY_YEAR_MAX}
+                        step={YEAR_STEP}
+                        value={currentFilters.yearRange.min}
+                        onChange={e => {
+                          const v = Math.min(Number(e.target.value), currentFilters.yearRange.max - YEAR_STEP);
+                          onFiltersChange({ ...currentFilters, yearRange: { ...currentFilters.yearRange, min: v } });
+                        }}
+                        aria-label="Earliest year"
+                      />
+                      <input
+                        type="range"
+                        className="runtime-slider-input runtime-slider-input-max"
+                        min={JOURNEY_YEAR_MIN}
+                        max={JOURNEY_YEAR_MAX}
+                        step={YEAR_STEP}
+                        value={currentFilters.yearRange.max}
+                        onChange={e => {
+                          const v = Math.max(Number(e.target.value), currentFilters.yearRange.min + YEAR_STEP);
+                          onFiltersChange({ ...currentFilters, yearRange: { ...currentFilters.yearRange, max: v } });
+                        }}
+                        aria-label="Latest year"
+                      />
+                    </div>
+                    <div className="runtime-slider-axis">
+                      <span>{JOURNEY_YEAR_MIN}</span>
+                      <span>{JOURNEY_YEAR_MAX}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {renderSection('genres', 'Genres', 'genres', GENRE_LABELS, genreCounts)}
-              {renderSection('runtimes', 'Runtime', 'runtimes', RUNTIME_LABELS)}
+
+              {/* Runtime — dual-thumb range slider. Open-ended at upper bound. */}
+              <div className="filter-section">
+                <button className="filter-section-toggle" onClick={() => toggleSection('runtimes')}>
+                  <span className="filter-section-arrow">{openSections.runtimes ? '▾' : '▸'}</span>
+                  <span className="filter-section-label">Runtime</span>
+                  {runtimeRangeActive && (
+                    <span className="filter-section-count">
+                      {formatRuntimeLabel(currentFilters.runtimeRange.min)}–
+                      {currentFilters.runtimeRange.max >= JOURNEY_RUNTIME_MAX ? '∞' : formatRuntimeLabel(currentFilters.runtimeRange.max)}
+                    </span>
+                  )}
+                </button>
+                {openSections.runtimes && (
+                  <div className="runtime-slider">
+                    <div className="runtime-slider-values">
+                      <span className="runtime-slider-value">{formatRuntimeLabel(currentFilters.runtimeRange.min)}</span>
+                      <span className="runtime-slider-sep">–</span>
+                      <span className="runtime-slider-value">
+                        {currentFilters.runtimeRange.max >= JOURNEY_RUNTIME_MAX
+                          ? `${formatRuntimeLabel(JOURNEY_RUNTIME_MAX)}+`
+                          : formatRuntimeLabel(currentFilters.runtimeRange.max)}
+                      </span>
+                    </div>
+                    <div className="runtime-slider-track-wrap">
+                      <div className="runtime-slider-track" />
+                      <div
+                        className="runtime-slider-range"
+                        style={{
+                          left: `${((currentFilters.runtimeRange.min - JOURNEY_RUNTIME_MIN) / (JOURNEY_RUNTIME_MAX - JOURNEY_RUNTIME_MIN)) * 100}%`,
+                          right: `${((JOURNEY_RUNTIME_MAX - currentFilters.runtimeRange.max) / (JOURNEY_RUNTIME_MAX - JOURNEY_RUNTIME_MIN)) * 100}%`,
+                        }}
+                      />
+                      <input
+                        type="range"
+                        className="runtime-slider-input runtime-slider-input-min"
+                        min={JOURNEY_RUNTIME_MIN}
+                        max={JOURNEY_RUNTIME_MAX}
+                        step={RUNTIME_STEP}
+                        value={currentFilters.runtimeRange.min}
+                        onChange={e => {
+                          const v = Math.min(Number(e.target.value), currentFilters.runtimeRange.max - RUNTIME_STEP);
+                          onFiltersChange({ ...currentFilters, runtimeRange: { ...currentFilters.runtimeRange, min: v } });
+                        }}
+                        aria-label="Minimum runtime"
+                      />
+                      <input
+                        type="range"
+                        className="runtime-slider-input runtime-slider-input-max"
+                        min={JOURNEY_RUNTIME_MIN}
+                        max={JOURNEY_RUNTIME_MAX}
+                        step={RUNTIME_STEP}
+                        value={currentFilters.runtimeRange.max}
+                        onChange={e => {
+                          const v = Math.max(Number(e.target.value), currentFilters.runtimeRange.min + RUNTIME_STEP);
+                          onFiltersChange({ ...currentFilters, runtimeRange: { ...currentFilters.runtimeRange, max: v } });
+                        }}
+                        aria-label="Maximum runtime"
+                      />
+                    </div>
+                    <div className="runtime-slider-axis">
+                      <span>{formatRuntimeLabel(JOURNEY_RUNTIME_MIN)}</span>
+                      <span>{formatRuntimeLabel(JOURNEY_RUNTIME_MAX)}+</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {renderSection('smart', 'Smart Filters', 'smart', SMART_LABELS)}
             </div>
           )}

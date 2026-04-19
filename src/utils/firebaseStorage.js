@@ -72,6 +72,7 @@ export async function getOrCreateElo(movieKey, movieData) {
     matchCount: 0,
     won: movieData.won ?? false,
     genre: movieData.genre ?? null,
+    altGenres: movieData.altGenres ?? [],
     category: movieData.category ?? null,
   };
   await setDoc(ref, newDoc);

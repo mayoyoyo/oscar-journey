@@ -2,8 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData, tidyPlot } from '../utils/omdb';
 import { extractDominantColor } from '../utils/colorExtract';
 import { MovieBadges } from './Badges';
-import { getGlobalRank, getPersonalRank } from '../utils/eloRanks';
-import LanguagePill from './LanguagePill';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
 import StarPicker from './StarPicker';
@@ -84,10 +82,9 @@ function pickSkipMessage(movie) {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile, onOpenSeriesPreview, watchedSet }) {
+export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile, onOpenSeriesPreview, watchedSet }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [globalRank, setGlobalRank] = useState(null);
 
   useEffect(() => {
     if (!movie) return;
@@ -109,20 +106,6 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
     });
     return () => { cancelled = true; };
   }, [movie?.title, movie?.year]);
-
-  // Global rank comes from a session-cached Firestore pull — after the
-  // first FilmCard mount, subsequent lookups are synchronous (same cache
-  // shared with FilmDetailModal).
-  useEffect(() => {
-    if (!movie?.id) return;
-    let cancelled = false;
-    setGlobalRank(null);
-    getGlobalRank(movie.id).then(r => {
-      if (cancelled) return;
-      setGlobalRank(r);
-    });
-    return () => { cancelled = true; };
-  }, [movie?.id]);
 
   const [ambientColor, setAmbientColor] = useState(null);
 
@@ -208,48 +191,46 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             return <span className="film-year-runtime"> · {pretty}</span>;
           })()}
           <TierPips movie={movie} variant="compact" />
-          <LanguagePill movie={movie} />
         </div>
         <MovieBadges movie={movie} />
 
-        <div className="film-pills-row">
+        {/* Metrics row — same tile style as FilmDetailModal so the Journey
+            card and the modal read identically. Clash rank is intentionally
+            omitted here (same reason user-avg is omitted — kept for the
+            modal's deeper view). */}
+        <div className="film-detail-metrics">
           {omdbData?.rating && (() => {
             const imdbId = IMDB_IDS[movie.id];
             const imdbUrl = imdbId
               ? `https://www.imdb.com/title/${imdbId}/`
               : `https://www.imdb.com/find/?q=${encodeURIComponent(movie.title + ' ' + movie.year)}`;
             return (
-              <a className="film-imdb-rating" href={imdbUrl} target="_blank" rel="noopener noreferrer">★ {omdbData.rating} <span className="rating-source">IMDb</span></a>
+              <a className="metric-item metric-imdb-link" href={imdbUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                <span className="metric-value">★ {omdbData.rating}</span>
+                <span className="metric-label">IMDb</span>
+              </a>
             );
           })()}
-          <a className="film-trailer-btn"
+          <a className="metric-item metric-trailer"
             href={`https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + ' ' + movie.year + ' official trailer')}`}
             target="_blank" rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
-            <svg className="film-trailer-icon" viewBox="0 0 28 20" width="14" height="10">
+            <span className="metric-value"><svg viewBox="0 0 28 20" width="22" height="16" style={{flexShrink:0}}>
               <rect rx="4" ry="4" width="28" height="20" fill="#FF0000"/>
               <polygon points="11,4 11,16 21,10" fill="#FFF"/>
-            </svg>
-            Trailer
+            </svg></span>
+            <span className="metric-label">Trailer</span>
           </a>
-          <a className="film-justwatch-btn"
+          <a className="metric-item metric-justwatch"
             href={justWatchUrl(movie.title)}
             target="_blank" rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
-            📺 Where to Watch
+            <span className="metric-value">📺</span>
+            <span className="metric-label">Watch</span>
           </a>
         </div>
-        {(() => {
-          const personalRank = getPersonalRank(personalElo, movie.id);
-          if (personalRank == null && globalRank == null) return null;
-          return (
-            <div className="film-elo-rating">
-              ⚔️ {personalRank != null ? `#${personalRank}` : '—'}
-              <span className="film-elo-rating-sub"> ({globalRank != null ? `#${globalRank}` : '—'})</span>
-              <span className="rating-source">My Rank <span className="rating-source-sub">(Global)</span></span>
-            </div>
-          );
-        })()}
         {(() => {
           // Directed by — prefer hand-curated directors.json over OMDb (which
           // over-credits committees on some older / animated films).

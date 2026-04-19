@@ -111,8 +111,9 @@ export default function SeriesFilmPreview({
   const trailerUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(film.title + ' ' + film.year + ' official trailer')}`;
 
   // Dedupe mapped genres — TMDB may return both "Action" and "Adventure",
-  // both of which fold to the catalog's "Action / Adventure" pill; same for
-  // "Science Fiction" + "Fantasy" → "Sci-Fi / Fantasy".
+  // which both fold to the catalog's "Action" pill. Fantasy and Sci-Fi are
+  // now separate catalog pills, so "Science Fiction" + "Fantasy" yield two
+  // distinct pills (reflects the multi-genre split).
   const genrePills = film.genres?.length
     ? [...new Set(film.genres.map((g) => matchCatalogGenre(g) || g))]
     : [];
@@ -279,27 +280,29 @@ function formatRuntime(mins) {
   return h > 0 ? `${h}h${rem ? ` ${rem}m` : ''}` : `${rem}m`;
 }
 
-// Map a TMDB genre name onto the catalog's condensed GENRE_LABELS form
-// ("Sci-Fi / Fantasy", "Action / Adventure") so the pill reads like the ones
-// in FilmDetailModal. Returns null for genres we don't want to fold, so the
-// raw TMDB name is used.
+// Map a TMDB genre name onto the catalog's GENRE_LABELS form so the pill
+// reads like the ones in FilmDetailModal. Returns null for genres we don't
+// want to fold, so the raw TMDB name is used.
 const TMDB_TO_CATALOG_GENRE = {
-  'Science Fiction': 'Sci-Fi / Fantasy',
-  'Fantasy': 'Sci-Fi / Fantasy',
-  'Action': 'Action / Adventure',
-  'Adventure': 'Action / Adventure',
-  'Thriller': 'Thriller / Suspense',
-  'Mystery': 'Thriller / Suspense',
+  'Science Fiction': 'Sci-Fi',
+  'Fantasy': 'Fantasy',
+  'Action': 'Action',
+  'Adventure': 'Action',
+  'Thriller': 'Thriller',
+  'Mystery': 'Thriller',
+  'Horror': 'Horror',
   'Crime': 'Crime / Noir',
   'War': 'War',
-  'History': 'Historical / Period',
+  'History': 'Historical',
   'Drama': 'Drama',
   'Romance': 'Romance',
-  'Comedy': 'Comedy / Light Drama',
+  'Comedy': 'Comedy',
   'Music': 'Musical',
-  'Animation': 'Animation / Family',
-  'Family': 'Animation / Family',
-  'Documentary': 'Indie / Arthouse',
+  'Family': 'Family',
+  // Animation and Documentary are intentionally unmapped — they're modes,
+  // not catalog genres. TMDB "Animation" / "Documentary" tokens fall through
+  // matchCatalogGenre() and render as raw pills for out-of-catalog series
+  // members (accurate labeling over a stretched fit).
 };
 
 function matchCatalogGenre(tmdbGenre) {

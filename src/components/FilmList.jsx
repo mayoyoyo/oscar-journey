@@ -8,7 +8,7 @@ import { LanguageFlag } from './LanguagePill';
 // left column before the title. Flip to false to revert to the inline layout.
 const OPTION_A_LAYOUT = true;
 import { ratingKey } from '../utils/storage';
-import { readCachedRuntime, runtimeBucket, prefetchRuntimes, RUNTIME_LABELS } from '../utils/runtime';
+import { readCachedRuntime, prefetchRuntimes } from '../utils/runtime';
 import { CATEGORY_LABELS } from './SettingsModal';
 import { getTier } from '../utils/tierInfo';
 import { isInternational, isAnimated, isDocumentary, isSilent, isBlackAndWhite, matchesCategoryFilter } from '../utils/filmAttributes';
@@ -316,7 +316,13 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !!q || getTier(m) >= (filters.minTier ?? 0))
       .filter(m => !!q || !filters.oscarsOnly || m.category !== 'ESSENTIAL')
       .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
-      .filter(m => filters.genres[m.genre] !== false)
+      // OR-semantics over primary + altGenres: a film passes if ANY of its
+      // genres is checked. Matches the multi-label reality — ticking "Comedy"
+      // should surface The Great Dictator even when War stays unchecked.
+      .filter(m => {
+        const allGenres = [m.genre, ...(m.altGenres || [])];
+        return allGenres.some(g => filters.genres[g] !== false);
+      })
       .filter(m => {
         const mins = runtimeMap.get(m.id);
         // Films with no fetched runtime always pass — avoids hiding the long
@@ -401,8 +407,14 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   }, [eligiblePool]);
 
   const genreCounts = useMemo(() => {
+    // Count primary + altGenres — the sidebar number reads as "films tagged X,"
+    // which exceeds the film total on a multi-label catalog (that's truthful,
+    // not a bug).
     const c = {};
-    for (const m of eligiblePool) c[m.genre] = (c[m.genre] || 0) + 1;
+    for (const m of eligiblePool) {
+      c[m.genre] = (c[m.genre] || 0) + 1;
+      for (const g of (m.altGenres || [])) c[g] = (c[g] || 0) + 1;
+    }
     return c;
   }, [eligiblePool]);
 

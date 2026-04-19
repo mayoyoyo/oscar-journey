@@ -142,11 +142,12 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
   const filteredWatched = useMemo(() => {
     if (!searchQuery.trim()) return sortedWatched;
     const q = searchQuery.toLowerCase().trim();
-    return sortedWatched.filter(m =>
-      m.title.toLowerCase().includes(q) ||
-      String(m.year).includes(q) ||
-      (GENRE_LABELS[m.genre] || '').toLowerCase().includes(q)
-    );
+    return sortedWatched.filter(m => {
+      if (m.title.toLowerCase().includes(q)) return true;
+      if (String(m.year).includes(q)) return true;
+      const genres = [m.genre, ...(m.altGenres || [])];
+      return genres.some(g => (GENRE_LABELS[g] || '').toLowerCase().includes(q));
+    });
   }, [sortedWatched, searchQuery]);
 
   // Compute summary stats (respects focusRater when set)

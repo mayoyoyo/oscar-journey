@@ -2,21 +2,27 @@ import React, { useState } from 'react';
 import { AVATAR_EMOJIS } from '../data/avatars';
 import { GENRE_LABELS } from '../data/movies';
 
+// Dual-thumb slider bounds for Journey filters — mirrors the Film tab's
+// ranges. Current year is recomputed at module load so the upper bound keeps
+// up with new ceremonies without a code change.
+const JOURNEY_YEAR_MIN = 1920;
+const JOURNEY_YEAR_MAX = new Date().getFullYear();
+const JOURNEY_RUNTIME_MIN = 30;
+const JOURNEY_RUNTIME_MAX = 300;
+
 const DEFAULT_FILTERS = {
-  // Pre-1970 eras default OFF — most users want the modern era by default.
-  // All 12 buckets are present so existing profiles with saved state merge cleanly;
-  // users can opt into earlier decades via the filter panel.
-  eras: {
-    '1910s': false, '1920s': false, '1930s': false, '1940s': false, '1950s': false, '1960s': false,
-    '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true,
-  },
+  // Modern-era default: 1970 → present. Mirrors the old decade-checkbox
+  // default where pre-1970 was unchecked. Users can widen via the slider.
+  yearRange: { min: 1970, max: JOURNEY_YEAR_MAX },
   // Categories only governs Oscar-eligible films (BP nominees, INT/ANIM
   // broadly defined). Essentials bypass Categories entirely — they're gated
   // by Canon depth (tier + oscarsOnly / essentialsOnly).
   // Additive attribute filter — any combination. Unchecked = no restriction.
   categories: { INT: false, ANIM: false, DOC: false, SILENT: false, BW: false },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
-  runtimes: { short: true, medium: true, long: true },
+  // Runtime in minutes. min 30 / max 300 matches the Film tab. At the upper
+  // bound the slider means "and up" (open-ended).
+  runtimeRange: { min: JOURNEY_RUNTIME_MIN, max: JOURNEY_RUNTIME_MAX },
   // Unified canon-tier floor applied to ALL films via getTier() — OSCAR /
   // OSCAR_NOM counts as a canon list for BP / INT / ANIM, so one knob gates
   // the whole catalog. 1 = everything, 2 = canon threshold, up to
@@ -39,21 +45,6 @@ const SMART_LABELS = {
   unwatchedByAll: 'Unwatched by everyone',
 };
 
-const ERA_LABELS = {
-  '1910s': '1910s',
-  '1920s': '1920s',
-  '1930s': '1930s',
-  '1940s': '1940s',
-  '1950s': '1950s',
-  '1960s': '1960s',
-  '70s': '1970s',
-  '80s': '1980s',
-  '90s': '1990s',
-  '00s': '2000s',
-  '10s': '2010s',
-  '20s': '2020s',
-};
-
 // Note: ESSENTIAL is intentionally absent. Essentials are governed by Canon
 // depth (tier + oscarsOnly / essentialsOnly), not Categories. INT and ANIM
 // use broad predicates (any non-English / any animated) in FilmList.
@@ -65,7 +56,8 @@ const CATEGORY_LABELS = {
   BW: 'Black & White',
 };
 
-export { DEFAULT_FILTERS, ERA_LABELS, GENRE_LABELS, CATEGORY_LABELS, SMART_LABELS };
+export { DEFAULT_FILTERS, GENRE_LABELS, CATEGORY_LABELS, SMART_LABELS };
+export { JOURNEY_YEAR_MIN, JOURNEY_YEAR_MAX, JOURNEY_RUNTIME_MIN, JOURNEY_RUNTIME_MAX };
 
 export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, checklistMode, onChecklistModeChange, hideDailyOscar, onHideDailyOscarChange, privateProfile, onPrivateProfileChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);

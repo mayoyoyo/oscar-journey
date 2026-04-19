@@ -73,6 +73,10 @@ export function BadgeGenre({ genre }) {
   return <span className="badge-genre">{GENRE_LABELS[genre] || genre}</span>;
 }
 
+export function BadgeGenreAlt({ genre }) {
+  return <span className="badge-genre badge-genre-alt">{GENRE_LABELS[genre] || genre}</span>;
+}
+
 export function BadgeInt() {
   return <span className="badge-int">🌍 International Feature</span>;
 }
@@ -150,19 +154,30 @@ export function MovieBadges({ movie, small = false, excludeOscars = false }) {
   const wonANIM = movie.category === 'ANIM' || alsoWon.includes('ANIM');
   const hasWinnerPill = wonBP || wonINT || wonANIM;
   const categoryPills = activeCategories(movie);
+  const altGenres = movie.altGenres || [];
   if (!hasWinnerPill && !categoryPills.length && !movie.genre) return null;
-  // Modal / card row order: winner pill(s) → category pills → genre.
-  // Category pills sit before genre so the more specific attribute signal
-  // (Doc / Silent / B&W / Animated) reads before the broad genre bucket.
+  // Two-row layout for modal / card:
+  //   Row 1 — winner speech pill(s) alone (only when the film won something).
+  //   Row 2 — language → category pills → primary genre → altGenres.
+  // altGenres render with reduced visual weight (see .badge-genre-alt) so the
+  // primary still leads the descriptor row.
   return (
-    <div className="badges">
-      {wonBP   && <BadgeWinner movie={movie} kind="bp"   />}
-      {wonINT  && <BadgeWinner movie={movie} kind="int"  />}
-      {wonANIM && <BadgeWinner movie={movie} kind="anim" />}
-      {categoryPills.map(c => (
-        <span key={c.key} className={`badge-category ${c.cls}`}>{c.label}</span>
-      ))}
-      {movie.genre && <BadgeGenre genre={movie.genre} />}
-    </div>
+    <>
+      {hasWinnerPill && (
+        <div className="badges badges-winners">
+          {wonBP   && <BadgeWinner movie={movie} kind="bp"   />}
+          {wonINT  && <BadgeWinner movie={movie} kind="int"  />}
+          {wonANIM && <BadgeWinner movie={movie} kind="anim" />}
+        </div>
+      )}
+      <div className="badges">
+        <LanguagePill movie={movie} />
+        {categoryPills.map(c => (
+          <span key={c.key} className={`badge-category ${c.cls}`}>{c.label}</span>
+        ))}
+        {movie.genre && <BadgeGenre genre={movie.genre} />}
+        {altGenres.map(g => <BadgeGenreAlt key={g} genre={g} />)}
+      </div>
+    </>
   );
 }

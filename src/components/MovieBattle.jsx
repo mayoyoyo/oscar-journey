@@ -20,8 +20,15 @@ function getPairingWeights(numWatched) {
 }
 
 function diversityScore(a, b) {
+  // Genre diversity under multi-genre: +1 when the two films share no genres
+  // at all (primary or alt). Prevents the pairer from thinking two comedies
+  // are "diverse" just because one has a War altGenre and the other has a
+  // Romance altGenre.
   let score = 0;
-  if (a.genre !== b.genre) score += 1;
+  const genresA = new Set([a.genre, ...(a.altGenres || [])]);
+  const genresB = new Set([b.genre, ...(b.altGenres || [])]);
+  const genreOverlap = [...genresA].some(g => genresB.has(g));
+  if (!genreOverlap) score += 1;
   if (Math.abs(a.year - b.year) > 15) score += 1;
   if (a.won !== b.won) score += 0.5;
   return score;
@@ -137,9 +144,16 @@ function selectPair(watchedMovies, personalElo, recentMovies, pairHistory) {
 }
 
 function getMatchupLabel(movieA, movieB) {
-  if (movieA.genre !== movieB.genre && Math.abs(movieA.year - movieB.year) > 20) return 'Cross-Era Clash';
-  if (movieA.genre !== movieB.genre) return 'Genre Clash';
-  if (Math.abs(movieA.year - movieB.year) > 20) return 'Decade Duel';
+  // Under multi-genre, a "Genre Clash" means the two films share NO genres at
+  // all — primary or alt. If either film's altGenres contain the other's
+  // primary (or vice versa), they're not really clashing on genre.
+  const genresA = new Set([movieA.genre, ...(movieA.altGenres || [])]);
+  const genresB = new Set([movieB.genre, ...(movieB.altGenres || [])]);
+  const genreOverlap = [...genresA].some(g => genresB.has(g));
+  const yearGap = Math.abs(movieA.year - movieB.year) > 20;
+  if (!genreOverlap && yearGap) return 'Cross-Era Clash';
+  if (!genreOverlap) return 'Genre Clash';
+  if (yearGap) return 'Decade Duel';
   if (movieA.won && movieB.won) return 'Winner vs Winner';
   if (movieA.won !== movieB.won) return 'Winner vs Nominee';
   return null;

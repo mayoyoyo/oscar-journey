@@ -16,13 +16,60 @@ export function isInternational(movie) {
   return LANGUAGES[movie.id] != null;
 }
 
-// Animated = Oscar ANIM category, alsoWon ANIM, or genre code 'A' (Animation
-// / Family) — catches films like Toy Story that predate the ANIM Oscar but
-// are clearly animated.
+// Animated — Oscar ANIM category, alsoWon ANIM, or curated ID set for films
+// that predate the Animated Feature Oscar (introduced in 2001) or are
+// otherwise outside the ANIM winner pool. Mirrors the DOC_IDS pattern —
+// animation is a medium, not a genre, so we enumerate.
+// Note: Babe (1995) is intentionally excluded — live-action with
+// animatronic/CGI animals, not an animated film.
+const ANIM_IDS = new Set([
+  'snow-white-and-the-seven-dwarfs-1937',
+  'fantasia-1940',
+  'grave-of-the-fireflies-1988',
+  'my-neighbor-totoro-1988',
+  'beauty-and-the-beast-1991',
+  'the-lion-king-1994',
+  'toy-story-1995',
+  'princess-mononoke-1997',
+  'the-iron-giant-1999',
+  'shrek-2001',
+  'spirited-away-2002',
+  'finding-nemo-2003',
+  'the-incredibles-2004',
+  'howls-moving-castle-2004',
+  'wallace-and-gromit-the-curse-of-the-were-rabbit-2005',
+  'happy-feet-2006',
+  'ratatouille-2007',
+  'wall-e-2008',
+  'up-2009',
+  'fantastic-mr-fox-2009',
+  'mary-and-max-2009',
+  'how-to-train-your-dragon-2010',
+  'toy-story-3-2010',
+  'rango-2011',
+  'brave-2012',
+  'frozen-2013',
+  'big-hero-6-2014',
+  'inside-out-2015',
+  'zootopia-2016',
+  'your-name-2016',
+  'coco-2017',
+  'spider-man-into-the-spider-verse-2018',
+  'toy-story-4-2019',
+  'soul-2020',
+  'encanto-2021',
+  'marcel-the-shell-with-shoes-on-2021',
+  'guillermo-del-toros-pinocchio-2022',
+  'the-boy-and-the-heron-2023',
+  'spider-man-across-the-spider-verse-2023',
+  'flow-2024',
+  'the-wild-robot-2024',
+  'kpop-demon-hunters-2025',
+]);
 export function isAnimated(movie) {
   if (movie.category === 'ANIM') return true;
   if ((movie.alsoWon || []).includes('ANIM')) return true;
-  return movie.genre === 'A';
+  return ANIM_IDS.has(movie.id);
 }
 
 // Documentary — curated list. Docs don't have a distinguishing genre code,

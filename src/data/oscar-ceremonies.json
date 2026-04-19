@@ -1,0 +1,1240 @@
+{
+  "3": {
+    "bpNominees": [
+      {
+        "title": "All Quiet on the Western Front",
+        "year": 1930,
+        "id": "all-quiet-on-the-western-front-1930",
+        "won": true
+      },
+      {
+        "title": "The Big House",
+        "year": 1930,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Disraeli",
+        "year": 1930,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Divorcee",
+        "year": 1930,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Love Parade",
+        "year": 1930,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "7": {
+    "bpNominees": [
+      {
+        "title": "It Happened One Night",
+        "year": 1934,
+        "id": "it-happened-one-night-1934",
+        "won": true
+      },
+      {
+        "title": "The Barretts of Wimpole Street",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Cleopatra",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Flirtation Walk",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Gay Divorcee",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Here Comes the Navy",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The House of Rothschild",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Imitation of Life",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "One Night of Love",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Thin Man",
+        "year": 1934,
+        "id": "the-thin-man-1934",
+        "won": false
+      },
+      {
+        "title": "Viva Villa!",
+        "year": 1934,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The White Parade",
+        "year": 1934,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "10": {
+    "bpNominees": [
+      {
+        "title": "The Life of Emile Zola",
+        "year": 1937,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "The Awful Truth",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Captains Courageous",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Dead End",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Good Earth",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "In Old Chicago",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Lost Horizon",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "One Hundred Men and a Girl",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Stage Door",
+        "year": 1937,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "A Star Is Born",
+        "year": 1937,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "11": {
+    "bpNominees": [
+      {
+        "title": "You Can't Take It with You",
+        "year": 1938,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "The Adventures of Robin Hood",
+        "year": 1938,
+        "id": "the-adventures-of-robin-hood-1938",
+        "won": false
+      },
+      {
+        "title": "Alexander's Ragtime Band",
+        "year": 1938,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Boys Town",
+        "year": 1938,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Citadel",
+        "year": 1938,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Four Daughters",
+        "year": 1938,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "La Grande Illusion",
+        "year": 1938,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Jezebel",
+        "year": 1938,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Pygmalion",
+        "year": 1938,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Test Pilot",
+        "year": 1938,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "12": {
+    "bpNominees": [
+      {
+        "title": "Gone with the Wind",
+        "year": 1939,
+        "id": "gone-with-the-wind-1939",
+        "won": true
+      },
+      {
+        "title": "Dark Victory",
+        "year": 1939,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Goodbye, Mr. Chips",
+        "year": 1939,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Love Affair",
+        "year": 1939,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Mr. Smith Goes to Washington",
+        "year": 1939,
+        "id": "mr-smith-goes-to-washington-1939",
+        "won": false
+      },
+      {
+        "title": "Ninotchka",
+        "year": 1939,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Of Mice and Men",
+        "year": 1939,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Stagecoach",
+        "year": 1939,
+        "id": "stagecoach-1939",
+        "won": false
+      },
+      {
+        "title": "The Wizard of Oz",
+        "year": 1939,
+        "id": "the-wizard-of-oz-1939",
+        "won": false
+      },
+      {
+        "title": "Wuthering Heights",
+        "year": 1939,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "13": {
+    "bpNominees": [
+      {
+        "title": "Rebecca",
+        "year": 1940,
+        "id": "rebecca-1940",
+        "won": true
+      },
+      {
+        "title": "All This, and Heaven Too",
+        "year": 1940,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Foreign Correspondent",
+        "year": 1940,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Grapes of Wrath",
+        "year": 1940,
+        "id": "the-grapes-of-wrath-1940",
+        "won": false
+      },
+      {
+        "title": "The Great Dictator",
+        "year": 1940,
+        "id": "the-great-dictator-1940",
+        "won": false
+      },
+      {
+        "title": "Kitty Foyle",
+        "year": 1940,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Letter",
+        "year": 1940,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Long Voyage Home",
+        "year": 1940,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Our Town",
+        "year": 1940,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Philadelphia Story",
+        "year": 1940,
+        "id": "the-philadelphia-story-1940",
+        "won": false
+      }
+    ]
+  },
+  "14": {
+    "bpNominees": [
+      {
+        "title": "How Green Was My Valley",
+        "year": 1941,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "Blossoms in the Dust",
+        "year": 1941,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Citizen Kane",
+        "year": 1941,
+        "id": "citizen-kane-1941",
+        "won": false
+      },
+      {
+        "title": "Here Comes Mr. Jordan",
+        "year": 1941,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Hold Back the Dawn",
+        "year": 1941,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Little Foxes",
+        "year": 1941,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Maltese Falcon",
+        "year": 1941,
+        "id": "the-maltese-falcon-1941",
+        "won": false
+      },
+      {
+        "title": "One Foot in Heaven",
+        "year": 1941,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Sergeant York",
+        "year": 1941,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Suspicion",
+        "year": 1941,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "15": {
+    "bpNominees": [
+      {
+        "title": "Mrs. Miniver",
+        "year": 1942,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "49th Parallel",
+        "year": 1942,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Kings Row",
+        "year": 1942,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Magnificent Ambersons",
+        "year": 1942,
+        "id": "the-magnificent-ambersons-1942",
+        "won": false
+      },
+      {
+        "title": "The Pied Piper",
+        "year": 1942,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Pride of the Yankees",
+        "year": 1942,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Random Harvest",
+        "year": 1942,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Talk of the Town",
+        "year": 1942,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Wake Island",
+        "year": 1942,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Yankee Doodle Dandy",
+        "year": 1942,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "16": {
+    "bpNominees": [
+      {
+        "title": "Casablanca",
+        "year": 1943,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "For Whom the Bell Tolls",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Heaven Can Wait",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Human Comedy",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "In Which We Serve",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Madame Curie",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The More the Merrier",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Ox-Bow Incident",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Song of Bernadette",
+        "year": 1943,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Watch on the Rhine",
+        "year": 1943,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "17": {
+    "bpNominees": [
+      {
+        "title": "Going My Way",
+        "year": 1944,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "Double Indemnity",
+        "year": 1944,
+        "id": "double-indemnity-1944",
+        "won": false
+      },
+      {
+        "title": "Gaslight",
+        "year": 1944,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Since You Went Away",
+        "year": 1944,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Wilson",
+        "year": 1944,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "18": {
+    "bpNominees": [
+      {
+        "title": "The Lost Weekend",
+        "year": 1945,
+        "id": "the-lost-weekend-1945",
+        "won": true
+      },
+      {
+        "title": "Anchors Aweigh",
+        "year": 1945,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Bells of St. Mary's",
+        "year": 1945,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Mildred Pierce",
+        "year": 1945,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Spellbound",
+        "year": 1945,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "19": {
+    "bpNominees": [
+      {
+        "title": "The Best Years of Our Lives",
+        "year": 1946,
+        "id": "the-best-years-of-our-lives-1946",
+        "won": true
+      },
+      {
+        "title": "Henry V",
+        "year": 1946,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "It's a Wonderful Life",
+        "year": 1946,
+        "id": "its-a-wonderful-life-1946",
+        "won": false
+      },
+      {
+        "title": "The Razor's Edge",
+        "year": 1946,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Yearling",
+        "year": 1946,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "21": {
+    "bpNominees": [
+      {
+        "title": "Hamlet",
+        "year": 1948,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "Johnny Belinda",
+        "year": 1948,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Red Shoes",
+        "year": 1948,
+        "id": "the-red-shoes-1948",
+        "won": false
+      },
+      {
+        "title": "The Snake Pit",
+        "year": 1948,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Treasure of the Sierra Madre",
+        "year": 1948,
+        "id": "the-treasure-of-the-sierra-madre-1948",
+        "won": false
+      }
+    ]
+  },
+  "23": {
+    "bpNominees": [
+      {
+        "title": "All About Eve",
+        "year": 1950,
+        "id": "all-about-eve-1950",
+        "won": true
+      },
+      {
+        "title": "Born Yesterday",
+        "year": 1950,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Father of the Bride",
+        "year": 1950,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "King Solomon's Mines",
+        "year": 1950,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Sunset Boulevard",
+        "year": 1950,
+        "id": "sunset-boulevard-1950",
+        "won": false
+      }
+    ]
+  },
+  "24": {
+    "bpNominees": [
+      {
+        "title": "An American in Paris",
+        "year": 1951,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "Decision Before Dawn",
+        "year": 1951,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "A Place in the Sun",
+        "year": 1951,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Quo Vadis",
+        "year": 1951,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "A Streetcar Named Desire",
+        "year": 1951,
+        "id": "a-streetcar-named-desire-1951",
+        "won": false
+      }
+    ]
+  },
+  "25": {
+    "bpNominees": [
+      {
+        "title": "The Greatest Show on Earth",
+        "year": 1952,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "High Noon",
+        "year": 1952,
+        "id": "high-noon-1952",
+        "won": false
+      },
+      {
+        "title": "Ivanhoe",
+        "year": 1952,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Moulin Rouge",
+        "year": 1952,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Quiet Man",
+        "year": 1952,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "26": {
+    "bpNominees": [
+      {
+        "title": "From Here to Eternity",
+        "year": 1953,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "Julius Caesar",
+        "year": 1953,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Robe",
+        "year": 1953,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Roman Holiday",
+        "year": 1953,
+        "id": "roman-holiday-1953",
+        "won": false
+      },
+      {
+        "title": "Shane",
+        "year": 1953,
+        "id": "shane-1953",
+        "won": false
+      }
+    ]
+  },
+  "27": {
+    "bpNominees": [
+      {
+        "title": "On the Waterfront",
+        "year": 1954,
+        "id": "on-the-waterfront-1954",
+        "won": true
+      },
+      {
+        "title": "The Caine Mutiny",
+        "year": 1954,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Country Girl",
+        "year": 1954,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Seven Brides for Seven Brothers",
+        "year": 1954,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Three Coins in the Fountain",
+        "year": 1954,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "28": {
+    "bpNominees": [
+      {
+        "title": "Marty",
+        "year": 1955,
+        "id": "marty-1955",
+        "won": true
+      },
+      {
+        "title": "Love Is a Many-Splendored Thing",
+        "year": 1955,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Mister Roberts",
+        "year": 1955,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Picnic",
+        "year": 1955,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Rose Tattoo",
+        "year": 1955,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "30": {
+    "bpNominees": [
+      {
+        "title": "The Bridge on the River Kwai",
+        "year": 1957,
+        "id": "the-bridge-on-the-river-kwai-1957",
+        "won": true
+      },
+      {
+        "title": "12 Angry Men",
+        "year": 1957,
+        "id": "12-angry-men-1957",
+        "won": false
+      },
+      {
+        "title": "Peyton Place",
+        "year": 1957,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Sayonara",
+        "year": 1957,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Witness for the Prosecution",
+        "year": 1957,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "32": {
+    "bpNominees": [
+      {
+        "title": "Ben-Hur",
+        "year": 1959,
+        "id": "ben-hur-1959",
+        "won": true
+      },
+      {
+        "title": "Anatomy of a Murder",
+        "year": 1959,
+        "id": "anatomy-of-a-murder-1959",
+        "won": false
+      },
+      {
+        "title": "The Diary of Anne Frank",
+        "year": 1959,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Nun's Story",
+        "year": 1959,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Room at the Top",
+        "year": 1959,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "33": {
+    "bpNominees": [
+      {
+        "title": "The Apartment",
+        "year": 1960,
+        "id": "the-apartment-1960",
+        "won": true
+      },
+      {
+        "title": "The Alamo",
+        "year": 1960,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Elmer Gantry",
+        "year": 1960,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Sons and Lovers",
+        "year": 1960,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Sundowners",
+        "year": 1960,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "34": {
+    "bpNominees": [
+      {
+        "title": "West Side Story",
+        "year": 1961,
+        "id": "west-side-story-1961",
+        "won": true
+      },
+      {
+        "title": "Fanny",
+        "year": 1961,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Guns of Navarone",
+        "year": 1961,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Hustler",
+        "year": 1961,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Judgment at Nuremberg",
+        "year": 1961,
+        "id": "judgment-at-nuremberg-1961",
+        "won": false
+      }
+    ]
+  },
+  "35": {
+    "bpNominees": [
+      {
+        "title": "Lawrence of Arabia",
+        "year": 1962,
+        "id": "lawrence-of-arabia-1962",
+        "won": true
+      },
+      {
+        "title": "The Longest Day",
+        "year": 1962,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Music Man",
+        "year": 1962,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Mutiny on the Bounty",
+        "year": 1962,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "To Kill a Mockingbird",
+        "year": 1962,
+        "id": "to-kill-a-mockingbird-1962",
+        "won": false
+      }
+    ]
+  },
+  "37": {
+    "bpNominees": [
+      {
+        "title": "My Fair Lady",
+        "year": 1964,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "Becket",
+        "year": 1964,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Dr. Strangelove",
+        "year": 1964,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Mary Poppins",
+        "year": 1964,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Zorba the Greek",
+        "year": 1964,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "38": {
+    "bpNominees": [
+      {
+        "title": "The Sound of Music",
+        "year": 1965,
+        "id": "the-sound-of-music-1965",
+        "won": true
+      },
+      {
+        "title": "Darling",
+        "year": 1965,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Doctor Zhivago",
+        "year": 1965,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Ship of Fools",
+        "year": 1965,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "A Thousand Clowns",
+        "year": 1965,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "39": {
+    "bpNominees": [
+      {
+        "title": "A Man for All Seasons",
+        "year": 1966,
+        "id": null,
+        "won": true
+      },
+      {
+        "title": "Alfie",
+        "year": 1966,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Russians Are Coming, the Russians Are Coming",
+        "year": 1966,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Sand Pebbles",
+        "year": 1966,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Who's Afraid of Virginia Woolf?",
+        "year": 1966,
+        "id": "whos-afraid-of-virginia-woolf-1966",
+        "won": false
+      }
+    ]
+  },
+  "40": {
+    "bpNominees": [
+      {
+        "title": "In the Heat of the Night",
+        "year": 1967,
+        "id": "in-the-heat-of-the-night-1967",
+        "won": true
+      },
+      {
+        "title": "Bonnie and Clyde",
+        "year": 1967,
+        "id": "bonnie-and-clyde-1967",
+        "won": false
+      },
+      {
+        "title": "Doctor Dolittle",
+        "year": 1967,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "The Graduate",
+        "year": 1967,
+        "id": "the-graduate-1967",
+        "won": false
+      },
+      {
+        "title": "Guess Who's Coming to Dinner",
+        "year": 1967,
+        "id": null,
+        "won": false
+      }
+    ]
+  },
+  "42": {
+    "bpNominees": [
+      {
+        "title": "Midnight Cowboy",
+        "year": 1969,
+        "id": "midnight-cowboy-1969",
+        "won": true
+      },
+      {
+        "title": "Anne of the Thousand Days",
+        "year": 1969,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "year": 1969,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Hello, Dolly!",
+        "year": 1969,
+        "id": null,
+        "won": false
+      },
+      {
+        "title": "Z",
+        "year": 1969,
+        "id": "z-1969",
+        "won": false
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useFilmModalGestures } from './useFilmModalGestures';
-import { fetchOmdbData, readCachedOmdbData, parseOscarWins, tidyPlot } from '../utils/omdb';
+import { fetchOmdbData, readCachedOmdbData, tidyPlot } from '../utils/omdb';
 import { MovieBadges } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
@@ -335,73 +335,11 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               watchedSet={watchedSet}
             />
 
-            {(() => {
-              const codedOscars = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
-              // Fallback for essentials / canon films with no hand-coded awards
-              // data: parse OMDb's "Awards" string, which tells us the Oscar
-              // win count even if we don't know which categories. Only used when
-              // codedOscars is 0 so we never double-count.
-              const omdbOscars = codedOscars === 0 ? parseOscarWins(omdbData?.awards) : 0;
-              const totalOscars = codedOscars + omdbOscars;
-              if (totalOscars === 0) return null;
-              return (
-              <div className="film-detail-awards">
-                <div className="film-detail-awards-title">
-                  🏆 {totalOscars} Oscar{totalOscars !== 1 ? 's' : ''} Won
-                </div>
-                <div className="film-detail-awards-list">
-                  {(() => {
-                    const speechSearch = (q) => `https://www.youtube.com/results?search_query=${encodeURIComponent(`${movie.title} ${movie.year} oscar acceptance speech ${q}`)}`;
-                    const SpeechAward = ({ label, query }) => (
-                      <a className="award-item award-item-link award-item-major"
-                        href={speechSearch(query)} target="_blank" rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        title="Watch acceptance speech"
-                      >
-                        <span className="award-category">{label}</span>
-                        <span className="award-link-icon">{"\u2197"}</span>
-                      </a>
-                    );
-                    return (
-                      <>
-                        {movie.won && movie.category === 'BP' && <SpeechAward label="Best Picture" query="best picture" />}
-                        {movie.category === 'ANIM' && <SpeechAward label="Best Animated Feature" query="best animated feature" />}
-                        {movie.category === 'INT' && <SpeechAward label="Best International Feature Film" query="best international feature" />}
-                        {movie.alsoWon && movie.alsoWon.map((cat, i) => {
-                          const label = cat === 'INT' ? 'Best International Feature Film' : cat === 'ANIM' ? 'Best Animated Feature' : cat;
-                          const query = cat === 'INT' ? 'best international feature' : cat === 'ANIM' ? 'best animated feature' : cat.toLowerCase();
-                          return <SpeechAward key={`also-${i}`} label={label} query={query} />;
-                        })}
-                      </>
-                    );
-                  })()}
-                  {(movie.awards || []).map((a, i) => {
-                    const link = getAwardLink(a, movie);
-                    const content = (
-                      <>
-                        <span className="award-category">{a.category}</span>
-                        {a.winner && <span className="award-winner">{a.winner}</span>}
-                        {a.detail && <span className="award-detail">"{a.detail}"</span>}
-                        {link && <span className="award-link-icon">{"\u2197"}</span>}
-                      </>
-                    );
-                    return link ? (
-                      <a key={i} className={`award-item award-item-link ${a.winner ? 'award-item-major' : ''}`}
-                        href={link} target="_blank" rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {content}
-                      </a>
-                    ) : (
-                      <div key={i} className={`award-item ${a.winner ? 'award-item-major' : ''}`}>
-                        {content}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              );
-            })()}
+            {/* Oscars Won / Nominations moved to the ceremony modal
+                (click the "Xth Academy Awards" line above) — see
+                CeremonyTooltip.jsx. Film modal intentionally stays clean
+                of award chips so the ceremony click is the single
+                entry-point for Oscar detail. */}
 
             {/* Who watched + their ratings. Unrated watches render as a
                 dim chip (avatar + name only) — no "(watched, not rated)"

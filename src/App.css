@@ -9028,3 +9028,52 @@ main {
   margin-left: 8px;
   flex-shrink: 0;
 }
+
+/* Winner film — the ceremony line turns gold to visually signal the film
+   brought home at least one Oscar. Non-winning nominees keep the muted
+   cream-dim treatment so the at-a-glance scan stays meaningful. */
+.ceremony-line-winner {
+  color: var(--gold);
+  opacity: 0.9;
+}
+.ceremony-line-winner:hover {
+  color: var(--gold);
+}
+
+/* Phantom BP nominee — a pre-1970 Best Picture nominee we don't have in
+   the 787-film catalog. Render as a dim, non-interactive row so the full
+   slate is visible without implying the film is clickable. */
+.ceremony-modal-film.is-phantom {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+}
+
+/* Flex column for the Oscars-Won / Nominations sections. Mirrors the
+   old film-detail-awards-list layout — chips stack vertically with tight
+   spacing. */
+.ceremony-modal-awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Gold acceptance-speech treatment — used for non-BP wins. The
+   award-item base styles come from the old film-modal block (see
+   .award-item above); this class just adds the color/weight emphasis. */
+.award-item-major {
+  color: var(--gold);
+  font-weight: 600;
+}
+.award-item-major .award-category {
+  color: var(--gold);
+}
+
+/* Lost-nomination chip — subtle cream-dim, no trophy, no hover. Sits in
+   the Nominations section below the Oscars-Won block. */
+.award-item-nomination {
+  color: var(--cream-dim);
+  font-size: 0.8rem;
+  padding: 3px 0;
+}

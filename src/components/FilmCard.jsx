@@ -8,7 +8,6 @@ import StarPicker from './StarPicker';
 import { ratingKey } from '../utils/storage';
 import { justWatchUrl } from '../utils/justwatch';
 import CeremonyTooltip from './CeremonyTooltip';
-import { getAwardLink } from '../utils/awardLinks';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
 import IMDB_IDS from '../data/imdbIds.json';
@@ -259,61 +258,9 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           watchedSet={watchedSet}
         />
 
-        {(() => {
-          const awardsCount = (movie.awards?.length || 0) + (movie.won && movie.category === 'BP' ? 1 : 0) + (movie.alsoWon?.length || 0) + (movie.category === 'ANIM' || movie.category === 'INT' ? 1 : 0);
-          if (awardsCount === 0) return null;
-          return (
-          <div className="film-awards-compact">
-            <span className="film-awards-count">🏆 {awardsCount} Oscar{awardsCount !== 1 ? 's' : ''}</span>
-            <span className="film-awards-highlights">
-              {movie.won && movie.category === 'BP' && <span className="film-award-chip">Best Picture</span>}
-              {movie.category === 'ANIM' && <span className="film-award-chip">Animated Feature</span>}
-              {movie.category === 'INT' && <span className="film-award-chip">International Feature</span>}
-              {movie.alsoWon && movie.alsoWon.map((cat, i) => (
-                <span key={`also-${i}`} className="film-award-chip">
-                  {cat === 'INT' ? 'International Feature' : cat === 'ANIM' ? 'Animated Feature' : cat}
-                </span>
-              ))}
-              {(() => {
-                // Render up to 6 award chips. Each chip shows "Category: Winner"
-                // when we have a specific winner/detail, otherwise just the
-                // category name — we DO know every category, the winner field
-                // is just sparse for some technical Oscars. No more "+N
-                // technical" bucket dump; category names are informative on
-                // their own. Film detail modal shows the full list.
-                const awards = movie.awards || [];
-                const visible = awards.slice(0, 6);
-                const hidden = awards.length - visible.length;
-                return (
-                  <>
-                    {visible.map((a, i) => {
-                      const link = getAwardLink(a, movie);
-                      const chipContent = a.winner
-                        ? `${a.category}: ${a.winner}${a.detail ? ` "${a.detail}"` : ''}`
-                        : a.detail
-                        ? `${a.category}: "${a.detail}"`
-                        : a.category;
-                      return link ? (
-                        <a key={i} className="film-award-chip film-award-chip-link"
-                          href={link} target="_blank" rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                        >{chipContent} {"\u2197"}</a>
-                      ) : (
-                        <span key={i} className="film-award-chip">{chipContent}</span>
-                      );
-                    })}
-                    {hidden > 0 && (
-                      <span className="film-award-chip film-award-technical">
-                        +{hidden} more
-                      </span>
-                    )}
-                  </>
-                );
-              })()}
-            </span>
-          </div>
-          );
-        })()}
+        {/* Oscars Won / Nominations moved to the ceremony modal (click the
+            "Xth Academy Awards" line above the title). See
+            CeremonyTooltip.jsx. */}
 
         {/* Watched by others + their ratings after user rates */}
         {allProfiles && (() => {

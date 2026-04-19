@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { fetchOmdbData, readCachedOmdbData, tidyPlot } from '../utils/omdb';
 import { extractDominantColor } from '../utils/colorExtract';
-import { MovieBadges, BadgeGenreSm } from './Badges';
+import { MovieBadges } from './Badges';
+import { getGlobalRank, getPersonalRank } from '../utils/eloRanks';
 import LanguagePill from './LanguagePill';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
@@ -86,6 +87,7 @@ function pickSkipMessage(movie) {
 export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, personalElo, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile, onOpenSeriesPreview, watchedSet }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [globalRank, setGlobalRank] = useState(null);
 
   useEffect(() => {
     if (!movie) return;
@@ -107,6 +109,20 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
     });
     return () => { cancelled = true; };
   }, [movie?.title, movie?.year]);
+
+  // Global rank comes from a session-cached Firestore pull — after the
+  // first FilmCard mount, subsequent lookups are synchronous (same cache
+  // shared with FilmDetailModal).
+  useEffect(() => {
+    if (!movie?.id) return;
+    let cancelled = false;
+    setGlobalRank(null);
+    getGlobalRank(movie.id).then(r => {
+      if (cancelled) return;
+      setGlobalRank(r);
+    });
+    return () => { cancelled = true; };
+  }, [movie?.id]);
 
   const [ambientColor, setAmbientColor] = useState(null);
 
@@ -176,7 +192,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           {getOscarBadges(movie).map(k => (
             <OscarIcon key={k} movie={movie} kind={k} size="sm" />
           ))}
-          <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onOpenDetail} />
+          <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onOpenDetail} movie={movie} />
         </div>
         <div className="film-title">{movie.title}</div>
         <div className="film-year">
@@ -193,9 +209,8 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           })()}
           <TierPips movie={movie} variant="compact" />
           <LanguagePill movie={movie} />
-          <BadgeGenreSm genre={movie.genre} />
         </div>
-        <MovieBadges movie={movie} excludeGenre />
+        <MovieBadges movie={movie} />
 
         <div className="film-pills-row">
           {omdbData?.rating && (() => {
@@ -224,9 +239,17 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
             📺 Where to Watch
           </a>
         </div>
-        {personalElo?.[movie.id] && (
-          <div className="film-elo-rating">⚔️ {personalElo[movie.id].elo} <span className="rating-source">Your Battle ELO</span></div>
-        )}
+        {(() => {
+          const personalRank = getPersonalRank(personalElo, movie.id);
+          if (personalRank == null && globalRank == null) return null;
+          return (
+            <div className="film-elo-rating">
+              ⚔️ {personalRank != null ? `#${personalRank}` : '—'}
+              <span className="film-elo-rating-sub"> ({globalRank != null ? `#${globalRank}` : '—'})</span>
+              <span className="rating-source">My Rank <span className="rating-source-sub">(Global)</span></span>
+            </div>
+          );
+        })()}
         {(() => {
           // Directed by — prefer hand-curated directors.json over OMDb (which
           // over-credits committees on some older / animated films).
@@ -333,7 +356,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
                   >
                     {p.avatar || '👤'} {p.displayName}
                     {userHasRated && primaryRating != null && (
-                      <span className="watched-by-rating"> {primaryRating}/10</span>
+                      <span className="watched-by-rating">: {primaryRating}★</span>
                     )}
                   </span>
                 );

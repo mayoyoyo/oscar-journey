@@ -13,7 +13,8 @@ const DEFAULT_FILTERS = {
   // Categories only governs Oscar-eligible films (BP nominees, INT/ANIM
   // broadly defined). Essentials bypass Categories entirely — they're gated
   // by Canon depth (tier + oscarsOnly / essentialsOnly).
-  categories: { BP: true, INT: true, ANIM: true },
+  // Additive attribute filter — any combination. Unchecked = no restriction.
+  categories: { INT: false, ANIM: false, DOC: false, SILENT: false, BW: false },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
   runtimes: { short: true, medium: true, long: true },
   // Unified canon-tier floor applied to ALL films via getTier() — OSCAR /
@@ -57,14 +58,16 @@ const ERA_LABELS = {
 // depth (tier + oscarsOnly / essentialsOnly), not Categories. INT and ANIM
 // use broad predicates (any non-English / any animated) in FilmList.
 const CATEGORY_LABELS = {
-  BP: 'Best Picture',
   INT: 'International',
   ANIM: 'Animated',
+  DOC: 'Documentary',
+  SILENT: 'Silent',
+  BW: 'Black & White',
 };
 
 export { DEFAULT_FILTERS, ERA_LABELS, GENRE_LABELS, CATEGORY_LABELS, SMART_LABELS };
 
-export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, hideDailyOscar, onHideDailyOscarChange, privateProfile, onPrivateProfileChange, onClose, onClearCache, profile, onLogout }) {
+export default function SettingsModal({ raters, onRatersChange, avatar, onAvatarChange, allowSkip, onAllowSkipChange, simpleBattle, onSimpleBattleChange, checklistMode, onChecklistModeChange, hideDailyOscar, onHideDailyOscarChange, privateProfile, onPrivateProfileChange, onClose, onClearCache, profile, onLogout }) {
   const [editRaters, setEditRaters] = useState(raters);
   const [newName, setNewName] = useState('');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
@@ -193,6 +196,12 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
             onChange={onSimpleBattleChange}
             label="Simple battle graphics"
             hint="Removes animations for faster battles. Visual feedback still shown."
+          />
+          <Toggle
+            active={checklistMode}
+            onChange={onChecklistModeChange}
+            label="Film tab checklist mode"
+            hint="Tap any film in the A–Z list to mark it watched — great for first-timers catching up."
           />
           <Toggle
             active={privateProfile}

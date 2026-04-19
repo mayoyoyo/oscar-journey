@@ -152,6 +152,37 @@ export function getLanguageInfo(movie) {
   return LANGUAGES[movie.id] || null;
 }
 
+// Resolve a movie's representative flag emoji using the same logic as the
+// full language pill — country override → language → country → globe.
+// Returns null if the film has no language metadata.
+function resolveFlag(movie) {
+  const info = LANGUAGES[movie.id];
+  if (!info) return null;
+  const cc =
+    COUNTRY_OVERRIDE[`${info.lang}:${info.country}`] ||
+    LANG_TO_CC[info.lang] ||
+    COUNTRY_TO_CC[info.country] ||
+    null;
+  return {
+    emoji: cc ? flagEmoji(cc) : '🌐',
+    title: `${info.lang}${info.country ? ` — ${info.country}` : ''}`,
+  };
+}
+
+// Bare flag emoji — no pill chrome. Used in the A-Z list row right after
+// the Oscar statuette so the language signal is co-located with the
+// other film-identity glyphs, and stays visible on mobile where the full
+// language pill would be too wide.
+export function LanguageFlag({ movie }) {
+  const resolved = resolveFlag(movie);
+  if (!resolved) return null;
+  return (
+    <span className="film-row-flag" title={resolved.title} aria-label={resolved.title}>
+      {resolved.emoji}
+    </span>
+  );
+}
+
 export default function LanguagePill({ movie }) {
   const info = LANGUAGES[movie.id];
   if (!info) return null;

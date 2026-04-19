@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { MOVIES, MOVIES_BY_ID } from './data/movies';
 import { getSeriesForFilm } from './data/seriesCollections';
 import { getTier } from './utils/tierInfo';
+import { matchesCategoryFilter } from './utils/filmAttributes';
 import { mulberry32, diversityShuffle, enforceSeriesOrder } from './utils/shuffle';
 import {
   ratingKey, clearCache,
@@ -81,13 +82,12 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
   else if (year >= 2010 && year < 2020 && !f.eras['10s']) return false;
   else if (year >= 2020 && !f.eras['20s']) return false;
 
-  // Category check — Essentials bypass Categories (governed by Canon depth).
-  // Oscar-eligible films must match at least one checked category; alsoWon
-  // also counts (e.g. Parasite is BP + INT).
-  if (movie.category !== 'ESSENTIAL') {
-    const matchesCategory = f.categories[movie.category] || (movie.alsoWon || []).some(c => f.categories[c]);
-    if (!matchesCategory) return false;
-  }
+  // Category check — additive attribute filter (International / Animated).
+  // Shared with the Film tab via matchesCategoryFilter. A film can have any
+  // combination of attributes; checking INT shows every non-English film,
+  // checking ANIM shows every animated film, both checked shows the union.
+  // BP and Essential are governed elsewhere (Canon depth + oscarsOnly/essentialsOnly).
+  if (!matchesCategoryFilter(movie, f.categories)) return false;
 
   // Unified canon tier — applies to ALL films via getTier() (OSCAR / OSCAR_NOM
   // counts as a list for BP / INT / ANIM). Matches the Film tab's minTier.
@@ -1045,6 +1045,12 @@ export default function App() {
     firebaseSave('simpleBattle', val);
   }, [firebaseSave]);
 
+  // --- Film-tab checklist mode toggle ---
+  const handleChecklistModeChange = useCallback((val) => {
+    setProfile(prev => prev ? { ...prev, checklistMode: val } : prev);
+    firebaseSave('checklistMode', val);
+  }, [firebaseSave]);
+
   // --- Private profile toggle ---
   const handlePrivateProfileChange = useCallback((val) => {
     setProfile(prev => prev ? { ...prev, privateProfile: val } : prev);
@@ -1321,6 +1327,7 @@ export default function App() {
           raters={raters}
           filterPreset={listFilterPreset}
           onFilterPresetApplied={() => setListFilterPreset(null)}
+          checklistMode={profile?.checklistMode || false}
         />
       )}
 
@@ -1460,6 +1467,8 @@ export default function App() {
           onAllowSkipChange={handleAllowSkipChange}
           simpleBattle={profile?.simpleBattle || false}
           onSimpleBattleChange={handleSimpleBattleChange}
+          checklistMode={profile?.checklistMode || false}
+          onChecklistModeChange={handleChecklistModeChange}
           hideDailyOscar={profile?.hideDailyOscar || false}
           onHideDailyOscarChange={handleHideDailyOscarChange}
           privateProfile={profile?.privateProfile || false}

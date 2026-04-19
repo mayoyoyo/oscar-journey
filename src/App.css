@@ -606,6 +606,37 @@ main {
   letter-spacing: 0.04em;
 }
 
+/* Attribute category pills (Doc / Silent / B&W / Animated). Shown
+   alongside the genre pill in the modal/card badges row, and in place of
+   the genre pill in the A-Z list row (small variant). International is
+   intentionally absent — the language/flag pill already conveys that. */
+.badge-category {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.badge-category-sm {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+/* Per-category tinting — keeps the row readable but adds a small visual
+   hook so pills aren't indistinguishable when stacked (e.g. Silent + B&W). */
+.badge-cat-doc    { border-color: rgba(110, 169, 196, 0.45); color: #9ccde0; }
+.badge-cat-silent { border-color: rgba(212, 195, 160, 0.45); color: #d4c3a0; }
+.badge-cat-bw     { border-color: rgba(200, 200, 200, 0.45); color: #d6d6d6; }
+.badge-cat-anim   { border-color: var(--badge-anim-border); color: var(--badge-anim-color); }
+
 /* Category pills for INT and ANIM films */
 .badge-int {
   background: var(--badge-int-bg);
@@ -1119,6 +1150,21 @@ main {
   text-align: center;
 }
 
+/* Secondary-hierarchy text inside a metric — used for the "(Global)"
+   suffix on the rank label, the "(2)" count on User Avg, and the global
+   rank parenthetical. Rendered smaller and dimmer so the primary value
+   reads as the "big" number. */
+.metric-value-sub {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--cream-dim);
+  margin-left: 1px;
+}
+.metric-label-sub {
+  font-size: 0.58rem;
+  opacity: 0.85;
+}
+
 .film-detail-all-ratings {
   display: flex;
   flex-wrap: wrap;
@@ -1137,8 +1183,11 @@ main {
 
 .all-rating-chip.no-rating {
   color: var(--cream-dim);
-  font-style: italic;
-  opacity: 0.75;
+  opacity: 0.55;
+}
+.all-rating-chip-score {
+  color: var(--gold);
+  font-weight: 600;
 }
 
 /* Profile selector in battle */
@@ -1984,7 +2033,7 @@ main {
   padding: 12px 16px;
   border-radius: 10px;
   outline: none;
-  margin-bottom: 28px;
+  margin-bottom: 12px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .list-search:focus {
@@ -1992,6 +2041,246 @@ main {
   box-shadow: 0 0 0 3px rgba(139, 105, 20, 0.1);
 }
 .list-search::placeholder { color: var(--cream-dim); }
+
+/* Sort + Checklist row — between search and filters. */
+.film-list-sort-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.film-list-sort-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.film-list-sort-label {
+  color: var(--cream-dim);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+.film-list-sort-chips {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.film-list-sort-chip {
+  background: transparent;
+  border: none;
+  color: var(--cream-dim);
+  font-size: 0.82rem;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+.film-list-sort-chip:hover {
+  color: var(--cream);
+}
+.film-list-sort-chip.active {
+  background: var(--gold);
+  color: #1a1a1a;
+  font-weight: 600;
+}
+/* Arrow indicator on active sort chip. ↓/↑ glyphs sit high in their box,
+   so a 1px downward translate optically centers them against the text. */
+.film-list-sort-dir {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.78rem;
+  line-height: 1;
+  opacity: 0.75;
+  transform: translateY(-1px);
+}
+/* Tier toggle — standalone chip (additive grouping, not part of the
+   mutually-exclusive Name/Year pair). Outlined when inactive, gold when on. */
+.film-list-tier-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--cream-dim);
+  font-size: 0.82rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+.film-list-tier-toggle:hover {
+  border-color: var(--gold);
+  color: var(--cream);
+}
+.film-list-tier-toggle.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.film-list-tier-toggle-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 0.72rem;
+  line-height: 1;
+  opacity: 0.75;
+}
+.film-list-tier-toggle.active .film-list-tier-toggle-check {
+  opacity: 1;
+}
+.film-list-checklist-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cream-dim);
+  font-size: 0.82rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 2px;
+}
+.film-list-checklist-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--gold);
+  cursor: pointer;
+  margin: 0;
+}
+.film-list-checklist-toggle:hover {
+  color: var(--cream);
+}
+
+/* Dual-thumb runtime range slider — two overlapping native
+   <input type="range"> elements on a shared track. The native track is
+   hidden (opacity 0 + pointer-events none) so only the custom-drawn track
+   and range fill show, while the thumbs remain touchable on mobile. */
+.runtime-slider {
+  padding: 10px 6px 6px;
+}
+.runtime-slider-values {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  color: var(--cream);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.runtime-slider-sep {
+  color: var(--cream-dim);
+  font-weight: 400;
+}
+.runtime-slider-track-wrap {
+  position: relative;
+  height: 28px;
+  margin: 0 10px;
+}
+.runtime-slider-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background: var(--border);
+  border-radius: 999px;
+}
+.runtime-slider-range {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background: var(--gold);
+  border-radius: 999px;
+}
+.runtime-slider-input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.runtime-slider-input::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+}
+.runtime-slider-input::-moz-range-track {
+  background: transparent;
+  border: none;
+}
+.runtime-slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--gold);
+  cursor: grab;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  margin-top: 0;
+}
+.runtime-slider-input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.08);
+}
+.runtime-slider-input::-moz-range-thumb {
+  pointer-events: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--gold);
+  cursor: grab;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.runtime-slider-input-min { z-index: 2; }
+.runtime-slider-input-max { z-index: 3; }
+.runtime-slider-axis {
+  display: flex;
+  justify-content: space-between;
+  color: var(--cream-dim);
+  font-size: 0.72rem;
+  margin-top: 6px;
+  padding: 0 2px;
+}
+@media (max-width: 480px) {
+  .film-list-sort-row {
+    gap: 10px;
+  }
+  .film-list-sort-chip {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  .runtime-slider-input::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+  }
+  .runtime-slider-input::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+  }
+}
 
 /* Canon depth section body — expanded content inside the collapsible filter */
 .canon-depth-body {
@@ -2490,6 +2779,18 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 2px;
+}
+
+/* Bare flag emoji that sits inline with the statuette, co-locating the
+   language signal with the other film-identity glyphs after the title.
+   No pill chrome — just the emoji, scaled to match the statuette line. */
+.film-row-flag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  margin-left: 4px;
+  user-select: none;
 }
 
 .film-row-title {
@@ -4756,14 +5057,16 @@ main {
     width: 13px;
     height: 21px;
   }
-  /* Legacy small text badges — no longer rendered in rows, but keep the
-     hide rule as a safety net if anything else routes MovieBadges here. */
+  /* Legacy small text badges — kept hidden in rows on mobile to preserve
+     row density. Genre-sm is intentionally NOT in this list: since the
+     2026-04 redesign the genre pill sits inline on both desktop and
+     mobile, next to the category pills. */
   .film-row .badge-winner-sm,
-  .film-row .badge-genre-sm,
   .film-row .badge-bp-sm,
   .film-row .badge-int-sm,
   .film-row .badge-anim-sm,
-  .film-row .badge-essential-sm {
+  .film-row .badge-essential-sm,
+  .film-row .badge-category-sm {
     display: none;
   }
   /* Language pill: keep it on mobile but collapse to flag-only. The flag
@@ -4913,6 +5216,21 @@ main {
   font-weight: normal;
   letter-spacing: 0.03em;
   margin-left: 4px;
+}
+.rating-source-sub {
+  font-size: 0.62rem;
+  opacity: 0.85;
+  margin-left: 1px;
+}
+
+/* Secondary-hierarchy text inside the film-card ELO-rank line — same
+   role as .metric-value-sub in the modal: dimmer, smaller number for
+   the global rank parenthetical. */
+.film-elo-rating-sub {
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  font-weight: 400;
+  margin-left: 1px;
 }
 
 /* =====================================================

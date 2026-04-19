@@ -16,15 +16,30 @@ const CATEGORY_ORDER = [
   { key: 'ESSENTIAL', label: (year) => `${year} Essentials (non-Oscar canon)` },
 ];
 
-export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpenDetail }) {
+export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpenDetail, movie }) {
   const [showModal, setShowModal] = useState(false);
 
+  // Derive ceremony for films whose primary category is ESSENTIAL but
+  // that still won Oscars via alsoWon / awards (e.g. Fanny and Alexander
+  // — an essential that also won Best International Feature). Ceremony
+  // number = year - 1927 holds from 1929 onward; before that the schedule
+  // was irregular, but ESSENTIALS with Oscars in the 1927–28 era are
+  // effectively nonexistent in the catalog.
+  const hasOscarContent = !!movie && (
+    (Array.isArray(movie.awards) && movie.awards.length > 0) ||
+    (Array.isArray(movie.alsoWon) && movie.alsoWon.length > 0) ||
+    movie.won === true
+  );
+  const derivedCeremony = (ceremony == null && hasOscarContent && year >= 1929)
+    ? year - 1927
+    : null;
+  const effectiveCeremony = ceremony ?? derivedCeremony;
+
   // Two modes:
-  //  - Oscar film (ceremony provided): modal groups films from that specific Academy Awards
-  //    ceremony.
-  //  - Essential film (ceremony is null): modal groups all films released in the same year,
-  //    spanning Oscar categories AND essentials. Same UX either way.
-  const isCeremonyMode = ceremony != null;
+  //  - Oscar film or essential-with-Oscars: modal groups films from that
+  //    specific Academy Awards ceremony.
+  //  - Pure canon film (no Oscars): modal groups films from the same year.
+  const isCeremonyMode = effectiveCeremony != null;
 
   // Pick the sibling set. In ceremony mode we include all films that shared the ceremony
   // PLUS any ESSENTIAL canon films released the same year — so viewing a 1994 Oscar film's
@@ -32,7 +47,7 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
   // everything from that year.
   const siblings = isCeremonyMode
     ? [
-        ...MOVIES.filter(m => m.ceremony === ceremony),
+        ...MOVIES.filter(m => m.ceremony === effectiveCeremony),
         ...MOVIES.filter(m => m.category === 'ESSENTIAL' && m.year === year),
       ]
     : MOVIES.filter(m => m.year === year);
@@ -71,10 +86,10 @@ export default function CeremonyTooltip({ ceremony, year, currentMovieId, onOpen
   if (!isCeremonyMode) return null;
   // For Oscar films: ceremony name only, drop the year (also redundant with
   // the year under the title).
-  const lineText = `${ordinal(ceremony)} Academy Awards`;
+  const lineText = `${ordinal(effectiveCeremony)} Academy Awards`;
 
   const modalTitle = isCeremonyMode
-    ? `${ordinal(ceremony)} Academy Awards`
+    ? `${ordinal(effectiveCeremony)} Academy Awards`
     : `Films of ${year}`;
 
   const modalSubtitle = isCeremonyMode

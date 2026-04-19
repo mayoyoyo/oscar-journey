@@ -2,15 +2,16 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { MovieBadges } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
+import { LanguageFlag } from './LanguagePill';
 
 // Prototype flag: Option A layout moves Oscar statuettes to a fixed-width
 // left column before the title. Flip to false to revert to the inline layout.
 const OPTION_A_LAYOUT = true;
 import { ratingKey } from '../utils/storage';
 import { readCachedRuntime, runtimeBucket, prefetchRuntimes, RUNTIME_LABELS } from '../utils/runtime';
-import { ERA_LABELS, CATEGORY_LABELS } from './SettingsModal';
+import { CATEGORY_LABELS } from './SettingsModal';
 import { getTier } from '../utils/tierInfo';
-import LANGUAGES from '../data/languages.json';
+import { isInternational, isAnimated, isDocumentary, isSilent, isBlackAndWhite, matchesCategoryFilter } from '../utils/filmAttributes';
 import DIRECTORS from '../data/directors.json';
 import ACTORS from '../data/actors.json';
 import CAST from '../data/cast.json';
@@ -51,20 +52,8 @@ const SEARCH_INDEX = (() => {
 
 // A film is "International" if its primary language isn't English — sourced
 // from the baked-in languages.json. Also matches legacy category tags so
-// Oscar INT winners stay in the set.
-function isInternational(m) {
-  if (m.category === 'INT') return true;
-  if ((m.alsoWon || []).includes('INT')) return true;
-  return LANGUAGES[m.id] != null;
-}
-// A film is "Animated" via either the Oscar ANIM category, a genre code of
-// 'A' (Animation/Family), or an alsoWon entry. Catches non-Oscar animated
-// films like Toy Story that are otherwise tagged ESSENTIAL.
-function isAnimated(m) {
-  if (m.category === 'ANIM') return true;
-  if ((m.alsoWon || []).includes('ANIM')) return true;
-  return m.genre === 'A';
-}
+// Predicates imported from utils/filmAttributes so the Journey filter and
+// the Film tab filter stay in sync.
 
 // "Wins" filter — default all OFF, OR semantic. A film passes if it won at least one checked award.
 // Some Oscar categories were renamed/split across years; we group equivalents under one label.
@@ -100,16 +89,27 @@ function filmWonAward(movie, key) {
   return def.cats.some(c => won.has(c));
 }
 
+// Runtime slider bounds in minutes. Default range = no restriction;
+// films whose runtime hasn't been fetched yet always pass.
+// Min 30 is below the catalog's shortest film (~44m) so default = no cutoff.
+// Max 300 is treated as open-ended ("and up") so films > 5h still pass by default.
+const RUNTIME_MIN = 30;
+const RUNTIME_MAX = 300;
+const RUNTIME_STEP = 5;
+
+// Year slider bounds. 1920 covers the full catalog (earliest is 1923);
+// upper bound is the current year so it doesn't need a yearly bump.
+// Step 1 so users can pick a specific year if they want. Default = full range.
+const YEAR_MIN = 1920;
+const YEAR_MAX = new Date().getFullYear();
+const YEAR_STEP = 1;
+
 const DEFAULT_FILM_FILTERS = {
-  eras: {
-    '1910s': true, '1920s': true, '1930s': true, '1940s': true, '1950s': true, '1960s': true,
-    '70s': true, '80s': true, '90s': true, '00s': true, '10s': true, '20s': true,
-  },
-  // Categories only governs Oscar-eligible films. Essentials bypass this
-  // section entirely — they're gated by Canon depth (tier + focus mode).
-  categories: { BP: true, INT: true, ANIM: true },
+  yearRange: { min: YEAR_MIN, max: YEAR_MAX },
+  // Additive attribute filter — any combination. Unchecked = no restriction.
+  categories: { INT: false, ANIM: false, DOC: false, SILENT: false, BW: false },
   genres: Object.fromEntries(Object.keys(GENRE_LABELS).map(k => [k, true])),
-  runtimes: { short: true, medium: true, long: true },
+  runtimeRange: { min: RUNTIME_MIN, max: RUNTIME_MAX },
   wins: Object.fromEntries(Object.keys(WIN_CATEGORIES).map(k => [k, false])),
   // Unified tier floor — applies to ALL films (not just essentials).
   // Tier uses the getTierInfo count, which folds OSCAR/OSCAR_NOM into the
@@ -140,22 +140,15 @@ function sortKeyFn(title) {
   return title.replace(/^(The|A|An)\s+/i, '').toLowerCase();
 }
 
-function eraBucket(year) {
-  if (year < 1920) return '1910s';
-  if (year < 1930) return '1920s';
-  if (year < 1940) return '1930s';
-  if (year < 1950) return '1940s';
-  if (year < 1960) return '1950s';
-  if (year < 1970) return '1960s';
-  if (year < 1980) return '70s';
-  if (year < 1991) return '80s';
-  if (year < 2000) return '90s';
-  if (year < 2010) return '00s';
-  if (year < 2020) return '10s';
-  return '20s';
+function formatRuntimeLabel(minutes) {
+  if (minutes < 60) return `${minutes}m`;
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return m === 0 ? `${h}h` : `${h}h ${m}m`;
 }
 
-export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters, filterPreset, onFilterPresetApplied }) {
+
+export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatched, ratings, raters, filterPreset, onFilterPresetApplied, checklistMode = false }) {
   const [query, setQuery] = useState('');
   // `watchMode` is a three-way enum: 'all' | 'watched' | 'unwatched'.
   // Watched-only and Unwatched-only are mutually exclusive — clicking one
@@ -163,9 +156,25 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
   const [watchMode, setWatchMode] = useState('all');
   const watchedOnly   = watchMode === 'watched';
   const unwatchedOnly = watchMode === 'unwatched';
-  const [checklistMode, setChecklistMode] = useState(false);
+  // Sort controls: primary is mutually exclusive (name OR year), tier is an
+  // independent outer dimension. When tier is on, films group by tier first,
+  // then use primary as the in-tier tiebreak. Within name-primary the year is
+  // the secondary tiebreak, and vice versa. Tapping the active chip flips
+  // direction (asc ⇄ desc); switching chips resets to asc.
+  const [sortPrimary, setSortPrimary] = useState('name');
+  const [sortDir, setSortDir] = useState('asc');
+  const [sortByTier, setSortByTier] = useState(false);
+
+  const selectSortPrimary = (next) => {
+    if (next === sortPrimary) {
+      setSortDir(d => d === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortPrimary(next);
+      setSortDir('asc');
+    }
+  };
   const [filters, setFilters] = useState(DEFAULT_FILM_FILTERS);
-  const [openSections, setOpenSections] = useState({ eras: false, categories: false, canon: false, genres: false, runtimes: false, wins: false });
+  const [openSections, setOpenSections] = useState({ years: false, categories: false, canon: false, genres: false, runtimes: false, wins: false });
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [runtimeTick, setRuntimeTick] = useState(0);
   const [prefetchDone, setPrefetchDone] = useState(false);
@@ -245,9 +254,18 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     return `${active}/${entries.length}`;
   };
 
+  const runtimeRangeActive = (
+    filters.runtimeRange.min !== RUNTIME_MIN ||
+    filters.runtimeRange.max !== RUNTIME_MAX
+  );
+  const yearRangeActive = (
+    filters.yearRange.min !== YEAR_MIN ||
+    filters.yearRange.max !== YEAR_MAX
+  );
+
   const activeFilterCount = (() => {
     let n = 0;
-    for (const section of ['eras', 'categories', 'genres', 'runtimes']) {
+    for (const section of ['categories', 'genres']) {
       const def = DEFAULT_FILM_FILTERS[section] || {};
       for (const [k, v] of Object.entries(filters[section])) {
         if (v !== def[k]) n++;
@@ -256,6 +274,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     // Wins defaults all OFF; each ON one counts as a user-applied filter.
     n += Object.values(filters.wins).filter(v => v).length;
     if (watchMode !== 'all') n++;
+    if (runtimeRangeActive) n++;
+    if (yearRangeActive) n++;
     // Canon-depth counters
     if (filters.minTier !== DEFAULT_FILM_FILTERS.minTier) n++;
     if (filters.oscarsOnly !== DEFAULT_FILM_FILTERS.oscarsOnly) n++;
@@ -287,20 +307,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         if (unwatchedOnly) return !watchedTitleSet.has(m.id);
         return true;
       })
-      .filter(m => filters.eras[eraBucket(m.year)])
-      .filter(m => {
-        // Essentials bypass Categories — they're governed by Canon depth.
-        if (m.category === 'ESSENTIAL') return true;
-        // Oscar-eligible films: OR semantics over BP / broad-INT / broad-ANIM.
-        // INT and ANIM use broad predicates (non-English / genre=A / alsoWon)
-        // so they catch international winners that are also BP-nominated or
-        // animated films like Toy Story across the Oscar catalog.
-        const c = filters.categories;
-        if (c.BP && m.category === 'BP') return true;
-        if (c.INT && isInternational(m)) return true;
-        if (c.ANIM && isAnimated(m)) return true;
-        return false;
-      })
+      .filter(m => m.year >= filters.yearRange.min && m.year <= filters.yearRange.max)
+      .filter(m => matchesCategoryFilter(m, filters.categories))
       // Canon depth + focus mode are bypassed when there's an active search — if you know
       // the film you want (e.g. "Matrix"), you shouldn't have to widen your curation to find it.
       // Tier applies UNIFORMLY to all films via the unified getTier helper, which counts
@@ -310,27 +318,57 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       .filter(m => !!q || !filters.essentialsOnly || m.category === 'ESSENTIAL')
       .filter(m => filters.genres[m.genre] !== false)
       .filter(m => {
-        const bucket = runtimeBucket(runtimeMap.get(m.id));
-        return bucket == null || filters.runtimes[bucket];
+        const mins = runtimeMap.get(m.id);
+        // Films with no fetched runtime always pass — avoids hiding the long
+        // tail while the OMDb prefetch is still in flight.
+        if (mins == null) return true;
+        const { min, max } = filters.runtimeRange;
+        // Open-ended upper bound: at RUNTIME_MAX the slider means "and up".
+        const passesUpper = max >= RUNTIME_MAX ? true : mins <= max;
+        return mins >= min && passesUpper;
       })
       .filter(m => {
         if (activeWinKeys.length === 0) return true;
         return activeWinKeys.some(k => filmWonAward(m, k));
-      })
-      .slice()
-      .sort((a, b) => sortKeyFn(a.title).localeCompare(sortKeyFn(b.title)));
+      });
 
-    const watchedCount = filtered.filter(m => watchedTitleSet.has(m.id)).length;
+    const nameTiebreak = (a, b) => {
+      const r = sortKeyFn(a.title).localeCompare(sortKeyFn(b.title));
+      return r !== 0 ? r : (a.year - b.year);
+    };
+    const yearTiebreak = (a, b) => {
+      if (a.year !== b.year) return a.year - b.year;
+      return sortKeyFn(a.title).localeCompare(sortKeyFn(b.title));
+    };
+    const basePrimary = sortPrimary === 'year' ? yearTiebreak : nameTiebreak;
+    const dirMul = sortDir === 'desc' ? -1 : 1;
+    const primaryCompare = (a, b) => basePrimary(a, b) * dirMul;
+    const sorted = filtered.slice().sort((a, b) => {
+      if (sortByTier) {
+        const ta = getTier(a), tb = getTier(b);
+        if (ta !== tb) return tb - ta;
+      }
+      return primaryCompare(a, b);
+    });
 
+    const watchedCount = sorted.filter(m => watchedTitleSet.has(m.id)).length;
+
+    // Group headers follow the dominant sort: tier label when tier is on,
+    // individual year when sorting by year, otherwise first-letter buckets.
+    const groupKey = (m) => {
+      if (sortByTier) return `tier-${getTier(m)}`;
+      if (sortPrimary === 'year') return String(m.year);
+      return sortKeyFn(m.title)[0].toUpperCase();
+    };
     const groups = {};
-    for (const m of filtered) {
-      const letter = sortKeyFn(m.title)[0].toUpperCase();
-      if (!groups[letter]) groups[letter] = [];
-      groups[letter].push(m);
+    for (const m of sorted) {
+      const k = groupKey(m);
+      if (!groups[k]) groups[k] = [];
+      groups[k].push(m);
     }
 
-    return { filtered, groups, watchedCount };
-  }, [query, watchedTitleSet, watchMode, filters, runtimeMap, activeWinKeys]);
+    return { filtered: sorted, groups, watchedCount };
+  }, [query, watchedTitleSet, watchMode, filters, runtimeMap, activeWinKeys, sortPrimary, sortDir, sortByTier]);
 
 
   const setOnlyKey = (section, labels, onlyKey) => {
@@ -349,25 +387,15 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
     return true;
   }), [filters.minTier, filters.oscarsOnly, filters.essentialsOnly]);
 
-  const eraCounts = useMemo(() => {
-    const c = {};
-    for (const m of eligiblePool) {
-      const b = eraBucket(m.year);
-      c[b] = (c[b] || 0) + 1;
-    }
-    return c;
-  }, [eligiblePool]);
-
   const categoryCounts = useMemo(() => {
-    // Counts reflect Oscar-eligible films only — essentials bypass Categories,
-    // so a count for ESSENTIAL would be misleading here. INT / ANIM are
-    // broad predicates applied to the Oscar-eligible subset.
-    const c = { BP: 0, INT: 0, ANIM: 0 };
+    // Broad attribute predicates spanning ALL films (including essentials).
+    const c = { INT: 0, ANIM: 0, DOC: 0, SILENT: 0, BW: 0 };
     for (const m of eligiblePool) {
-      if (m.category === 'ESSENTIAL') continue;
-      if (m.category === 'BP') c.BP++;
       if (isInternational(m)) c.INT++;
       if (isAnimated(m)) c.ANIM++;
+      if (isDocumentary(m)) c.DOC++;
+      if (isSilent(m)) c.SILENT++;
+      if (isBlackAndWhite(m)) c.BW++;
     }
     return c;
   }, [eligiblePool]);
@@ -429,7 +457,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
       <p className="film-list-hint">
         {checklistMode
           ? 'Tap any film to mark it as watched. Great for first-timers catching up on what they\'ve already seen.'
-          : `Browse all ${MOVIES.length} films — every Best Picture nominee (1970+), every International Feature winner (1956+), every Animated Feature winner, plus 330 essential non-Oscar canon films. Use the filters to narrow down.`}
+          : `Browse all ${MOVIES.length} films — every Best Picture nominee (1970+), every International Feature winner (1956+), every Animated Feature winner, plus 330 essential non-Oscar canon films.`}
       </p>
 
       <input
@@ -440,6 +468,55 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+
+      {/* Sort row — sits between search and filters.
+          Primary sort (Name ⇄ Year) is mutually exclusive; Tier is an
+          independent outer grouping modifier. */}
+      <div className="film-list-sort-row">
+        <div className="film-list-sort-group">
+          <span className="film-list-sort-label">Sort by</span>
+          <div className="film-list-sort-chips">
+            <button
+              type="button"
+              className={`film-list-sort-chip ${sortPrimary === 'name' ? 'active' : ''}`}
+              onClick={() => selectSortPrimary('name')}
+              aria-pressed={sortPrimary === 'name'}
+              title={sortPrimary === 'name' ? 'Tap again to reverse (Z → A)' : 'Sort A → Z'}
+            >
+              Name
+              {sortPrimary === 'name' && (
+                <span className="film-list-sort-dir" aria-hidden="true">
+                  {sortDir === 'asc' ? '↓' : '↑'}
+                </span>
+              )}
+            </button>
+            <button
+              type="button"
+              className={`film-list-sort-chip ${sortPrimary === 'year' ? 'active' : ''}`}
+              onClick={() => selectSortPrimary('year')}
+              aria-pressed={sortPrimary === 'year'}
+              title={sortPrimary === 'year' ? 'Tap again to reverse (newest first)' : 'Sort oldest → newest'}
+            >
+              Year
+              {sortPrimary === 'year' && (
+                <span className="film-list-sort-dir" aria-hidden="true">
+                  {sortDir === 'asc' ? '↓' : '↑'}
+                </span>
+              )}
+            </button>
+          </div>
+          <button
+            type="button"
+            className={`film-list-tier-toggle ${sortByTier ? 'active' : ''}`}
+            onClick={() => setSortByTier(v => !v)}
+            aria-pressed={sortByTier}
+            title="Group results by tier (Apex → Canonical). Combines with Name/Year as the in-tier tiebreak."
+          >
+            <span className="film-list-tier-toggle-check">{sortByTier ? '✓' : '+'}</span>
+            <span>Tier</span>
+          </button>
+        </div>
+      </div>
 
       <div className={`film-list-filters ${filtersOpen ? 'is-open' : 'is-closed'}`}>
         <button className="film-list-filters-header" onClick={() => setFiltersOpen(o => !o)}>
@@ -481,12 +558,6 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                 onClick={() => setWatchMode(w => w === 'unwatched' ? 'all' : 'unwatched')}
               >
                 Unwatched
-              </button>
-              <button
-                className={`film-list-toggle ${checklistMode ? 'active' : ''}`}
-                onClick={() => setChecklistMode(c => !c)}
-              >
-                Checklist mode
               </button>
             </div>
 
@@ -581,9 +652,139 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
             </div>
 
             {renderSection('Categories', 'categories', CATEGORY_LABELS, categoryCounts)}
-            {renderSection('Eras', 'eras', ERA_LABELS, eraCounts)}
+
+            {/* Year range — dual-thumb slider (1920..2025). Mirrors the Length
+                slider pattern: two overlapping native ranges for mobile touch. */}
+            <div className="filter-section">
+              <button className="filter-section-toggle" onClick={() => toggleSection('years')}>
+                <span className="filter-section-arrow">{openSections.years ? '▾' : '▸'}</span>
+                <span className="filter-section-label">Years</span>
+                {yearRangeActive && (
+                  <span className="filter-section-count">
+                    {filters.yearRange.min}–{filters.yearRange.max}
+                  </span>
+                )}
+              </button>
+              {openSections.years && (
+                <div className="runtime-slider">
+                  <div className="runtime-slider-values">
+                    <span className="runtime-slider-value">{filters.yearRange.min}</span>
+                    <span className="runtime-slider-sep">–</span>
+                    <span className="runtime-slider-value">{filters.yearRange.max}</span>
+                  </div>
+                  <div className="runtime-slider-track-wrap">
+                    <div className="runtime-slider-track" />
+                    <div
+                      className="runtime-slider-range"
+                      style={{
+                        left: `${((filters.yearRange.min - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * 100}%`,
+                        right: `${((YEAR_MAX - filters.yearRange.max) / (YEAR_MAX - YEAR_MIN)) * 100}%`,
+                      }}
+                    />
+                    <input
+                      type="range"
+                      className="runtime-slider-input runtime-slider-input-min"
+                      min={YEAR_MIN}
+                      max={YEAR_MAX}
+                      step={YEAR_STEP}
+                      value={filters.yearRange.min}
+                      onChange={e => {
+                        const v = Math.min(Number(e.target.value), filters.yearRange.max - YEAR_STEP);
+                        setFilters(f => ({ ...f, yearRange: { ...f.yearRange, min: v } }));
+                      }}
+                      aria-label="Earliest year"
+                    />
+                    <input
+                      type="range"
+                      className="runtime-slider-input runtime-slider-input-max"
+                      min={YEAR_MIN}
+                      max={YEAR_MAX}
+                      step={YEAR_STEP}
+                      value={filters.yearRange.max}
+                      onChange={e => {
+                        const v = Math.max(Number(e.target.value), filters.yearRange.min + YEAR_STEP);
+                        setFilters(f => ({ ...f, yearRange: { ...f.yearRange, max: v } }));
+                      }}
+                      aria-label="Latest year"
+                    />
+                  </div>
+                  <div className="runtime-slider-axis">
+                    <span>{YEAR_MIN}</span>
+                    <span>{YEAR_MAX}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {renderSection('Genres', 'genres', GENRE_LABELS, genreCounts)}
-            {renderSection('Runtime', 'runtimes', RUNTIME_LABELS)}
+
+            {/* Length — dual-thumb range slider (min, max) in minutes.
+                Two overlaid native <input type="range"> for mobile touch support.
+                At RUNTIME_MAX the upper bound is open-ended ("and up"). */}
+            <div className="filter-section">
+              <button className="filter-section-toggle" onClick={() => toggleSection('runtimes')}>
+                <span className="filter-section-arrow">{openSections.runtimes ? '▾' : '▸'}</span>
+                <span className="filter-section-label">Length</span>
+                {runtimeRangeActive && (
+                  <span className="filter-section-count">
+                    {formatRuntimeLabel(filters.runtimeRange.min)}–
+                    {filters.runtimeRange.max >= RUNTIME_MAX ? '∞' : formatRuntimeLabel(filters.runtimeRange.max)}
+                  </span>
+                )}
+              </button>
+              {openSections.runtimes && (
+                <div className="runtime-slider">
+                  <div className="runtime-slider-values">
+                    <span className="runtime-slider-value">{formatRuntimeLabel(filters.runtimeRange.min)}</span>
+                    <span className="runtime-slider-sep">–</span>
+                    <span className="runtime-slider-value">
+                      {filters.runtimeRange.max >= RUNTIME_MAX ? `${formatRuntimeLabel(RUNTIME_MAX)}+` : formatRuntimeLabel(filters.runtimeRange.max)}
+                    </span>
+                  </div>
+                  <div className="runtime-slider-track-wrap">
+                    <div className="runtime-slider-track" />
+                    <div
+                      className="runtime-slider-range"
+                      style={{
+                        left: `${((filters.runtimeRange.min - RUNTIME_MIN) / (RUNTIME_MAX - RUNTIME_MIN)) * 100}%`,
+                        right: `${((RUNTIME_MAX - filters.runtimeRange.max) / (RUNTIME_MAX - RUNTIME_MIN)) * 100}%`,
+                      }}
+                    />
+                    <input
+                      type="range"
+                      className="runtime-slider-input runtime-slider-input-min"
+                      min={RUNTIME_MIN}
+                      max={RUNTIME_MAX}
+                      step={RUNTIME_STEP}
+                      value={filters.runtimeRange.min}
+                      onChange={e => {
+                        const v = Math.min(Number(e.target.value), filters.runtimeRange.max - RUNTIME_STEP);
+                        setFilters(f => ({ ...f, runtimeRange: { ...f.runtimeRange, min: v } }));
+                      }}
+                      aria-label="Minimum runtime"
+                    />
+                    <input
+                      type="range"
+                      className="runtime-slider-input runtime-slider-input-max"
+                      min={RUNTIME_MIN}
+                      max={RUNTIME_MAX}
+                      step={RUNTIME_STEP}
+                      value={filters.runtimeRange.max}
+                      onChange={e => {
+                        const v = Math.max(Number(e.target.value), filters.runtimeRange.min + RUNTIME_STEP);
+                        setFilters(f => ({ ...f, runtimeRange: { ...f.runtimeRange, max: v } }));
+                      }}
+                      aria-label="Maximum runtime"
+                    />
+                  </div>
+                  <div className="runtime-slider-axis">
+                    <span>{formatRuntimeLabel(RUNTIME_MIN)}</span>
+                    <span>{formatRuntimeLabel(RUNTIME_MAX)}+</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {renderSection('Oscars Won', 'wins', WIN_LABELS)}
 
             {runtimeLoading && (
@@ -600,16 +801,32 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
           <p style={{ color: 'var(--cream-dim)', padding: '20px 0' }}>No films match your search.</p>
         ) : (
           Object.keys(groups).sort((a, b) => {
-            // Put letter groups (A-Z) before digit groups (0-9) so films like
-            // "12 Angry Men" and "2001: A Space Odyssey" land at the bottom of the list.
+            // Sort depends on the active grouping mode. Tier grouping is
+            // always high-to-low regardless of sortDir (tier is its own axis);
+            // name/year group order honors sortDir so a Z→A sort shows the Z
+            // group at the top.
+            if (sortByTier) {
+              const ta = Number(a.replace('tier-', ''));
+              const tb = Number(b.replace('tier-', ''));
+              return tb - ta;
+            }
+            const dirMul = sortDir === 'desc' ? -1 : 1;
+            if (sortPrimary === 'year') {
+              return (Number(a) - Number(b)) * dirMul;
+            }
+            // Letter groups: A-Z before digits (so "2001" lands at the bottom).
             const aIsDigit = /^[0-9]/.test(a);
             const bIsDigit = /^[0-9]/.test(b);
-            if (aIsDigit !== bIsDigit) return aIsDigit ? 1 : -1;
-            return a.localeCompare(b);
-          }).map(letter => (
-            <div className="letter-group" key={letter}>
-              <div className="letter-header">{letter}</div>
-              {groups[letter].map(m => {
+            if (aIsDigit !== bIsDigit) return (aIsDigit ? 1 : -1) * dirMul;
+            return a.localeCompare(b) * dirMul;
+          }).map(groupId => {
+            const headerLabel = sortByTier
+              ? (TIER_LEVELS[Number(groupId.replace('tier-', ''))]?.label || groupId)
+              : groupId;
+            return (
+            <div className="letter-group" key={groupId}>
+              <div className="letter-header">{headerLabel}</div>
+              {groups[groupId].map(m => {
                 const isWatched = watchedTitleSet.has(m.id);
                 const key = ratingKey(m);
                 const r = ratings[key] || {};
@@ -634,6 +851,7 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                           {getOscarBadges(m).map(k => (
                             <OscarIcon key={k} movie={m} kind={k} size="sm" />
                           ))}
+                          <LanguageFlag movie={m} />
                         </span>
                       </span>
                     ) : (
@@ -645,7 +863,8 @@ export default function FilmList({ watchedTitleSet, onOpenDetail, onToggleWatche
                 );
               })}
             </div>
-          ))
+            );
+          })
         )}
       </div>
     </div>

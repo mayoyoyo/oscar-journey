@@ -3,6 +3,40 @@ import { GENRE_LABELS } from '../data/movies';
 import TierPips from './TierPips';
 import OscarIcon, { getOscarStatus, getOscarBadges } from './OscarIcon';
 import LanguagePill from './LanguagePill';
+import { isAnimated, isDocumentary, isSilent, isBlackAndWhite } from '../utils/filmAttributes';
+
+// Category pill definitions. International is intentionally absent —
+// the LanguagePill's flag already conveys that signal. A film can carry
+// multiple pills (City Lights is Silent + B&W; Shoah is Doc + non-English).
+// The Animated pill renders even when the Anim-Winner speech pill is
+// present — winner and category convey different facts (ceremony result
+// vs. film attribute), so we don't dedupe across them.
+const CATEGORY_LIST = [
+  { key: 'DOC',    label: 'Documentary', test: isDocumentary,   cls: 'badge-cat-doc' },
+  { key: 'SILENT', label: 'Silent',      test: isSilent,         cls: 'badge-cat-silent' },
+  { key: 'BW',     label: 'B&W',         test: isBlackAndWhite,  cls: 'badge-cat-bw' },
+  { key: 'ANIM',   label: 'Animated',    test: isAnimated,       cls: 'badge-cat-anim' },
+];
+
+function activeCategories(movie) {
+  return CATEGORY_LIST.filter(c => c.test(movie));
+}
+
+export function BadgeCategorySm({ movie }) {
+  const active = activeCategories(movie);
+  if (!active.length) return null;
+  return active.map(c => (
+    <span key={c.key} className={`badge-category-sm ${c.cls}`}>{c.label}</span>
+  ));
+}
+
+export function BadgeCategory({ movie }) {
+  const active = activeCategories(movie);
+  if (!active.length) return null;
+  return active.map(c => (
+    <span key={c.key} className={`badge-category ${c.cls}`}>{c.label}</span>
+  ));
+}
 
 function speechUrl(title, year, kind = 'best picture') {
   return `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' ' + year + ' oscar acceptance speech ' + kind)}`;
@@ -83,20 +117,23 @@ export function BadgeBpSm() {
 // the Oscars-vs-Essentials demarcation; absence of an icon implies canon-only.
 // Tier pips sit inline so every A-Z row stays on a single line.
 //
-// excludeGenre=true skips the genre pill — used where the caller renders
-// BadgeGenreSm inline in the year/pips row instead, saving a row.
-export function MovieBadges({ movie, small = false, excludeOscars = false, excludeGenre = false }) {
+// Genre is no longer rendered in the A-Z list row (the small variant shows
+// category pills — Doc/Silent/B&W/Animated — which carry more signal than
+// the broad genre grouping). Genre still renders in the non-small variant
+// alongside winner + category pills.
+export function MovieBadges({ movie, small = false, excludeOscars = false }) {
   const alsoWon = movie.alsoWon || [];
   const oscarStatus = getOscarStatus(movie);
 
   if (small) {
-    // Desktop row: genre + language + pips (+ Oscar statuettes unless
-    // excludeOscars — used by Option A layout where statuettes live in a
-    // dedicated left column).
+    // A-Z list row: genre + category pills + tier pips (+ Oscar statuettes
+    // unless excludeOscars — used by Option A layout where statuettes live
+    // in a dedicated left column). The language flag moved out of this
+    // row and now sits inline with the Oscar statuette via LanguageFlag.
     return (
       <span style={{ display: 'flex', gap: '5px', alignItems: 'center', flexWrap: 'nowrap' }}>
         <BadgeGenreSm genre={movie.genre} />
-        <LanguagePill movie={movie} />
+        <BadgeCategorySm movie={movie} />
         <TierPips movie={movie} variant="compact" />
         {!excludeOscars && getOscarBadges(movie).map(k => (
           <OscarIcon key={k} movie={movie} kind={k} size="sm" />
@@ -105,23 +142,27 @@ export function MovieBadges({ movie, small = false, excludeOscars = false, exclu
     );
   }
 
-  // Each Oscar win gets its own "· SPEECH" pill (gold/blue/purple) next
-  // to the matching tinted statuette in the ceremony-row. The pill is the
-  // obvious CTA; the statuette carries the visual hierarchy.
+  // Modal / card row: winner speech pill(s) + category pill(s) + genre.
   // LanguagePill lives next to the film title (FilmDetailModal) rather
-  // than in this badges row now.
+  // than in this badges row.
   const wonBP   = movie.won === true && movie.category === 'BP';
   const wonINT  = movie.category === 'INT' || alsoWon.includes('INT');
   const wonANIM = movie.category === 'ANIM' || alsoWon.includes('ANIM');
   const hasWinnerPill = wonBP || wonINT || wonANIM;
-  // Nothing to render if genre is hidden and there are no winner pills.
-  if (excludeGenre && !hasWinnerPill) return null;
+  const categoryPills = activeCategories(movie);
+  if (!hasWinnerPill && !categoryPills.length && !movie.genre) return null;
+  // Modal / card row order: winner pill(s) → category pills → genre.
+  // Category pills sit before genre so the more specific attribute signal
+  // (Doc / Silent / B&W / Animated) reads before the broad genre bucket.
   return (
     <div className="badges">
       {wonBP   && <BadgeWinner movie={movie} kind="bp"   />}
       {wonINT  && <BadgeWinner movie={movie} kind="int"  />}
       {wonANIM && <BadgeWinner movie={movie} kind="anim" />}
-      {!excludeGenre && <BadgeGenre genre={movie.genre} />}
+      {categoryPills.map(c => (
+        <span key={c.key} className={`badge-category ${c.cls}`}>{c.label}</span>
+      ))}
+      {movie.genre && <BadgeGenre genre={movie.genre} />}
     </div>
   );
 }

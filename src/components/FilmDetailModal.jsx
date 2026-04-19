@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useFilmModalGestures } from './useFilmModalGestures';
 import { fetchOmdbData, readCachedOmdbData, parseOscarWins, tidyPlot } from '../utils/omdb';
-import { MovieBadges, BadgeGenreSm } from './Badges';
+import { MovieBadges } from './Badges';
 import OscarIcon, { getOscarBadges } from './OscarIcon';
 import TierPips from './TierPips';
 import LanguagePill from './LanguagePill';
@@ -19,11 +19,13 @@ import SeriesSection from './SeriesSection';
 
 import { RARITIES } from '../utils/cards';
 import { getCardOwner } from '../utils/cardRegistry';
+import { getGlobalRank, getPersonalRank } from '../utils/eloRanks';
 
 export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onClose, ratings, onRatingChange, raters, personalElo, movieList, onNavigate, onOpenProfile, wallet, onOpenSeriesPreview, watchedSet, seriesSiblings, onSeriesNavigate, openInstant, initialScrollTop }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [globalElo, setGlobalElo] = useState(null);
+  const [globalRank, setGlobalRank] = useState(null);
   const [aggregateRating, setAggregateRating] = useState(null);
   const [watchedBy, setWatchedBy] = useState([]);
   const [posterError, setPosterError] = useState(false);
@@ -64,12 +66,17 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
       setLoading(false);
     });
 
-    // Fetch global ELO for this movie
+    // Fetch global ELO for this movie + the global rank (shared cached
+    // fetch of the full ELO leaderboard — one round-trip per session).
     const key = movie.id;
     getDoc(doc(db, 'elo', key)).then(snap => {
       if (cancelled) return;
       setGlobalElo(snap.exists() ? snap.data() : null);
     }).catch(() => {});
+    getGlobalRank(key).then(r => {
+      if (cancelled) return;
+      setGlobalRank(r);
+    });
 
     // Fetch all profiles to compute aggregate star rating + who watched
     getDocs(collection(db, 'profiles')).then(snap => {
@@ -168,6 +175,8 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
   const key = ratingKey(movie);
   const movieRatings = ratings[key] || {};
   const pElo = personalElo?.[movie.id];
+  const personalRank = pElo ? getPersonalRank(personalElo, movie.id) : null;
+  const hasAnyRank = personalRank != null || globalRank != null;
   const walletCard = wallet?.find(c => c.movieId === movie.id);
   const cardRarity = walletCard ? RARITIES[walletCard.rarity] : null;
 
@@ -219,7 +228,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               {getOscarBadges(movie).map(k => (
                 <OscarIcon key={k} movie={movie} kind={k} size="sm" />
               ))}
-              <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} />
+              <CeremonyTooltip ceremony={movie.ceremony} year={movie.year} currentMovieId={movie.id} onOpenDetail={onNavigate} movie={movie} />
             </div>
             <div className="film-title">{movie.title}</div>
             <div className="film-year">
@@ -236,9 +245,8 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               })()}
               <TierPips movie={movie} variant="compact" />
               <LanguagePill movie={movie} />
-              <BadgeGenreSm genre={movie.genre} />
             </div>
-            <MovieBadges movie={movie} excludeGenre />
+            <MovieBadges movie={movie} />
 
             {/* Ratings summary row */}
             <div className="film-detail-metrics">
@@ -256,20 +264,17 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               })()}
               {aggregateRating && (
                 <div className="metric-item">
-                  <span className="metric-value">★ {aggregateRating.avg}</span>
-                  <span className="metric-label">Site Avg ({aggregateRating.count} {aggregateRating.count === 1 ? 'rating' : 'ratings'})</span>
+                  <span className="metric-value">★ {aggregateRating.avg}<span className="metric-value-sub"> ({aggregateRating.count})</span></span>
+                  <span className="metric-label">User Avg</span>
                 </div>
               )}
-              {pElo && (
+              {hasAnyRank && (
                 <div className="metric-item">
-                  <span className="metric-value">⚔️ {pElo.elo}</span>
-                  <span className="metric-label">Your ELO ({pElo.matchCount})</span>
-                </div>
-              )}
-              {globalElo && (
-                <div className="metric-item">
-                  <span className="metric-value">⚔️ {globalElo.elo}</span>
-                  <span className="metric-label">Global ELO ({globalElo.matchCount})</span>
+                  <span className="metric-value">
+                    ⚔️ {personalRank != null ? `#${personalRank}` : '—'}
+                    <span className="metric-value-sub"> ({globalRank != null ? `#${globalRank}` : '—'})</span>
+                  </span>
+                  <span className="metric-label">My Rank <span className="metric-label-sub">(Global)</span></span>
                 </div>
               )}
               <a className="metric-item metric-trailer"
@@ -400,7 +405,11 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               );
             })()}
 
-            {/* Who watched + their ratings */}
+            {/* Who watched + their ratings. Unrated watches render as a
+                dim chip (avatar + name only) — no "(watched, not rated)"
+                suffix; the disabled visual cue carries the same meaning.
+                Rated watches show the score in gold to match the Journey
+                card's watched-by-rating styling. */}
             {watchedBy.length > 0 && (
               <div className="film-detail-all-ratings">
                 {watchedBy.map((w, i) => {
@@ -409,9 +418,12 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
                     <span key={i} className={`all-rating-chip profile-name-link ${w.hasRated ? '' : 'no-rating'}`}
                       onClick={() => onOpenProfile && onOpenProfile(w.id)}
                     >
-                      {w.avatar} {w.displayName}{profileRatings.length > 0
-                        ? ': ' + profileRatings.map(r => `${r.value}★`).join(', ')
-                        : ' (watched, not rated)'}
+                      {w.avatar} {w.displayName}
+                      {profileRatings.length > 0 && (
+                        <span className="all-rating-chip-score">
+                          : {profileRatings.map(r => `${r.value}★`).join(', ')}
+                        </span>
+                      )}
                     </span>
                   );
                 })}

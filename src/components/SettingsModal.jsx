@@ -230,11 +230,16 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <div className="settings-version">
             <div className="settings-version-row">
               <span className="settings-version-label">Version</span>
-              <span className="settings-version-num">v3.3.4</span>
+              <span className="settings-version-num">v3.3.5</span>
             </div>
             <details className="settings-changelog">
               <summary>Changelog</summary>
               <div className="settings-changelog-content">
+              <p><strong>v3.3.5</strong> — Settings modal polish</p>
+              <ul>
+                <li>Wider on desktop (460px → 640px) so Preferences/Data/About sections have more breathing room. Mobile unchanged.</li>
+                <li>Themed scrollbar — thin + gold-tinted, replacing the chunky default (especially noticeable on Windows).</li>
+              </ul>
               <p><strong>v3.3.4</strong> — Modal visual parity</p>
               <ul>
                 <li>Genre pill in the sequel/out-of-canon modal is now small + inline with the year · runtime row, matching the canonical detail modal. Multiple TMDB genres still render side-by-side.</li>

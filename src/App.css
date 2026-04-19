@@ -1394,11 +1394,34 @@ main {
   color: var(--cream);
 }
 
-/* Settings Modal */
-.settings-modal {
-  max-width: 460px;
+/* Settings Modal — bumped specificity (.modal.settings-modal) so this
+ * beats the generic `.modal { max-width: 480px }` rule that's declared
+ * later in the file and was winning on source order. */
+.modal.settings-modal {
+  max-width: 640px;
   padding: 0;
   position: relative;
+  /* Themed scrollbar — the browser default (especially on Windows) was a
+   * chunky gray bar that broke the modal's pop-out feel. Thin + low-contrast
+   * track + a gold-tinted thumb so it reads as part of the design. */
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dim, rgba(201, 168, 76, 0.4)) transparent;
+}
+.settings-modal::-webkit-scrollbar {
+  width: 8px;
+}
+.settings-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.settings-modal::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.35);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.settings-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 76, 0.6);
+  background-clip: padding-box;
 }
 .settings-close {
   position: absolute;

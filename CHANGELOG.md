@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.3.5 — 2026-04-18
+
+### Settings modal polish — chris-testing
+- **Wider on desktop.** Max-width bumped 460px → 640px so Preferences,
+  Data, and About sections have more breathing room. Mobile is unchanged
+  (still `max-width: 100%` via the existing narrow-screen media query).
+- **Themed scrollbar.** Replaced the browser default (chunky gray on
+  Windows) with a thin gold-tinted scrollbar that matches the app's
+  colors — subtle track, gold thumb that brightens on hover. Works on
+  Chrome / Safari / Edge (via `::-webkit-scrollbar`) and Firefox
+  (via `scrollbar-width: thin` + `scrollbar-color`).
+
 ## 3.3.4 — 2026-04-18
 
 ### Modal visual parity — chris-testing

@@ -265,7 +265,7 @@ export default function FilmDetailModal({ movie, isWatched, onToggleWatched, onC
               {omdbData?.metacritic && (
                 <a
                   className="metric-item metric-metacritic"
-                  href={`https://www.metacritic.com/search/${encodeURIComponent(movie.title)}/?category=13`}
+                  href={`https://www.metacritic.com/search/${encodeURIComponent(movie.title)}/?category=2`}
                   target="_blank" rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
                 >

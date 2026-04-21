@@ -124,6 +124,11 @@ function moviePassesFilter(movie, filters, smartContext, isCurrentFilm) {
       );
       if (watchedBySomeone) return false;
     }
+
+    // Watchlist-only — hide films not on the user's saved list.
+    if (f.smart.watchlistOnly && smartContext.watchlistSet && !smartContext.watchlistSet.has(mid)) {
+      return false;
+    }
   }
 
   return true;
@@ -251,6 +256,7 @@ export default function App() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const preFilterIdx = useRef(null); // Saved position before filter auto-skip
   const [watchedSet, setWatchedSet] = useState(new Set());
+  const [watchlistSet, setWatchlistSet] = useState(new Set());
   const [ratings, setRatings] = useState({});
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
   // One-shot filter preset for the Films tab. Set when a user drills in from
@@ -594,12 +600,18 @@ export default function App() {
       }
     }
 
+    // Watchlist — stored as array of movie IDs on the profile. Older
+    // profiles may not have the field at all; default to empty set.
+    const rawWatchlist = Array.isArray(data.watchlist) ? data.watchlist : [];
+    const watchlistKeys = new Set(rawWatchlist);
+
     // Publish fully-mutated profile to React state now that every field
     // matches what's persisted in Firestore.
     setProfile(data);
     setPlaylist(pl);
     setCurrentIdx(Math.min(idx, pl.length - 1));
     setWatchedSet(watchedKeys);
+    setWatchlistSet(watchlistKeys);
     setRatings(migratedRatings);
     setRaters(ratersList);
 
@@ -631,6 +643,7 @@ export default function App() {
     setPlaylist([]);
     setCurrentIdx(0);
     setWatchedSet(new Set());
+    setWatchlistSet(new Set());
     setRatings({});
     setRaters(['Chris', 'Yvonne']);
     setActiveTab('journey');
@@ -663,9 +676,10 @@ export default function App() {
   // Smart filter context
   const smartContext = useMemo(() => ({
     watchedSet,
+    watchlistSet,
     allProfiles: allProfilesForSync,
     currentProfileId: profile?.id,
-  }), [watchedSet, allProfilesForSync, profile?.id]);
+  }), [watchedSet, watchlistSet, allProfilesForSync, profile?.id]);
 
   // Check if a playlist index passes the current filters
   const idxPassesFilter = useCallback((idx) => {
@@ -802,6 +816,23 @@ export default function App() {
       return next;
     });
   }, [firebaseSave, clearRatingsForMovie]);
+
+  const toggleWatchlistForMovie = useCallback((movie) => {
+    if (!movie) return;
+    const key = movieKey(movie);
+    setWatchlistSet(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) {
+        next.delete(key);
+      } else {
+        next.add(key);
+      }
+      const nextArr = [...next];
+      firebaseSave('watchlist', nextArr);
+      setProfile(prev => prev ? { ...prev, watchlist: nextArr } : prev);
+      return next;
+    });
+  }, [firebaseSave]);
 
   // --- Rating change ---
   const handleRatingChange = useCallback((key, person, value) => {
@@ -1263,6 +1294,8 @@ export default function App() {
                 movie={currentMovie}
                 isWatched={isCurrentWatched}
                 onToggleWatched={toggleWatched}
+                isBookmarked={currentMovie ? watchlistSet.has(currentMovie.id) : false}
+                onToggleWatchlist={() => currentMovie && toggleWatchlistForMovie(currentMovie)}
                 fading={fading}
                 ratings={ratings}
                 onRatingChange={handleRatingChange}
@@ -1317,6 +1350,7 @@ export default function App() {
       {activeTab === 'list' && (
         <FilmList
           watchedTitleSet={watchedTitleSet}
+          watchlistSet={watchlistSet}
           onOpenDetail={(movie, movieList) => {
             setDetailMovie(movie);
             if (movieList) setDetailMovieList(movieList);
@@ -1390,6 +1424,8 @@ export default function App() {
             movie={detailMovie}
             isWatched={isDetailWatched}
             onToggleWatched={() => toggleWatchedForMovie(detailMovie)}
+            isBookmarked={detailMovie ? watchlistSet.has(detailMovie.id) : false}
+            onToggleWatchlist={() => detailMovie && toggleWatchlistForMovie(detailMovie)}
             onClose={() => { setDetailMovie(null); setDetailMovieList(null); }}
             ratings={ratings}
             personalElo={profile?.personalElo}

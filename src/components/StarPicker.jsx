@@ -1,7 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 
 // Beautiful half-star rating widget (0.5 increments, 10 stars) with touch-swipe support
-export default function StarPicker({ label, value, onChange, disabled }) {
+export default function StarPicker({ label, value, onChange, disabled, hideLabel }) {
   const [hoverVal, setHoverVal] = useState(null);
   const starsRef = useRef(null);
   const displayVal = hoverVal !== null ? hoverVal : value;
@@ -92,7 +92,7 @@ export default function StarPicker({ label, value, onChange, disabled }) {
 
   return (
     <div className={`star-picker ${disabled ? 'star-picker-disabled' : ''}`}>
-      <div className="star-picker-label">{label}</div>
+      {!hideLabel && <div className="star-picker-label">{label}</div>}
       <div className="star-picker-row">
         <div
           className="star-picker-stars"

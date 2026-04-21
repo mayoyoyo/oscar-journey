@@ -44,12 +44,14 @@ const DEFAULT_FILTERS = {
   smart: {
     skipWatched: false,
     unwatchedByAll: false,
+    watchlistOnly: false,
   },
 };
 
 const SMART_LABELS = {
   skipWatched: 'Skip films I\'ve watched',
   unwatchedByAll: 'Unwatched by everyone',
+  watchlistOnly: 'Only saved films',
 };
 
 // Note: ESSENTIAL is intentionally absent. Essentials are governed by Canon

@@ -3573,6 +3573,16 @@ main {
   flex-wrap: wrap;
   animation: ratingsSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
+/* Single-rater variant: section label sits inline with the stars so the
+   whole thing reads as one row. The label no longer needs its usual
+   bottom margin (it has none here — it's a flex sibling). */
+.rating-pickers-inline {
+  align-items: center;
+  gap: 12px;
+}
+.rating-pickers-inline .rating-pickers-label {
+  margin-bottom: 0;
+}
 @keyframes ratingsSlideIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
@@ -3608,6 +3618,15 @@ main {
   color: var(--cream-dim);
   font-style: italic;
   min-width: 55px;
+}
+
+/* Mobile view has no room for the "Slide to rate" prompt next to the
+   stars — hide it until the user has actually picked a value. The rated
+   numeric display (.has-value) stays visible. */
+@media (max-width: 540px) {
+  .star-picker-value:not(.has-value) {
+    display: none;
+  }
 }
 
 .star-picker-value.has-value {
@@ -9213,4 +9232,82 @@ main {
   color: var(--cream-dim);
   font-size: 0.8rem;
   padding: 3px 0;
+}
+
+/* Director filmography link — subtle trailing "(N more)" affordance on
+   the "Directed by" line, following the same "click-for-more" pattern
+   as .ceremony-line-clickable. Slightly dimmer than the surrounding
+   director text until hover; then gold + underline to match. */
+.director-more-link {
+  margin-left: 6px;
+  color: var(--cream-dim);
+  opacity: 0.75;
+  font-size: 0.92em;
+  cursor: pointer;
+  transition: color 0.15s, opacity 0.15s;
+}
+.director-more-link:hover {
+  color: var(--gold);
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* =====================================================
+   WATCHLIST ("Saved" feature)
+   ===================================================== */
+
+/* Poster corner-triangle badge. Positioned absolutely inside the
+   parent poster container (.film-detail-poster / .poster-col — both
+   already have position: relative). Gold by default (saved + not yet
+   watched); green modifier when also watched. Non-interactive — pure
+   status indicator; the toggle lives in WatchlistButton. */
+.watchlist-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 52px;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  background: var(--gold);
+  pointer-events: none;
+  z-index: 3;
+}
+.watchlist-ribbon.is-watched {
+  background: #3fa96a;
+}
+
+/* Action-row bookmark toggle — compact icon-only button that sits
+   next to Mark as Watched / Skip. */
+.watchlist-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  padding: 0;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s, border-color 0.15s, transform 0.1s;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+.watchlist-btn:hover {
+  background: var(--bg3);
+}
+.watchlist-btn:active {
+  transform: scale(0.94);
+}
+.watchlist-btn.is-off {
+  color: var(--cream-dim);
+  opacity: 0.75;
+}
+.watchlist-btn.is-saved {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.watchlist-btn.is-saved-watched {
+  color: #3fa96a;
+  border-color: #3fa96a;
 }

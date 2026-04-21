@@ -13,6 +13,9 @@ import CeremonyTooltip from './CeremonyTooltip';
 import ACTORS from '../data/actors.json';
 import DIRECTORS from '../data/directors.json';
 import SeriesSection from './SeriesSection';
+import DirectorFilmographyLink from './DirectorFilmographyLink';
+import WatchlistButton from './WatchlistButton';
+import WatchlistRibbon from './WatchlistRibbon';
 
 // Universal skip messages — safe for any film (Oscar or canon).
 const SKIP_MESSAGES_UNIVERSAL = [
@@ -82,7 +85,7 @@ function pickSkipMessage(movie) {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
-export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ratings, onRatingChange, raters, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile, onOpenSeriesPreview, watchedSet }) {
+export default function FilmCard({ movie, isWatched, onToggleWatched, isBookmarked, onToggleWatchlist, fading, ratings, onRatingChange, raters, allowSkip, onSkip, allProfiles, currentProfileId, onOpenDetail, onOpenProfile, onOpenSeriesPreview, watchedSet }) {
   const [omdbData, setOmdbData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -145,6 +148,7 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
     <div className={`film-card ${fading ? 'fading' : ''} ${isWatched ? 'film-card-watched' : ''}`} style={ambientColor ? { '--ambient': ambientColor } : undefined}>
       {/* Poster column */}
       <div className="poster-col">
+        <WatchlistRibbon isBookmarked={isBookmarked} isWatched={isWatched} />
         {loading ? (
           <div className="poster-loading"><div className="spinner" /></div>
         ) : omdbData?.poster ? (
@@ -254,7 +258,12 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           // over-credits committees on some older / animated films).
           const director = DIRECTORS[movie.id] || omdbData?.director;
           if (!director) return null;
-          return <div className="film-director"><strong>Directed by</strong> {director}</div>;
+          return (
+            <div className="film-director">
+              <strong>Directed by</strong> {director}
+              <DirectorFilmographyLink movie={movie} onOpenDetail={onOpenDetail} />
+            </div>
+          );
         })()}
         {(() => {
           // Starring — top-billed from actors.json, fallback to OMDb. Middle
@@ -312,21 +321,37 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
           );
         })()}
 
-        {/* Rating pickers — only shown when film is marked as watched */}
+        {/* Rating pickers — only shown when film is marked as watched.
+            Single-rater profiles get an inline layout (label + stars on
+            one row, no redundant self-username). Multi-rater profiles
+            keep the stacked layout with per-rater name labels. */}
         {isWatched ? (
-          <div className="rating-pickers">
-            <div className="rating-pickers-label">Rate this film to continue</div>
-            {raters.map(name => (
+          raters.length === 1 ? (
+            <div className="rating-pickers rating-pickers-inline">
+              <div className="rating-pickers-label">Your rating</div>
               <StarPicker
-                key={name}
-                label={name}
-                value={movieRatings[name] ?? null}
-                onChange={(val) => onRatingChange(key, name, val)}
+                key={raters[0]}
+                label={raters[0]}
+                hideLabel
+                value={movieRatings[raters[0]] ?? null}
+                onChange={(val) => onRatingChange(key, raters[0], val)}
               />
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div className="rating-pickers">
+              <div className="rating-pickers-label">Your ratings</div>
+              {raters.map(name => (
+                <StarPicker
+                  key={name}
+                  label={name}
+                  value={movieRatings[name] ?? null}
+                  onChange={(val) => onRatingChange(key, name, val)}
+                />
+              ))}
+            </div>
+          )
         ) : (
-          <div className="rating-locked">Mark as watched to rate this film</div>
+          <div className="rating-locked">Watch and rate this film, or save it for later</div>
         )}
 
         <div className="film-card-actions">
@@ -350,6 +375,11 @@ export default function FilmCard({ movie, isWatched, onToggleWatched, fading, ra
               Skip
             </button>
           )}
+          <WatchlistButton
+            isBookmarked={isBookmarked}
+            isWatched={isWatched}
+            onToggle={onToggleWatchlist}
+          />
         </div>
       </div>
     </div>

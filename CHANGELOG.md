@@ -1,5 +1,66 @@
 # Changelog
 
+## 3.4.0 — 2026-04-21
+
+### Journey filter side-trip
+- **Filters are a temporary detour now.** Flip on a filter (e.g. watchlist-only),
+  watch the bookmarked film it jumps you to, then turn the filter off — and
+  you land back on the film you were on before you applied it. Survives
+  refresh and crosses devices (persisted as `preFilterFilmId` on the profile).
+- Fixes the long-standing bug where removing a filter stranded you on the
+  detour film with no way back except to navigate manually.
+- Snap-back is now `useLayoutEffect`-driven so the "Film X of Y" counter
+  doesn't flash the detour position for one frame during the transition.
+- `<JourneyControls>` is hoisted to a single persistent instance — the
+  filter panel no longer collapses itself when filters push you across
+  the "all films filtered out" boundary.
+- **Sync with… dropdown hides dormant accounts.** Applies the same
+  `watched.length > 0` rule the leaderboard already uses so brand-new
+  profiles don't clutter the list.
+
+### Watchlist + director filmography
+- **Bookmark films to a personal Watchlist.** Tap the new ribbon on any
+  card to save it for later. Journey gains a `watchlistOnly` smart filter
+  so you can pivot from the random shuffle to just your saved picks.
+- **Director filmography links** on canonical detail modals — click a
+  director's name to see every film by them already in the catalog.
+- **Unsaved-only** filter pill in the Film tab, complementing the existing
+  watched / unwatched three-way toggle.
+- Rating UX refinements.
+
+### Multi-source ratings: Letterboxd + Metacritic + Consensus
+- Film detail modals now surface **Letterboxd**, **Metacritic**, and a
+  site **Consensus** score alongside the existing sources, giving you a
+  richer picture before hitting play.
+- Out-of-canon series preview tiles (sequels / prequels) pick up the same
+  treatment so the numbers are consistent across both modals.
+
+### Authoritative Oscar nominations
+- **Ceremony modal now shows per-film Oscar wins AND losses** across every
+  category the film was nominated in, not just Best Picture. Data is
+  backfilled from Wikipedia / AMPAS records.
+- Cleanup pass on five films with malformed awards arrays.
+
+### Multi-genre taxonomy
+- Films can carry **multiple genre tags** (e.g. Sci-Fi / Fantasy + Action /
+  Adventure) and profile + ceremony layouts render them correctly side
+  by side.
+- Journey additive category filter supports the new Doc / Silent / B&W
+  attributes; silent films no longer render a language pill or pass the
+  International filter.
+- **29 catalog films tagged Black & White.**
+
+### Unsaved filter pill + light-mode polish
+- New **Unsaved** filter pill in the Film tab.
+- Light-mode readability pass across several screens (contrast + hover
+  states).
+
+### Small fixes
+- Metacritic search links land on the **Movies** tab, not Games (was
+  sending people to game pages for films with shared titles).
+- "Also nominated for" heading drops the "Also" when there's no prior
+  context above it.
+
 ## 3.3.5 — 2026-04-18
 
 ### Settings modal polish — chris-testing

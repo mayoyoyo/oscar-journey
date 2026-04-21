@@ -160,7 +160,6 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         favGenre,
         memberSince,
         currentMovie,
-        skipCount: p.skipCount || 0,
         battleCount: p.battleCount || 0,
         showcase: p.showcase || [],
         wallet: p.wallet || [],
@@ -217,7 +216,6 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
           favGenre: vFavGenre,
           memberSince,
           currentMovie,
-          skipCount: 0,
         });
       }
     }
@@ -344,9 +342,6 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                 {/* Footer details */}
                 <div className="pc-footer">
                   {p.favGenre && <span className="pc-detail" title="Favourite genre">{p.favGenre.split(' / ')[0]}</span>}
-                  {!p.isVirtualRater && p.skipCount > 0 && (
-                    <span className="pc-detail pc-detail-skip">{p.skipCount} skipped 😤</span>
-                  )}
                   {p.dailyStreak > 0 && (
                     <span className="pc-detail pc-detail-streak" title="Daily Oscar streak">🎬 {p.dailyStreak} day{p.dailyStreak === 1 ? '' : 's'}</span>
                   )}

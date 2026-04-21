@@ -240,11 +240,24 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <div className="settings-version">
             <div className="settings-version-row">
               <span className="settings-version-label">Version</span>
-              <span className="settings-version-num">v3.3.5</span>
+              <span className="settings-version-num">v3.4.0</span>
             </div>
             <details className="settings-changelog">
               <summary>Changelog</summary>
               <div className="settings-changelog-content">
+              <p><strong>v3.4.0</strong> — Watchlist, multi-source ratings, authoritative Oscars, filter side-trip</p>
+              <ul>
+                <li><strong>Personal watchlist.</strong> Bookmark films with the new ribbon on any card, then filter your journey to "saved films only" to pivot from the random shuffle to your own picks.</li>
+                <li><strong>Filter side-trip.</strong> Flipping on a filter (like the watchlist) is now a temporary detour — removing it snaps you back to where you were before, even across refreshes and devices.</li>
+                <li><strong>Multi-source ratings</strong> on detail modals — Letterboxd, Metacritic, and a blended Consensus score alongside the existing sources. Series preview tiles get the same treatment.</li>
+                <li><strong>Authoritative Oscar nominations</strong> in the ceremony modal — per-film wins AND losses across every category, not just Best Picture. Malformed awards data cleaned up on 5 films.</li>
+                <li><strong>Multi-genre taxonomy</strong> — films can carry multiple genres (Sci-Fi / Fantasy + Action / Adventure, etc.). 29 catalog films tagged Black &amp; White; silent films no longer render a language pill or pass the International filter.</li>
+                <li><strong>Director filmography links</strong> — click a director's name in any detail modal to see every film by them already in the catalog.</li>
+                <li><strong>Unsaved-only filter pill</strong> in the Films tab, rounding out the watched/unwatched/unsaved three-way.</li>
+                <li><strong>Light-mode readability pass</strong> across several screens — cleaner contrast and hover states.</li>
+                <li><strong>Profile cards tidy up.</strong> Sync-with dropdown now hides dormant accounts (matches the leaderboard rule); the "X skipped" pill is removed from profile cards so active users' footers fit on one row.</li>
+                <li>Smaller polish: snap-back counter no longer flickers on filter-off; filter panel stays open when filters cross the "all filtered out" boundary; Metacritic search links land on Movies (not Games); "Also nominated for" heading drops the "Also" when there's no prior context.</li>
+              </ul>
               <p><strong>v3.3.5</strong> — Settings modal polish</p>
               <ul>
                 <li>Wider on desktop (460px → 640px) so Preferences/Data/About sections have more breathing room. Mobile unchanged.</li>

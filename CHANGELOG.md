@@ -60,6 +60,10 @@
   sending people to game pages for films with shared titles).
 - "Also nominated for" heading drops the "Also" when there's no prior
   context above it.
+- **Profile cards drop the "X skipped" pill.** Active users had too
+  many footer pills and wrapped to two rows; removing the skip count
+  keeps the footer on one line while the underlying skipCount is still
+  recorded on the profile for internal use.
 
 ## 3.3.5 — 2026-04-18
 

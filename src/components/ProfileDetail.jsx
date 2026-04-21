@@ -313,7 +313,7 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
   return (
     <div className="profile-detail">
       <button className="profile-detail-back" onClick={onBack}>
-        &larr; Back to Leaderboard
+        &larr; Back to Profiles
       </button>
 
       {/* Header */}

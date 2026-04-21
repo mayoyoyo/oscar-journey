@@ -23,6 +23,7 @@
   --watched-active-bg: #e8f5e8;
   --watched-active-border: #5a9a5a;
   --watched-active-color: #2a6a2a;
+  --dot-watched: #2a8a3a;
   --danger-hover-bg: #f8e8e8;
   --badge-int-bg: #e0f0f8;
   --badge-int-border: #7ab8d4;
@@ -30,6 +31,12 @@
   --badge-anim-bg: #f0e8f8;
   --badge-anim-border: #b07ac8;
   --badge-anim-color: #5a1a7a;
+  --badge-doc-border:    rgba(42, 110, 150, 0.50);
+  --badge-doc-color:     #1f5a7a;
+  --badge-silent-border: rgba(130, 95, 40, 0.50);
+  --badge-silent-color:  #6b4f2a;
+  --badge-bw-border:     rgba(80, 80, 80, 0.55);
+  --badge-bw-color:      #4a4a4a;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-brand: 'Cinzel', Georgia, serif;
@@ -88,6 +95,7 @@ html.theme-switching *::after {
   --watched-active-bg: #1a3a1a;
   --watched-active-border: #3a7a3a;
   --watched-active-color: #90e890;
+  --dot-watched: #5a9a5a;
   --danger-hover-bg: #2a1010;
   --badge-int-bg: #0f1e2a;
   --badge-int-border: #2a5a7a;
@@ -95,6 +103,12 @@ html.theme-switching *::after {
   --badge-anim-bg: #1a0f2a;
   --badge-anim-border: #5a2a7a;
   --badge-anim-color: #b07ac8;
+  --badge-doc-border:    rgba(110, 169, 196, 0.45);
+  --badge-doc-color:     #9ccde0;
+  --badge-silent-border: rgba(212, 195, 160, 0.45);
+  --badge-silent-color:  #d4c3a0;
+  --badge-bw-border:     rgba(200, 200, 200, 0.45);
+  --badge-bw-color:      #d6d6d6;
 }
 
 html, body {
@@ -208,15 +222,16 @@ body {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 50%;
-  right: 50%;
-  height: 2px;
-  background: var(--gold);
-  transition: left 0.25s cubic-bezier(0.16, 1, 0.3, 1), right 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.nav-tab.active::after {
   left: 0;
   right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-tab.active::after {
+  transform: scaleX(1);
 }
 .nav-tab.active {
   color: var(--gold);
@@ -650,10 +665,37 @@ main {
 }
 /* Per-category tinting — keeps the row readable but adds a small visual
    hook so pills aren't indistinguishable when stacked (e.g. Silent + B&W). */
-.badge-cat-doc    { border-color: rgba(110, 169, 196, 0.45); color: #9ccde0; }
-.badge-cat-silent { border-color: rgba(212, 195, 160, 0.45); color: #d4c3a0; }
-.badge-cat-bw     { border-color: rgba(200, 200, 200, 0.45); color: #d6d6d6; }
-.badge-cat-anim   { border-color: var(--badge-anim-border); color: var(--badge-anim-color); }
+.badge-cat-doc    { border-color: var(--badge-doc-border);    color: var(--badge-doc-color); }
+.badge-cat-silent { border-color: var(--badge-silent-border); color: var(--badge-silent-color); }
+.badge-cat-bw     { border-color: var(--badge-bw-border);     color: var(--badge-bw-color); }
+.badge-cat-anim   { border-color: var(--badge-anim-border);   color: var(--badge-anim-color); }
+
+/* Light-mode only: lean into each category's visual identity so pills
+   don't disappear against cream, and each chip has a small thematic
+   cue. Dark mode is untouched — its muted pastels already read well.
+   The `:root` block is light-mode default; scoping to `html:not([data-theme="dark"])`
+   so explicit dark overrides these back to the general rules above. */
+html:not([data-theme="dark"]) .badge-cat-bw,
+html:not([data-theme="dark"]) .badge-cat-bw.badge-category-sm {
+  background: linear-gradient(135deg, #2d2d2d 0%, #4a4a4a 55%, #2d2d2d 100%);
+  color: #e8e8e8;
+  border-color: #1a1a1a;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+/* Silent: italic serif regardless of theme — the "intertitle card" feel
+   is the visual identity, not a light-mode accommodation. */
+.badge-cat-silent,
+.badge-cat-silent.badge-category-sm {
+  font-style: italic;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+html:not([data-theme="dark"]) .badge-cat-silent,
+html:not([data-theme="dark"]) .badge-cat-silent.badge-category-sm {
+  background: #f1e3c7;
+  color: #5a3a18;
+  border-color: #b89860;
+}
 
 /* Category pills for INT and ANIM films */
 .badge-int {
@@ -2126,6 +2168,18 @@ main {
   color: #1a1a1a;
   font-weight: 600;
 }
+/* Per-mode active colors — the filter pills map to real states, so the
+   selected color should match the dot system instead of the generic
+   gold. Watched = green, Saved = gold (default), Unwatched/Unsaved =
+   muted warm-gray that reads on both light and dark themes. */
+.film-list-toggle.mode-watched.active {
+  background: #5a9a5a;
+  border-color: #5a9a5a;
+}
+.film-list-toggle.mode-neutral.active {
+  background: var(--cream-dim);
+  border-color: var(--cream-dim);
+}
 
 .list-search {
   width: 100%;
@@ -2620,6 +2674,64 @@ main {
 }
 .tier-stepper-apex .tier-stepper-btn { border-color: rgba(212, 175, 60, 0.4); }
 .tier-stepper-apex .tier-stepper-btn:not(:disabled) { color: var(--gold); }
+
+/* Light-mode tier-stepper overrides — the default silver/light-gold
+   gradients above were tuned for dark-mode backgrounds and wash out
+   against cream. In light mode we flip the text-fill gradients to
+   deeper gunmetal/gold ranges, darken the `<strong>` description text,
+   and strengthen the Apex container wash + glow so it reads as
+   genuinely "rare" at a glance. Dark mode is untouched. */
+html:not([data-theme="dark"]) .tier-stepper-landmark {
+  background: linear-gradient(135deg, rgba(140, 140, 160, 0.10), rgba(90, 90, 110, 0.05));
+  border: 1px solid rgba(120, 120, 145, 0.45);
+  box-shadow: 0 0 10px rgba(120, 120, 145, 0.10), inset 0 0 8px rgba(120, 120, 145, 0.05);
+}
+html:not([data-theme="dark"]) .tier-stepper-landmark .tier-stepper-value {
+  background-image: linear-gradient(135deg, #6a6a82 0%, #3e3e54 100%);
+}
+html:not([data-theme="dark"]) .tier-stepper-landmark .tier-stepper-desc strong {
+  color: #3e3e54;
+}
+
+html:not([data-theme="dark"]) .tier-stepper-masterwork {
+  background: linear-gradient(135deg, rgba(110, 110, 140, 0.14), rgba(70, 70, 100, 0.08));
+  border: 1px solid rgba(90, 90, 120, 0.60);
+  box-shadow: 0 0 14px rgba(90, 90, 120, 0.16), inset 0 0 10px rgba(90, 90, 120, 0.08);
+}
+html:not([data-theme="dark"]) .tier-stepper-masterwork .tier-stepper-title {
+  color: #3a3a52;
+}
+html:not([data-theme="dark"]) .tier-stepper-masterwork .tier-stepper-value {
+  background-image: linear-gradient(135deg, #5a5a78 0%, #3a3a52 50%, #1e1e30 100%);
+  text-shadow: none;
+}
+html:not([data-theme="dark"]) .tier-stepper-masterwork .tier-stepper-desc strong {
+  color: #1e1e30;
+  text-shadow: none;
+}
+
+html:not([data-theme="dark"]) .tier-stepper-apex {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.30), rgba(139, 105, 20, 0.18));
+  border: 1px solid #8b6914;
+  box-shadow: 0 0 22px rgba(201, 168, 76, 0.40), inset 0 0 14px rgba(201, 168, 76, 0.20);
+}
+html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-title {
+  color: #6b4f0e;
+}
+html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-value {
+  background-image: linear-gradient(135deg, #b8832a 0%, #8b6914 50%, #4a3400 100%);
+  text-shadow: 0 0 8px rgba(201, 168, 76, 0.45);
+}
+html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-desc strong {
+  color: #6b4f0e;
+  text-shadow: 0 0 4px rgba(201, 168, 76, 0.30);
+}
+html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn {
+  border-color: rgba(139, 105, 20, 0.55);
+}
+html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled) {
+  color: #6b4f0e;
+}
 .tier-stepper-desc {
   display: flex;
   flex-direction: column;
@@ -2857,7 +2969,16 @@ main {
   background: transparent;
 }
 .film-row-dot.watched {
-  background: #5a9a5a;
+  background: var(--dot-watched);
+}
+/* Saved dot renders a touch smaller than the watched dot so the
+   intention signal ("I want to watch this") never competes visually
+   with the outcome signal ("I've watched this"). Also overridden
+   inside the mobile media query below so the size delta holds there. */
+.film-row-dot.saved {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
 }
 
 /* Option A: title + statuettes form a single left-anchored group. Group
@@ -5161,6 +5282,10 @@ main {
   .film-row-dot {
     width: 6px;
     height: 6px;
+  }
+  .film-row-dot.saved {
+    width: 5px;
+    height: 5px;
   }
   .film-row-title {
     font-size: 0.84rem;

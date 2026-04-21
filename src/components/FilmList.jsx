@@ -162,10 +162,15 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
   const [watchMode, setWatchMode] = useState('all');
   const watchedOnly   = watchMode === 'watched';
   const unwatchedOnly = watchMode === 'unwatched';
-  // Independent boolean — ANDs with whichever watchMode is active.
-  // Unlike Watched/Unwatched which are mutually exclusive, Saved can
-  // combine with either to show e.g. "saved films I haven't watched".
-  const [watchlistFilter, setWatchlistFilter] = useState(false);
+  // `savedMode` is its own three-way enum: 'all' | 'saved' | 'unsaved'.
+  // Saved-only and Unsaved-only are mutually exclusive with each other,
+  // but independent of watchMode — a film can be filtered by any
+  // combination (e.g. "saved + unwatched" = films I want to watch and
+  // haven't yet; "unsaved + watched" = films I watched without saving
+  // first).
+  const [savedMode, setSavedMode] = useState('all');
+  const savedOnly   = savedMode === 'saved';
+  const unsavedOnly = savedMode === 'unsaved';
   // Sort controls: primary is mutually exclusive (name OR year), tier is an
   // independent outer dimension. When tier is on, films group by tier first,
   // then use primary as the in-tier tiebreak. Within name-primary the year is
@@ -345,7 +350,8 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
       .filter(m => {
         if (watchedOnly && !watchedTitleSet.has(m.id)) return false;
         if (unwatchedOnly && watchedTitleSet.has(m.id)) return false;
-        if (watchlistFilter && !(watchlistSet && watchlistSet.has(m.id))) return false;
+        if (savedOnly && !(watchlistSet && watchlistSet.has(m.id))) return false;
+        if (unsavedOnly && watchlistSet && watchlistSet.has(m.id)) return false;
         return true;
       })
       .filter(m => m.year >= filters.yearRange.min && m.year <= filters.yearRange.max)
@@ -412,7 +418,7 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
     }
 
     return { filtered: sorted, groups, watchedCount };
-  }, [query, watchedTitleSet, watchlistSet, watchMode, watchlistFilter, filters, runtimeMap, activeWinKeys, sortPrimary, sortDir, sortByTier]);
+  }, [query, watchedTitleSet, watchlistSet, watchMode, savedMode, filters, runtimeMap, activeWinKeys, sortPrimary, sortDir, sortByTier]);
 
 
   // Per-option eligibility pool — used to hide rows where 0 films qualify
@@ -602,22 +608,28 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
           <div className="film-list-filters-body">
             <div className="film-list-mode-toggles">
               <button
-                className={`film-list-toggle ${watchedOnly ? 'active' : ''}`}
+                className={`film-list-toggle mode-watched ${watchedOnly ? 'active' : ''}`}
                 onClick={() => setWatchMode(w => w === 'watched' ? 'all' : 'watched')}
               >
                 Watched
               </button>
               <button
-                className={`film-list-toggle ${unwatchedOnly ? 'active' : ''}`}
+                className={`film-list-toggle mode-neutral ${unwatchedOnly ? 'active' : ''}`}
                 onClick={() => setWatchMode(w => w === 'unwatched' ? 'all' : 'unwatched')}
               >
                 Unwatched
               </button>
               <button
-                className={`film-list-toggle ${watchlistFilter ? 'active' : ''}`}
-                onClick={() => setWatchlistFilter(v => !v)}
+                className={`film-list-toggle mode-saved ${savedOnly ? 'active' : ''}`}
+                onClick={() => setSavedMode(s => s === 'saved' ? 'all' : 'saved')}
               >
                 Saved
+              </button>
+              <button
+                className={`film-list-toggle mode-neutral ${unsavedOnly ? 'active' : ''}`}
+                onClick={() => setSavedMode(s => s === 'unsaved' ? 'all' : 'unsaved')}
+              >
+                Unsaved
               </button>
             </div>
 
@@ -888,6 +900,11 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
               <div className="letter-header">{headerLabel}</div>
               {groups[groupId].map(m => {
                 const isWatched = watchedTitleSet.has(m.id);
+                const isSaved = !!(watchlistSet && watchlistSet.has(m.id));
+                // Watched wins on conflict — a film that's both saved and
+                // already watched shows as watched (green); the gold
+                // "saved" dot surfaces only for saved-but-unwatched films.
+                const dotState = isWatched ? 'watched' : isSaved ? 'saved' : '';
                 const key = ratingKey(m);
                 const r = ratings[key] || {};
                 return (
@@ -902,7 +919,7 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
                       >{isWatched ? '✓' : ''}</span>
                     )}
                     {!checklistMode && (
-                      <span className={`film-row-dot ${isWatched ? 'watched' : ''}`} />
+                      <span className={`film-row-dot ${dotState}`} />
                     )}
                     {OPTION_A_LAYOUT ? (
                       <span className="film-row-title-group">

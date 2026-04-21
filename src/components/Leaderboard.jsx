@@ -6,6 +6,7 @@ import { ratingKey } from '../utils/storage';
 import ProfileDetail from './ProfileDetail';
 import StatsTab from './StatsTab';
 import { getCollectorScore, RARITIES } from '../utils/cards';
+import { getTierInfo, tierScore } from '../utils/tierInfo';
 import { fetchOmdbData } from '../utils/omdb';
 
 // Mini featured card for profile grid
@@ -92,6 +93,16 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
 
     for (const p of profiles) {
       const watchedCount = Array.isArray(p.watched) ? p.watched.length : 0;
+      // Canon Score — tier-weighted sum of watched canon films. Mirrors
+      // StatsTab / ProfileDetail so the leaderboard number matches what
+      // you see after clicking in.
+      const watchedIds = new Set(Array.isArray(p.watched) ? p.watched : []);
+      let canonScore = 0;
+      for (const m of MOVIES) {
+        if (!watchedIds.has(m.id)) continue;
+        const { tier } = getTierInfo(m);
+        canonScore += tierScore(tier);
+      }
       const profileRatings = p.ratings || {};
       const profileRaters = p.raters || [];
 
@@ -157,6 +168,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
         watchedCount,
         avgRating,
         ratingCount,
+        canonScore,
         favGenre,
         memberSince,
         currentMovie,
@@ -213,6 +225,7 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
           watchedCount,
           avgRating: vCount > 0 ? (vTotal / vCount).toFixed(1) : null,
           ratingCount: vCount,
+          canonScore,
           favGenre: vFavGenre,
           memberSince,
           currentMovie,
@@ -316,8 +329,8 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
                     <span className="pc-stat-label">Avg</span>
                   </div>
                   <div className="pc-stat">
-                    <span className="pc-stat-value">{p.ratingCount}</span>
-                    <span className="pc-stat-label">Rated</span>
+                    <span className="pc-stat-value">{p.canonScore}</span>
+                    <span className="pc-stat-label">Canon</span>
                   </div>
                   {!p.isVirtualRater && (
                     <div className="pc-stat">

@@ -41,6 +41,24 @@ export const LIST_SHORT_LABELS = {
 
 export const MAX_TIER = 5;
 
+// Canon Score weight per tier. Progressive (not linear) so Apex-chasers
+// clearly beat Canonical-only grinders in aggregate — see
+// `scripts/tier-curves.mjs` for the spot-check that chose this curve
+// (Apex-chaser 27.5% vs T1-grinder 21.4% at these weights, vs 20.2 / 27.5
+// under linear 1..5 which inverts the intended signal).
+export const TIER_SCORE_WEIGHTS = {
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 4,
+  4: 7,
+  5: 11,
+};
+
+export function tierScore(tier) {
+  return TIER_SCORE_WEIGHTS[tier] ?? 0;
+}
+
 export const TIER_LABELS = {
   0: 'All films',
   1: 'Canonical',

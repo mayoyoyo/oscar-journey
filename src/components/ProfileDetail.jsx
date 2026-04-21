@@ -3,6 +3,8 @@ import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import { fetchOmdbData } from '../utils/omdb';
 import { RARITIES, getCollectorScore, getMaxWallet } from '../utils/cards';
+import { getTierInfo, tierScore } from '../utils/tierInfo';
+import ExpandableCaption from './ExpandableCaption';
 import { resolveTmdbWatchedId, tmdbPoster } from '../data/seriesCollections';
 import StatsTab from './StatsTab';
 
@@ -219,11 +221,28 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       }
     }
 
+    // Canon score — reuses StatsTab's tier-weighted scoring. Kept in sync
+    // with StatsTab by sharing tierScore(); any curve change there flows
+    // through here automatically. Also computes the max (sum of weights
+    // across the whole canon) so the card can render `X / Y`.
+    let canonScore = 0;
+    let canonScoreMax = 0;
+    const watchedIdSet = new Set(watchedMovies.map(m => m.id));
+    for (const m of MOVIES) {
+      const { tier } = getTierInfo(m);
+      if (tier === 0) continue;
+      const weight = tierScore(tier);
+      canonScoreMax += weight;
+      if (watchedIdSet.has(m.id)) canonScore += weight;
+    }
+
     return {
       watchedCount: watchedMovies.length,
       avgRating,
       ratingCount,
       favGenre,
+      canonScore,
+      canonScoreMax,
     };
   }, [profileData, watchedMovies, currentProfile, currentRatings, focusRater]);
 
@@ -326,15 +345,38 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
             <div className="profile-summary-label">Films Watched</div>
           </div>
           <div className="profile-summary-item">
-            <div className="profile-summary-value">{stats.avgRating}</div>
+            <div className="profile-summary-value">
+              {stats.avgRating}
+              {stats.ratingCount > 0 && (
+                <span className="profile-summary-sub"> ({stats.ratingCount})</span>
+              )}
+            </div>
             <div className="profile-summary-label">Avg Rating</div>
           </div>
           <div className="profile-summary-item">
-            <div className="profile-summary-value">{stats.ratingCount}</div>
-            <div className="profile-summary-label">Total Ratings</div>
+            <div className="profile-summary-value">
+              {stats.canonScore}
+              <span className="profile-summary-sub"> / {stats.canonScoreMax}</span>
+            </div>
+            <div className="profile-summary-label">Canon Score</div>
           </div>
           <div className="profile-summary-item">
-            <div className="profile-summary-value" style={{ fontSize: stats.favGenre.length > 12 ? '1rem' : undefined }}>
+            <div
+              className="profile-summary-value profile-summary-value-text"
+              /* Shrink the genre text proportionally to length so long labels
+                 ("Historical Epic", "Science Fiction") stop wrapping into a
+                 second line and throwing the card heights off. Floor at
+                 0.7rem — same size as the ratingCount parens — to stay
+                 visually paired with the other cards' numeric values. */
+              style={{ fontSize: (() => {
+                const n = stats.favGenre.length;
+                if (n <= 10) return '1.3rem';
+                if (n <= 13) return '1.1rem';
+                if (n <= 16) return '0.95rem';
+                if (n <= 20) return '0.82rem';
+                return '0.72rem';
+              })() }}
+            >
               {stats.favGenre}
             </div>
             <div className="profile-summary-label">Fav Genre</div>
@@ -342,6 +384,10 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
           <div className="profile-summary-item">
             <div className="profile-summary-value">{profileData.battleCount || 0}</div>
             <div className="profile-summary-label">Battles</div>
+          </div>
+          <div className="profile-summary-item">
+            <div className="profile-summary-value">{getCollectorScore(profileData.wallet || [], isOwnProfile && currentRatings ? currentRatings : profileData.ratings)}</div>
+            <div className="profile-summary-label">Collector Score</div>
           </div>
         </div>
       </div>
@@ -352,11 +398,16 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
           <div className="pd-cards-header">
             <span className="pd-section-label">Cards</span>
             {profileData.wallet?.length > 0 && (
-              <span className="pd-collector-score" title="Points from your wallet cards. Rarer cards = more points.">
-                Collector Score: <strong>{getCollectorScore(profileData.wallet)}</strong>
+              <span className="pd-collector-score">
+                Collector Score: <strong>{getCollectorScore(profileData.wallet, isOwnProfile && currentRatings ? currentRatings : profileData.ratings)}</strong>
               </span>
             )}
           </div>
+          {profileData.wallet?.length > 0 && (
+            <ExpandableCaption className="pd-cards-caption">
+              Each card's points (Common 1 · Rare 5 · Epic 15 · Legendary 50) get boosted by how much you liked the film — a 10/10 rating doubles the card's value, a 9/10 adds 90%, and so on. Unrated cards keep their base value.
+            </ExpandableCaption>
+          )}
 
           <div className="pd-cards-layout">
             {/* Featured card — large */}

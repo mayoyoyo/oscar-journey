@@ -3892,10 +3892,9 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
 }
 
 .canon-score-caption {
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   color: var(--cream-dim);
   line-height: 1.5;
-  font-style: italic;
 }
 
 .canon-tier-table {
@@ -3913,6 +3912,11 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
 }
 .canon-tier-table td:first-child {
   white-space: nowrap;
+}
+.canon-tier-label {
+  margin-left: 8px;
+  color: var(--cream-dim);
+  font-size: 0.85rem;
 }
 
 /* Drill-down affordance: tier rows jump to the Films tab filtered to that
@@ -4028,6 +4032,12 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
 .stats-table tr:hover td {
   background: var(--bg2);
 }
+
+.stats-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+.stats-table th.sortable:hover { color: var(--gold); }
 
 /* =====================================================
    RESPONSIVE
@@ -4734,15 +4744,26 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
 }
 
 .profile-detail-back {
-  background: none;
+  /* Sticky on scroll so users deep in the film list can bail back to the
+     leaderboard without scrolling all the way to the top. Full-width bar
+     with a solid background + blur so content scrolling underneath stays
+     legible. Negative horizontal margin bleeds the bar to the container
+     edges despite .profile-detail's 24px side padding. */
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: none;
   color: var(--gold);
   font-size: 0.88rem;
   cursor: pointer;
-  padding: 0;
-  margin-bottom: 20px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  padding: 14px 24px;
+  margin: -28px -24px 20px;
+  width: calc(100% + 48px);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
 }
 .profile-detail-back:hover { color: var(--cream); }
 
@@ -4800,6 +4821,21 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
   font-family: var(--font-display);
   line-height: 1;
 }
+.profile-summary-sub {
+  font-size: 0.7rem;
+  color: var(--cream-dim);
+  font-weight: normal;
+  margin-left: 2px;
+}
+/* Fav Genre cell — allow wrap to a second line rather than truncating.
+   Shrinking (inline fontSize driven by label length) keeps most labels on
+   one line; wrapping catches the edge cases ("Crime / Noir" on a narrow
+   column) instead of ellipsing mid-word. Line-height tightened so a
+   two-line wrap doesn't push card height too far out. */
+.profile-summary-value-text {
+  line-height: 1.15;
+  word-break: break-word;
+}
 
 .profile-summary-label {
   font-size: 0.65rem;
@@ -4821,17 +4857,67 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
 }
 .pd-section-label {
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+}
+.pd-cards-caption {
+  font-size: 0.72rem;
   color: var(--cream-dim);
+  margin-bottom: 14px;
+}
+
+/* Shared caption-with-expandable-"…" affordance. Mobile-only: on desktop
+   the full text always renders and the toggle is hidden; below the mobile
+   breakpoint the collapsed state clamps to a single line with a trailing
+   "…" button, expanded swaps the button to "less". Used for the Canon
+   Score + Cards explainers in the profile. */
+.expandable-caption {
+  line-height: 1.45;
+}
+.expandable-caption-toggle { display: none; }
+@media (max-width: 600px) {
+  .expandable-caption {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  .expandable-caption-text {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  .expandable-caption.is-expanded .expandable-caption-text {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+  .expandable-caption-toggle {
+    display: inline;
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    padding: 0 2px;
+    color: var(--gold);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  .expandable-caption-toggle:hover { color: var(--cream); }
 }
 .pd-collector-score {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: var(--cream-dim);
 }
 .pd-collector-score strong {
@@ -5168,9 +5254,31 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
   .filter-checkbox { width: 12px; height: 12px; font-size: 0.5rem; }
   .journey-controls { padding: 12px 14px; }
 
-  /* Wallet cards mobile */
-  .pd-wallet-card { width: 75px; }
+  /* Canon-tier table mobile — shrink the header labels + tier names so
+     they stop overlapping the WATCHED / TOTAL columns. Leave the numeric
+     values at the default .stats-table size since they read fine. */
+  .canon-tier-table th { font-size: 0.65rem; letter-spacing: 0.04em; }
+  .canon-tier-label { font-size: 0.72rem; margin-left: 6px; }
+
+  /* Wallet cards mobile — horizontal scroll instead of squishing.
+     Keeps the featured + wallet row from compressing card widths below
+     legibility when a user has 4+ wallet cards on a narrow viewport. */
+  .pd-wallet-card { width: 75px; flex: 0 0 75px; }
   .pd-wallet-card:hover { transform: translateY(-3px) scale(1.03); }
+  .pd-wallet {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .pd-wallet-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Extra room for the -6px hover lift / scale so tops don't clip. */
+    padding: 8px 2px 4px;
+    margin: -8px -2px -4px;
+  }
+  .pd-wallet-cards::-webkit-scrollbar { display: none; }
 
   /* Stats section mobile */
   .pd-stats-section { padding: 14px; }

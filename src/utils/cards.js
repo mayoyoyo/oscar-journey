@@ -1,4 +1,5 @@
 import { MOVIES, MOVIES_BY_ID } from '../data/movies';
+import { ratingKey } from './storage';
 
 // Rarity tiers
 export const RARITIES = {
@@ -95,8 +96,34 @@ export function generatePack(watchedMovieIds, existingCardIds = [], takenCards =
   }];
 }
 
-// Calculate collector score from wallet
-export function getCollectorScore(wallet) {
+// Calculate collector score from wallet.
+//
+// Each card's base value comes from RARITY_SCORES. If the collector has also
+// rated the card's movie, the base is scaled by (1 + avgRating / 10) — so
+// an unrated card stays at ×1, a 9/10 is ×1.9, and a perfect 10/10 doubles
+// the card's contribution. Average across all raters on the profile when
+// more than one has rated.
+export function getCollectorScore(wallet, ratings) {
   if (!wallet || !wallet.length) return 0;
-  return wallet.reduce((sum, card) => sum + (RARITY_SCORES[card.rarity] || 0), 0);
+  let total = 0;
+  for (const card of wallet) {
+    const base = RARITY_SCORES[card.rarity] || 0;
+    let mult = 1;
+    if (ratings && card.movieId) {
+      const movie = MOVIES_BY_ID[card.movieId];
+      if (movie) {
+        const legacyKey = `${movie.title}|${movie.year}`;
+        const r = ratings[ratingKey(movie)] || ratings[legacyKey];
+        if (r) {
+          const vals = Object.values(r).filter(v => v != null);
+          if (vals.length) {
+            const avg = vals.reduce((s, v) => s + v, 0) / vals.length;
+            mult = 1 + avg / 10;
+          }
+        }
+      }
+    }
+    total += base * mult;
+  }
+  return Math.round(total);
 }

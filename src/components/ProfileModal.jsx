@@ -91,7 +91,7 @@ export default function ProfileModal({ profileId, onClose, currentProfile, curre
   const p = profileData;
   const watchedCount = p?.watched?.length || 0;
   const ratingCount = p?.ratings ? Object.values(p.ratings).reduce((sum, r) => sum + Object.values(r).filter(v => v != null).length, 0) : 0;
-  const collectorScore = getCollectorScore(p?.wallet);
+  const collectorScore = getCollectorScore(p?.wallet, p?.ratings);
   const showcase = p?.showcase?.[0];
   const isOwn = currentProfile?.id === profileId;
 

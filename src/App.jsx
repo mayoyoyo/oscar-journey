@@ -331,6 +331,14 @@ export default function App() {
   const [saving, setSaving] = useState(false);
   const saveTimeout = useRef(null);
 
+  // Inner scroll container (#root is overflow:hidden, .app-scroll-area owns
+  // the scroll). Used to reset scroll to top on tab change so pages don't
+  // mount at the previous page's scrollY.
+  const scrollAreaRef = useRef(null);
+  const scrollToTop = useCallback(() => {
+    if (scrollAreaRef.current) scrollAreaRef.current.scrollTop = 0;
+  }, []);
+
   // --- Helper: save to Firestore with retry logic ---
   const firebaseSave = useCallback((field, value) => {
     if (!profile) return;
@@ -1208,7 +1216,8 @@ export default function App() {
     localStorage.setItem(LS_TAB_KEY, tab);
     const pathNames = { journey: '/', list: '/films', battle: '/battle', leaderboard: '/profiles' };
     window.history.pushState(null, '', pathNames[tab] || '/');
-  }, []);
+    scrollToTop();
+  }, [scrollToTop]);
 
   // Drill-down from Canon Score → Films tab with tier preselected.
   // Stage the preset first so FilmList sees it on its next render, then flip
@@ -1219,7 +1228,8 @@ export default function App() {
     setActiveTab('list');
     localStorage.setItem(LS_TAB_KEY, 'list');
     window.history.pushState(null, '', '/films');
-  }, []);
+    scrollToTop();
+  }, [scrollToTop]);
 
   // --- Path routing: handle browser back/forward ---
   useEffect(() => {
@@ -1234,7 +1244,10 @@ export default function App() {
       const tabMap = { '': 'journey', journey: 'journey', films: 'list', battle: 'battle', profiles: 'leaderboard' };
       const tab = tabMap[firstSegment];
       if (tab) {
-        setActiveTab(tab);
+        setActiveTab(prev => {
+          if (prev !== tab) scrollToTop();
+          return tab;
+        });
         localStorage.setItem(LS_TAB_KEY, tab);
       }
       // Keep autoSelectProfileId in sync with the URL. Leaderboard's own
@@ -1284,7 +1297,7 @@ export default function App() {
         onOpenProfile={(id) => setProfileModalId(id)}
       />
 
-      <div className="app-scroll-area cinematic-enter">
+      <div className="app-scroll-area cinematic-enter" ref={scrollAreaRef}>
       {showProgress && (
         <ProgressBar
           currentIdx={eligiblePosition}
@@ -1320,10 +1333,16 @@ export default function App() {
                   </div>
                 </div>
               )}
-              {/* Daily Oscar banner */}
-              {!profile?.hideDailyOscar && (() => {
+              {/* Daily Oscar banner — when hideDailyOscar is set, the banner
+                  still appears until today's quiz is played (solved or
+                  failed). Without this carve-out the toggle would silence
+                  the prompt before the user had a chance to play, turning
+                  "hide when done" into "hide forever". */}
+              {(() => {
                 const status = getDailyStatus();
                 const streak = getDailyStreak();
+                const isDone = !!(status?.solved || status?.failed);
+                if (profile?.hideDailyOscar && isDone) return null;
                 return (
                   <div className="daily-banner" onClick={() => setDailyOpen(true)}>
                     <div className="daily-banner-left">

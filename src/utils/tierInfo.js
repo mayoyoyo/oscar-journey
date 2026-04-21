@@ -59,6 +59,18 @@ export function tierScore(tier) {
   return TIER_SCORE_WEIGHTS[tier] ?? 0;
 }
 
+// Display ceiling for Canon Score. Internally we still accumulate raw
+// tier-weight points (ceiling ≈ 1405 at current weights/catalog), but
+// user-facing values are scaled into the 0..1000 range so the number is
+// easy to read and doesn't drift every time the catalog grows. The raw
+// ratio raw/rawMax is preserved — only the denominator is normalized.
+export const CANON_SCORE_MAX = 1000;
+
+export function normalizeCanonScore(raw, rawMax) {
+  if (!rawMax) return 0;
+  return Math.round((raw / rawMax) * CANON_SCORE_MAX);
+}
+
 export const TIER_LABELS = {
   0: 'All films',
   1: 'Canonical',

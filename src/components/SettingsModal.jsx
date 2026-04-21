@@ -189,8 +189,8 @@ export default function SettingsModal({ raters, onRatersChange, avatar, onAvatar
           <Toggle
             active={hideDailyOscar}
             onChange={onHideDailyOscarChange}
-            label="Hide Daily Oscar banner"
-            hint="Removes the Daily Oscar quote-quiz banner from the journey page. You can still play it from elsewhere."
+            label="Auto-hide Daily Oscar when done"
+            hint="Hides the Daily Oscar banner after you've played today's quiz (solved or failed). The banner still appears until the day's quiz is played, so you don't miss it."
           />
           <Toggle
             active={simpleBattle}

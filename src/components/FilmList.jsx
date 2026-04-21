@@ -142,6 +142,31 @@ const TIER_LEVELS = {
 const MIN_SLIDER_TIER = 0;
 const MAX_SLIDER_TIER = 5;
 
+// Per-device persistence for the Films-tab filter/sort UI. Stored in
+// localStorage (not the profile) so settings stay specific to the device
+// a user is browsing on — a phone filter doesn't follow them to desktop.
+const FILMLIST_PREFS_KEY = 'oscar_filmlist_prefs_v1';
+function loadFilmListPrefs() {
+  try {
+    const raw = localStorage.getItem(FILMLIST_PREFS_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+function mergeSavedFilters(saved) {
+  if (!saved || typeof saved !== 'object') return DEFAULT_FILM_FILTERS;
+  return {
+    ...DEFAULT_FILM_FILTERS,
+    ...saved,
+    yearRange: { ...DEFAULT_FILM_FILTERS.yearRange, ...(saved.yearRange || {}) },
+    categories: { ...DEFAULT_FILM_FILTERS.categories, ...(saved.categories || {}) },
+    categoriesExcluded: { ...DEFAULT_FILM_FILTERS.categoriesExcluded, ...(saved.categoriesExcluded || {}) },
+    genres: { ...DEFAULT_FILM_FILTERS.genres, ...(saved.genres || {}) },
+    genresExcluded: { ...DEFAULT_FILM_FILTERS.genresExcluded, ...(saved.genresExcluded || {}) },
+    runtimeRange: { ...DEFAULT_FILM_FILTERS.runtimeRange, ...(saved.runtimeRange || {}) },
+    wins: { ...DEFAULT_FILM_FILTERS.wins, ...(saved.wins || {}) },
+  };
+}
+
 function sortKeyFn(title) {
   return title.replace(/^(The|A|An)\s+/i, '').toLowerCase();
 }
@@ -155,11 +180,12 @@ function formatRuntimeLabel(minutes) {
 
 
 export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, onToggleWatched, ratings, raters, filterPreset, onFilterPresetApplied, checklistMode = false }) {
+  const savedPrefs = useMemo(() => loadFilmListPrefs(), []);
   const [query, setQuery] = useState('');
   // `watchMode` is a three-way enum: 'all' | 'watched' | 'unwatched'.
   // Watched-only and Unwatched-only are mutually exclusive — clicking one
   // deselects the other. Clicking the active pill again returns to 'all'.
-  const [watchMode, setWatchMode] = useState('all');
+  const [watchMode, setWatchMode] = useState(() => savedPrefs?.watchMode || 'all');
   const watchedOnly   = watchMode === 'watched';
   const unwatchedOnly = watchMode === 'unwatched';
   // `savedMode` is its own three-way enum: 'all' | 'saved' | 'unsaved'.
@@ -168,7 +194,7 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
   // combination (e.g. "saved + unwatched" = films I want to watch and
   // haven't yet; "unsaved + watched" = films I watched without saving
   // first).
-  const [savedMode, setSavedMode] = useState('all');
+  const [savedMode, setSavedMode] = useState(() => savedPrefs?.savedMode || 'all');
   const savedOnly   = savedMode === 'saved';
   const unsavedOnly = savedMode === 'unsaved';
   // Sort controls: primary is mutually exclusive (name OR year), tier is an
@@ -176,9 +202,9 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
   // then use primary as the in-tier tiebreak. Within name-primary the year is
   // the secondary tiebreak, and vice versa. Tapping the active chip flips
   // direction (asc ⇄ desc); switching chips resets to asc.
-  const [sortPrimary, setSortPrimary] = useState('name');
-  const [sortDir, setSortDir] = useState('asc');
-  const [sortByTier, setSortByTier] = useState(false);
+  const [sortPrimary, setSortPrimary] = useState(() => savedPrefs?.sortPrimary || 'name');
+  const [sortDir, setSortDir] = useState(() => savedPrefs?.sortDir || 'asc');
+  const [sortByTier, setSortByTier] = useState(() => !!savedPrefs?.sortByTier);
 
   const selectSortPrimary = (next) => {
     if (next === sortPrimary) {
@@ -188,7 +214,7 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
       setSortDir('asc');
     }
   };
-  const [filters, setFilters] = useState(DEFAULT_FILM_FILTERS);
+  const [filters, setFilters] = useState(() => mergeSavedFilters(savedPrefs?.filters));
   const [openSections, setOpenSections] = useState({ years: false, categories: false, canon: false, genres: false, runtimes: false, wins: false });
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [runtimeTick, setRuntimeTick] = useState(0);
@@ -199,6 +225,14 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
     prefetchRuntimes(MOVIES, () => setRuntimeTick(t => t + 1))
       .then(() => setPrefetchDone(true));
   }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(FILMLIST_PREFS_KEY, JSON.stringify({
+        watchMode, savedMode, sortPrimary, sortDir, sortByTier, filters,
+      }));
+    } catch {}
+  }, [watchMode, savedMode, sortPrimary, sortDir, sortByTier, filters]);
 
   // Consume one-shot filterPreset from parent — set when the user drills in
   // from the Canon Score tier breakdown. Merges the preset keys (minTier,
@@ -275,6 +309,7 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
   const resetFilters = () => {
     setFilters(DEFAULT_FILM_FILTERS);
     setWatchMode('all');
+    setSavedMode('all');
   };
 
   const sectionCount = (section) => {
@@ -319,6 +354,7 @@ export default function FilmList({ watchedTitleSet, watchlistSet, onOpenDetail, 
     // Wins defaults all OFF; each ON one counts as a user-applied filter.
     n += Object.values(filters.wins).filter(v => v).length;
     if (watchMode !== 'all') n++;
+    if (savedMode !== 'all') n++;
     if (runtimeRangeActive) n++;
     if (yearRangeActive) n++;
     // Canon-depth counters

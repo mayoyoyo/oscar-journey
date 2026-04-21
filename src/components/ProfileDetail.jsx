@@ -3,7 +3,7 @@ import { MOVIES, MOVIES_BY_ID, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
 import { fetchOmdbData } from '../utils/omdb';
 import { RARITIES, getCollectorScore, getMaxWallet } from '../utils/cards';
-import { getTierInfo, tierScore } from '../utils/tierInfo';
+import { getTierInfo, tierScore, normalizeCanonScore, CANON_SCORE_MAX } from '../utils/tierInfo';
 import ExpandableCaption from './ExpandableCaption';
 import { resolveTmdbWatchedId, tmdbPoster } from '../data/seriesCollections';
 import StatsTab from './StatsTab';
@@ -223,17 +223,18 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
 
     // Canon score — reuses StatsTab's tier-weighted scoring. Kept in sync
     // with StatsTab by sharing tierScore(); any curve change there flows
-    // through here automatically. Also computes the max (sum of weights
-    // across the whole canon) so the card can render `X / Y`.
-    let canonScore = 0;
-    let canonScoreMax = 0;
+    // through here automatically. Raw score/max is then normalized to the
+    // 0..CANON_SCORE_MAX (1000) display range so the number is stable
+    // across catalog growth.
+    let rawScore = 0;
+    let rawMax = 0;
     const watchedIdSet = new Set(watchedMovies.map(m => m.id));
     for (const m of MOVIES) {
       const { tier } = getTierInfo(m);
       if (tier === 0) continue;
       const weight = tierScore(tier);
-      canonScoreMax += weight;
-      if (watchedIdSet.has(m.id)) canonScore += weight;
+      rawMax += weight;
+      if (watchedIdSet.has(m.id)) rawScore += weight;
     }
 
     return {
@@ -241,8 +242,8 @@ export default function ProfileDetail({ profileData, onBack, currentProfile, cur
       avgRating,
       ratingCount,
       favGenre,
-      canonScore,
-      canonScoreMax,
+      canonScore: normalizeCanonScore(rawScore, rawMax),
+      canonScoreMax: CANON_SCORE_MAX,
     };
   }, [profileData, watchedMovies, currentProfile, currentRatings, focusRater]);
 

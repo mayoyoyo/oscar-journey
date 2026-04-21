@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { MOVIES, GENRE_LABELS } from '../data/movies';
 import { ratingKey } from '../utils/storage';
-import { getTierInfo, MAX_TIER, TIER_LABELS, tierScore } from '../utils/tierInfo';
+import { getTierInfo, MAX_TIER, TIER_LABELS, tierScore, normalizeCanonScore, CANON_SCORE_MAX } from '../utils/tierInfo';
 import TierPips from './TierPips';
 import ExpandableCaption from './ExpandableCaption';
 
@@ -156,7 +156,9 @@ export default function StatsTab({ watchedTitleSet, ratings, raters, embedded, p
     return {
       totalFilms, watchedCount, perRater, agreePct, allRated,
       biggestDisagreements, genreStats, decadeProgress, categoryProgress,
-      canonScore, canonScoreMax, tierBreakdown, nextUp,
+      canonScore: normalizeCanonScore(canonScore, canonScoreMax),
+      canonScoreMax: CANON_SCORE_MAX,
+      tierBreakdown, nextUp,
     };
   }, [watchedTitleSet, ratings, raters]);
 

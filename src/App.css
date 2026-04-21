@@ -4428,6 +4428,9 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
   color: var(--cream-dim);
   line-height: 1.6;
 }
+@media (max-width: 700px) {
+  .battle-explainer { margin-top: 20px; }
+}
 .battle-explainer summary {
   cursor: pointer;
   color: var(--cream-dim);
@@ -6354,6 +6357,8 @@ html:not([data-theme="dark"]) .tier-stepper-apex .tier-stepper-btn:not(:disabled
   }
   .battle-rankings-mobile-select .battle-profile-select {
     width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
   }
 }
 

@@ -6,7 +6,7 @@ import { ratingKey } from '../utils/storage';
 import ProfileDetail from './ProfileDetail';
 import StatsTab from './StatsTab';
 import { getCollectorScore, RARITIES } from '../utils/cards';
-import { getTierInfo, tierScore } from '../utils/tierInfo';
+import { getTierInfo, tierScore, normalizeCanonScore } from '../utils/tierInfo';
 import { fetchOmdbData } from '../utils/omdb';
 
 // Mini featured card for profile grid
@@ -93,16 +93,20 @@ export default function Leaderboard({ currentProfile, currentRatings, onOpenDeta
 
     for (const p of profiles) {
       const watchedCount = Array.isArray(p.watched) ? p.watched.length : 0;
-      // Canon Score — tier-weighted sum of watched canon films. Mirrors
-      // StatsTab / ProfileDetail so the leaderboard number matches what
-      // you see after clicking in.
+      // Canon Score — tier-weighted sum of watched canon films, normalized
+      // to the 0..1000 display range. Mirrors StatsTab / ProfileDetail so
+      // the leaderboard number matches what you see after clicking in.
       const watchedIds = new Set(Array.isArray(p.watched) ? p.watched : []);
-      let canonScore = 0;
+      let rawScore = 0;
+      let rawMax = 0;
       for (const m of MOVIES) {
-        if (!watchedIds.has(m.id)) continue;
         const { tier } = getTierInfo(m);
-        canonScore += tierScore(tier);
+        if (tier === 0) continue;
+        const weight = tierScore(tier);
+        rawMax += weight;
+        if (watchedIds.has(m.id)) rawScore += weight;
       }
+      const canonScore = normalizeCanonScore(rawScore, rawMax);
       const profileRatings = p.ratings || {};
       const profileRaters = p.raters || [];
 

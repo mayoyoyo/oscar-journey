@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useCallback, useMemo, useRef } from 'react';
 import { MOVIES, MOVIES_BY_ID } from './data/movies';
 import { getSeriesForFilm } from './data/seriesCollections';
 import { getTier } from './utils/tierInfo';
@@ -254,9 +254,9 @@ export default function App() {
   // --- Core state ---
   const [playlist, setPlaylist] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
-  const preFilterIdx = useRef(null); // Saved position before filter auto-skip
   const [watchedSet, setWatchedSet] = useState(new Set());
   const [watchlistSet, setWatchlistSet] = useState(new Set());
+  const [preFilterFilmId, setPreFilterFilmId] = useState(null);
   const [ratings, setRatings] = useState({});
   const [raters, setRaters] = useState(['Chris', 'Yvonne']);
   // One-shot filter preset for the Films tab. Set when a user drills in from
@@ -605,6 +605,12 @@ export default function App() {
     const rawWatchlist = Array.isArray(data.watchlist) ? data.watchlist : [];
     const watchlistKeys = new Set(rawWatchlist);
 
+    // preFilterFilmId — the film ID the user was on before a filter
+    // auto-skip. null means "no saved side-trip origin". Coerce non-string
+    // values to null so legacy profiles (or any corruption) get a safe
+    // default.
+    const rawPreFilter = typeof data.preFilterFilmId === 'string' ? data.preFilterFilmId : null;
+
     // Publish fully-mutated profile to React state now that every field
     // matches what's persisted in Firestore.
     setProfile(data);
@@ -612,6 +618,7 @@ export default function App() {
     setCurrentIdx(Math.min(idx, pl.length - 1));
     setWatchedSet(watchedKeys);
     setWatchlistSet(watchlistKeys);
+    setPreFilterFilmId(rawPreFilter);
     setRatings(migratedRatings);
     setRaters(ratersList);
 
@@ -644,6 +651,7 @@ export default function App() {
     setCurrentIdx(0);
     setWatchedSet(new Set());
     setWatchlistSet(new Set());
+    setPreFilterFilmId(null);
     setRatings({});
     setRaters(['Chris', 'Yvonne']);
     setActiveTab('journey');
@@ -680,6 +688,15 @@ export default function App() {
     allProfiles: allProfilesForSync,
     currentProfileId: profile?.id,
   }), [watchedSet, watchlistSet, allProfilesForSync, profile?.id]);
+
+  // Active profiles — anyone with at least one watched film. Used for the
+  // "Sync with..." dropdown so brand-new / dormant accounts don't clutter
+  // the list. Mirrors the rule the leaderboard already uses (see
+  // components/Leaderboard.jsx — filters on watchedCount > 0).
+  const activeProfilesForSync = useMemo(
+    () => allProfilesForSync.filter(p => Array.isArray(p.watched) && p.watched.length > 0),
+    [allProfilesForSync]
+  );
 
   // Check if a playlist index passes the current filters
   const idxPassesFilter = useCallback((idx) => {
@@ -994,21 +1011,45 @@ export default function App() {
   }, []);
 
   // --- Auto-skip to next eligible film when current is filtered out ---
-  // Saves position before skipping so we can snap back when filters are removed.
-  // We DO persist the new currentIdx to Firestore (via firebaseSave) — otherwise
-  // the Profile view (which renders profile.playlistOrder[profile.currentIdx])
-  // desyncs from Journey (which renders playlist[currentIdx]) whenever a filter
-  // hides the current film. preFilterIdx is only a ref anyway (lost on refresh),
-  // so the old "don't save" logic was already not truly transient — persisting
-  // is strictly more consistent.
-  useEffect(() => {
+  //
+  // Filters act as a temporary "side trip". When a filter hides the current
+  // film, we remember where the user was (by film ID, not index — indices
+  // drift on reshuffle) and walk them forward to the nearest eligible film.
+  // When the filter state changes such that the saved film passes again,
+  // we snap the user back to it. The saved ID lives on the profile doc so
+  // the side-trip memory survives refresh and crosses devices.
+  //
+  // We persist the auto-skipped currentIdx to Firestore too — the Profile
+  // view reads profile.currentIdx and would otherwise desync from Journey's
+  // playlist[currentIdx] whenever a filter hides the current film.
+  //
+  // useLayoutEffect (not useEffect) so the snap-back happens BEFORE the
+  // browser paints. Without this, removing a filter would briefly show the
+  // "Film X of Y" counter at the detour position before flipping to the
+  // snapped-back position — a visible one-frame flicker.
+  useLayoutEffect(() => {
     if (screen !== 'card' || !playlist.length || eligibleStats.total === 0) return;
+
+    // Resolve the saved film ID to an index in the current playlist.
+    // -1 = saved film isn't in the playlist (stale / removed from catalog).
+    const savedIdx = preFilterFilmId
+      ? playlist.findIndex(m => m.id === preFilterFilmId)
+      : null;
+
     if (!idxPassesFilter(currentIdx)) {
-      // Save the original position if we haven't already
-      if (preFilterIdx.current === null) {
-        preFilterIdx.current = currentIdx;
+      // Case A: current film is filtered out. Auto-skip.
+      // Save the origin if we haven't already — first time only, so filter
+      // swaps (A → B) and forward nav under a filter both preserve the
+      // ORIGINAL pre-filter spot.
+      if (preFilterFilmId === null) {
+        const originId = playlist[currentIdx]?.id;
+        if (originId) {
+          setPreFilterFilmId(originId);
+          firebaseSave('preFilterFilmId', originId);
+          setProfile(prev => prev ? { ...prev, preFilterFilmId: originId } : prev);
+        }
       }
-      // Find next eligible film forward, or backward if none ahead
+      // Walk forward to the next eligible film; if none ahead, walk backward.
       let next = currentIdx + 1;
       while (next < playlist.length && !idxPassesFilter(next)) next++;
       if (next >= playlist.length) {
@@ -1019,15 +1060,49 @@ export default function App() {
         setCurrentIdx(next);
         firebaseSave('currentIdx', next);
       }
-    } else if (preFilterIdx.current !== null) {
-      // Filters changed and the saved position is now valid — snap back
-      if (idxPassesFilter(preFilterIdx.current) && preFilterIdx.current !== currentIdx) {
-        setCurrentIdx(preFilterIdx.current);
-        firebaseSave('currentIdx', preFilterIdx.current);
-      }
-      preFilterIdx.current = null;
+      return;
     }
-  }, [currentIdx, screen, playlist, idxPassesFilter, eligibleStats.total, firebaseSave]);
+
+    // Case B: current film passes the filter. Maybe it's time to snap back.
+    if (preFilterFilmId === null) return; // Nothing saved, nothing to do.
+
+    if (savedIdx === -1) {
+      // Stale: the saved film is no longer in the playlist. Clear.
+      setPreFilterFilmId(null);
+      firebaseSave('preFilterFilmId', null);
+      setProfile(prev => prev ? { ...prev, preFilterFilmId: null } : prev);
+      return;
+    }
+
+    if (savedIdx === currentIdx) {
+      // We're home. Clear the memory.
+      setPreFilterFilmId(null);
+      firebaseSave('preFilterFilmId', null);
+      setProfile(prev => prev ? { ...prev, preFilterFilmId: null } : prev);
+      return;
+    }
+
+    if (idxPassesFilter(savedIdx)) {
+      // Saved spot passes current filter → snap back.
+      setCurrentIdx(savedIdx);
+      firebaseSave('currentIdx', savedIdx);
+      setPreFilterFilmId(null);
+      firebaseSave('preFilterFilmId', null);
+      setProfile(prev => prev ? { ...prev, preFilterFilmId: null } : prev);
+      return;
+    }
+
+    // Otherwise the saved spot is still filtered out — leave preFilterFilmId
+    // in place and wait for a future filter change.
+  }, [
+    currentIdx,
+    screen,
+    playlist,
+    idxPassesFilter,
+    eligibleStats.total,
+    firebaseSave,
+    preFilterFilmId,
+  ]);
 
   // --- Keyboard shortcuts ---
   useEffect(() => {
@@ -1225,31 +1300,14 @@ export default function App() {
             <StartScreen onStart={handleStart} />
           )}
           {screen === 'card' && eligibleStats.total === 0 && (
-            <>
-              <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-                <p style={{ color: 'var(--cream-dim)', fontSize: '1.1rem', marginBottom: '12px' }}>
-                  All films are filtered out.
-                </p>
-                <p style={{ color: 'var(--cream-dim)', fontSize: '0.9rem', marginBottom: '20px' }}>
-                  Turn some filters back on below.
-                </p>
-              </div>
-              <JourneyControls
-                filters={profile?.filters}
-                onFiltersChange={(newFilters) => {
-                  setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
-                  firebaseSave('filters', newFilters);
-                }}
-                onReshuffle={handleReshuffle}
-                eligibleCount={eligibleStats.total}
-                totalCount={playlist.length}
-                profiles={allProfilesForSync}
-                currentProfileId={profile?.id}
-                onSyncJourney={handleSyncJourney}
-                syncedWith={profile?.syncedWith}
-                onUnsync={handleUnsync}
-              />
-            </>
+            <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+              <p style={{ color: 'var(--cream-dim)', fontSize: '1.1rem', marginBottom: '12px' }}>
+                All films are filtered out.
+              </p>
+              <p style={{ color: 'var(--cream-dim)', fontSize: '0.9rem', marginBottom: '20px' }}>
+                Turn some filters back on below.
+              </p>
+            </div>
           )}
           {screen === 'card' && currentMovie && eligibleStats.total > 0 && (
             <>
@@ -1323,22 +1381,29 @@ export default function App() {
                 {currentTagline}
               </div>
               <ActivityFeed activities={activityFeed} currentProfileId={profile?.id} onOpenDetail={setDetailMovie} />
-              <JourneyControls
-                filters={profile?.filters}
-                onFiltersChange={(newFilters) => {
-                  setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
-                  firebaseSave('filters', newFilters);
-                }}
-                onReshuffle={handleReshuffle}
-                eligibleCount={eligibleStats.total}
-                totalCount={playlist.length}
-                profiles={allProfilesForSync}
-                currentProfileId={profile?.id}
-                onSyncJourney={handleSyncJourney}
-                syncedWith={profile?.syncedWith}
-                onUnsync={handleUnsync}
-              />
             </>
+          )}
+          {/* JourneyControls renders for both the has-films and all-filtered-out
+              states. Rendering it as one persistent instance (instead of one
+              per branch) keeps its local state — like the expanded/collapsed
+              filter panel — from resetting when the eligible count crosses
+              the zero boundary. */}
+          {screen === 'card' && (
+            <JourneyControls
+              filters={profile?.filters}
+              onFiltersChange={(newFilters) => {
+                setProfile(prev => prev ? { ...prev, filters: newFilters } : prev);
+                firebaseSave('filters', newFilters);
+              }}
+              onReshuffle={handleReshuffle}
+              eligibleCount={eligibleStats.total}
+              totalCount={playlist.length}
+              profiles={activeProfilesForSync}
+              currentProfileId={profile?.id}
+              onSyncJourney={handleSyncJourney}
+              syncedWith={profile?.syncedWith}
+              onUnsync={handleUnsync}
+            />
           )}
           {screen === 'complete' && (
             <CompletionScreen total={eligibleStats.total} onRestart={handleRestart} />
